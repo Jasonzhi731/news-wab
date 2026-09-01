@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>半導體產業週報閱讀器</title>
+<meta name="description" content="以 Excel 為唯一資料來源的半導體產業週報閱讀介面">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>📊</text></svg>">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<div id="drop-veil" hidden><div>放開以載入這份 Excel</div></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-text">半導體產業週報</span>
+    </div>
+
+    <div class="source-picker">
+      <label class="sr-only" for="report-select">選擇週報</label>
+      <select id="report-select" hidden></select>
+      <button id="btn-open" class="btn" type="button">載入 Excel…</button>
+      <input id="file-input" type="file" accept=".xlsx,.xlsm,.xls" hidden>
+    </div>
+
+    <div class="topbar-tools">
+      <button id="btn-theme" class="btn icon" type="button" title="切換深色 / 淺色">◐</button>
+    </div>
+  </div>
+</header>
+
+<main id="app" class="wrap">
+
+  <section id="stage-empty" class="stage">
+    <div class="empty-card">
+      <h1>半導體產業週報閱讀器</h1>
+      <p>這個網頁本身沒有任何內容。所有標題、摘要、數據與連結，都是從你提供的 Excel 週報即時解析出來的。</p>
+      <p class="muted">把 <code>.xlsx</code> 拖曳到畫面任何位置，或按下方按鈕選擇檔案。檔案只在你的瀏覽器內解析，不會上傳到任何地方。</p>
+      <button id="btn-open-2" class="btn primary" type="button">選擇 Excel 檔案</button>
+      <p id="empty-hint" class="hint"></p>
+    </div>
+  </section>
+
+  <section id="stage-report" class="stage" hidden>
+
+    <div class="report-head">
+      <h1 id="rpt-title">—</h1>
+      <p id="rpt-sub" class="muted"></p>
+      <div id="rpt-stats" class="stats"></div>
+    </div>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab is-on" data-tab="news"  role="tab">新聞彙整 <span class="pill" id="tabcount-news"></span></button>
+      <button class="tab"       data-tab="data"  role="tab">重點數據 <span class="pill" id="tabcount-data"></span></button>
+      <button class="tab"       data-tab="notes" role="tab">說明與方法</button>
+    </nav>
+
+    <!-- ============ 新聞彙整 ============ -->
+    <section id="panel-news" class="panel">
+      <div class="filters">
+        <div class="filter-row">
+          <div class="search">
+            <input id="q" type="search" placeholder="搜尋標題、摘要、公司、數據…（按 / 聚焦）" autocomplete="off">
+            <button id="q-clear" class="q-clear" type="button" hidden aria-label="清除">×</button>
+          </div>
+          <div class="view-toggle" role="group" aria-label="檢視方式">
+            <button class="vt is-on" data-view="cards" type="button">卡片</button>
+            <button class="vt"       data-view="table" type="button">表格</button>
+          </div>
+          <button id="btn-csv" class="btn" type="button">匯出篩選結果 CSV</button>
+        </div>
+
+        <div class="chip-groups">
+          <div class="chip-group"><span class="chip-label">分類</span><div id="f-cat"  class="chips"></div></div>
+          <div class="chip-group"><span class="chip-label">日期</span><div id="f-date" class="chips"></div></div>
+          <div class="chip-group"><span class="chip-label">主體</span><div id="f-ent"  class="chips"></div></div>
+        </div>
+
+        <div class="filter-foot">
+          <span id="result-count" class="muted"></span>
+          <button id="btn-reset" class="linkbtn" type="button">清除全部篩選</button>
+        </div>
+      </div>
+
+      <div id="news-cards" class="cards"></div>
+      <div id="news-table" class="tablewrap" hidden></div>
+      <p id="news-none" class="none" hidden>沒有符合條件的新聞。</p>
+    </section>
+
+    <!-- ============ 重點數據 ============ -->
+    <section id="panel-data" class="panel" hidden>
+      <div class="filters">
+        <div class="filter-row">
+          <div class="search">
+            <input id="dq" type="search" placeholder="搜尋項目、數值、說明…" autocomplete="off">
+          </div>
+        </div>
+        <div class="chip-groups">
+          <div class="chip-group"><span class="chip-label">類別</span><div id="f-dcat" class="chips"></div></div>
+        </div>
+      </div>
+      <div id="data-grid" class="datagrid"></div>
+      <p id="data-none" class="none" hidden>沒有符合條件的數據。</p>
+    </section>
+
+    <!-- ============ 說明與方法 ============ -->
+    <section id="panel-notes" class="panel" hidden>
+      <div id="notes-body" class="notes"></div>
+    </section>
+
+  </section>
+</main>
+
+<footer class="foot">
+  <span id="foot-src" class="muted"></span>
+  <span class="muted">資料來源為使用者提供的 Excel 檔；本頁僅作呈現，不構成投資建議。</span>
+</footer>
+
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
