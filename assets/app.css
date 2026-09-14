@@ -17,7 +17,6 @@
   --rule-soft:#ece8df;    /* 更淡的細線 */
   --accent:#8a3a32;       /* 磚紅：連結 hover、說明標題 */
   --veil:rgba(246,244,239,.93);
-  --mark:#efe1c2;
   --ok:#4f6b52;   --ok-bg:#eaefe8;
   --warn:#8a5a2b; --warn-bg:#f5ecdf;
 
@@ -41,7 +40,6 @@ html[data-theme="dark"]{
   --rule-soft:#2f2c28;
   --accent:#d09184;
   --veil:rgba(27,26,24,.93);
-  --mark:#4a3d22;
   --ok:#8fb894;   --ok-bg:#222a23;
   --warn:#d3a46a; --warn-bg:#2c2519;
 }
@@ -154,45 +152,20 @@ code{font-family:var(--mono);font-size:.88em;background:var(--tint);padding:1px 
   padding:14px 0 16px;
   border-bottom:1px solid var(--rule-soft);
 }
-.filter-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.search{position:relative;flex:1 1 320px;min-width:220px}
-.search input{
-  width:100%;font-family:var(--sans);font-size:14px;
-  padding:9px 32px 9px 12px;border-radius:var(--radius);
-  border:1px solid var(--rule);background:var(--surface);color:var(--ink);
+/* 分類 / 日期 / 主體的下拉選單 */
+.select-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px}
+.fsel{display:flex;align-items:center;gap:10px;cursor:pointer}
+.fsel > span{
+  flex:none;font-size:11.5px;color:var(--ink-3);letter-spacing:.12em;
 }
-.search input::placeholder{color:var(--ink-3)}
-.search input:focus{outline:none;border-color:var(--ink)}
-/* 日期 / 主體的下拉選單 */
-.select-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;margin-top:12px}
-.fsel{display:flex;align-items:center;gap:12px;cursor:pointer}
-.fsel .chip-label{padding-top:0}
 .fsel select{
   font-family:var(--sans);font-size:13px;cursor:pointer;
-  padding:6px 10px;min-width:200px;max-width:300px;
+  padding:6px 10px;min-width:190px;max-width:280px;
   border-radius:var(--radius);border:1px solid var(--rule);
   background:var(--surface);color:var(--ink);letter-spacing:.03em;
 }
 .fsel select:hover{border-color:var(--ink-3)}
 .fsel select:focus{outline:none;border-color:var(--ink)}
-
-.chip-groups{display:flex;flex-direction:column;gap:8px}
-.filter-row + .chip-groups{margin-top:14px}   /* 重點數據分頁：接在搜尋列下面時才需要間距 */
-.chip-group{display:flex;gap:12px;align-items:flex-start}
-.chip-label{
-  flex:none;width:34px;padding-top:5px;
-  font-size:11.5px;color:var(--ink-3);letter-spacing:.12em;
-}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{
-  font-family:var(--sans);font-size:12.5px;cursor:pointer;
-  padding:4px 11px;border-radius:var(--radius);
-  border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);
-  letter-spacing:.03em;transition:border-color .12s,color .12s;
-}
-.chip:hover{border-color:var(--ink-3);color:var(--ink)}
-.chip.is-on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
-.chip .n{opacity:.55;margin-left:6px;font-size:11px;font-variant-numeric:tabular-nums}
 
 .filter-foot{display:flex;align-items:center;gap:16px;margin-top:14px;font-size:12.5px}
 .linkbtn{
@@ -288,8 +261,6 @@ code{font-family:var(--mono);font-size:.88em;background:var(--tint);padding:1px 
 .notes p.ind{padding-left:1.7em;text-indent:-.9em}
 .notes p.cont{padding-left:1.7em}
 
-mark{background:var(--mark);color:inherit;border-radius:0;padding:0 2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-
 .none{text-align:center;color:var(--ink-3);padding:64px 0;font-size:14px;letter-spacing:.06em}
 
 /* ---------- 拖放遮罩 ---------- */
@@ -322,8 +293,6 @@ mark{background:var(--mark);color:inherit;border-radius:0;padding:0 2px;box-deco
   .tabs{gap:16px;overflow-x:auto;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
   .tab{font-size:13.5px;letter-spacing:.04em}
-  .chip-group{flex-direction:column;gap:5px}
-  .chip-label{width:auto;padding-top:0}
   .select-row{flex-direction:column;align-items:stretch;gap:10px}
   .fsel{gap:8px}
   .fsel select{flex:1 1 auto;min-width:0;max-width:none}
@@ -338,7 +307,6 @@ mark{background:var(--mark);color:inherit;border-radius:0;padding:0 2px;box-deco
   .brand{width:100%;margin-right:0}
   .source-picker{flex:1 1 0;min-width:0}
   #report-select{flex:1 1 auto;min-width:0;max-width:none}
-  #btn-open{white-space:nowrap}
   .topbar-tools{flex:none}
 }
 

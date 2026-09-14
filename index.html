@@ -71,13 +71,10 @@
     <!-- ============ 新聞彙整 ============ -->
     <section id="panel-news" class="panel">
       <div class="filters">
-        <div class="chip-groups">
-          <div class="chip-group"><span class="chip-label">分類</span><div id="f-cat" class="chips"></div></div>
-        </div>
-
         <div class="select-row">
-          <label class="fsel"><span class="chip-label">日期</span><select id="s-date"></select></label>
-          <label class="fsel"><span class="chip-label">主體</span><select id="s-ent"></select></label>
+          <label class="fsel"><span>分類</span><select id="s-cat"></select></label>
+          <label class="fsel"><span>日期</span><select id="s-date"></select></label>
+          <label class="fsel"><span>主體</span><select id="s-ent"></select></label>
         </div>
 
         <div class="filter-foot">
@@ -93,13 +90,8 @@
     <!-- ============ 重點數據 ============ -->
     <section id="panel-data" class="panel" hidden>
       <div class="filters">
-        <div class="filter-row">
-          <div class="search">
-            <input id="dq" type="search" placeholder="搜尋項目、數值、說明…" autocomplete="off">
-          </div>
-        </div>
-        <div class="chip-groups">
-          <div class="chip-group"><span class="chip-label">類別</span><div id="f-dcat" class="chips"></div></div>
+        <div class="select-row">
+          <label class="fsel"><span>類別</span><select id="s-dcat"></select></label>
         </div>
       </div>
       <div id="data-grid" class="datagrid"></div>

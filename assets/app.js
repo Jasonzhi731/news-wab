@@ -36,7 +36,7 @@
   var state = {
     tab: 'news',
     cats: [], dates: [], ents: [],
-    dq: '', dcats: []
+    dcats: []
   };
 
   /* ============================================================
@@ -62,15 +62,6 @@
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
-  }
-  // 把搜尋關鍵字在文字中標起來（先跳脫，再插入 <mark>）
-  function hl(text, q) {
-    var out = esc(text);
-    if (!q) return out;
-    var terms = q.split(/\s+/).filter(Boolean).map(esc)
-      .map(function (t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
-    if (!terms.length) return out;
-    return out.replace(new RegExp('(' + terms.join('|') + ')', 'gi'), '<mark>$1</mark>');
   }
   function isHttp(u) { return /^https?:\/\//i.test(u); }
 
@@ -168,8 +159,6 @@
       });
       // 標題或摘要任一有值才算一筆
       if (!o.title && !o.summary) continue;
-      o._hay = [o.date, o.cat, o.entity, o.title, o.summary, o.metric,
-                o.impact, o.source, o.conf].join(' ').toLowerCase();
       items.push(o);
     }
     return { items: items, extras: m.extras.map(function (e) { return e.name; }) };
@@ -187,7 +176,6 @@
       var get = function (k) { return m.idx[k] === undefined ? '' : norm(row[m.idx[k]]); };
       var o = { cat: get('cat'), item: get('item'), val: get('val'), desc: get('desc'), src: get('src') };
       if (!o.item && !o.val) continue;
-      o._hay = [o.cat, o.item, o.val, o.desc, o.src].join(' ').toLowerCase();
       out.push(o);
     }
     return out;
@@ -262,8 +250,7 @@
   function show(rpt) {
     report = rpt;
     state.cats = []; state.dates = []; state.ents = [];
-    state.dq = ''; state.dcats = [];
-    $('#dq').value = '';
+    state.dcats = [];
 
     $('#stage-empty').hidden = true;
     $('#stage-report').hidden = false;
@@ -285,8 +272,8 @@
     $('#tabcount-news').textContent = rpt.news.length;
     $('#tabcount-data').textContent = rpt.data.length;
 
-    buildChips();
-    buildDataChips();
+    buildFilters();
+    buildDataFilter();
     renderNotes();
     renderNews();
     renderData();
@@ -307,26 +294,24 @@
     return m;
   }
 
-  /* ---------- 篩選晶片 ---------- */
-  function chipHtml(value, label, count, on) {
-    return '<button class="chip' + (on ? ' is-on' : '') + '" data-v="' + esc(value) + '">' +
-           esc(label) + '<span class="n">' + count + '</span></button>';
-  }
-
+  /* ---------- 篩選下拉選單 ---------- */
   function optionHtml(value, label, count, on) {
     return '<option value="' + esc(value) + '"' + (on ? ' selected' : '') + '>' +
            esc(label) + '（' + count + '）</option>';
   }
 
-  function buildChips() {
+  function buildFilters() {
     var n = report.news;
 
+    // 分類：依 Excel 裡出現的順序
     var cats = countBy(n, 'cat');
-    $('#f-cat').innerHTML = Object.keys(cats).map(function (c) {
-      return chipHtml(c, c, cats[c], state.cats.indexOf(c) >= 0);
-    }).join('');
+    $('#s-cat').innerHTML =
+      optionHtml('', '全部分類', n.length, !state.cats.length) +
+      Object.keys(cats).map(function (c) {
+        return optionHtml(c, c, cats[c], state.cats[0] === c);
+      }).join('');
 
-    // 日期：下拉選單，由新到舊
+    // 日期：由新到舊
     var dts = countBy(n, 'date');
     var dkeys = Object.keys(dts).sort(function (a, b) { return dateKey(b) - dateKey(a); });
     $('#s-date').innerHTML =
@@ -337,7 +322,7 @@
                           dts[d], state.dates[0] === d);
       }).join('');
 
-    // 主體：下拉選單，依則數多寡排序
+    // 主體：依則數多寡排序
     // 用「主要關鍵字」歸戶：先去掉括號內容（股號、成員列舉），再依分隔符切開
     var ents = {};
     n.forEach(function (i) {
@@ -362,16 +347,13 @@
       .filter(Boolean);
   }
 
-  function buildDataChips() {
+  function buildDataFilter() {
     var cats = countBy(report.data, 'cat');
-    $('#f-dcat').innerHTML = Object.keys(cats).map(function (c) {
-      return chipHtml(c, c, cats[c], state.dcats.indexOf(c) >= 0);
-    }).join('');
-  }
-
-  function toggle(arr, v) {
-    var i = arr.indexOf(v);
-    if (i >= 0) arr.splice(i, 1); else arr.push(v);
+    $('#s-dcat').innerHTML =
+      optionHtml('', '全部類別', report.data.length, !state.dcats.length) +
+      Object.keys(cats).map(function (c) {
+        return optionHtml(c, c, cats[c], state.dcats[0] === c);
+      }).join('');
   }
 
   /* ---------- 新聞 ---------- */
@@ -445,19 +427,16 @@
 
   /* ---------- 重點數據 ---------- */
   function renderData() {
-    var q = state.dq.trim().toLowerCase();
     var list = report.data.filter(function (d) {
-      if (state.dcats.length && state.dcats.indexOf(d.cat) < 0) return false;
-      if (q && d._hay.indexOf(q) < 0) return false;
-      return true;
+      return !state.dcats.length || state.dcats.indexOf(d.cat) >= 0;
     });
     $('#data-none').hidden = list.length > 0;
     $('#data-grid').innerHTML = list.map(function (d) {
       return '<div class="dcard">' +
         (d.cat ? '<div class="dcat">' + esc(d.cat) + '</div>' : '') +
-        '<div class="ditem">' + hl(d.item, state.dq) + '</div>' +
-        '<div class="dval">' + hl(d.val, state.dq) + '</div>' +
-        (d.desc ? '<div class="ddesc">' + hl(d.desc, state.dq) + '</div>' : '') +
+        '<div class="ditem">' + esc(d.item) + '</div>' +
+        '<div class="dval">' + esc(d.val) + '</div>' +
+        (d.desc ? '<div class="ddesc">' + esc(d.desc) + '</div>' : '') +
         (d.src ? '<div class="dsrc">' + esc(d.src) + '</div>' : '') +
       '</div>';
     }).join('');
@@ -507,35 +486,21 @@
       });
     });
 
-    // 重點數據的搜尋
-    $('#dq').addEventListener('input', function () { state.dq = this.value; renderData(); });
-
-    // 日期 / 主體：下拉選單（單選，空值代表全部）
-    $('#s-date').addEventListener('change', function () {
-      state.dates = this.value ? [this.value] : [];
-      renderNews();
-    });
-    $('#s-ent').addEventListener('change', function () {
-      state.ents = this.value ? [this.value] : [];
-      renderNews();
-    });
-
-    // 晶片
-    var chipHandler = function (container, key, after) {
-      $(container).addEventListener('click', function (e) {
-        var b = e.target.closest('.chip');
-        if (!b) return;
-        toggle(state[key], b.dataset.v);
-        b.classList.toggle('is-on');
+    // 篩選下拉選單（單選，空值代表全部）
+    var selectHandler = function (sel, key, after) {
+      $(sel).addEventListener('change', function () {
+        state[key] = this.value ? [this.value] : [];
         after();
       });
     };
-    chipHandler('#f-cat', 'cats', renderNews);
-    chipHandler('#f-dcat', 'dcats', renderData);
+    selectHandler('#s-cat', 'cats', renderNews);
+    selectHandler('#s-date', 'dates', renderNews);
+    selectHandler('#s-ent', 'ents', renderNews);
+    selectHandler('#s-dcat', 'dcats', renderData);
 
     $('#btn-reset').addEventListener('click', function () {
       state.cats = []; state.dates = []; state.ents = [];
-      buildChips(); renderNews();
+      buildFilters(); renderNews();
     });
 
     // 檔案來源（拖放，或空狀態時的選檔按鈕）
@@ -578,15 +543,6 @@
       var saved = localStorage.getItem('wr-theme');
       if (saved) document.documentElement.setAttribute('data-theme', saved);
     } catch (err) {}
-
-    // 快捷鍵：在「重點數據」分頁按 / 聚焦搜尋框
-    document.addEventListener('keydown', function (e) {
-      if (e.key === '/' && !$('#panel-data').hidden &&
-          !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
-        e.preventDefault();
-        $('#dq').focus();
-      }
-    });
   }
 
   /* ============================================================
