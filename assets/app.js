@@ -74,6 +74,20 @@
   }
   function isHttp(u) { return /^https?:\/\//i.test(u); }
 
+  // 日期字串轉成可比大小的數字；非日期（例如「本週背景」）回傳 -1
+  function dateKey(s) {
+    var m = /^(\d{4})[\/\-.](\d{1,2})(?:[\/\-.](\d{1,2}))?/.exec(String(s || ''));
+    if (!m) return -1;
+    return (+m[1]) * 10000 + (+m[2]) * 100 + (+(m[3] || 0));
+  }
+  // 由新到舊排序：同一天維持 Excel 原本的順序，沒有日期的排在最後
+  function sortNewestFirst(items) {
+    return items
+      .map(function (it, i) { return { it: it, i: i, k: dateKey(it.date) }; })
+      .sort(function (a, b) { return a.k !== b.k ? b.k - a.k : a.i - b.i; })
+      .map(function (x) { return x.it; });
+  }
+
   /* ============================================================
      Excel 解析
      ============================================================ */
@@ -206,7 +220,7 @@
       label: label,
       title: title,
       subtitle: sub,
-      news: news.items,
+      news: sortNewestFirst(news.items),
       newsExtras: news.extras,
       data: dsheet ? parseData(dsheet) : [],
       notes: tsheet ? parseNotes(tsheet) : [],
@@ -276,6 +290,7 @@
     renderNotes();
     renderNews();
     renderData();
+    syncTopbarHeight();
     window.scrollTo(0, 0);
   }
 
@@ -307,7 +322,8 @@
     }).join('');
 
     var dts = countBy(n, 'date');
-    $('#f-date').innerHTML = Object.keys(dts).sort().map(function (d) {
+    var dkeys = Object.keys(dts).sort(function (a, b) { return dateKey(b) - dateKey(a); });
+    $('#f-date').innerHTML = dkeys.map(function (d) {
       var wd = weekdayOf(d);
       var short = d.replace(/^\d{4}[\/\-.]/, '') + (wd ? ' ' + wd : '');
       return chipHtml(d, short, dts[d], state.dates.indexOf(d) >= 0);
@@ -465,13 +481,16 @@
   function renderNotes() {
     var html = report.notes.map(function (line) {
       if (!line) return '<p class="blank"></p>';
-      var isHead = /^【.*】/.test(line) && line.length < 40;
+      var isHead = /^【.*】/.test(line);
       var alert = /重要限制|注意|免責/.test(line);
       var cls = '';
-      if (isHead) cls = 'h' + (alert ? ' alert' : '');
+      // 【…】開頭就是一個段落的起點；短的當標題（帶色條），長的只把括號那截加粗
+      if (isHead) cls = (line.length < 40 ? 'h' : 'hx') + (alert ? ' alert' : '');
       else if (/^[\s　]*[‧·．\d]/.test(line)) cls = 'ind';   // 條列項
       else if (/^[\s　]/.test(line)) cls = 'cont';           // 上一條的續行
-      return '<p class="' + cls + '">' + esc(line) + '</p>';
+      var body = esc(line);
+      if (isHead) body = body.replace(/^(【[^】]*】)/, '<b>$1</b>');
+      return '<p class="' + cls + '">' + body + '</p>';
     }).join('');
     $('#notes-body').innerHTML = html || '<p class="muted">這份 Excel 沒有「說明與方法」分頁。</p>';
   }
@@ -495,10 +514,20 @@
     setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
   }
 
+  /* ---------- 讓篩選列的 sticky 位置永遠貼齊頂部列（頂部列會換行變高） ---------- */
+  function syncTopbarHeight() {
+    var el = $('.topbar');
+    if (!el) return;
+    document.documentElement.style.setProperty('--topbar-h', el.offsetHeight + 'px');
+  }
+
   /* ============================================================
      事件
      ============================================================ */
   function bind() {
+    syncTopbarHeight();
+    window.addEventListener('resize', syncTopbarHeight);
+
     // 分頁
     $$('.tab').forEach(function (b) {
       b.addEventListener('click', function () {
