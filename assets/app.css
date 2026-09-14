@@ -163,21 +163,21 @@ code{font-family:var(--mono);font-size:.88em;background:var(--tint);padding:1px 
 }
 .search input::placeholder{color:var(--ink-3)}
 .search input:focus{outline:none;border-color:var(--ink)}
-.q-clear{
-  position:absolute;right:6px;top:50%;transform:translateY(-50%);
-  border:0;background:none;cursor:pointer;font-size:18px;color:var(--ink-3);
-  line-height:1;padding:2px 6px;
+/* 日期 / 主體的下拉選單 */
+.select-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;margin-top:12px}
+.fsel{display:flex;align-items:center;gap:12px;cursor:pointer}
+.fsel .chip-label{padding-top:0}
+.fsel select{
+  font-family:var(--sans);font-size:13px;cursor:pointer;
+  padding:6px 10px;min-width:200px;max-width:300px;
+  border-radius:var(--radius);border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink);letter-spacing:.03em;
 }
-.q-clear:hover{color:var(--ink)}
-.view-toggle{display:flex;border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
-.vt{
-  font-family:var(--sans);font-size:13px;cursor:pointer;border:0;
-  padding:8px 16px;background:none;color:var(--ink-3);letter-spacing:.06em;
-}
-.vt:hover{color:var(--ink)}
-.vt.is-on{background:var(--ink);color:var(--paper);font-weight:600}
+.fsel select:hover{border-color:var(--ink-3)}
+.fsel select:focus{outline:none;border-color:var(--ink)}
 
-.chip-groups{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.chip-groups{display:flex;flex-direction:column;gap:8px}
+.filter-row + .chip-groups{margin-top:14px}   /* 重點數據分頁：接在搜尋列下面時才需要間距 */
 .chip-group{display:flex;gap:12px;align-items:flex-start}
 .chip-label{
   flex:none;width:34px;padding-top:5px;
@@ -252,31 +252,6 @@ code{font-family:var(--mono);font-size:.88em;background:var(--tint);padding:1px 
 .badge.warn{background:var(--warn-bg);color:var(--warn)}
 .card-foot a{color:var(--ink-2);font-size:12.5px}
 
-/* ---------- 表格檢視 ---------- */
-.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--radius);background:var(--surface);margin-top:26px}
-table{border-collapse:collapse;width:100%;min-width:1560px;font-size:13.5px}
-th,td{padding:11px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule-soft);line-height:1.75}
-/* 序號 日期 分類 主體 標題 摘要 數據 影響 來源 確認度 連結 */
-td:nth-child(1),th:nth-child(1){width:48px}
-td:nth-child(2),th:nth-child(2){width:100px;white-space:nowrap;font-variant-numeric:tabular-nums}
-td:nth-child(3),th:nth-child(3){width:88px}
-td:nth-child(4),th:nth-child(4){width:150px}
-td:nth-child(5),th:nth-child(5){width:250px;font-weight:600;color:var(--ink)}
-td:nth-child(6),th:nth-child(6){width:330px}
-td:nth-child(7),th:nth-child(7){width:250px}
-td:nth-child(8),th:nth-child(8){width:250px}
-td:nth-child(9),th:nth-child(9){width:120px}
-td:nth-child(10),th:nth-child(10){width:130px}
-td:nth-child(11),th:nth-child(11){width:60px}
-td{color:var(--ink-2)}
-td:nth-child(1){color:var(--ink-3);font-family:var(--mono)}
-thead th{
-  position:sticky;top:0;background:var(--tint);color:var(--ink);
-  font-weight:600;font-size:12px;letter-spacing:.1em;white-space:nowrap;z-index:1;
-  border-bottom:1px solid var(--rule);
-}
-tbody tr:hover{background:var(--tint)}
-
 /* ---------- 重點數據 ---------- */
 .datagrid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
@@ -349,6 +324,9 @@ mark{background:var(--mark);color:inherit;border-radius:0;padding:0 2px;box-deco
   .tab{font-size:13.5px;letter-spacing:.04em}
   .chip-group{flex-direction:column;gap:5px}
   .chip-label{width:auto;padding-top:0}
+  .select-row{flex-direction:column;align-items:stretch;gap:10px}
+  .fsel{gap:8px}
+  .fsel select{flex:1 1 auto;min-width:0;max-width:none}
   .kv-item{grid-template-columns:1fr;gap:2px}
   .kv-item .k{padding-top:0}
   .card{padding:22px 0 26px}
@@ -365,7 +343,7 @@ mark{background:var(--mark);color:inherit;border-radius:0;padding:0 2px;box-deco
 }
 
 @media print{
-  .topbar,.filters,.tabs,.foot,#drop-veil,.view-toggle{display:none!important}
+  .topbar,.filters,.tabs,.foot,#drop-veil{display:none!important}
   body{background:#fff;font-size:11pt}
   .wrap{max-width:none;padding:0}
   .card{break-inside:avoid;border-bottom:1px solid #ddd}

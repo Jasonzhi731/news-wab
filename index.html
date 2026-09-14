@@ -33,7 +33,6 @@
     <div class="source-picker">
       <label class="sr-only" for="report-select">選擇週報</label>
       <select id="report-select" hidden></select>
-      <button id="btn-open" class="btn" type="button">載入 Excel…</button>
       <input id="file-input" type="file" accept=".xlsx,.xlsm,.xls" hidden>
     </div>
 
@@ -72,22 +71,13 @@
     <!-- ============ 新聞彙整 ============ -->
     <section id="panel-news" class="panel">
       <div class="filters">
-        <div class="filter-row">
-          <div class="search">
-            <input id="q" type="search" placeholder="搜尋標題、摘要、公司、數據…（按 / 聚焦）" autocomplete="off">
-            <button id="q-clear" class="q-clear" type="button" hidden aria-label="清除">×</button>
-          </div>
-          <div class="view-toggle" role="group" aria-label="檢視方式">
-            <button class="vt is-on" data-view="cards" type="button">卡片</button>
-            <button class="vt"       data-view="table" type="button">表格</button>
-          </div>
-          <button id="btn-csv" class="btn" type="button">匯出篩選結果 CSV</button>
+        <div class="chip-groups">
+          <div class="chip-group"><span class="chip-label">分類</span><div id="f-cat" class="chips"></div></div>
         </div>
 
-        <div class="chip-groups">
-          <div class="chip-group"><span class="chip-label">分類</span><div id="f-cat"  class="chips"></div></div>
-          <div class="chip-group"><span class="chip-label">日期</span><div id="f-date" class="chips"></div></div>
-          <div class="chip-group"><span class="chip-label">主體</span><div id="f-ent"  class="chips"></div></div>
+        <div class="select-row">
+          <label class="fsel"><span class="chip-label">日期</span><select id="s-date"></select></label>
+          <label class="fsel"><span class="chip-label">主體</span><select id="s-ent"></select></label>
         </div>
 
         <div class="filter-foot">
@@ -97,7 +87,6 @@
       </div>
 
       <div id="news-cards" class="cards"></div>
-      <div id="news-table" class="tablewrap" hidden></div>
       <p id="news-none" class="none" hidden>沒有符合條件的新聞。</p>
     </section>
 

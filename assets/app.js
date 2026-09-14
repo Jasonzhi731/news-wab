@@ -34,8 +34,8 @@
   /* ---------- 狀態 ---------- */
   var report = null;                       // 解析後的整份週報
   var state = {
-    tab: 'news', view: 'cards',
-    q: '', cats: [], dates: [], ents: [],
+    tab: 'news',
+    cats: [], dates: [], ents: [],
     dq: '', dcats: []
   };
 
@@ -261,9 +261,9 @@
      ============================================================ */
   function show(rpt) {
     report = rpt;
-    state.q = ''; state.cats = []; state.dates = []; state.ents = [];
+    state.cats = []; state.dates = []; state.ents = [];
     state.dq = ''; state.dcats = [];
-    $('#q').value = ''; $('#dq').value = '';
+    $('#dq').value = '';
 
     $('#stage-empty').hidden = true;
     $('#stage-report').hidden = false;
@@ -313,6 +313,11 @@
            esc(label) + '<span class="n">' + count + '</span></button>';
   }
 
+  function optionHtml(value, label, count, on) {
+    return '<option value="' + esc(value) + '"' + (on ? ' selected' : '') + '>' +
+           esc(label) + '（' + count + '）</option>';
+  }
+
   function buildChips() {
     var n = report.news;
 
@@ -321,23 +326,31 @@
       return chipHtml(c, c, cats[c], state.cats.indexOf(c) >= 0);
     }).join('');
 
+    // 日期：下拉選單，由新到舊
     var dts = countBy(n, 'date');
     var dkeys = Object.keys(dts).sort(function (a, b) { return dateKey(b) - dateKey(a); });
-    $('#f-date').innerHTML = dkeys.map(function (d) {
-      var wd = weekdayOf(d);
-      var short = d.replace(/^\d{4}[\/\-.]/, '') + (wd ? ' ' + wd : '');
-      return chipHtml(d, short, dts[d], state.dates.indexOf(d) >= 0);
-    }).join('');
+    $('#s-date').innerHTML =
+      optionHtml('', '全部日期', n.length, !state.dates.length) +
+      dkeys.map(function (d) {
+        var wd = weekdayOf(d);
+        return optionHtml(d, d.replace(/^\d{4}[\/\-.]/, '') + (wd ? ' ' + wd : ''),
+                          dts[d], state.dates[0] === d);
+      }).join('');
 
-    // 主體用「主要關鍵字」歸戶：取斜線前的第一段，去掉股號
+    // 主體：下拉選單，依則數多寡排序
+    // 用「主要關鍵字」歸戶：先去掉括號內容（股號、成員列舉），再依分隔符切開
     var ents = {};
     n.forEach(function (i) {
       keyEntities(i.entity).forEach(function (e) { ents[e] = (ents[e] || 0) + 1; });
     });
-    var top = Object.keys(ents).sort(function (a, b) { return ents[b] - ents[a]; }).slice(0, 14);
-    $('#f-ent').innerHTML = top.map(function (e) {
-      return chipHtml(e, e, ents[e], state.ents.indexOf(e) >= 0);
-    }).join('');
+    var ekeys = Object.keys(ents).sort(function (a, b) {
+      return ents[b] - ents[a] || a.localeCompare(b);
+    });
+    $('#s-ent').innerHTML =
+      optionHtml('', '全部主體', n.length, !state.ents.length) +
+      ekeys.map(function (e) {
+        return optionHtml(e, e, ents[e], state.ents[0] === e);
+      }).join('');
   }
 
   // 先拿掉括號內容（股號、成員列舉），再依分隔符切開，避免把括號切成兩半
@@ -363,8 +376,6 @@
 
   /* ---------- 新聞 ---------- */
   function filteredNews() {
-    var q = state.q.trim().toLowerCase();
-    var terms = q ? q.split(/\s+/).filter(Boolean) : [];
     return report.news.filter(function (i) {
       if (state.cats.length && state.cats.indexOf(i.cat) < 0) return false;
       if (state.dates.length && state.dates.indexOf(i.date) < 0) return false;
@@ -372,7 +383,6 @@
         var ks = keyEntities(i.entity);
         if (!state.ents.some(function (e) { return ks.indexOf(e) >= 0; })) return false;
       }
-      if (terms.length && !terms.every(function (t) { return i._hay.indexOf(t) >= 0; })) return false;
       return true;
     });
   }
@@ -381,16 +391,11 @@
     var list = filteredNews();
     $('#result-count').textContent = '顯示 ' + list.length + ' / ' + report.news.length + ' 則';
     $('#news-none').hidden = list.length > 0;
-
-    var cardsOn = state.view === 'cards';
-    $('#news-cards').hidden = !cardsOn || !list.length;
-    $('#news-table').hidden = cardsOn || !list.length;
-
-    if (cardsOn) renderCards(list); else renderTable(list);
+    $('#news-cards').hidden = !list.length;
+    renderCards(list);
   }
 
   function renderCards(list) {
-    var q = state.q.trim();
     var html = '', lastDate = null;
     list.forEach(function (i) {
       if (i.date !== lastDate) {
@@ -399,12 +404,12 @@
         html += '<div class="date-head"><b>' + esc(i.date || '未標日期') + '</b>' +
                 (wd ? '<span>' + wd + '</span>' : '') + '</div>';
       }
-      html += cardHtml(i, q);
+      html += cardHtml(i);
     });
     $('#news-cards').innerHTML = html;
   }
 
-  function cardHtml(i, q) {
+  function cardHtml(i) {
     var h = '<article class="card">';
     h += '<div class="card-top">';
     if (i.no)     h += '<span class="tag no">#' + esc(i.no) + '</span>';
@@ -412,18 +417,18 @@
     if (i.entity) h += '<span class="tag ent">' + esc(i.entity) + '</span>';
     h += '</div>';
 
-    var t = hl(i.title, q);
+    var t = esc(i.title);
     h += '<h3>' + (isHttp(i.link)
         ? '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + t + '<span class="ext">↗</span></a>'
         : t) + '</h3>';
 
-    if (i.summary) h += '<p class="summary">' + hl(i.summary, q) + '</p>';
+    if (i.summary) h += '<p class="summary">' + esc(i.summary) + '</p>';
 
     var kv = '';
-    if (i.metric) kv += '<div class="kv-item metric"><span class="k">關鍵數據</span><span class="v">' + hl(i.metric, q) + '</span></div>';
-    if (i.impact) kv += '<div class="kv-item"><span class="k">影響觀察</span><span class="v">' + hl(i.impact, q) + '</span></div>';
+    if (i.metric) kv += '<div class="kv-item metric"><span class="k">關鍵數據</span><span class="v">' + esc(i.metric) + '</span></div>';
+    if (i.impact) kv += '<div class="kv-item"><span class="k">影響觀察</span><span class="v">' + esc(i.impact) + '</span></div>';
     Object.keys(i.extras).forEach(function (k) {
-      kv += '<div class="kv-item"><span class="k">' + esc(k) + '</span><span class="v">' + hl(i.extras[k], q) + '</span></div>';
+      kv += '<div class="kv-item"><span class="k">' + esc(k) + '</span><span class="v">' + esc(i.extras[k]) + '</span></div>';
     });
     if (kv) h += '<div class="kv">' + kv + '</div>';
 
@@ -436,25 +441,6 @@
     if (isHttp(i.link)) h += '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">原文連結</a>';
     h += '</div></article>';
     return h;
-  }
-
-  function renderTable(list) {
-    var cols = [
-      ['no', '序號'], ['date', '日期'], ['cat', '分類'], ['entity', '主體/公司'],
-      ['title', '標題'], ['summary', '重點摘要'], ['metric', '關鍵數據'],
-      ['impact', '影響/觀察'], ['source', '來源'], ['conf', '資料確認度']
-    ];
-    var h = '<table><thead><tr>' +
-      cols.map(function (c) { return '<th>' + c[1] + '</th>'; }).join('') +
-      '<th>連結</th></tr></thead><tbody>';
-    list.forEach(function (i) {
-      h += '<tr>' + cols.map(function (c) {
-        return '<td>' + hl(i[c[0]] || '', state.q.trim()) + '</td>';
-      }).join('');
-      h += '<td>' + (isHttp(i.link)
-        ? '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">開啟</a>' : '') + '</td></tr>';
-    });
-    $('#news-table').innerHTML = h + '</tbody></table>';
   }
 
   /* ---------- 重點數據 ---------- */
@@ -495,25 +481,6 @@
     $('#notes-body').innerHTML = html || '<p class="muted">這份 Excel 沒有「說明與方法」分頁。</p>';
   }
 
-  /* ---------- CSV 匯出 ---------- */
-  function exportCsv() {
-    var list = filteredNews();
-    var cols = [['no', '序號'], ['date', '日期'], ['cat', '分類'], ['entity', '主體/公司'],
-                ['title', '標題'], ['summary', '重點摘要'], ['metric', '關鍵數據'],
-                ['impact', '影響/觀察'], ['source', '來源'], ['link', '連結'], ['conf', '資料確認度']];
-    var q = function (s) { return '"' + String(s || '').replace(/"/g, '""') + '"'; };
-    var rows = [cols.map(function (c) { return q(c[1]); }).join(',')];
-    list.forEach(function (i) {
-      rows.push(cols.map(function (c) { return q(i[c[0]]); }).join(','));
-    });
-    var blob = new Blob(['\ufeff' + rows.join('\r\n')], { type: 'text/csv;charset=utf-8' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = (report.label || 'report') + '_篩選結果.csv';
-    a.click();
-    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-  }
-
   /* ---------- 讓篩選列的 sticky 位置永遠貼齊頂部列（頂部列會換行變高） ---------- */
   function syncTopbarHeight() {
     var el = $('.topbar');
@@ -540,26 +507,18 @@
       });
     });
 
-    // 檢視切換
-    $$('.vt').forEach(function (b) {
-      b.addEventListener('click', function () {
-        $$('.vt').forEach(function (x) { x.classList.remove('is-on'); });
-        b.classList.add('is-on');
-        state.view = b.dataset.view;
-        renderNews();
-      });
-    });
+    // 重點數據的搜尋
+    $('#dq').addEventListener('input', function () { state.dq = this.value; renderData(); });
 
-    // 搜尋
-    $('#q').addEventListener('input', function () {
-      state.q = this.value;
-      $('#q-clear').hidden = !this.value;
+    // 日期 / 主體：下拉選單（單選，空值代表全部）
+    $('#s-date').addEventListener('change', function () {
+      state.dates = this.value ? [this.value] : [];
       renderNews();
     });
-    $('#q-clear').addEventListener('click', function () {
-      $('#q').value = ''; state.q = ''; this.hidden = true; renderNews();
+    $('#s-ent').addEventListener('change', function () {
+      state.ents = this.value ? [this.value] : [];
+      renderNews();
     });
-    $('#dq').addEventListener('input', function () { state.dq = this.value; renderData(); });
 
     // 晶片
     var chipHandler = function (container, key, after) {
@@ -572,22 +531,15 @@
       });
     };
     chipHandler('#f-cat', 'cats', renderNews);
-    chipHandler('#f-date', 'dates', renderNews);
-    chipHandler('#f-ent', 'ents', renderNews);
     chipHandler('#f-dcat', 'dcats', renderData);
 
     $('#btn-reset').addEventListener('click', function () {
-      state.q = ''; state.cats = []; state.dates = []; state.ents = [];
-      $('#q').value = ''; $('#q-clear').hidden = true;
+      state.cats = []; state.dates = []; state.ents = [];
       buildChips(); renderNews();
     });
 
-    $('#btn-csv').addEventListener('click', exportCsv);
-
-    // 檔案來源
-    var openPicker = function () { $('#file-input').click(); };
-    $('#btn-open').addEventListener('click', openPicker);
-    $('#btn-open-2').addEventListener('click', openPicker);
+    // 檔案來源（拖放，或空狀態時的選檔按鈕）
+    $('#btn-open-2').addEventListener('click', function () { $('#file-input').click(); });
     $('#file-input').addEventListener('change', function () {
       if (this.files && this.files[0]) loadFromFile(this.files[0]);
       this.value = '';
@@ -627,11 +579,12 @@
       if (saved) document.documentElement.setAttribute('data-theme', saved);
     } catch (err) {}
 
-    // 快捷鍵
+    // 快捷鍵：在「重點數據」分頁按 / 聚焦搜尋框
     document.addEventListener('keydown', function (e) {
-      if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
+      if (e.key === '/' && !$('#panel-data').hidden &&
+          !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
         e.preventDefault();
-        ($('#panel-news').hidden ? $('#dq') : $('#q')).focus();
+        $('#dq').focus();
       }
     });
   }
