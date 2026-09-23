@@ -58,7 +58,8 @@
     dcats: [],
     lang: {},                              // 每則新聞目前顯示的語言：{ 序號: 'en' }，預設中文
     vscope: 'report',                      // 字彙分頁：'report' 本期 / 'saved' 我的收藏
-    vhide: false                           // 字彙分頁：遮住中文自我測驗
+    vhide: false,                          // 字彙分頁：遮住中文自我測驗
+    vtype: ''                              // 字彙分頁：'' 全部 / 'fin' 財經用語 / 'general' 一般字彙
   };
 
   /* ---------- 收藏的單字：存在這台瀏覽器（跨期保留） ---------- */
@@ -266,9 +267,24 @@
   function loadEnglish(fileName) {
     var base = String(fileName || '').replace(/\.[^.]+$/, '');
     if (!base) return Promise.resolve(null);
-    return fetch('data/en/' + encodeURIComponent(base) + '.json', { cache: 'no-cache' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .catch(function () { return null; });
+    return Promise.all([
+      fetch('data/en/' + encodeURIComponent(base) + '.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; }),
+      loadGlossary()
+    ]).then(function (r) { return r[0]; });
+  }
+
+  // 全站共用的英中字典 data/en/glossary.json：英文模式下點任一字查中文。只載一次
+  var gloss = {}, glossPromise = null;
+  function loadGlossary() {
+    if (!glossPromise) {
+      glossPromise = fetch('data/en/glossary.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return {}; })
+        .then(function (g) { gloss = g || {}; });
+    }
+    return glossPromise;
   }
 
   function loadFromUrl(url, label) {
@@ -336,6 +352,10 @@
     $('#tabcount-data').textContent = rpt.data.length;
     $('#tabcount-vocab').textContent = reportVocab().length || '';
     $('#btn-all-lang').hidden = !nEn;
+    $('#en-hint').hidden = !nEn;
+    $('#en-hint').textContent = canSpeak
+      ? '英文模式：點任一個字看中文，字彙按 🔊 聽發音'
+      : '英文模式：點任一個字看中文';
 
     buildFilters();
     buildDataFilter();
@@ -458,6 +478,7 @@
     $('#result-count').textContent = '顯示 ' + list.length + ' / ' + report.news.length + ' 則';
     $('#news-none').hidden = list.length > 0;
     $('#news-cards').hidden = !list.length;
+    closePop();
     renderCards(list);
     syncAllLangBtn();
   }
@@ -489,23 +510,63 @@
   }
   function isWarn(conf) { return /待確認|預估|傳聞|未證實|揣測|非公司公告|草案|待驗證|Unconfirmed|Unverified/i.test(conf); }
 
-  // 英文內文：把本則的重點字彙包成 <mark>，滑過（手機點一下）顯示中文。每個字只標第一次出現
-  function markVocab(text, vocab, seen) {
-    var h = esc(text);
-    if (!vocab || !vocab.length) return h;
-    var zh = {};
-    var terms = vocab.map(function (v) { zh[v[0].toLowerCase()] = v[1]; return v[0]; })
+  function isFin(v) { return v && v[2] === 'fin'; }
+
+  /* ---- 英文內文 ----
+     1. 本則的重點字彙包成 <mark>：螢光筆底、滑過（手機點一下）顯示中文。每個字只標第一次出現
+     2. 其餘每個英文字包成 <span class="w">：點一下跳出中文（查 data/en/glossary.json）
+     斷字與查字規則必須與 foundry-weekly-tools/build_weekly.py 的 TOKEN_RE / gloss_lookup 一致 */
+  var TOKEN_RE = /[A-Za-z0-9À-ɏ]+(?:[-'’][A-Za-z0-9À-ɏ]+)*/g;
+
+  function glossLookup(tok) {
+    tok = tok.replace(/’/g, "'");
+    var stripped = tok.replace(/'s$/i, '');
+    var cands = [tok, tok.toLowerCase(), stripped, stripped.toLowerCase()];
+    for (var i = 0; i < cands.length; i++) {
+      if (Object.prototype.hasOwnProperty.call(gloss, cands[i])) return cands[i];
+    }
+    return null;
+  }
+
+  function wordSpan(tok) {
+    if (/\d/.test(tok)) return esc(tok);               // 2nm、Q3、A14 這類不查
+    var k = glossLookup(tok);
+    if (k) return '<span class="w" data-k="' + esc(k) + '">' + esc(tok) + '</span>';
+    if (tok.indexOf('-') > 0) return tok.split('-').map(wordSpan).join('-');   // 複合字查不到就拆開查
+    return esc(tok);
+  }
+
+  function wrapWords(text) {
+    var out = '', last = 0, m;
+    TOKEN_RE.lastIndex = 0;
+    while ((m = TOKEN_RE.exec(text))) {
+      out += esc(text.slice(last, m.index)) + wordSpan(m[0]);
+      last = m.index + m[0].length;
+    }
+    return out + esc(text.slice(last));
+  }
+
+  function enHtml(text, vocab, seen) {
+    text = String(text || '');
+    if (!vocab || !vocab.length) return wrapWords(text);
+    var byTerm = {};
+    var terms = vocab.map(function (v) { byTerm[v[0].toLowerCase()] = v; return v[0]; })
       .sort(function (a, b) { return b.length - a.length; });
-    var re = new RegExp('(^|[^A-Za-z0-9])(' + terms.map(function (t) { return escRe(esc(t)); }).join('|') +
+    var re = new RegExp('(^|[^A-Za-z0-9])(' + terms.map(escRe).join('|') +
                         ')((?:s|es|d|ed)?)(?![A-Za-z0-9])', 'gi');
-    return h.replace(re, function (all, pre, word, suf) {
-      var k = word.toLowerCase();
-      var hit = null;
-      Object.keys(zh).some(function (t) { if (esc(t) === k) { hit = t; return true; } return false; });
-      if (!hit || seen[hit]) return all;
-      seen[hit] = 1;
-      return pre + '<mark class="vw" tabindex="0" data-zh="' + esc(zh[hit]) + '">' + word + suf + '</mark>';
-    });
+    var out = '', last = 0, m;
+    while ((m = re.exec(text))) {
+      var v = byTerm[m[2].toLowerCase()];
+      var start = m.index + m[1].length;
+      if (!v || seen[v[0].toLowerCase()]) continue;
+      seen[v[0].toLowerCase()] = 1;
+      out += wrapWords(text.slice(last, start)) +
+             '<mark class="vw' + (isFin(v) ? ' fin' : '') + '" tabindex="0" data-t="' + esc(v[0]) +
+             '" data-zh="' + esc(v[1]) + '"' + (isFin(v) ? ' data-fin="1"' : '') + '>' +
+             esc(m[2] + m[3]) + '</mark>';
+      last = start + m[2].length + m[3].length;
+    }
+    return out + wrapWords(text.slice(last));
   }
 
   function cardHtml(i) {
@@ -529,13 +590,19 @@
 
     var seen = {};
     var tx = function (zhText, enText) {
-      return isEn ? markVocab(enText || '', en.vocab, seen) : esc(zhText);
+      return isEn ? enHtml(enText, en.vocab, seen) : esc(zhText);
     };
     var title = isEn ? en.title : i.title;
     var t = tx(i.title, en && en.title);
-    h += '<h3>' + (isHttp(i.link)
-        ? '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + t + '<span class="ext">↗</span></a>'
-        : t) + '</h3>';
+    if (isEn) {
+      // 英文標題的每個字都要能點來查義，所以標題本身不做成連結，只留 ↗ 連到原文
+      h += '<h3>' + t + (isHttp(i.link)
+          ? '<a class="ext" href="' + esc(i.link) + '" target="_blank" rel="noopener" title="Original article">↗</a>' : '') + '</h3>';
+    } else {
+      h += '<h3>' + (isHttp(i.link)
+          ? '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + t + '<span class="ext">↗</span></a>'
+          : t) + '</h3>';
+    }
 
     if (i.summary) h += '<p class="summary">' + tx(i.summary, en && en.summary) + '</p>';
 
@@ -553,11 +620,17 @@
     if (kv) h += '<div class="kv">' + kv + '</div>';
 
     if (isEn && en.vocab && en.vocab.length) {
-      h += '<div class="vocab"><span class="vocab-k">Vocabulary</span>' + en.vocab.map(function (v) {
+      // 財經用語排前面；每個字卡左邊 🔊 朗讀，其餘部分點一下收藏（與原本相同）
+      var vs = en.vocab.filter(isFin).concat(en.vocab.filter(function (v) { return !isFin(v); }));
+      h += '<div class="vocab"><span class="vocab-k">Vocabulary</span>' + vs.map(function (v) {
         var on = !!saved[v[0].toLowerCase()];
-        return '<button type="button" class="vchip' + (on ? ' is-saved' : '') + '" data-term="' + esc(v[0]) +
-               '" data-zh="' + esc(v[1]) + '" data-ctx="' + esc(title) + '" title="' + (on ? '已收藏，點一下取消' : '點一下收藏到單字本') + '">' +
-               '<b>' + esc(v[0]) + '</b><span>' + esc(v[1]) + '</span><i>' + (on ? '★' : '☆') + '</i></button>';
+        return '<span class="vchip' + (on ? ' is-saved' : '') + (isFin(v) ? ' fin' : '') + '">' +
+               sayBtn(v[0]) +
+               '<button type="button" class="vsave" data-term="' + esc(v[0]) + '" data-zh="' + esc(v[1]) +
+               '" data-ctx="' + esc(title) + '"' + (isFin(v) ? ' data-fin="1"' : '') +
+               ' title="' + (on ? '已收藏，點一下取消' : '點一下收藏到單字本') + '">' +
+               (isFin(v) ? '<em>財經</em>' : '') +
+               '<b>' + esc(v[0]) + '</b><span>' + esc(v[1]) + '</span><i>' + (on ? '★' : '☆') + '</i></button></span>';
       }).join('') + '</div>';
     }
 
@@ -575,10 +648,25 @@
   }
 
   // 只重畫被切換的那一張卡，不動其他卡片與捲動位置
-  function rerenderCard(key) {
+  function itemByKey(key) {
     var item = null;
     report.news.some(function (i) { if (keyOf(i) === key) { item = i; return true; } return false; });
-    var el = $('.card[data-key="' + (window.CSS && CSS.escape ? CSS.escape(key) : key) + '"]');
+    return item;
+  }
+
+  // 在查字小視窗收藏／取消後，同步新聞卡上同一個字的字彙卡星號
+  function syncChipStars(term) {
+    var k = term.toLowerCase(), on = !!saved[k];
+    $$('#news-cards .vsave').forEach(function (b) {
+      if (b.dataset.term.toLowerCase() !== k) return;
+      b.parentNode.classList.toggle('is-saved', on);
+      b.querySelector('i').textContent = on ? '★' : '☆';
+    });
+  }
+
+  function rerenderCard(key) {
+    var item = itemByKey(key);
+    var el =$('.card[data-key="' + (window.CSS && CSS.escape ? CSS.escape(key) : key) + '"]');
     if (!item || !el) return;
     var tmp = document.createElement('div');
     tmp.innerHTML = cardHtml(item);
@@ -604,16 +692,16 @@
         var k = v[0].toLowerCase();
         if (seen[k]) return;
         seen[k] = 1;
-        out.push({ t: v[0], zh: v[1], ctx: en.title, cat: i.cat });
+        out.push({ t: v[0], zh: v[1], ctx: en.title, cat: i.cat, fin: isFin(v) });
       });
     });
     return out;
   }
 
-  function toggleSaved(t, zh, ctx) {
+  function toggleSaved(t, zh, ctx, fin) {
     var k = t.toLowerCase();
     if (saved[k]) delete saved[k];
-    else saved[k] = { t: t, zh: zh, ctx: ctx, at: Date.now() };
+    else saved[k] = { t: t, zh: zh, ctx: ctx, fin: !!fin, at: Date.now() };
     storeSaved(saved);
   }
 
@@ -627,21 +715,93 @@
     } else {
       list = reportVocab();
     }
+    if (state.vtype === 'fin') list = list.filter(function (v) { return v.fin; });
+    else if (state.vtype === 'general') list = list.filter(function (v) { return !v.fin; });
     $('#vocab-none').hidden = list.length > 0;
     $('#vocab-none').textContent = state.vscope === 'saved'
-      ? '還沒有收藏任何單字。在英文模式的新聞卡下方，或本頁的字卡上按 ☆ 就能收藏。'
-      : '這一期還沒有英文對照與字彙。';
+      ? '還沒有收藏符合條件的單字。在英文模式的新聞卡上點任一個字、字彙卡或本頁字卡上的 ☆ 都能收藏。'
+      : '這一期沒有符合條件的英文字彙。';
     $('#vocab-grid').classList.toggle('is-quiz', state.vhide);
     $('#vocab-grid').innerHTML = list.map(function (v) {
       var on = !!saved[v.t.toLowerCase()];
-      return '<div class="vcard' + (v.cat ? ' c-' + catColor(v.cat) : '') + '">' +
+      return '<div class="vcard' + (v.cat ? ' c-' + catColor(v.cat) : '') + (v.fin ? ' fin' : '') + '">' +
         '<button type="button" class="vstar' + (on ? ' is-saved' : '') + '" data-term="' + esc(v.t) +
-          '" data-zh="' + esc(v.zh) + '" data-ctx="' + esc(v.ctx || '') + '" aria-label="收藏">' + (on ? '★' : '☆') + '</button>' +
-        '<div class="vt" lang="en">' + esc(v.t) + '</div>' +
+          '" data-zh="' + esc(v.zh) + '" data-ctx="' + esc(v.ctx || '') + '"' + (v.fin ? ' data-fin="1"' : '') +
+          ' aria-label="收藏">' + (on ? '★' : '☆') + '</button>' +
+        (v.fin ? '<em class="vfin">財經</em>' : '') +
+        '<div class="vt" lang="en">' + sayBtn(v.t) + '<span>' + esc(v.t) + '</span></div>' +
         '<div class="vz" tabindex="0">' + esc(v.zh) + '</div>' +
         (v.ctx ? '<div class="vc" lang="en">' + esc(v.ctx) + '</div>' : '') +
       '</div>';
     }).join('');
+  }
+
+  /* ---------- 發音：瀏覽器內建的英文語音（Web Speech API），不需外部服務 ---------- */
+  var canSpeak = typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined';
+  var voice = null;
+  function pickVoice() {
+    if (!canSpeak) return;
+    var vs = speechSynthesis.getVoices().filter(function (v) { return /^en[-_]/i.test(v.lang); });
+    var prefer = [/Google US English/i, /Aria/i, /Jenny/i, /Samantha/i, /Microsoft.*(Zira|Guy|Mark|David)/i];
+    voice = null;
+    prefer.some(function (re) { return vs.some(function (v) { if (re.test(v.name)) { voice = v; return true; } return false; }); });
+    if (!voice) voice = vs.filter(function (v) { return /en[-_]US/i.test(v.lang); })[0] || vs[0] || null;
+  }
+  if (canSpeak) {
+    pickVoice();
+    if ('onvoiceschanged' in speechSynthesis) speechSynthesis.onvoiceschanged = pickVoice;
+  }
+  function speak(text) {
+    if (!canSpeak || !text) return;
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = voice ? voice.lang : 'en-US';
+    if (voice) u.voice = voice;
+    u.rate = 0.9;
+    speechSynthesis.speak(u);
+  }
+  var SPEAK_ICON = '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>';
+  function sayBtn(text) {
+    if (!canSpeak) return '';
+    return '<button type="button" class="say" data-say="' + esc(text) + '" aria-label="朗讀 ' + esc(text) +
+           '" title="朗讀發音">' + SPEAK_ICON + '</button>';
+  }
+
+  /* ---------- 查字小視窗：英文模式點任一字（或螢光筆字彙）時顯示 ---------- */
+  var pop = null, popAnchor = null;
+  function closePop() {
+    if (pop) pop.hidden = true;
+    if (popAnchor) popAnchor.classList.remove('is-pop');
+    popAnchor = null;
+  }
+  function openPop(anchor, word, zh, fin, ctx) {
+    if (!pop) {
+      pop = document.createElement('div');
+      pop.id = 'wpop';
+      pop.setAttribute('role', 'dialog');
+      document.body.appendChild(pop);
+    }
+    if (popAnchor) popAnchor.classList.remove('is-pop');
+    popAnchor = anchor;
+    anchor.classList.add('is-pop');
+    var on = !!saved[word.toLowerCase()];
+    pop.innerHTML =
+      '<div class="wp-head">' + sayBtn(word) + '<b lang="en">' + esc(word) + '</b>' +
+        (fin ? '<em>財經</em>' : '') +
+        '<button type="button" class="wp-close" aria-label="關閉">×</button></div>' +
+      '<div class="wp-zh">' + esc(zh) + '</div>' +
+      '<button type="button" class="wp-save' + (on ? ' is-saved' : '') + '" data-term="' + esc(word) +
+        '" data-zh="' + esc(zh) + '" data-ctx="' + esc(ctx || '') + '"' + (fin ? ' data-fin="1"' : '') + '>' +
+        (on ? '★ 已收藏到單字本' : '☆ 收藏到單字本') + '</button>';
+    pop.hidden = false;
+    // 放在字的下方；靠近視窗右緣時往左收，下方空間不夠時改放上方
+    var r = anchor.getBoundingClientRect();
+    var w = pop.offsetWidth, hgt = pop.offsetHeight;
+    var left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 8);
+    var top = r.bottom + 8;
+    if (top + hgt > window.innerHeight - 8 && r.top - hgt - 8 > 0) top = r.top - hgt - 8;
+    pop.style.left = (left + window.scrollX) + 'px';
+    pop.style.top = (top + window.scrollY) + 'px';
   }
 
   /* ---------- 重點數據 ---------- */
@@ -728,20 +888,69 @@
 
     // 新聞卡：中 / EN 切換（只換這一張），以及收藏字彙
     $('#news-cards').addEventListener('click', function (e) {
+      var say = e.target.closest('.say');
+      if (say) { speak(say.dataset.say); return; }
       var lb = e.target.closest('.lang button');
       if (lb) {
         var key = lb.closest('.card').dataset.key;
         if (lb.dataset.lang === 'en') state.lang[key] = 'en'; else delete state.lang[key];
+        closePop();
         rerenderCard(key);
         syncAllLangBtn();
         return;
       }
-      var vc = e.target.closest('.vchip');
-      if (vc) {
-        toggleSaved(vc.dataset.term, vc.dataset.zh, vc.dataset.ctx);
-        rerenderCard(vc.closest('.card').dataset.key);
+      var vs = e.target.closest('.vsave');
+      if (vs) {
+        toggleSaved(vs.dataset.term, vs.dataset.zh, vs.dataset.ctx, vs.dataset.fin);
+        closePop();
+        rerenderCard(vs.closest('.card').dataset.key);
         $('#v-saved-count').textContent = Object.keys(saved).length;
+        return;
       }
+      // 英文模式：點螢光筆字彙或任一個字 → 查字小視窗
+      var card = e.target.closest('.card.is-en');
+      if (!card) return;
+      var ctx = (enOf(itemByKey(card.dataset.key)) || {}).title || '';
+      var mk = e.target.closest('mark.vw');
+      if (mk) {
+        e.preventDefault();
+        openPop(mk, mk.dataset.t, mk.dataset.zh, !!mk.dataset.fin, ctx);
+        return;
+      }
+      var w = e.target.closest('.w');
+      if (w && gloss[w.dataset.k]) {
+        e.preventDefault();
+        if (popAnchor === w && !pop.hidden) { closePop(); return; }
+        openPop(w, w.dataset.k, gloss[w.dataset.k], false, ctx);
+      }
+    });
+
+    // 查字小視窗：朗讀、收藏、關閉；點視窗外或按 Esc 關閉
+    document.addEventListener('click', function (e) {
+      if (!pop || pop.hidden) return;
+      if (pop.contains(e.target)) {
+        var say = e.target.closest('.say');
+        if (say) { speak(say.dataset.say); return; }
+        if (e.target.closest('.wp-close')) { closePop(); return; }
+        var sv = e.target.closest('.wp-save');
+        if (sv) {
+          toggleSaved(sv.dataset.term, sv.dataset.zh, sv.dataset.ctx, sv.dataset.fin);
+          var on = !!saved[sv.dataset.term.toLowerCase()];
+          sv.classList.toggle('is-saved', on);
+          sv.textContent = on ? '★ 已收藏到單字本' : '☆ 收藏到單字本';
+          syncChipStars(sv.dataset.term);
+          $('#v-saved-count').textContent = Object.keys(saved).length;
+        }
+        return;
+      }
+      if (e.target.closest('.card.is-en .w, .card.is-en mark.vw')) return;
+      closePop();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePop(); });
+    // 只在寬度真的改變（例如手機轉向）時關閉；手機捲動時網址列收合也會觸發 resize，不能因此關掉
+    var lastW = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth !== lastW) { lastW = window.innerWidth; closePop(); }
     });
     $('#btn-all-lang').addEventListener('click', function () {
       var to = this.getAttribute('data-to');
@@ -755,9 +964,14 @@
     // 字彙分頁
     $('#s-vscope').addEventListener('change', function () { state.vscope = this.value; renderVocab(); });
     $('#c-vhide').addEventListener('change', function () { state.vhide = this.checked; renderVocab(); });
+    $('#s-vtype').addEventListener('change', function () { state.vtype = this.value; renderVocab(); });
     $('#vocab-grid').addEventListener('click', function (e) {
+      var say = e.target.closest('.say');
+      if (say) { speak(say.dataset.say); return; }
+      var vt = e.target.closest('.vt');
+      if (vt) { speak(vt.textContent); return; }
       var s = e.target.closest('.vstar');
-      if (s) { toggleSaved(s.dataset.term, s.dataset.zh, s.dataset.ctx); renderVocab(); return; }
+      if (s) { toggleSaved(s.dataset.term, s.dataset.zh, s.dataset.ctx, s.dataset.fin); renderVocab(); return; }
       var z = e.target.closest('.vz');
       if (z) z.classList.toggle('is-shown');
     });

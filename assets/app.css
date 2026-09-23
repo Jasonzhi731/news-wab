@@ -389,25 +389,82 @@ mark.vw:hover::after,mark.vw:focus::after{
 }
 html[data-theme="dark"] mark.vw:hover::after,html[data-theme="dark"] mark.vw:focus::after{background:#e7eaf6;color:#131a2e}
 
+/* 螢光筆字彙的查字視窗開著時，不要再疊一個滑過提示 */
+mark.vw.is-pop::after{display:none}
+mark.vw.is-pop{background:var(--hl)}
+
+/* 英文內文的一般字：點一下查中文 */
+.card.is-en .w{cursor:pointer;border-radius:3px;transition:background .12s}
+.card.is-en .w:hover{background:color-mix(in srgb,var(--brand) 12%,transparent);text-decoration:underline dotted color-mix(in srgb,var(--brand) 60%,transparent);text-underline-offset:4px}
+.card.is-en .w.is-pop{background:color-mix(in srgb,var(--brand) 20%,transparent)}
+.card.is-en h3 .ext{margin-left:8px;font-size:13px;color:var(--ink-3);text-decoration:none}
+.card.is-en h3 .ext:hover{color:var(--brand)}
+
+/* 朗讀按鈕 */
+.say{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;cursor:pointer;
+  width:26px;height:26px;padding:0;border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--brand) 30%,transparent);
+  background:var(--surface);color:var(--brand);transition:background .15s,color .15s;
+}
+.say:hover{background:var(--brand);color:#fff}
+.say:active{transform:scale(.94)}
+
+/* 查字小視窗 */
+#wpop{
+  position:absolute;z-index:60;width:max-content;min-width:180px;max-width:min(320px,calc(100vw - 16px));
+  background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:14px;
+  box-shadow:0 18px 44px -14px rgba(19,26,46,.45);padding:12px 14px 12px;
+}
+#wpop .wp-head{display:flex;align-items:center;gap:8px}
+#wpop .wp-head b{font-family:var(--en);font-size:18px;font-weight:800;letter-spacing:0}
+#wpop .wp-head em{font-style:normal;font-size:11px;font-weight:700;color:var(--c-emerald);background:color-mix(in srgb,var(--c-emerald) 14%,transparent);padding:0 7px;border-radius:999px}
+#wpop .wp-close{margin-left:auto;border:0;background:none;color:var(--ink-3);font-size:20px;line-height:1;cursor:pointer;padding:0 2px}
+#wpop .wp-close:hover{color:var(--ink)}
+#wpop .wp-zh{margin:6px 0 10px;font-size:15px;line-height:1.6;color:var(--ink-2)}
+#wpop .wp-save{
+  font-family:var(--sans);font-size:12.5px;font-weight:600;cursor:pointer;
+  border:1px solid var(--rule);background:var(--surface-2);color:var(--ink-2);
+  padding:4px 11px;border-radius:999px;
+}
+#wpop .wp-save:hover{border-color:#eab308;color:#a16207}
+#wpop .wp-save.is-saved{background:color-mix(in srgb,#eab308 14%,var(--surface));border-color:color-mix(in srgb,#eab308 55%,transparent);color:#a16207}
+html[data-theme="dark"] #wpop .wp-save.is-saved,html[data-theme="dark"] #wpop .wp-save:hover{color:#facc15}
+
+.en-hint{font-size:12px;color:var(--ink-3);margin-left:auto}
+.en-hint + .lang-all{margin-left:0}
+
 .vocab{
   display:flex;flex-wrap:wrap;align-items:center;gap:8px;
   margin-top:14px;padding-top:14px;border-top:1px dashed var(--rule);
 }
 .vocab-k{font-family:var(--en);font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-right:4px}
+/* 字彙卡：左邊 🔊 朗讀，其餘部分點一下收藏 */
 .vchip{
-  display:inline-flex;align-items:baseline;gap:7px;cursor:pointer;max-width:100%;text-align:left;
-  font-family:var(--sans);font-size:13px;line-height:1.5;
-  padding:4px 10px 4px 12px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:2px;max-width:100%;
+  padding:3px 4px 3px 4px;border-radius:999px;
   background:var(--brand-soft);border:1px solid transparent;color:var(--ink);
   transition:border-color .15s,background .15s;
 }
 .vchip:hover{border-color:color-mix(in srgb,var(--brand) 45%,transparent)}
-.vchip b{font-family:var(--en);font-weight:700}
-.vchip span{color:var(--ink-2);font-size:12.5px}
-.vchip i{font-style:normal;color:var(--ink-3);font-size:13px}
+.vchip .say{width:24px;height:24px;border-color:transparent;background:none}
+.vchip .say:hover{background:var(--brand);color:#fff}
+.vsave{
+  display:inline-flex;align-items:baseline;gap:7px;cursor:pointer;text-align:left;min-width:0;
+  font-family:var(--sans);font-size:13px;line-height:1.5;color:inherit;
+  background:none;border:0;padding:1px 8px 1px 4px;border-radius:999px;
+}
+.vsave b{font-family:var(--en);font-weight:700}
+.vsave span{color:var(--ink-2);font-size:12.5px}
+.vsave i{font-style:normal;color:var(--ink-3);font-size:13px}
+.vsave em,.vcard .vfin{
+  font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.04em;align-self:center;
+  color:var(--c-emerald);background:color-mix(in srgb,var(--c-emerald) 14%,transparent);
+  padding:0 6px;border-radius:999px;line-height:1.7;
+}
+.vchip.fin{background:color-mix(in srgb,var(--c-emerald) 9%,var(--surface))}
 .vchip.is-saved{border-color:color-mix(in srgb,#eab308 55%,transparent);background:color-mix(in srgb,#eab308 14%,var(--surface))}
-.vchip.is-saved i{color:#ca8a04}
-
+.vchip.is-saved .vsave i{color:#ca8a04}
 .card-foot{
   display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;
   margin-top:16px;font-size:12.5px;color:var(--ink-3);letter-spacing:.02em;
@@ -456,7 +513,12 @@ html[data-theme="dark"] mark.vw:hover::after,html[data-theme="dark"] mark.vw:foc
   padding:16px 18px 14px;box-shadow:var(--shadow);
   border-top:3px solid var(--c,var(--brand));   /* 收藏清單沒有分類時用品牌色 */
 }
-.vcard .vt{font-family:var(--en);font-size:18px;font-weight:800;line-height:1.35;color:var(--ink);padding-right:30px}
+.vcard .vt{
+  display:flex;align-items:center;gap:8px;cursor:pointer;
+  font-family:var(--en);font-size:18px;font-weight:800;line-height:1.35;color:var(--ink);padding-right:30px;
+}
+.vcard .vt:hover span{color:var(--brand)}
+.vcard .vfin{display:inline-block;margin-bottom:6px}
 .vcard .vz{margin-top:4px;font-size:14.5px;color:var(--ink-2);font-weight:600}
 .vcard .vc{
   margin-top:10px;padding-top:9px;border-top:1px solid var(--rule-soft);
@@ -547,6 +609,7 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
   .fsel > span{width:34px}
   .fsel select{flex:1 1 auto;min-width:0;max-width:none}
   .lang-all{margin-left:0}
+  .en-hint{margin-left:0;width:100%}
   .card{padding:18px 16px 16px 20px}
   .card h3,.card.is-en h3{font-size:17px}
   .card-top{flex-wrap:wrap}
@@ -566,7 +629,7 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
 }
 
 @media print{
-  .topbar,.filters,.tabs,.foot,#drop-veil,.lang{display:none!important}
+  .topbar,.filters,.tabs,.foot,#drop-veil,.lang,.say,#wpop{display:none!important}
   body{background:#fff;font-size:11pt}
   .wrap{max-width:none;padding:0}
   .hero{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}

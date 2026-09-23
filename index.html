@@ -108,6 +108,7 @@
         <div class="filter-foot">
           <span id="result-count" class="muted"></span>
           <button id="btn-reset" class="linkbtn" type="button">清除全部篩選</button>
+          <span id="en-hint" class="en-hint" hidden></span>
           <button id="btn-all-lang" class="btn lang-all" type="button" data-to="en" hidden>全部切成英文</button>
         </div>
       </div>
@@ -135,6 +136,13 @@
             <select id="s-vscope">
               <option value="report">本期新聞的字彙</option>
               <option value="saved">我的單字本（跨期收藏）</option>
+            </select>
+          </label>
+          <label class="fsel"><span>類型</span>
+            <select id="s-vtype">
+              <option value="">全部字彙</option>
+              <option value="fin">只看財經用語</option>
+              <option value="general">只看一般字彙</option>
             </select>
           </label>
           <label class="fcheck"><input id="c-vhide" type="checkbox"> 遮住中文（自我測驗，點一下看答案）</label>

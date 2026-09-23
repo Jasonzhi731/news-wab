@@ -9,30 +9,13 @@
       "impact": "Advanced packaging is already the second battlefield of foundry competition. Loosening allocations may mean TSMC is turning more conservative on 2027 CoWoS supply and demand — to be read together with the 9/1 news of deferred equipment orders.",
       "conf": "Confirmed (media citing the supply chain, not a TSMC announcement)",
       "vocab": [
-        [
-          "reshuffles",
-          "重新分配、調整"
-        ],
-        [
-          "allocation",
-          "配額分配"
-        ],
-        [
-          "near-monopoly",
-          "近乎壟斷"
-        ],
-        [
-          "dominance",
-          "主導地位"
-        ],
-        [
-          "conservative",
-          "保守的"
-        ],
-        [
-          "trimmed",
-          "削減、下修"
-        ]
+        ["reshuffles", "重新分配、調整"],
+        ["allocation", "配額分配"],
+        ["near-monopoly", "近乎壟斷"],
+        ["dominance", "主導地位"],
+        ["conservative", "保守的"],
+        ["trimmed", "削減、下修"],
+        ["pull-ins", "提前拉貨", "fin"]
       ]
     },
     "2": {
@@ -43,30 +26,13 @@
       "impact": "Early 2nm capacity is still tight, so giving it first to high-priced, low-volume products optimizes margins; it also means N2's large-scale ramp falls on the 2027 iPhone generation.",
       "conf": "Confirmed (supply-chain reports)",
       "vocab": [
-        [
-          "first wave",
-          "首波"
-        ],
-        [
-          "as usual",
-          "照慣例"
-        ],
-        [
-          "trade-offs",
-          "取捨"
-        ],
-        [
-          "optimizes",
-          "最佳化"
-        ],
-        [
-          "large-scale",
-          "大規模的"
-        ],
-        [
-          "transition",
-          "轉換"
-        ]
+        ["first wave", "首波"],
+        ["as usual", "照慣例"],
+        ["trade-offs", "取捨"],
+        ["optimizes", "最佳化"],
+        ["large-scale", "大規模的"],
+        ["transition", "轉換"],
+        ["margins", "利潤率；毛利", "fin"]
       ]
     },
     "3": {
@@ -77,30 +43,13 @@
       "impact": "Water, power and carbon costs have become real constraints on advanced-node expansion, and will be directly reflected in foundry pricing structures after 2027.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "sustainability report",
-          "永續報告書"
-        ],
-        [
-          "intensity",
-          "強度"
-        ],
-        [
-          "renewable energy",
-          "再生能源"
-        ],
-        [
-          "carbon-reduction",
-          "減碳"
-        ],
-        [
-          "constraints",
-          "限制條件"
-        ],
-        [
-          "broke down",
-          "拆解、分析"
-        ]
+        ["sustainability report", "永續報告書"],
+        ["intensity", "強度"],
+        ["renewable energy", "再生能源"],
+        ["carbon-reduction", "減碳"],
+        ["constraints", "限制條件"],
+        ["broke down", "拆解、分析"],
+        ["procurement", "採購", "fin"]
       ]
     },
     "4": {
@@ -111,30 +60,12 @@
       "impact": "For TSMC, it is the first real test of its advanced-packaging moat; for Intel Foundry, it is the external revenue source most likely to materialize before 18A.",
       "conf": "Confirmed (supply-chain reports; no party has announced it)",
       "vocab": [
-        [
-          "diversify",
-          "分散、多元化"
-        ],
-        [
-          "reliance",
-          "依賴"
-        ],
-        [
-          "evaluating",
-          "評估"
-        ],
-        [
-          "moat",
-          "護城河"
-        ],
-        [
-          "materialize",
-          "實現、落地"
-        ],
-        [
-          "sole",
-          "唯一的"
-        ]
+        ["diversify", "分散、多元化"],
+        ["reliance", "依賴"],
+        ["evaluating", "評估"],
+        ["moat", "護城河"],
+        ["materialize", "實現、落地"],
+        ["sole", "唯一的"]
       ]
     },
     "5": {
@@ -145,30 +76,12 @@
       "impact": "Panel size is a battle over industry standards, determining where equipment, materials and substrate suppliers place their bets; Taiwanese equipment makers need to prepare for both specifications.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "diverges",
-          "分歧"
-        ],
-        [
-          "parting ways",
-          "分道揚鑣"
-        ],
-        [
-          "pursuing",
-          "推進、追求"
-        ],
-        [
-          "industry standards",
-          "產業標準"
-        ],
-        [
-          "place their bets",
-          "押寶"
-        ],
-        [
-          "specifications",
-          "規格"
-        ]
+        ["diverges", "分歧"],
+        ["parting ways", "分道揚鑣"],
+        ["pursuing", "推進、追求"],
+        ["industry standards", "產業標準"],
+        ["place their bets", "押寶"],
+        ["specifications", "規格"]
       ]
     },
     "6": {
@@ -179,30 +92,13 @@
       "impact": "If glass substrates succeed, they would change the structure of the ABF substrate shortage; in the short term there is no immediate impact on Taiwanese substrate makers such as Unimicron and Nan Ya PCB.",
       "conf": "Confirmed (technology progress at the evaluation stage)",
       "vocab": [
-        [
-          "claw back",
-          "扳回、奪回"
-        ],
-        [
-          "track",
-          "賽道"
-        ],
-        [
-          "landscape",
-          "格局"
-        ],
-        [
-          "dominated",
-          "被主導的"
-        ],
-        [
-          "immediate",
-          "立即的"
-        ],
-        [
-          "validation",
-          "驗證"
-        ]
+        ["claw back", "扳回、奪回"],
+        ["track", "賽道"],
+        ["landscape", "格局"],
+        ["dominated", "被主導的"],
+        ["immediate", "立即的"],
+        ["validation", "驗證"],
+        ["shortage", "短缺", "fin"]
       ]
     },
     "7": {
@@ -213,30 +109,12 @@
       "impact": "OSAT capex is a concurrent indicator of foundries' advanced-packaging demand; continued record spending means the AI packaging bottleneck has not been cleared.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "arms race",
-          "軍備競賽"
-        ],
-        [
-          "heats up",
-          "升溫"
-        ],
-        [
-          "capital spending",
-          "資本支出"
-        ],
-        [
-          "overflow",
-          "外溢"
-        ],
-        [
-          "concurrent",
-          "同步的"
-        ],
-        [
-          "cleared",
-          "解除"
-        ]
+        ["arms race", "軍備競賽"],
+        ["heats up", "升溫"],
+        ["capital spending", "資本支出", "fin"],
+        ["overflow", "外溢"],
+        ["concurrent", "同步的"],
+        ["cleared", "解除"]
       ]
     },
     "8": {
@@ -247,30 +125,14 @@
       "impact": "On top of mature-node foundry price hikes, back-end packaging will also get more expensive, putting double pressure on IC designers' margins.",
       "conf": "Confirmed (DIGITIMES exclusive, not verified by companies)",
       "vocab": [
-        [
-          "exclusive",
-          "獨家報導"
-        ],
-        [
-          "wire bonding",
-          "打線封裝"
-        ],
-        [
-          "squeeze",
-          "排擠、擠壓"
-        ],
-        [
-          "double pressure",
-          "雙重壓力"
-        ],
-        [
-          "margins",
-          "毛利率"
-        ],
-        [
-          "affected",
-          "受影響的"
-        ]
+        ["exclusive", "獨家報導"],
+        ["wire bonding", "打線封裝"],
+        ["squeeze", "排擠、擠壓"],
+        ["double pressure", "雙重壓力"],
+        ["margins", "毛利率", "fin"],
+        ["affected", "受影響的"],
+        ["price hikes", "漲價", "fin"],
+        ["shipments", "出貨量", "fin"]
       ]
     },
     "9": {
@@ -281,30 +143,13 @@
       "impact": "The scale of profit-sharing and the talent crowding-out effect are hidden costs of advanced-node expansion, and they raise the bar for other foundries and equipment makers to retain talent.",
       "conf": "Confirmed (individual pay ranges shared online, not company disclosures)",
       "vocab": [
-        [
-          "profit-sharing",
-          "分紅"
-        ],
-        [
-          "performance bonus",
-          "績效獎金"
-        ],
-        [
-          "new hires",
-          "新進員工"
-        ],
-        [
-          "compensation",
-          "酬勞"
-        ],
-        [
-          "retain",
-          "留住（人才）"
-        ],
-        [
-          "hidden costs",
-          "隱性成本"
-        ]
+        ["profit-sharing", "分紅", "fin"],
+        ["performance bonus", "績效獎金", "fin"],
+        ["new hires", "新進員工"],
+        ["compensation", "酬勞", "fin"],
+        ["retain", "留住（人才）"],
+        ["hidden costs", "隱性成本"],
+        ["payout", "配發（股利）", "fin"]
       ]
     },
     "10": {
@@ -315,30 +160,13 @@
       "impact": "Money rotated from TSMC into mature-node foundries and IC designers, reflecting a rotation around the price-hike theme.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "settlement day",
-          "結算日"
-        ],
-        [
-          "futures",
-          "期貨"
-        ],
-        [
-          "capped",
-          "受抑制的"
-        ],
-        [
-          "relatively",
-          "相對地"
-        ],
-        [
-          "rotation",
-          "輪動"
-        ],
-        [
-          "theme",
-          "題材"
-        ]
+        ["settlement day", "結算日"],
+        ["futures", "期貨", "fin"],
+        ["capped", "受抑制的"],
+        ["relatively", "相對地"],
+        ["rotation", "輪動", "fin"],
+        ["theme", "題材"],
+        ["rotated", "（資金）輪動", "fin"]
       ]
     },
     "11": {
@@ -349,30 +177,14 @@
       "impact": "The most representative industry-structure data this week: TSMC's share didn't expand further, but its pricing power rose; Samsung and SMIC held second and third place thanks to 2nm and Chinese domestic demand, respectively. ASPs keep rising in the second half, with utilization staying high.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "pure-play foundry",
-          "純晶圓代工"
-        ],
-        [
-          "rush orders",
-          "急單"
-        ],
-        [
-          "flat",
-          "持平的"
-        ],
-        [
-          "pricing power",
-          "議價力"
-        ],
-        [
-          "in short supply",
-          "供不應求"
-        ],
-        [
-          "representative",
-          "具代表性的"
-        ]
+        ["pure-play foundry", "純晶圓代工"],
+        ["rush orders", "急單", "fin"],
+        ["flat", "持平的"],
+        ["pricing power", "議價力", "fin"],
+        ["in short supply", "供不應求"],
+        ["representative", "具代表性的"],
+        ["ASP", "平均售價", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"]
       ]
     },
     "12": {
@@ -383,30 +195,12 @@
       "impact": "The competitive frontier of foundries has moved from transistors to 'light'. If COUPE becomes the optical interposer, it would extend CoWoS's platform advantage into the optical interconnect era.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "modulators",
-          "調變器"
-        ],
-        [
-          "couplers",
-          "耦合器"
-        ],
-        [
-          "reticle",
-          "光罩（曝光範圍）"
-        ],
-        [
-          "wavelengths",
-          "波長"
-        ],
-        [
-          "frontier",
-          "邊界、前沿"
-        ],
-        [
-          "era",
-          "時代、世代"
-        ]
+        ["modulators", "調變器"],
+        ["couplers", "耦合器"],
+        ["reticle", "光罩（曝光範圍）"],
+        ["wavelengths", "波長"],
+        ["frontier", "邊界、前沿"],
+        ["era", "時代、世代"]
       ]
     },
     "13": {
@@ -417,30 +211,13 @@
       "impact": "TSMC is packaging 'advanced nodes + advanced packaging + silicon photonics' into a single platform story — the part other foundries will find hardest to replicate in the short term.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "fivefold",
-          "五倍"
-        ],
-        [
-          "optical transceiver",
-          "光收發器"
-        ],
-        [
-          "structurally",
-          "結構性地"
-        ],
-        [
-          "integration",
-          "整合"
-        ],
-        [
-          "replicate",
-          "複製"
-        ],
-        [
-          "platform",
-          "平台"
-        ]
+        ["fivefold", "五倍"],
+        ["optical transceiver", "光收發器"],
+        ["structurally", "結構性地"],
+        ["integration", "整合"],
+        ["replicate", "複製"],
+        ["platform", "平台"],
+        ["sales", "銷售額", "fin"]
       ]
     },
     "14": {
@@ -451,30 +228,14 @@
       "impact": "Intel Foundry's first realistic breakthrough in winning external orders is packaging, not process. Foundry competition is being split into two fronts: front-end and back-end.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "rules out",
-          "排除"
-        ],
-        [
-          "profit model",
-          "獲利模型"
-        ],
-        [
-          "clarified",
-          "澄清"
-        ],
-        [
-          "tiles",
-          "（晶片）小晶片模組"
-        ],
-        [
-          "breakthrough",
-          "突破口"
-        ],
-        [
-          "fronts",
-          "戰線"
-        ]
+        ["rules out", "排除"],
+        ["profit model", "獲利模型"],
+        ["clarified", "澄清"],
+        ["tiles", "（晶片）小晶片模組"],
+        ["breakthrough", "突破口"],
+        ["fronts", "戰線"],
+        ["gross margin", "毛利率", "fin"],
+        ["operating margin", "營業利益率", "fin"]
       ]
     },
     "15": {
@@ -485,30 +246,12 @@
       "impact": "HBM base dies are among TSMC's most solid mature/mid-range node orders in recent years; if Intel gets in, it would be Intel Foundry's most significant external customer win.",
       "conf": "Confirmed (evaluation stage; neither side has announced it)",
       "vocab": [
-        [
-          "weighs",
-          "權衡、評估"
-        ],
-        [
-          "second source",
-          "第二供應來源"
-        ],
-        [
-          "base dies",
-          "基底晶粒"
-        ],
-        [
-          "solid",
-          "穩固的"
-        ],
-        [
-          "mid-range",
-          "中階的"
-        ],
-        [
-          "customer win",
-          "客戶案"
-        ]
+        ["weighs", "權衡、評估"],
+        ["second source", "第二供應來源"],
+        ["base dies", "基底晶粒"],
+        ["solid", "穩固的"],
+        ["mid-range", "中階的"],
+        ["customer win", "客戶案"]
       ]
     },
     "16": {
@@ -519,30 +262,12 @@
       "impact": "All of this week's foundry and packaging technology announcements are concentrated here — the densest window for gauging 2027 foundry technology routes.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "packed",
-          "爆滿的"
-        ],
-        [
-          "fireside chat",
-          "爐邊對談"
-        ],
-        [
-          "co-hosted",
-          "共同主持"
-        ],
-        [
-          "exhibition",
-          "展覽"
-        ],
-        [
-          "gauging",
-          "評估、觀察"
-        ],
-        [
-          "densest",
-          "最密集的"
-        ]
+        ["packed", "爆滿的"],
+        ["fireside chat", "爐邊對談"],
+        ["co-hosted", "共同主持"],
+        ["exhibition", "展覽"],
+        ["gauging", "評估、觀察"],
+        ["densest", "最密集的"]
       ]
     },
     "17": {
@@ -553,30 +278,13 @@
       "impact": "Silicon photonics gives mature-node foundries like UMC a second growth curve beyond advanced nodes — the most noteworthy 'non-TSMC' foundry story this week.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "center stage",
-          "焦點、主軸"
-        ],
-        [
-          "copper interconnect",
-          "銅互連"
-        ],
-        [
-          "nearing its limits",
-          "逼近極限"
-        ],
-        [
-          "optical-engine",
-          "光引擎"
-        ],
-        [
-          "switch",
-          "交換器"
-        ],
-        [
-          "growth curve",
-          "成長曲線"
-        ]
+        ["center stage", "焦點、主軸"],
+        ["copper interconnect", "銅互連"],
+        ["nearing its limits", "逼近極限"],
+        ["optical-engine", "光引擎"],
+        ["switch", "交換器"],
+        ["growth curve", "成長曲線"],
+        ["shipments", "出貨量", "fin"]
       ]
     },
     "18": {
@@ -587,30 +295,14 @@
       "impact": "A macro check on foundry utilization; if exports to the US keep slowing, the strength of 2027 mature-node price hikes will need re-examining.",
       "conf": "Confirmed (indicator details subject to official statistics)",
       "vocab": [
-        [
-          "sentiment",
-          "景氣、信心"
-        ],
-        [
-          "indicators",
-          "指標"
-        ],
-        [
-          "expansion zone",
-          "擴張區間"
-        ],
-        [
-          "dependent",
-          "依賴的"
-        ],
-        [
-          "re-examining",
-          "重新檢視"
-        ],
-        [
-          "momentum",
-          "動能"
-        ]
+        ["sentiment", "景氣、信心"],
+        ["indicators", "指標"],
+        ["expansion zone", "擴張區間"],
+        ["dependent", "依賴的"],
+        ["re-examining", "重新檢視"],
+        ["momentum", "動能", "fin"],
+        ["price hikes", "漲價", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"]
       ]
     },
     "19": {
@@ -621,30 +313,15 @@
       "impact": "The single most impactful news this week for Taiwan's equipment and packaging supply chain. If true, 2027 revenue estimates for CoWoS-related equipment makers need to be cut, while CoPoS panel-level tool makers benefit. TSMC's formal capex guidance needs continued tracking.",
       "conf": "Unconfirmed (market speculation, not confirmed by TSMC; original article behind a paywall)",
       "vocab": [
-        [
-          "defers",
-          "遞延"
-        ],
-        [
-          "speculates",
-          "揣測"
-        ],
-        [
-          "postponed",
-          "推遲"
-        ],
-        [
-          "overcapacity",
-          "產能過剩"
-        ],
-        [
-          "capital allocation",
-          "資本配置"
-        ],
-        [
-          "paywall",
-          "付費牆"
-        ]
+        ["defers", "遞延"],
+        ["speculates", "揣測"],
+        ["postponed", "推遲"],
+        ["overcapacity", "產能過剩", "fin"],
+        ["capital allocation", "資本配置"],
+        ["paywall", "付費牆"],
+        ["guidance", "財測指引", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["estimate", "估計；預估值", "fin"]
       ]
     },
     "20": {
@@ -655,30 +332,13 @@
       "impact": "The foundry's role is extending from 'making chips' to 'defining systems'. Naming substrate/PCB shortages is also a mid-term positive for suppliers such as Unimicron, Nan Ya PCB and Elite Material.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "co-optimization",
-          "協同最佳化"
-        ],
-        [
-          "system integrators",
-          "系統整合商"
-        ],
-        [
-          "alliance",
-          "聯盟"
-        ],
-        [
-          "admitted",
-          "納入、接納"
-        ],
-        [
-          "high-end",
-          "高階的"
-        ],
-        [
-          "positive",
-          "利多"
-        ]
+        ["co-optimization", "協同最佳化"],
+        ["system integrators", "系統整合商"],
+        ["alliance", "聯盟"],
+        ["admitted", "納入、接納"],
+        ["high-end", "高階的"],
+        ["positive", "利多"],
+        ["shortage", "短缺", "fin"]
       ]
     },
     "21": {
@@ -689,30 +349,12 @@
       "impact": "Cooling has become a physical ceiling for advanced packaging. A foundry getting involved in thermal design shows that the power-density problem of 3D stacking can no longer be solved by system makers alone.",
       "conf": "Confirmed (volume production timing is a market rumor)",
       "vocab": [
-        [
-          "cold plates",
-          "水冷板"
-        ],
-        [
-          "power density",
-          "功率密度"
-        ],
-        [
-          "heterogeneous integration",
-          "異質整合"
-        ],
-        [
-          "thermal design",
-          "散熱設計"
-        ],
-        [
-          "sharply",
-          "急遽地"
-        ],
-        [
-          "involved",
-          "參與的"
-        ]
+        ["cold plates", "水冷板"],
+        ["power density", "功率密度"],
+        ["heterogeneous integration", "異質整合"],
+        ["thermal design", "散熱設計"],
+        ["sharply", "急遽地"],
+        ["involved", "參與的"]
       ]
     },
     "22": {
@@ -723,30 +365,12 @@
       "impact": "Another step for domestic equipment. Joint labs like this are TSMC's standard way of ensuring supply-chain resilience for advanced nodes.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "lab",
-          "實驗室"
-        ],
-        [
-          "deposition",
-          "沉積"
-        ],
-        [
-          "coating",
-          "鍍膜"
-        ],
-        [
-          "joint development",
-          "共同開發"
-        ],
-        [
-          "resilience",
-          "韌性"
-        ],
-        [
-          "standard",
-          "標準的"
-        ]
+        ["lab", "實驗室"],
+        ["deposition", "沉積"],
+        ["coating", "鍍膜"],
+        ["joint development", "共同開發"],
+        ["resilience", "韌性"],
+        ["standard", "標準的"]
       ]
     },
     "23": {
@@ -757,30 +381,13 @@
       "impact": "Silicon wafers are the shared upstream for every foundry; GlobalWafers' optimism about 2027–2028 is an indirect endorsement of foundry capacity expansion.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "trusted",
-          "值得信賴的"
-        ],
-        [
-          "ecosystem",
-          "生態系"
-        ],
-        [
-          "multinational",
-          "跨國的"
-        ],
-        [
-          "cope with",
-          "因應"
-        ],
-        [
-          "uncertainty",
-          "不確定性"
-        ],
-        [
-          "optimism",
-          "樂觀"
-        ]
+        ["trusted", "值得信賴的"],
+        ["ecosystem", "生態系"],
+        ["multinational", "跨國的"],
+        ["cope with", "因應"],
+        ["uncertainty", "不確定性"],
+        ["optimism", "樂觀"],
+        ["tariff", "關稅", "fin"]
       ]
     },
     "24": {
@@ -791,30 +398,12 @@
       "impact": "Geopolitical risk in the automotive and industrial power-device supply chain rises further; mature-node foundries making similar products (Hua Hong, SMIC, Vanguard) could see orders shift to them.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "freezes",
-          "凍結"
-        ],
-        [
-          "assets",
-          "資產"
-        ],
-        [
-          "dispute",
-          "爭端"
-        ],
-        [
-          "escalates",
-          "升級"
-        ],
-        [
-          "intervention",
-          "介入"
-        ],
-        [
-          "subsidiary",
-          "子公司"
-        ]
+        ["freezes", "凍結"],
+        ["assets", "資產", "fin"],
+        ["dispute", "爭端"],
+        ["escalates", "升級"],
+        ["intervention", "介入"],
+        ["subsidiary", "子公司", "fin"]
       ]
     },
     "25": {
@@ -825,30 +414,12 @@
       "impact": "If implemented, China's push for in-house AI chips will grow stronger — a long-term positive for domestic foundries such as SMIC — while also limiting their room to obtain advanced equipment.",
       "conf": "Confirmed (draft stage; not yet formally issued)",
       "vocab": [
-        [
-          "drafting",
-          "研擬"
-        ],
-        [
-          "offshore",
-          "境外的"
-        ],
-        [
-          "renting",
-          "承租"
-        ],
-        [
-          "cross-border",
-          "跨境的"
-        ],
-        [
-          "implemented",
-          "實施、落地"
-        ],
-        [
-          "draft",
-          "草案"
-        ]
+        ["drafting", "研擬"],
+        ["offshore", "境外的"],
+        ["renting", "承租"],
+        ["cross-border", "跨境的"],
+        ["implemented", "實施、落地"],
+        ["draft", "草案"]
       ]
     },
     "26": {
@@ -859,30 +430,12 @@
       "impact": "The week's closing rally was led by the AI ASIC theme; for foundries, it lifts visibility of MediaTek's demand for advanced nodes and CoWoS even further.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "ignited",
-          "點燃"
-        ],
-        [
-          "partnership",
-          "合作關係"
-        ],
-        [
-          "turnover",
-          "成交值"
-        ],
-        [
-          "visibility",
-          "能見度"
-        ],
-        [
-          "limit-up",
-          "漲停"
-        ],
-        [
-          "closing rally",
-          "收尾漲勢"
-        ]
+        ["ignited", "點燃"],
+        ["partnership", "合作關係"],
+        ["turnover", "成交值", "fin"],
+        ["visibility", "能見度", "fin"],
+        ["limit-up", "漲停", "fin"],
+        ["closing rally", "收尾漲勢"]
       ]
     }
   }

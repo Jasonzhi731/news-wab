@@ -9,30 +9,15 @@
       "impact": "AI servers and enterprise SSDs are crowding out supply, so niche/legacy DRAM benefits too, and money is rotating from foundries into memory.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "surge",
-          "暴漲、噴發"
-        ],
-        [
-          "bullish",
-          "看多的"
-        ],
-        [
-          "set off",
-          "引發"
-        ],
-        [
-          "across the board",
-          "全面地"
-        ],
-        [
-          "enterprise SSDs",
-          "企業級 SSD"
-        ],
-        [
-          "legacy",
-          "傳統型的"
-        ]
+        ["surge", "暴漲、噴發"],
+        ["bullish", "看多的", "fin"],
+        ["set off", "引發"],
+        ["across the board", "全面地"],
+        ["enterprise SSDs", "企業級 SSD"],
+        ["legacy", "傳統型的"],
+        ["broker", "券商", "fin"],
+        ["limit-up", "漲停", "fin"],
+        ["intraday", "盤中", "fin"]
       ]
     },
     "2": {
@@ -43,30 +28,14 @@
       "impact": "Spot prices lead contract prices, so continued spot gains mean Q3–Q4 contract prices still have room to rise.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "spot prices",
-          "現貨價"
-        ],
-        [
-          "contract prices",
-          "合約價"
-        ],
-        [
-          "re-rating",
-          "評價重估"
-        ],
-        [
-          "passive components",
-          "被動元件"
-        ],
-        [
-          "glass-fiber cloth",
-          "玻纖布"
-        ],
-        [
-          "wave",
-          "一波（熱潮）"
-        ]
+        ["spot prices", "現貨價", "fin"],
+        ["contract prices", "合約價", "fin"],
+        ["re-rating", "評價重估", "fin"],
+        ["passive components", "被動元件"],
+        ["glass-fiber cloth", "玻纖布"],
+        ["wave", "一波（熱潮）"],
+        ["limit-up", "漲停", "fin"],
+        ["shortage", "短缺", "fin"]
       ]
     },
     "3": {
@@ -77,30 +46,15 @@
       "impact": "The Executive Yuan said silicon-wafer makers that have already invested in the US can use duty-free quotas and materials exemptions under the Taiwan-US investment MOU; the solar industry mainly sells domestically (exports to the US only US$33.5M), so the impact is limited.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "proclamation",
-          "公告、宣言"
-        ],
-        [
-          "polysilicon",
-          "多晶矽"
-        ],
-        [
-          "derivatives",
-          "衍生產品"
-        ],
-        [
-          "stack",
-          "疊加"
-        ],
-        [
-          "minimum import price",
-          "最低進口價格"
-        ],
-        [
-          "exemptions",
-          "豁免"
-        ]
+        ["proclamation", "公告、宣言"],
+        ["polysilicon", "多晶矽"],
+        ["derivatives", "衍生產品"],
+        ["stack", "疊加"],
+        ["minimum import price", "最低進口價格"],
+        ["exemptions", "豁免"],
+        ["tariff", "關稅", "fin"],
+        ["duty-free", "免稅的", "fin"],
+        ["quota", "配額", "fin"]
       ]
     },
     "4": {
@@ -111,30 +65,15 @@
       "impact": "DRAM price increases are flowing straight into revenue, and the market is watching how many quarters the pricing windfall can last.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "soars",
-          "暴衝"
-        ],
-        [
-          "record high",
-          "歷史新高"
-        ],
-        [
-          "day after day",
-          "連日"
-        ],
-        [
-          "flowing straight into",
-          "直接反映於"
-        ],
-        [
-          "windfall",
-          "紅利、意外之財"
-        ],
-        [
-          "quarters",
-          "季度"
-        ]
+        ["soars", "暴衝"],
+        ["record high", "歷史新高", "fin"],
+        ["day after day", "連日"],
+        ["flowing straight into", "直接反映於"],
+        ["windfall", "紅利、意外之財", "fin"],
+        ["quarters", "季度"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["limit-up", "漲停", "fin"],
+        ["price increases", "漲價", "fin"]
       ]
     },
     "5": {
@@ -145,30 +84,14 @@
       "impact": "The 'expensive and scarce' situation is hard to resolve in the short term, pressuring costs for system makers and IC designers while giving memory makers strong momentum for big profit upgrades.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "relief",
-          "緩解"
-        ],
-        [
-          "supply-demand ratio",
-          "供需比"
-        ],
-        [
-          "exceeding",
-          "超過"
-        ],
-        [
-          "come online",
-          "開出、上線"
-        ],
-        [
-          "scarce",
-          "稀缺的"
-        ],
-        [
-          "resolve",
-          "解決"
-        ]
+        ["relief", "緩解"],
+        ["supply-demand ratio", "供需比"],
+        ["exceeding", "超過"],
+        ["come online", "開出、上線"],
+        ["scarce", "稀缺的"],
+        ["resolve", "解決"],
+        ["contract prices", "合約價", "fin"],
+        ["momentum", "動能", "fin"]
       ]
     },
     "6": {
@@ -179,30 +102,13 @@
       "impact": "The single most important indicator for Taiwan stocks this week, testing whether AI demand momentum continues.",
       "conf": "Confirmed (an estimate, not an actual announcement)",
       "vocab": [
-        [
-          "brokers",
-          "券商、投顧"
-        ],
-        [
-          "top",
-          "突破"
-        ],
-        [
-          "previous figures",
-          "前值"
-        ],
-        [
-          "first-half",
-          "上半年的"
-        ],
-        [
-          "indicator",
-          "指標"
-        ],
-        [
-          "estimate",
-          "預估值"
-        ]
+        ["brokers", "券商、投顧", "fin"],
+        ["top", "突破"],
+        ["previous figures", "前值"],
+        ["first-half", "上半年的", "fin"],
+        ["indicator", "指標"],
+        ["estimate", "預估值", "fin"],
+        ["momentum", "動能", "fin"]
       ]
     },
     "7": {
@@ -213,30 +119,15 @@
       "impact": "Growth in electronic components outpaced ICT and audio-visual products for the first time, showing this upswing is led by chip/memory prices and AI chip shipments rather than end-product assembly.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "third-highest",
-          "史上第三高的"
-        ],
-        [
-          "resilient",
-          "有韌性的"
-        ],
-        [
-          "launch season",
-          "新品鋪貨期"
-        ],
-        [
-          "outpaced",
-          "超過（成長速度）"
-        ],
-        [
-          "audio-visual",
-          "視聽的"
-        ],
-        [
-          "end-product",
-          "終端產品"
-        ]
+        ["third-highest", "史上第三高的"],
+        ["resilient", "有韌性的"],
+        ["launch season", "新品鋪貨期"],
+        ["outpaced", "超過（成長速度）"],
+        ["audio-visual", "視聽的"],
+        ["end-product", "終端產品"],
+        ["full-year", "全年的", "fin"],
+        ["shipments", "出貨量", "fin"],
+        ["supply-demand", "供需的", "fin"]
       ]
     },
     "8": {
@@ -247,30 +138,15 @@
       "impact": "Price increases for niche DRAM and NOR Flash exceeded expectations, and analysts broadly raised EPS forecasts for this year and next.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "explodes",
-          "爆發"
-        ],
-        [
-          "listed companies",
-          "上市公司"
-        ],
-        [
-          "beneficiaries",
-          "受惠者"
-        ],
-        [
-          "exceeded expectations",
-          "超乎預期"
-        ],
-        [
-          "broadly",
-          "普遍地"
-        ],
-        [
-          "EPS",
-          "每股盈餘"
-        ]
+        ["explodes", "爆發"],
+        ["listed companies", "上市公司", "fin"],
+        ["beneficiaries", "受惠者", "fin"],
+        ["exceeded expectations", "超乎預期", "fin"],
+        ["broadly", "普遍地"],
+        ["EPS", "每股盈餘", "fin"],
+        ["analysts", "分析師；法人", "fin"],
+        ["price increases", "漲價", "fin"],
+        ["forecast", "預測", "fin"]
       ]
     },
     "9": {
@@ -281,30 +157,14 @@
       "impact": "The index's record run is driven by the twin engines of AI and memory; intraday swings came from US-Iran talks, an oil rebound and expectations for Fed policy.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "market capitalization",
-          "市值"
-        ],
-        [
-          "on the week",
-          "以週計"
-        ],
-        [
-          "twin engines",
-          "雙引擎、雙主軸"
-        ],
-        [
-          "swings",
-          "震盪"
-        ],
-        [
-          "rebound",
-          "反彈"
-        ],
-        [
-          "Fed",
-          "美國聯準會"
-        ]
+        ["market capitalization", "市值", "fin"],
+        ["on the week", "以週計"],
+        ["twin engines", "雙引擎、雙主軸"],
+        ["swings", "震盪"],
+        ["rebound", "反彈"],
+        ["Fed", "美國聯準會"],
+        ["intraday", "盤中", "fin"],
+        ["listed companies", "上市公司", "fin"]
       ]
     },
     "10": {
@@ -315,30 +175,15 @@
       "impact": "The capex increase guarantees mid-term growth for equipment makers, facility engineering firms (United Integrated Services, L&K Engineering, Marketech) and the advanced-packaging supply chain. The original guidance came from the 7/16 earnings call; this week was the market reconfirming it.",
       "conf": "Guidance originally given at the 2026/07/16 earnings call",
       "vocab": [
-        [
-          "reiterate",
-          "重申"
-        ],
-        [
-          "outlook",
-          "展望"
-        ],
-        [
-          "raised",
-          "上調"
-        ],
-        [
-          "cumulative",
-          "累計的"
-        ],
-        [
-          "guarantees",
-          "保證"
-        ],
-        [
-          "reconfirming",
-          "再確認"
-        ]
+        ["reiterate", "重申"],
+        ["outlook", "展望", "fin"],
+        ["raised", "上調"],
+        ["cumulative", "累計的", "fin"],
+        ["guarantees", "保證"],
+        ["reconfirming", "再確認"],
+        ["guidance", "財測指引", "fin"],
+        ["earnings call", "法說會", "fin"],
+        ["capex", "資本支出", "fin"]
       ]
     },
     "11": {
@@ -349,30 +194,12 @@
       "impact": "It eases the long-term 'no land available' bottleneck for advanced nodes and establishes a path for panel-level packaging to land in Taiwan.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "residents",
-          "居民"
-        ],
-        [
-          "restarts",
-          "重啟"
-        ],
-        [
-          "supportive",
-          "支持的"
-        ],
-        [
-          "panel-level packaging",
-          "面板級封裝"
-        ],
-        [
-          "eases",
-          "緩解"
-        ],
-        [
-          "establishes",
-          "確立"
-        ]
+        ["residents", "居民"],
+        ["restarts", "重啟"],
+        ["supportive", "支持的"],
+        ["panel-level packaging", "面板級封裝"],
+        ["eases", "緩解"],
+        ["establishes", "確立"]
       ]
     },
     "12": {
@@ -383,30 +210,13 @@
       "impact": "Equipment makers expanding headcount in Taiwan is a leading indicator of advanced-node capacity coming online, and it also intensifies the crowding-out of semiconductor talent.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "hiring frenzy",
-          "徵才狂潮"
-        ],
-        [
-          "recruits",
-          "招募"
-        ],
-        [
-          "urgently",
-          "迫切地"
-        ],
-        [
-          "headcount",
-          "人員編制"
-        ],
-        [
-          "intensifies",
-          "加劇"
-        ],
-        [
-          "talent",
-          "人才"
-        ]
+        ["hiring frenzy", "徵才狂潮"],
+        ["recruits", "招募"],
+        ["urgently", "迫切地"],
+        ["headcount", "人員編制"],
+        ["intensifies", "加劇"],
+        ["talent", "人才"],
+        ["leading indicator", "領先指標", "fin"]
       ]
     },
     "13": {
@@ -417,30 +227,12 @@
       "impact": "A representative case of localizing advanced-packaging equipment, reflecting real orders from CoWoS expansion for Taiwanese equipment makers.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "positions itself",
-          "卡位"
-        ],
-        [
-          "camps",
-          "陣營"
-        ],
-        [
-          "warpage",
-          "翹曲"
-        ],
-        [
-          "descum",
-          "去膠（除渣）"
-        ],
-        [
-          "double",
-          "倍增"
-        ],
-        [
-          "representative case",
-          "代表案例"
-        ]
+        ["positions itself", "卡位"],
+        ["camps", "陣營"],
+        ["warpage", "翹曲"],
+        ["descum", "去膠（除渣）"],
+        ["double", "倍增"],
+        ["representative case", "代表案例"]
       ]
     },
     "14": {
@@ -451,30 +243,12 @@
       "impact": "It echoes the earlier strategic tone that 80% of the most advanced processes such as 2nm will 'stay in Taiwan over the next five years'.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "intangible assets",
-          "無形資產"
-        ],
-        [
-          "replicate",
-          "複製"
-        ],
-        [
-          "transplanting",
-          "移植"
-        ],
-        [
-          "relationships",
-          "關係"
-        ],
-        [
-          "culture",
-          "文化"
-        ],
-        [
-          "tone",
-          "基調"
-        ]
+        ["intangible assets", "無形資產"],
+        ["replicate", "複製"],
+        ["transplanting", "移植"],
+        ["relationships", "關係"],
+        ["culture", "文化"],
+        ["tone", "基調"]
       ]
     },
     "15": {
@@ -485,30 +259,14 @@
       "impact": "The positive spread between futures and spot is widening, raising the risk of chasing prices in the short term.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "night session",
-          "夜盤"
-        ],
-        [
-          "optimistic",
-          "樂觀的"
-        ],
-        [
-          "ahead of time",
-          "提前"
-        ],
-        [
-          "spread",
-          "價差"
-        ],
-        [
-          "chasing prices",
-          "追價"
-        ],
-        [
-          "widening",
-          "擴大"
-        ]
+        ["night session", "夜盤", "fin"],
+        ["optimistic", "樂觀的"],
+        ["ahead of time", "提前"],
+        ["spread", "價差"],
+        ["chasing prices", "追價", "fin"],
+        ["widening", "擴大"],
+        ["priced in", "已反映在價格中", "fin"],
+        ["futures", "期貨", "fin"]
       ]
     },
     "16": {
@@ -519,30 +277,13 @@
       "impact": "Use the Market Observation Post System or TSMC's website as the authoritative source, and backfill this table once the figure is released.",
       "conf": "★ To be verified: official figure not obtained for this compilation",
       "vocab": [
-        [
-          "due",
-          "預定（公布）"
-        ],
-        [
-          "compilation",
-          "彙整"
-        ],
-        [
-          "official figure",
-          "官方數字"
-        ],
-        [
-          "pending",
-          "待公告的"
-        ],
-        [
-          "authoritative source",
-          "權威來源"
-        ],
-        [
-          "backfill",
-          "回填"
-        ]
+        ["due", "預定（公布）"],
+        ["compilation", "彙整"],
+        ["official figure", "官方數字"],
+        ["pending", "待公告的"],
+        ["authoritative source", "權威來源"],
+        ["backfill", "回填"],
+        ["estimate", "估計；預估值", "fin"]
       ]
     },
     "17": {
@@ -553,30 +294,14 @@
       "impact": "The market's main themes are still AI and memory, but watch for disruptions from international politics and Fed policy.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "morning note",
-          "晨訊"
-        ],
-        [
-          "consolidates",
-          "盤整"
-        ],
-        [
-          "firm footing",
-          "穩固基礎（盤堅）"
-        ],
-        [
-          "themes",
-          "主軸、題材"
-        ],
-        [
-          "disruptions",
-          "干擾"
-        ],
-        [
-          "opened up",
-          "開盤上漲"
-        ]
+        ["morning note", "晨訊"],
+        ["consolidates", "盤整"],
+        ["firm footing", "穩固基礎（盤堅）"],
+        ["themes", "主軸、題材"],
+        ["disruptions", "干擾"],
+        ["opened up", "開盤上漲"],
+        ["broker", "券商", "fin"],
+        ["rally", "漲勢；大漲", "fin"]
       ]
     },
     "18": {
@@ -587,30 +312,15 @@
       "impact": "Mature nodes remain under pressure from low-price Chinese competition, and UMC is using AI, advanced packaging and silicon photonics as differentiated ways to break out.",
       "conf": "Figures confirmed; revenue was released in early August",
       "vocab": [
-        [
-          "second-best",
-          "次佳的"
-        ],
-        [
-          "outlook",
-          "展望"
-        ],
-        [
-          "low-price",
-          "低價的"
-        ],
-        [
-          "differentiated",
-          "差異化的"
-        ],
-        [
-          "break out",
-          "突圍"
-        ],
-        [
-          "moving into",
-          "切入"
-        ]
+        ["second-best", "次佳的"],
+        ["outlook", "展望", "fin"],
+        ["low-price", "低價的"],
+        ["differentiated", "差異化的"],
+        ["break out", "突圍"],
+        ["moving into", "切入"],
+        ["gross margin", "毛利率", "fin"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"]
       ]
     },
     "19": {
@@ -621,30 +331,13 @@
       "impact": "Advanced packaging has become the real bottleneck for AI chip shipments, determining how much NVIDIA, Broadcom and ASIC customers can deliver.",
       "conf": "Industry background, not a single event this week",
       "vocab": [
-        [
-          "booking",
-          "預訂"
-        ],
-        [
-          "allocated",
-          "分配的"
-        ],
-        [
-          "reticle",
-          "光罩尺寸"
-        ],
-        [
-          "defect density",
-          "缺陷密度"
-        ],
-        [
-          "hit its target",
-          "達標"
-        ],
-        [
-          "deliver",
-          "交付"
-        ]
+        ["booking", "預訂"],
+        ["allocated", "分配的"],
+        ["reticle", "光罩尺寸"],
+        ["defect density", "缺陷密度"],
+        ["hit its target", "達標"],
+        ["deliver", "交付"],
+        ["shipments", "出貨量", "fin"]
       ]
     },
     "20": {
@@ -655,30 +348,12 @@
       "impact": "Kumamoto focuses on mature nodes (22/28nm, 12/16nm), so its impact on the automotive and image-sensor supply chains needs continued tracking.",
       "conf": "Event began 7/28; this week covers the follow-up recovery",
       "vocab": [
-        [
-          "earthquake",
-          "地震"
-        ],
-        [
-          "seismic intensity",
-          "震度"
-        ],
-        [
-          "inspections",
-          "檢查"
-        ],
-        [
-          "recalibrated",
-          "重新校準"
-        ],
-        [
-          "normalization",
-          "正常化"
-        ],
-        [
-          "precision",
-          "精密"
-        ]
+        ["earthquake", "地震"],
+        ["seismic intensity", "震度"],
+        ["inspections", "檢查"],
+        ["recalibrated", "重新校準"],
+        ["normalization", "正常化"],
+        ["precision", "精密"]
       ]
     },
     "21": {
@@ -689,30 +364,14 @@
       "impact": "Next month's industry focus, with four highlight zones: quantum technology, smart wafer manufacturing, AI semiconductors and chip startups.",
       "conf": "Forward-looking event (held in September)",
       "vocab": [
-        [
-          "pavilion",
-          "展館、專區"
-        ],
-        [
-          "draw",
-          "吸引"
-        ],
-        [
-          "fastest-growing",
-          "成長最快的"
-        ],
-        [
-          "quantum",
-          "量子"
-        ],
-        [
-          "startups",
-          "新創公司"
-        ],
-        [
-          "highlight",
-          "亮點"
-        ]
+        ["pavilion", "展館、專區"],
+        ["draw", "吸引"],
+        ["fastest-growing", "成長最快的"],
+        ["quantum", "量子"],
+        ["startups", "新創公司"],
+        ["highlight", "亮點"],
+        ["forecast", "預測", "fin"],
+        ["sales", "銷售額", "fin"]
       ]
     }
   }

@@ -8,7 +8,16 @@
       "metric": "Q2 revenue US$425B (QoQ +31.4%); 1H26 total US$752B; Q3 forecast >US$500B; MPU +16% QoQ (seasonal norm ~1%); four straight quarters of double-digit QoQ growth",
       "impact": "With memory taking more than half, a sizable part of this revenue surge comes from pricing rather than foundry wafer volume. But the 16% jump in MPUs matches this period's analysis of Meta Muse driving CPU demand, showing AI demand is spilling over from GPUs to CPUs and other logic chips — and that lands directly on the leading-edge capacity of TSMC and Intel Foundry.",
       "conf": "Confirmed (research firm data; Q3 is a forecast)",
-      "vocab": [["quarter-on-quarter", "季增（QoQ）"], ["seasonal", "季節性的"], ["sequential", "連續的；（成長）季對季的"], ["surge", "激增"], ["spilling over", "外溢"], ["leading-edge", "最先進的（製程）"]]
+      "vocab": [
+        ["quarter-on-quarter", "季增（QoQ）", "fin"],
+        ["seasonal", "季節性的"],
+        ["sequential", "連續的；（成長）季對季的"],
+        ["surge", "激增"],
+        ["spilling over", "外溢"],
+        ["leading-edge", "最先進的（製程）"],
+        ["first-half", "上半年的", "fin"],
+        ["forecast", "預測", "fin"]
+      ]
     },
     "2": {
       "entity": "Ministry of Economic Affairs / Taiwan export orders",
@@ -17,7 +26,15 @@
       "metric": "Aug export orders US$102.96B (YoY +71.4%); ICT US$34.21B (YoY +100.5%); electronics US$45.75B (YoY +83.9%); Sep forecast US$106.0–109.1B; full year up to ~US$1.1T",
       "impact": "Electronics orders (including foundry and ICs) grew more than 80% YoY — the data behind the central bank's decision last week to raise its 2026 GDP growth forecast to 11.48%. With September still expected to grow over 50% YoY, TSMC's September revenue (due around Oct 10) is very likely to stay at elevated levels.",
       "conf": "Confirmed (official statistics; September and full-year figures are MOEA forecasts)",
-      "vocab": [["export orders", "外銷訂單"], ["year-on-year", "年增（YoY）"], ["consecutive", "連續的"], ["on track", "可望達成"], ["forecast", "預測"], ["elevated", "高檔的"]]
+      "vocab": [
+        ["export orders", "外銷訂單", "fin"],
+        ["year-on-year", "年增（YoY）", "fin"],
+        ["consecutive", "連續的"],
+        ["on track", "可望達成"],
+        ["forecast", "預測", "fin"],
+        ["elevated", "高檔的"],
+        ["GDP", "國內生產毛額", "fin"]
+      ]
     },
     "3": {
       "entity": "TSMC (2330)",
@@ -26,7 +43,18 @@
       "metric": "A14 trial production: Fab 20 in 2027Q1, Fab 25 as early as the start of 2027Q3; Fab 25 P1 completed before Apr 2027; 3nm capacity 170–180k wafers/month → over 200k in 2027; 2nm capacity 90–100k wafers/month → 130–140k in 2027; A14 device performance and 256Mb SRAM yield both near 90%; A13/A12 volume production in 2029",
       "impact": "Read alongside last week's news — the Longtan A14 campus clearing its first National Development Council review, and C.C. Wei saying capacity forecasts have 'become larger' — TSMC's angstrom-era timeline is being pulled forward across the board. With A14 trial production and Intel 14A risk production both landing in 2027Q1, Intel has less room to win external customers by 'matching the schedule', while TSMC must shoulder equipment and staffing needs for three nodes at once.",
       "conf": "Unconfirmed (the earlier trial production comes from IC designers and has not been announced by TSMC; capacity figures are analyst estimates)",
-      "vocab": [["trial production", "試產"], ["ramp", "（產能）爬坡、擴產"], ["volume production", "量產"], ["test vehicles", "測試載具"], ["backward-compatible", "向後相容"], ["backside power delivery", "晶背供電"], ["risk production", "風險試產"]]
+      "vocab": [
+        ["trial production", "試產"],
+        ["ramp", "（產能）爬坡、擴產"],
+        ["volume production", "量產"],
+        ["test vehicles", "測試載具"],
+        ["backward-compatible", "向後相容"],
+        ["backside power delivery", "晶背供電"],
+        ["risk production", "風險試產"],
+        ["earnings call", "法說會", "fin"],
+        ["analysts", "分析師；法人", "fin"],
+        ["forecast", "預測", "fin"]
+      ]
     },
     "4": {
       "entity": "SMIC (0981.HK) / Huawei",
@@ -35,7 +63,14 @@
       "metric": "Ascend 960DT 2027Q1, 960PR 2027Q3, 970 in 2028, 980 in 2029; cluster up to 15,488 chips, 30 EFLOPS (FP8) / 120 EFLOPS (FP4); bottlenecks: SMIC 7/6nm capacity, HBM",
       "impact": "This is the period's most important China foundry story: Huawei's leadership has confirmed the demand side itself, and the constraint lies entirely in SMIC's advanced-node capacity. With EUV under export controls, SMIC's N+2/N+3 expansion depends on DUV multi-patterning yields and access to tools — the other side of the same problem as last week's Chinese Academy of Sciences research on extending DUV with GAA structures. It also explains why SMIC's revenue growth (19.4% YoY in this period's A-share results) lags far behind Hua Hong and Nexchip: the structural cause is not weak demand.",
       "conf": "Confirmed (public remarks by Huawei executives; SMIC capacity figures not disclosed)",
-      "vocab": [["rotating chairman", "輪值董事長"], ["bottleneck", "瓶頸"], ["inference", "推論"], ["performance per watt", "每瓦效能"], ["export controls", "出口管制"], ["multi-patterning", "多重曝光"]]
+      "vocab": [
+        ["rotating chairman", "輪值董事長"],
+        ["bottleneck", "瓶頸"],
+        ["inference", "推論"],
+        ["performance per watt", "每瓦效能"],
+        ["export controls", "出口管制"],
+        ["multi-patterning", "多重曝光"]
+      ]
     },
     "5": {
       "entity": "Alibaba / China AI chips",
@@ -44,7 +79,15 @@
       "metric": "V900: 216GB memory, 1,200GB/s, 3× the M890, volume production 2027Q1; cluster limit 500,000 chips; Yitian 720/730 in 2027Q3; AI infrastructure >US$53B over three years",
       "impact": "Read together with the Huawei and DeepSeek items, China's 2027 wave of AI chip launches is already scheduled — but all of them need domestic advanced-node capacity. If SMIC makes the V900, it will compete directly with Ascend for scarce 7/6nm capacity; the undisclosed foundry itself reflects how sensitive the issue is under export controls.",
       "conf": "Confirmed (company launch; foundry and process not disclosed)",
-      "vocab": [["unveil", "發表、揭曉"], ["predecessor", "前一代產品"], ["bandwidth", "頻寬"], ["parameters", "參數"], ["in-house", "自研的"], ["pledged", "承諾（投入）"], ["scarce", "稀缺的"]]
+      "vocab": [
+        ["unveil", "發表、揭曉"],
+        ["predecessor", "前一代產品"],
+        ["bandwidth", "頻寬"],
+        ["parameters", "參數"],
+        ["in-house", "自研的"],
+        ["pledged", "承諾（投入）", "fin"],
+        ["scarce", "稀缺的"]
+      ]
     },
     "6": {
       "entity": "Meta / Intel / AMD / Arm",
@@ -53,7 +96,16 @@
       "metric": "100M users ≈ 1.58M CPUs, 800PB memory, 10,000PB SSD; 2 vCPU / 8GB / 100GB per user",
       "impact": "Agentic AI extends compute demand from GPUs to general-purpose CPUs, which for foundries means more diversified sources of advanced-node demand: AMD (TSMC N3/N2), Arm-camp custom CPUs (TSMC) and Intel (its own 18A) all get a share. It is the same trend as this period's Alibaba Yitian CPUs and Omdia's 16% QoQ MPU growth.",
       "conf": "Unconfirmed (external analyst estimate; actual deployments may use far fewer resources)",
-      "vocab": [["agentic AI", "代理式 AI"], ["appetite", "胃口、需求"], ["virtual machine", "虛擬機"], ["deployment", "部署"], ["on-demand", "隨需的"], ["general-purpose", "通用的"]]
+      "vocab": [
+        ["agentic AI", "代理式 AI"],
+        ["appetite", "胃口、需求"],
+        ["virtual machine", "虛擬機"],
+        ["deployment", "部署"],
+        ["on-demand", "隨需的"],
+        ["general-purpose", "通用的"],
+        ["analysts", "分析師；法人", "fin"],
+        ["estimate", "估計；預估值", "fin"]
+      ]
     },
     "7": {
       "entity": "Episil-Precision (3016)",
@@ -62,7 +114,18 @@
       "metric": "2026 revenue YoY >35%; AI revenue share 30% → >40% in 2027; Q2 revenue ~NT$1.309B (QoQ +23.6%); Aug revenue ~NT$507M (YoY +57.79%); PMIC/MOSFET output YoY ~+50%; 1H26 capex ~NT$900M",
       "impact": "Episil-Precision is an upstream epitaxy supplier for mature-node power devices. Its fully loaded 8-inch lines, 50% higher PMIC/MOSFET output and new price hikes match exactly what drove last week's 'noticeable price increases' at UMC and PSMC (AI peripheral components) — confirming from upstream that this mature-node cycle reflects real demand rather than inventory restocking.",
       "conf": "Confirmed (company briefing; full-year growth and revenue mix are company forecasts)",
-      "vocab": [["epitaxy", "磊晶"], ["fully loaded", "滿載"], ["consolidated revenue", "合併營收"], ["turned profitable", "轉虧為盈"], ["qualification", "（客戶）驗證"], ["mature-node", "成熟製程的"], ["inventory restocking", "庫存回補"]]
+      "vocab": [
+        ["epitaxy", "磊晶"],
+        ["fully loaded", "滿載"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["turned profitable", "轉虧為盈", "fin"],
+        ["qualification", "（客戶）驗證"],
+        ["mature-node", "成熟製程的"],
+        ["inventory restocking", "庫存回補", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["first-half", "上半年的", "fin"],
+        ["full-year", "全年的", "fin"]
+      ]
     },
     "8": {
       "entity": "GUC (3443) / WinWay (6515)",
@@ -71,7 +134,18 @@
       "metric": "GUC: target NT$12,000, 2027 N3/N5 allocation ×5, 2026 EPS NT$52.75, 2027 EPS NT$123.46; AI ASIC CAGR 35–40%; WinWay: target NT$10,000, Q3 revenue estimate NT$5.012B, 2026 revenue NT$16.57B (YoY +111%)",
       "impact": "A multiplied allocation for ASIC design services ultimately means TSMC N3/N5 wafer orders, while capacity expansion at test-interface makers is a leading indicator of advanced-node shipments. Both being upgraded on the same day shows the market widening the circle of foundry-growth beneficiaries to design services and the test supply chain.",
       "conf": "Confirmed (broker reports; revenue and EPS are broker estimates, not company guidance)",
-      "vocab": [["target price", "目標價"], ["initiated coverage", "首次覆蓋（研究報告）"], ["allocation", "配額"], ["turnkey", "統包的"], ["beneficiary", "受惠者"], ["limit-up", "漲停"], ["leading indicator", "領先指標"]]
+      "vocab": [
+        ["target price", "目標價", "fin"],
+        ["initiated coverage", "首次覆蓋（研究報告）", "fin"],
+        ["allocation", "配額"],
+        ["turnkey", "統包的"],
+        ["beneficiary", "受惠者", "fin"],
+        ["limit-up", "漲停", "fin"],
+        ["leading indicator", "領先指標", "fin"],
+        ["EPS", "每股盈餘", "fin"],
+        ["Buy rating", "買進評等", "fin"],
+        ["broker", "券商", "fin"]
+      ]
     },
     "9": {
       "entity": "South Korea / Malaysia OSAT",
@@ -80,7 +154,14 @@
       "metric": "HBM-related exports ×5.7 (one year); weight 1.4 → 3.8 tonnes; Aug multi-chip IC exports US$1.62B; Malaysia ~13% of global OSAT, 7% advanced-packaging target by 2035; Intel Pelican US$7B",
       "impact": "Read with last week's TSMC Kaohsiung Mini-Loop and CoWoS overflow to Amkor: front-end work remains concentrated in Taiwan, but testing after HBM stacking and some back-end steps are dispersing to Malaysia, providing a capacity buffer for the ASE, Intel and AMD packaging-and-test chains.",
       "conf": "Confirmed (customs data; the industry interpretation is media analysis)",
-      "vocab": [["spills", "外溢"], ["assembly and test", "封裝測試（封測）"], ["bumping", "凸塊"], ["back-end", "後段（製程）"], ["stacking", "堆疊"], ["buffer", "緩衝"]]
+      "vocab": [
+        ["spills", "外溢"],
+        ["assembly and test", "封裝測試（封測）"],
+        ["bumping", "凸塊"],
+        ["back-end", "後段（製程）"],
+        ["stacking", "堆疊"],
+        ["buffer", "緩衝"]
+      ]
     },
     "10": {
       "entity": "Lumentum / Qualcomm / Corning",
@@ -89,7 +170,15 @@
       "metric": "1060nm VCSEL, ~10 Tb/s; Lumentum +2.53% (US$954.49), Corning +5.89% (US$158.98), AXT +14.14%",
       "impact": "VCSELs moving from short-reach data-center optical modules to chip-to-chip interconnect expands the addressable market for compound-semiconductor foundries (the VCSEL and InP processes at WIN Semiconductors and Advanced Wireless Semiconductor). It also complements last week's reports of silicon photonics spreading into lidar and biomedicine — optical interconnect is advancing on silicon and compound platforms at the same time.",
       "conf": "Confirmed (company announcement; share prices are US closes on 9/21, for reference only)",
-      "vocab": [["interconnect", "互連"], ["scale-up", "（系統）縱向擴展"], ["multimode fiber", "多模光纖"], ["latency", "延遲"], ["substrate", "基板"], ["addressable market", "可定址市場"]]
+      "vocab": [
+        ["interconnect", "互連"],
+        ["scale-up", "（系統）縱向擴展"],
+        ["multimode fiber", "多模光纖"],
+        ["latency", "延遲"],
+        ["substrate", "基板"],
+        ["addressable market", "可定址市場"],
+        ["rally", "漲勢；大漲", "fin"]
+      ]
     },
     "11": {
       "entity": "Philadelphia Semiconductor Index / TSMC ADR",
@@ -98,7 +187,17 @@
       "metric": "SOX +4.29% (record); AMD ~+10%; TSMC ADR US$434.67 (+1.02%); US 10-yr yield 4.96%; TAIEX futures night session +728 pts, above 48K; institutional net buying NT$4.78B",
       "impact": "Progress in US-China talks is the only positive policy signal this period, but the reports gave no specifics, so it is impossible to tell whether semiconductor export controls will ease. AMD's big gain echoes the thesis that agentic AI is driving CPU demand.",
       "conf": "Confirmed (market data; details of the US-China progress not disclosed; closing prices for reference only)",
-      "vocab": [["all-time high", "歷史新高"], ["Treasury yield", "美國公債殖利率"], ["valuation", "評價、估值"], ["institutional investors", "法人"], ["net buyers", "買超方"], ["thesis", "論點"]]
+      "vocab": [
+        ["all-time high", "歷史新高", "fin"],
+        ["Treasury yield", "美國公債殖利率", "fin"],
+        ["valuation", "評價、估值", "fin"],
+        ["institutional investors", "法人", "fin"],
+        ["net buyers", "買超方", "fin"],
+        ["thesis", "論點"],
+        ["net buying", "買超", "fin"],
+        ["futures", "期貨", "fin"],
+        ["night session", "夜盤", "fin"]
+      ]
     },
     "12": {
       "entity": "Taiwan stocks / TSMC (2330)",
@@ -107,7 +206,17 @@
       "metric": "TAIEX 47,800.17 (+81.33), intraday high 48,601, turnover ~NT$1.02T; TSMC NT$2,460 (-20, -0.81%), intraday high NT$2,510; MediaTek intraday high NT$5,480",
       "impact": "Cross-check: 9/21 close 47,718.84 + 81.33 = 47,800.17; TSMC 2,480 − 20 = 2,460 — both consistent. TSMC pulled back after a strong run while money rotated into ASIC design services and substrates, in line with GUC and WinWay getting higher target prices the same day — the market is digesting 'foundry beneficiaries beyond TSMC'.",
       "conf": "Confirmed (closing prices for reference only, not current prices)",
-      "vocab": [["intraday", "盤中"], ["fades", "（漲勢）轉弱"], ["profit-taking", "獲利了結"], ["turnover", "成交值"], ["pullback", "拉回"], ["rotated", "（資金）輪動"]]
+      "vocab": [
+        ["intraday", "盤中", "fin"],
+        ["fades", "（漲勢）轉弱"],
+        ["profit-taking", "獲利了結", "fin"],
+        ["turnover", "成交值", "fin"],
+        ["pullback", "拉回", "fin"],
+        ["rotated", "（資金）輪動", "fin"],
+        ["target price", "目標價", "fin"],
+        ["limit-up", "漲停", "fin"],
+        ["rallied", "大漲", "fin"]
+      ]
     },
     "13": {
       "entity": "Intel Foundry EMIB",
@@ -116,7 +225,14 @@
       "metric": "EMIB substrate yield: ~30% in 2Q26 → ~45% → 50% target in 4Q26 → 60% target in 1Q27; suppliers Ibiden, Shinko, Unimicron; Google to adopt EMIB-T in 2027",
       "impact": "EMIB-T is Intel Foundry's most practical entry point for winning external AI customers, but a 45% substrate yield shows it is unlikely to shake CoWoS-L in the near term (TrendForce last week expected CoWoS-L to stay dominant through 2028). For Unimicron, it is a second source of high-end substrate demand beyond CoWoS.",
       "conf": "Unconfirmed (supply-chain reports; Intel has not disclosed yield figures)",
-      "vocab": [["yield", "良率"], ["silicon bridges", "矽橋"], ["interposer", "中介層"], ["thermal-expansion mismatch", "熱膨脹係數不匹配"], ["prepayments", "預付款"], ["entry point", "切入點"]]
+      "vocab": [
+        ["yield", "良率"],
+        ["silicon bridges", "矽橋"],
+        ["interposer", "中介層"],
+        ["thermal-expansion mismatch", "熱膨脹係數不匹配"],
+        ["prepayments", "預付款"],
+        ["entry point", "切入點"]
+      ]
     },
     "14": {
       "entity": "BOE / Samsung Electro-Mechanics / SKC / LG Innotek / Intel",
@@ -125,7 +241,18 @@
       "metric": "BOE: 24 layers, >100×100mm, TGV aspect ratio 15:1, mass production 2028; SKC adds KRW 92.1B to Absolics (KRW 373.1B cumulative); Samsung Electro-Mechanics' GlaSSEM mass production 2027; LG Innotek 2028; Intel India plant US$3.3B, mass production 2028–2030",
       "impact": "A direct comparison with last week's report that TSMC's CoPoS is in talks for an AUO site (square glass substrates + TGV): panel makers (AUO, BOE, CSOT) leveraging their glass-processing experience to enter advanced packaging has become a cross-border trend. If Nvidia's push pulls glass substrate mass production forward, it will set the competitive pace between TSMC CoPoS and Intel's glass packaging.",
       "conf": "Confirmed (company progress from public demos and investment announcements; Nvidia's request to accelerate is a media report)",
-      "vocab": [["glass substrate", "玻璃基板"], ["mass production", "量產"], ["patent", "專利"], ["reliability", "可靠度"], ["aspect ratio", "深寬比"], ["joint venture", "合資企業"], ["leveraging", "善用、借重"]]
+      "vocab": [
+        ["glass substrate", "玻璃基板"],
+        ["mass production", "量產"],
+        ["patent", "專利"],
+        ["reliability", "可靠度"],
+        ["aspect ratio", "深寬比"],
+        ["joint venture", "合資企業", "fin"],
+        ["leveraging", "善用、借重"],
+        ["subsidiary", "子公司", "fin"],
+        ["cumulative", "累計的", "fin"],
+        ["injecting", "挹注（資金）", "fin"]
+      ]
     },
     "15": {
       "entity": "SMIC / CXMT / China A-share semiconductors",
@@ -134,7 +261,14 @@
       "metric": "186 companies' combined net profit RMB 160.51B (YoY +607.2%); CXMT revenue RMB 150.31B (YoY +873.64%), net profit RMB 77.61B; SMIC revenue RMB 38.64B (YoY +19.4%)",
       "impact": "China's chip-profit boom comes almost entirely from the memory price cycle. SMIC's revenue grew only about 20% YoY, corroborating Huawei's remark about being constrained by SMIC's 7/6nm capacity (item #4 this period) — China's foundry bottleneck is advanced-node supply, not demand. CXMT's expansion will also keep absorbing domestic equipment and engineering talent.",
       "conf": "Confirmed (compiled from company financial reports)",
-      "vocab": [["net profit", "淨利"], ["tally", "統計、合計"], ["memory price cycle", "記憶體價格循環"], ["corroborating", "印證"], ["constrained", "受限的"], ["absorbing", "吸收、吃掉"]]
+      "vocab": [
+        ["net profit", "淨利", "fin"],
+        ["tally", "統計、合計"],
+        ["memory price cycle", "記憶體價格循環"],
+        ["corroborating", "印證"],
+        ["constrained", "受限的"],
+        ["absorbing", "吸收、吃掉"]
+      ]
     },
     "16": {
       "entity": "DeepSeek / Huawei",
@@ -143,7 +277,15 @@
       "metric": "New supply as early as 2026Q4; 2T-parameter model in training, 8T planned; compute investment ~RMB 30B; fundraising RMB 50B; ~50,000 GB300 vs ~200,000 Ascend 950",
       "impact": "The 50,000-vs-200,000 conversion shows domestic chips need roughly four times as many units to reach the same training scale, amplifying wafer demand at SMIC. But with 7/6nm capacity unable to grow, the bigger the demand, the wider the supply gap — SMIC's expansion and yields will be the real constraint on China's AI development in 2027.",
       "conf": "Unconfirmed (relayed by media, not formally announced by DeepSeek; chip counts are the report's estimates)",
-      "vocab": [["founder", "創辦人"], ["compute", "算力"], ["fundraising", "募資"], ["comparable", "相當的、可比的"], ["amplifying", "放大"], ["supply gap", "供給缺口"]]
+      "vocab": [
+        ["founder", "創辦人"],
+        ["compute", "算力"],
+        ["fundraising", "募資", "fin"],
+        ["comparable", "相當的、可比的"],
+        ["amplifying", "放大"],
+        ["supply gap", "供給缺口"],
+        ["estimate", "估計；預估值", "fin"]
+      ]
     },
     "17": {
       "entity": "TSMC (2330) / Apple / MediaTek / Qualcomm",
@@ -152,7 +294,16 @@
       "metric": "A20 Pro: TSMC 2nm + WMCM, CPU +20%, GPU +40%; Dimensity 9600 Pro: TSMC 2nm, single-core +17%, multi-core +15%; Snapdragon 8 Elite Extreme Gen 6: CPU +13%, GPU +44%; iPhone 18 Pro first-3-day sales +70%",
       "impact": "All three major smartphone SoC vendors moving to 2nm in the same quarter is direct evidence of TSMC N2 ramping in Q4 2026, consistent with this period's Commercial Times estimate of 90,000–100,000 wafers per month of 2nm capacity by year-end. WMCM also extends advanced-packaging demand from AI chips to smartphones.",
       "conf": "Confirmed (specs from company launches; Qualcomm's foundry not disclosed)",
-      "vocab": [["debut", "首次亮相"], ["optimization", "最佳化"], ["flagship", "旗艦"], ["power efficiency", "能效"], ["carriers", "電信業者"], ["evidence", "證據"]]
+      "vocab": [
+        ["debut", "首次亮相"],
+        ["optimization", "最佳化"],
+        ["flagship", "旗艦"],
+        ["power efficiency", "能效"],
+        ["carriers", "電信業者"],
+        ["evidence", "證據"],
+        ["estimate", "估計；預估值", "fin"],
+        ["sales", "銷售額", "fin"]
+      ]
     },
     "18": {
       "entity": "Samsung Foundry",
@@ -161,7 +312,14 @@
       "metric": "AI5 trial production ahead of the original November schedule; validation by end-2026, volume production in 2027; Tesla contract US$16.5B; Q2 foundry share Samsung 5.9% vs SMIC 5.4%; Taylor Fab 2 groundbreaking end-2026, operating ~2030 (1.4nm)",
       "impact": "With the market share gap to SMIC at just 0.5 points, it is clear why Samsung is rushing to bring Taylor online early. Consistent with last period's news that Samsung delayed SF1.4 to 2029 to focus on SF2, Samsung's current strategy is to lock in US 2nm capacity and anchor customers first.",
       "conf": "Background (originally published 2026/09/21, outside this period; early trial production is a Korean media report, not announced by Samsung)",
-      "vocab": [["validation", "驗證"], ["market share", "市占率"], ["percentage points", "百分點"], ["slated", "預定的"], ["break ground", "動工"], ["anchor customers", "主力客戶"]]
+      "vocab": [
+        ["validation", "驗證"],
+        ["market share", "市占率", "fin"],
+        ["percentage points", "百分點"],
+        ["slated", "預定的"],
+        ["break ground", "動工"],
+        ["anchor customers", "主力客戶"]
+      ]
     },
     "19": {
       "entity": "GlobalFoundries / SMART Photonics",
@@ -170,7 +328,14 @@
       "metric": "Full availability 2H 2027; integration: flip-chip; applications: AI data centers, pluggable optical modules, lidar",
       "impact": "What silicon photonics lacks is a light source, which makes InP laser integration key. GF fills that gap with an open-foundry model, on a timeline similar to UMC opening its 12-inch silicon photonics platform to customers in 2027 — mature-node foundries' competition in silicon photonics has entered the platform-integration stage. It also belongs to the same optical-interconnect theme as this period's Lumentum VCSEL D2D item.",
       "conf": "Background (originally published 2026/09/21, outside this period; company announcement)",
-      "vocab": [["indium phosphide", "磷化銦（InP）"], ["silicon photonics", "矽光子"], ["optical amplifiers", "光放大器"], ["flip-chip", "覆晶"], ["pluggable optical transceivers", "可插拔光收發模組"], ["light source", "光源"]]
+      "vocab": [
+        ["indium phosphide", "磷化銦（InP）"],
+        ["silicon photonics", "矽光子"],
+        ["optical amplifiers", "光放大器"],
+        ["flip-chip", "覆晶"],
+        ["pluggable optical transceivers", "可插拔光收發模組"],
+        ["light source", "光源"]
+      ]
     },
     "20": {
       "entity": "Mature-node foundries / consumer IC designers",
@@ -179,7 +344,14 @@
       "metric": "— (the report did not name specific companies or gross margin figures)",
       "impact": "The flip side of last week's UMC and PSMC price hikes: the cost of higher prices is ultimately absorbed by consumer IC design houses, which may shift to Chinese mature-node foundries to cut costs — the main variable in whether Taiwanese mature-node price hikes stick across the board.",
       "conf": "Background (originally published 2026/09/21, outside this period)",
-      "vocab": [["squeezing", "擠壓"], ["gross margin", "毛利率"], ["substitutable", "可替代的"], ["pass costs on", "轉嫁成本"], ["flip side", "另一面"], ["price hikes", "漲價"]]
+      "vocab": [
+        ["squeezing", "擠壓"],
+        ["gross margin", "毛利率", "fin"],
+        ["substitutable", "可替代的"],
+        ["pass costs on", "轉嫁成本"],
+        ["flip side", "另一面"],
+        ["price hikes", "漲價", "fin"]
+      ]
     }
   }
 }

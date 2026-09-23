@@ -9,30 +9,13 @@
       "impact": "The only chairman-level signal on capacity direction this week. Read with the same week's Longtan A14 approval and the Kaohsiung Mini-Loop plan, it forms consistent evidence that TSMC is accelerating advanced nodes and advanced packaging at the same time.",
       "conf": "Confirmed (public forum remarks; size of the upward revision not specified)",
       "vocab": [
-        [
-          "frenzy",
-          "狂潮"
-        ],
-        [
-          "process of elimination",
-          "消去法"
-        ],
-        [
-          "proactive",
-          "積極主動的"
-        ],
-        [
-          "humble",
-          "謙虛的"
-        ],
-        [
-          "projections",
-          "預估"
-        ],
-        [
-          "CAGR",
-          "年複合成長率"
-        ]
+        ["frenzy", "狂潮"],
+        ["process of elimination", "消去法"],
+        ["proactive", "積極主動的"],
+        ["humble", "謙虛的"],
+        ["projections", "預估"],
+        ["CAGR", "年複合成長率", "fin"],
+        ["forecast", "預測", "fin"]
       ]
     },
     "2": {
@@ -43,30 +26,13 @@
       "impact": "The speed of the fill reflects investor conviction after August revenue topped NT$500 billion. Ex-dividend pressure was absorbed within the day, one of the preconditions for the index's four straight gains later in the week and its strong weekly rise.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "ex-dividend",
-          "除息"
-        ],
-        [
-          "payout",
-          "配發（股利）"
-        ],
-        [
-          "filled the dividend gap",
-          "填息"
-        ],
-        [
-          "poured in",
-          "湧入"
-        ],
-        [
-          "conviction",
-          "信心、認同"
-        ],
-        [
-          "precondition",
-          "前提"
-        ]
+        ["ex-dividend", "除息", "fin"],
+        ["payout", "配發（股利）", "fin"],
+        ["filled the dividend gap", "填息"],
+        ["poured in", "湧入"],
+        ["conviction", "信心、認同"],
+        ["precondition", "前提"],
+        ["cash dividend", "現金股利", "fin"]
       ]
     },
     "3": {
@@ -77,34 +43,15 @@
       "impact": "Consolidation in niche memory feeds back into foundry demand: NOR Flash and F-RAM are mostly made on mature nodes, so Winbond's expansion effectively locks in a long-term split between its own 12-inch capacity and outsourced foundry work — another support for mature-node demand this week.",
       "conf": "Confirmed (company announcement; pending regulatory approval)",
       "vocab": [
-        [
-          "acquisition",
-          "收購"
-        ],
-        [
-          "all-cash",
-          "全現金的"
-        ],
-        [
-          "pending regulatory approvals",
-          "尚待主管機關核准"
-        ],
-        [
-          "differentiated",
-          "差異化的"
-        ],
-        [
-          "reversal",
-          "翻轉"
-        ],
-        [
-          "consolidation",
-          "整併"
-        ],
-        [
-          "niche",
-          "利基的"
-        ]
+        ["acquisition", "收購", "fin"],
+        ["all-cash", "全現金的", "fin"],
+        ["pending regulatory approvals", "尚待主管機關核准"],
+        ["differentiated", "差異化的"],
+        ["reversal", "翻轉"],
+        ["consolidation", "整併"],
+        ["niche", "利基的"],
+        ["stake", "股權", "fin"],
+        ["supply-demand", "供需的", "fin"]
       ]
     },
     "4": {
@@ -115,30 +62,12 @@
       "impact": "Advanced nodes and advanced packaging have put cleaning and wet processing on the critical path for yield, making it a second battleground for tool localization and consumables costs. A direct reference point for Taiwan's wet-process suppliers (Grand Process Technology, Scientech).",
       "conf": "Confirmed (company release)",
       "vocab": [
-        [
-          "wet processing",
-          "濕製程"
-        ],
-        [
-          "batch",
-          "批次（式）"
-        ],
-        [
-          "cross-contamination",
-          "交叉污染"
-        ],
-        [
-          "residue",
-          "殘留"
-        ],
-        [
-          "critical path",
-          "關鍵路徑"
-        ],
-        [
-          "consumables",
-          "耗材"
-        ]
+        ["wet processing", "濕製程"],
+        ["batch", "批次（式）"],
+        ["cross-contamination", "交叉污染"],
+        ["residue", "殘留"],
+        ["critical path", "關鍵路徑"],
+        ["consumables", "耗材"]
       ]
     },
     "5": {
@@ -149,30 +78,12 @@
       "impact": "If it goes ahead, GF would gain double support from Japanese subsidies and the Japan-US framework, adding another node to the geopolitical footprint of mature and specialty processes. For Rapidus it means competition for domestic resources; for Taiwan's mature-node foundries it is a supply-increase variable after 2029.",
       "conf": "Unconfirmed (early-stage talks; not announced by Japan, the US or GF)",
       "vocab": [
-        [
-          "in talks",
-          "洽談中"
-        ],
-        [
-          "feasibility",
-          "可行性"
-        ],
-        [
-          "payback",
-          "投資回收"
-        ],
-        [
-          "subsidies",
-          "補貼"
-        ],
-        [
-          "footprint",
-          "布局"
-        ],
-        [
-          "specialty processes",
-          "特殊製程"
-        ]
+        ["in talks", "洽談中"],
+        ["feasibility", "可行性"],
+        ["payback", "投資回收", "fin"],
+        ["subsidies", "補貼", "fin"],
+        ["footprint", "布局"],
+        ["specialty processes", "特殊製程"]
       ]
     },
     "6": {
@@ -183,30 +94,15 @@
       "impact": "A double-digit GDP forecast, driven mainly by semiconductor and AI server exports, is the highest-level macro endorsement of the foundry boom; holding rates steady also eased pressure on Taiwan stocks from this week's worries about US rate hikes.",
       "conf": "Confirmed (official decision)",
       "vocab": [
-        [
-          "policy rate",
-          "政策利率"
-        ],
-        [
-          "loan-to-value",
-          "貸款成數"
-        ],
-        [
-          "mortgage",
-          "房貸"
-        ],
-        [
-          "inflationary pressure",
-          "通膨壓力"
-        ],
-        [
-          "productivity",
-          "生產力"
-        ],
-        [
-          "endorsement",
-          "背書"
-        ]
+        ["policy rate", "政策利率", "fin"],
+        ["loan-to-value", "貸款成數", "fin"],
+        ["mortgage", "房貸", "fin"],
+        ["inflationary pressure", "通膨壓力", "fin"],
+        ["productivity", "生產力"],
+        ["endorsement", "背書"],
+        ["rate hike", "升息", "fin"],
+        ["GDP", "國內生產毛額", "fin"],
+        ["forecast", "預測", "fin"]
       ]
     },
     "7": {
@@ -217,30 +113,12 @@
       "impact": "Read with the same week's Chinese Academy of Sciences progress on extending DUV via GAA structures, it shows that under equipment controls, talent and technology leakage has become another route for China to advance leading-edge processes; trade-secret protection is an ongoing risk for Taiwanese and Japanese foundries.",
       "conf": "Confirmed (court case; details subject to official disclosures)",
       "vocab": [
-        [
-          "allegedly",
-          "據稱、涉嫌"
-        ],
-        [
-          "trade secrets",
-          "營業秘密"
-        ],
-        [
-          "leakage",
-          "外流"
-        ],
-        [
-          "poaching",
-          "挖角"
-        ],
-        [
-          "suspected",
-          "涉嫌的"
-        ],
-        [
-          "ongoing",
-          "持續的"
-        ]
+        ["allegedly", "據稱、涉嫌"],
+        ["trade secrets", "營業秘密"],
+        ["leakage", "外流"],
+        ["poaching", "挖角"],
+        ["suspected", "涉嫌的"],
+        ["ongoing", "持續的"]
       ]
     },
     "8": {
@@ -251,30 +129,13 @@
       "impact": "It eases the long-standing 'no land available' bottleneck for advanced nodes and moves A14's path to landing in Taiwan a step forward. But the environmental review and water and power are execution risks for 2027–2028 — and also a mid-term source of orders for Taiwan's facility engineering and utility infrastructure.",
       "conf": "Confirmed (still pending Executive Yuan approval and environmental review; not final)",
       "vocab": [
-        [
-          "hurdle",
-          "關卡"
-        ],
-        [
-          "hectares",
-          "公頃"
-        ],
-        [
-          "angstrom",
-          "埃米"
-        ],
-        [
-          "environmental impact assessment",
-          "環境影響評估"
-        ],
-        [
-          "execution risks",
-          "執行風險"
-        ],
-        [
-          "utility",
-          "水電（公用事業）"
-        ]
+        ["hurdle", "關卡"],
+        ["hectares", "公頃"],
+        ["angstrom", "埃米"],
+        ["environmental impact assessment", "環境影響評估"],
+        ["execution risks", "執行風險"],
+        ["utility", "水電（公用事業）"],
+        ["estimate", "估計；預估值", "fin"]
       ]
     },
     "9": {
@@ -285,30 +146,13 @@
       "impact": "Without EUV, China is trading architectural innovation for node equivalence — the same strategic route as Huawei's Tau scaling/LogicFolding. It gives SMIC room to imagine mid-term yield and cost gains, but until the interconnect bottleneck is solved, it is no real substitute for TSMC's advanced nodes.",
       "conf": "Confirmed (academic result; manufacturability unproven)",
       "vocab": [
-        [
-          "gate-all-around",
-          "環繞閘極"
-        ],
-        [
-          "equivalent",
-          "等效的"
-        ],
-        [
-          "on/off ratio",
-          "開關比"
-        ],
-        [
-          "leakage",
-          "漏電"
-        ],
-        [
-          "breakthrough",
-          "突破"
-        ],
-        [
-          "substitute",
-          "替代品"
-        ]
+        ["gate-all-around", "環繞閘極"],
+        ["equivalent", "等效的"],
+        ["on/off ratio", "開關比"],
+        ["leakage", "漏電"],
+        ["breakthrough", "突破"],
+        ["substitute", "替代品"],
+        ["estimate", "估計；預估值", "fin"]
       ]
     },
     "10": {
@@ -319,30 +163,12 @@
       "impact": "ALD is a key thin-film process for both advanced nodes and advanced packaging. A foreign vendor moving production to Taiwan shows foundry expansion has made local delivery lead times for tools a competitive factor — echoing this month's signal that TSMC's equipment procurement needs were raised 1.9× within six months.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "atomic layer deposition",
-          "原子層沉積（ALD）"
-        ],
-        [
-          "production base",
-          "生產基地"
-        ],
-        [
-          "thin-film",
-          "薄膜"
-        ],
-        [
-          "lead times",
-          "交期"
-        ],
-        [
-          "procurement",
-          "採購"
-        ],
-        [
-          "precision-machinery",
-          "精密機械"
-        ]
+        ["atomic layer deposition", "原子層沉積（ALD）"],
+        ["production base", "生產基地"],
+        ["thin-film", "薄膜"],
+        ["lead times", "交期"],
+        ["procurement", "採購", "fin"],
+        ["precision-machinery", "精密機械"]
       ]
     },
     "11": {
@@ -353,30 +179,15 @@
       "impact": "Money is clearly rotating into mature-node foundries. UMC's Q3 guidance — wafer shipments up 7–9% QoQ, capacity of about 1.325 million 12-inch-equivalent wafers, utilization above 90% and gross margin of 34–36% — is the numerical basis for this valuation recovery.",
       "conf": "Confirmed (closing prices for reference only, not current prices)",
       "vocab": [
-        [
-          "gapped up",
-          "跳空開高"
-        ],
-        [
-          "soared",
-          "飆漲"
-        ],
-        [
-          "lots",
-          "張（股票交易單位）"
-        ],
-        [
-          "guidance",
-          "財測指引"
-        ],
-        [
-          "utilization",
-          "稼動率"
-        ],
-        [
-          "valuation recovery",
-          "評價修復"
-        ]
+        ["gapped up", "跳空開高", "fin"],
+        ["soared", "飆漲"],
+        ["lots", "張（股票交易單位）"],
+        ["guidance", "財測指引", "fin"],
+        ["utilization", "稼動率", "fin"],
+        ["valuation recovery", "評價修復", "fin"],
+        ["gross margin", "毛利率", "fin"],
+        ["institutional investors", "法人", "fin"],
+        ["net buying", "買超", "fin"]
       ]
     },
     "12": {
@@ -387,30 +198,12 @@
       "impact": "China's memory expansion will keep crowding out domestic 12-inch tools, cleanrooms and engineering staff, creating internal competition for SMIC, Hua Hong and Nexchip's mature-node expansion while stretching global tool lead times — exactly the industry backdrop behind Forge Nano's choice to build in Taiwan this week.",
       "conf": "Unconfirmed (market rumor; not announced by CXMT)",
       "vocab": [
-        [
-          "shortage",
-          "短缺"
-        ],
-        [
-          "amid",
-          "在……之際"
-        ],
-        [
-          "crowding out",
-          "排擠"
-        ],
-        [
-          "cleanrooms",
-          "潔淨室"
-        ],
-        [
-          "backdrop",
-          "背景"
-        ],
-        [
-          "rumor",
-          "傳聞"
-        ]
+        ["shortage", "短缺", "fin"],
+        ["amid", "在……之際"],
+        ["crowding out", "排擠"],
+        ["cleanrooms", "潔淨室"],
+        ["backdrop", "背景"],
+        ["rumor", "傳聞"]
       ]
     },
     "13": {
@@ -421,30 +214,12 @@
       "impact": "The gaps between Taiwan's, Japan's and Korea's US investment deals will translate directly into differences in Section 232 semiconductor tariff rates and quotas, shaping the relative cost of US capacity for Samsung, SK hynix and Taiwanese firms — a hidden variable in 2027 advanced-node competition.",
       "conf": "Confirmed (public remarks by the head of state)",
       "vocab": [
-        [
-          "negotiations",
-          "協商"
-        ],
-        [
-          "tariff",
-          "關稅"
-        ],
-        [
-          "duty-free",
-          "免稅的"
-        ],
-        [
-          "quota",
-          "配額"
-        ],
-        [
-          "Section 232",
-          "232 條款（美國國安關稅）"
-        ],
-        [
-          "hidden variable",
-          "隱性變數"
-        ]
+        ["negotiations", "協商"],
+        ["tariff", "關稅", "fin"],
+        ["duty-free", "免稅的", "fin"],
+        ["quota", "配額", "fin"],
+        ["Section 232", "232 條款（美國國安關稅）"],
+        ["hidden variable", "隱性變數"]
       ]
     },
     "14": {
@@ -455,30 +230,13 @@
       "impact": "The addressable market for silicon photonics foundry work is no longer limited to CPO. For specialty foundries like UMC (12-inch silicon photonics platform opening to customers in 2027) and Vanguard, this is the clearest second growth curve outside advanced nodes; but high certification bars in automotive, clinical and aerospace mean volumes will ramp more slowly than in data centers.",
       "conf": "Confirmed (market sizes are research-firm forecasts)",
       "vocab": [
-        [
-          "lidar",
-          "光達"
-        ],
-        [
-          "durable",
-          "耐用的"
-        ],
-        [
-          "miniaturizing",
-          "微型化"
-        ],
-        [
-          "pathogens",
-          "病原體"
-        ],
-        [
-          "inertial navigation",
-          "慣性導航"
-        ],
-        [
-          "certification",
-          "認證"
-        ]
+        ["lidar", "光達"],
+        ["durable", "耐用的"],
+        ["miniaturizing", "微型化"],
+        ["pathogens", "病原體"],
+        ["inertial navigation", "慣性導航"],
+        ["certification", "認證"],
+        ["forecast", "預測", "fin"]
       ]
     },
     "15": {
@@ -489,30 +247,13 @@
       "impact": "It echoes the claim at this month's SEMICON Taiwan that 'CPO is expected to enter volume production in the second half' — moving from sampling to full inspection is usually the last mile before mass production. Taiwan's optical inspection and precision machining firms are the most direct beneficiaries of the CPO ramp.",
       "conf": "Confirmed",
       "vocab": [
-        [
-          "co-packaged optics",
-          "共同封裝光學（CPO）"
-        ],
-        [
-          "fiber array units",
-          "光纖陣列單元（FAU）"
-        ],
-        [
-          "inspection",
-          "檢測"
-        ],
-        [
-          "alignment accuracy",
-          "對位精度"
-        ],
-        [
-          "coupling",
-          "耦合"
-        ],
-        [
-          "last mile",
-          "最後一哩"
-        ]
+        ["co-packaged optics", "共同封裝光學（CPO）"],
+        ["fiber array units", "光纖陣列單元（FAU）"],
+        ["inspection", "檢測"],
+        ["alignment accuracy", "對位精度"],
+        ["coupling", "耦合"],
+        ["last mile", "最後一哩"],
+        ["beneficiaries", "受惠者", "fin"]
       ]
     },
     "16": {
@@ -523,30 +264,15 @@
       "impact": "The most important item for foundry fundamentals this week. The driver of price hikes has shifted from 'supply contraction' to 'demand for AI peripheral components', making this mature-node cycle's durability easier to identify than the 2021 wave; Vanguard, as a partner in TSMC's mature-node ecosystem, benefits most directly from the overflow.",
       "conf": "Confirmed (PSMC's 40% hike is a market rumor, not confirmed by the company)",
       "vocab": [
-        [
-          "price hikes",
-          "漲價"
-        ],
-        [
-          "pronounced",
-          "明顯的"
-        ],
-        [
-          "high-single-digit",
-          "高個位數"
-        ],
-        [
-          "restocking",
-          "回補庫存"
-        ],
-        [
-          "fundamentals",
-          "基本面"
-        ],
-        [
-          "durability",
-          "持續性"
-        ]
+        ["price hikes", "漲價", "fin"],
+        ["pronounced", "明顯的"],
+        ["high-single-digit", "高個位數"],
+        ["restocking", "回補庫存", "fin"],
+        ["fundamentals", "基本面", "fin"],
+        ["durability", "持續性"],
+        ["gross margin", "毛利率", "fin"],
+        ["guidance", "財測指引", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"]
       ]
     },
     "17": {
@@ -557,30 +283,14 @@
       "impact": "It fills in the other half of the 9/12 story about 'CoWoS shortfall spilling over to UMC and Amkor': TSMC is not holding back on expansion — it has shifted the bottleneck to how fast tools can be qualified. If CoPoS lands at AUO's site, it would be the first time panel-level packaging truly combines a ready-made plant with panel-manufacturing know-how.",
       "conf": "Unconfirmed (the AUO plant deal is market news, not announced by either side; the CoWoS CAGR is a TSMC executive's estimate)",
       "vocab": [
-        [
-          "modular",
-          "模組化的"
-        ],
-        [
-          "pain point",
-          "痛點"
-        ],
-        [
-          "mainstream",
-          "主流"
-        ],
-        [
-          "pilot-line",
-          "試產線"
-        ],
-        [
-          "micro-cracks",
-          "微裂"
-        ],
-        [
-          "know-how",
-          "技術經驗"
-        ]
+        ["modular", "模組化的"],
+        ["pain point", "痛點"],
+        ["mainstream", "主流"],
+        ["pilot-line", "試產線"],
+        ["micro-cracks", "微裂"],
+        ["know-how", "技術經驗"],
+        ["CAGR", "年複合成長率", "fin"],
+        ["estimate", "估計；預估值", "fin"]
       ]
     },
     "18": {
@@ -591,30 +301,14 @@
       "impact": "Substrates and PCBs rising together show the market has translated this week's advanced-packaging bottleneck news (Mini-Loop and CoPoS) into expectations of supply-chain orders, rather than treating it purely as a foundry story.",
       "conf": "Confirmed (closing prices for reference only, not current prices)",
       "vocab": [
-        [
-          "swing high",
-          "波段高點"
-        ],
-        [
-          "consecutive",
-          "連續的"
-        ],
-        [
-          "turning positive",
-          "翻紅"
-        ],
-        [
-          "daily limit",
-          "漲跌停幅度"
-        ],
-        [
-          "substrate",
-          "載板"
-        ],
-        [
-          "expectations",
-          "預期"
-        ]
+        ["swing high", "波段高點", "fin"],
+        ["consecutive", "連續的"],
+        ["turning positive", "翻紅"],
+        ["daily limit", "漲跌停幅度", "fin"],
+        ["substrate", "載板"],
+        ["expectations", "預期"],
+        ["turnover", "成交值", "fin"],
+        ["intraday", "盤中", "fin"]
       ]
     },
     "19": {
@@ -625,30 +319,13 @@
       "impact": "It mirrors the split in mature-node foundry work — AI-related components are extremely tight while consumer demand stays weak. That explains why this wave of price hikes centers on AI peripheral items such as PMICs, MCUs and MOSFETs rather than a broad mature-node recovery.",
       "conf": "Confirmed (supply-chain reports)",
       "vocab": [
-        [
-          "diverging",
-          "分化"
-        ],
-        [
-          "order visibility",
-          "訂單能見度"
-        ],
-        [
-          "spot prices",
-          "現貨價"
-        ],
-        [
-          "mirrors",
-          "反映、與……同構"
-        ],
-        [
-          "tight",
-          "吃緊的"
-        ],
-        [
-          "broad",
-          "全面的"
-        ]
+        ["diverging", "分化"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["spot prices", "現貨價", "fin"],
+        ["mirrors", "反映、與……同構"],
+        ["tight", "吃緊的"],
+        ["broad", "全面的"],
+        ["price hikes", "漲價", "fin"]
       ]
     },
     "20": {
@@ -659,30 +336,15 @@
       "impact": "The capex increase is key confirmation that this mature-node price rise can last — UMC is starting to lay down capacity ahead of 2027–2028 demand, not just harvesting higher prices.",
       "conf": "Background (August revenue and earnings-call guidance were originally released outside this period)",
       "vocab": [
-        [
-          "capex",
-          "資本支出"
-        ],
-        [
-          "ASP",
-          "平均售價"
-        ],
-        [
-          "12-inch-equivalent",
-          "12 吋約當"
-        ],
-        [
-          "product mix",
-          "產品組合"
-        ],
-        [
-          "rebound",
-          "回升"
-        ],
-        [
-          "harvesting",
-          "收割"
-        ]
+        ["capex", "資本支出", "fin"],
+        ["ASP", "平均售價", "fin"],
+        ["12-inch-equivalent", "12 吋約當"],
+        ["product mix", "產品組合", "fin"],
+        ["rebound", "回升"],
+        ["harvesting", "收割"],
+        ["gross margin", "毛利率", "fin"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["guidance", "財測指引", "fin"]
       ]
     },
     "21": {
@@ -693,30 +355,12 @@
       "impact": "Its positioning — low prices plus short TAT for small-volume, high-mix orders — is now concrete, but poses no volume threat to TSMC. Read with this week's news that Japan and the US may have GF run a new fab, Japan is betting on two routes at once: 'homegrown advanced nodes' and 'foreign-run mature nodes'.",
       "conf": "Background (no new announcement within this period)",
       "vocab": [
-        [
-          "commercial customer",
-          "商業客戶"
-        ],
-        [
-          "outsource",
-          "委外（生產）"
-        ],
-        [
-          "startup",
-          "新創公司"
-        ],
-        [
-          "capacity commitment",
-          "產能承諾"
-        ],
-        [
-          "TAT",
-          "生產週期（turnaround time）"
-        ],
-        [
-          "high-mix",
-          "多樣少量的"
-        ]
+        ["commercial customer", "商業客戶"],
+        ["outsource", "委外（生產）"],
+        ["startup", "新創公司"],
+        ["capacity commitment", "產能承諾"],
+        ["TAT", "生產週期（turnaround time）"],
+        ["high-mix", "多樣少量的"]
       ]
     },
     "22": {
@@ -727,30 +371,14 @@
       "impact": "China's mature nodes have swung from price wars to full-load price increases, which in turn makes Taiwanese foundries (UMC, Vanguard) the first choice for customers diversifying risk — the external condition that lets Taiwanese foundries' 'noticeable price hikes' stick this week.",
       "conf": "Background (utilization and price figures come from earlier results and reports, not new announcements in this period)",
       "vocab": [
-        [
-          "capacity utilization",
-          "產能利用率"
-        ],
-        [
-          "configuration",
-          "配置"
-        ],
-        [
-          "shrinking",
-          "收縮"
-        ],
-        [
-          "price wars",
-          "價格戰"
-        ],
-        [
-          "diversifying",
-          "分散"
-        ],
-        [
-          "stick",
-          "（漲價）站穩、落實"
-        ]
+        ["capacity utilization", "產能利用率"],
+        ["configuration", "配置"],
+        ["shrinking", "收縮"],
+        ["price wars", "價格戰"],
+        ["diversifying", "分散"],
+        ["stick", "（漲價）站穩、落實"],
+        ["price hikes", "漲價", "fin"],
+        ["forecast", "預測", "fin"]
       ]
     },
     "23": {
@@ -761,30 +389,15 @@
       "impact": "This is the policy premise for understanding the pace of TSMC's and UMC's US expansion. If the quota mechanism is formally implemented, overseas capacity will shift from a 'geopolitical hedge' to a 'quantifiable tariff asset'.",
       "conf": "Background (negotiation progress per official statements; formal rates not yet announced)",
       "vocab": [
-        [
-          "consensus",
-          "共識"
-        ],
-        [
-          "most-favored",
-          "最惠的"
-        ],
-        [
-          "preferential",
-          "優惠的"
-        ],
-        [
-          "exclusion",
-          "排除"
-        ],
-        [
-          "hedge",
-          "避險"
-        ],
-        [
-          "quantifiable",
-          "可量化的"
-        ]
+        ["consensus", "共識", "fin"],
+        ["most-favored", "最惠的"],
+        ["preferential", "優惠的"],
+        ["exclusion", "排除"],
+        ["hedge", "避險", "fin"],
+        ["quantifiable", "可量化的"],
+        ["tariff", "關稅", "fin"],
+        ["duty-free", "免稅的", "fin"],
+        ["quota", "配額", "fin"]
       ]
     },
     "24": {
@@ -795,30 +408,12 @@
       "impact": "Samsung's strategy has shifted from 'racing for nodes' to 'stabilizing 2nm and bargaining hard on price'. That moves the 2027–2028 advanced-node battle back to yield and capacity rather than roadmap timing, actually easing schedule pressure on TSMC's A16/A14.",
       "conf": "Background (originally published outside this period)",
       "vocab": [
-        [
-          "roadmap",
-          "藍圖"
-        ],
-        [
-          "refining",
-          "精進"
-        ],
-        [
-          "lithography",
-          "微影"
-        ],
-        [
-          "patterning",
-          "圖案化"
-        ],
-        [
-          "bargaining",
-          "議價"
-        ],
-        [
-          "stabilizing",
-          "使……穩定"
-        ]
+        ["roadmap", "藍圖"],
+        ["refining", "精進"],
+        ["lithography", "微影"],
+        ["patterning", "圖案化"],
+        ["bargaining", "議價"],
+        ["stabilizing", "使……穩定"]
       ]
     }
   }

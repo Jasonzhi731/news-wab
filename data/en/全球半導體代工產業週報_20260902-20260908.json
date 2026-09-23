@@ -8,7 +8,17 @@
       "metric": "~20 fabs under construction globally (13 in Taiwan, 5–6 overseas); equipment procurement forecast revised up 1.5× within a quarter, and by July 2026 reached 1.9× the end-2025 estimate",
       "impact": "Foundry expansion has shifted from 'single-fab projects' to 'many fabs at once', and the crowding-out of equipment, facility engineering and manpower will persist into 2027–2028. The 1.9× upward revision to equipment purchases is the strongest forward-looking capex signal this week, corroborated by SEMI's World Fab Forecast.",
       "conf": "Confirmed (public forum remarks)",
-      "vocab": [["unseen", "前所未見的"], ["simultaneously", "同時地"], ["under construction", "興建中"], ["persist", "持續"], ["forward-looking", "前瞻的"], ["upward revision", "上修"]]
+      "vocab": [
+        ["unseen", "前所未見的"],
+        ["simultaneously", "同時地"],
+        ["under construction", "興建中"],
+        ["persist", "持續"],
+        ["forward-looking", "前瞻的"],
+        ["upward revision", "上修"],
+        ["capex", "資本支出", "fin"],
+        ["procurement", "採購", "fin"],
+        ["forecast", "預測", "fin"]
+      ]
     },
     "2": {
       "entity": "Unimicron (3037) / substrate supply chain",
@@ -17,7 +27,14 @@
       "metric": "Bottleneck materials: ABF build-up film, TGV through-glass vias; supply highly concentrated among mid-sized Japanese makers",
       "impact": "Following last week's comments by TSMC's Jun He on substrate/PCB shortages, substrates have now been named a bottleneck by the foundry and packaging side two weeks in a row. That guarantees mid-term demand for Unimicron, Nan Ya PCB and Kinsus, but also sets a physical ceiling on CoWoS/CoPoS expansion.",
       "conf": "Confirmed",
-      "vocab": [["build-up film", "增層膜"], ["through-glass via", "玻璃通孔（TGV）"], ["concentrated", "集中的"], ["co-design", "共同設計"], ["ceiling", "上限"], ["in severe shortage", "嚴重短缺"]]
+      "vocab": [
+        ["build-up film", "增層膜"],
+        ["through-glass via", "玻璃通孔（TGV）"],
+        ["concentrated", "集中的"],
+        ["co-design", "共同設計"],
+        ["ceiling", "上限"],
+        ["in severe shortage", "嚴重短缺"]
+      ]
     },
     "3": {
       "entity": "GlobalFoundries (GFS)",
@@ -26,7 +43,14 @@
       "metric": "40UX (40nm): Singapore ramp in 2027 → Malta, NY; 22UX (22nm): Dresden; GlobalShuttle multi-project wafers one run per quarter, scheduled into 2027",
       "impact": "GF's growth strategy is clearly 'specialty processes + geographic diversification' rather than chasing nodes — the same differentiated route as UMC and Vanguard. Edge AI at 40/22nm is the next main battleground for mature-node foundries.",
       "conf": "Confirmed (official company press release)",
-      "vocab": [["ultra-low-power", "超低功耗的"], ["always-on", "常時開啟的"], ["mixed-signal", "混合訊號"], ["multi-project wafers", "多專案晶圓（MPW）"], ["geographic diversification", "地緣分散"], ["differentiated", "差異化的"]]
+      "vocab": [
+        ["ultra-low-power", "超低功耗的"],
+        ["always-on", "常時開啟的"],
+        ["mixed-signal", "混合訊號"],
+        ["multi-project wafers", "多專案晶圓（MPW）"],
+        ["geographic diversification", "地緣分散"],
+        ["differentiated", "差異化的"]
+      ]
     },
     "4": {
       "entity": "GlobalFoundries / RAAAM",
@@ -35,7 +59,14 @@
       "metric": "Platform: FDX (FD-SOI); product: GCRAM test chips (development stage; no production timeline announced)",
       "impact": "Stalled SRAM scaling is a problem shared by advanced and mature nodes. Mature-node foundries pairing FD-SOI with new memory cells represent a route of 'delivering density value without node shrinks', a sample of technical differentiation among second-tier foundries.",
       "conf": "Confirmed (official company press release)",
-      "vocab": [["co-develop", "共同開發"], ["standby power", "待機功耗"], ["stalled", "停滯的"], ["scaling", "微縮"], ["memory cells", "記憶體單元"], ["density", "密度"]]
+      "vocab": [
+        ["co-develop", "共同開發"],
+        ["standby power", "待機功耗"],
+        ["stalled", "停滯的"],
+        ["scaling", "微縮"],
+        ["memory cells", "記憶體單元"],
+        ["density", "密度"]
+      ]
     },
     "5": {
       "entity": "SEMI / global fabs",
@@ -44,7 +75,16 @@
       "metric": "2026 equipment spending US$152B (YoY +24%); 2027 est. US$166B; 146 planned new fabs/lines",
       "impact": "Corroborating Y.J. Mii's '1.9× equipment procurement demand', the foundry expansion cycle will last at least into 2027; order visibility for Taiwan's facility engineering firms (United Integrated Services, L&K Engineering, Marketech) and the equipment supply chain lengthens accordingly.",
       "conf": "Confirmed",
-      "vocab": [["equipment spending", "設備支出"], ["production lines", "產線"], ["expansion cycle", "擴產週期"], ["order visibility", "訂單能見度"], ["accordingly", "相應地"], ["facility engineering", "廠務工程"]]
+      "vocab": [
+        ["equipment spending", "設備支出", "fin"],
+        ["production lines", "產線"],
+        ["expansion cycle", "擴產週期"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["accordingly", "相應地"],
+        ["facility engineering", "廠務工程"],
+        ["procurement", "採購", "fin"],
+        ["forecast", "預測", "fin"]
+      ]
     },
     "6": {
       "entity": "MediaTek (2454) / TSMC (2330)",
@@ -53,7 +93,14 @@
       "metric": "—",
       "impact": "A public endorsement from a major customer can ease market worries about N2/CoWoS allocation squeezes. But note this is a customer's view, coexisting with last week's DIGITIMES report that TSMC is deferring 2027 packaging-tool orders; the two signals point in different directions and should be tracked together.",
       "conf": "Confirmed (public remarks)",
-      "vocab": [["strategic investments", "策略投資"], ["confidence", "信心"], ["flexibility", "彈性"], ["co-creation", "共創"], ["crowded out", "被排擠"], ["endorsement", "背書"]]
+      "vocab": [
+        ["strategic investments", "策略投資"],
+        ["confidence", "信心"],
+        ["flexibility", "彈性"],
+        ["co-creation", "共創"],
+        ["crowded out", "被排擠"],
+        ["endorsement", "背書"]
+      ]
     },
     "7": {
       "entity": "Broadcom",
@@ -62,7 +109,14 @@
       "metric": "—",
       "impact": "CPO yield hinges on the light source and packaging rather than the photonic chip itself — exactly where TSMC's COUPE and Taiwanese OSATs are stepping in. The battle over interconnect routes will determine how silicon photonics foundry and packaging orders are split in 2027.",
       "conf": "Confirmed",
-      "vocab": [["light source", "光源"], ["Ethernet", "乙太網"], ["hinges on", "取決於"], ["photonic chip", "光子晶片"], ["stepping in", "切入"], ["technology path", "技術路徑"]]
+      "vocab": [
+        ["light source", "光源"],
+        ["Ethernet", "乙太網"],
+        ["hinges on", "取決於"],
+        ["photonic chip", "光子晶片"],
+        ["stepping in", "切入"],
+        ["technology path", "技術路徑"]
+      ]
     },
     "8": {
       "entity": "Ministry of Economic Affairs / US Department of Commerce",
@@ -71,7 +125,17 @@
       "metric": "Additional investment US$20B (US side cites US$200–300B); existing pledge US$350B from 20 Taiwanese firms; MOU duty-free import quota 2.5× US capacity",
       "impact": "The duty-free quota is Taiwanese firms' core shield against Section 232 chip tariffs. The two sides' figures for the additional amount differ enormously, so the content of the formal announcement is key — it will directly affect the pace of overseas capex for Taiwan's foundries, OSATs and equipment makers.",
       "conf": "Confirmed (US figure of US$200–300B and Taiwan's US$20B are inconsistent; formal announcement pending)",
-      "vocab": [["Commerce Secretary", "商務部長"], ["on top of", "在……之外再加上"], ["pledged", "承諾的"], ["science parks", "科學園區"], ["shield", "保護傘"], ["enormously", "極大地"]]
+      "vocab": [
+        ["Commerce Secretary", "商務部長"],
+        ["on top of", "在……之外再加上"],
+        ["pledged", "承諾的", "fin"],
+        ["science parks", "科學園區"],
+        ["shield", "保護傘"],
+        ["enormously", "極大地"],
+        ["capex", "資本支出", "fin"],
+        ["tariff", "關稅", "fin"],
+        ["duty-free", "免稅的", "fin"]
+      ]
     },
     "9": {
       "entity": "Kulicke & Soffa (K&S)",
@@ -80,7 +144,16 @@
       "metric": "Technology route: hybrid bonding and TCB coexisting long term",
       "impact": "For TSMC's SoIC and Taiwanese OSATs, it means both kinds of lines must be prepared and capex cannot bet on just one; it also limits the valuation upside for pure hybrid-bonding equipment makers.",
       "conf": "Confirmed",
-      "vocab": [["hybrid bonding", "混合鍵合"], ["thermocompression bonding", "熱壓鍵合（TCB）"], ["coexist", "共存"], ["pitch", "間距"], ["symbiotic", "共生的"], ["upside", "上漲空間"]]
+      "vocab": [
+        ["hybrid bonding", "混合鍵合"],
+        ["thermocompression bonding", "熱壓鍵合（TCB）"],
+        ["coexist", "共存"],
+        ["pitch", "間距"],
+        ["symbiotic", "共生的"],
+        ["upside", "上漲空間", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["valuation", "評價；估值", "fin"]
+      ]
     },
     "10": {
       "entity": "Applied Materials",
@@ -89,7 +162,14 @@
       "metric": "—",
       "impact": "It echoes last week's news that TSMC and AMD are jointly advancing next-generation cold plates: thermal management has become a shared bottleneck for both packaging yield and system design, and has spilled over into a system-level issue foundries must take part in.",
       "conf": "Confirmed",
-      "vocab": [["sensitive", "敏感的"], ["coefficients of thermal expansion", "熱膨脹係數"], ["shift", "位移"], ["yield loss", "良率損失"], ["cold plates", "水冷板"], ["thermal management", "熱管理"]]
+      "vocab": [
+        ["sensitive", "敏感的"],
+        ["coefficients of thermal expansion", "熱膨脹係數"],
+        ["shift", "位移"],
+        ["yield loss", "良率損失"],
+        ["cold plates", "水冷板"],
+        ["thermal management", "熱管理"]
+      ]
     },
     "11": {
       "entity": "UMC (2303)",
@@ -98,7 +178,17 @@
       "metric": "Aug revenue NT$25.045B (MoM +5.04%, YoY +30.71%); Jan–Aug NT$178.659B (YoY +14.66%); Q3 guidance: wafer shipments up high single digits QoQ, gross margin ~35%; AI-related revenue ~US$300M in 2026, up to US$1B by 2029",
       "impact": "Mature nodes' 'rising volume and price' is confirmed again, and UMC is the only foundry that has reported August revenue this week. Recovering utilization and confirmed 2027 price hikes are the core support for the valuation recovery of second-tier foundries.",
       "conf": "Confirmed (media cite different Q3 8-inch utilization figures: earnings-call guidance above 90%, Economic Daily News about 85%)",
-      "vocab": [["power-management ICs", "電源管理 IC"], ["sensors", "感測器"], ["wafer shipments", "晶圓出貨"], ["high single digits", "高個位數"], ["valuation recovery", "評價修復"], ["core support", "核心支撐"]]
+      "vocab": [
+        ["power-management ICs", "電源管理 IC"],
+        ["sensors", "感測器"],
+        ["wafer shipments", "晶圓出貨"],
+        ["high single digits", "高個位數"],
+        ["valuation recovery", "評價修復", "fin"],
+        ["core support", "核心支撐"],
+        ["gross margin", "毛利率", "fin"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["guidance", "財測指引", "fin"]
+      ]
     },
     "12": {
       "entity": "Government of India / ISM",
@@ -107,7 +197,15 @@
       "metric": "Semicon 2.0 budget US$15B; subsidies 30–75%; fabs 40% central + ~25% state; compound/display 35%; Uttar Pradesh 'Taiwan zone' 300 acres",
       "impact": "India is matching the US, Japan and Europe on subsidy intensity — a real business opportunity for PSMC (its Fab-IP licensing to Tata Electronics) and Taiwanese OSATs; but for Taiwan's foundries it is also a long-term risk of capacity and talent being diverted.",
       "conf": "Confirmed",
-      "vocab": [["delegation", "代表團"], ["budget", "預算"], ["subsidy", "補貼"], ["set aside", "劃出、保留"], ["intensity", "強度"], ["diverted", "被分流的"]]
+      "vocab": [
+        ["delegation", "代表團"],
+        ["budget", "預算", "fin"],
+        ["subsidy", "補貼", "fin"],
+        ["set aside", "劃出、保留"],
+        ["intensity", "強度"],
+        ["diverted", "被分流的"],
+        ["capex", "資本支出", "fin"]
+      ]
     },
     "13": {
       "entity": "SEMI / SEAJ",
@@ -116,7 +214,16 @@
       "metric": "Global US$40.53B (YoY +23%); China US$11.91B (+5% YoY, +8% QoQ, No. 1 for 13 straight quarters), Taiwan US$10.89B (+24%/+24%), Korea US$9.08B (+54% YoY), North America US$3.50B (+27%), Japan US$2.44B (-9%), Europe US$1.23B (+70%)",
       "impact": "Taiwan's equipment purchases overtaking Korea's is the most direct quantitative evidence of TSMC's 2nm and advanced-packaging expansion. China's growth slowing to +5% diverges from its high 93–103% utilization, showing its mature-node expansion pace has clearly slowed.",
       "conf": "Confirmed",
-      "vocab": [["overtakes", "超越"], ["markedly", "明顯地"], ["by region", "按地區"], ["quantitative", "量化的"], ["diverges", "背離"], ["pace", "步伐"]]
+      "vocab": [
+        ["overtakes", "超越"],
+        ["markedly", "明顯地"],
+        ["by region", "按地區"],
+        ["quantitative", "量化的"],
+        ["diverges", "背離"],
+        ["pace", "步伐"],
+        ["utilization", "稼動率；產能利用率", "fin"],
+        ["sales", "銷售額", "fin"]
+      ]
     },
     "14": {
       "entity": "Taiwanese OSATs / test-interface makers",
@@ -125,7 +232,15 @@
       "metric": "Powertech NT$8.557B (MoM +3.48%, YoY +24.46%); KYEC NT$4.08B (+2.24%/+31.58%); Sigurd NT$2.069B (+2.72%/+28.58%); WinWay NT$1.706B (+6.58%/+233.37%); Hermes-Epitek test NT$503M (+4.1%/+114.78%)",
       "impact": "Back-end revenue is a concurrent indicator for the output of foundries' advanced packaging. Triple-digit YoY growth at WinWay and Hermes-Epitek's test unit shows test interfaces have become a new bottleneck for AI chips, consistent with last week's signal that Taiwan's OSAT capex could reach US$14.6 billion in 2026.",
       "conf": "Confirmed",
-      "vocab": [["test sockets", "測試座"], ["probe cards", "探針卡"], ["concurrent indicator", "同步指標"], ["triple-digit", "三位數的"], ["test interfaces", "測試介面"], ["boosted", "推升"]]
+      "vocab": [
+        ["test sockets", "測試座"],
+        ["probe cards", "探針卡"],
+        ["concurrent indicator", "同步指標", "fin"],
+        ["triple-digit", "三位數的"],
+        ["test interfaces", "測試介面"],
+        ["boosted", "推升"],
+        ["capex", "資本支出", "fin"]
+      ]
     },
     "15": {
       "entity": "Taiwan stocks / UMC (2303) / TSMC (2330)",
@@ -134,7 +249,17 @@
       "metric": "TAIEX 47,326.27 (+775.14, +1.67%); turnover NT$939.926B; UMC NT$143 (limit-up); TSMC NT$2,460 (+2.07%)",
       "impact": "Money rotated from memory back into lagging mature-node foundries. UMC's limit-up shows the market starting to actually price in the earnings recovery from 'price hikes + rising utilization' — an important confirmation signal for this mature-node rally.",
       "conf": "Confirmed (closing prices for reference only, not current prices)",
-      "vocab": [["limit-up", "漲停"], ["moving average", "均線"], ["limit-down", "跌停"], ["lagging", "落後的（補漲）"], ["rally", "漲勢、行情"], ["confirmation signal", "確認訊號"]]
+      "vocab": [
+        ["limit-up", "漲停", "fin"],
+        ["moving average", "均線", "fin"],
+        ["limit-down", "跌停", "fin"],
+        ["lagging", "落後的（補漲）"],
+        ["rally", "漲勢、行情", "fin"],
+        ["confirmation signal", "確認訊號"],
+        ["turnover", "成交值", "fin"],
+        ["daily limit", "漲跌停幅度", "fin"],
+        ["all-time high", "歷史新高", "fin"]
+      ]
     },
     "16": {
       "entity": "Huawei / China advanced nodes",
@@ -143,7 +268,14 @@
       "metric": "Transistor density +55%; NPU power -66% at equal performance (voltage 0.85V→0.55V, frequency -63%, power density -73%), GPU -58%, CPU -41%; critical routing shortened by up to 70%; hybrid bonding pitch 1.5µm→1µm",
       "impact": "Without access to EUV, China is trading 3D stacking and hybrid bonding for equivalent scaling — a direct challenge to the definition that 'advanced process = advanced node'. If this route works, the strategic value of China's mature-node capacity will be re-evaluated.",
       "conf": "Confirmed (the original report did not disclose the foundry; which company makes it is market speculation)",
-      "vocab": [["horizontal", "水平的"], ["vertical", "垂直的"], ["frequency", "頻率"], ["offset", "抵銷"], ["routing", "繞線"], ["re-evaluated", "重新評價"]]
+      "vocab": [
+        ["horizontal", "水平的"],
+        ["vertical", "垂直的"],
+        ["frequency", "頻率"],
+        ["offset", "抵銷"],
+        ["routing", "繞線"],
+        ["re-evaluated", "重新評價"]
+      ]
     },
     "17": {
       "entity": "TSMC (2330) / SEMICON Taiwan",
@@ -152,7 +284,14 @@
       "metric": "1,300 exhibitors / 65 countries / 4,300 booths / 100,000+ visits; CPO volume production timing: 2H 2026",
       "impact": "This week's foundry technology news was concentrated at this show. If CPO enters volume production on schedule, silicon photonics foundry work will become a quantifiable revenue line in 2027 rather than just a theme — a real turning point for both TSMC's COUPE and UMC's silicon photonics platform.",
       "conf": "Confirmed (CPO volume production timing is an industry forecast)",
-      "vocab": [["wrap-up", "回顧、總結"], ["exhibitors", "展商"], ["booths", "攤位"], ["axis", "主軸"], ["on schedule", "如期"], ["turning point", "轉折點"]]
+      "vocab": [
+        ["wrap-up", "回顧、總結"],
+        ["exhibitors", "展商"],
+        ["booths", "攤位"],
+        ["axis", "主軸"],
+        ["on schedule", "如期"],
+        ["turning point", "轉折點"]
+      ]
     },
     "18": {
       "entity": "TSMC (2330)",
@@ -161,7 +300,17 @@
       "metric": "August revenue pending (scheduled 2026/09/10); July NT$467.581B (MoM +5.6%, YoY +44.68%); Jan–Jul NT$2.872064T (YoY +37%); Q3 guidance US$44.6–45.8B",
       "impact": "The single most important checkpoint next week, testing how far Q3 guidance will be met and whether AI demand momentum continues. Use the Market Observation Post System or TSMC's website as the authoritative source, and backfill this table once the figure is released.",
       "conf": "★ To be verified: August figures not yet released; this row lists only July results and market focus points",
-      "vocab": [["customarily", "依慣例"], ["compiled", "彙整的"], ["checkpoint", "驗證點"], ["authoritative", "權威的"], ["backfill", "回填"], ["released", "公布"]]
+      "vocab": [
+        ["customarily", "依慣例"],
+        ["compiled", "彙整的"],
+        ["checkpoint", "驗證點"],
+        ["authoritative", "權威的"],
+        ["backfill", "回填"],
+        ["released", "公布"],
+        ["consolidated revenue", "合併營收", "fin"],
+        ["guidance", "財測指引", "fin"],
+        ["momentum", "動能", "fin"]
+      ]
     },
     "19": {
       "entity": "SMIC (0981.HK) / Hua Hong (1347.HK)",
@@ -170,7 +319,17 @@
       "metric": "SMIC: utilization 93.7%, monthly capacity ~1.1M 8-inch equivalents, ASP QoQ +5.7%, ~10% price increase on some capacity; Hua Hong: utilization 102.8%, monthly capacity 508,000 wafers",
       "impact": "China's mature nodes have moved from price wars to full-load price increases, a positive pricing spillover for UMC, Vanguard and PSMC. But this week's SEMI data show China's equipment purchases grew only 5% YoY, a divergence between expansion momentum and high utilization worth continued tracking.",
       "conf": "Background (originally published 2026/08/17; not a new event in this period)",
-      "vocab": [["8-inch-equivalent", "8 吋約當"], ["acquisition", "併購"], ["average wafer price", "晶圓平均單價"], ["full-load", "滿載的"], ["spillover", "外溢效應"], ["divergence", "背離"]]
+      "vocab": [
+        ["8-inch-equivalent", "8 吋約當"],
+        ["acquisition", "併購", "fin"],
+        ["average wafer price", "晶圓平均單價"],
+        ["full-load", "滿載的"],
+        ["spillover", "外溢效應"],
+        ["divergence", "背離"],
+        ["ASP", "平均售價", "fin"],
+        ["price increases", "漲價", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"]
+      ]
     },
     "20": {
       "entity": "Samsung Electronics Samsung Foundry",
@@ -179,7 +338,17 @@
       "metric": "Market-estimated 2nm yield ~60%; 2nm design wins in 2026 expected to double; Taylor Fab 2: groundbreaking end-2026, volume production 2030; SF1.4 targeting 2029 volume production",
       "impact": "Samsung is the only alternative source of 2nm on US soil, strategically valuable to US customers looking to reduce reliance on TSMC; but its yields and 1.4nm timeline still trail TSMC by about two years, so it is unlikely to change the market share structure soon (about 7% of pure-play foundry in 2026Q2).",
       "conf": "Background (July–August news with no new announcement in this period; yield is a market estimate)",
-      "vocab": [["tape-out", "設計定案"], ["imminent", "即將到來的"], ["threshold", "門檻"], ["inquiries", "詢問度"], ["design wins", "接案、設計導入"], ["reliance", "依賴"]]
+      "vocab": [
+        ["tape-out", "設計定案"],
+        ["imminent", "即將到來的"],
+        ["threshold", "門檻"],
+        ["inquiries", "詢問度"],
+        ["design wins", "接案、設計導入"],
+        ["reliance", "依賴"],
+        ["earnings call", "法說會", "fin"],
+        ["market share", "市占率", "fin"],
+        ["estimate", "估計；預估值", "fin"]
+      ]
     },
     "21": {
       "entity": "Intel Foundry",
@@ -188,7 +357,14 @@
       "metric": "18A-P: +9% performance at same power / -18% power at same performance; 18A yield 65% → >85% (foreign media); 14A D0 = 0.5 (2026/06), target 0.1–0.2 by 2027Q1; EMIB-T revenue from 2H27",
       "impact": "Intel's first realistic breakthrough in winning external orders is still advanced packaging, with 14A second. If 14A reaches volume production in 1H 2028 as planned, it would be the first real variable for TSMC's advanced-node pricing power after 2028 — to be watched together with SK hynix evaluating Intel for HBM base dies.",
       "conf": "Background (yield and 14A timeline figures cited by foreign media; not individually confirmed by Intel)",
-      "vocab": [["risk production", "風險試產"], ["defect density", "缺陷密度"], ["design rules", "設計規則"], ["compatible", "相容的"], ["pricing power", "定價權"], ["base dies", "基底晶粒"]]
+      "vocab": [
+        ["risk production", "風險試產"],
+        ["defect density", "缺陷密度"],
+        ["design rules", "設計規則"],
+        ["compatible", "相容的"],
+        ["pricing power", "定價權", "fin"],
+        ["base dies", "基底晶粒"]
+      ]
     },
     "22": {
       "entity": "Rapidus",
@@ -197,7 +373,15 @@
       "metric": "Customer test chips: by end-2026; volume production 2027; 25,000 wafers/month by 2028; density 237.31M/mm² (TSMC 236.17M, Intel 184.21M); IPA investment ¥100B",
       "impact": "Rapidus is a local advanced-node option for Japanese automotive and industrial customers. It poses no real competition to TSMC before 2027, but will take a share of Japanese government subsidies and tool delivery slots, lengthening equipment queues for advanced nodes globally.",
       "conf": "Background (density figures are early specifications cited by foreign media, not official comparisons)",
-      "vocab": [["pilot line", "試作線"], ["specifications", "規格"], ["golden share", "黃金股"], ["veto", "否決權"], ["queues", "排隊、等候"], ["injected", "挹注"]]
+      "vocab": [
+        ["pilot line", "試作線"],
+        ["specifications", "規格"],
+        ["golden share", "黃金股"],
+        ["veto", "否決權"],
+        ["queues", "排隊、等候"],
+        ["injected", "挹注"],
+        ["subsidies", "補貼", "fin"]
+      ]
     },
     "23": {
       "entity": "TSMC (2330)",
@@ -206,7 +390,14 @@
       "metric": "A16: volume production 2026Q4; vs N2P +8–10% performance or -15–20% power; SPR backside power; end products 2027–2028",
       "impact": "Backside power is the key watershed after 2nm, and the only area where Intel's 18A was once ahead of TSMC; A16 reaching volume production on time effectively closes that window, with the biggest impact on the 2027 advanced-node race.",
       "conf": "Background (volume production timing is from reports and market estimates; reports differ on A16's schedule and TSMC has not announced an exact date)",
-      "vocab": [["backside power delivery", "晶背供電"], ["qualification", "驗證"], ["end products", "終端產品"], ["watershed", "分水嶺"], ["window", "時間窗口"], ["on time", "如期"]]
+      "vocab": [
+        ["backside power delivery", "晶背供電"],
+        ["qualification", "驗證"],
+        ["end products", "終端產品"],
+        ["watershed", "分水嶺"],
+        ["window", "時間窗口"],
+        ["on time", "如期"]
+      ]
     },
     "24": {
       "entity": "TSMC / mature-node foundries",
@@ -215,7 +406,16 @@
       "metric": "TSMC 2027 price increases 5–10%; 8-inch 2026 increases 5–15%; mature-node price effects extend into 2027",
       "impact": "This is the pricing premise for understanding UMC's revenue and share-price performance this week. Price hikes spreading from advanced to mature nodes mean foundries' bargaining power won't return to customers before 2027, and IC designers' margins will be squeezed from both front-end price hikes and back-end packaging markups.",
       "conf": "Background (July 2026 reports; TSMC has not publicly confirmed the increases)",
-      "vocab": [["across the board", "全面地"], ["negotiating", "協商"], ["brewing", "醞釀中"], ["bargaining power", "議價權"], ["markups", "加價"], ["raw-material", "原物料的"]]
+      "vocab": [
+        ["across the board", "全面地"],
+        ["negotiating", "協商"],
+        ["brewing", "醞釀中"],
+        ["bargaining power", "議價權", "fin"],
+        ["markups", "加價", "fin"],
+        ["raw-material", "原物料的"],
+        ["price hikes", "漲價", "fin"],
+        ["margins", "利潤率；毛利", "fin"]
+      ]
     }
   }
 }
