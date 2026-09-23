@@ -1,0 +1,719 @@
+{
+  "source": "台灣半導體產業週報_20260803-20260810.xlsx",
+  "news": {
+    "1": {
+      "entity": "Memory stocks",
+      "title": "Memory stocks surge on August's first trading day as Nanya Tech and Winbond lock limit-up",
+      "summary": "A bullish foreign-broker report set off a rally, lifting Taiwan's memory stocks across the board: Elite Semiconductor Microelectronics, Macronix and Etron all hit limit-up, and Phison rose more than 9% intraday. Korean reports expect the memory shortage to last until 2028.",
+      "metric": "Nanya Tech (2408), Winbond (2344) locked limit-up; Phison (8299) +9% intraday",
+      "impact": "AI servers and enterprise SSDs are crowding out supply, so niche/legacy DRAM benefits too, and money is rotating from foundries into memory.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "surge",
+          "暴漲、噴發"
+        ],
+        [
+          "bullish",
+          "看多的"
+        ],
+        [
+          "set off",
+          "引發"
+        ],
+        [
+          "across the board",
+          "全面地"
+        ],
+        [
+          "enterprise SSDs",
+          "企業級 SSD"
+        ],
+        [
+          "legacy",
+          "傳統型的"
+        ]
+      ]
+    },
+    "2": {
+      "entity": "Memory / passive components",
+      "title": "Memory shortage spreads as PSMC, Nanya Tech and TXC lead a wave of limit-up gains",
+      "summary": "Memory spot prices in Shenzhen's Huaqiangbei market rose across the board on 8/4, driving another re-rating of Taiwanese memory stocks; glass-fiber cloth and quartz-component stocks also strengthened.",
+      "metric": "PSMC (6770), Nanya Tech (2408), TXC (3042) limit-up",
+      "impact": "Spot prices lead contract prices, so continued spot gains mean Q3–Q4 contract prices still have room to rise.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "spot prices",
+          "現貨價"
+        ],
+        [
+          "contract prices",
+          "合約價"
+        ],
+        [
+          "re-rating",
+          "評價重估"
+        ],
+        [
+          "passive components",
+          "被動元件"
+        ],
+        [
+          "glass-fiber cloth",
+          "玻纖布"
+        ],
+        [
+          "wave",
+          "一波（熱潮）"
+        ]
+      ]
+    },
+    "3": {
+      "entity": "United States / Taiwan government",
+      "title": "Trump signs Section 232 polysilicon tariff proclamation; Taiwan gets a 15% rate that doesn't stack with MFN duties",
+      "summary": "Under Section 232 of the Trade Expansion Act of 1962, the US will impose a 15% tariff on imports of polysilicon and its derivatives from all countries starting 2026/12/4, and set up a minimum import price (MIP) mechanism. Taiwan is on the preferential list alongside Japan, Korea and the EU.",
+      "metric": "Polysilicon tariff 15%; MIP: polysilicon US$21/kg, silicon wafers US$100/kg, solar cells US$0.22/W, modules US$0.38/W. Taiwan's polysilicon-related exports to the US ~US$320M (25% of its global exports), silicon wafers US$252.1M",
+      "impact": "The Executive Yuan said silicon-wafer makers that have already invested in the US can use duty-free quotas and materials exemptions under the Taiwan-US investment MOU; the solar industry mainly sells domestically (exports to the US only US$33.5M), so the impact is limited.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "proclamation",
+          "公告、宣言"
+        ],
+        [
+          "polysilicon",
+          "多晶矽"
+        ],
+        [
+          "derivatives",
+          "衍生產品"
+        ],
+        [
+          "stack",
+          "疊加"
+        ],
+        [
+          "minimum import price",
+          "最低進口價格"
+        ],
+        [
+          "exemptions",
+          "豁免"
+        ]
+      ]
+    },
+    "4": {
+      "entity": "Nanya Technology (2408)",
+      "title": "Nanya Tech's July revenue soars to NT$43.8 billion, with ESMT also hitting a record",
+      "summary": "Nanya Technology's July consolidated revenue was about NT$43.8 billion, a record high; Elite Semiconductor Microelectronics also set a record. Taiwanese memory stocks hit limit-up day after day.",
+      "metric": "Nanya Tech July revenue ~NT$43.8B (record)",
+      "impact": "DRAM price increases are flowing straight into revenue, and the market is watching how many quarters the pricing windfall can last.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "soars",
+          "暴衝"
+        ],
+        [
+          "record high",
+          "歷史新高"
+        ],
+        [
+          "day after day",
+          "連日"
+        ],
+        [
+          "flowing straight into",
+          "直接反映於"
+        ],
+        [
+          "windfall",
+          "紅利、意外之財"
+        ],
+        [
+          "quarters",
+          "季度"
+        ]
+      ]
+    },
+    "5": {
+      "entity": "TrendForce / DRAM industry",
+      "title": "TrendForce: global DRAM remains tight in 2026 with no relief in sight, and the gap may widen in 2027",
+      "summary": "TrendForce expects the global DRAM supply-demand ratio at -1% to -2% in 2026 (demand exceeding supply), with the gap possibly widening further in 2027. Although makers have started expanding, fab construction and tool lead times mean new capacity won't come online until late 2027 to 2028.",
+      "metric": "2026 DRAM supply-demand ratio -1% to -2%; Q3 contract prices +13–18% QoQ, server DRAM ~+20% QoQ, legacy DDR3/DDR4 +30–40% QoQ",
+      "impact": "The 'expensive and scarce' situation is hard to resolve in the short term, pressuring costs for system makers and IC designers while giving memory makers strong momentum for big profit upgrades.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "relief",
+          "緩解"
+        ],
+        [
+          "supply-demand ratio",
+          "供需比"
+        ],
+        [
+          "exceeding",
+          "超過"
+        ],
+        [
+          "come online",
+          "開出、上線"
+        ],
+        [
+          "scarce",
+          "稀缺的"
+        ],
+        [
+          "resolve",
+          "解決"
+        ]
+      ]
+    },
+    "6": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's July revenue due next week; brokers see a record above NT$450 billion",
+      "summary": "The market expects that, on strong AI demand and fully loaded advanced-node capacity, TSMC's July revenue could top NT$450 billion. Previous figures: June revenue of NT$442.68 billion (+6.2% MoM, +67.9% YoY), and first-half revenue of NT$2.404484 trillion, up 35.6% YoY.",
+      "metric": "Market expects July revenue >NT$450B; June NT$442.68B; 1H NT$2.404484T (YoY +35.6%)",
+      "impact": "The single most important indicator for Taiwan stocks this week, testing whether AI demand momentum continues.",
+      "conf": "Confirmed (an estimate, not an actual announcement)",
+      "vocab": [
+        [
+          "brokers",
+          "券商、投顧"
+        ],
+        [
+          "top",
+          "突破"
+        ],
+        [
+          "previous figures",
+          "前值"
+        ],
+        [
+          "first-half",
+          "上半年的"
+        ],
+        [
+          "indicator",
+          "指標"
+        ],
+        [
+          "estimate",
+          "預估值"
+        ]
+      ]
+    },
+    "7": {
+      "entity": "Ministry of Finance",
+      "title": "July exports of US$75.3 billion are the third-highest ever, with electronic component exports at a monthly record",
+      "summary": "July exports grew 32.9% YoY, the 33rd consecutive month of growth. The Ministry of Finance attributed it to a global economy more resilient than expected, countries investing heavily in AI infrastructure, the launch season for international brands' new products, and pricing gains from supply-demand gaps in the electronics chain.",
+      "metric": "July exports US$75.3B (YoY +32.9%); electronic component exports US$27.73B, YoY +50.5%, a monthly record; full-year exports expected to exceed US$850B",
+      "impact": "Growth in electronic components outpaced ICT and audio-visual products for the first time, showing this upswing is led by chip/memory prices and AI chip shipments rather than end-product assembly.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "third-highest",
+          "史上第三高的"
+        ],
+        [
+          "resilient",
+          "有韌性的"
+        ],
+        [
+          "launch season",
+          "新品鋪貨期"
+        ],
+        [
+          "outpaced",
+          "超過（成長速度）"
+        ],
+        [
+          "audio-visual",
+          "視聽的"
+        ],
+        [
+          "end-product",
+          "終端產品"
+        ]
+      ]
+    },
+    "8": {
+      "entity": "Winbond (2344) / Macronix (2337)",
+      "title": "Memory makers' July revenue explodes: Winbond up 291.6% YoY, Macronix up 180.5%",
+      "summary": "In the wave of July revenue reports, Winbond and Macronix both made the top five in YoY growth among large Taiwanese listed companies — the most direct beneficiaries of rising prices.",
+      "metric": "Winbond July revenue NT$26.773B (YoY +291.6%); Macronix July revenue NT$7.725B (YoY +180.5%)",
+      "impact": "Price increases for niche DRAM and NOR Flash exceeded expectations, and analysts broadly raised EPS forecasts for this year and next.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "explodes",
+          "爆發"
+        ],
+        [
+          "listed companies",
+          "上市公司"
+        ],
+        [
+          "beneficiaries",
+          "受惠者"
+        ],
+        [
+          "exceeded expectations",
+          "超乎預期"
+        ],
+        [
+          "broadly",
+          "普遍地"
+        ],
+        [
+          "EPS",
+          "每股盈餘"
+        ]
+      ]
+    },
+    "9": {
+      "entity": "TAIEX",
+      "title": "TAIEX gains 2.57% on the week to close above 44,000; TSMC closes at NT$2,370",
+      "summary": "On 8/7 the TAIEX closed at 44,225.91, down 170 points on the day but up 1,106.16 points (+2.57%) from 43,119.75 on 7/31. The total market capitalization of listed companies reached NT$144.5568 trillion, up more than NT$3.7 trillion in a week.",
+      "metric": "TAIEX 44,225.91 (weekly +2.57%); TSMC NT$2,370 (+NT$5 on the day); listed market cap NT$144.56T (up NT$3.7T on the week)",
+      "impact": "The index's record run is driven by the twin engines of AI and memory; intraday swings came from US-Iran talks, an oil rebound and expectations for Fed policy.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "market capitalization",
+          "市值"
+        ],
+        [
+          "on the week",
+          "以週計"
+        ],
+        [
+          "twin engines",
+          "雙引擎、雙主軸"
+        ],
+        [
+          "swings",
+          "震盪"
+        ],
+        [
+          "rebound",
+          "反彈"
+        ],
+        [
+          "Fed",
+          "美國聯準會"
+        ]
+      ]
+    },
+    "10": {
+      "entity": "TSMC (TSM.US)",
+      "title": "Foreign brokers reiterate TSMC's raised 2026 outlook as 3nm capacity expansion finishes early",
+      "summary": "On 8/7 the US market reiterated a bullish view: benefiting from accelerating AI demand, TSMC has raised its 2026 US-dollar revenue growth outlook from 'over 30%' to 'over 40%' and its 2026 capex from US$52–56 billion to US$60–64 billion; it is adding US$10 billion in Arizona, bringing cumulative investment there to US$26.5 billion.",
+      "metric": "2026 revenue growth outlook >40%; capex US$60–64B (70–80% advanced nodes, 10–20% advanced packaging and testing); Arizona total investment US$26.5B",
+      "impact": "The capex increase guarantees mid-term growth for equipment makers, facility engineering firms (United Integrated Services, L&K Engineering, Marketech) and the advanced-packaging supply chain. The original guidance came from the 7/16 earnings call; this week was the market reconfirming it.",
+      "conf": "Guidance originally given at the 2026/07/16 earnings call",
+      "vocab": [
+        [
+          "reiterate",
+          "重申"
+        ],
+        [
+          "outlook",
+          "展望"
+        ],
+        [
+          "raised",
+          "上調"
+        ],
+        [
+          "cumulative",
+          "累計的"
+        ],
+        [
+          "guarantees",
+          "保證"
+        ],
+        [
+          "reconfirming",
+          "再確認"
+        ]
+      ]
+    },
+    "11": {
+      "entity": "TSMC (2330)",
+      "title": "Longtan residents agree to TSMC's 1.4nm fab as the Longtan Science Park expansion restarts",
+      "summary": "The Longtan Science Park expansion plan has restarted, with local residents turning supportive; TSMC could build three fabs there, including a 1.4nm fab and panel-level packaging (FOPLP).",
+      "metric": "Three fabs planned: a 1.4nm (A14) wafer fab + panel-level packaging, etc.",
+      "impact": "It eases the long-term 'no land available' bottleneck for advanced nodes and establishes a path for panel-level packaging to land in Taiwan.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "residents",
+          "居民"
+        ],
+        [
+          "restarts",
+          "重啟"
+        ],
+        [
+          "supportive",
+          "支持的"
+        ],
+        [
+          "panel-level packaging",
+          "面板級封裝"
+        ],
+        [
+          "eases",
+          "緩解"
+        ],
+        [
+          "establishes",
+          "確立"
+        ]
+      ]
+    },
+    "12": {
+      "entity": "Semiconductor labor market",
+      "title": "Fabs racing to finish spark a hiring frenzy as ASML recruits over 1,000 people in Taiwan",
+      "summary": "As TSMC's 2nm fabs in Hsinchu and Kaohsiung enter volume production, the surrounding equipment and service supply chain urgently needs staff to support capacity; equipment leader ASML is recruiting more than 1,000 people in Taiwan.",
+      "metric": "ASML recruiting >1,000 people in Taiwan",
+      "impact": "Equipment makers expanding headcount in Taiwan is a leading indicator of advanced-node capacity coming online, and it also intensifies the crowding-out of semiconductor talent.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "hiring frenzy",
+          "徵才狂潮"
+        ],
+        [
+          "recruits",
+          "招募"
+        ],
+        [
+          "urgently",
+          "迫切地"
+        ],
+        [
+          "headcount",
+          "人員編制"
+        ],
+        [
+          "intensifies",
+          "加劇"
+        ],
+        [
+          "talent",
+          "人才"
+        ]
+      ]
+    },
+    "13": {
+      "entity": "Yield Microelectronics (7734)",
+      "title": "YMC positions itself in both the CoWoS and SoIC camps, with revenue expected to double this year",
+      "summary": "Benefiting from demand for TSMC's CoWoS and SoIC packaging, YMC (warpage control and descum equipment) expects its revenue to double this year and is expanding capacity by another 30%.",
+      "metric": "2026 revenue expected up ~100% YoY; capacity up another 30%",
+      "impact": "A representative case of localizing advanced-packaging equipment, reflecting real orders from CoWoS expansion for Taiwanese equipment makers.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "positions itself",
+          "卡位"
+        ],
+        [
+          "camps",
+          "陣營"
+        ],
+        [
+          "warpage",
+          "翹曲"
+        ],
+        [
+          "descum",
+          "去膠（除渣）"
+        ],
+        [
+          "double",
+          "倍增"
+        ],
+        [
+          "representative case",
+          "代表案例"
+        ]
+      ]
+    },
+    "14": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's overseas expansion faces challenges: intangible assets are hard to replicate",
+      "summary": "Analysis suggests the real difficulty in TSMC's overseas expansion is not money or equipment but transplanting intangible assets such as talent, education, industry relationships and local culture.",
+      "metric": "—",
+      "impact": "It echoes the earlier strategic tone that 80% of the most advanced processes such as 2nm will 'stay in Taiwan over the next five years'.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "intangible assets",
+          "無形資產"
+        ],
+        [
+          "replicate",
+          "複製"
+        ],
+        [
+          "transplanting",
+          "移植"
+        ],
+        [
+          "relationships",
+          "關係"
+        ],
+        [
+          "culture",
+          "文化"
+        ],
+        [
+          "tone",
+          "基調"
+        ]
+      ]
+    },
+    "15": {
+      "entity": "TAIEX futures",
+      "title": "TAIEX futures break 45,000 in the night session as the market focuses on TSMC revenue",
+      "summary": "TAIEX futures broke above 45,000 in the weekend night session, as the market priced in optimistic expectations for TSMC's July revenue ahead of time.",
+      "metric": "TAIEX futures night session >45,000",
+      "impact": "The positive spread between futures and spot is widening, raising the risk of chasing prices in the short term.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "night session",
+          "夜盤"
+        ],
+        [
+          "optimistic",
+          "樂觀的"
+        ],
+        [
+          "ahead of time",
+          "提前"
+        ],
+        [
+          "spread",
+          "價差"
+        ],
+        [
+          "chasing prices",
+          "追價"
+        ],
+        [
+          "widening",
+          "擴大"
+        ]
+      ]
+    },
+    "16": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's July revenue due today (the week's most important checkpoint)",
+      "summary": "TSMC customarily reports the prior month's revenue around the 10th of each month. As of this report's compilation, the official figure was not yet available from public sources; the market estimate is above NT$450 billion.",
+      "metric": "Pending (market estimate >NT$450B)",
+      "impact": "Use the Market Observation Post System or TSMC's website as the authoritative source, and backfill this table once the figure is released.",
+      "conf": "★ To be verified: official figure not obtained for this compilation",
+      "vocab": [
+        [
+          "due",
+          "預定（公布）"
+        ],
+        [
+          "compilation",
+          "彙整"
+        ],
+        [
+          "official figure",
+          "官方數字"
+        ],
+        [
+          "pending",
+          "待公告的"
+        ],
+        [
+          "authoritative source",
+          "權威來源"
+        ],
+        [
+          "backfill",
+          "回填"
+        ]
+      ]
+    },
+    "17": {
+      "entity": "TAIEX",
+      "title": "President Securities morning note: AI rally stays strong as the index consolidates higher",
+      "summary": "A broker's morning note said the AI rally remains strong and the index is consolidating on a firm footing; TSMC opened up 0.21%.",
+      "metric": "TSMC +0.21%",
+      "impact": "The market's main themes are still AI and memory, but watch for disruptions from international politics and Fed policy.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "morning note",
+          "晨訊"
+        ],
+        [
+          "consolidates",
+          "盤整"
+        ],
+        [
+          "firm footing",
+          "穩固基礎（盤堅）"
+        ],
+        [
+          "themes",
+          "主軸、題材"
+        ],
+        [
+          "disruptions",
+          "干擾"
+        ],
+        [
+          "opened up",
+          "開盤上漲"
+        ]
+      ]
+    },
+    "18": {
+      "entity": "UMC (2303)",
+      "title": "UMC's July revenue of NT$23.844 billion, up 18.98% YoY, is its second-best July on record",
+      "summary": "UMC's July consolidated revenue was NT$23.844 billion, up 3.11% MoM and 18.98% YoY; first-seven-month revenue totaled NT$153.615 billion, up 12.41% YoY. Earnings-call outlook: Q3 wafer shipments up by a high single-digit percentage QoQ, gross margin about 35%, and utilization likely above 90%; it targets AI-related revenue of more than US$1 billion over the next three years and is moving into advanced packaging and silicon photonics.",
+      "metric": "July revenue NT$23.844B (MoM +3.11%, YoY +18.98%); Jan–Jul NT$153.615B (YoY +12.41%); Q3 gross margin ~35%, utilization >90%",
+      "impact": "Mature nodes remain under pressure from low-price Chinese competition, and UMC is using AI, advanced packaging and silicon photonics as differentiated ways to break out.",
+      "conf": "Figures confirmed; revenue was released in early August",
+      "vocab": [
+        [
+          "second-best",
+          "次佳的"
+        ],
+        [
+          "outlook",
+          "展望"
+        ],
+        [
+          "low-price",
+          "低價的"
+        ],
+        [
+          "differentiated",
+          "差異化的"
+        ],
+        [
+          "break out",
+          "突圍"
+        ],
+        [
+          "moving into",
+          "切入"
+        ]
+      ]
+    },
+    "19": {
+      "entity": "TSMC CoWoS",
+      "title": "CoWoS capacity to grow 20–30% in 2026, with NVIDIA and Broadcom booking most of the new capacity",
+      "summary": "TSMC plans to raise CoWoS monthly capacity to about 125,000 wafers in 2026 (+20–30% YoY), with nearly all of the new capacity booked by NVIDIA and Broadcom and only a small part allocated to MediaTek. 5.5× reticle CoWoS is in volume production with yields above 98%; N2 defect density hit its target two quarters early; 14× reticle and SoW-X come next.",
+      "metric": "CoWoS monthly capacity ~125,000 wafers (YoY +20–30%); CoWoS yield >98%; industry CoWoS growth 40–50%",
+      "impact": "Advanced packaging has become the real bottleneck for AI chip shipments, determining how much NVIDIA, Broadcom and ASIC customers can deliver.",
+      "conf": "Industry background, not a single event this week",
+      "vocab": [
+        [
+          "booking",
+          "預訂"
+        ],
+        [
+          "allocated",
+          "分配的"
+        ],
+        [
+          "reticle",
+          "光罩尺寸"
+        ],
+        [
+          "defect density",
+          "缺陷密度"
+        ],
+        [
+          "hit its target",
+          "達標"
+        ],
+        [
+          "deliver",
+          "交付"
+        ]
+      ]
+    },
+    "20": {
+      "entity": "TSMC Kumamoto fab",
+      "title": "Kumamoto recovery after the earthquake: structural safety confirmed, but tool recalibration still takes time",
+      "summary": "After the Kumamoto earthquake on 2026/7/28 (maximum seismic intensity 7), TSMC confirmed staff at its Kumamoto fab were safe, building-structure inspections were complete, and water, power and other infrastructure were normal; construction of Fab 2 resumed on 7/29. However, precision manufacturing tools must be inspected and recalibrated one by one, so full normalization will still take time.",
+      "metric": "Fab 1 (Kikuyo, intensity upper 5) gradually resuming work; Fab 2 construction resumed 7/29",
+      "impact": "Kumamoto focuses on mature nodes (22/28nm, 12/16nm), so its impact on the automotive and image-sensor supply chains needs continued tracking.",
+      "conf": "Event began 7/28; this week covers the follow-up recovery",
+      "vocab": [
+        [
+          "earthquake",
+          "地震"
+        ],
+        [
+          "seismic intensity",
+          "震度"
+        ],
+        [
+          "inspections",
+          "檢查"
+        ],
+        [
+          "recalibrated",
+          "重新校準"
+        ],
+        [
+          "normalization",
+          "正常化"
+        ],
+        [
+          "precision",
+          "精密"
+        ]
+      ]
+    },
+    "21": {
+      "entity": "SEMI",
+      "title": "SEMICON Taiwan 2026 opens 9/2–9/4 with a record-size international pavilion",
+      "summary": "SEMICON Taiwan 2026 will be held at the Taipei Nangang Exhibition Center, expected to draw more than 100,000 industry visitors from 65 countries, with 1,300 exhibitors and 4,300 booths. The high-tech smart manufacturing area is 20% larger than last year (the biggest and fastest-growing), and the packaging technology area grew 6%; the international pavilion drew a record 18 countries, with booths rising from 62 in 2023 to 220. SEMI forecasts global semiconductor manufacturing equipment sales of US$138.1 billion in 2026.",
+      "metric": "9/2–9/4 Nangang Exhibition Center; 1,300 exhibitors / 4,300 booths / 65 countries; 2026 global equipment sales forecast US$138.1B",
+      "impact": "Next month's industry focus, with four highlight zones: quantum technology, smart wafer manufacturing, AI semiconductors and chip startups.",
+      "conf": "Forward-looking event (held in September)",
+      "vocab": [
+        [
+          "pavilion",
+          "展館、專區"
+        ],
+        [
+          "draw",
+          "吸引"
+        ],
+        [
+          "fastest-growing",
+          "成長最快的"
+        ],
+        [
+          "quantum",
+          "量子"
+        ],
+        [
+          "startups",
+          "新創公司"
+        ],
+        [
+          "highlight",
+          "亮點"
+        ]
+      ]
+    }
+  }
+}

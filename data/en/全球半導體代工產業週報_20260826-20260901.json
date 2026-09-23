@@ -1,0 +1,889 @@
+{
+  "source": "全球半導體代工產業週報_20260826-20260901.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330) / AMD / NVIDIA",
+      "title": "TSMC reshuffles advanced packaging allocation: AMD's CoWoS share may rise while NVIDIA's is slightly diluted",
+      "summary": "Reports say TSMC has adjusted its internal CoWoS capacity allocation: AMD is getting more as it accelerates pull-ins for its MI series, while NVIDIA's once near-monopoly share has been slightly diluted. It signals TSMC's advanced packaging shifting from 'single-customer dominance' to 'multi-customer distribution'.",
+      "metric": "CoWoS allocation reshuffled: AMD's share up, NVIDIA's share trimmed (no specific percentages disclosed)",
+      "impact": "Advanced packaging is already the second battlefield of foundry competition. Loosening allocations may mean TSMC is turning more conservative on 2027 CoWoS supply and demand — to be read together with the 9/1 news of deferred equipment orders.",
+      "conf": "Confirmed (media citing the supply chain, not a TSMC announcement)",
+      "vocab": [
+        [
+          "reshuffles",
+          "重新分配、調整"
+        ],
+        [
+          "allocation",
+          "配額分配"
+        ],
+        [
+          "near-monopoly",
+          "近乎壟斷"
+        ],
+        [
+          "dominance",
+          "主導地位"
+        ],
+        [
+          "conservative",
+          "保守的"
+        ],
+        [
+          "trimmed",
+          "削減、下修"
+        ]
+      ]
+    },
+    "2": {
+      "entity": "TSMC (2330) / Apple",
+      "title": "Apple's first 2nm chip goes to the Mac, not the iPhone, as M6 leads TSMC's N2 transition",
+      "summary": "Reports say Apple will use the first wave of TSMC N2 (2nm) capacity for the Mac's M6 processor rather than, as usual, the iPhone's A-series chips — reflecting trade-offs in allocating early 2nm capacity and yield.",
+      "metric": "First product on TSMC N2: Apple M6 (Mac), not the iPhone A-series",
+      "impact": "Early 2nm capacity is still tight, so giving it first to high-priced, low-volume products optimizes margins; it also means N2's large-scale ramp falls on the 2027 iPhone generation.",
+      "conf": "Confirmed (supply-chain reports)",
+      "vocab": [
+        [
+          "first wave",
+          "首波"
+        ],
+        [
+          "as usual",
+          "照慣例"
+        ],
+        [
+          "trade-offs",
+          "取捨"
+        ],
+        [
+          "optimizes",
+          "最佳化"
+        ],
+        [
+          "large-scale",
+          "大規模的"
+        ],
+        [
+          "transition",
+          "轉換"
+        ]
+      ]
+    },
+    "3": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's 238-page sustainability report: nine messages more important than they appear",
+      "summary": "Foreign media broke down TSMC's latest sustainability report, focusing on power and water intensity at its Taiwan fabs, progress on renewable energy procurement, carbon-reduction requirements for suppliers, and how overseas expansion affects its overall energy-use structure.",
+      "metric": "Sustainability report 238 pages; highlights include energy and resource use at Taiwan fabs and supply-chain carbon-reduction requirements",
+      "impact": "Water, power and carbon costs have become real constraints on advanced-node expansion, and will be directly reflected in foundry pricing structures after 2027.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "sustainability report",
+          "永續報告書"
+        ],
+        [
+          "intensity",
+          "強度"
+        ],
+        [
+          "renewable energy",
+          "再生能源"
+        ],
+        [
+          "carbon-reduction",
+          "減碳"
+        ],
+        [
+          "constraints",
+          "限制條件"
+        ],
+        [
+          "broke down",
+          "拆解、分析"
+        ]
+      ]
+    },
+    "4": {
+      "entity": "Google / MediaTek / Intel Foundry",
+      "title": "Google and MediaTek push to diversify advanced packaging as Intel enters TPU supply-chain talks",
+      "summary": "To reduce reliance on a single packaging source, Google and MediaTek are both evaluating diversifying advanced packaging, and Intel Foundry's packaging capacity has been brought into TPU-related discussions.",
+      "metric": "Packaging supply shifting from sole reliance on TSMC to a split among TSMC + Intel + other OSATs",
+      "impact": "For TSMC, it is the first real test of its advanced-packaging moat; for Intel Foundry, it is the external revenue source most likely to materialize before 18A.",
+      "conf": "Confirmed (supply-chain reports; no party has announced it)",
+      "vocab": [
+        [
+          "diversify",
+          "分散、多元化"
+        ],
+        [
+          "reliance",
+          "依賴"
+        ],
+        [
+          "evaluating",
+          "評估"
+        ],
+        [
+          "moat",
+          "護城河"
+        ],
+        [
+          "materialize",
+          "實現、落地"
+        ],
+        [
+          "sole",
+          "唯一的"
+        ]
+      ]
+    },
+    "5": {
+      "entity": "Samsung Electronics Samsung Foundry",
+      "title": "Samsung's panel-level packaging diverges from TSMC: sticking with 415×510mm panels, targeting 2028 volume production",
+      "summary": "Samsung has decided its FOPLP will keep a 415×510mm panel size, parting ways with the 310mm square substrate route TSMC is pursuing, with volume production set for 2028.",
+      "metric": "Samsung FOPLP panel size 415×510mm; volume production target 2028 (TSMC CoPoS uses 310mm square)",
+      "impact": "Panel size is a battle over industry standards, determining where equipment, materials and substrate suppliers place their bets; Taiwanese equipment makers need to prepare for both specifications.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "diverges",
+          "分歧"
+        ],
+        [
+          "parting ways",
+          "分道揚鑣"
+        ],
+        [
+          "pursuing",
+          "推進、追求"
+        ],
+        [
+          "industry standards",
+          "產業標準"
+        ],
+        [
+          "place their bets",
+          "押寶"
+        ],
+        [
+          "specifications",
+          "規格"
+        ]
+      ]
+    },
+    "6": {
+      "entity": "Samsung Electronics Samsung Foundry",
+      "title": "Samsung bets on JWMT glass substrates, hoping to claw back ground in advanced packaging",
+      "summary": "Samsung Group is advancing glass substrates through JWMT (a joint-venture setup including Samsung Electro-Mechanics and Corning), trying to open a new track outside the 2.5D/3D packaging landscape dominated by TSMC.",
+      "metric": "Glass substrates: aiming at AI accelerator packaging; mass production timeline still in validation",
+      "impact": "If glass substrates succeed, they would change the structure of the ABF substrate shortage; in the short term there is no immediate impact on Taiwanese substrate makers such as Unimicron and Nan Ya PCB.",
+      "conf": "Confirmed (technology progress at the evaluation stage)",
+      "vocab": [
+        [
+          "claw back",
+          "扳回、奪回"
+        ],
+        [
+          "track",
+          "賽道"
+        ],
+        [
+          "landscape",
+          "格局"
+        ],
+        [
+          "dominated",
+          "被主導的"
+        ],
+        [
+          "immediate",
+          "立即的"
+        ],
+        [
+          "validation",
+          "驗證"
+        ]
+      ]
+    },
+    "7": {
+      "entity": "Taiwanese OSATs (ASE / Powertech / KYEC)",
+      "title": "AI packaging arms race heats up: Taiwan's OSAT capex could reach US$14.6 billion in 2026",
+      "summary": "Driven by overflow from TSMC's CoWoS/SoIC and demand for HBM testing, Taiwan's assembly and test companies are sharply raising capital spending.",
+      "metric": "Taiwan OSATs' combined 2026 capex ~US$14.6B",
+      "impact": "OSAT capex is a concurrent indicator of foundries' advanced-packaging demand; continued record spending means the AI packaging bottleneck has not been cleared.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "arms race",
+          "軍備競賽"
+        ],
+        [
+          "heats up",
+          "升溫"
+        ],
+        [
+          "capital spending",
+          "資本支出"
+        ],
+        [
+          "overflow",
+          "外溢"
+        ],
+        [
+          "concurrent",
+          "同步的"
+        ],
+        [
+          "cleared",
+          "解除"
+        ]
+      ]
+    },
+    "8": {
+      "entity": "IC design / wire-bond packaging",
+      "title": "Exclusive: wire bonding could become the next bottleneck in 2027",
+      "summary": "While the market focuses on CoWoS, traditional wire-bond packaging capacity is getting tight as shipments of mature-node chips grow, and IC designers may face a squeeze on back-end capacity in 2027.",
+      "metric": "Bottleneck timing: 2027; affected: IC design companies using mature nodes",
+      "impact": "On top of mature-node foundry price hikes, back-end packaging will also get more expensive, putting double pressure on IC designers' margins.",
+      "conf": "Confirmed (DIGITIMES exclusive, not verified by companies)",
+      "vocab": [
+        [
+          "exclusive",
+          "獨家報導"
+        ],
+        [
+          "wire bonding",
+          "打線封裝"
+        ],
+        [
+          "squeeze",
+          "排擠、擠壓"
+        ],
+        [
+          "double pressure",
+          "雙重壓力"
+        ],
+        [
+          "margins",
+          "毛利率"
+        ],
+        [
+          "affected",
+          "受影響的"
+        ]
+      ]
+    },
+    "9": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's August profit-sharing payout: senior engineers at grades 31–33 could earn NT$5–6 million a year",
+      "summary": "In August TSMC paid out one-eighth of its annual performance bonus. Posts online suggest senior engineers received about 4–5 months' pay for the quarter, with annual pay of about NT$3.5 million at grade 31, NT$5–6 million at grades 32–33, and about NT$2.2 million for new hires.",
+      "metric": "Q2 employee compensation NT$3.6B, 1H about NT$7.03B, both up over 50% YoY; grade 31 annual pay ~NT$3.5M, grades 32–33 NT$5–6M",
+      "impact": "The scale of profit-sharing and the talent crowding-out effect are hidden costs of advanced-node expansion, and they raise the bar for other foundries and equipment makers to retain talent.",
+      "conf": "Confirmed (individual pay ranges shared online, not company disclosures)",
+      "vocab": [
+        [
+          "profit-sharing",
+          "分紅"
+        ],
+        [
+          "performance bonus",
+          "績效獎金"
+        ],
+        [
+          "new hires",
+          "新進員工"
+        ],
+        [
+          "compensation",
+          "酬勞"
+        ],
+        [
+          "retain",
+          "留住（人才）"
+        ],
+        [
+          "hidden costs",
+          "隱性成本"
+        ]
+      ]
+    },
+    "10": {
+      "entity": "Taiwan stocks / UMC (2303) / TSMC (2330)",
+      "title": "8/28: MediaTek, UMC and Delta lead Taiwan stocks higher; TSMC closes at NT$2,420",
+      "summary": "It was settlement day for the FTSE Taiwan and MSCI Taiwan futures; TSMC's gains were capped after midday and it closed at NT$2,420, up 0.41%. Mature-node foundry UMC was relatively strong.",
+      "metric": "TSMC NT$2,420 (+0.41%); FTSE Taiwan and MSCI Taiwan futures settled that day",
+      "impact": "Money rotated from TSMC into mature-node foundries and IC designers, reflecting a rotation around the price-hike theme.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "settlement day",
+          "結算日"
+        ],
+        [
+          "futures",
+          "期貨"
+        ],
+        [
+          "capped",
+          "受抑制的"
+        ],
+        [
+          "relatively",
+          "相對地"
+        ],
+        [
+          "rotation",
+          "輪動"
+        ],
+        [
+          "theme",
+          "題材"
+        ]
+      ]
+    },
+    "11": {
+      "entity": "Counterpoint / global pure-play foundry",
+      "title": "Counterpoint: 2026Q2 global pure-play foundry revenue up 29% YoY, with TSMC dominating at a 73% share for a second quarter",
+      "summary": "Global pure-play foundry revenue grew 29% YoY in Q2, driven by rush orders for AI chips and tightness in both mature and advanced nodes. TSMC's share was 73% (flat QoQ), with growth coming from 2nm volume production, the 3nm ramp, and pricing power from 8/12-inch mature nodes and advanced packaging being in short supply.",
+      "metric": "2026Q2 pure-play foundry market YoY +29%; TSMC 73%, Samsung 7%, SMIC 5% (SMIC posted record quarterly revenue)",
+      "impact": "The most representative industry-structure data this week: TSMC's share didn't expand further, but its pricing power rose; Samsung and SMIC held second and third place thanks to 2nm and Chinese domestic demand, respectively. ASPs keep rising in the second half, with utilization staying high.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "pure-play foundry",
+          "純晶圓代工"
+        ],
+        [
+          "rush orders",
+          "急單"
+        ],
+        [
+          "flat",
+          "持平的"
+        ],
+        [
+          "pricing power",
+          "議價力"
+        ],
+        [
+          "in short supply",
+          "供不應求"
+        ],
+        [
+          "representative",
+          "具代表性的"
+        ]
+      ]
+    },
+    "12": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC unveils its COUPE roadmap: fully integrating light sources, modulators and SOAs to become an 'optical interposer'",
+      "summary": "Ming-Fa Chen, a TSMC deputy director, described COUPE's progress at the SEMICON Taiwan 2026 silicon photonics forum: it uses SoIC-X bonding to integrate the EIC and PIC, supports both grating and edge couplers, and in the next phase will integrate modulators, SOAs and the light source on the back of COUPE.",
+      "metric": "COUPE can serve as an optical interposer supporting up to 3.3× reticle (like CoWoS-S); bonding pitch 2–4µm; two bandwidth routes: Fast and Narrow (single channel 200→400+ Gbps) and Slow and Wide (WDM wavelengths 1→4/8/16+)",
+      "impact": "The competitive frontier of foundries has moved from transistors to 'light'. If COUPE becomes the optical interposer, it would extend CoWoS's platform advantage into the optical interconnect era.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "modulators",
+          "調變器"
+        ],
+        [
+          "couplers",
+          "耦合器"
+        ],
+        [
+          "reticle",
+          "光罩（曝光範圍）"
+        ],
+        [
+          "wavelengths",
+          "波長"
+        ],
+        [
+          "frontier",
+          "邊界、前沿"
+        ],
+        [
+          "era",
+          "時代、世代"
+        ]
+      ]
+    },
+    "13": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC: SoIC + CoWoS will drive 50× more compute in 2029 than in 2024; silicon photonics to exceed half the market in 2027",
+      "summary": "April Li, TSMC's global head of AI/HPC business, said at SEMICON Taiwan 2026 that AI compute demand is growing fivefold a year; K.C. Hsu, vice president of advanced packaging, explained that optical transceiver architectures are structurally shifting to silicon photonics.",
+      "metric": "Compute in 2029 +50× vs 2024; silicon photonics >50% of the optical transceiver market in 2027; optical transceiver sales +25% in 2025, est. +50% in 2026; 3D integration roadmap N2P-on-N3P (2026) → A14-on-A14 (2029), interconnect pitch down to 4.5µm",
+      "impact": "TSMC is packaging 'advanced nodes + advanced packaging + silicon photonics' into a single platform story — the part other foundries will find hardest to replicate in the short term.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "fivefold",
+          "五倍"
+        ],
+        [
+          "optical transceiver",
+          "光收發器"
+        ],
+        [
+          "structurally",
+          "結構性地"
+        ],
+        [
+          "integration",
+          "整合"
+        ],
+        [
+          "replicate",
+          "複製"
+        ],
+        [
+          "platform",
+          "平台"
+        ]
+      ]
+    },
+    "14": {
+      "entity": "Intel Foundry",
+      "title": "Intel's EMIB-T advanced packaging to contribute revenue from 2H27 and ramp in 2029; Intel rules out returning to DRAM manufacturing",
+      "summary": "Intel CFO David Zinsner explained the timeline and profit model for advanced packaging at the Deutsche Bank 2026 Technology Conference, and clarified that although Intel hired former SK hynix CEO Lee Seok-hee, it will not return to DRAM manufacturing; instead it will co-develop AI memory architectures with the three major memory makers.",
+      "metric": "EMIB-T: revenue from 2H27, steady contribution in 2028, ramp in 2029; annual revenue per customer could reach billions of dollars, gross margin ~40%, operating margin ~30%; Clearwater Forest Xeon 6+ already uses 12 EMIB tiles",
+      "impact": "Intel Foundry's first realistic breakthrough in winning external orders is packaging, not process. Foundry competition is being split into two fronts: front-end and back-end.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "rules out",
+          "排除"
+        ],
+        [
+          "profit model",
+          "獲利模型"
+        ],
+        [
+          "clarified",
+          "澄清"
+        ],
+        [
+          "tiles",
+          "（晶片）小晶片模組"
+        ],
+        [
+          "breakthrough",
+          "突破口"
+        ],
+        [
+          "fronts",
+          "戰線"
+        ]
+      ]
+    },
+    "15": {
+      "entity": "SK hynix / Intel Foundry",
+      "title": "SK hynix weighs Intel as a second source for HBM base dies",
+      "summary": "Reports say SK hynix is evaluating moving some foundry work for HBM logic base dies to Intel, to reduce its sole reliance on TSMC.",
+      "metric": "Target: HBM base die foundry work; current main supplier is TSMC",
+      "impact": "HBM base dies are among TSMC's most solid mature/mid-range node orders in recent years; if Intel gets in, it would be Intel Foundry's most significant external customer win.",
+      "conf": "Confirmed (evaluation stage; neither side has announced it)",
+      "vocab": [
+        [
+          "weighs",
+          "權衡、評估"
+        ],
+        [
+          "second source",
+          "第二供應來源"
+        ],
+        [
+          "base dies",
+          "基底晶粒"
+        ],
+        [
+          "solid",
+          "穩固的"
+        ],
+        [
+          "mid-range",
+          "中階的"
+        ],
+        [
+          "customer win",
+          "客戶案"
+        ]
+      ]
+    },
+    "16": {
+      "entity": "SEMI / SEMICON Taiwan 2026",
+      "title": "SEMICON Taiwan 2026 opens: 1,300 exhibitors, 4,300 booths, and a Leaders Forum so packed an extra session was added",
+      "summary": "SEMICON Taiwan 2026 runs 9/2–9/4 at Halls 1 and 2 of the Taipei Nangang Exhibition Center, with forums starting 8/31. This year's closing fireside chat brings together the five leading companies of Taiwan's electronics supply chain for the first time, co-hosted by ASE's Tien Wu and TSIA chairman Y.J. Mii.",
+      "metric": "1,300 exhibitors, 65 countries, 4,300 booths, 100,000+ visits; forums 8/31–9/4, exhibition 9/2–9/4",
+      "impact": "All of this week's foundry and packaging technology announcements are concentrated here — the densest window for gauging 2027 foundry technology routes.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "packed",
+          "爆滿的"
+        ],
+        [
+          "fireside chat",
+          "爐邊對談"
+        ],
+        [
+          "co-hosted",
+          "共同主持"
+        ],
+        [
+          "exhibition",
+          "展覽"
+        ],
+        [
+          "gauging",
+          "評估、觀察"
+        ],
+        [
+          "densest",
+          "最密集的"
+        ]
+      ]
+    },
+    "17": {
+      "entity": "UMC (2303) / GlobalWafers (6488) / Foxconn / Powertech",
+      "title": "Silicon photonics and CPO take center stage at SEMICON as UMC delivers volume-production silicon photonics wafers",
+      "summary": "With copper interconnect nearing its limits, industry focus is shifting to rack-to-rack optical links. UMC has delivered volume-production silicon photonics wafers (with SILITH, at its 12-inch Singapore fab), GlobalWafers has begun volume shipments, Foxconn expects CPO shipments in Q3, and Powertech is planning optical-engine capacity. NVIDIA is working with TSMC on COUPE, and Broadcom's 51.2T Bailly CPO switch is in volume production.",
+      "metric": "UMC: 12-inch silicon photonics platform opens for external development in 2027; Broadcom Bailly CPO switch 51.2Tb in volume production",
+      "impact": "Silicon photonics gives mature-node foundries like UMC a second growth curve beyond advanced nodes — the most noteworthy 'non-TSMC' foundry story this week.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "center stage",
+          "焦點、主軸"
+        ],
+        [
+          "copper interconnect",
+          "銅互連"
+        ],
+        [
+          "nearing its limits",
+          "逼近極限"
+        ],
+        [
+          "optical-engine",
+          "光引擎"
+        ],
+        [
+          "switch",
+          "交換器"
+        ],
+        [
+          "growth curve",
+          "成長曲線"
+        ]
+      ]
+    },
+    "18": {
+      "entity": "Taiwan manufacturing",
+      "title": "Taiwan's manufacturing sector moves into expansion, but export growth to the US slows",
+      "summary": "The latest manufacturing sentiment indicators show Taiwan's manufacturing sector back in the expansion (prosperity) zone, but export momentum to the US has slowed from the previous period, making the demand mix more dependent on AI-related products.",
+      "metric": "Manufacturing indicator in the expansion zone; export growth to the US slowing",
+      "impact": "A macro check on foundry utilization; if exports to the US keep slowing, the strength of 2027 mature-node price hikes will need re-examining.",
+      "conf": "Confirmed (indicator details subject to official statistics)",
+      "vocab": [
+        [
+          "sentiment",
+          "景氣、信心"
+        ],
+        [
+          "indicators",
+          "指標"
+        ],
+        [
+          "expansion zone",
+          "擴張區間"
+        ],
+        [
+          "dependent",
+          "依賴的"
+        ],
+        [
+          "re-examining",
+          "重新檢視"
+        ],
+        [
+          "momentum",
+          "動能"
+        ]
+      ]
+    },
+    "19": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC reportedly defers 2027 advanced-packaging tool orders; market speculates CoWoS capacity will loosen as CoPoS takes shape",
+      "summary": "Reports say TSMC has postponed 2027 advanced-packaging equipment purchases, which the market reads as the company expecting CoWoS overcapacity, while the CoPoS (panel-level packaging) route gradually takes shape — a shift in capital allocation.",
+      "metric": "2027 advanced-packaging tool orders deferred; strategic focus shifting from CoWoS to CoPoS",
+      "impact": "The single most impactful news this week for Taiwan's equipment and packaging supply chain. If true, 2027 revenue estimates for CoWoS-related equipment makers need to be cut, while CoPoS panel-level tool makers benefit. TSMC's formal capex guidance needs continued tracking.",
+      "conf": "Unconfirmed (market speculation, not confirmed by TSMC; original article behind a paywall)",
+      "vocab": [
+        [
+          "defers",
+          "遞延"
+        ],
+        [
+          "speculates",
+          "揣測"
+        ],
+        [
+          "postponed",
+          "推遲"
+        ],
+        [
+          "overcapacity",
+          "產能過剩"
+        ],
+        [
+          "capital allocation",
+          "資本配置"
+        ],
+        [
+          "paywall",
+          "付費牆"
+        ]
+      ]
+    },
+    "20": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's Jun He: substrate and PCB shortages, rising importance of STCO, and system integrators join the 3DIC alliance for the first time",
+      "summary": "TSMC said at SEMICON Taiwan that advanced packaging bottlenecks have spilled over to substrates and PCBs, and stressed STCO (system-technology co-optimization); the 3DFabric Alliance has admitted system integrators as members for the first time.",
+      "metric": "3DIC/3DFabric Alliance admits system integrators for the first time; bottlenecks: ABF substrates, high-end PCBs",
+      "impact": "The foundry's role is extending from 'making chips' to 'defining systems'. Naming substrate/PCB shortages is also a mid-term positive for suppliers such as Unimicron, Nan Ya PCB and Elite Material.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "co-optimization",
+          "協同最佳化"
+        ],
+        [
+          "system integrators",
+          "系統整合商"
+        ],
+        [
+          "alliance",
+          "聯盟"
+        ],
+        [
+          "admitted",
+          "納入、接納"
+        ],
+        [
+          "high-end",
+          "高階的"
+        ],
+        [
+          "positive",
+          "利多"
+        ]
+      ]
+    },
+    "21": {
+      "entity": "TSMC (2330) / AMD",
+      "title": "TSMC and AMD push next-generation cold plates, reportedly entering production as early as mid-next year",
+      "summary": "Unveiled at SEMICON Taiwan, TSMC and AMD are jointly advancing next-generation cold-plate solutions to handle the sharply higher power density that comes with 3DFabric heterogeneous integration, with volume production reportedly as early as mid-2027.",
+      "metric": "Next-generation cold plates: volume production as early as mid-2027",
+      "impact": "Cooling has become a physical ceiling for advanced packaging. A foundry getting involved in thermal design shows that the power-density problem of 3D stacking can no longer be solved by system makers alone.",
+      "conf": "Confirmed (volume production timing is a market rumor)",
+      "vocab": [
+        [
+          "cold plates",
+          "水冷板"
+        ],
+        [
+          "power density",
+          "功率密度"
+        ],
+        [
+          "heterogeneous integration",
+          "異質整合"
+        ],
+        [
+          "thermal design",
+          "散熱設計"
+        ],
+        [
+          "sharply",
+          "急遽地"
+        ],
+        [
+          "involved",
+          "參與的"
+        ]
+      ]
+    },
+    "22": {
+      "entity": "Sky Tech (6937) / TSMC (2330)",
+      "title": "Sky Tech and TSMC open an advanced-process lab focused on deposition tools and two other technologies",
+      "summary": "An advanced-process lab jointly set up by Taiwanese equipment maker Sky Tech and TSMC has opened, targeting joint development in three technology areas led by coating (thin-film deposition) equipment.",
+      "metric": "Three technology areas in the partnership, centered on coating/thin-film deposition equipment",
+      "impact": "Another step for domestic equipment. Joint labs like this are TSMC's standard way of ensuring supply-chain resilience for advanced nodes.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "lab",
+          "實驗室"
+        ],
+        [
+          "deposition",
+          "沉積"
+        ],
+        [
+          "coating",
+          "鍍膜"
+        ],
+        [
+          "joint development",
+          "共同開發"
+        ],
+        [
+          "resilience",
+          "韌性"
+        ],
+        [
+          "standard",
+          "標準的"
+        ]
+      ]
+    },
+    "23": {
+      "entity": "GlobalWafers (6488)",
+      "title": "Doris Hsu: Taiwan's advantage is a 'trusted ecosystem'; GlobalWafers expands into advanced packaging and silicon photonics",
+      "summary": "GlobalWafers chair Doris Hsu said at SEMICON Taiwan that Taiwan's semiconductor competitiveness lies not in any single company but in a trustworthy ecosystem; the company is using its multinational footprint to cope with tariff uncertainty and expects double-digit growth over the next two years.",
+      "metric": "GlobalWafers: double-digit growth expected over the next two years; growth from advanced packaging, silicon photonics, CPO and quantum computing applications",
+      "impact": "Silicon wafers are the shared upstream for every foundry; GlobalWafers' optimism about 2027–2028 is an indirect endorsement of foundry capacity expansion.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "trusted",
+          "值得信賴的"
+        ],
+        [
+          "ecosystem",
+          "生態系"
+        ],
+        [
+          "multinational",
+          "跨國的"
+        ],
+        [
+          "cope with",
+          "因應"
+        ],
+        [
+          "uncertainty",
+          "不確定性"
+        ],
+        [
+          "optimism",
+          "樂觀"
+        ]
+      ]
+    },
+    "24": {
+      "entity": "Nexperia / Chinese court",
+      "title": "Chinese court freezes US$318 million of Nexperia assets as the China-Netherlands corporate dispute escalates",
+      "summary": "A Chinese court ordered a freeze on about US$318 million of Nexperia's assets, widening the dispute between Nexperia's parent and subsidiary that was triggered by the Dutch government's intervention.",
+      "metric": "Frozen amount ~US$318M",
+      "impact": "Geopolitical risk in the automotive and industrial power-device supply chain rises further; mature-node foundries making similar products (Hua Hong, SMIC, Vanguard) could see orders shift to them.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "freezes",
+          "凍結"
+        ],
+        [
+          "assets",
+          "資產"
+        ],
+        [
+          "dispute",
+          "爭端"
+        ],
+        [
+          "escalates",
+          "升級"
+        ],
+        [
+          "intervention",
+          "介入"
+        ],
+        [
+          "subsidiary",
+          "子公司"
+        ]
+      ]
+    },
+    "25": {
+      "entity": "US Department of Commerce / China",
+      "title": "US plans new AI export rules to stop Chinese firms from renting NVIDIA GPUs across borders",
+      "summary": "The US is drafting new rules to close the route by which Chinese companies rent NVIDIA GPU compute through offshore data centers, extending controls from hardware exports to compute services.",
+      "metric": "Controls expanding from physical GPU exports to cross-border compute rental",
+      "impact": "If implemented, China's push for in-house AI chips will grow stronger — a long-term positive for domestic foundries such as SMIC — while also limiting their room to obtain advanced equipment.",
+      "conf": "Confirmed (draft stage; not yet formally issued)",
+      "vocab": [
+        [
+          "drafting",
+          "研擬"
+        ],
+        [
+          "offshore",
+          "境外的"
+        ],
+        [
+          "renting",
+          "承租"
+        ],
+        [
+          "cross-border",
+          "跨境的"
+        ],
+        [
+          "implemented",
+          "實施、落地"
+        ],
+        [
+          "draft",
+          "草案"
+        ]
+      ]
+    },
+    "26": {
+      "entity": "Taiwan stocks / TSMC (2330) / MediaTek (2454)",
+      "title": "TAIEX jumps 820 points to 46,948.72; TSMC closes at NT$2,440 and MediaTek hits limit-up",
+      "summary": "NVIDIA's announcement of a US$3.5 billion deeper partnership with MediaTek ignited Taiwan stocks. On 9/1 the TAIEX closed at 46,948.72, up 820.25 points (+1.78%), on turnover of NT$1.08 trillion; TSMC rose NT$35 to NT$2,440 (+1.46%), and MediaTek hit limit-up at NT$4,315.",
+      "metric": "TAIEX 46,948.72 (+820.25, +1.78%); turnover NT$1.08T; TSMC NT$2,440 (+1.46%); MediaTek limit-up NT$4,315; NVIDIA invests US$3.5B in MediaTek",
+      "impact": "The week's closing rally was led by the AI ASIC theme; for foundries, it lifts visibility of MediaTek's demand for advanced nodes and CoWoS even further.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "ignited",
+          "點燃"
+        ],
+        [
+          "partnership",
+          "合作關係"
+        ],
+        [
+          "turnover",
+          "成交值"
+        ],
+        [
+          "visibility",
+          "能見度"
+        ],
+        [
+          "limit-up",
+          "漲停"
+        ],
+        [
+          "closing rally",
+          "收尾漲勢"
+        ]
+      ]
+    }
+  }
+}

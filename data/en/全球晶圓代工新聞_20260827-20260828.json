@@ -1,0 +1,719 @@
+{
+  "source": "全球晶圓代工新聞_20260827-20260828.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330 / TSM)",
+      "title": "TSMC reportedly raising foundry prices 5–10% from 2027, with an extra 10–15% premium on additional HPC orders",
+      "summary": "Nikkei Asia reported that TSMC began price negotiations in June 2026 and concluded them in July, with new prices taking effect at the start of 2027. The increases cover advanced nodes of 7nm and below as well as mature 12/16/28nm processes. If customers place additional HPC chip orders beyond their original forecasts, a further 10–15% premium will be charged on top of the base increase.",
+      "metric": "Base increase 5–10%; premium on additional HPC orders 10–15%; overall increase above 10% for some advanced nodes",
+      "impact": "This is the anchor for understanding all the price-hike news this period: TSMC's increases are already negotiated, not at the rumor stage, and other foundries' price moves follow this baseline.",
+      "conf": "Background outside the period | Nikkei report; not officially confirmed by TSMC",
+      "vocab": [
+        [
+          "premium",
+          "溢價"
+        ],
+        [
+          "concluded",
+          "完成（談判）"
+        ],
+        [
+          "taking effect",
+          "生效"
+        ],
+        [
+          "on top of",
+          "在……之外另加"
+        ],
+        [
+          "anchor",
+          "定錨點"
+        ],
+        [
+          "baseline",
+          "基準線"
+        ]
+      ]
+    },
+    "2": {
+      "entity": "GlobalWafers (6488)",
+      "title": "Fire at GlobalWafers' 8-inch wafer plant in Novara, Italy; analysts estimate about 5% of global 8-inch capacity affected",
+      "summary": "A fire broke out on 7/22 in the back-end production area of the 8-inch line at the Novara plant, with no injuries or environmental pollution. Damage was confined to the back end; most front-end equipment and core IT systems were unaffected, and some lines could restart as early as mid-August. The newly built 12-inch Fab300 was not affected.",
+      "metric": "Affected lines ~5% of GlobalWafers' global 8-inch capacity; 8-inch utilization stays above 80%",
+      "impact": "Combined with the 8/27 fire at Vanguard's Fab 3, it creates a compounding effect: upstream silicon wafers and downstream 8-inch foundry both hit trouble within the same quarter, testing the resilience of an already tight 8-inch supply chain.",
+      "conf": "Background outside the period | Confirmed (company announcement)",
+      "vocab": [
+        [
+          "broke out",
+          "（火災）發生"
+        ],
+        [
+          "injuries",
+          "人員傷亡"
+        ],
+        [
+          "confined",
+          "侷限於"
+        ],
+        [
+          "restart",
+          "重新啟動"
+        ],
+        [
+          "compounding effect",
+          "疊加效應"
+        ],
+        [
+          "resilience",
+          "韌性"
+        ]
+      ]
+    },
+    "3": {
+      "entity": "Intel (INTC)",
+      "title": "Intel upsizes its equity offering from the planned US$15 billion and prices it at US$20 billion",
+      "summary": "On 8/10 Intel announced plans to issue about US$15 billion in common stock, then on 8/11 upsized the offering and priced it at US$20 billion. The funds mainly support the 14A process, but Tesla is currently 14A's only public customer.",
+      "metric": "Planned US$15B → final pricing US$20B; shares briefly fell below the US$95 offering price",
+      "impact": "[Correction: the previous weekly report recorded US$15 billion, based on the original 8/10 announcement; the actual pricing was US$20 billion.] The one-third increase in size shows Intel's need for cash is greater than originally disclosed.",
+      "conf": "Background outside the period | Confirmed; this entry corrects a figure in the previous weekly report",
+      "vocab": [
+        [
+          "upsizes",
+          "擴大（規模）"
+        ],
+        [
+          "equity offering",
+          "現金增資、股票發行"
+        ],
+        [
+          "common stock",
+          "普通股"
+        ],
+        [
+          "priced",
+          "定價"
+        ],
+        [
+          "correction",
+          "更正"
+        ],
+        [
+          "disclosed",
+          "揭露的"
+        ]
+      ]
+    },
+    "4": {
+      "entity": "TSMC (2330) / Sony",
+      "title": "TSMC and Sony formally sign to form an image-sensor joint venture in Koshi, Kumamoto",
+      "summary": "Sony Semiconductor Solutions and TSMC signed a legally binding definitive agreement to form a joint venture, Advanced Vision Semiconductor Manufacturing Corporation, located inside Sony's new fab in Koshi City, Kumamoto Prefecture. Sony is the sole controlling shareholder, and the JV will be a consolidated subsidiary of Sony.",
+      "metric": "Volume production from 2029; focused on smartphone image sensors using advanced processes",
+      "impact": "TSMC's presence in Japan is extending from JASM's automotive mature nodes into CIS, a high-value niche; it also collides head-on with the 8/27 news that 'China has become the No. 2 CIS supply base'.",
+      "conf": "Background outside the period | Confirmed (official announcements by both companies)",
+      "vocab": [
+        [
+          "image sensor",
+          "影像感測器"
+        ],
+        [
+          "legally binding",
+          "具法律約束力的"
+        ],
+        [
+          "definitive agreement",
+          "正式協議"
+        ],
+        [
+          "controlling shareholder",
+          "控股股東"
+        ],
+        [
+          "niche",
+          "利基市場"
+        ],
+        [
+          "head-on",
+          "正面地"
+        ]
+      ]
+    },
+    "5": {
+      "entity": "Apple / TSMC (2330)",
+      "title": "Apple unveils M6, the world's first volume-production chip on TSMC 2nm (N2), shipping in the Mac mini on 8/26",
+      "summary": "Apple unveiled the M6 on 8/25, its first chip built on TSMC's 2nm process, launching on 8/26 in the Mac mini starting at US$899. The M6 has a 12-core CPU (2 super cores + 4 performance cores + 6 efficiency cores), a 12-core GPU and dual 16-core Neural Engines. Notably, Apple gave 2nm to the Mac first, not the iPhone.",
+      "metric": "12-core CPU / 12-core GPU; unified memory up to 32GB; bandwidth 170GB/s (+10% vs M5); Mac mini from US$899",
+      "impact": "TSMC 2nm has officially entered consumer devices — the strongest evidence that N2 yield and cost have reached commercial levels. Launching on the Mac rather than the iPhone shows early capacity allocation remains cautious.",
+      "conf": "Background adjacent to the period | Confirmed (official Apple launch)",
+      "vocab": [
+        [
+          "efficiency cores",
+          "節能核心"
+        ],
+        [
+          "unified memory",
+          "統一記憶體"
+        ],
+        [
+          "notably",
+          "值得注意的是"
+        ],
+        [
+          "consumer devices",
+          "消費性終端"
+        ],
+        [
+          "commercial levels",
+          "商用水準"
+        ],
+        [
+          "cautious",
+          "保守、謹慎的"
+        ]
+      ]
+    },
+    "6": {
+      "entity": "Samsung (005930.KS) / Intel (INTC)",
+      "title": "Samsung and Intel widen the AI chip battle to memory and packaging",
+      "summary": "A DIGITIMES analysis says Samsung is using HBM to strengthen its foundry business, while Intel is extending from logic chips and foundry services toward memory, entering through advanced packaging and system-level technology. AI semiconductor competition is shifting from single chips to whole-system integration.",
+      "metric": "—",
+      "impact": "The dimensions of foundry competition have changed: the era of competing purely on process nodes is over, and integration capability across 'logic + memory + packaging' is the new battleground — structural pressure on pure-play foundries with only front-end processes.",
+      "conf": "Background adjacent to the period | Confirmed",
+      "vocab": [
+        [
+          "widen",
+          "擴大"
+        ],
+        [
+          "extending",
+          "延伸"
+        ],
+        [
+          "dimensions",
+          "維度"
+        ],
+        [
+          "capability",
+          "能力"
+        ],
+        [
+          "structural pressure",
+          "結構性壓力"
+        ],
+        [
+          "whole-system",
+          "整體系統的"
+        ]
+      ]
+    },
+    "7": {
+      "entity": "Qualcomm / Samsung / SK hynix / TSMC",
+      "title": "Qualcomm's HBC memory: Samsung and SK hynix to supply DRAM stacks, TSMC to handle integration and packaging",
+      "summary": "Qualcomm EVP Durga Malladi announced at the Deutsche Bank technology conference on 8/26 that Samsung and SK hynix will handle the DRAM stacking for HBC, while Qualcomm designs the compute die and TSVs underneath and works with TSMC on integration and packaging. HBC vertically stacks multiple LPDDR dies on top of the accelerator chip.",
+      "metric": "First-generation HBC to ship commercially next year in Qualcomm's AI250 accelerator; Qualcomm HBC Gen 1 bandwidth 133 TB/s",
+      "impact": "Winning HBC integration and packaging gives TSMC a ticket to another memory-integration route beyond HBM, pushing advanced-packaging order visibility further out.",
+      "conf": "Background adjacent to the period | Confirmed (public conference remarks)",
+      "vocab": [
+        [
+          "stacking",
+          "堆疊"
+        ],
+        [
+          "compute die",
+          "運算晶粒"
+        ],
+        [
+          "underneath",
+          "在下方"
+        ],
+        [
+          "vertically",
+          "垂直地"
+        ],
+        [
+          "commercially",
+          "商業化地"
+        ],
+        [
+          "ticket",
+          "門票、入場券"
+        ]
+      ]
+    },
+    "8": {
+      "entity": "OpenAI / Samsung (005930.KS)",
+      "title": "OpenAI unveils its Jalapeño AI inference chip, with Samsung reportedly supplying HBM4",
+      "summary": "OpenAI unveiled Jalapeño, its in-house AI inference chip, and reports say Samsung is supplying its HBM4.",
+      "metric": "—",
+      "impact": "Another cloud player joins the list of in-house ASIC developers, with the memory supplier locked in early; what to track next is which foundry wins the front-end wafers and advanced packaging.",
+      "conf": "Background adjacent to the period | Samsung's HBM4 supply is per reports, not confirmed by either side",
+      "vocab": [
+        [
+          "inference",
+          "推論"
+        ],
+        [
+          "in-house",
+          "自研的"
+        ],
+        [
+          "locked in",
+          "綁定"
+        ],
+        [
+          "developers",
+          "開發者"
+        ],
+        [
+          "track",
+          "追蹤"
+        ],
+        [
+          "front-end",
+          "前段的"
+        ]
+      ]
+    },
+    "9": {
+      "entity": "Intel (INTC)",
+      "title": "Intel shares fall 2.1% on 8/26 as the market focuses on widening foundry losses and market-share doubts",
+      "summary": "Reports say Intel Foundry's quarterly operating loss reached US$2.8 billion; at this rate, cumulative operating losses would exceed US$10 billion by end-2027 before the business reaches a scale near breakeven.",
+      "metric": "Foundry quarterly operating loss US$2.8B (an earlier report cited US$2.1B); cumulative losses est. >US$10B by end-2027",
+      "impact": "It corroborates the 8/20 report that 'Intel is outsourcing more 2nm to TSMC': internal products moving out while external customers have yet to arrive means the foundry's economies of scale still can't materialize. Two versions of the loss figure coexist, so check the basis before citing.",
+      "conf": "Background adjacent to the period | Reports give the loss as either US$2.1B or US$2.8B; the official figure could not be confirmed",
+      "vocab": [
+        [
+          "operating loss",
+          "營業虧損"
+        ],
+        [
+          "cumulative",
+          "累計的"
+        ],
+        [
+          "breakeven",
+          "損益兩平"
+        ],
+        [
+          "economies of scale",
+          "規模經濟"
+        ],
+        [
+          "doubts",
+          "疑慮"
+        ],
+        [
+          "basis",
+          "口徑、基礎"
+        ]
+      ]
+    },
+    "10": {
+      "entity": "ASMPT / SEMICON Taiwan 2026",
+      "title": "ASMPT will showcase advanced packaging solutions at SEMICON Taiwan 2026",
+      "summary": "ASMPT is exhibiting under the theme 'Empower the Intelligence Revolution', showing packaging technologies for next-generation AI, HPC, co-packaged optics (CPO) and photonics applications.",
+      "metric": "—",
+      "impact": "What equipment makers choose to exhibit is a leading indicator of the next round of advanced-packaging investment; CPO and FOPLP are the highlights this year.",
+      "conf": "Background adjacent to the period | Confirmed",
+      "vocab": [
+        [
+          "showcase",
+          "展示"
+        ],
+        [
+          "exhibiting",
+          "參展"
+        ],
+        [
+          "theme",
+          "主題"
+        ],
+        [
+          "photonics",
+          "光子學"
+        ],
+        [
+          "highlights",
+          "重點"
+        ],
+        [
+          "round",
+          "（一）輪"
+        ]
+      ]
+    },
+    "11": {
+      "entity": "SK hynix (000660.KS)",
+      "title": "SK hynix breaks ground on its US$3.87 billion HBM advanced-packaging plant in Indiana",
+      "summary": "SK hynix held a groundbreaking ceremony on 8/27 at Purdue University's Holloway Gymnasium for its first US advanced-packaging and R&D base in West Lafayette, which will produce HBM for AI. Korea's Ambassador to the US Kang Kyung-wha, Indiana Governor Braun and Senator Young attended; SK Group Chairman Chey Tae-won and NVIDIA CEO Jensen Huang did not.",
+      "metric": "Investment US$3.87B (over US$4B including related spending); 133.5-acre site; cleanroom completed Oct 2028, volume production 2029Q3; ~1,000 direct jobs, ~7,000 direct and indirect jobs",
+      "impact": "HBM packaging capacity is starting to land in the US, completing the puzzle of a 'full US AI chip chain' alongside TSMC Arizona and Samsung Taylor; for Taiwan's advanced-packaging cluster, it is mid- to long-term diversion pressure.",
+      "conf": "Confirmed (official company press release)",
+      "vocab": [
+        [
+          "groundbreaking ceremony",
+          "動工典禮"
+        ],
+        [
+          "ambassador",
+          "大使"
+        ],
+        [
+          "governor",
+          "州長"
+        ],
+        [
+          "cleanroom",
+          "無塵室"
+        ],
+        [
+          "puzzle",
+          "拼圖"
+        ],
+        [
+          "diversion",
+          "分流"
+        ]
+      ]
+    },
+    "12": {
+      "entity": "SK hynix (000660.KS) / Samsung",
+      "title": "SK hynix questions the PIM route, saying heat and packaging limits are HBM's real bottleneck",
+      "summary": "DIGITIMES reported that SK hynix has reservations about processing-in-memory (PIM), arguing that the physical limits of cooling and packaging — not where the compute units sit — are what constrain HBM's development. This follows discussions after Hot Chips 2026, where Samsung argued HBM should move closer to logic.",
+      "metric": "—",
+      "impact": "The two memory giants disagree on HBM's next step, which directly steers foundries' advanced-packaging technology investment (whichever solution wins, its packaging lines get chosen).",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "reservations",
+          "保留看法"
+        ],
+        [
+          "processing-in-memory",
+          "記憶體內運算（PIM）"
+        ],
+        [
+          "physical limits",
+          "物理限制"
+        ],
+        [
+          "constrain",
+          "制約"
+        ],
+        [
+          "giants",
+          "巨頭"
+        ],
+        [
+          "steers",
+          "引導、左右"
+        ]
+      ]
+    },
+    "13": {
+      "entity": "Chinese CIS makers (OmniVision / SmartSens / GalaxyCore, etc.)",
+      "title": "China becomes the world's No. 2 CMOS image sensor supply base, overtaking Korea with a 21% share",
+      "summary": "DIGITIMES, citing Yole data, said China has overtaken South Korea as the world's second-largest CIS supply base, driven by OmniVision, SmartSens, GalaxyCore and Gpixel. Sony still ranks first with close to 50% of revenue.",
+      "metric": "China's share ~21%; Sony ~50% of global CIS revenue",
+      "impact": "CIS is an important vehicle for mature/specialty foundry work (one of Nexchip's mainstays). China's CIS rise will translate directly into demand for domestic Chinese foundry capacity, colliding head-on with the TSMC/Sony CIS joint venture of 8/11.",
+      "conf": "Confirmed; the 21% share is the DIGITIMES headline figure, and Yole's original report uses a slightly different basis",
+      "vocab": [
+        [
+          "CMOS image sensor",
+          "CMOS 影像感測器（CIS）"
+        ],
+        [
+          "supply base",
+          "供應基地"
+        ],
+        [
+          "overtaking",
+          "超越"
+        ],
+        [
+          "vehicle",
+          "載體"
+        ],
+        [
+          "mainstays",
+          "主力產品"
+        ],
+        [
+          "colliding",
+          "衝突、對撞"
+        ]
+      ]
+    },
+    "14": {
+      "entity": "China / helium supply chain",
+      "title": "China reshapes its helium supply chain to meet rising chip demand and import risks",
+      "summary": "DIGITIMES reported that China is reorganizing its helium supply chain in response to growing demand from semiconductor manufacturing and ongoing risks in import sources.",
+      "metric": "—",
+      "impact": "Helium is a key specialty gas in wafer fabrication; each step China takes toward self-sufficiency reduces the leverage of export controls — the same 'weaponization of upstream materials' theme as the 8/06 Section 232 polysilicon tariffs.",
+      "conf": "Confirmed (headline level; full text behind a paywall)",
+      "vocab": [
+        [
+          "helium",
+          "氦氣"
+        ],
+        [
+          "reshapes",
+          "重塑"
+        ],
+        [
+          "specialty gas",
+          "特用氣體"
+        ],
+        [
+          "self-sufficiency",
+          "自給自足、自主化"
+        ],
+        [
+          "leverage",
+          "施力點、槓桿"
+        ],
+        [
+          "weaponization",
+          "武器化"
+        ]
+      ]
+    },
+    "15": {
+      "entity": "Samsung (005930.KS)",
+      "title": "Samsung absorbs rising memory costs itself in a bid to lead the smartphone market",
+      "summary": "DIGITIMES reported that, facing a sharp rise in memory costs, Samsung has chosen to absorb them rather than pass them all on, to keep its phones price-competitive and fight for the No. 1 market share.",
+      "metric": "—",
+      "impact": "The double-edged sword of vertical integration: Samsung can use windfall profits from memory to subsidize phones, but it also means foundry/memory profits get absorbed internally, so its segment figures should be read separately.",
+      "conf": "Confirmed (headline level; full text behind a paywall)",
+      "vocab": [
+        [
+          "absorbs",
+          "吸收"
+        ],
+        [
+          "in a bid to",
+          "為了、企圖"
+        ],
+        [
+          "pass them all on",
+          "（全數）轉嫁"
+        ],
+        [
+          "double-edged sword",
+          "雙面刃"
+        ],
+        [
+          "vertical integration",
+          "垂直整合"
+        ],
+        [
+          "windfall profits",
+          "暴利"
+        ]
+      ]
+    },
+    "16": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC closes at NT$2,410 on 8/27, up 0.21%, with foreign investors buying for a second day",
+      "summary": "On 8/27 TSMC closed at NT$2,410, up 0.21%, on volume of 16,222 lots. The three major institutional investors were net buyers of 4,341 lots: foreign investors bought for a second straight day (net 4,501 lots), investment trusts sold for a second day (net 317 lots), and proprietary dealers bought for a third day (net 158 lots).",
+      "metric": "Close NT$2,410 (+0.21%); volume 16,222 lots; foreign net buying 4,501 lots",
+      "impact": "After good news such as A16 completing development and the Apple M6 launch, the shares barely rose, suggesting most of the good news is priced in; further momentum depends on August revenue due 9/10.",
+      "conf": "Confirmed (exchange data)",
+      "vocab": [
+        [
+          "foreign investors",
+          "外資"
+        ],
+        [
+          "investment trusts",
+          "投信"
+        ],
+        [
+          "proprietary dealers",
+          "自營商"
+        ],
+        [
+          "net buyers",
+          "買超方"
+        ],
+        [
+          "barely",
+          "僅僅、勉強"
+        ],
+        [
+          "priced in",
+          "已反映在價格中"
+        ]
+      ]
+    },
+    "17": {
+      "entity": "Vanguard (5347)",
+      "title": "★ Late-night fire at Vanguard's Fab 3 in Taoyuan adds pressure to tight 8-inch capacity",
+      "summary": "A fire broke out late on 8/27 at Vanguard's Fab 3 on Changrong Road, Luzhu District, Taoyuan, starting in a rooftop equipment room on the fourth floor. The fire department sent 89 firefighters and more than a hundred people were evacuated; there were no injuries, and the fire was put out in 40 minutes. The company said most production lines continue to run normally with no material impact on operations; the affected air-pollution control equipment and some connected tools will resume operation this week after being reconnected.",
+      "metric": "100+ evacuated (one report says 200), 89 firefighters, fire out in 40 minutes, no injuries; Vanguard has five 8-inch fabs (4 in Taiwan, 1 in Singapore), 2026 capacity ~3.3 million 8-inch wafers; TSMC owns 19%",
+      "impact": "The most important item this period. The company says there is 'no material impact', but TrendForce explicitly said the incident 'adds pressure to already tight 8-inch capacity'. Combined with July's GlobalWafers Novara fire, the 8-inch supply chain has been hit twice within a quarter, raising upside risk to short-term prices.",
+      "conf": "Confirmed (company has responded); actual capacity impact awaits further announcements, and there is a gap between the company's account and TrendForce's reading",
+      "vocab": [
+        [
+          "evacuated",
+          "被疏散的"
+        ],
+        [
+          "put out",
+          "撲滅"
+        ],
+        [
+          "material impact",
+          "重大影響"
+        ],
+        [
+          "resume",
+          "恢復"
+        ],
+        [
+          "explicitly",
+          "明確地"
+        ],
+        [
+          "upside risk",
+          "上行風險"
+        ]
+      ]
+    },
+    "18": {
+      "entity": "YMTC / China semiconductor supply chain",
+      "title": "YMTC deepens its local supply chain as 17 chip firms pledge RMB 6 billion of investment in Wuhan",
+      "summary": "Chinese NAND maker YMTC is strengthening its local supply chain ahead of its IPO, with 17 semiconductor companies pledging a combined RMB 6 billion of investment in Wuhan.",
+      "metric": "17 IC companies, RMB 6B in total",
+      "impact": "China's 'clustering + localization' model takes another step; the speed of domestic substitution for equipment and materials is the key variable in estimating the ceiling of China's mature-node expansion.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "deepens",
+          "深化"
+        ],
+        [
+          "IPO",
+          "首次公開發行（上市）"
+        ],
+        [
+          "pledging",
+          "承諾"
+        ],
+        [
+          "clustering",
+          "群聚"
+        ],
+        [
+          "substitution",
+          "替代"
+        ],
+        [
+          "ceiling",
+          "上限"
+        ]
+      ]
+    },
+    "19": {
+      "entity": "HBF / memory supply chain",
+      "title": "HBF promises doubled capacity, but may cost more than HBM",
+      "summary": "TrendForce discussed High Bandwidth Flash (HBF) as an alternative to HBM, noting it can provide very large capacity but with less bandwidth than HBM, and its cost may actually be higher than HBM's.",
+      "metric": "—",
+      "impact": "If HBF costs can't be brought down, HBM will continue to dominate the AI memory route — good news for foundry/OSAT capacity tied to HBM packaging.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "promises",
+          "號稱、承諾"
+        ],
+        [
+          "alternative",
+          "替代方案"
+        ],
+        [
+          "bandwidth",
+          "頻寬"
+        ],
+        [
+          "brought down",
+          "降低"
+        ],
+        [
+          "dominate",
+          "主導"
+        ],
+        [
+          "tied to",
+          "綁定於"
+        ]
+      ]
+    },
+    "20": {
+      "entity": "SEMI / SEMICON Taiwan 2026",
+      "title": "SEMICON Taiwan 2026 runs 9/2–9/4, with forums kicking off on 8/31",
+      "summary": "SEMICON Taiwan 2026 is held at the Taipei Nangang Exhibition Center from 9/2 to 9/4, with the International Semiconductor Week forums starting on 8/31. The packaging area has four pavilions: 3DIC Advanced Packaging, FOPLP, Semiconductor Packaging and Chiplet.",
+      "metric": "1,300 exhibitors, 4,300 booths, 100,000+ professionals, 65 countries; packaging and assembly equipment sales grew 19.6% to US$6B in 2025, with a further 9.2% growth expected in 2026",
+      "impact": "The most important industry calendar event next week. Advanced packaging takes up a quarter of the floor plan, directly echoing this period's topics of the CoWoS gap, HBC and HBF.",
+      "conf": "Confirmed (official SEMI press release)",
+      "vocab": [
+        [
+          "pavilions",
+          "展館、專區"
+        ],
+        [
+          "chiplet",
+          "小晶片"
+        ],
+        [
+          "professionals",
+          "專業人士"
+        ],
+        [
+          "floor plan",
+          "展區規劃"
+        ],
+        [
+          "calendar",
+          "行事曆"
+        ],
+        [
+          "kicking off",
+          "開跑"
+        ]
+      ]
+    },
+    "21": {
+      "entity": "NVIDIA / TSMC (2330)",
+      "title": "NVIDIA's next-generation Feynman skips N2 for TSMC A16, with volume production in 2H 2028",
+      "summary": "Reports say NVIDIA's next-gen GPU 'Feynman' will skip TSMC N2 and go straight to A16 (1.6nm), targeting volume production in the second half of 2028. Feynman will be NVIDIA's first product to use TSMC's SoIC 3D chiplets, backside power delivery and next-generation packaging. TSMC is accelerating construction of its AP7 and AP8 plants to support SoIC capacity.",
+      "metric": "Volume production 2028H2; A16 is a shrink of more than two generations beyond the N3 family used by Blackwell; TSMC accelerating AP7 and AP8 construction",
+      "impact": "It supplies the demand-side answer to the 8/21 news that 'A16 has completed development for Q4 production': A16's first big customer is NVIDIA. It also explains why TSMC is pushing advanced-packaging capacity toward 14× reticle size by 2029.",
+      "conf": "Background outside the period | Industry reports; not formally confirmed by NVIDIA or TSMC",
+      "vocab": [
+        [
+          "skips",
+          "跳過"
+        ],
+        [
+          "straight to",
+          "直接到"
+        ],
+        [
+          "backside power delivery",
+          "晶背供電"
+        ],
+        [
+          "shrink",
+          "微縮"
+        ],
+        [
+          "generations",
+          "世代"
+        ],
+        [
+          "demand-side",
+          "需求端的"
+        ]
+      ]
+    }
+  }
+}

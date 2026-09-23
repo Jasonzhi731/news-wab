@@ -31,13 +31,45 @@
     src:  ['來源 / 日期', '來源/日期', '來源', 'source']
   };
 
+  /* ---------- 分類：英文名稱與色系（色值定義在 app.css 的 --c-* 變數） ---------- */
+  var CAT_META = {
+    '政策/關稅':   { en: 'Policy & Tariffs',       c: 'rose' },
+    '總體數據':    { en: 'Macro Data',             c: 'sky' },
+    '財報營收':    { en: 'Earnings & Revenue',     c: 'emerald' },
+    '資本支出':    { en: 'CapEx',                  c: 'emerald' },
+    '市場行情':    { en: 'Markets',                c: 'amber' },
+    '價格/報價':   { en: 'Pricing',                c: 'amber' },
+    '產能/技術':   { en: 'Capacity & Technology',  c: 'violet' },
+    '技術/製程':   { en: 'Process Technology',     c: 'violet' },
+    '產能擴充':    { en: 'Capacity Expansion',     c: 'violet' },
+    '供應鏈':      { en: 'Supply Chain',           c: 'teal' },
+    '供應鏈/封裝': { en: 'Supply Chain & Packaging', c: 'teal' },
+    '展會/展望':   { en: 'Events & Outlook',       c: 'fuchsia' },
+    '客戶/訂單':   { en: 'Customers & Orders',     c: 'orange' }
+  };
+  function catColor(cat) { return (CAT_META[cat] && CAT_META[cat].c) || 'slate'; }
+  function catEn(cat) { return (CAT_META[cat] && CAT_META[cat].en) || cat; }
+
   /* ---------- 狀態 ---------- */
   var report = null;                       // 解析後的整份週報
   var state = {
     tab: 'news',
     cats: [], dates: [], ents: [],
-    dcats: []
+    dcats: [],
+    lang: {},                              // 每則新聞目前顯示的語言：{ 序號: 'en' }，預設中文
+    vscope: 'report',                      // 字彙分頁：'report' 本期 / 'saved' 我的收藏
+    vhide: false                           // 字彙分頁：遮住中文自我測驗
   };
+
+  /* ---------- 收藏的單字：存在這台瀏覽器（跨期保留） ---------- */
+  var SAVED_KEY = 'wr-vocab-saved';
+  function loadSaved() {
+    try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '{}') || {}; } catch (e) { return {}; }
+  }
+  function storeSaved(m) {
+    try { localStorage.setItem(SAVED_KEY, JSON.stringify(m)); } catch (e) {}
+  }
+  var saved = loadSaved();
 
   /* ============================================================
      工具
@@ -64,6 +96,12 @@
     });
   }
   function isHttp(u) { return /^https?:\/\//i.test(u); }
+  function escRe(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  // 完整的年/月/日才省略年份（2026/09/22 → 09/22）；「2026/08」這種只到月的保持原樣
+  function shortDate(s) {
+    return /^\d{4}[\/\-.]\d{1,2}[\/\-.]\d{1,2}/.test(s) ? s.replace(/^\d{4}[\/\-.]/, '') : s;
+  }
 
   // 日期字串轉成可比大小的數字；非日期（例如「本週背景」）回傳 -1
   function dateKey(s) {
@@ -223,23 +261,43 @@
     return XLSX.read(new Uint8Array(buf), { type: 'array', cellDates: true });
   }
 
+  // 英文對照檔：data/en/<Excel 檔名去掉副檔名>.json，以「序號」對應每一則新聞。
+  // Excel 本身維持原樣不動；沒有對照檔時網站照常顯示中文，只是不出現語言切換鈕。
+  function loadEnglish(fileName) {
+    var base = String(fileName || '').replace(/\.[^.]+$/, '');
+    if (!base) return Promise.resolve(null);
+    return fetch('data/en/' + encodeURIComponent(base) + '.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; });
+  }
+
   function loadFromUrl(url, label) {
-    return fetch(url).then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.arrayBuffer();
-    }).then(function (buf) {
-      show(parseWorkbook(readWorkbook(buf), label || url.split('/').pop()));
+    var name = decodeURIComponent(url.split('/').pop());
+    return Promise.all([
+      fetch(url).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.arrayBuffer();
+      }),
+      loadEnglish(name)
+    ]).then(function (r) {
+      var rpt = parseWorkbook(readWorkbook(r[0]), label || name);
+      rpt.en = r[1];
+      show(rpt);
     });
   }
 
   function loadFromFile(file) {
     var fr = new FileReader();
     fr.onload = function () {
+      var rpt;
       try {
-        show(parseWorkbook(readWorkbook(fr.result), file.name.replace(/\.[^.]+$/, '')));
+        rpt = parseWorkbook(readWorkbook(fr.result), file.name.replace(/\.[^.]+$/, ''));
       } catch (e) {
         alert('無法解析這個檔案：' + e.message);
+        return;
       }
+      // 拖進來的檔案若與網站上某期同名，一樣套用它的英文對照
+      loadEnglish(file.name).then(function (en) { rpt.en = en; show(rpt); });
     };
     fr.readAsArrayBuffer(file);
   }
@@ -251,6 +309,7 @@
     report = rpt;
     state.cats = []; state.dates = []; state.ents = [];
     state.dcats = [];
+    state.lang = {};
 
     $('#stage-empty').hidden = true;
     $('#stage-report').hidden = false;
@@ -263,25 +322,50 @@
     // 日期欄可能出現「本週背景」這類非日期字樣，算範圍時只取真的日期
     var dates = uniq(rpt.news.map(function (n) { return n.date; }))
       .filter(function (d) { return /^\d{4}[\/\-.]\d{1,2}/.test(d); }).sort();
+    var nEn = rpt.news.filter(function (n) { return !!enOf(n); }).length;
     $('#rpt-stats').innerHTML =
-      stat('新聞', rpt.news.length + ' 則') +
-      stat('數據', rpt.data.length + ' 筆') +
-      (dates.length ? stat('日期範圍', dates[0] + ' – ' + dates[dates.length - 1]) : '') +
-      stat('分類', uniq(rpt.news.map(function (n) { return n.cat; })).filter(Boolean).length + ' 類');
+      stat('新聞', rpt.news.length, '則') +
+      stat('重點數據', rpt.data.length, '筆') +
+      (dates.length ? stat('新聞日期', shortDate(dates[0]) +
+        (dates.length > 1 ? ' – ' + shortDate(dates[dates.length - 1]) : ''), '') : '') +
+      stat('英文對照', nEn ? nEn + ' / ' + rpt.news.length : '—', nEn ? '則' : '');
+    $('#hero-eyebrow').textContent = nEn ? 'FOUNDRY BRIEF · 中英對照' : 'FOUNDRY BRIEF';
+    renderMix();
 
     $('#tabcount-news').textContent = rpt.news.length;
     $('#tabcount-data').textContent = rpt.data.length;
+    $('#tabcount-vocab').textContent = reportVocab().length || '';
+    $('#btn-all-lang').hidden = !nEn;
 
     buildFilters();
     buildDataFilter();
     renderNotes();
     renderNews();
     renderData();
+    renderVocab();
     syncTopbarHeight();
     window.scrollTo(0, 0);
   }
 
-  function stat(k, v) { return '<span class="stat">' + esc(k) + ' <b>' + esc(v) + '</b></span>'; }
+  function stat(k, v, unit) {
+    return '<div class="stat"><span>' + esc(k) + '</span><b>' + esc(v) +
+           (unit ? '<small>' + esc(unit) + '</small>' : '') + '</b></div>';
+  }
+
+  // 標題區的分類比例條：點圖例可直接篩選該分類
+  function renderMix() {
+    var cats = countBy(report.news, 'cat'), total = report.news.length || 1;
+    var keys = Object.keys(cats).sort(function (a, b) { return cats[b] - cats[a]; });
+    $('#rpt-mix').innerHTML =
+      '<div class="mix-bar">' + keys.map(function (c) {
+        return '<i class="c-' + catColor(c) + '" style="flex:' + cats[c] + '" title="' +
+               esc(c) + ' ' + cats[c] + ' 則"></i>';
+      }).join('') + '</div>' +
+      '<div class="mix-legend">' + keys.map(function (c) {
+        return '<button type="button" class="c-' + catColor(c) + '" data-cat="' + esc(c) + '">' +
+               '<i></i>' + esc(c) + '<b>' + Math.round(cats[c] / total * 100) + '%</b></button>';
+      }).join('') + '</div>';
+  }
 
   function uniq(a) {
     var seen = {}, out = [];
@@ -318,7 +402,7 @@
       optionHtml('', '全部日期', n.length, !state.dates.length) +
       dkeys.map(function (d) {
         var wd = weekdayOf(d);
-        return optionHtml(d, d.replace(/^\d{4}[\/\-.]/, '') + (wd ? ' ' + wd : ''),
+        return optionHtml(d, shortDate(d) + (wd ? ' ' + wd : ''),
                           dts[d], state.dates[0] === d);
       }).join('');
 
@@ -375,54 +459,189 @@
     $('#news-none').hidden = list.length > 0;
     $('#news-cards').hidden = !list.length;
     renderCards(list);
+    syncAllLangBtn();
   }
 
   function renderCards(list) {
     var html = '', lastDate = null;
+    var perDate = countBy(list, 'date');
     list.forEach(function (i) {
       if (i.date !== lastDate) {
         lastDate = i.date;
         var wd = weekdayOf(i.date);
-        html += '<div class="date-head"><b>' + esc(i.date || '未標日期') + '</b>' +
-                (wd ? '<span>' + wd + '</span>' : '') + '</div>';
+        var isDate = dateKey(i.date) > 0;
+        html += '<div class="date-head' + (isDate ? '' : ' is-bg') + '">' +
+                '<b>' + esc(isDate ? shortDate(i.date) : (i.date || '未標日期')) + '</b>' +
+                (wd ? '<span class="wd">' + wd + '</span>' : '') +
+                (isDate ? '' : '<span class="wd">區間外、理解本期必要的背景</span>') +
+                '<span class="line"></span><span class="cnt">' + (perDate[i.date] || 0) + ' 則</span></div>';
       }
       html += cardHtml(i);
     });
     $('#news-cards').innerHTML = html;
   }
 
+  function keyOf(i) { return i.no || i.title; }
+  function enOf(i) {
+    var m = report && report.en && report.en.news;
+    var e = m && i.no ? m[i.no] : null;
+    return e && e.title ? e : null;
+  }
+  function isWarn(conf) { return /待確認|預估|傳聞|未證實|揣測|非公司公告|草案|待驗證|Unconfirmed|Unverified/i.test(conf); }
+
+  // 英文內文：把本則的重點字彙包成 <mark>，滑過（手機點一下）顯示中文。每個字只標第一次出現
+  function markVocab(text, vocab, seen) {
+    var h = esc(text);
+    if (!vocab || !vocab.length) return h;
+    var zh = {};
+    var terms = vocab.map(function (v) { zh[v[0].toLowerCase()] = v[1]; return v[0]; })
+      .sort(function (a, b) { return b.length - a.length; });
+    var re = new RegExp('(^|[^A-Za-z0-9])(' + terms.map(function (t) { return escRe(esc(t)); }).join('|') +
+                        ')((?:s|es|d|ed)?)(?![A-Za-z0-9])', 'gi');
+    return h.replace(re, function (all, pre, word, suf) {
+      var k = word.toLowerCase();
+      var hit = null;
+      Object.keys(zh).some(function (t) { if (esc(t) === k) { hit = t; return true; } return false; });
+      if (!hit || seen[hit]) return all;
+      seen[hit] = 1;
+      return pre + '<mark class="vw" tabindex="0" data-zh="' + esc(zh[hit]) + '">' + word + suf + '</mark>';
+    });
+  }
+
   function cardHtml(i) {
-    var h = '<article class="card">';
-    h += '<div class="card-top">';
-    if (i.no)     h += '<span class="tag no">#' + esc(i.no) + '</span>';
-    if (i.cat)    h += '<span class="tag cat">' + esc(i.cat) + '</span>';
-    if (i.entity) h += '<span class="tag ent">' + esc(i.entity) + '</span>';
+    var en = enOf(i);
+    var isEn = !!en && state.lang[keyOf(i)] === 'en';
+    var bg = dateKey(i.date) < 0;
+    var h = '<article class="card c-' + catColor(i.cat) + (isEn ? ' is-en' : '') + (bg ? ' is-bg' : '') +
+            '" data-key="' + esc(keyOf(i)) + '"' + (isEn ? ' lang="en"' : '') + '>';
+
+    h += '<div class="card-top"><div class="tags">';
+    if (i.cat)    h += '<span class="tag cat">' + esc(isEn ? catEn(i.cat) : i.cat) + '</span>';
+    if (i.entity) h += '<span class="tag ent">' + esc(isEn && en.entity ? en.entity : i.entity) + '</span>';
+    if (bg)       h += '<span class="tag bgt">' + (isEn ? 'Background' : '本期背景') + '</span>';
+    h += '</div>';
+    if (en) {
+      h += '<div class="lang" role="group" aria-label="切換這則新聞的語言">' +
+           '<button type="button" data-lang="zh" aria-pressed="' + !isEn + '">中</button>' +
+           '<button type="button" data-lang="en" aria-pressed="' + isEn + '">EN</button></div>';
+    }
     h += '</div>';
 
-    var t = esc(i.title);
+    var seen = {};
+    var tx = function (zhText, enText) {
+      return isEn ? markVocab(enText || '', en.vocab, seen) : esc(zhText);
+    };
+    var title = isEn ? en.title : i.title;
+    var t = tx(i.title, en && en.title);
     h += '<h3>' + (isHttp(i.link)
         ? '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + t + '<span class="ext">↗</span></a>'
         : t) + '</h3>';
 
-    if (i.summary) h += '<p class="summary">' + esc(i.summary) + '</p>';
+    if (i.summary) h += '<p class="summary">' + tx(i.summary, en && en.summary) + '</p>';
 
     var kv = '';
-    if (i.metric) kv += '<div class="kv-item metric"><span class="k">關鍵數據</span><span class="v">' + esc(i.metric) + '</span></div>';
-    if (i.impact) kv += '<div class="kv-item"><span class="k">影響觀察</span><span class="v">' + esc(i.impact) + '</span></div>';
-    Object.keys(i.extras).forEach(function (k) {
-      kv += '<div class="kv-item"><span class="k">' + esc(k) + '</span><span class="v">' + esc(i.extras[k]) + '</span></div>';
-    });
+    // 關鍵數據只填「—」時不佔一格
+    if (i.metric && !/^[—–-]+$/.test(i.metric)) kv += '<div class="kv-item metric"><span class="k">' + (isEn ? 'Key figures' : '關鍵數據') +
+                        '</span><span class="v">' + tx(i.metric, en && en.metric) + '</span></div>';
+    if (i.impact) kv += '<div class="kv-item impact"><span class="k">' + (isEn ? 'Why it matters' : '影響觀察') +
+                        '</span><span class="v">' + tx(i.impact, en && en.impact) + '</span></div>';
+    if (!isEn) {
+      Object.keys(i.extras).forEach(function (k) {
+        kv += '<div class="kv-item"><span class="k">' + esc(k) + '</span><span class="v">' + esc(i.extras[k]) + '</span></div>';
+      });
+    }
     if (kv) h += '<div class="kv">' + kv + '</div>';
 
-    h += '<div class="card-foot">';
-    if (i.source) h += '<span>來源：' + esc(i.source) + '</span>';
-    if (i.conf) {
-      var warn = /待確認|預估|傳聞|未證實|揣測|非公司公告|草案/.test(i.conf);
-      h += '<span class="badge ' + (warn ? 'warn' : 'ok') + '">' + esc(i.conf) + '</span>';
+    if (isEn && en.vocab && en.vocab.length) {
+      h += '<div class="vocab"><span class="vocab-k">Vocabulary</span>' + en.vocab.map(function (v) {
+        var on = !!saved[v[0].toLowerCase()];
+        return '<button type="button" class="vchip' + (on ? ' is-saved' : '') + '" data-term="' + esc(v[0]) +
+               '" data-zh="' + esc(v[1]) + '" data-ctx="' + esc(title) + '" title="' + (on ? '已收藏，點一下取消' : '點一下收藏到單字本') + '">' +
+               '<b>' + esc(v[0]) + '</b><span>' + esc(v[1]) + '</span><i>' + (on ? '★' : '☆') + '</i></button>';
+      }).join('') + '</div>';
     }
-    if (isHttp(i.link)) h += '<a href="' + esc(i.link) + '" target="_blank" rel="noopener">原文連結</a>';
+
+    h += '<div class="card-foot">';
+    if (i.no)     h += '<span class="no">#' + esc(i.no) + '</span>';
+    if (i.source) h += '<span>' + (isEn ? 'Source: ' : '來源：') + esc(i.source) + '</span>';
+    if (i.conf) {
+      var conf = isEn && en.conf ? en.conf : i.conf;
+      h += '<span class="badge ' + (isWarn(i.conf) ? 'warn' : 'ok') + '">' + esc(conf) + '</span>';
+    }
+    if (isHttp(i.link)) h += '<a class="orig" href="' + esc(i.link) + '" target="_blank" rel="noopener">' +
+                             (isEn ? 'Original article' : '原文連結') + ' ↗</a>';
     h += '</div></article>';
     return h;
+  }
+
+  // 只重畫被切換的那一張卡，不動其他卡片與捲動位置
+  function rerenderCard(key) {
+    var item = null;
+    report.news.some(function (i) { if (keyOf(i) === key) { item = i; return true; } return false; });
+    var el = $('.card[data-key="' + (window.CSS && CSS.escape ? CSS.escape(key) : key) + '"]');
+    if (!item || !el) return;
+    var tmp = document.createElement('div');
+    tmp.innerHTML = cardHtml(item);
+    el.parentNode.replaceChild(tmp.firstChild, el);
+  }
+
+  function syncAllLangBtn() {
+    var withEn = report.news.filter(function (i) { return !!enOf(i); });
+    var allEn = withEn.length && withEn.every(function (i) { return state.lang[keyOf(i)] === 'en'; });
+    var b = $('#btn-all-lang');
+    b.textContent = allEn ? '全部切回中文' : '全部切成英文';
+    b.setAttribute('data-to', allEn ? 'zh' : 'en');
+  }
+
+  /* ---------- 英文字彙 ---------- */
+  function reportVocab() {
+    var out = [], seen = {};
+    if (!report || !report.en) return out;
+    report.news.forEach(function (i) {
+      var en = enOf(i);
+      if (!en || !en.vocab) return;
+      en.vocab.forEach(function (v) {
+        var k = v[0].toLowerCase();
+        if (seen[k]) return;
+        seen[k] = 1;
+        out.push({ t: v[0], zh: v[1], ctx: en.title, cat: i.cat });
+      });
+    });
+    return out;
+  }
+
+  function toggleSaved(t, zh, ctx) {
+    var k = t.toLowerCase();
+    if (saved[k]) delete saved[k];
+    else saved[k] = { t: t, zh: zh, ctx: ctx, at: Date.now() };
+    storeSaved(saved);
+  }
+
+  function renderVocab() {
+    var nSaved = Object.keys(saved).length;
+    $('#v-saved-count').textContent = nSaved;
+    var list;
+    if (state.vscope === 'saved') {
+      list = Object.keys(saved).map(function (k) { return saved[k]; })
+        .sort(function (a, b) { return (b.at || 0) - (a.at || 0); });
+    } else {
+      list = reportVocab();
+    }
+    $('#vocab-none').hidden = list.length > 0;
+    $('#vocab-none').textContent = state.vscope === 'saved'
+      ? '還沒有收藏任何單字。在英文模式的新聞卡下方，或本頁的字卡上按 ☆ 就能收藏。'
+      : '這一期還沒有英文對照與字彙。';
+    $('#vocab-grid').classList.toggle('is-quiz', state.vhide);
+    $('#vocab-grid').innerHTML = list.map(function (v) {
+      var on = !!saved[v.t.toLowerCase()];
+      return '<div class="vcard' + (v.cat ? ' c-' + catColor(v.cat) : '') + '">' +
+        '<button type="button" class="vstar' + (on ? ' is-saved' : '') + '" data-term="' + esc(v.t) +
+          '" data-zh="' + esc(v.zh) + '" data-ctx="' + esc(v.ctx || '') + '" aria-label="收藏">' + (on ? '★' : '☆') + '</button>' +
+        '<div class="vt" lang="en">' + esc(v.t) + '</div>' +
+        '<div class="vz" tabindex="0">' + esc(v.zh) + '</div>' +
+        (v.ctx ? '<div class="vc" lang="en">' + esc(v.ctx) + '</div>' : '') +
+      '</div>';
+    }).join('');
   }
 
   /* ---------- 重點數據 ---------- */
@@ -431,8 +650,13 @@
       return !state.dcats.length || state.dcats.indexOf(d.cat) >= 0;
     });
     $('#data-none').hidden = list.length > 0;
+    // 數據類別不是新聞的 7 大分類，改用類別名稱穩定地輪流配色
+    var palette = ['violet', 'teal', 'amber', 'sky', 'emerald', 'rose', 'fuchsia', 'orange'];
+    var order = uniq(report.data.map(function (d) { return d.cat; }));
     $('#data-grid').innerHTML = list.map(function (d) {
-      return '<div class="dcard">' +
+      var c = palette[Math.max(0, order.indexOf(d.cat)) % palette.length];
+      var bg = /本期背景|本週背景/.test(d.src);
+      return '<div class="dcard c-' + c + (bg ? ' is-bg' : '') + '">' +
         (d.cat ? '<div class="dcat">' + esc(d.cat) + '</div>' : '') +
         '<div class="ditem">' + esc(d.item) + '</div>' +
         '<div class="dval">' + esc(d.val) + '</div>' +
@@ -475,15 +699,67 @@
     window.addEventListener('resize', syncTopbarHeight);
 
     // 分頁
-    $$('.tab').forEach(function (b) {
-      b.addEventListener('click', function () {
-        $$('.tab').forEach(function (x) { x.classList.remove('is-on'); });
-        b.classList.add('is-on');
-        state.tab = b.dataset.tab;
-        $('#panel-news').hidden  = state.tab !== 'news';
-        $('#panel-data').hidden  = state.tab !== 'data';
-        $('#panel-notes').hidden = state.tab !== 'notes';
+    var goTab = function (name) {
+      $$('.tab').forEach(function (x) {
+        var on = x.dataset.tab === name;
+        x.classList.toggle('is-on', on);
+        x.setAttribute('aria-selected', on);
       });
+      state.tab = name;
+      $('#panel-news').hidden  = name !== 'news';
+      $('#panel-data').hidden  = name !== 'data';
+      $('#panel-vocab').hidden = name !== 'vocab';
+      $('#panel-notes').hidden = name !== 'notes';
+      if (name === 'vocab') renderVocab();
+    };
+    $$('.tab').forEach(function (b) {
+      b.addEventListener('click', function () { goTab(b.dataset.tab); });
+    });
+
+    // 標題區的分類圖例：直接篩選該分類
+    $('#rpt-mix').addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-cat]');
+      if (!b) return;
+      state.cats = [b.dataset.cat]; state.dates = []; state.ents = [];
+      goTab('news');
+      buildFilters(); renderNews();
+      $('#panel-news').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // 新聞卡：中 / EN 切換（只換這一張），以及收藏字彙
+    $('#news-cards').addEventListener('click', function (e) {
+      var lb = e.target.closest('.lang button');
+      if (lb) {
+        var key = lb.closest('.card').dataset.key;
+        if (lb.dataset.lang === 'en') state.lang[key] = 'en'; else delete state.lang[key];
+        rerenderCard(key);
+        syncAllLangBtn();
+        return;
+      }
+      var vc = e.target.closest('.vchip');
+      if (vc) {
+        toggleSaved(vc.dataset.term, vc.dataset.zh, vc.dataset.ctx);
+        rerenderCard(vc.closest('.card').dataset.key);
+        $('#v-saved-count').textContent = Object.keys(saved).length;
+      }
+    });
+    $('#btn-all-lang').addEventListener('click', function () {
+      var to = this.getAttribute('data-to');
+      report.news.forEach(function (i) {
+        if (!enOf(i)) return;
+        if (to === 'en') state.lang[keyOf(i)] = 'en'; else delete state.lang[keyOf(i)];
+      });
+      renderNews();
+    });
+
+    // 字彙分頁
+    $('#s-vscope').addEventListener('change', function () { state.vscope = this.value; renderVocab(); });
+    $('#c-vhide').addEventListener('change', function () { state.vhide = this.checked; renderVocab(); });
+    $('#vocab-grid').addEventListener('click', function (e) {
+      var s = e.target.closest('.vstar');
+      if (s) { toggleSaved(s.dataset.term, s.dataset.zh, s.dataset.ctx); renderVocab(); return; }
+      var z = e.target.closest('.vz');
+      if (z) z.classList.toggle('is-shown');
     });
 
     // 篩選下拉選單（單選，空值代表全部）
@@ -539,10 +815,11 @@
       var cur = document.documentElement.getAttribute('data-theme');
       applyTheme(cur === 'dark' ? 'light' : 'dark');
     });
-    try {
-      var saved = localStorage.getItem('wr-theme');
-      if (saved) document.documentElement.setAttribute('data-theme', saved);
-    } catch (err) {}
+    // 沒有手動選過時跟隨系統的深淺色
+    var theme = null;
+    try { theme = localStorage.getItem('wr-theme'); } catch (err) {}
+    if (!theme && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+    document.documentElement.setAttribute('data-theme', theme || 'light');
   }
 
   /* ============================================================

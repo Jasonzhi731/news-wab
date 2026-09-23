@@ -1,0 +1,825 @@
+{
+  "source": "全球半導體代工產業週報_20260914-20260921.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330)",
+      "title": "C.C. Wei at NTU forum: the AI frenzy has made advanced-node capacity forecasts 'even bigger'",
+      "summary": "TSMC Chairman and CEO C.C. Wei joined a National Taiwan University forum by video on 9/15, sharing how he picked electrical engineering by process of elimination and what he learned from Morris Chang — 'first, listen carefully' — and urging students to be proactive in their work and humble as people. On operations, TSMC had earlier projected at its Technology Symposium a roughly 70% CAGR in 2nm capacity for 2026–2028 and about 25% CAGR for 3nm and below over 2022–2027; Wei said that, thanks to the AI-driven frenzy, the latest projections have 'become even bigger'.",
+      "metric": "2nm capacity CAGR (2026–2028) ~70%; 3nm-and-below CAGR (2022–2027) ~25%; latest internal forecast revised up again (no specific figure)",
+      "impact": "The only chairman-level signal on capacity direction this week. Read with the same week's Longtan A14 approval and the Kaohsiung Mini-Loop plan, it forms consistent evidence that TSMC is accelerating advanced nodes and advanced packaging at the same time.",
+      "conf": "Confirmed (public forum remarks; size of the upward revision not specified)",
+      "vocab": [
+        [
+          "frenzy",
+          "狂潮"
+        ],
+        [
+          "process of elimination",
+          "消去法"
+        ],
+        [
+          "proactive",
+          "積極主動的"
+        ],
+        [
+          "humble",
+          "謙虛的"
+        ],
+        [
+          "projections",
+          "預估"
+        ],
+        [
+          "CAGR",
+          "年複合成長率"
+        ]
+      ]
+    },
+    "2": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC goes ex-dividend with a NT$7 quarterly payout and fills the gap in 27 minutes",
+      "summary": "TSMC's Q1 2026 cash dividend of NT$7.0000137 per share went ex-dividend on 9/16, with a total payout of about NT$181.526 billion to be paid on 10/8. After opening NT$5 lower, buyers poured in and the stock filled the dividend gap in just 27 minutes — the 23rd same-day fill since TSMC switched to quarterly dividends in 2019 (22 same-day fills out of 28 ex-dividend dates; the longest took 15 trading days). The ex-dividend shaved about 56.59 points off the TAIEX; the index closed at 45,848.9 that day, up 337.41 points (+0.74%), and TSMC closed at NT$2,380.",
+      "metric": "NT$7.0000137 per share, total ~NT$181.526B, paid 10/8; gap filled in 27 minutes (23rd same-day fill since quarterly dividends began); index impact ~56.59 pts; TAIEX 45,848.9 (+337.41, +0.74%), TSMC NT$2,380",
+      "impact": "The speed of the fill reflects investor conviction after August revenue topped NT$500 billion. Ex-dividend pressure was absorbed within the day, one of the preconditions for the index's four straight gains later in the week and its strong weekly rise.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "ex-dividend",
+          "除息"
+        ],
+        [
+          "payout",
+          "配發（股利）"
+        ],
+        [
+          "filled the dividend gap",
+          "填息"
+        ],
+        [
+          "poured in",
+          "湧入"
+        ],
+        [
+          "conviction",
+          "信心、認同"
+        ],
+        [
+          "precondition",
+          "前提"
+        ]
+      ]
+    },
+    "3": {
+      "entity": "Winbond (2344) / Infineon",
+      "title": "Winbond to buy Infineon's NOR Flash and F-RAM business for US$1.12 billion, closing in 2H 2027",
+      "summary": "Winbond announced an all-cash acquisition of 100% of Infineon's NOR Flash and F-RAM business for US$1.12 billion, expected to close in the second half of 2027 pending regulatory approvals. The target, headquartered in San Jose, California, has more than 30 years of memory-solution experience and a full differentiated product line; after closing it will operate independently under the 'Spansion' brand, keeping its existing US operating model. Winbond said the deal expands its global R&D resources and strengthens supply and customer service. TrendForce says the NOR Flash market is going through its biggest supply-demand reversal in a decade, and prices for high-density products could double on AI server and automotive demand.",
+      "metric": "Deal value US$1.12B (all cash, 100% stake); closing 2H 2027; target HQ San Jose, renamed Spansion; high-density NOR Flash prices could double",
+      "impact": "Consolidation in niche memory feeds back into foundry demand: NOR Flash and F-RAM are mostly made on mature nodes, so Winbond's expansion effectively locks in a long-term split between its own 12-inch capacity and outsourced foundry work — another support for mature-node demand this week.",
+      "conf": "Confirmed (company announcement; pending regulatory approval)",
+      "vocab": [
+        [
+          "acquisition",
+          "收購"
+        ],
+        [
+          "all-cash",
+          "全現金的"
+        ],
+        [
+          "pending regulatory approvals",
+          "尚待主管機關核准"
+        ],
+        [
+          "differentiated",
+          "差異化的"
+        ],
+        [
+          "reversal",
+          "翻轉"
+        ],
+        [
+          "consolidation",
+          "整併"
+        ],
+        [
+          "niche",
+          "利基的"
+        ]
+      ]
+    },
+    "4": {
+      "entity": "ACM Research",
+      "title": "Advanced nodes drive wet-process tool upgrades as ACM expands Ultra C Tahoe into a multi-process platform",
+      "summary": "ACM Research announced that Ultra C Tahoe has been expanded into a multi-process wet platform for both logic and memory, combining batch tank processing with single-wafer chambers — pairing the long process times and low chemical consumption of batch with the particle removal and low cross-contamination of single-wafer processing. In 26nm particle tests the average particle count was below 6, metal residue below 1×10⁹ atoms/cm², and sulfuric acid use can be cut by up to 75%. A new Tahoe Recycle process for regenerating wafer carriers has entered volume production at customers. The platform has been adopted by several major chipmakers.",
+      "metric": "26nm particle test: average <6 particles; metal residue <1×10⁹ atoms/cm²; sulfuric acid use cut by up to 75%; Tahoe Recycle in customer volume production",
+      "impact": "Advanced nodes and advanced packaging have put cleaning and wet processing on the critical path for yield, making it a second battleground for tool localization and consumables costs. A direct reference point for Taiwan's wet-process suppliers (Grand Process Technology, Scientech).",
+      "conf": "Confirmed (company release)",
+      "vocab": [
+        [
+          "wet processing",
+          "濕製程"
+        ],
+        [
+          "batch",
+          "批次（式）"
+        ],
+        [
+          "cross-contamination",
+          "交叉污染"
+        ],
+        [
+          "residue",
+          "殘留"
+        ],
+        [
+          "critical path",
+          "關鍵路徑"
+        ],
+        [
+          "consumables",
+          "耗材"
+        ]
+      ]
+    },
+    "5": {
+      "entity": "Japan / United States / GlobalFoundries",
+      "title": "Japan and US reportedly discuss building a chip fab together, to be run by GlobalFoundries, under the US$550 billion investment deal",
+      "summary": "Nikkei reported that Japan and the United States are in talks to build a semiconductor fab as part of the US$550 billion investment agreement. The investment would be about ¥2–3 trillion (roughly US$12.85–19.27 billion), with GlobalFoundries operating the fab and a focus on logic chips rather than memory. Talks are at an early stage: plant size, location, process and production schedule have not been disclosed, and the US side has asked about the project's feasibility and investment payback. Earlier investments under the deal were concentrated in energy.",
+      "metric": "Investment ¥2–3 trillion (~US$12.85–19.27B); operator GlobalFoundries; focus on logic chips; part of the US$550B Japan-US investment agreement",
+      "impact": "If it goes ahead, GF would gain double support from Japanese subsidies and the Japan-US framework, adding another node to the geopolitical footprint of mature and specialty processes. For Rapidus it means competition for domestic resources; for Taiwan's mature-node foundries it is a supply-increase variable after 2029.",
+      "conf": "Unconfirmed (early-stage talks; not announced by Japan, the US or GF)",
+      "vocab": [
+        [
+          "in talks",
+          "洽談中"
+        ],
+        [
+          "feasibility",
+          "可行性"
+        ],
+        [
+          "payback",
+          "投資回收"
+        ],
+        [
+          "subsidies",
+          "補貼"
+        ],
+        [
+          "footprint",
+          "布局"
+        ],
+        [
+          "specialty processes",
+          "特殊製程"
+        ]
+      ]
+    },
+    "6": {
+      "entity": "Central Bank of the Republic of China (Taiwan)",
+      "title": "Central bank holds rates for the tenth straight time and raises Taiwan's 2026 GDP growth forecast to 11.48%",
+      "summary": "At its 9/17 board meeting, Taiwan's central bank left its policy rate unchanged for the tenth consecutive time, raised its 2026 GDP growth forecast to 11.48%, and relaxed the loan-to-value cap on second home mortgages to 70%. The bank also said inflationary pressure from AI is manageable in the short term and will ease in the long run as productivity rises.",
+      "metric": "Policy rate unchanged for the 10th straight meeting; 2026 GDP growth forecast raised to 11.48%; LTV cap on second home mortgages relaxed to 70%",
+      "impact": "A double-digit GDP forecast, driven mainly by semiconductor and AI server exports, is the highest-level macro endorsement of the foundry boom; holding rates steady also eased pressure on Taiwan stocks from this week's worries about US rate hikes.",
+      "conf": "Confirmed (official decision)",
+      "vocab": [
+        [
+          "policy rate",
+          "政策利率"
+        ],
+        [
+          "loan-to-value",
+          "貸款成數"
+        ],
+        [
+          "mortgage",
+          "房貸"
+        ],
+        [
+          "inflationary pressure",
+          "通膨壓力"
+        ],
+        [
+          "productivity",
+          "生產力"
+        ],
+        [
+          "endorsement",
+          "背書"
+        ]
+      ]
+    },
+    "7": {
+      "entity": "Asahi Kasei / China",
+      "title": "Former Asahi Kasei manager allegedly stole semiconductor secrets that flowed to a Chinese company",
+      "summary": "A former manager at Japan's Asahi Kasei is suspected of stealing semiconductor-related trade secrets, with the technology flowing to a Chinese company. The case has drawn intense concern in Japanese industry about technology leakage and talent poaching.",
+      "metric": "—",
+      "impact": "Read with the same week's Chinese Academy of Sciences progress on extending DUV via GAA structures, it shows that under equipment controls, talent and technology leakage has become another route for China to advance leading-edge processes; trade-secret protection is an ongoing risk for Taiwanese and Japanese foundries.",
+      "conf": "Confirmed (court case; details subject to official disclosures)",
+      "vocab": [
+        [
+          "allegedly",
+          "據稱、涉嫌"
+        ],
+        [
+          "trade secrets",
+          "營業秘密"
+        ],
+        [
+          "leakage",
+          "外流"
+        ],
+        [
+          "poaching",
+          "挖角"
+        ],
+        [
+          "suspected",
+          "涉嫌的"
+        ],
+        [
+          "ongoing",
+          "持續的"
+        ]
+      ]
+    },
+    "8": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's Longtan angstrom fab clears first hurdle: NDC approves the 104-hectare expansion, with three fabs estimated at over NT$1 trillion",
+      "summary": "On 9/17 the National Development Council approved the expansion plan for the Longtan park of Hsinchu Science Park — the first administrative hurdle for TSMC's return to the site after three years. The land area was cut from the originally planned 158.59 hectares to about 104 hectares, targeting angstrom-era processes at 1.4nm (A14) and below; if all three fabs are completed, the investment is estimated at over NT$1 trillion, with the first fab targeting completion and volume production around 2030. The plan still requires Executive Yuan approval and an environmental impact assessment, and faces five issues — land, water, power, traffic and local communication — with water and power seen as the most critical.",
+      "metric": "Land ~104 ha (originally 158.59 ha); process 1.4nm (A14) and below; three fabs estimated at over NT$1T; first fab volume production around 2030",
+      "impact": "It eases the long-standing 'no land available' bottleneck for advanced nodes and moves A14's path to landing in Taiwan a step forward. But the environmental review and water and power are execution risks for 2027–2028 — and also a mid-term source of orders for Taiwan's facility engineering and utility infrastructure.",
+      "conf": "Confirmed (still pending Executive Yuan approval and environmental review; not final)",
+      "vocab": [
+        [
+          "hurdle",
+          "關卡"
+        ],
+        [
+          "hectares",
+          "公頃"
+        ],
+        [
+          "angstrom",
+          "埃米"
+        ],
+        [
+          "environmental impact assessment",
+          "環境影響評估"
+        ],
+        [
+          "execution risks",
+          "執行風險"
+        ],
+        [
+          "utility",
+          "水電（公用事業）"
+        ]
+      ]
+    },
+    "9": {
+      "entity": "Chinese Academy of Sciences / China advanced nodes",
+      "title": "Chinese Academy of Sciences extends DUV with a GAA structure; experts say 5nm-class density is the near-term limit",
+      "summary": "The Chinese Academy of Sciences published a new GAA (gate-all-around) transistor architecture, claiming it can achieve '3nm-node-equivalent performance' with existing DUV tools, with an on/off ratio above 500,000 and clearly improved leakage control. But the industry points out that the breakthrough only addresses front-end (FEOL) transistor design; middle-of-line (MEOL) and back-end-of-line (BEOL) metal interconnects and M0 routing remain bottlenecks, putting the realistic density limit at about the 5nm class rather than true 3nm.",
+      "metric": "On/off ratio >500,000×; claimed 3nm-node-equivalent performance; industry estimate of realistic density limit ~5nm class; bottlenecks in MEOL/BEOL metal interconnects and M0 routing",
+      "impact": "Without EUV, China is trading architectural innovation for node equivalence — the same strategic route as Huawei's Tau scaling/LogicFolding. It gives SMIC room to imagine mid-term yield and cost gains, but until the interconnect bottleneck is solved, it is no real substitute for TSMC's advanced nodes.",
+      "conf": "Confirmed (academic result; manufacturability unproven)",
+      "vocab": [
+        [
+          "gate-all-around",
+          "環繞閘極"
+        ],
+        [
+          "equivalent",
+          "等效的"
+        ],
+        [
+          "on/off ratio",
+          "開關比"
+        ],
+        [
+          "leakage",
+          "漏電"
+        ],
+        [
+          "breakthrough",
+          "突破"
+        ],
+        [
+          "substitute",
+          "替代品"
+        ]
+      ]
+    },
+    "10": {
+      "entity": "Forge Nano / Taiwan equipment supply chain",
+      "title": "Forge Nano bets on Taiwan as its production base for next-generation ALD tools",
+      "summary": "US chip-equipment maker Forge Nano has chosen Taiwan as its main production base for next-generation atomic layer deposition (ALD) tools, partnering with precision-machinery maker Manz Asia. CEO Paul Lichty said the strongest growth opportunities are in Asia, followed by the US, and that Southeast Asia may be one of the fastest-growing markets for ALD tools (with Taiwan, Malaysia, Singapore, Thailand and Vietnam all building fabs). Taiwan was chosen to use local partners' supply chain and manufacturing capabilities to finish tools faster and supply nearby fabs directly. Founded in 2011, Forge Nano's investors include Samsung, Air Liquide, Hanwha Aerospace, Volkswagen and LG Energy Solution.",
+      "metric": "Partner Manz Asia; founded 2011; investors include Samsung, Air Liquide, Hanwha Aerospace, Volkswagen, LG Energy Solution",
+      "impact": "ALD is a key thin-film process for both advanced nodes and advanced packaging. A foreign vendor moving production to Taiwan shows foundry expansion has made local delivery lead times for tools a competitive factor — echoing this month's signal that TSMC's equipment procurement needs were raised 1.9× within six months.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "atomic layer deposition",
+          "原子層沉積（ALD）"
+        ],
+        [
+          "production base",
+          "生產基地"
+        ],
+        [
+          "thin-film",
+          "薄膜"
+        ],
+        [
+          "lead times",
+          "交期"
+        ],
+        [
+          "procurement",
+          "採購"
+        ],
+        [
+          "precision-machinery",
+          "精密機械"
+        ]
+      ]
+    },
+    "11": {
+      "entity": "Taiwan stocks / UMC (2303)",
+      "title": "UMC soars 8.81% to a two-month high; TAIEX jumps 892 points above 47,000, up 995 points on the week",
+      "summary": "On 9/18 UMC gapped up 5.08% at the open and soared 8.81% to NT$160.5, its highest since mid-July, as net buying by the three major institutional investors for the week widened to 56,287 lots. The TAIEX rose 892.75 points to close at 47,180.75 on turnover above NT$1 trillion, up 995.9 points (+2.16%) for the week. TSMC rose 1.44% to NT$2,460, contributing more than 270 points on its own; electronics stocks gained 2.44% and made up 78.32% of turnover; Largan rose 6.81%, MediaTek 4.67%, and ABF substrate stocks also strengthened.",
+      "metric": "UMC NT$160.5 (+8.81%), institutional weekly net buying 56,287 lots; TAIEX 47,180.75 (+892.75), weekly +995.9 pts (+2.16%), turnover >NT$1T; TSMC NT$2,460 (+1.44%), contributing >270 pts",
+      "impact": "Money is clearly rotating into mature-node foundries. UMC's Q3 guidance — wafer shipments up 7–9% QoQ, capacity of about 1.325 million 12-inch-equivalent wafers, utilization above 90% and gross margin of 34–36% — is the numerical basis for this valuation recovery.",
+      "conf": "Confirmed (closing prices for reference only, not current prices)",
+      "vocab": [
+        [
+          "gapped up",
+          "跳空開高"
+        ],
+        [
+          "soared",
+          "飆漲"
+        ],
+        [
+          "lots",
+          "張（股票交易單位）"
+        ],
+        [
+          "guidance",
+          "財測指引"
+        ],
+        [
+          "utilization",
+          "稼動率"
+        ],
+        [
+          "valuation recovery",
+          "評價修復"
+        ]
+      ]
+    },
+    "12": {
+      "entity": "CXMT",
+      "title": "CXMT reportedly plans to enter the NAND market, challenging Samsung and YMTC",
+      "summary": "Reports say CXMT, China's largest DRAM maker, plans to enter the NAND Flash market, challenging Samsung and YMTC amid a global memory shortage. The move follows the large-scale DRAM equipment investment and expansion plan it launched earlier in September (targeting monthly capacity of more than 600,000 wafers by 2028).",
+      "metric": "New segment: NAND Flash; up against Samsung and YMTC; follows the plan for DRAM monthly capacity of 600,000+ wafers by 2028",
+      "impact": "China's memory expansion will keep crowding out domestic 12-inch tools, cleanrooms and engineering staff, creating internal competition for SMIC, Hua Hong and Nexchip's mature-node expansion while stretching global tool lead times — exactly the industry backdrop behind Forge Nano's choice to build in Taiwan this week.",
+      "conf": "Unconfirmed (market rumor; not announced by CXMT)",
+      "vocab": [
+        [
+          "shortage",
+          "短缺"
+        ],
+        [
+          "amid",
+          "在……之際"
+        ],
+        [
+          "crowding out",
+          "排擠"
+        ],
+        [
+          "cleanrooms",
+          "潔淨室"
+        ],
+        [
+          "backdrop",
+          "背景"
+        ],
+        [
+          "rumor",
+          "傳聞"
+        ]
+      ]
+    },
+    "13": {
+      "entity": "South Korea / United States",
+      "title": "Korea delays announcing its US investment plan; President Lee Jae-myung: negotiations are tough",
+      "summary": "South Korean President Lee Jae-myung said negotiations over investment in the US have run into difficult issues, and the related investment plan will be announced later. By comparison, Japan has already secured tariff treatment with its US$550 billion agreement, while Taiwan has obtained non-semiconductor Section 232 preferences and a 2.5× duty-free import quota under the Taiwan-US MOU.",
+      "metric": "Korea's US investment plan announcement delayed; Japan's US$550B agreement; Taiwan's 2.5× duty-free import quota",
+      "impact": "The gaps between Taiwan's, Japan's and Korea's US investment deals will translate directly into differences in Section 232 semiconductor tariff rates and quotas, shaping the relative cost of US capacity for Samsung, SK hynix and Taiwanese firms — a hidden variable in 2027 advanced-node competition.",
+      "conf": "Confirmed (public remarks by the head of state)",
+      "vocab": [
+        [
+          "negotiations",
+          "協商"
+        ],
+        [
+          "tariff",
+          "關稅"
+        ],
+        [
+          "duty-free",
+          "免稅的"
+        ],
+        [
+          "quota",
+          "配額"
+        ],
+        [
+          "Section 232",
+          "232 條款（美國國安關稅）"
+        ],
+        [
+          "hidden variable",
+          "隱性變數"
+        ]
+      ]
+    },
+    "14": {
+      "entity": "Silicon photonics / foundry applications",
+      "title": "Silicon photonics moves beyond the data center into autonomous-driving lidar, biomedical testing and defense navigation",
+      "summary": "Reports say silicon photonics is spilling beyond data centers into three new fields. First, autonomous-driving lidar, where FMCW architectures enable smaller, more durable systems; Yole Group forecasts the global automotive lidar market will reach US$3.56 billion in 2030, with Aeva and SiLC pushing commercialization. Second, real-time biomedical testing, miniaturizing optical detection for proteins, biomarkers and pathogens (Genalyte, SiPhox Health and others — most still awaiting clinical validation and regulatory approval). Third, defense navigation: National Sun Yat-sen University has integrated several optical components on a 4×1.2mm chip for inertial navigation in self-driving cars and drones. The global photonics market is about US$865 billion (Photonics21).",
+      "metric": "Automotive lidar market ~US$3.56B by 2030 (Yole); NSYSU integrated chip 4×1.2mm; global photonics market ~US$865B (Photonics21)",
+      "impact": "The addressable market for silicon photonics foundry work is no longer limited to CPO. For specialty foundries like UMC (12-inch silicon photonics platform opening to customers in 2027) and Vanguard, this is the clearest second growth curve outside advanced nodes; but high certification bars in automotive, clinical and aerospace mean volumes will ramp more slowly than in data centers.",
+      "conf": "Confirmed (market sizes are research-firm forecasts)",
+      "vocab": [
+        [
+          "lidar",
+          "光達"
+        ],
+        [
+          "durable",
+          "耐用的"
+        ],
+        [
+          "miniaturizing",
+          "微型化"
+        ],
+        [
+          "pathogens",
+          "病原體"
+        ],
+        [
+          "inertial navigation",
+          "慣性導航"
+        ],
+        [
+          "certification",
+          "認證"
+        ]
+      ]
+    },
+    "15": {
+      "entity": "Gallant Micro / CPO supply chain",
+      "title": "As CPO product designs evolve, Gallant Micro moves custom FAU inspection from sampling to 100% production testing",
+      "summary": "As co-packaged optics (CPO) product structures keep evolving, Gallant Micro has upgraded custom inspection of fiber array units (FAUs) from sample testing to full production testing, to meet CPO's strict requirements for optical coupling alignment accuracy.",
+      "metric": "Custom FAU inspection: sampling → 100% production testing",
+      "impact": "It echoes the claim at this month's SEMICON Taiwan that 'CPO is expected to enter volume production in the second half' — moving from sampling to full inspection is usually the last mile before mass production. Taiwan's optical inspection and precision machining firms are the most direct beneficiaries of the CPO ramp.",
+      "conf": "Confirmed",
+      "vocab": [
+        [
+          "co-packaged optics",
+          "共同封裝光學（CPO）"
+        ],
+        [
+          "fiber array units",
+          "光纖陣列單元（FAU）"
+        ],
+        [
+          "inspection",
+          "檢測"
+        ],
+        [
+          "alignment accuracy",
+          "對位精度"
+        ],
+        [
+          "coupling",
+          "耦合"
+        ],
+        [
+          "last mile",
+          "最後一哩"
+        ]
+      ]
+    },
+    "16": {
+      "entity": "UMC (2303) / PSMC (6770) / Vanguard (5347)",
+      "title": "Mature-node foundries launch 'noticeable' price hikes: UMC says 2027 increases will be clearer, PSMC rumored to raise prices 40%",
+      "summary": "UMC said that if supply-demand trends continue, price adjustments in 2027 will be 'more noticeable and more pronounced' than in 2H 2026; its Q3 guidance calls for high-single-digit QoQ wafer shipment growth, utilization above 90% and gross margin in the mid-30% range. The market says PSMC may raise prices on some product lines by up to 40%; the company would not comment on the rumor but confirmed strong customer demand (August revenue of NT$7.009 billion was a 50-month high). Reports say this wave is driven by AI infrastructure rather than consumer restocking — every HPC chip needs many power-management ICs, MCUs, sensors and MOSFETs. And as TSMC gradually exits some mature nodes, orders are spilling over to UMC, PSMC and Vanguard, tightening both 8-inch and 12-inch mature capacity.",
+      "metric": "UMC 2027 price increases 'more pronounced than 2H26'; Q3 utilization >90%, gross margin mid-30s%; PSMC rumored hikes up to 40% on some lines, Aug revenue NT$7.009B (50-month high); AI peripheral parts: PMIC, MCU, sensors, MOSFET",
+      "impact": "The most important item for foundry fundamentals this week. The driver of price hikes has shifted from 'supply contraction' to 'demand for AI peripheral components', making this mature-node cycle's durability easier to identify than the 2021 wave; Vanguard, as a partner in TSMC's mature-node ecosystem, benefits most directly from the overflow.",
+      "conf": "Confirmed (PSMC's 40% hike is a market rumor, not confirmed by the company)",
+      "vocab": [
+        [
+          "price hikes",
+          "漲價"
+        ],
+        [
+          "pronounced",
+          "明顯的"
+        ],
+        [
+          "high-single-digit",
+          "高個位數"
+        ],
+        [
+          "restocking",
+          "回補庫存"
+        ],
+        [
+          "fundamentals",
+          "基本面"
+        ],
+        [
+          "durability",
+          "持續性"
+        ]
+      ]
+    },
+    "17": {
+      "entity": "TSMC (2330) / AUO (2409)",
+      "title": "TSMC plans a Kaohsiung Mini-Loop to speed up CoWoS tool qualification; reportedly in talks for AUO's Taichung site for CoPoS",
+      "summary": "TSMC plans a modular 'Mini-Loop' line in Kaohsiung's Baipu industrial park to validate new tools and processes before they are fully deployed in CoWoS, reportedly raising qualification efficiency by 25–50%. It targets a pain point for back-end equipment vendors, which lack independent validation resources as AI chips evolve rapidly. TSMC Vice President Jun He estimates CoWoS capacity will grow at a CAGR of more than 80% through 2027 and keep growing through 2029; thanks to its maturity and yield advantages, CoWoS-L should remain the mainstream AI chip packaging before 2028, competing with Intel's EMIB-T. The next-generation CoPoS switches to square glass substrates and glass-core substrates (TGV). TSMC has repeatedly visited AUO's Central Taiwan Science Park site, in talks covering a plant transaction and CoPoS capacity; the CoPoS pilot-line technology is expected to mature in about a year, with supply-chain focus on ultrafast-laser TGV forming and inspection for micro-cracks in volume production.",
+      "metric": "Mini-Loop in Kaohsiung's Baipu park, qualification efficiency +25–50%; CoWoS capacity CAGR >80% through 2027, growth continuing to 2029; CoWoS-L to remain mainstream until 2028; CoPoS pilot-line technology mature in ~1 year",
+      "impact": "It fills in the other half of the 9/12 story about 'CoWoS shortfall spilling over to UMC and Amkor': TSMC is not holding back on expansion — it has shifted the bottleneck to how fast tools can be qualified. If CoPoS lands at AUO's site, it would be the first time panel-level packaging truly combines a ready-made plant with panel-manufacturing know-how.",
+      "conf": "Unconfirmed (the AUO plant deal is market news, not announced by either side; the CoWoS CAGR is a TSMC executive's estimate)",
+      "vocab": [
+        [
+          "modular",
+          "模組化的"
+        ],
+        [
+          "pain point",
+          "痛點"
+        ],
+        [
+          "mainstream",
+          "主流"
+        ],
+        [
+          "pilot-line",
+          "試產線"
+        ],
+        [
+          "micro-cracks",
+          "微裂"
+        ],
+        [
+          "know-how",
+          "技術經驗"
+        ]
+      ]
+    },
+    "18": {
+      "entity": "Taiwan stocks / TSMC (2330)",
+      "title": "TAIEX posts a fourth straight gain to close at a new swing high of 47,718; TSMC closes at NT$2,480",
+      "summary": "On 9/21 the TAIEX closed at 47,718.84, up 538.09 points (+1.14%) on turnover of NT$820.2 billion, its fourth consecutive gain for a combined rise of 2,207 points. TSMC opened lower at NT$2,445 before turning positive, hitting an intraday high of NT$2,485 and closing at NT$2,480, up NT$20 (+0.81%); MediaTek, Delta Electronics and ASE (up more than 3%) also strengthened. AI GPU and ASIC server demand lifted ABF substrate and PCB stocks: Unimicron and Kinsus rose more than half the daily limit, and Nan Ya PCB gained over 4%.",
+      "metric": "TAIEX 47,718.84 (+538.09, +1.14%); turnover NT$820.2B; four-day gain +2,207 pts; TSMC NT$2,480 (+0.81%), intraday high NT$2,485",
+      "impact": "Substrates and PCBs rising together show the market has translated this week's advanced-packaging bottleneck news (Mini-Loop and CoPoS) into expectations of supply-chain orders, rather than treating it purely as a foundry story.",
+      "conf": "Confirmed (closing prices for reference only, not current prices)",
+      "vocab": [
+        [
+          "swing high",
+          "波段高點"
+        ],
+        [
+          "consecutive",
+          "連續的"
+        ],
+        [
+          "turning positive",
+          "翻紅"
+        ],
+        [
+          "daily limit",
+          "漲跌停幅度"
+        ],
+        [
+          "substrate",
+          "載板"
+        ],
+        [
+          "expectations",
+          "預期"
+        ]
+      ]
+    },
+    "19": {
+      "entity": "China MLCC / AI components",
+      "title": "China's MLCC market splits: AI-grade orders booked to 2027Q2 while consumer-grade spot prices fall",
+      "summary": "Reports say China's MLCC market is clearly diverging: order visibility for AI-grade products now extends to Q2 2027, while spot prices for consumer-grade parts keep falling.",
+      "metric": "AI-grade MLCC order visibility to 2027Q2; consumer-grade spot prices declining",
+      "impact": "It mirrors the split in mature-node foundry work — AI-related components are extremely tight while consumer demand stays weak. That explains why this wave of price hikes centers on AI peripheral items such as PMICs, MCUs and MOSFETs rather than a broad mature-node recovery.",
+      "conf": "Confirmed (supply-chain reports)",
+      "vocab": [
+        [
+          "diverging",
+          "分化"
+        ],
+        [
+          "order visibility",
+          "訂單能見度"
+        ],
+        [
+          "spot prices",
+          "現貨價"
+        ],
+        [
+          "mirrors",
+          "反映、與……同構"
+        ],
+        [
+          "tight",
+          "吃緊的"
+        ],
+        [
+          "broad",
+          "全面的"
+        ]
+      ]
+    },
+    "20": {
+      "entity": "UMC (2303)",
+      "title": "UMC's Q3 guidance and 2026 capex: raised from US$1.5 billion to US$2 billion",
+      "summary": "UMC's self-reported August consolidated revenue was NT$25.044 billion, up 5.04% MoM and 30.71% YoY — a 47-month high. Q3 guidance: wafer shipments up 7–9% QoQ, US-dollar ASP stable, quarterly capacity edging up to about 1.325 million 12-inch-equivalent wafers, utilization rising above 90%, and gross margin of 34–36%. 2026 capex was raised from US$1.5 billion to US$2 billion, mainly for capacity expansion at Singapore's Fab 12i P4 and Tainan's Fab 12A P7/8. CEO Jason Wang said computing, communications and consumer demand are recovering together, with a clear rebound in the 8-inch product mix.",
+      "metric": "Aug revenue NT$25.044B (MoM +5.04%, YoY +30.71%); Q3 shipments +7–9% QoQ, quarterly capacity ~1.325M 12-inch equivalents, utilization >90%, gross margin 34–36%; 2026 capex US$1.5B → US$2B (Singapore 12i P4, Tainan 12A P7/8)",
+      "impact": "The capex increase is key confirmation that this mature-node price rise can last — UMC is starting to lay down capacity ahead of 2027–2028 demand, not just harvesting higher prices.",
+      "conf": "Background (August revenue and earnings-call guidance were originally released outside this period)",
+      "vocab": [
+        [
+          "capex",
+          "資本支出"
+        ],
+        [
+          "ASP",
+          "平均售價"
+        ],
+        [
+          "12-inch-equivalent",
+          "12 吋約當"
+        ],
+        [
+          "product mix",
+          "產品組合"
+        ],
+        [
+          "rebound",
+          "回升"
+        ],
+        [
+          "harvesting",
+          "收割"
+        ]
+      ]
+    },
+    "21": {
+      "entity": "Rapidus",
+      "title": "Rapidus prices 2nm at ¥3–3.5 million per wafer; Fujitsu is its first commercial customer",
+      "summary": "Rapidus is targeting 2nm foundry pricing of ¥3–3.5 million per wafer (about NT$587,000–685,000), a clear price advantage over the roughly US$30,000 TSMC charges for a comparable process. It has approached more than 60 potential customers since early 2026. Fujitsu, one of its founding investors, is confirmed as the first commercial customer and will outsource 2nm AI neural-network processors; IBM Japan is seen as the second-largest customer, and Canadian AI chip startup Tenstorrent has also secured an early capacity commitment. IIM-1 in Chitose starts with monthly capacity of 6,000 wafers, rising to about 25,000 by 2028, with 2nm volume production targeted for 2027.",
+      "metric": "2nm pricing ¥3–3.5M/wafer (TSMC comparable ~US$30K); 60+ potential customers approached; customers: Fujitsu, IBM Japan, Tenstorrent; IIM-1 monthly capacity 6,000 → ~25,000 wafers by 2028",
+      "impact": "Its positioning — low prices plus short TAT for small-volume, high-mix orders — is now concrete, but poses no volume threat to TSMC. Read with this week's news that Japan and the US may have GF run a new fab, Japan is betting on two routes at once: 'homegrown advanced nodes' and 'foreign-run mature nodes'.",
+      "conf": "Background (no new announcement within this period)",
+      "vocab": [
+        [
+          "commercial customer",
+          "商業客戶"
+        ],
+        [
+          "outsource",
+          "委外（生產）"
+        ],
+        [
+          "startup",
+          "新創公司"
+        ],
+        [
+          "capacity commitment",
+          "產能承諾"
+        ],
+        [
+          "TAT",
+          "生產週期（turnaround time）"
+        ],
+        [
+          "high-mix",
+          "多樣少量的"
+        ]
+      ]
+    },
+    "22": {
+      "entity": "SMIC (0981.HK) / Hua Hong (1347.HK)",
+      "title": "China's mature nodes run full: Hua Hong utilization at 109.5%, SMIC raises some prices by about 10%",
+      "summary": "SMIC has raised prices on some capacity by about 10%; Hua Hong's overall capacity utilization has passed 109.5%, and another 12-inch fab still ramping is expected to complete its full capacity configuration in Q3 2026. SMIC, Hua Hong and Nexchip have all entered the global top 10 by foundry revenue (SMIC 3rd, Hua Hong 6th). Research firms forecast global 8-inch foundry capacity will fall 2.4% YoY in 2026, and with supply shrinking, 8-inch utilization could recover to 90%.",
+      "metric": "Hua Hong overall utilization 109.5%; SMIC price increase ~10% on some capacity; 2026 global 8-inch foundry capacity YoY -2.4%, utilization back to ~90%",
+      "impact": "China's mature nodes have swung from price wars to full-load price increases, which in turn makes Taiwanese foundries (UMC, Vanguard) the first choice for customers diversifying risk — the external condition that lets Taiwanese foundries' 'noticeable price hikes' stick this week.",
+      "conf": "Background (utilization and price figures come from earlier results and reports, not new announcements in this period)",
+      "vocab": [
+        [
+          "capacity utilization",
+          "產能利用率"
+        ],
+        [
+          "configuration",
+          "配置"
+        ],
+        [
+          "shrinking",
+          "收縮"
+        ],
+        [
+          "price wars",
+          "價格戰"
+        ],
+        [
+          "diversifying",
+          "分散"
+        ],
+        [
+          "stick",
+          "（漲價）站穩、落實"
+        ]
+      ]
+    },
+    "23": {
+      "entity": "Taiwan-US Section 232",
+      "title": "Taiwan's Section 232 chip treatment: zero tariff within quota, 15% above it — rates and timing still unannounced",
+      "summary": "Taiwan and the US have reached broad consensus on Section 232, under which Taiwanese semiconductors are expected to receive most-favored treatment of 'zero tariff within the quota and a preferential 15% rate above it', making Taiwan the first country to secure a preferential model before the Section 232 chip tariffs are finalized. Non-semiconductor 232 preferences (15% for auto parts) are already in effect. However, the semiconductor 232 rates and implementation timeline have still not been announced, and the government continues to seek duty-free quotas and an exclusion mechanism through government-to-government channels. In early September Trump publicly floated rates of 100%/200%.",
+      "metric": "Zero tariff within quota, 15% preferential rate above quota (most-favored treatment); non-semiconductor 232 preferences in effect (auto parts 15%); semiconductor 232 rates and timing not yet announced",
+      "impact": "This is the policy premise for understanding the pace of TSMC's and UMC's US expansion. If the quota mechanism is formally implemented, overseas capacity will shift from a 'geopolitical hedge' to a 'quantifiable tariff asset'.",
+      "conf": "Background (negotiation progress per official statements; formal rates not yet announced)",
+      "vocab": [
+        [
+          "consensus",
+          "共識"
+        ],
+        [
+          "most-favored",
+          "最惠的"
+        ],
+        [
+          "preferential",
+          "優惠的"
+        ],
+        [
+          "exclusion",
+          "排除"
+        ],
+        [
+          "hedge",
+          "避險"
+        ],
+        [
+          "quantifiable",
+          "可量化的"
+        ]
+      ]
+    },
+    "24": {
+      "entity": "Samsung Foundry",
+      "title": "Samsung pushes SF1.4 to 2029 and will focus on refining SF2 for the next three years",
+      "summary": "At the Next Generation Lithography and Patterning conference (NGL 2026), Samsung updated its process roadmap: it will no longer rush SF1.4 (1.4nm-class) and will instead focus on refining its SF2 (2nm-class) process over the next three years, moving SF1.4 volume production to 2029; nodes below 1nm will wait for High-NA EUV after 2030. Earlier, the market said Samsung's 2nm orders from Qualcomm had been pushed to 2027 over price negotiations, while Samsung's 2nm GAA yield has risen from under 50% at the start of the year to over 70%.",
+      "metric": "SF1.4 volume production moved to 2029; focus on SF2 for the next three years; sub-1nm awaits High-NA EUV (after 2030); 2nm GAA yield <50% → >70%",
+      "impact": "Samsung's strategy has shifted from 'racing for nodes' to 'stabilizing 2nm and bargaining hard on price'. That moves the 2027–2028 advanced-node battle back to yield and capacity rather than roadmap timing, actually easing schedule pressure on TSMC's A16/A14.",
+      "conf": "Background (originally published outside this period)",
+      "vocab": [
+        [
+          "roadmap",
+          "藍圖"
+        ],
+        [
+          "refining",
+          "精進"
+        ],
+        [
+          "lithography",
+          "微影"
+        ],
+        [
+          "patterning",
+          "圖案化"
+        ],
+        [
+          "bargaining",
+          "議價"
+        ],
+        [
+          "stabilizing",
+          "使……穩定"
+        ]
+      ]
+    }
+  }
+}
