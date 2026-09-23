@@ -199,10 +199,10 @@
 
     var news = parseNews(nsheet);
     var head = rowsOf(nsheet);
-    var title = norm((head[0] || [])[0]) || label || '半導體產業週報';
+    var title = norm((head[0] || [])[0]) || label || '半導體產業快報';
     var sub = norm((head[1] || [])[0]);
     // 若 A1/A2 剛好就是標題列，代表這份檔沒有標題區，改用檔名
-    if (/序號|日期/.test(title)) { title = label || '半導體產業週報'; sub = ''; }
+    if (/序號|日期/.test(title)) { title = label || '半導體產業快報'; sub = ''; }
 
     return {
       label: label,

@@ -14,22 +14,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f6f4ef">
-<title>半導體產業週報</title>
-<meta name="description" content="每週更新：晶圓代工新聞與重點數據">
+<title>半導體產業快報</title>
+<meta name="description" content="每 2 日更新：晶圓代工新聞與重點數據">
 
 <!-- 連結預覽（LINE / Facebook / Slack 等）。爬蟲只看得到這裡的靜態文字 -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="半導體產業週報">
+<meta property="og:site_name" content="半導體產業快報">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:url" content="https://jasonzhi731.github.io/news-wab/">
-<meta property="og:title" content="半導體產業週報">
-<meta property="og:description" content="每週更新：晶圓代工新聞與重點數據">
+<meta property="og:title" content="半導體產業快報">
+<meta property="og:description" content="每 2 日更新：晶圓代工新聞與重點數據">
 <meta property="og:image" content="https://jasonzhi731.github.io/news-wab/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="半導體產業週報">
-<meta name="twitter:description" content="每週更新：晶圓代工新聞與重點數據">
+<meta name="twitter:title" content="半導體產業快報">
+<meta name="twitter:description" content="每 2 日更新：晶圓代工新聞與重點數據">
 <meta name="twitter:image" content="https://jasonzhi731.github.io/news-wab/assets/og-cover.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='7' width='18' height='18' fill='none' stroke='%232c2a26' stroke-width='2.5'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/app.css">
@@ -42,11 +42,12 @@
   <div class="topbar-in">
     <div class="brand">
       <span class="brand-mark"></span>
-      <span class="brand-text">半導體產業週報</span>
+      <span class="brand-text">半導體產業快報</span>
+      <span class="brand-cadence">每 2 日更新</span>
     </div>
 
     <div class="source-picker">
-      <label class="sr-only" for="report-select">選擇週報</label>
+      <label class="sr-only" for="report-select">選擇報告</label>
       <select id="report-select" hidden></select>
       <input id="file-input" type="file" accept=".xlsx,.xlsm,.xls" hidden>
     </div>
@@ -61,8 +62,8 @@
 
   <section id="stage-empty" class="stage">
     <div class="empty-card">
-      <h1>半導體產業週報閱讀器</h1>
-      <p>這個網頁本身沒有任何內容。所有標題、摘要、數據與連結，都是從你提供的 Excel 週報即時解析出來的。</p>
+      <h1>半導體產業快報閱讀器</h1>
+      <p>這個網頁本身沒有任何內容。所有標題、摘要、數據與連結，都是從你提供的 Excel 報告即時解析出來的。</p>
       <p class="muted">把 <code>.xlsx</code> 拖曳到畫面任何位置，或按下方按鈕選擇檔案。檔案只在你的瀏覽器內解析，不會上傳到任何地方。</p>
       <button id="btn-open-2" class="btn primary" type="button">選擇 Excel 檔案</button>
       <p id="empty-hint" class="hint"></p>

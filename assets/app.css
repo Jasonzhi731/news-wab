@@ -84,6 +84,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--tint);padding:1px 
   border:1.5px solid var(--ink);border-radius:0;background:none;
 }
 .brand-text{color:var(--ink);font-weight:600;font-size:15px;letter-spacing:.14em}
+.brand-cadence{font-size:11.5px;color:var(--ink-3);letter-spacing:.12em}
 
 .source-picker{display:flex;gap:8px;align-items:center}
 #report-select{
