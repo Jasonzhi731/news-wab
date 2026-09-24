@@ -1,0 +1,229 @@
+{
+  "source": "全球半導體代工產業快報_20260924-20260924.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC reportedly to raise foundry prices 3–6% from January 2027, with the steepest hikes at 2nm/3nm and order visibility out to 2030",
+      "summary": "Economic Daily News, citing DIGITIMES, reported that TSMC will adjust wafer prices by process and product starting in January 2027, with increases of roughly 3% to 6%. Advanced nodes such as 2nm and 3nm will see the largest hikes, while mature and specialty processes will be negotiated case by case depending on the product, utilization and customer. The report said TSMC's nodes at 4nm and below are fully booked, with order visibility extending to 2030, and that AI demand is spreading from GPUs, ASICs and HBM to the PMICs, MCUs, power devices, driver and analog chips that data centers need. ETtoday noted the same day that the price increase would raise Apple's iPhone costs; combined with Samsung's memory contract prices for 1Q27 reportedly rising about 30% to 40% from 3Q26, next year's iPhone prices may climb further. Apple already raised prices for the iPhone 18 Pro series in Taiwan this year, with the 256GB models up 12.5% and 11.1%.",
+      "metric": "Price hikes of 3–6% from Jan 2027 (higher at advanced nodes); 4nm and below fully booked; order visibility to 2030; Samsung 1Q27 memory prices +30–40% vs 3Q26 (rumor); iPhone 18 Pro 256GB Taiwan prices +12.5% / +11.1%",
+      "impact": "In July, foreign media reported TSMC would raise prices across the board in 2027 by 'up to 10%'. The 3–6% figure is a milder version concentrated on advanced nodes, and it echoes last period's capex pressure from pulling A14 trial production forward and ramping N3, N2 and A14 at once: price hikes are how TSMC can pass on overseas-fab depreciation and new-node investment to customers. Case-by-case pricing at mature nodes fits the picture from last period, when UMC and PSMC raised prices and consumer IC designers saw their margins squeezed — TSMC does not intend to lead a broad increase in mature-node pricing.",
+      "conf": "Unconfirmed (DIGITIMES citing unnamed sources, not confirmed by TSMC; Samsung memory pricing is a rumor)",
+      "vocab": [
+        ["price hikes", "漲價", "fin"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["utilization", "產能利用率", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["depreciation", "折舊"],
+        ["pass on", "轉嫁"],
+        ["fully booked", "產能滿載"],
+        ["case by case", "個別（議價）"]
+      ]
+    },
+    "2": {
+      "entity": "Qualcomm / TSMC (2330) / Samsung Foundry",
+      "title": "Qualcomm confirms its announced 2nm chips are all made by TSMC, but keeps the door open to Samsung",
+      "summary": "Chris Patrick, Qualcomm's senior vice president for mobile handsets, confirmed that all of Qualcomm's announced 2nm chips — the Snapdragon 8 Elite Gen 6 and 8 Elite Extreme Gen 6 — are manufactured by TSMC, while stressing that Qualcomm maintains partnerships with both Samsung Foundry and TSMC, leaving room for future collaboration. The new chips use the next-generation Oryon CPU (two prime cores plus six performance cores), the first mobile CPU to exceed a 5GHz peak clock speed. The Extreme version's Adreno GPU delivers a 44% performance gain, and the Hexagon NPU paired with UFS 5.0 can run AI models with more than 30 billion parameters on the phone. Xiaomi's 18 Pro series is the launch device, with a global rollout within 2026.",
+      "metric": "Announced 2nm chips 100% made by TSMC; CPU peak clock >5GHz (2 prime + 6 performance cores); Extreme GPU +44%; on-device models >30B parameters",
+      "impact": "Last period we listed the foundry for Qualcomm's Snapdragon 8 Elite Gen 6 as 'undisclosed'; this period a Qualcomm executive supplied the answer. All three big 2nm smartphone SoCs — Apple's A20 Pro, MediaTek's Dimensity 9600 Pro and Qualcomm's chips — are on TSMC N2, cementing the base for N2's volume ramp in 4Q26 and explaining the bargaining power behind this period's reported 2027 price hikes. Samsung has won deals such as Tesla's AI5, but in flagship phone SoCs it is left with only a 'door that isn't closed'.",
+      "conf": "Confirmed (public statement by a Qualcomm executive)",
+      "vocab": [
+        ["bargaining power", "議價能力", "fin"],
+        ["senior vice president", "資深副總裁"],
+        ["rollout", "推出、上市"],
+        ["cementing", "鞏固"],
+        ["volume ramp", "放量爬坡"],
+        ["price hikes", "漲價", "fin"],
+        ["undisclosed", "未揭露的"]
+      ]
+    },
+    "3": {
+      "entity": "United States / China",
+      "title": "US and China agree to extend trade truce by two months to Jan 10, 2027, and may cut tariffs on about US$30 billion of non-sensitive goods",
+      "summary": "US Treasury Secretary Scott Bessent announced that the US and China agreed to extend the 'Busan agreement' trade truce, originally due to expire on November 10, 2026, by two months to January 10, 2027, buying time for further talks. The two sides may lower tariffs on non-sensitive goods worth about US$30 billion in total, and China floated the idea of reaching a broader, large-scale trade deal. Bessent met Chinese Vice Premier He Lifeng in Washington on September 23, their second meeting in four days; Xi Jinping arrived in Washington on September 23 for a state visit, and the Trump–Xi summit begins after a White House welcome ceremony on September 24. Bessent said the US is open to the idea but will ultimately make the decision that best serves American interests.",
+      "metric": "Truce deadline Nov 10, 2026 → Jan 10, 2027 (+2 months); non-sensitive goods eligible for tariff cuts ~US$30B; second Bessent–He meeting in four days",
+      "impact": "One reason the SOX hit a record last period was reports of 'major progress' in US-China talks. The concrete result revealed this period is only an extended truce and tariff cuts on non-sensitive goods; semiconductor export controls were not included. For foundries, the extension lowers the risk of another supply-chain shock before the end of 2026, but SMIC's limited access to advanced tools is unchanged — consistent with Huawei's admission last period that SMIC's 7/6nm capacity falls short.",
+      "conf": "Confirmed (publicly announced by the US Treasury Secretary; scope of tariff cuts awaits formal documents)",
+      "vocab": [
+        ["trade truce", "貿易休戰"],
+        ["tariffs", "關稅", "fin"],
+        ["non-sensitive goods", "非敏感商品"],
+        ["export controls", "出口管制"],
+        ["floated", "提出（構想）"],
+        ["buying time", "爭取時間"],
+        ["supply-chain shock", "供應鏈衝擊"]
+      ]
+    },
+    "4": {
+      "entity": "United States / China / AI chip controls",
+      "title": "Analysis: Neither side will slow the AI race; Trump–Xi talks to focus on 'guardrails and hotlines', not easing chip curbs",
+      "summary": "An analysis argues that neither the US nor China is willing to slow AI development: Trump regards an AI slowdown as a 'hoax', and Nvidia CEO Jensen Huang argues AI can be managed safely without new regulation, while leaders of AI companies such as Anthropic and OpenAI have called for slowing down so that safety technology can catch up. The most likely consensus is a shared definition and framework for AI safety for advanced models, plus an emergency communication mechanism (a hotline) for incidents — not an agreement to slow down. On chips, Chinese companies are getting remote access to high-end computing power through Southeast Asian data centers to get around US controls; a former US intelligence analyst said that although officials say chip controls are not on the agenda, China may still push hard for them to be eased. China's strategy of open-weight models such as DeepSeek R1 and Moonshot Kimi K3, combined with low costs, could also prompt the US to tighten export controls.",
+      "metric": "— (analysis, no specific figures); agenda focus: shared AI-safety definitions, emergency hotline; chip controls officially not on the agenda",
+      "impact": "Read with the truce extension above: the deliverables of US-China talks center on tariffs and AI-safety mechanisms, and controls on high-end chips and equipment will not be eased in the near term. That means Chinese AI chips (Ascend, Zhenwu V900) must still rely on SMIC's DUV-based advanced nodes. If open-weight models prompt Washington to tighten controls, the channel most affected would be the gray-market access to TSMC-made GPUs through Southeast Asian data centers.",
+      "conf": "Unconfirmed (media analysis and views of a former intelligence official, not official negotiating content)",
+      "vocab": [
+        ["consensus", "共識", "fin"],
+        ["guardrails", "護欄（規範）"],
+        ["tighten", "收緊"],
+        ["deliverables", "可交付成果"],
+        ["gray-market", "灰色市場的"],
+        ["eased", "放寬、鬆綁"],
+        ["open-weight", "開放權重的"]
+      ]
+    },
+    "5": {
+      "entity": "MediaTek (2454) / Google TPU / Intel EMIB-T",
+      "title": "UBS raises MediaTek target price to NT$7,300, sees TPU sales reaching US$52.5 billion in 2029; TPU v9 to use Intel EMIB-T packaging",
+      "summary": "UBS reiterated its Buy rating on MediaTek and raised its target price from NT$6,500 to NT$7,300, arguing the market has not fully priced in the strategic value of its Google TPU and custom-chip businesses. UBS forecasts MediaTek's TPU-related sales at US$18 billion in 2027, US$43.5 billion in 2028 and US$52.5 billion in 2029. It projects revenue of NT$673.973 billion in 2026, NT$1.25 trillion in 2027 (+85% YoY) and NT$2.14 trillion in 2028 (+71% YoY), and EPS of NT$67.63 in 2026, NT$177.51 in 2027 and NT$363.36 in 2028 — 44% above consensus. TPU v9 is expected to tape out by November 2026 using Intel's EMIB-T packaging; if 2029 demand exceeds 4 million units, TSMC's CoWoS may be considered. Other ASIC opportunities, including SpaceX Dojo 3 (TSMC 2nm) and Tesla AI6, represent potential revenue of US$10–15 billion.",
+      "metric": "Target price NT$6,500 → NT$7,300; TPU sales 2027/2028/2029 US$18B/43.5B/52.5B; revenue NT$1.25T in 2027 (YoY +85%), NT$2.14T in 2028 (YoY +71%); 2028 EPS NT$363.36 (44% above consensus); TPU v9 tape-out by Nov 2026; other ASICs US$10–15B",
+      "impact": "This is the period's item most directly tied to Intel Foundry. Last period TrendForce said Intel's EMIB substrate yield was only about 45% and that Google planned to adopt EMIB-T in 2027; UBS now builds EMIB-T into its TPU v9 production assumptions and only turns to CoWoS if demand tops 4 million units — EMIB-T serves as a second source when CoWoS capacity runs short. Front-end wafers stay at TSMC, and SpaceX Dojo 3 is also on TSMC 2nm, so ASIC growth ultimately flows back to TSMC's leading-edge nodes.",
+      "conf": "Confirmed (broker report; revenue, EPS and TPU sales are UBS estimates, and TPU v9 packaging is the broker's view, not a company announcement)",
+      "vocab": [
+        ["target price", "目標價", "fin"],
+        ["reiterated", "重申", "fin"],
+        ["Buy rating", "買進評等", "fin"],
+        ["priced in", "已反映在股價中", "fin"],
+        ["consensus", "市場共識", "fin"],
+        ["tape out", "投片（設計定案）"],
+        ["second source", "第二供應來源"],
+        ["EPS", "每股盈餘", "fin"]
+      ]
+    },
+    "6": {
+      "entity": "TrendForce / GUC (3443) / Hon Hai Research Institute",
+      "title": "AI chip forum: CSP capex to hit US$1.4 trillion, ASICs near 40% share; GUC says AI chip power will rise to 6kW",
+      "summary": "TechNews summarized a forum featuring TrendForce, Andes Technology, GUC, Swancor Smart Link and the Hon Hai Research Institute. Cloud service providers' (CSP) capital spending is forecast to rise about 50% in 2026 to US$1.4 trillion; Nvidia's market share is expected to fall to 64%, with ASICs approaching 40%. Google's eighth-generation TPU ships about 4 million units a year, potentially reaching 8–9 million in 2027. GUC technical manager Wu Yu-hsing said AI chip power will climb from 3kW to 6kW; GUC uses vertical power delivery together with advanced packaging such as CoWoS and Intel EMIB, and is working with TSMC on silicon photonics and CPO, which it expects to take off in 2028. Hon Hai Research Institute director Kuo Hao-chung revealed a CPO 2.0 design using a single quantum-dot comb laser with 7-core multicore fiber and 200Gbps modulators, achieving 34.1Tbps of aggregate bandwidth at under 1 picojoule per bit.",
+      "metric": "CSP 2026 capex US$1.4T (YoY +50%); Nvidia 64%, ASICs ~40%; Google 8th-gen TPU ~4M units/yr → 8–9M in 2027; AI chip power 3kW → 6kW; CPO takes off in 2028; Hon Hai CPO 2.0 34.1Tbps, <1pJ/bit",
+      "impact": "ASICs nearing a 40% share and TPU shipments doubling in a year belong to the same theme as UBS's MediaTek upgrade today and foreign brokers raising GUC's target price last period: design wins for AI chips are spreading out, but wafers and packaging stay concentrated at TSMC (CoWoS) and Intel (EMIB). GUC citing both CoWoS and EMIB shows design-service firms now treat Intel packaging as a standard option.",
+      "conf": "Confirmed (public remarks at the forum; capex, market share and shipments are research-firm estimates)",
+      "vocab": [
+        ["capital spending", "資本支出", "fin"],
+        ["market share", "市占率", "fin"],
+        ["shipments", "出貨量", "fin"],
+        ["forecast", "預估", "fin"],
+        ["aggregate", "總計的"],
+        ["take off", "起飛、爆發成長"],
+        ["design wins", "設計訂單（設計導入）"]
+      ]
+    },
+    "7": {
+      "entity": "imec IC-Link / TSMC (2330) OIP",
+      "title": "imec's IC-Link joins TSMC's OIP Cloud Alliance as the first provider of cloud-managed hybrid EDA design services",
+      "summary": "IC-Link, part of Belgium's imec research center, announced it has joined TSMC's Open Innovation Platform (OIP) Cloud Alliance, becoming the first chip design service provider to offer 'cloud-managed design services supporting hybrid EDA flows from multiple partners'. The service combines TSMC's advanced process technology with a secure cloud environment, providing flexible compute resources and design infrastructure so customers can access TSMC process design kits (PDKs) in a controlled environment, for applications spanning AI, communications, automotive and industrial. IC-Link became a member of TSMC's Design Center Alliance (DCA) in 2007, joined the Value Chain Aggregator (VCA) alliance in 2009, and recently took part in the OIP 3DFabric Alliance.",
+      "metric": "IC-Link: DCA in 2007, VCA in 2009, recently 3DFabric Alliance, now OIP Cloud Alliance; first cloud-managed hybrid EDA design service",
+      "impact": "TSMC's moat is not just process technology but its design ecosystem. Through European research institutes such as imec, it opens leading-edge PDKs via the cloud to startups and academic customers, widening the long tail of N3/N2 customers. That contrasts with Intel 18A/14A, which is still courting named external customers — ecosystem depth is another hurdle for Intel Foundry to clear.",
+      "conf": "Confirmed (company announcement)",
+      "vocab": [
+        ["moat", "護城河"],
+        ["ecosystem", "生態系"],
+        ["long tail", "長尾"],
+        ["courting", "爭取、招攬"],
+        ["hurdle", "門檻、障礙"],
+        ["infrastructure", "基礎設施"],
+        ["startups", "新創公司"]
+      ]
+    },
+    "8": {
+      "entity": "JPMorgan / Prismark / CCL",
+      "title": "JPMorgan: CPO has limited impact on high-speed CCL; glass fabric and HVLP copper foil tight as orders concentrate at leaders",
+      "summary": "JPMorgan hosted Prismark consultant Terry Wang, who said co-packaged optics (CPO), though on the rise, will have only a limited impact on demand for high-speed copper clad laminate (CCL). CPO is expected to be used first in scale-out switches in 2026, with commercialization in other areas slower, and M7-grade or higher CCL materials will remain in use. On materials, glass fabric capacity is shifting to low-dielectric and low-thermal-expansion products, leaving supply and demand tight; high-end HVLP copper foil faces a structural shortage; and future CCL upgrades will be driven by proprietary resin formulas. PTFE still faces a narrow lamination process window and reliability bottlenecks in high-volume PCB production, while glass-free CCL will bring manufacturing innovation. Higher technical barriers will further concentrate orders at leading suppliers with a proven quality record.",
+      "metric": "CPO first in scale-out switches in 2026; M7+ CCL remains in use; glass fabric tight; structural shortage of HVLP copper foil",
+      "impact": "CPO is the main application for TSMC's COUPE and silicon photonics platforms. This item shows that after CPO arrives, copper and optics will coexist for a long time rather than optics replacing copper — consistent with GUC and Hon Hai expecting CPO to take off only in 2028. For foundries, COUPE's volume ramp should be timed to 2027–2028, not 2026.",
+      "conf": "Confirmed (analysis by a consultant hosted by the broker; timelines are estimates)",
+      "vocab": [
+        ["shortage", "短缺", "fin"],
+        ["supply and demand", "供需"],
+        ["structural", "結構性的"],
+        ["proprietary", "專有的、專利的"],
+        ["commercialization", "商業化"],
+        ["barriers", "門檻"],
+        ["coexist", "並存"]
+      ]
+    },
+    "9": {
+      "entity": "YMTC / Micron",
+      "title": "YMTC wins German patent fight as court finds Micron infringed two 3D NAND patents and grants injunctions",
+      "summary": "A Munich court in Germany ruled on September 18 that Micron infringed YMTC's 3D NAND technology patents in two cases and granted injunctions on two German utility model patents, with a protection period of 10 years. YMTC filed five suits in total in late 2025, covering four German utility models and one European patent. The legal battle, which began in 2023, has spread to courts in China, the US, the UK and Europe and involves more than 20 patents; seven of Micron's patents have already been invalidated. The injunctions could limit Micron's supply in Germany and affect NAND supply in Europe; Micron has appealed.",
+      "metric": "Injunctions on 2 patents out of 5 suits (10-year protection); >20 patents in dispute; 7 Micron patents invalidated",
+      "impact": "China's semiconductor pushback under export controls is extending from capacity to intellectual property: YMTC has won injunctions in Europe with 3D NAND technology such as Xtacking. Read alongside last period's news that A-share chip profits are dominated by memory makers such as CXMT, Chinese memory makers are growing stronger both technically and financially. The indirect effect on foundries is that YMTC and CXMT expansion keeps absorbing domestic equipment and engineering talent in China, squeezing the resources available for SMIC's advanced-node expansion.",
+      "conf": "Confirmed (court ruling as reported by media; Micron has appealed, outcome pending)",
+      "vocab": [
+        ["injunctions", "禁令"],
+        ["infringed", "侵犯（infringe 過去式）"],
+        ["appealed", "上訴（appeal 過去式）"],
+        ["invalidated", "宣告無效"],
+        ["intellectual property", "智慧財產"],
+        ["absorbing", "吸收、吸走"],
+        ["squeezing", "擠壓"]
+      ]
+    },
+    "10": {
+      "entity": "Philadelphia Semiconductor Index / TSMC (2330) / Taiwan stocks",
+      "title": "Rising Treasury yields drag down US stocks, SOX falls 1.23% and TSMC ADR 1.2%; TAIEX slips below 48K at the open after a record close of 48,157 on Sept 23",
+      "summary": "All four major US indexes closed lower on September 23: the Dow fell 352.10 points to 51,511.59, the Nasdaq dropped 308.24 points (-1.13%) to 26,936.04, the S&P 500 lost 0.75% to 7,706.03, and the Philadelphia Semiconductor Index fell 155.55 points (-1.23%) to 12,534.27, weighed down by weakness in Alphabet and Amazon, rising Treasury yields and a hard-line stance from Iran's president. TSMC's ADR fell US$5.43 (-1.20%) to US$446.57, and Taiwan index futures fell 403 points to 47,909 in the night session. On September 23 the TAIEX rose 357.12 points to close at 48,157.29, an all-time closing high, with TSMC up NT$40 to NT$2,500. On September 24 the market opened lower following Wall Street, falling 372.49 points to 47,784.80 in early trading and slipping below the 48,000 mark; TSMC opened NT$20 lower at NT$2,480, while MediaTek bucked the trend, rising NT$80 to NT$5,265.",
+      "metric": "SOX 12,534.27 (-1.23%); TSMC ADR US$446.57 (-5.43, -1.20%); TAIEX futures night session 47,909 (-403); TAIEX Sep 23 close 48,157.29 (+357.12), turnover ~NT$894.65B; TSMC Sep 23 close NT$2,500 (+40); Sep 24 early trading TAIEX 47,784.80 (-372.49), TSMC NT$2,480, MediaTek NT$5,265 (+80)",
+      "impact": "Check: Sep 22 close 47,800.17 + 357.12 = 48,157.29; TSMC 2,460 + 40 = 2,500; 48,157.29 − 372.49 = 47,784.80; MediaTek 5,185 + 80 = 5,265 — all consistent. MediaTek rose against a weak market amid TSMC price-hike reports, in step with UBS's target-price increase, extending last period's rotation of money from TSMC into ASIC beneficiaries.",
+      "conf": "Confirmed (Sep 23 close from the Taiwan Stock Exchange; Sep 24 figures are early-session data because the market had not closed when this report was produced; for reference only)",
+      "vocab": [
+        ["Treasury yields", "美國公債殖利率", "fin"],
+        ["night session", "夜盤", "fin"],
+        ["all-time", "歷史（新高）的", "fin"],
+        ["bucked the trend", "逆勢", "fin"],
+        ["rotation", "類股輪動", "fin"],
+        ["beneficiaries", "受惠者", "fin"],
+        ["turnover", "成交值", "fin"],
+        ["weighed down", "拖累"]
+      ]
+    },
+    "11": {
+      "entity": "TSMC / UMC / PSMC",
+      "title": "Economic Daily News: three foundry trends — leading edge fully booked with rising prices, CoWoS at 135,000 wafers by year-end, mature nodes split at 70–75% utilization",
+      "summary": "Economic Daily News reported that demand for AI accelerators and flagship phones in the fourth quarter is pushing advanced-node utilization close to full. TSMC's 2nm has entered volume production and is expected to contribute 7–8% of revenue, with 2nm and the 3nm family together exceeding 45% of total revenue; high-end capacity is in short supply, prices keep rising, and full-year revenue growth will exceed 40%. In advanced packaging, CoWoS monthly capacity is expected to expand from 35,000 wafers at the end of 2024 to 135,000 wafers at the end of 2026, with demand exceeding supply into the fourth quarter as foundries and OSATs step up investment in SoIC and FOPLP. Mature nodes show a structural split: consumer electronics and logic ICs face price pressure from new Chinese capacity, with utilization at 70–75%, while PMIC and automotive specialty processes driven by AI servers remain strong with stable gross margins.",
+      "metric": "2nm revenue share est. 7–8%, 2nm + 3nm >45%; TSMC full-year revenue growth >40%; CoWoS monthly capacity 35,000 wafers (end-2024) → 135,000 (end-2026); mature-node utilization 70–75%",
+      "impact": "This is the backdrop to this period's TSMC price-hike reports: advanced nodes are full and CoWoS is still short, so hikes concentrate on 2nm/3nm. Mature-node utilization is only in the low 70s, so TSMC negotiates mature-node pricing case by case, and UMC's and PSMC's price increases can only stick in AI-related PMIC and specialty processes.",
+      "conf": "Background (originally published Sep 23, 2026 12:30, outside this period and not included last period; revenue shares and capacity are media/analyst estimates)",
+      "vocab": [
+        ["utilization", "產能利用率", "fin"],
+        ["full-year", "全年的", "fin"],
+        ["gross margins", "毛利率", "fin"],
+        ["price increases", "漲價", "fin"],
+        ["in short supply", "供不應求"],
+        ["backdrop", "背景"],
+        ["OSATs", "委外封測廠"]
+      ]
+    },
+    "12": {
+      "entity": "DRAM / Leading-edge wafers",
+      "title": "AI lifts memory's value: 1b DRAM's theoretical value of US$0.654 per mm² tops the nominal price of an N2 wafer",
+      "summary": "An analysis by Kurnal Insights says AI demand has pushed memory prices so high that DRAM's value per unit area is approaching or even exceeding that of leading-edge logic wafers. For a 300mm wafer, N3 costs about US$20,000, or US$0.283 per square millimeter; N2, assumed at US$30,000, works out to about US$0.424 per mm². At US$1.50 per gigabit, 1y DRAM is worth about US$0.329 per mm², 1z about US$0.410 and 1b about US$0.654 — clearly above N2's nominal price. DRAMeXchange data show the average price of a 16Gb DDR5 chip at US$24.80 on September 21 (about US$1.55 per gigabit). The author cautions that the comparison is not like-for-like: foundry prices are a manufacturing service fee that excludes edge losses and yield, while the DRAM figures reflect theoretical revenue rather than manufacturing cost.",
+      "metric": "N3 wafer ~US$20,000 (US$0.283/mm²); N2 assumed US$30,000 (US$0.424/mm²); 1y/1z/1b DRAM US$0.329/0.410/0.654 per mm²; 16Gb DDR5 average US$24.80 (Sep 21)",
+      "impact": "Memory's value per unit area overtaking leading-edge logic wafers shows that much of this cycle's growth in semiconductor output value (Omdia said last period that memory was over half of Q2 revenue) comes from pricing, not foundry wafer volume. It also indirectly explains why TSMC is choosing 2027 to raise advanced-node prices: customers' memory costs have already soared, so foundry fees make up a smaller relative share.",
+      "conf": "Background (originally published Sep 23, 2026 14:20, outside this period; N2 wafer price is the author's assumption and DRAM values are theoretical)",
+      "vocab": [
+        ["nominal", "名目的"],
+        ["theoretical", "理論上的"],
+        ["like-for-like", "同基準的（比較）"],
+        ["average price", "平均價格"],
+        ["soared", "飆升（soar 過去式）"],
+        ["output value", "產值"],
+        ["yield", "良率"]
+      ]
+    },
+    "13": {
+      "entity": "Nexstrom / 2D semiconductors",
+      "title": "Nexstrom raises US$12 million seed round to push 12-inch single-crystal MoS₂ 2D semiconductors toward mass production, now validating with foundries",
+      "summary": "2D semiconductor materials startup Nexstrom closed a US$12 million seed round (US$15 million raised in total), led by Xora Innovation with participation from Foothill Ventures and SEEDS. It aims to grow continuous single-crystal molybdenum disulfide (MoS₂) on industry-standard 300mm wafers. The company integrates its own CVD equipment, process technology and materials-growth know-how, and is validating compatibility with foundries. Co-founder and chief scientist Lance Li has studied single-crystal MoS₂ since 2012, and Stanford professor Philip Wong serves as a board advisor. The main challenge is producing high-quality, uniform material on 300mm substrates at volume.",
+      "metric": "Seed round US$12M (US$15M in total); 300mm single-crystal MoS₂; compatibility validation with foundries under way",
+      "impact": "2D channel materials are a candidate technology for the later angstrom era beyond A14/A12. The startup's focus on 300mm and foundry compatibility shows materials R&D is starting to align with the needs of high-volume fabs. For foundries this is a long-term technology path with no near-term effect on capacity.",
+      "conf": "Background (originally published Sep 23, 2026 15:36, outside this period; partner foundries not disclosed)",
+      "vocab": [
+        ["seed round", "種子輪", "fin"],
+        ["closed", "完成（募資）"],
+        ["led by", "由…領投"],
+        ["compatibility", "相容性"],
+        ["substrates", "基板"],
+        ["uniform", "均勻的"],
+        ["mass production", "量產"]
+      ]
+    }
+  }
+}
