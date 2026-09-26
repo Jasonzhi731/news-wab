@@ -1,0 +1,317 @@
+{
+  "source": "全球半導體代工產業快報_20260925-20260926.xlsx",
+  "news": {
+    "1": {
+      "entity": "Vanguard (5347) / VSMC / UMC (2303)",
+      "title": "Vanguard's VSMC 12-inch fab in Singapore opens Sept 28 with capacity sold out; UMC lifts Singapore P3 to 18,000 wafers and plans silicon photonics capacity at P4",
+      "summary": "Central News Agency reported that VSMC, the joint venture between Vanguard and NXP, will open its 12-inch fab in Singapore on September 28. The fab went from bare ground to completion in just 22 months, produced its first 40nm wafers in June with yields above 99%, and remains on schedule for volume production in the first quarter of 2027. Using 30–40nm technology licensed and transferred from TSMC, it will make silicon interposers as well as mixed-signal, power management and analog chips. Its capacity is already sold out, it expects to reach full capacity of 44,000 wafers a month in 2029, and Vanguard has begun planning a second fab. At UMC's 12-inch operation in Singapore, P1 and P2 have combined monthly capacity of about 60,000 wafers, while P3's capacity of roughly 12,000–13,000 wafers will expand to 18,000 in the first half of next year on the way to a full 30,000; utilization currently exceeds 90%. UMC has started cleanroom construction and equipment procurement for P4, which is slated for volume production in the second half of 2028 and will initially provide silicon photonics capacity.",
+      "metric": "VSMC: fab built in 22 months, first 40nm yields >99%, volume production 1Q27, full capacity 44,000 wafers/month in 2029, capacity sold out; UMC Singapore P1+P2 60,000 wafers/month, P3 12,000–13,000 → 18,000 (1H27) → 30,000, utilization >90%, P4 volume production 2H28 (silicon photonics)",
+      "impact": "This is the only Taiwanese foundry expansion news this period with hard numbers, and both companies are betting their new capacity on AI-adjacent products: VSMC will make silicon interposers (a key material for CoWoS, using TSMC-licensed technology) and UMC's P4 targets silicon photonics. That echoes last period's Economic Daily News view that mature nodes are diverging, with AI-driven PMIC and specialty processes staying strong. Singapore is also a major GlobalFoundries site (see background), so competition for mature and specialty capacity outside Taiwan is converging on Singapore.",
+      "conf": "Confirmed (company statements; capacity and production timelines are company plans)",
+      "vocab": [
+        ["joint venture", "合資企業", "fin"],
+        ["sold out", "預售一空", "fin"],
+        ["utilization", "產能利用率", "fin"],
+        ["procurement", "採購", "fin"],
+        ["volume production", "量產"],
+        ["cleanroom", "無塵室"],
+        ["on schedule", "如期"]
+      ]
+    },
+    "2": {
+      "entity": "Silicon wafers / GlobalWafers (6488) / SUMCO",
+      "title": "12-inch silicon wafer contract prices for 2027 reportedly set to rise 15% to over 40%, with some second-tier customers facing hikes above 50%",
+      "summary": "TrendForce, citing Commercial Times, said AI-driven expansion in logic and memory is tightening 12-inch silicon wafer supply. New long-term agreement (LTA) prices for 2027 could rise 15–25% for 12-inch epitaxial wafers and more than 40% for polished wafers, with increases for some second-tier customers possibly topping 50%. Analysts expect 12-inch spot prices to exceed existing LTA levels as early as the fourth quarter, giving suppliers a stronger benchmark for 2027 contract renegotiations, and the upswing could extend into 2028. Contracts signed during the pandemic are expiring this year and next, and with raw material, electricity and fab construction costs up sharply, the industry broadly expects renewals to carry at least double-digit increases. Analysts cited in the report project total CoWoS capacity to jump 70.9% in 2027 and GPU and AI ASIC shipments to rise 44.9%; GlobalWafers' 12-inch average selling price (ASP) could climb from US$92 in 2026 to US$122 in 2027 (+32.6%) and US$166 in 2028 (+36.9%). SUMCO's president said in August, however, that a 5–10% hike would fall far short of covering costs and ruled out new greenfield fabs for now.",
+      "metric": "2027 LTAs: 12-inch epi +15–25%, polished >+40%, some second-tier customers >+50%; spot may exceed LTA prices in 4Q26; CoWoS capacity 2027 YoY +70.9%; GPU/AI ASIC shipments +44.9%; GlobalWafers 12-inch ASP US$92 → US$122 → US$166 (2026–2028)",
+      "impact": "Read alongside last period's reported 3–6% TSMC price increase for 2027: foundries' own raw material costs are rising too, and by far more (over 40% for polished wafers) than foundry prices. That means margin pressure will be heavier for 12-inch mature-node players (UMC, PSMC, Vanguard's VSMC) than for TSMC. A UBS report from September 24 (background) sees 12-inch wafer utilization rising from 84% in 2026 to 99% in 2028 while wafer makers remain reluctant to expand, so silicon wafers could become a new bottleneck for foundry expansion in 2027–2028.",
+      "conf": "Unconfirmed (media citing analyst estimates; wafer makers have not disclosed LTA prices; GlobalWafers ASP is an analyst forecast)",
+      "vocab": [
+        ["long-term agreement", "長期合約", "fin"],
+        ["spot prices", "現貨價", "fin"],
+        ["benchmark", "基準", "fin"],
+        ["renegotiations", "重新議價", "fin"],
+        ["average selling price", "平均售價", "fin"],
+        ["margin pressure", "毛利壓力", "fin"],
+        ["bottleneck", "瓶頸"],
+        ["greenfield", "新建（廠）的"]
+      ]
+    },
+    "3": {
+      "entity": "United States / China",
+      "title": "USTR Greer says US and China have reached deals on some non-sensitive goods, with details due Sept 28 and 'national security export controls not on the table'; Trump says he will meet Xi again at APEC in November and the G20 in December",
+      "summary": "US Trade Representative Jamieson Greer said on September 25 that the US and China have reached agreement on some tradable goods, including US agricultural products, medical devices and non-sensitive Chinese consumer goods, which would enjoy more favorable trade terms and could be exempted if either side imposes new tariffs. The administration will release more details on Monday, September 28. Greer stressed that talks under the US-China 'Board of Trade' set up in May focus purely on trade issues: 'We are not negotiating any export controls that involve national security.' After Xi Jinping wrapped up a three-day US visit, Trump confirmed on Truth Social that the two leaders will meet twice more this year, at the APEC summit in China in November and the G20 summit in Miami in December; their talks covered the Iran war, AI and agriculture.",
+      "metric": "Goods covered: US farm products, medical devices, non-sensitive Chinese consumer goods; details on Sept 28; national-security export controls excluded; two more Trump–Xi meetings this year (APEC in November, G20 in December)",
+      "impact": "Last period's analysis said the Trump–Xi talks would focus on 'guardrails and hotlines' rather than easing chip curbs; this period the US negotiator confirmed it outright: export controls are explicitly off the table. For foundries, that means limits on SMIC's access to advanced tools and on Nvidia GPU shipments to China will not loosen through negotiations before the end of 2026. On tariffs, cuts on non-sensitive goods and the extended truce bring stability, so supply-chain restructuring pressure now comes mainly from controls rather than tariffs.",
+      "conf": "Confirmed (public statements by the US Trade Representative and the President; list of goods and tariff rates to be released Sept 28)",
+      "vocab": [
+        ["tariffs", "關稅", "fin"],
+        ["favorable trade terms", "優惠貿易條件", "fin"],
+        ["exempted", "豁免、排除適用", "fin"],
+        ["export controls", "出口管制"],
+        ["off the table", "不在討論範圍內"],
+        ["restructuring", "重組", "fin"],
+        ["truce", "休戰"]
+      ]
+    },
+    "4": {
+      "entity": "ASML / Netherlands / US MATCH Act",
+      "title": "Dutch prime minister lobbies Trump against tighter curbs on ASML's China sales as the MATCH Act threatens all immersion DUV exports to China",
+      "summary": "Bloomberg reported that Dutch Prime Minister Rob Jetten said he has repeatedly discussed the Multilateral Alignment of Technology Controls on Hardware (MATCH) Act with Trump and US lawmakers, stressing the importance of protecting the semiconductor industry, and is 'very confident' a workable deal can be reached. The MATCH Act could further restrict US allies from exporting advanced chipmaking equipment to China; if enacted, all sales of ASML's immersion deep-ultraviolet (DUV) lithography tools to China would be affected, extending controls beyond EUV to more DUV systems. ASML's EUV tools have never been approved for export to China, and the Netherlands already restricts some advanced DUV systems. China accounted for 14% of ASML's net system sales in the second quarter, down from 19% in the first.",
+      "metric": "China share of ASML net system sales: 1Q26 19% → 2Q26 14%; if MATCH passes, all immersion DUV sales to China restricted",
+      "impact": "This corroborates the previous item that export controls are excluded from US-China talks: Washington is not only refusing to ease them, Congress is pushing to extend them to immersion DUV. SMIC's and Hua Hong's 7/5nm and mature-node expansion depends heavily on immersion DUV; if MATCH passes, Chinese foundries would slide from 'no EUV' to 'restricted DUV', forcing them to revise capacity growth and equipment localization timelines.",
+      "conf": "Confirmed (public remarks by the Dutch prime minister; the MATCH Act is still under review in Congress, with content and timing undecided)",
+      "vocab": [
+        ["lawmakers", "國會議員"],
+        ["enacted", "（法案）通過實施"],
+        ["net system sales", "系統銷售淨額", "fin"],
+        ["corroborates", "印證"],
+        ["localization", "國產化"],
+        ["workable deal", "可行的協議", "fin"],
+        ["lobbies", "遊說"]
+      ]
+    },
+    "5": {
+      "entity": "ASML / European semiconductors",
+      "title": "ASML says Europe accounted for 0% of its revenue in the first half, as the region lacks fabs that deploy advanced tools at scale",
+      "summary": "Frank Heemskerk, ASML's executive vice president of global public affairs, said at an event in the Netherlands that 'we sell nothing in Europe', because Europe is not investing enough and too few new fabs are being built. According to ASML's financial reports, Europe's share of revenue was 2% in 2022, 4% in 2023, 5% in 2024 and 1% in 2025, falling to 0% in the first two quarters of 2026. ASML's current EUV capacity, at roughly US$200 million per tool, is nearly sold out through 2027, and TSMC, Samsung and SK hynix all plan to adopt next-generation High-NA EUV tools costing about US$400 million each. Europe does have fab projects — Intel's additional €5 billion for Fab 34 in Leixlip, Ireland; ESMC (backed by TSMC, Bosch, Infineon and NXP) at about €15 billion in Dresden; Infineon's roughly €5 billion Smart Power Fab; and GlobalFoundries' Fab 1 expansion in Dresden — but most focus on automotive, industrial and power management mature or specialty processes.",
+      "metric": "ASML Europe revenue share: 2% (2022) → 4% (2023) → 5% (2024) → 1% (2025) → 0% (1H26); EUV ~US$200M per tool, sold out through 2027; High-NA ~US$400M per tool; ESMC ~€15B",
+      "impact": "ASML's EUV orders are going entirely to Taiwan, South Korea, the US and Japan, showing that leading-edge capacity remains concentrated at TSMC, Samsung and memory makers. Europe's wafer investments, including TSMC's ESMC and GlobalFoundries in Dresden, are all mature and specialty nodes — 'regional resilience' capacity like this period's VSMC and UMC Singapore expansions, not leading-edge. EUV being sold out through 2027 also means equipment lead times will be a hard constraint if Intel 14A or Rapidus want to add capacity.",
+      "conf": "Confirmed (public remarks by an ASML executive and financial report data)",
+      "vocab": [
+        ["revenue", "營收", "fin"],
+        ["financial reports", "財報", "fin"],
+        ["lead times", "交期", "fin"],
+        ["hard constraint", "硬性限制"],
+        ["resilience", "韌性"],
+        ["at scale", "大規模地"],
+        ["sold out", "售罄", "fin"]
+      ]
+    },
+    "6": {
+      "entity": "AMD / ByteDance / NScale / Export controls",
+      "title": "Two export-control loopholes: a restricted AMD RFSoC allegedly surfaces in a Chinese crowdfunding project, and ByteDance used 2,304 Nvidia B200s via a Norwegian data center",
+      "summary": "SemiAnalysis chief Dylan Patel said AMD's export-controlled (ECCN 3A001.a.14) Zynq UltraScale+ XCZU47DR RFSoC chip appears in a crowdfunded product from Shanghai-based Puzhi Electronic Technology. The chip lists for about US$36,000 in the US and sells to US companies in volume for about US$4,000–5,000, but is quoted at only about US$1,000 in China. AMD responded that the case does not involve its direct sales, and that it investigates suspected illegal transshipment and reports confirmed violations to authorities, though it did not confirm opening a probe into this case. Separately, the Financial Times reported that the S-1 filing for the US IPO of British AI cloud provider NScale shows about 73% of its 2025 revenue (about US$24 million) came from Spring, ByteDance's Singapore subsidiary, which used 2,304 Nvidia B200 GPUs at NScale's Glomfjord data center in Norway; because the chips were not shipped to China, the arrangement did not violate controls at the time. NScale's revenue reached US$140.6 million in the first half of 2026, and its contracted total contract value is about US$51.3 billion (about 289,000 GPUs).",
+      "metric": "AMD RFSoC: US list ~US$36,000, volume US$4,000–5,000, China quote ~US$1,000; NScale 2025 revenue US$33M, Spring 73%; 2,304 B200s; NScale 1H26 revenue US$140.6M, TCV ~US$51.3B (~289,000 GPUs)",
+      "impact": "Last period's analysis flagged Chinese firms tapping high-end compute remotely through Southeast Asian data centers; this period two cases make the loopholes concrete: dual-use chips such as older FPGAs moving through distribution channels, and rented compute at overseas data centers. Both strengthen the case in Congress (see the MATCH Act item) for tighter controls. For TSMC, what is controlled is where the high-end GPUs it makes end up; if rules expand to cover 'compute rental', the pace of Nvidia's and AMD's shipments to overseas data centers could be affected.",
+      "conf": "Unconfirmed (AMD case is an analyst allegation, chip source unknown and AMD has not confirmed a probe; ByteDance case is from an S-1 filing and media reports, and did not violate controls at the time)",
+      "vocab": [
+        ["loopholes", "漏洞"],
+        ["transshipment", "轉運"],
+        ["IPO", "首次公開發行", "fin"],
+        ["S-1 filing", "S-1 上市申請文件", "fin"],
+        ["subsidiary", "子公司", "fin"],
+        ["total contract value", "總合約價值", "fin"],
+        ["dual-use", "軍民兩用的"],
+        ["probe", "調查"]
+      ]
+    },
+    "7": {
+      "entity": "Meta / xAI / IMF",
+      "title": "AI spending climbs again: Meta's 2026 capex could reach US$145 billion, xAI's Colossus 2 may top 1.21 million GPUs by year-end, and the IMF sees global AI investment above US$2 trillion",
+      "summary": "Meta guides 2026 capital expenditures of US$130–145 billion; at the top end that is about 101% above 2025's US$72.22 billion (versus US$28.1 billion in 2023 and US$39.23 billion in 2024), with total expenses of US$165–169 billion. Elon Musk said on September 25 that Colossus 2 has deployed 110,000 GB200 and 440,000 GB300 chips, with another 220,000 GB300s coming online next week, another 220,000 in November and, if things go well, 220,000 more in late December, potentially doubling the chip count by year-end. The IMF's annual report, citing outside estimates, said privately led global AI investment could exceed US$2 trillion this year and that AI-related investment lifted US GDP growth by an estimated 0.5 percentage point in 2025, but warned that some investment increasingly relies on debt financing and that disappointing returns could trigger a repricing of asset valuations.",
+      "metric": "Meta 2026 capex US$130–145B (up to +101% vs US$72.22B in 2025); Colossus 2: 110,000 GB200 + 440,000 GB300, another 660,000 GB300 in Q4 (total up to ~1.21M); IMF: 2026 global AI investment >US$2T, +0.5 ppt to US 2025 GDP growth",
+      "impact": "Last period's forum put CSP capex at US$1.4 trillion; this period Meta alone could spend US$145 billion and xAI plans to add 660,000 GB300s in a single quarter. These Blackwell GPUs are all built on TSMC's 4nm process and CoWoS-L, the direct demand behind TSMC's fully booked leading-edge nodes and its willingness to raise prices in 2027. The IMF's warning about debt and 'Big Short' investor Michael Burry's overcapacity warning the same day are rare contrarian signals this period, worth weighing against forecasts of a 70.9% jump in CoWoS capacity in 2027.",
+      "conf": "Confirmed (Meta guidance, Musk's public posts and the IMF report; xAI deployment progress and IMF investment figure are estimates)",
+      "vocab": [
+        ["capital expenditures", "資本支出", "fin"],
+        ["guides", "給出財測", "fin"],
+        ["total expenses", "總費用", "fin"],
+        ["debt financing", "舉債融資", "fin"],
+        ["repricing", "重新定價", "fin"],
+        ["asset valuations", "資產估值", "fin"],
+        ["overcapacity", "產能過剩", "fin"],
+        ["contrarian", "反向的"]
+      ]
+    },
+    "8": {
+      "entity": "CXMT / Nanya Technology (2408)",
+      "title": "CXMT begins volume production on fifth-generation DRAM process in September with RMB22.768 billion of equipment still to be capitalized; mature DRAM may face price pressure first in 2027",
+      "summary": "An analysis by Wealth Magazine, republished by Commercial Times, said CXMT entered volume production on its fifth-generation process platform in September 2026, raising die output per wafer by at least 50%. Its Hefei Phase 1, Hefei Phase 2 and Beijing fabs have a combined investment budget of RMB282.81 billion and are all more than 96% complete; in the first half, RMB12.091 billion of construction in progress was transferred to fixed assets, while RMB22.768 billion has yet to be transferred, implying more capacity to come. CXMT accounts for about 15% of global DRAM wafer capacity and 11% of bit output; DDR5 is in volume production and LPDDR6 is sampling. The report said DRAM contract prices rose 90–95% in the first quarter of 2026 and 58–63% in the second, with gains narrowing to 13–18% in the third (NAND 10–15%). Nanya's product specs overlap about 85% with CXMT's, with actual direct competition around 70%. HBM is expected to remain short in 2027, while mature DRAM may not hold high prices.",
+      "metric": "CXMT: fifth-gen process +50% dies per wafer; three-fab budget RMB282.81B, RMB12.091B capitalized in 1H26, RMB22.768B pending; 15% of global DRAM wafer capacity, 11% of bits; DRAM contract prices 1Q26 +90–95%, 2Q26 +58–63%, 3Q26 +13–18%",
+      "impact": "Last period TrendForce said China's AI cloud boom could soak up CXMT's and YMTC's new supply through 2027; this period's analysis notes that mature DRAM price gains have clearly narrowed. For foundries this matters in two ways: if memory prices soften in 2027, cost pressure on consumer devices eases, helping demand for mature-node PMICs and driver ICs; and CXMT's expansion keeps consuming China's quota of DUV tools, so with the MATCH Act looming, the crowding-out effect on SMIC and Hua Hong grows.",
+      "conf": "Unconfirmed (magazine analysis; investment and asset-transfer figures from CXMT's interim report, while product overlap and price trends are the author's estimates)",
+      "vocab": [
+        ["contract prices", "合約價", "fin"],
+        ["fixed assets", "固定資產", "fin"],
+        ["construction in progress", "在建工程", "fin"],
+        ["investment budget", "投資預算", "fin"],
+        ["price pressure", "價格壓力", "fin"],
+        ["crowding-out effect", "排擠效應", "fin"],
+        ["sampling", "送樣"],
+        ["soften", "走軟"]
+      ]
+    },
+    "9": {
+      "entity": "Dell / Morgan Stanley",
+      "title": "Dell COO says AI agents could keep memory and HDD supplies short for more than five years; inference tokens seen rising 87-fold by 2030",
+      "summary": "Jeff Clarke, Dell's vice chairman and chief operating officer, told Morgan Stanley that AI agents decouple cognitive output from human labor, and that if those workloads keep growing rapidly, shortages of memory and hard disk drives (HDD) could last more than five years; Dell is already planning around a multi-year shortage of key components. Dell expects data centers to add 200 gigawatts of compute by 2030, with compute growing fivefold to 830 ZettaFLOPS and inference token generation potentially rising 87-fold. Its 17th- and 18th-generation servers can replace as many as 13 14th-generation servers. Clarke also said expanding server and storage margins reflect scarce components being allocated to higher-margin products and less pressure to cut prices to win customers as the market grows.",
+      "metric": "Memory/HDD shortage possibly >5 years; by 2030 data-center compute +200GW, ZettaFLOPS ×5 to 830, inference tokens ×87; one new server replaces 13 older units",
+      "impact": "This contrasts with the previous CXMT item: memory makers and analysts see mature DRAM possibly softening in 2027, while system maker Dell is planning for multi-year shortages. For foundries, if AI agents really revive CPU servers, the winners are server CPUs on TSMC N3/N2 (AMD EPYC and in-house Arm CPUs) and mature-node power management chips; persistent memory tightness, however, would keep squeezing PC and smartphone shipments, hurting utilization at consumer-focused mature nodes.",
+      "conf": "Confirmed (executive remarks in a meeting with a broker; shortage duration and 2030 figures are Dell estimates)",
+      "vocab": [
+        ["chief operating officer", "營運長", "fin"],
+        ["margins", "利潤率", "fin"],
+        ["higher-margin", "較高毛利的", "fin"],
+        ["shortages", "短缺"],
+        ["workloads", "工作負載"],
+        ["decouple", "脫鉤"],
+        ["allocated", "配置"]
+      ]
+    },
+    "10": {
+      "entity": "Taiwan Printed Circuit Association (TPCA) / Substrates",
+      "title": "TPCA: AI lifts substrates and HLC, with Taiwan's Q2 PCB output at NT$279.1 billion (+27.9%) and full-year output set to top NT$1 trillion for the first time at NT$1.1365 trillion",
+      "summary": "The Taiwan Printed Circuit Association (TPCA) said demand from AI servers, high-speed networking and memory is lifting high-end products such as IC substrates, high-layer-count boards (HLC) and HDI, while tight supply of high-end materials and rising raw material costs have pushed PCB prices up quarter after quarter. Taiwan's PCB output at home and abroad reached NT$279.1 billion in the second quarter of 2026, up 27.9% year on year, and NT$524.7 billion in the first half, up 23.9%. Second-half output is expected to rise 24.5% to NT$611.8 billion, taking the full year to NT$1.1365 trillion, up 24.2% and above NT$1 trillion for the first time. TPCA flagged four uncertainties: rising component costs weighing on end demand, tight key materials, geopolitics, and volatility in AI infrastructure returns and supply-demand.",
+      "metric": "2Q26 output NT$279.1B (YoY +27.9%); 1H26 NT$524.7B (YoY +23.9%); 2H26 est. NT$611.8B (YoY +24.5%); 2026 full year NT$1.1365T (YoY +24.2%)",
+      "impact": "ABF substrates are the downstream bottleneck for CoWoS and EMIB packaging. Last period TrendForce said Intel's EMIB substrate yield was only about 45%, and this period Anue's 'hot stocks' column noted a widening ABF supply gap, with Unimicron up 20% for the week. Rising prices and volumes for substrates and PCBs show that advanced packaging costs are climbing not just at TSMC but across the AI packaging chain, underscoring the strength of demand behind this period's higher AI capex.",
+      "conf": "Confirmed (industry association statistics; second-half and full-year figures are TPCA estimates)",
+      "vocab": [
+        ["year on year", "年增（與去年同期比）", "fin"],
+        ["raw material costs", "原物料成本", "fin"],
+        ["end demand", "終端需求", "fin"],
+        ["volatility", "波動", "fin"],
+        ["supply gap", "供需缺口", "fin"],
+        ["substrates", "載板"],
+        ["uncertainties", "不確定性"]
+      ]
+    },
+    "11": {
+      "entity": "TSMC (2330) / Nvidia / Gartner",
+      "title": "A polarized AI boom: Nvidia becomes TSMC's biggest customer as TSMC's January–August revenue hits NT$3.38687 trillion; Gartner sees 2026 chip revenue at US$1.6 trillion with memory at 54%",
+      "summary": "A Central News Agency analysis said AI could push global semiconductor output past US$1 trillion four years earlier than the 2030 originally expected, but the gains are polarized. Nvidia's revenue exceeds the combined total of the second- through tenth-largest IC design houses, and it has overtaken Apple as TSMC's largest customer; Nvidia's revenue for the second quarter of fiscal 2027 was US$96.221 billion, with a 75% gross margin and net income of US$59.688 billion. TSMC's revenue for January–August was NT$3.38687 trillion, up 39.26%, and its full-year US dollar revenue growth may slightly exceed 40%; its foundry market share was 72.5% in the second quarter. Gartner expects global semiconductor revenue of US$1.6 trillion in 2026, up 92%, with memory at US$837 billion — its share rising from 27% in 2025 to 54% — and growth of only about 21.9% excluding memory. By contrast, handset- and notebook-focused Elan, FocalTech and Sensortek saw January–August revenue decline, while MediaTek expects its first AI ASIC to enter volume production in the fourth quarter and data center revenue to top US$2 billion in 2026.",
+      "metric": "TSMC Jan–Aug revenue NT$3.38687T (YoY +39.26%), share 72.5%; Nvidia FY27 Q2 revenue US$96.221B, gross margin 75%; Gartner 2026 chip revenue US$1.6T (+92%), memory US$837B (54%), ex-memory +21.9%; FocalTech Jan–Aug -12.95%, Sensortek -14%",
+      "impact": "'Only 21.9% growth excluding memory' is the key to reading every number this period: the surge in semiconductor output comes mainly from memory price increases, real foundry growth is concentrated at TSMC (+39%), and other IC designers and mature-node foundries relying on consumer demand are being squeezed by memory costs. It also explains why this period's expansion news (VSMC, UMC Singapore) targets AI-adjacent silicon interposers and silicon photonics rather than traditional consumer products.",
+      "conf": "Confirmed (TSMC and Nvidia figures are company disclosures; Gartner figures are research-firm forecasts)",
+      "vocab": [
+        ["gross margin", "毛利率", "fin"],
+        ["net income", "淨利", "fin"],
+        ["fiscal", "會計年度的", "fin"],
+        ["market share", "市占率", "fin"],
+        ["polarized", "兩極化的"],
+        ["overtaken", "超越"],
+        ["excluding", "不計入", "fin"]
+      ]
+    },
+    "12": {
+      "entity": "Taiwan stocks / Semiconductor sector",
+      "title": "Taiwan's stock market value reaches US$5.29 trillion, fourth-largest in the world; the index gains 843.85 points in the week before the Mid-Autumn holiday as chips take 40.71% of turnover",
+      "summary": "Taiwan stocks traded only four days this week because of the Mid-Autumn Festival holiday (the market is closed September 25–28 and reopens September 29). The TAIEX closed at 48,024.60 on September 24, up 843.85 points (+1.79%) for the week, its second straight weekly gain. The total market capitalization of listed companies reached NT$157.0759 trillion, up about NT$2.76 trillion from the previous Friday; MarketCapWatch data as of September 24 put Taiwan's market value at about US$5.29 trillion, ahead of India and the UK and fourth globally after the US, China and Japan. Weekly turnover of listed stocks was NT$3.3341 trillion, with semiconductors accounting for NT$1.3574 trillion, or 40.71%, and electronic components NT$812.847 billion, or 24.38%; the electronic components index led with an 8.36% weekly gain. Over the year's 177 trading days so far, average daily turnover has been NT$1.0034 trillion.",
+      "metric": "Weekly gain 843.85 points (+1.79%); listed market cap NT$157.0759T (up ~NT$2.76T w/w); Taiwan market value ~US$5.29T (4th globally); weekly turnover NT$3.3341T, semiconductors NT$1.3574T (40.71%); electronic components index +8.36% w/w",
+      "impact": "Check: the September 18 close of 47,180.75 + 843.85 = 48,024.60, matching the TWSE close on September 24. Semiconductors taking 40% of turnover and electronic components (substrates, PCBs) posting the biggest gain match this period's TPCA trillion-dollar output and the widening ABF gap: money is spreading from TSMC alone to the AI packaging supply chain. With Taiwan closed until September 28, US market moves and global news from September 25–26 will be priced in all at once on September 29.",
+      "conf": "Confirmed (TWSE weekly statistics; global market value ranking from MarketCapWatch)",
+      "vocab": [
+        ["market capitalization", "市值", "fin"],
+        ["turnover", "成交值", "fin"],
+        ["weekly gain", "週漲幅", "fin"],
+        ["trading days", "交易日", "fin"],
+        ["priced in", "反映在價格中", "fin"],
+        ["listed companies", "上市公司", "fin"],
+        ["holiday", "假期"]
+      ]
+    },
+    "13": {
+      "entity": "Philadelphia Semiconductor Index / TSMC ADR / UMC ADR",
+      "title": "US stocks close higher on Sept 25 as the SOX gains more than 1%; TSMC's ADR slips 0.12% to US$450.61 while the 10-year Treasury yield hits its highest since 2007",
+      "summary": "Reports that the US and Iran have entered technical talks, with Iran proposing to reopen the Strait of Hormuz within seven days, pulled oil prices lower, and US stocks shook off early volatility to close broadly higher on September 25: the Dow gained nearly 480 points, the S&P 500 and Nasdaq each rose about 0.5%, and the Philadelphia Semiconductor Index climbed more than 1%. Chip stocks mostly rose, with Qualcomm up 3.97%, Applied Materials up 2.27% and Broadcom up 0.70%; AMD's market value topped US$1 trillion for the first time this week, and Bank of America raised its target price from US$620 to US$720. Taiwanese ADRs mostly gained, with ASE up 1.86% and UMC up 0.87%, while TSMC's ADR fell US$0.54 (-0.12%) to US$450.61. The 10-year Treasury yield rose intraday to its highest since 2007 and ended around 5.163%, with the 30-year near 5.488%; CME FedWatch showed about a 64% probability of a 25-basis-point rate hike in October.",
+      "metric": "SOX +>1% (Sept 25); TSMC ADR US$450.61 (-0.54, -0.12%); UMC ADR +0.87%, ASE ADR +1.86%; Qualcomm +3.97%, Applied Materials +2.27%; 10Y Treasury 5.163%, 30Y 5.488%; October hike probability ~64%; WTI US$92.41 (-2.33%)",
+      "impact": "Check: TSMC's ADR closed at US$451.15 on September 24, and 451.15 − 0.54 = 450.61, which matches. Strength in mature-node UMC's ADR and packager ASE's ADR while TSMC's ADR was flat extends last period's rotation of money from TSMC into other AI beneficiaries. But Treasury yields at a 19-year high and an October rate hike probability above 60% are the main valuation headwinds before Taiwan reopens on September 29.",
+      "conf": "Confirmed (Anue market close report; the SOX closing level was not given in the original, only its percentage gain; Taiwan closed Sept 25–28)",
+      "vocab": [
+        ["yield", "殖利率", "fin"],
+        ["intraday", "盤中", "fin"],
+        ["rate hike", "升息", "fin"],
+        ["basis-point", "基點", "fin"],
+        ["target price", "目標價", "fin"],
+        ["rotation", "類股輪動", "fin"],
+        ["valuation", "評價", "fin"],
+        ["headwinds", "逆風、不利因素", "fin"]
+      ]
+    },
+    "14": {
+      "entity": "Intel Foundry / TSMC (2330)",
+      "title": "Intel's foundry chief says 14A performance will be 'within 5%' of TSMC's A14, though public data imply 14A could lead by 2% to 11%",
+      "summary": "Naga Chandrasekaran, head of Intel's foundry business, told KeyBanc that the performance of Intel's 14A process is expected to be 'within 5%' of TSMC's A14 node, without saying whether that means ahead or behind. By the companies' public figures, Intel says 14A offers 15–20% more performance than 18A at the same power, or 25–35% lower power at the same frequency, while TSMC expects A14 to be 10–15% faster than N2 at the same power, or use 25–30% less power. Using actual product clocks as a baseline — Intel's Core Ultra X9 388H 'Panther Lake' at up to 5.10GHz, AMD's EPYC 9586F on TSMC N2 at 5.00GHz and Apple's M6 at 4.78GHz — Anue estimated that 14A would lead A14 by roughly 2% to 11.3%, or 6.5% to 16.2% using the M6 as the N2 reference, both beyond 'within 5%'. Analysts suggest Intel may be adopting an 'under-promise, over-deliver' strategy, or factoring in undisclosed variables such as yield and design difficulty.",
+      "metric": "14A vs 18A: performance +15–20% at same power, power -25–35%; A14 vs N2: performance +10–15%, power -25–30%; estimated 14A lead over A14 ~2–11.3% (EPYC 9586F baseline) or 6.5–16.2% (M6 baseline)",
+      "impact": "Last period UBS built Intel's EMIB-T into its production assumptions for Google's TPU v9; this period Intel is making claims on the front end: 14A is on par with TSMC's A14. But 14A still has no named external customer (Intel has said customers will decide in 2H26–1H27), while TSMC has already completed A14 IP tape-outs with Cadence (see background). Comparable specs are only the entry ticket; the ecosystem and capacity (EUV sold out through 2027) will decide whether Intel Foundry can win orders in the A14 generation.",
+      "conf": "Confirmed (Intel executive's remarks to a broker; 14A's lead over A14 is a media estimate from public data, not company data)",
+      "vocab": [
+        ["under-promise, over-deliver", "少承諾、多交付", "fin"],
+        ["baseline", "基準", "fin"],
+        ["undisclosed", "未公開的"],
+        ["on par", "相當、同等水準"],
+        ["external customer", "外部客戶", "fin"],
+        ["assumptions", "假設", "fin"],
+        ["yield", "良率"]
+      ]
+    },
+    "15": {
+      "entity": "Nvidia / TSMC (2330) / SCHMID / Glass substrates",
+      "title": "Nvidia accelerates glass substrate push to replace silicon interposers and fit more HBM, reportedly asking Taiwanese, Japanese and Korean substrate makers to finish development within two years",
+      "summary": "According to Seoul Economic Daily and Anue, German equipment maker SCHMID disclosed in its first-half results presentation that it is working with key suppliers in the Intel, Nvidia and AMD supply chains to develop equipment for glass-core substrates, though metallization of through-glass vias (TGV) still faces technical hurdles and final customer qualification is not complete. Nvidia CEO Jensen Huang has discussed glass substrate cooperation with SK Group chairman Chey Tae-won and has actively encouraged TSMC to develop the technology. Leaker Jukan, citing South Korea's kipost on September 22, said Nvidia has asked substrate makers in South Korea, Japan and Taiwan to complete glass substrate development within two years, possibly before 2028. Glass substrates offer better flatness and rigidity and a low coefficient of thermal expansion, which could make chips about 40% faster while cutting power by about half, and may replace or eliminate size-limited, costly silicon interposers, allowing more HBM in a single package.",
+      "metric": "Glass substrates: chip speed ~+40%, power ~-50%; development deadline reportedly within two years (before 2028 at the earliest); TGV metallization the main hurdle, customer qualification incomplete",
+      "impact": "If glass substrates replace silicon interposers, the parts most affected would be the interposer layer in CoWoS-S/CoWoS-L and VSMC, which just opened this period with silicon interposers as one of its main products. But TGV has not yet passed qualification and the timeline is 2028 at the earliest, so near-term demand for CoWoS and interposers (capacity +70.9% in 2027) is unaffected; over the medium term, TSMC's panel-level CoPoS and Intel's glass substrate roadmap will compete head-on.",
+      "conf": "Unconfirmed (citing Korean media and a leaker; Nvidia and TSMC have not confirmed the development deadline; SCHMID's comments are from its results presentation)",
+      "vocab": [
+        ["results presentation", "財報簡報", "fin"],
+        ["qualification", "認證", "fin"],
+        ["hurdles", "障礙"],
+        ["rigidity", "剛性"],
+        ["coefficient of thermal expansion", "熱膨脹係數"],
+        ["head-on", "正面地"],
+        ["medium term", "中期", "fin"]
+      ]
+    },
+    "16": {
+      "entity": "GlobalFoundries (GFS)",
+      "title": "GlobalFoundries at GTS Taiwan: no EUV race, focus on differentiated technology and geopolitical resilience; strong RF demand drives expansion as it takes on GaN high-voltage licenses from an exiting Taiwan partner",
+      "summary": "Speaking at GTS Taiwan 2026, GlobalFoundries' Asia-Pacific sales vice president Feng Tseng-wen said the company does not chase leading-edge EUV nodes, focusing instead on 12nm, 22nm, 28/40nm and 8-inch specialty processes spanning RFSOI, silicon photonics (in development for more than a decade), PMIC/BCD and gallium nitride (GaN). AI infrastructure is driving very strong RF demand, and the company has planned a capacity expansion. Its fabs are in Dresden, Germany; Malta and Burlington in the US; and Singapore, with a manufacturing partner in Guangzhou, China. On GaN, after a Taiwanese partner announced its exit from the business, GlobalFoundries immediately took on the related high-voltage technology licenses so customers could migrate, and it will improve the reliability and global capacity of low-voltage GaN for data centers. GlobalFoundries has annual revenue of about US$7 billion, more than 10,000 employees and over 500 customers.",
+      "metric": "Annual revenue ~US$7B; >10,000 employees; >500 customers; 12/22/28/40nm + 8-inch; sites: Dresden, Malta, Burlington, Singapore; RF expansion; GaN high-voltage licenses taken on",
+      "impact": "GlobalFoundries shares the 'non-EUV, geopolitical resilience' path with this period's VSMC and UMC Singapore expansions, and competes head-on with UMC and Vanguard in Singapore, silicon photonics and GaN. Taking on the high-voltage GaN licenses from an exiting Taiwan partner shows compound and power semiconductor foundry work shifting from Taiwan to GlobalFoundries' US and Singapore capacity, worth tracking against compound foundries such as WIN Semiconductors and Episil.",
+      "conf": "Background (originally published Sep 24, 2026 14:30, outside this period and not yet included last period; company executive remarks)",
+      "vocab": [
+        ["annual revenue", "年營收", "fin"],
+        ["licenses", "授權", "fin"],
+        ["differentiated", "差異化的"],
+        ["geopolitical", "地緣政治的"],
+        ["migrate", "移轉"],
+        ["reliability", "可靠度"],
+        ["exit", "退出", "fin"]
+      ]
+    },
+    "17": {
+      "entity": "Cadence / TSMC (2330) A14",
+      "title": "Cadence expands TSMC partnership: design tools certified for A16 and A14, with UCIe-64G already taped out on A14",
+      "summary": "Cadence announced on September 23 an expanded collaboration with TSMC: its design, sign-off and analog/custom flow tools have been certified for TSMC's A16 and A14 processes and support N2P. On IP, Cadence has completed a UCIe-64G tape-out on A14 and is developing LPDDR6 IP; Artisan foundation IP and mixed-signal IP for A14 are slated for the fourth quarter of 2026, covering standard cells, GPIO and memory compilers. Cadence's solutions also support TSMC's full SoW-X design flow, handling wafer-scale systems with hundreds of chiplets and millions of bumps, and the partnership extends to agentic AI and 3D-IC design flows across N3, N2, A16 and A14.",
+      "metric": "Tools certified for A16/A14, support N2P; UCIe-64G tape-out on A14; A14 foundation IP in 4Q26; SoW-X support (hundreds of chiplets, millions of bumps)",
+      "impact": "Last period imec's IC-Link joined the OIP Cloud Alliance; now Cadence has taped out chiplet interconnect IP on A14, showing TSMC's A14 design ecosystem will be in place by the end of 2026, two years ahead of volume production in 2028. That is what Intel still struggles to match even as it claims 14A performance on par with A14: customers pick a process based on whether IP and EDA are ready.",
+      "conf": "Background (originally published Sep 24, 2026 12:00, announced Sep 23; outside this period and not included last period; company announcement)",
+      "vocab": [
+        ["certified", "獲認證"],
+        ["sign-off", "簽核"],
+        ["tape-out", "設計定案"],
+        ["ecosystem", "生態系", "fin"],
+        ["collaboration", "合作", "fin"],
+        ["slated", "預定"],
+        ["chiplets", "小晶片"]
+      ]
+    },
+    "18": {
+      "entity": "Taiwan stocks / TSMC (2330) / UMC (2303) / PSMC (6770)",
+      "title": "Sept 24, last session before the Mid-Autumn holiday: TAIEX falls 132.69 points to 48,024.60 and TSMC drops NT$25 to NT$2,475; foreign investors net sell NT$33.8 billion, dumping 43,000 lots of PSMC and 35,000 of UMC",
+      "summary": "Taiwan stocks opened lower and drifted down on September 24, with the TAIEX falling 132.69 points (-0.28%) to 48,024.60 on turnover of NT$775.59 billion (TWSE figure including odd lots, after-hours fixed-price and block trades). TSMC fell NT$25 to NT$2,475, UMC fell NT$6 to NT$154, and PSMC fell NT$1.10 to NT$72.00. The three major institutional investors were net sellers of NT$43.872 billion, including NT$33.8 billion by foreign investors, who swung back to selling after five straight sessions of selling had ended; their biggest net sales were AUO (80,000 lots), PSMC (43,000 lots) and UMC (35,000 lots). Investment trusts were net sellers for a third day, trimming 9,471 lots of UMC. In the US on September 24, the Philadelphia Semiconductor Index fell 41.74 points (-0.33%) to 12,492.54, while TSMC's ADR rose US$4.58 (+1.03%) to US$451.15.",
+      "metric": "TAIEX 48,024.60 (-132.69, -0.28%); turnover NT$775.59B; TSMC NT$2,475 (-25), UMC NT$154 (-6), PSMC NT$72.00 (-1.10); foreign net sales NT$33.8B (PSMC 43,000 lots, UMC 35,000 lots); SOX 12,492.54 (-41.74); TSMC ADR US$451.15 (+4.58)",
+      "impact": "Check: the September 23 close of 48,157.29 − 132.69 = 48,024.60; TSMC 2,500 − 25 = 2,475; UMC 160 − 6 = 154; PSMC 73.10 − 1.10 = 72.00; TSMC ADR 446.57 + 4.58 = 451.15 — all match (SOX 12,534.27 − 41.74 = 12,492.53, a 0.01-point rounding difference from the reported figure). PSMC and UMC had rallied last period on price-hike hopes; heavy profit-taking by foreign investors in mature-node foundry stocks ahead of the long holiday shows the durability of the mature-node price-hike story is still being tested.",
+      "conf": "Background (Sept 24 close, outside this period; the market had not closed when last period's report was produced on the morning of Sept 24. Taiwan stocks were closed Sept 25–28 for the Mid-Autumn holiday, so there were no trading days in this period)",
+      "vocab": [
+        ["net sellers", "淨賣方", "fin"],
+        ["institutional investors", "法人", "fin"],
+        ["profit-taking", "獲利了結", "fin"],
+        ["odd lots", "零股", "fin"],
+        ["block trades", "鉅額交易", "fin"],
+        ["investment trusts", "投信", "fin"],
+        ["lots", "張（交易單位）", "fin"],
+        ["durability", "持續性"]
+      ]
+    }
+  }
+}
