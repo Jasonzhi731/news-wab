@@ -1,0 +1,245 @@
+{
+  "source": "全球半導體代工產業快報_20260927-20260928.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330) / Facilities and equipment supply chain",
+      "title": "A 3nm fab costs about US$20 billion to build, and more than US$25 billion in the US, with equipment making up about 75% of the bill; analysts name eight TSMC expansion beneficiaries including United Integrated Services and Marketech",
+      "summary": "Economic Daily News reported that, according to industry observers, building a 3nm fab costs about US$20 billion, and more than US$25 billion in the United States. Production equipment accounts for roughly 75% of the cost, with the rest going to the building (cleanrooms), facility systems (specialty chemicals and ultrapure water) and land. Analysts expect TSMC's expansion to lift the overall value of its supply chain and singled out eight stocks: United Integrated Services (2404), Contrel (7751), Marketech (6196), Yankey Engineering (6691), Acter (5536), Chroma (2360), Hon Precision (7769) and L&K Engineering (6139). The report added that AI is moving toward 'more complete packaging systems', making top-tier OSATs ASE (3711), KYEC (2449) and Powertech (6239) natural partners to absorb overflow AI chip capacity thanks to their technology and scale.",
+      "metric": "3nm fab cost ~US$20B (Taiwan) / >US$25B (US); equipment ~75% of construction cost; eight names: United Integrated Services, Contrel, Marketech, Yankey Engineering, Acter, Chroma, Hon Precision, L&K Engineering",
+      "impact": "Building in the US costs at least 25% more than in Taiwan, one of the cost arguments behind last period's reported 3–6% TSMC price increase for 2027, with steeper hikes at leading-edge nodes. Equipment's 75% share also explains why ASML's EUV tools being sold out through 2027 (last period) directly caps the pace of expansion. Facilities contractors benefit from the sheer number of fabs TSMC is building at once in the US, Japan, Germany and Taiwan rather than from the value of any single fab.",
+      "conf": "Unconfirmed (construction cost is an industry and analyst estimate; TSMC has not disclosed per-fab investment; beneficiary stocks are analyst picks)",
+      "vocab": [
+        ["beneficiaries", "受惠者", "fin"],
+        ["singled out", "點名"],
+        ["cost arguments", "成本面理由"],
+        ["overflow", "外溢"],
+        ["accounts for", "占（比例）"],
+        ["top-tier", "一線的"],
+        ["sheer number", "純粹數量"]
+      ]
+    },
+    "2": {
+      "entity": "KYEC (2449) / ASE Technology Holding (3711)",
+      "title": "Taiwan's two testing giants chase high-end AI testing: KYEC fully loaded on Blackwell and Rubin with fourth-quarter revenue seen up 20% sequentially; ASE's LEAP revenue on track to top US$3.5 billion this year",
+      "summary": "Economic Daily News reported that KYEC and ASE Technology Holding are benefiting from strong demand for GPUs, ASICs and high-performance computing as new platforms ramp, with high-end testing becoming the key technology for winning AI orders. KYEC is handling testing for Nvidia's Blackwell and Rubin series and is running at full capacity. Its third-quarter revenue growth may come in below expectations, but new chips entering volume production could lift fourth-quarter revenue by about 20% quarter-on-quarter. The company is expanding in Yangmei, Zhunan, Tongluo and Singapore, and has raised this year's capital expenditure from NT$39.372 billion to a record NT$50 billion. ASE's leading-edge advanced packaging and testing (LEAP) business is scaling up, with second-quarter operations at a near four-year high; COO Tien Wu said LEAP revenue this year should exceed the original US$3.5 billion estimate, and full turnkey services began contributing revenue in the third quarter. ASE has spent about NT$1.48 billion this year buying equipment from Teradyne, and its new Kaohsiung plant will integrate testing and system validation platforms.",
+      "metric": "KYEC 4Q26 revenue seen ~+20% QoQ; KYEC 2026 capex NT$39.372B → NT$50B; ASE LEAP 2026 revenue >US$3.5B; ASE purchases from Teradyne ~NT$1.48B",
+      "impact": "TSMC's CoWoS output must be tested before it ships, so KYEC's expected 20% sequential gain in the fourth quarter is an early read on Nvidia Rubin ramping on TSMC N3 and CoWoS-L. ASE beating its LEAP target and launching turnkey packaging-plus-testing services also supports this period's view, in the 'US$25 billion fab' story, that OSATs are absorbing TSMC's back-end overflow.",
+      "conf": "Unconfirmed (KYEC's 20% QoQ growth is an industry estimate cited by the media; ASE's LEAP target is a management statement; capex is a company disclosure)",
+      "vocab": [
+        ["come in below expectations", "低於預期"],
+        ["quarter-on-quarter", "季增", "fin"],
+        ["capital expenditure", "資本支出"],
+        ["record", "創紀錄的"],
+        ["turnkey", "一條龍（統包）"],
+        ["early read", "提前的觀察指標"],
+        ["running at full capacity", "產能滿載"]
+      ]
+    },
+    "3": {
+      "entity": "TSMC (2330) CoPoS / Advanced packaging equipment",
+      "title": "AI chips top 1,500–2,000 watts as heat and warpage become the bottleneck; TSMC's square-panel CoPoS to ramp in 2028, lifting area efficiency from 45% to 81% and sparking a three-year packaging equipment build-out",
+      "summary": "Anue reported that AI chip power consumption has passed the kilowatt mark, with some products reaching 1,500–2,000 watts or more, making overheating and warpage the main bottlenecks in advanced packaging. TSMC is pushing CoPoS (panel-level CoWoS), a square-panel architecture expected to ramp in 2028 that would raise area utilization from 45% on round wafers to 81%. The report named beneficiaries among thermal and anti-warpage equipment makers: Grand Plastic Technology (3131) for high-end wet processing, Scientech (3583) for temporary bonding and debonding of square substrates, C Sun (2467) for integrated anti-warpage curing, Gallant Micro (6640) for die sorting and wafer bonding, All Ring (6187) and Contrel (7751) for dispensing and heat-spreader attachment, Yield Micro (7734) for defoaming and anti-warpage tools, and Pei Li Ke (7822) for 3D X-ray inspection. It expects the expansion to double the number of equipment stations and push up average selling prices.",
+      "metric": "AI chip power 1,500–2,000W+; CoPoS area efficiency 45% → 81%, ramp in 2028; eight equipment makers named (Grand Plastic, Scientech, C Sun, Gallant Micro, All Ring, Contrel, Yield Micro, Pei Li Ke)",
+      "impact": "Last period Nvidia reportedly asked suppliers to develop glass substrates within two years; this item shows TSMC's own answer is to move to panels with CoPoS, and both timelines land in 2028. For foundries, the advanced packaging bottleneck is shifting from 'not enough capacity' to the physical limits of heat and warpage. Pricier equipment will raise CoWoS costs, another reason TSMC's packaging prices keep climbing; this period's 12-inch SiC heat-spreading substrates and Intel's glass-substrate CPO are different answers to the same problem.",
+      "conf": "Unconfirmed (media industry analysis; CoPoS ramp timing and area efficiency are industry claims not officially announced by TSMC)",
+      "vocab": [
+        ["build-out", "擴建潮"],
+        ["average selling prices", "平均售價"],
+        ["pricier", "更昂貴的"],
+        ["warpage", "翹曲"],
+        ["area utilization", "面積使用率"],
+        ["physical limits", "物理限制"],
+        ["push up", "推升"]
+      ]
+    },
+    "4": {
+      "entity": "Resonac / Sumitomo Metal Mining / Wolfspeed / Taisic Materials",
+      "title": "AI cooling needs speed up 12-inch SiC development as single-crystal, bonded and polycrystalline routes compete for advanced packaging heat-spreading substrates",
+      "summary": "Anue reported that as AI and HPC chips draw more power, single-crystal silicon carbide (SiC), which conducts heat far better than silicon, is emerging as a candidate heat-spreading substrate for advanced packaging, intensifying competition in 12-inch SiC. On the single-crystal route, Japan's Resonac has grown and processed 12-inch single-crystal SiC substrates, and Wolfspeed showcased 12-inch single-crystal SiC technology in January 2026. On the bonded route, Sumitomo Metal Mining has developed 12-inch bonded SiC substrates and begun sampling them, bonding an ultra-thin single-crystal layer onto a cheap support substrate to sharply reduce single-crystal material use. On the polycrystalline route, China's Titan Future has launched 12-inch polycrystalline SiC substrates as the base layer for bonded SiC. Taiwan's Taisic Materials has disclosed progress on 12-inch SiC boules. The competition is now about low-cost, large-diameter SiC that combines high quality with high thermal conductivity.",
+      "metric": "Three routes: single-crystal (Resonac; Wolfspeed showcase Jan 2026), bonded (Sumitomo Metal Mining sampling), polycrystalline (Titan Future); Taiwan's Taisic Materials discloses 12-inch SiC boules",
+      "impact": "SiC has been a compound power semiconductor material (the SiC/GaN routes of Episil and GlobalFoundries); moving to 12 inches and into CoWoS cooling pulls the power semiconductor supply chain into advanced packaging. Read alongside the CoPoS anti-warpage item above and last period's glass substrates: the materials for TSMC's next-generation packaging (silicon interposers, glass, SiC heat spreaders) are still up for grabs, and no supplier has yet secured a volume-production position.",
+      "conf": "Unconfirmed (media industry analysis; development progress is company-disclosed, and there is no public case of 12-inch SiC in volume advanced packaging production)",
+      "vocab": [
+        ["candidate", "候選的"],
+        ["sampling", "送樣"],
+        ["low-cost", "低成本"],
+        ["up for grabs", "尚待爭奪"],
+        ["secured", "取得、確保"],
+        ["thermal conductivity", "導熱率"],
+        ["intensifying competition", "競爭加劇"]
+      ]
+    },
+    "5": {
+      "entity": "Intel / AUO (2409) / Taiwanese LED makers",
+      "title": "Intel moves into micro LED CPO, embedding micro LEDs in glass substrates linked by TGVs to cut module power from 30W to 1.6W, with volume ramp possible in 2H28",
+      "summary": "Anue reported that Intel is embedding micro LEDs in the glass substrate of IC packages and using through-glass vias (TGVs) for electrical interconnects, developing an optoelectronic co-packaged optics (CPO) solution with partners including AUO (2409). The approach withstands heat up to 120°C, lasts more than 30,000 hours, uses about one-fifth the per-channel power of silicon photonics, and cuts module power from 30 watts to 1.6 watts. Taiwanese LED makers Ennostar (3714), PlayNitride (6854), Tyntek (2426) and Epileds (4956) are also positioning for the opportunity. The CPO market is projected to grow from US$110 million in 2025 to US$1.96 billion in 2033; micro LED modules could enter volume production as early as the second half of 2028, with output value estimated at US$848 million in 2030.",
+      "metric": "Module power 30W → 1.6W; per-channel power ~1/5 of silicon photonics; heat tolerance 120°C, lifetime >30,000 hours; CPO market US$110M (2025) → US$1.96B (2033); micro LED modules ramp 2H28, 2030 output value US$848M",
+      "impact": "Intel Foundry claimed last period that 14A is on par with TSMC's A14 at the front end; in packaging it is opening a separate CPO route with glass substrates and micro LEDs. That sets up competing technology bets with TSMC's COUPE silicon photonics, Tower's Japan silicon photonics expansion (background) and UMC's Singapore P4. If micro LED CPO works, optical engines would not need silicon photonics foundries, a potential substitution risk for mature-node foundries betting on silicon photonics, though it remains in validation until 2028.",
+      "conf": "Unconfirmed (media industry analysis; Intel has not announced a production timeline; CPO market size is a research firm forecast)",
+      "vocab": [
+        ["positioning", "卡位布局"],
+        ["projected", "預估"],
+        ["output value", "產值"],
+        ["competing technology bets", "相互競爭的技術押注"],
+        ["substitution risk", "替代風險"],
+        ["as early as", "最快"],
+        ["co-packaged optics", "共同封裝光學"]
+      ]
+    },
+    "6": {
+      "entity": "TSMC (2330) / Cathay Taiwan Tech Leaders ETF (00881)",
+      "title": "TSMC's 2027 price-hike story keeps ETFs' TSMC exposure in focus: 00881 has NT$157.1 billion in assets and a 38.23% TSMC weighting",
+      "summary": "Anue reported that talk of TSMC raising foundry prices by 3–6% in 2027 has drawn attention to ETFs with heavy TSMC holdings, or high 'TSMC exposure'. Cathay Taiwan Tech Leaders ETF (00881), for example, has assets of NT$157.1 billion and a TSMC weighting of 38.23%; by sector it holds 59.51% semiconductors, 18.97% electronic components, 8.03% other electronics and 6.2% computers and peripherals. Its backtested cumulative return over the past 10 years is 1,317.1%, or 22.5% annualized. The report argued that as AI opportunities spread from chips to servers, PCBs, thermal management and optical communications, diversifying through an ETF makes more sense than betting on a single stock.",
+      "metric": "00881 assets NT$157.1B; TSMC weighting 38.23%; semiconductors 59.51%, electronic components 18.97%; 10-year backtested cumulative return 1,317.1%, annualized 22.5%; TSMC 2027 price hike rumored at 3–6%",
+      "impact": "Taiwan's market was closed September 25–28 for the Mid-Autumn Festival and Teachers' Day, so there were no trading days in this period and market talk carried over last period's TSMC price-hike theme. Electronic components make up nearly a fifth of the fund, consistent with last period's exchange data showing the electronic components index leading with a weekly gain of 8.36%, as money spread from TSMC to substrates, PCBs and cooling. Backtested returns are marketing figures and do not indicate future performance.",
+      "conf": "Unconfirmed (price hike is a supply-chain rumor not confirmed by TSMC; fund size and weightings are disclosed by the fund manager; backtested returns are not actual performance)",
+      "vocab": [
+        ["exposure", "曝險（持股比重）"],
+        ["weighting", "權重"],
+        ["backtested", "回測的"],
+        ["cumulative return", "累積報酬"],
+        ["annualized", "年化"],
+        ["diversifying", "分散投資"],
+        ["carried over", "延續"]
+      ]
+    },
+    "7": {
+      "entity": "US Congress / Zhongji Innolight / Eoptolink / Accelink",
+      "title": "Bipartisan US bill would bar sensitive federal systems from using Chinese-made optical transceivers; China's top five suppliers hold 52.6% of the global market, putting AI data center optics supply chains at risk",
+      "summary": "Anue reported that a bipartisan group of US lawmakers has introduced a bill to restrict sensitive federal government systems from using Chinese-made optical transceiver modules. The bill is still at the proposal stage and mainly targets defense-sensitive settings. Affected companies include Zhongji Innolight, with a 23.1% global market share, Eoptolink at 15.3% and Accelink at 6.5%; China's top five suppliers together hold 52.6%. The report said Chinese makers control more than about 60% of the global optical module market, with an even higher share in high-speed 800G and 1.6T products, while large AI data centers need millions of optical transceivers. Key questions ahead are the scope of products covered, how country of origin is determined, and whether the restrictions extend to AI infrastructure beyond government procurement.",
+      "metric": "Zhongji Innolight 23.1% share, Eoptolink 15.3%, Accelink 6.5%; China's top five combined 52.6%; China holds 60%+ of global optical modules",
+      "impact": "After last period's MATCH Act targeting immersion DUV, Congress is now extending controls to optical components for AI data centers, consistent with national-security controls being kept out of US-China talks. If the restrictions spread to private AI infrastructure, optical module supply would shift toward Taiwan and Southeast Asia, benefiting silicon photonics foundry capacity at TSMC (COUPE), UMC's Singapore P4 and Tower Japan, as well as alternatives such as Intel's micro LED CPO in this period.",
+      "conf": "Unconfirmed (the bill is at the proposal stage with text and timing undecided; market shares are research firm data)",
+      "vocab": [
+        ["bipartisan", "跨黨派的"],
+        ["proposal stage", "提案階段"],
+        ["market share", "市占率", "fin"],
+        ["country of origin", "原產地"],
+        ["government procurement", "政府採購"],
+        ["optical transceiver", "光收發模組"],
+        ["alternatives", "替代方案"]
+      ]
+    },
+    "8": {
+      "entity": "Samsung Electronics / SK hynix",
+      "title": "Samsung and SK hynix third-quarter operating profit seen at about KRW189.9 trillion combined; Samsung's foundry unit, loss-making since 2023, expected to turn profitable",
+      "summary": "Anue, citing FnGuide data, said Samsung Electronics is expected to post third-quarter revenue of KRW199.1 trillion and operating profit of KRW105.6 trillion, while SK hynix is expected to report revenue of KRW94.1 trillion and operating profit of KRW74.1 trillion, for combined operating profit of about KRW189.9 trillion. Analysts have trimmed their estimates over the past three months: Samsung's revenue by 2.6% and profit by 4.4%, SK hynix's revenue by 5.3% and profit by 5%, mainly because a stronger won shrinks dollar-denominated sales. Mirae Asset expects Samsung's DRAM average selling price to rise 16.5% in the third quarter, with the increase possibly narrowing to 5.4% in the fourth. Samsung has locked in 60–70% of its capacity under long-term agreements, and SK hynix has finished long-term contract talks with about 10 core customers. Samsung expects third-quarter HBM4 sales to more than double from the second quarter; its foundry division has been losing money since 2023, and the market expects it to turn profitable in the third quarter.",
+      "metric": "Samsung 3Q26 est. revenue KRW199.1T, operating profit KRW105.6T; SK hynix revenue KRW94.1T, operating profit KRW74.1T; combined KRW189.9T; Samsung DRAM ASP 3Q +16.5% → 4Q +5.4% (Mirae Asset); Samsung LTAs cover 60–70% of capacity",
+      "impact": "If Samsung Foundry turns a profit in the third quarter, it would be the first time since 2023. Read with last period's TrendForce report that Samsung's 2nm yields are improving but Qualcomm's 2nm order may slip to 2027: the turnaround comes mainly from in-house orders such as HBM base dies and higher utilization, not external leading-edge customers. DRAM price gains narrowing from 16.5% to 5.4% also echo last period's CXMT analysis that mature DRAM price increases are slowing. Samsung will release preliminary results in early October.",
+      "conf": "Unconfirmed (figures are analyst consensus estimates, not company announcements; foundry profitability is a market expectation)",
+      "vocab": [
+        ["operating profit", "營業利益"],
+        ["trimmed their estimates", "下修預估"],
+        ["dollar-denominated", "以美元計價的"],
+        ["turn profitable", "轉虧為盈"],
+        ["turnaround", "轉機"],
+        ["preliminary results", "初步財報"],
+        ["loss-making", "虧損的"],
+        ["stronger won", "韓元升值"]
+      ]
+    },
+    "9": {
+      "entity": "Micron / US macro data",
+      "title": "Week ahead: Micron reports fiscal fourth-quarter results after Wednesday's close, with revenue seen at US$50.8 billion, EPS jumping from US$3.03 to US$31.45 and gross margin at 85.9%; PCE and payrolls also due",
+      "summary": "Anue's weekly trading notes flagged the key events for the week starting September 28. Micron will report fiscal fourth-quarter results after the market closes on Wednesday; the market expects revenue to surge to US$50.8 billion (Zacks estimates US$51.1 billion), earnings per share to jump nearly tenfold from US$3.03 a year earlier to US$31.45, and gross margin to widen from 45.7% to 85.9%. The US August PCE price index is expected to rise 0.4% month on month (previous 0.2%) and 3.7% year on year, with core PCE up 0.3%; September nonfarm payrolls are expected to show 100,000 new jobs (previous 162,000) and the unemployment rate at 4.2% (previous 4.1%). Also on the calendar are the Reserve Bank of Australia's rate decision (a 25-basis-point hike expected) and China's September PMI.",
+      "metric": "Micron FQ4 revenue est. US$50.8B (Zacks US$51.1B), EPS US$31.45 (year-ago US$3.03), gross margin 85.9% (year-ago 45.7%); US August PCE +3.7% YoY; September payrolls est. 100,000, unemployment 4.2%",
+      "impact": "Micron is the first memory bellwether ahead of Samsung's and SK hynix's third-quarter results: a gross margin approaching 85.9% would put memory profitability above TSMC's, which is the source of last period's Gartner finding that most semiconductor revenue growth comes from memory. For foundries, the thing to watch is what Micron says about HBM4 base dies (partly made by TSMC) and its 2027 capex. PCE and payrolls will shape the odds of an October rate hike and therefore valuations when Taiwan's market reopens on September 29.",
+      "conf": "Unconfirmed (Micron has not yet reported; figures are market estimates; macro figures are forecasts)",
+      "vocab": [
+        ["after the market closes", "盤後"],
+        ["earnings per share", "每股盈餘"],
+        ["nearly tenfold", "近十倍"],
+        ["nonfarm payrolls", "非農就業"],
+        ["bellwether", "領先指標"],
+        ["valuations", "評價"],
+        ["month on month", "月增"],
+        ["odds", "機率"]
+      ]
+    },
+    "10": {
+      "entity": "Vanguard (5347) / VSMC / NXP / TSMC (2330)",
+      "title": "Vanguard's VSMC 12-inch fab in Singapore officially opens after a record 20.5-month build, with phase two aiming for 18 months; NXP calls it its biggest investment since buying Freescale",
+      "summary": "VSMC, the joint venture between Vanguard (60%) and NXP (40%), held an opening ceremony for its 12-inch fab in Tampines, Singapore, on September 28, attended by Vanguard and VSMC chairman Fang Leuh, NXP president and CEO Rafael Sotomayor, VSMC acting CEO Goh Inn Swee and TSMC vice president of operations and fab facilities Chuang Tzu-shou. Fang said VSMC has gone from an empty plot to a 12-inch fab capable of volume production, and thanked NXP and TSMC for their support in construction, technology transfer and staff training. Actual construction took 20.5 months, or about 22 months from groundbreaking to opening, a record for a Singapore fab, helped by a design without a basement; Chuang said phase two could be built in as little as 18 months now that the groundwork is in place. Anue reported that the fab focuses on 40–130nm specialty processes (eFlash, power management, mixed-signal, analog and automotive), with full capacity of 44,000 wafers a month; it will create 1,600 jobs, 75% of them professional roles, and has signed seven memorandums of understanding with academic and research partners. Sotomayor said it is NXP's largest investment since it acquired Freescale in 2015 and that VSMC will be manufacturing infrastructure for 'Trusted Physical AI'. Commercial Times reported on September 27 that phase-one capacity is already sold out, customer demand exceeds the first fab's planned output, and some customers have asked when a second fab will be built.",
+      "metric": "Ownership: Vanguard 60% / NXP 40%; construction 20.5 months (about 22 months from groundbreaking to opening); phase two target 18 months; 40–130nm processes; full capacity 44,000 wafers/month; 1,600 jobs; seven MOUs; volume production 1Q27",
+      "impact": "The opening previewed last period went ahead as planned; what is new is that a TSMC executive publicly discussed a construction timeline for 'phase two', moving expansion from talk toward concrete planning. The process description is inconsistent, however: last period Central News Agency said 30–40nm while NXP now says 40–130nm, suggesting that beyond silicon interposers, phase one mainly serves NXP's mature automotive and industrial specialty processes. By licensing technology in exchange for mature capacity and interposer supply in Singapore, TSMC is extending its strategy of expanding through partners rather than building mature capacity itself.",
+      "conf": "Confirmed (company opening ceremony and executive remarks; the phase-two timeline is a TSMC VP's statement with no investment decision announced; the process range differs from last period's CNA report, and the ceremony-day statement is used)",
+      "vocab": [
+        ["opening ceremony", "啟用典禮"],
+        ["technology transfer", "技術移轉"],
+        ["groundbreaking", "動土"],
+        ["memorandums of understanding", "合作備忘錄"],
+        ["largest investment", "最大投資"],
+        ["investment decision", "投資決策"],
+        ["acquired", "收購（acquire 過去式）"]
+      ]
+    },
+    "11": {
+      "entity": "Nvidia / China MIIT / ByteDance / Alibaba",
+      "title": "China's MIIT reportedly asks ByteDance and Alibaba to submit plans to buy Nvidia's RTX PRO 5500 and signals it may approve; Nvidia says US controls cover a gaming product launched nearly five years ago",
+      "summary": "Anue, citing a September 27 report by The Information, said China's Ministry of Industry and Information Technology recently asked companies including ByteDance and Alibaba to submit plans for purchasing Nvidia's RTX PRO 5500 chips and signaled to some of them that it is inclined to approve the purchases; the industry expects the chip may not be subject to US export restrictions. An Nvidia spokesperson said US companies remain constrained both by outdated US export controls and by China's own restrictions on importing US products, adding that the US export controls cover a gaming product launched nearly five years ago.",
+      "metric": "Product: Nvidia RTX PRO 5500 (professional workstation class); companies asked to submit plans: ByteDance, Alibaba; regulator: China's MIIT",
+      "impact": "This is the first report of Beijing moving to allow rather than block purchases of Nvidia chips. Read with last period's US position that export controls are off the negotiating table and this period's White House fact sheet that made no mention of chips, both sides are looking for tradable items within the existing control framework. The RTX PRO 5500 is made by TSMC, so approval would slightly lift TSMC's shipments to China, but high-end data center GPUs remain restricted, limiting any impact on CoWoS demand.",
+      "conf": "Unconfirmed (foreign media citing sources; China's MIIT has not publicly confirmed; Nvidia's response neither confirmed nor denied the report)",
+      "vocab": [
+        ["inclined to approve", "有意批准"],
+        ["spokesperson", "發言人"],
+        ["outdated", "過時的"],
+        ["tradable", "可交易的"],
+        ["regulator", "監管機關"],
+        ["neither confirmed nor denied", "未證實也未否認"],
+        ["subject to", "受…約束"]
+      ]
+    },
+    "12": {
+      "entity": "US Treasuries / Oil prices / Iran",
+      "title": "Trump rejects Iran's Hormuz plan, sending Brent above US$106 and the 10-year Treasury yield to 5.20% as markets price in three to four rate hikes next year",
+      "summary": "Anue reported on September 28 that Trump rejected Iran's proposal to reopen the Strait of Hormuz, sending oil higher and triggering a Treasury sell-off: the US 10-year yield rose 4 basis points to 5.20% and the 2-year yield rose 5 basis points to 4.90%, narrowing the 10-year/2-year spread to 17 basis points, while Brent crude climbed nearly 2% to US$106.31 a barrel. Federal Reserve officials continue to sound hawkish, and markets expect three to four rate hikes next year; analysts said oil holding above US$100 a barrel is a key reason investors are bearish on bonds. Attention now turns to the PCE price index, ISM data and the nonfarm payrolls report.",
+      "metric": "US 10-year Treasury yield 5.20% (+4bp), 2-year 4.90% (+5bp), 10Y-2Y spread 17bp; Brent US$106.31 (up nearly 2%); markets expect three to four rate hikes next year",
+      "impact": "On September 25, reports of technical talks between the US and Iran had pushed oil lower; this period the situation reversed, with the 10-year yield rising from about 5.163% last period to 5.20%, extending its highest level since 2007. Higher rates compress valuations for growth stocks and are the main pressure on TSMC and the AI supply chain when Taiwan's market reopens on September 29. Oil staying above US$100 also raises fabs' power, chemical and logistics costs, adding to the foundry cost pressures flagged last period alongside silicon wafer contract price hikes.",
+      "conf": "Confirmed (live market quotes; the number of rate hikes is a market expectation)",
+      "vocab": [
+        ["sell-off", "拋售"],
+        ["basis points", "基點"],
+        ["spread", "利差"],
+        ["hawkish", "鷹派的"],
+        ["bearish", "看空的"],
+        ["price in", "反映（於價格）"],
+        ["compress valuations", "壓縮評價"]
+      ]
+    },
+    "13": {
+      "entity": "White House / United States / China",
+      "title": "White House fact sheet on Trump-Xi summit: US$30 billion each way in tariff relief on non-sensitive goods and Chinese coal purchases of at least 10 million tonnes a year in 2027–2028, with no mention of chips or Taiwan",
+      "summary": "The White House released a fact sheet on the Trump-Xi summit late on September 25 US Eastern time (September 26 in Taiwan). It launches a US-China Board of Trade and Board of Investment and grants more favorable tariff treatment to US$30 billion of non-sensitive goods in each direction. US exports covered include agricultural products, seafood, wood products, cosmetics and medical devices; Chinese exports include small home appliances, toys, holiday decorations and children's car seats. China committed to import at least 10 million tonnes of US coal in each of 2027 and 2028, and the two sides discussed shortages in rare earth and critical mineral supply chains. On AI, they set up a 'superintelligence (SI) dialogue', with the next exchange before November. Although the CEOs of Nvidia and AMD sat at the head table of the state banquet, the fact sheet made no mention of chip or semiconductor export restrictions, nor of Taiwan.",
+      "metric": "Tariff relief on US$30B of non-sensitive goods each way; China to import ≥10 million tonnes of US coal per year (2027–2028); superintelligence dialogue to meet again before November; chips and Taiwan not included",
+      "impact": "Last period Greer said details would come on September 28, but the White House released them early in a fact sheet: the deal covers only US$30 billion of non-sensitive goods each way, and semiconductors are entirely absent, confirming that export controls are not part of the talks. For foundries, tariffs are stabilizing while controls stay in place; together with this period's congressional bill on Chinese optical modules and reports that China may allow RTX PRO 5500 purchases, the US and China are each adjusting unilaterally on chips rather than easing through an agreement.",
+      "conf": "Background (released by the White House on September 26 Taiwan time and reported the same day, outside this period and not covered last period; official White House document)",
+      "vocab": [
+        ["fact sheet", "事實清單"],
+        ["tariff relief", "關稅減讓"],
+        ["committed", "承諾（commit 過去式）"],
+        ["critical mineral", "關鍵礦產"],
+        ["unilaterally", "單方面地"],
+        ["stabilizing", "趨於穩定"],
+        ["each way", "雙向各"]
+      ]
+    },
+    "14": {
+      "entity": "Tower Semiconductor (TSEM)",
+      "title": "Tower plans about US$4 billion expansion in Japan to build an AI optical chip hub, lifting Japanese capacity to about 45,000 12-inch-equivalent wafers a month by 2029, 40 times the 2025 level",
+      "summary": "TechNews reported on September 26 that Tower Semiconductor plans to invest about US$4 billion to expand capacity in Japan, with US$3 billion from Tower and a US$1 billion subsidy from Japan's Ministry of Economy, Trade and Industry. In phase one (targeting volume production in the fourth quarter of 2027), Tower will convert its idle 8-inch Fab 6 in Arai, Niigata Prefecture, into a 12-inch silicon photonics (SiPho) and advanced optical packaging fab, and raise SiGe and SiPho capacity at its 12-inch Fab 7 in Uozu, Toyama Prefecture. In phase two it will build a new 12-inch fab next to Fab 7 to expand SiGe electronic IC (EIC) and SiPho photonic IC (PIC) capacity. By 2029, Tower's Japanese capacity will rise to about 45,000 12-inch-equivalent wafers a month, roughly 40 times the 2025 level, adding about 200 employees. Tower's chips, which modulate optical signals and convert them into electrical signals, are used in Nvidia's AI servers.",
+      "metric": "Total investment ~US$4B (Tower US$3B + METI US$1B); phase one volume production 4Q27; 2029 Japan capacity ~45,000 12-inch-equivalent wafers/month (40x 2025); ~200 new employees",
+      "impact": "Tower is the only non-Taiwanese foundry on the watch list with concrete expansion numbers this period. Read with this period's VSMC opening and last period's UMC Singapore P4 silicon photonics plan: mature-node foundry expansion is almost entirely aimed at AI-adjacent products (silicon photonics, silicon interposers, power management), and all of it comes with local government subsidies. If Tower's 45,000 wafers of silicon photonics capacity arrives on schedule in 2029, it will compete head-on with TSMC COUPE, UMC and GlobalFoundries in CPO optical engine manufacturing.",
+      "conf": "Background (published by TechNews on September 26; Tower's expansion plan was first disclosed in July 2026; outside this period and not covered last period; company plan)",
+      "vocab": [
+        ["subsidy", "補助", "fin"],
+        ["idle", "閒置的"],
+        ["convert", "改造"],
+        ["12-inch-equivalent", "12 吋約當"],
+        ["watch list", "追蹤名單"],
+        ["AI-adjacent", "AI 周邊的"],
+        ["head-on", "正面地"]
+      ]
+    }
+  }
+}
