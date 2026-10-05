@@ -1,0 +1,298 @@
+{
+  "source": "全球半導體代工產業快報_20261004-20261005.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330) / Tesla / SpaceX / Intel",
+      "title": "TSMC weighs joining Musk's Terafab with a Texas fab; Musk confirms 'just discussions, but something may come of it' as Terafab's Intel tie-up reportedly stalls",
+      "summary": "Tim Culpan, a former Bloomberg technology columnist and founder of the independent outlet Culpium, reported, citing sources, that TSMC is evaluating a partnership with Elon Musk's Terafab to build a fab in Texas. Two structures are on the table. Under Option A, TSMC would own and operate the new fab, while SpaceX and Terafab would participate through an equity stake, wafer purchase commitments, or both, a model similar to JASM in Kumamoto and ESMC in Dresden. Under Option B, SpaceX and Terafab would hold a majority stake, with TSMC contributing less capital but supplying process technology and fab operating know-how. Culpium also said rumors of TSMC expanding in Texas are linked to supporting Terafab, and that Terafab's collaboration with Intel, announced in April, has made no progress. Musk replied on X on October 3 that it is 'just discussions, but something may come of it'; TSMC has not commented publicly. Terafab's initial investment is US$16.8 billion, with total investment expected to reach US$55 billion to US$119 billion.",
+      "metric": "Terafab initial investment US$16.8B; total investment estimated at US$55B-119B; two deal structures (A: TSMC owns and operates / B: Terafab holds majority)",
+      "impact": "Following last period's Bloomberg report that TSMC is weighing a multi-fab Texas campus costing at least US$20 billion per fab (last period item 6), this period fills in a possible anchor customer: if Terafab commits capacity through an equity stake or a take-or-pay arrangement, TSMC's second U.S. hub would rest not only on a tax credit extension but also on locked-in customer volume. For Intel Foundry it is a warning sign: Terafab had been seen as the most important external customer for 14A, and industry sources are already floating a compromise of Intel 14A for front-end wafers and TSMC for back-end packaging. Option B would break TSMC's practice of insisting on operational control and remains unlikely (see item 5 for the skeptical view).",
+      "conf": "Unconfirmed (exclusive Culpium report citing sources; Musk only says talks are at the discussion stage, TSMC has not commented, and neither the structure nor the investment amount is final)",
+      "vocab": [
+        ["equity stake", "股權；持股"],
+        ["purchase commitments", "採購承諾"],
+        ["anchor customer", "主力客戶；錨定客戶"],
+        ["tie-up", "合作；結盟"],
+        ["stalls", "停滯（stall 第三人稱）"],
+        ["operational control", "營運主導權"],
+        ["front-end", "前段（製程）"],
+        ["floating", "提出（構想）"]
+      ]
+    },
+    "2": {
+      "entity": "TSMC (2330) / Micron / fDi Intelligence",
+      "title": "fDi report: TSMC tops 2025 global cross-border investment with US$100 billion; worldwide new FDI commitments exceed US$1.3 trillion, up 2.2%",
+      "summary": "According to the fDi Report 2026 and an analysis by Visual Capitalist, new foreign direct investment announced by multinationals in 2025, covering physical plants and infrastructure but excluding M&A and intercompany loans, topped US$1.3 trillion, up 2.2% from a year earlier. TSMC ranked first with US$100 billion, its additional commitment to Arizona, followed by ByteDance at US$45.1 billion and UAE sovereign fund MGX at US$43.4 billion. Micron ranked tenth with US$16.6 billion, and tech companies made up half of the top ten. TSMC's cumulative investment in Arizona has reached US$265 billion, the largest foreign direct investment in U.S. history. Global cross-border investment reached US$538 billion in the first half of 2026, including more than US$131 billion tied to data centers.",
+      "metric": "TSMC US$100B (No. 1); ByteDance US$45.1B, MGX US$43.4B, Micron US$16.6B (No. 10); global 2025 total >US$1.3T (+2.2%); 1H26 US$538B",
+      "impact": "This is third-party evidence for last period's exchange in which Trump said a Taiwanese chipmaker would invest US$500 billion and the Ministry of Economic Affairs reiterated the US$265 billion figure (last period item 9): by announced value, TSMC alone accounts for roughly 7.7% of global new cross-border investment in 2025 (100/1,300, our calculation). Micron's tenth-place finish echoes last period's report that its cumulative investment in Taiwan exceeds NT$1.6 trillion; overseas expansion by both foundries and memory makers is lifting demand for construction and facility engineering (item 11).",
+      "conf": "Confirmed (fDi Intelligence annual statistics, as reported by Anue; figures are announced commitments rather than capital actually deployed; the 7.7% share is our calculation)",
+      "vocab": [
+        ["foreign direct investment", "外國直接投資"],
+        ["multinationals", "跨國企業"],
+        ["intercompany loans", "公司間貸款"],
+        ["sovereign fund", "主權基金"],
+        ["cumulative investment", "累計投資"],
+        ["commitments", "承諾（金額）"],
+        ["third-party", "第三方的"]
+      ]
+    },
+    "3": {
+      "entity": "Bernstein / Tokyo Electron (TEL) / DISCO / Lasertec / Advantest / Applied Materials",
+      "title": "Bernstein sees a 'golden age' for chip equipment, forecasting global WFE growth of 26.3% in 2026 and 32.6% in 2027; Japan's August equipment sales jump 50%",
+      "summary": "Bernstein's Global Semiconductor Equipment Tracker says the wave of AI compute investment is spreading from cloud purchases upstream to chipmaking. Citing data released on September 30 by the Semiconductor Equipment Association of Japan (SEAJ), the report said Japanese chip equipment sales reached ¥545 billion in August, down 4% month over month but up 50% year over year, with the three-month moving average still rising; front-end wafer fab equipment grew 36.6%, assembly equipment 22% and test equipment 98%. Bernstein describes a 'complexity dividend': GAA transistors, high-layer 3D NAND, HBM stacking and CoWoS all raise the bar for deposition, etch, CMP and inspection. It forecasts the global wafer fab equipment (WFE) market will grow 26.3% in 2026 and 32.6% in 2027, making the 2027 market about 67.5% larger than in 2025. It highlights TEL, DISCO (about 85% share in grinding and dicing), Lasertec (about 50% in mask inspection) and Advantest (about 65% in HBM testing), raised its 2027 EPS estimate for Applied Materials to US$18.3, and kept outperform ratings on 11 equipment leaders.",
+      "metric": "WFE 2026 +26.3%, 2027 +32.6% (2027 vs 2025 +67.5%); Japan Aug equipment sales ¥545B (+50% YoY, -4% MoM); test equipment +98% YoY; Applied Materials 2027 EPS est. US$18.3",
+      "impact": "Last period Micron said the bottleneck for its expansion is equipment delivery, and JPMorgan put TSMC's 2027 capex at US$86 billion; this period Bernstein quantifies that demand as two straight years of 20%-30% WFE growth. Test equipment nearly doubling reflects the high unit prices and high failure costs of AI chips and HBM. For foundries, longer tool lead times and higher equipment prices could become another source of rising expansion costs in 2027, moving in the same direction as the material price hikes for silicon wafers (item 9) and ruthenium (item 12).",
+      "conf": "Confirmed (official SEAJ statistics, as cited by Bernstein and Anue); WFE growth rates, market shares and EPS are Bernstein estimates",
+      "vocab": [
+        ["outperform", "優於大盤（評級）"],
+        ["moving average", "移動平均", "fin"],
+        ["upstream", "上游"],
+        ["month over month", "月增（減）"],
+        ["lead times", "交期"],
+        ["unit prices", "單價"],
+        ["raised its estimate", "上修預估"]
+      ]
+    },
+    "4": {
+      "entity": "TSMC (2330) / PSMC (6770) / Winbond (2344) / TAIEX",
+      "title": "TAIEX holds above 48,000 after a 451-point weekly gain as foreign investors sell a modest NT$7.17 billion but buy PSMC; TSMC reports September sales on October 8, with analysts eyeing the top of its Q3 guidance",
+      "summary": "Anue's weekly market outlook noted that the TAIEX gained another 451 points last week and held above 48,000, as cooler U.S. September payrolls eased fears of another Fed rate hike. Foreign investors turned net sellers of NT$7.17 billion for the week, while domestic investment trusts turned net buyers of NT$20.5 billion; foreign buying included PSMC, Winbond and several actively managed ETFs. This week's key revenue releases are Foxconn on October 5 and TSMC on October 8, with Largan's earnings call also on October 8; after the National Day holiday, most companies will report around October 12. SinoPac Securities Investment Advisory noted that TSMC guided Q3 revenue of US$44.6 billion to US$45.8 billion and that its August revenue topped NT$500 billion for the first time; if September lands near the top of the range, expectations of an upgrade before the earnings call could lift chip heavyweights, advanced packaging and equipment stocks first. It expects the index to trade between 45,000 and 50,000 this week.",
+      "metric": "TAIEX +451 pts last week; foreign net selling NT$7.17B, investment trust net buying NT$20.5B; TSMC Q3 guidance US$44.6B-45.8B; September sales on Oct 8, earnings call on Oct 15",
+      "impact": "PSMC's appearance on the foreign buy list extends last period's mature-node catch-up trade, when foreign investors bought 25,500 lots of UMC in a single day. TSMC's September revenue (October 8) and its October 15 earnings call are the key tests for next period: JPMorgan's Q3 revenue estimate of US$45.8 billion last period already sits at the top of guidance, so a September miss would force the market to reprice the price-hike and capex story in item 6.",
+      "conf": "Confirmed (weekly index gain and institutional net buying/selling are TWSE statistics compiled by Anue); the index range and revenue projections are advisory views",
+      "vocab": [
+        ["net sellers", "淨賣方（賣超）"],
+        ["investment trusts", "投信", "fin"],
+        ["guided", "給出財測（guide 過去式）"],
+        ["upgrade", "上修"],
+        ["catch-up trade", "補漲行情"],
+        ["reprice", "重新定價"],
+        ["miss", "不如預期"]
+      ]
+    },
+    "5": {
+      "entity": "TSMC (2330) / Terafab / Lu Hsing-chih / ZhiPu Industry Research",
+      "title": "Doubts over Terafab: analyst Lu Hsing-chih says a TSMC-funded build would essentially be 'a new TSMC fab', while industry watchers say an advanced fab takes three to five years or more from planning to volume production",
+      "summary": "China Times reported that analyst Lu Hsing-chih believes that if TSMC funds and builds the Terafab facility, the technology and capacity would belong entirely to TSMC, and its customers would at most be SpaceX and Tesla. Musk, having gone from Intel to TSMC, appears to have given up on building the fab himself; whether Washington offered attractive terms or pressure from Trump pushed TSMC to commit more remains to be seen. Lin Wei-chih, executive vice president of ZhiPu Industry Research, said foundry economics come down to volume and price: Tesla's automotive chip volumes are limited, and even including humanoid robots and space computing, it is unclear whether demand could fill a giga-fab. Outside the TSMC camp, building and running such a fab is nearly impossible in terms of technology and yield. An advanced fab takes three to four years at the fastest, and normally more than five, to go from planning and policy negotiations to volume production; for now, much of the news reflects political and capital market expectations.",
+      "metric": "Advanced fab from planning to volume production: 3-4 years at best, normally 5+ years; talks still at the 'discussion stage'",
+      "impact": "This is the other side of item 1: for TSMC, Terafab may be closer to a new U.S. site under policy pressure tied to specific customers than to a major new client. TrendForce likewise notes that Terafab's vertically integrated model clashes with TSMC's pure-play positioning serving NVIDIA and Apple (item 6). In the near term Terafab is a stock market theme; its real capex impact depends on whether it comes up at the October 15 earnings call.",
+      "conf": "Unconfirmed (views of analysts and research firms; whether a deal happens, its structure and motives have not been confirmed by TSMC)",
+      "vocab": [
+        ["volume production", "量產"],
+        ["remains to be seen", "仍待觀察"],
+        ["giga-fab", "超大型晶圓廠"],
+        ["yield", "良率"],
+        ["pure-play", "純（代工）業者"],
+        ["stock market theme", "股市題材"],
+        ["vertically integrated", "垂直整合的"]
+      ]
+    },
+    "6": {
+      "entity": "TSMC (2330) / Intel / MediaTek (2454) / TrendForce",
+      "title": "TrendForce's TSMC earnings preview: five themes, from Terafab and a second Texas hub with 2027 capex to Q3 margins, next year's price hikes and A14 versus Intel 14A",
+      "summary": "TrendForce outlined five themes ahead of the October 15 earnings call. First, the Terafab talks, though Terafab's vertically integrated model conflicts with TSMC's pure-play foundry positioning. Second, TSMC has raised its 2026 capex guidance to US$60 billion to US$64 billion and is reportedly considering a second U.S. base near Dallas with six advanced fabs; JPMorgan thinks 2027 capex may not be disclosed until January 2027. Third, TSMC guided Q3 revenue of US$44.6 billion to US$45.8 billion with a gross margin of 65%-67%; Q4 sequential growth may slow to about 11%, with the N2 ramp and depreciation weighing on margins. Fourth, institutional investors expect advanced-node prices to rise 5%-10% next year, advanced packaging 10%-15% and mature nodes 3%-5%, while a separate report says mature-node prices will rise about 3%-10% from January. Fifth, A14 pilot production at Baoshan could start as early as Q1 2027, close to the 14A risk production timeline set by Intel CEO Lip-Bu Tan; analyst Jeff Pu expects MediaTek to put 100% of its TPU v9 on Intel's EMIB-T packaging.",
+      "metric": "2026 capex guidance US$60B-64B; Q3 guidance US$44.6B-45.8B, gross margin 65%-67%; 2027 price hikes: advanced 5%-10% / packaging 10%-15% / mature 3%-5%; A14 pilot production as early as 1Q27",
+      "impact": "Compared with last period's JPMorgan report, two new variables emerge: the scale of six fabs in Texas (items 1 and 5) and the claim that MediaTek's TPU v9 will move entirely to EMIB-T. If true, the latter means the CoWoS crunch is already pushing ASIC packaging orders to Intel, making it Intel Foundry's most concrete external packaging win so far, and TSMC's room to raise packaging prices could be capped at the margin by the emergence of alternatives.",
+      "conf": "Unconfirmed (compiles media reports and broker estimates; the six Texas fabs, timing of 2027 capex disclosure, price-hike ranges and MediaTek's TPU v9 packaging split are rumors or analyst estimates; guidance and capex guidance are TSMC disclosures)",
+      "vocab": [
+        ["capex guidance", "資本支出指引"],
+        ["sequential growth", "季增率"],
+        ["depreciation", "折舊"],
+        ["weighing on margins", "壓抑毛利率"],
+        ["pilot production", "試產"],
+        ["risk production", "風險試產"],
+        ["crunch", "（產能）吃緊"],
+        ["at the margin", "在邊際上"]
+      ]
+    },
+    "7": {
+      "entity": "Rapidus / Toshiba / Dai Nippon Printing (DNP) / Synopsys / Cadence Design Systems",
+      "title": "Nikkei: Rapidus teams up with 17 firms including Toshiba, DNP, Synopsys and Cadence to help customers design chips, building a design-to-production pipeline to win orders",
+      "summary": "Nikkei reported on October 5 that Rapidus, the foundry set up through a Japanese public-private partnership, will work with 17 chip design-related companies to help potential customers design chips and win orders, making it easier even for companies without in-house expertise to develop their own branded chips. Partners include Toshiba Information Systems, Dai Nippon Printing (DNP), TOPPAN, and design service providers NSW and MavissDesign; overseas partners include EDA leaders Synopsys and Cadence Design Systems, Indian IT giant Infosys, and a Malaysian company. The report noted that TSMC and Samsung have similar alliances, with more than 20 companies already in TSMC's ecosystem.",
+      "metric": "17 partner companies (including Synopsys, Cadence, Infosys); TSMC design ecosystem >20 partners (per report)",
+      "impact": "Rapidus's weak spot is customers rather than technology, and this design-services alliance is meant to shore it up, a model similar to TSMC's OIP ecosystem and the role played by GUC and Alchip. It is potential competition for Taiwan's design service houses, though still small in scale. Like Intel pitching 14A and EMIB-T (item 6), the challengers are trying to win business by lowering customers' barriers to entry, underscoring that advanced-node capacity outside TSMC is still searching for demand.",
+      "conf": "Unconfirmed (Nikkei report; Rapidus has not formally announced the partner list)",
+      "vocab": [
+        ["public-private partnership", "官民合作"],
+        ["win orders", "爭取訂單"],
+        ["in-house", "自有的；內部的"],
+        ["ecosystem", "生態系"],
+        ["shore it up", "補強"],
+        ["barriers to entry", "進入門檻"],
+        ["design service", "設計服務"]
+      ]
+    },
+    "8": {
+      "entity": "TSMC (2330) / SK hynix / Micron / silicon wafer makers",
+      "title": "Three AI demand drivers chase 12-inch wafers: analysts expect monthly 7/5/3/2nm wafer starts to rise from 180,000 in 2022 to 830,000 in 2027, with CoWoS capacity growing at a 73% CAGR in 2024-2027",
+      "summary": "Commercial Times reported that AI is driving up 12-inch silicon wafer consumption through three channels: advanced logic, HBM and CoWoS. In advanced logic, larger GPU and ASIC dies and the march to more advanced nodes are expected to lift monthly wafer starts at 7nm, 5nm, 3nm and 2nm from 180,000 in 2022 to 830,000 in 2027. In HBM, a 12-high HBM3E or HBM4 stack needs one 12-inch logic wafer for the base die on top of 12 DRAM wafers, for a total of 13; 16-high products raise that to 17. HBM's silicon wafer consumption is projected to grow 39% in 2026, then 23% in 2027 and 28% in 2028. CoWoS silicon interposers are also made on 12-inch wafers, and CoWoS capacity is estimated to grow at a 73% CAGR from 2024 to 2027. Twelve-inch wafers already account for about 77% of global silicon wafer shipment area.",
+      "metric": "Advanced-node monthly wafer starts 180,000 (2022) → 830,000 (2027); 13 wafers per HBM stack (12-high) / 17 (16-high); HBM wafer consumption +39% (2026), +23% (2027), +28% (2028); CoWoS CAGR 73%; 12-inch = 77% of shipment area",
+      "impact": "Monthly advanced-node wafer starts of 830,000 would be about 4.6 times the 2022 level (our calculation). Moving HBM4 base dies to foundry logic processes is exactly why Samsung Foundry narrowed its losses on HBM4 base die orders last period. All three demand sources are concentrated in high-end 12-inch wafers, which explains why AI logic epitaxial wafers see the steepest price increases in item 9 and why advanced-node foundries face rising material costs in 2027.",
+      "conf": "Unconfirmed (analyst estimates without a named institution; wafer starts, consumption growth and CAGR are projections)",
+      "vocab": [
+        ["wafer starts", "投片量"],
+        ["CAGR", "年複合成長率", "fin"],
+        ["consumption", "消耗量"],
+        ["projected", "預估（project 過去分詞）"],
+        ["base die", "基底晶粒"],
+        ["interposers", "中介層"],
+        ["steepest", "最陡的；幅度最大的"]
+      ]
+    },
+    "9": {
+      "entity": "GlobalWafers (6488) / Formosa Sumco (3532) / Wafer Works (6182) / Shin-Etsu Chemical / SUMCO",
+      "title": "A new silicon wafer price cycle begins: AI logic epitaxial wafers up 18%-22% and HBM polished wafers up 12%-18%, with analysts expecting a shortage from the second half of 2027",
+      "summary": "Commercial Times reported that after more than two years of inventory correction, silicon wafers are entering a new round of price increases. Six-inch wafers already rose about 10% early this year, eight-inch prices are under negotiation, and 12-inch prices are being led by high-end AI and HPC products. Supply chain checks show AI high-end logic epitaxial wafers rising about 18%-22%, HBM high-end polished wafers 12%-18%, advanced-node prime wafers 8%-12%, standard 12-inch polished wafers 5%-8%, and eight-inch and smaller 0%-3%. Global silicon wafer shipment area reached 12,973 million square inches (MSI) in 2025, up 5.8%; second-quarter 2026 shipments rose to 3,573 MSI, up 9.1% quarter over quarter and 7.4% year over year, a 14-quarter high. Shin-Etsu, SUMCO, GlobalWafers, Siltronic and SK Siltron together control 85% of capacity. Analysts expect demand to grow 9%-12% a year in 2026-2028, outpacing supply growth of 1%-3%, tipping the market into shortage in the second half of 2027 with a gap of about 8% in 2028.",
+      "metric": "Epitaxial +18%-22%; HBM polished +12%-18%; advanced-node prime +8%-12%; standard 12-inch +5%-8%; 8-inch and below 0%-3%; 2Q26 shipments 3,573 MSI (+9.1% QoQ, +7.4% YoY); 2028 shortfall about 8%",
+      "impact": "Last period Episil hit limit-up on the wafer price-hike theme; this period the price ranges are clearer. Increases scale with process sophistication, meaning advanced-node foundries such as TSMC bear the biggest rise in raw material costs, while eight-inch and smaller wafers barely move, limiting the impact on mature-node players like Vanguard and PSMC. Whether foundries can pass the costs on depends on whether the 5%-10% advanced-node price hikes analysts expect next year (item 6) materialize.",
+      "conf": "Unconfirmed (price ranges and the 2027-2028 supply gap are supply chain checks and analyst estimates; shipment area figures are industry statistics cited in the report)",
+      "vocab": [
+        ["inventory correction", "庫存調整"],
+        ["supply chain checks", "供應鏈調查"],
+        ["outpacing", "超越（outpace 進行式）"],
+        ["shortfall", "短缺；缺口"],
+        ["pass the costs on", "轉嫁成本"],
+        ["materialize", "實現；落實"],
+        ["price cycle", "價格循環"]
+      ]
+    },
+    "10": {
+      "entity": "Micron / SK hynix / Samsung Electronics / CXMT",
+      "title": "Chinese media analysis: Micron's results upend the 2027 memory glut view as HBM's share of DRAM wafers rises from 18% in 2025 to over 30% in 2027, with CXMT's 70,000-wafer monthly addition absorbed by domestic demand",
+      "summary": "Anue, translating an analysis by Chinese media, said Micron's fiscal fourth-quarter revenue reached US$54.2 billion, up 31% sequentially, with net income of US$38.4 billion and a gross margin of 87%; it guided current-quarter revenue to US$61.5 billion with a gross margin of 86%. Growth came mainly from pricing, with DRAM average selling prices up by more than 10 percentage points quarter over quarter and NAND ASPs up about 30%. HBM is complex and extremely wafer-hungry: in 2025 it used 18% of global DRAM wafers but contributed only 8% of effective bit capacity, and by 2027 its wafer share will exceed 30% while contributing just 13% of capacity. Effective global DRAM supply growth is estimated at about 24% in 2027, so the market will not be oversupplied as long as demand grows 22% or more. China's server DRAM demand is set to rise from 3.25EB in 2025 to 6.63EB in 2027, and CXMT's planned 70,000 additional wafers per month in 2027 equal only 1.7EB to 2.5EB, which will be absorbed domestically; the real risk lies in 2028.",
+      "metric": "Micron FQ4 revenue US$54.2B, net income US$38.4B, gross margin 87%; next-quarter guidance US$61.5B; HBM share of DRAM wafers 18% (2025) → >30% (2027); 2027 DRAM supply growth ~24%; CXMT +70,000 wafers/month in 2027",
+      "impact": "Micron's results were covered last period (last period item 2); this period's takeaway is wafer consumption: one of every three new advanced DRAM wafers is absorbed by HBM, so memory makers must keep expanding, further crowding out equipment (item 3), silicon wafers (item 9) and cleanroom engineering (item 11). A memory upcycle that lasts through 2027 also improves visibility for foundry demand for HBM4 base dies at TSMC and Samsung.",
+      "conf": "Unconfirmed (HBM wafer share, 2027 supply and demand growth and CXMT capacity are estimates from Chinese media research; Micron's financials are company disclosures)",
+      "vocab": [
+        ["glut", "供過於求"],
+        ["upend", "顛覆"],
+        ["average selling prices", "平均售價"],
+        ["oversupplied", "供給過剩的"],
+        ["crowding out", "排擠"],
+        ["upcycle", "上行週期"],
+        ["visibility", "能見度", "fin"],
+        ["net income", "淨利"]
+      ]
+    },
+    "11": {
+      "entity": "United Integrated Services (6139) / L&K Engineering (2404) / TSMC (2330)",
+      "title": "Fab construction demand stretches to 2029: UIS and L&K Engineering hold a combined backlog of over NT$630 billion, with UIS signing NT$303.7 billion in new contracts in the first half",
+      "summary": "Commercial Times reported that expanding AI and advanced-node investment has extended fab construction demand through 2029, keeping orders high for cleanroom and high-tech facility engineering firms. United Integrated Services (UIS) had a backlog of about NT$440 billion in the first half, including NT$303.7 billion in new contracts signed during the period; its second-quarter net profit was NT$3.877 billion, up 74.11% quarter over quarter and 478.17% year over year, for EPS of NT$16.46. L&K Engineering had a backlog of about NT$193.9 billion at the end of the second quarter, about two-thirds in Taiwan; its second-quarter net profit was NT$3.763 billion, up 22.12% quarter over quarter, for EPS of NT$19.92, and most of its backlog can be recognized within 24 to 36 months. Analysts noted that major foundries continue to push investment in Taiwan and the U.S., with advanced packaging capacity planned in Arizona alongside 12-inch fabs.",
+      "metric": "Backlog: UIS ~NT$440B + L&K ~NT$193.9B = over NT$630B; UIS 2Q EPS NT$16.46; L&K 2Q EPS NT$19.92",
+      "impact": "Facility engineering orders are a leading indicator of foundry capex. L&K's main customer is TSMC and its backlog will be recognized over 24 to 36 months, which means TSMC's construction schedule for 2027-2028 is largely locked in, consistent with the US$100 billion overseas investment in item 2 and the capex increase in item 6. If a second Texas hub (item 1) goes ahead, engineering demand could extend even further.",
+      "conf": "Confirmed (profits and EPS are from company financial statements; backlog figures are company disclosures cited in the report)",
+      "vocab": [
+        ["backlog", "在手訂單"],
+        ["new contracts", "新簽合約"],
+        ["net profit", "稅後純益", "fin"],
+        ["recognized", "認列（recognize 過去分詞）"],
+        ["leading indicator", "領先指標", "fin"],
+        ["locked in", "鎖定"],
+        ["facility engineering", "廠務工程"]
+      ]
+    },
+    "12": {
+      "entity": "Ruthenium / Johnson Matthey / advanced-node interconnects",
+      "title": "Ruthenium, an interconnect material for 2nm and below, has surged more than 300% in just over a year, from about US$560 to nearly US$1,950 an ounce; Johnson Matthey sees 2026 demand at 1.193 million ounces versus primary supply of only 977,000",
+      "summary": "Anue reported that the price of ruthenium, a platinum group metal, has climbed from about US$560 an ounce in early 2025 to nearly US$1,950 in September this year, a gain of more than 300%. Below 2nm, copper interconnects need diffusion barriers and liners that squeeze out conductive copper; at line widths of about 17nm or less, ruthenium starts to compete with copper and could move from a liner to a core interconnect material, while backside power delivery and nanoscale through-silicon vias widen its use. Electronics demand for ruthenium rose from 300,000 ounces in 2023 to 413,000 ounces in 2025 and is expected to reach 435,000 ounces in 2026. Ruthenium is a by-product of South African platinum mining, so supply is inelastic; global primary supply was about 30 tonnes in 2025, down 14%. Johnson Matthey expects demand of 1.193 million ounces this year against primary supply of only about 977,000 ounces.",
+      "metric": "Ruthenium ~US$560 → nearly US$1,950/oz (+300%+); electronics demand 413,000 oz (2025) → 435,000 oz (2026e); 2026 demand 1.193M vs primary supply 977,000 oz (deficit ~216,000 oz, our calculation)",
+      "impact": "Like the silicon wafer price hikes in item 9, this is part of rising material costs at advanced nodes: bringing ruthenium into interconnects below 2nm adds a strategic metal whose supply is heavily concentrated in South Africa to the bill of materials for TSMC, Intel and Samsung. Annual primary supply is worth only about US$2 billion, but it is a potential supply risk for the backside power and interconnect roadmaps of A16 and A14.",
+      "conf": "Unconfirmed (prices and supply-demand figures are market data cited in the report and Johnson Matthey forecasts; the timing of ruthenium's adoption in advanced interconnects is an industry projection)",
+      "vocab": [
+        ["by-product", "副產品"],
+        ["inelastic", "缺乏彈性的"],
+        ["deficit", "缺口；赤字"],
+        ["bill of materials", "物料清單"],
+        ["supply risk", "供應風險"],
+        ["liners", "襯層"],
+        ["surged", "飆漲（surge 過去分詞）"]
+      ]
+    },
+    "13": {
+      "entity": "TPCA / ASE Technology Holding (3711) / Intel / Unimicron (3037)",
+      "title": "IMPACT-IAAC 2026 comes to Taipei on October 19-22 under the theme of energy-efficient AI, focusing on hybrid bonding, panel-level packaging and glass substrates",
+      "summary": "IMPACT-IAAC 2026, Asia's international microsystems, packaging, assembly and circuits conference, will be held in Taipei from October 19 to 22, opening at the Grand Hilai Taipei before moving to the Nangang Exhibition Center alongside the TPCA Show. It will feature nearly 350 technical papers and is expected to draw more than 1,500 attendees. Five keynotes will come from Stanford University, ASE, Intel, Shinko Electric and Auburn University; an opening-day IAAC substrate session with Prismark, Unimicron, AT&S, Ajinomoto, FICT and MKS Atotech will examine ABF supply and demand and glass substrates. Nearly 50 forums will cover heterogeneous integration, panel-level packaging, hybrid bonding, fine RDL, chiplets, 3D integration and co-packaged optics.",
+      "metric": "October 19-22; nearly 350 technical papers, 1,500+ attendees; nearly 50 forums",
+      "impact": "The agenda maps onto several of this period's themes: CoWoS expansion versus EMIB-T (item 6), and glass substrates and ABF supply (last period's FC-BGA lead times stretching to 48-56 weeks). With Intel giving a keynote, watch for further disclosure on mass production timelines for EMIB-T and glass substrates.",
+      "conf": "Confirmed (announcement by organizer TPCA)",
+      "vocab": [
+        ["keynotes", "主題演講"],
+        ["attendees", "與會者"],
+        ["heterogeneous integration", "異質整合"],
+        ["hybrid bonding", "混合鍵合"],
+        ["substrates", "基板；載板"],
+        ["co-packaged optics", "共同封裝光學"],
+        ["timelines", "時程"]
+      ]
+    },
+    "14": {
+      "entity": "TSMC (2330) / UMC (2303) / ASE Technology Holding (3711) / PSMC (6770) / TAIEX",
+      "title": "TAIEX soars 1,236 points to a record close of 49,712.04, knocking on 50,000; TSMC gains NT$75 to an all-time high of NT$2,575 while UMC reverses from NT$165 to slump 5.57%",
+      "summary": "Lifted by a 2.40% jump in the Philadelphia Semiconductor Index on Friday and a sharp morning rally in the Nikkei, Taiwan stocks opened higher and kept climbing on October 5. The TAIEX hit an intraday high of 49,770.66 and closed up 1,236.30 points, or 2.55%, at 49,712.04, record highs on both an intraday and closing basis, as turnover swelled to about NT$1.15 trillion. TSMC rose NT$75, or 3%, to a record NT$2,575; MediaTek and ASE Technology Holding gained more than 4%, with ASE closing at NT$742, up NT$29. Low-earth-orbit satellite and PCB names rallied across the board, the three ABF substrate makers all rose, and the number of stocks priced above NT$1,000 briefly reached 56, matching the record. Mature-node foundries lagged: UMC rose as high as NT$165 intraday but closed down NT$9, or 5.57%, at NT$152.5 on volume of about 319,000 lots, while PSMC slipped NT$0.7 to NT$75.8.",
+      "metric": "TAIEX 49,712.04 (+1,236.30, +2.55%); intraday high 49,770.66; turnover ~NT$1.15T; TSMC NT$2,575 (+75, +3.0%); ASE NT$742 (+29); UMC NT$152.5 (-9, -5.57%); PSMC NT$75.8 (-0.7)",
+      "impact": "Money rotated back into TSMC and advanced packaging ahead of the earnings call and September sales: TSMC's 3% gain to a record still leaves about 28% upside to JPMorgan's NT$3,300 target price (last period), and ASE's local shares rose more than 4% after its ADR jumped 6% on Friday, extending the CoWoS expansion theme in item 8. UMC, by contrast, hit a new intraday high after last period's rally and foreign buying, then reversed to slump more than 5%, a sign of profit-taking in the mature-node catch-up trade. Read against item 9, where eight-inch and smaller wafers barely rise in price and mature-node cost and pricing pressure is lighter, the market's pricing of mature-node price hikes is starting to diverge.",
+      "conf": "Confirmed (closing prices cross-checked against TWSE real-time quote closing values: TSMC 2,500+75=2,575; UMC 161.5−9=152.5; ASE 713+29=742; PSMC 76.5−0.7=75.8; TAIEX 48,475.74+1,236.30=49,712.04; turnover from Anue, as TWSE FMTQIK had not yet updated at the time of writing)",
+      "vocab": [
+        ["all-time high", "歷史新高", "fin"],
+        ["profit-taking", "獲利了結", "fin"],
+        ["upside", "上漲空間", "fin"],
+        ["target price", "目標價", "fin"],
+        ["reversed", "反轉；翻黑（reverse 過去式）"],
+        ["turnover", "成交值", "fin"],
+        ["rotated", "（資金）輪動（rotate 過去式）", "fin"],
+        ["lagged", "落後；表現較弱（lag 過去式）"]
+      ]
+    },
+    "15": {
+      "entity": "Philadelphia Semiconductor Index / TSMC ADR (TSM) / ASE ADR (ASX)",
+      "title": "SOX jumps 2.40% to 13,136.68 on October 2 as TSMC's ADR rises 2.96% and ASE's ADR surges 6.08%; U.S. September payrolls grow by just 29,000",
+      "summary": "U.S. nonfarm payrolls rose by only 29,000 in September, far below the 84,000 expected, with the previous two months revised down; the unemployment rate rose from 4.1% to 4.2%. CME FedWatch showed the probability of at least a 25-basis-point hike at the end-October meeting falling to 22.7%, from 64.2% a week earlier. At the October 2 close, the Dow rose 250.40 points to 51,176.96, the Nasdaq gained 319.27 points to 27,190.86 and the S&P 500 added 56.27 points to 7,722.72; the Philadelphia Semiconductor Index rose 307.68 points, or 2.40%, to 13,136.68. NVIDIA rose 1.34%, TSMC's ADR gained 2.96% and ASE's ADR jumped 6.08%. On a weekly basis, however, all three major U.S. indexes fell (Dow -1.74%, S&P 500 -0.98%, Nasdaq -0.72%), while Taiwan's TAIEX bucked the trend with a 0.94% gain.",
+      "metric": "SOX 13,136.68 (+307.68, +2.40%); TSMC ADR +2.96%; ASE ADR +6.08%; payrolls +29,000 (vs 84,000 expected); October hike probability 22.7%",
+      "impact": "Friday's chip rally on Wall Street was the direct trigger for the TAIEX's surge at the October 5 open (item 14); softer jobs data lowered rate-hike expectations, which favors richly valued AI and semiconductor stocks. ASE's ADR jumping 6% in a single session extends last period's strength in ABF and advanced packaging names, as investors clearly bet on packaging capacity expansion.",
+      "conf": "Background (U.S. close on October 2 Eastern Time, outside this period and not covered last period; closing data from Anue's market wrap)",
+      "vocab": [
+        ["nonfarm payrolls", "非農就業"],
+        ["basis-point", "基點（的）"],
+        ["bucked the trend", "逆勢", "fin"],
+        ["richly valued", "估值偏高的"],
+        ["market wrap", "盤後總結"],
+        ["revised down", "下修"],
+        ["rate-hike expectations", "升息預期"]
+      ]
+    },
+    "16": {
+      "entity": "Samsung Foundry / Samsung System LSI / Qualcomm",
+      "title": "The Elec: Samsung starts volume production of the SF2P-based Exynos 2700, with output more than 10% above its predecessor, for the Galaxy S27, S27+ and S27 Pro",
+      "summary": "South Korea's The Elec, citing industry sources, said Samsung Electronics has begun mass-producing its in-house Exynos 2700 chip, with output more than 10% higher than for the Exynos 2600, to support the new Galaxy S27 Pro model. The MX division has finalized the volumes needed for the S27, S27+ and S27 Pro and started wafer production; it takes about three to four months from front-end wafer input to finished product. The base, Plus and Pro models sold in South Korea and Europe are expected to use the Exynos 2700, while the U.S., China and other markets will use Qualcomm's Snapdragon 8 Elite Gen 6; the Exynos share for the S27 Ultra is undecided. The Exynos 2700 is built on Samsung's second-generation 2nm SF2P process, which delivers 12% higher performance, 25% lower power and an 8% smaller die area than SF2. Samsung remains divided internally on the adoption ratio, with the MX division weighing performance and thermal validation, pricing versus Qualcomm, and SF2P capacity.",
+      "metric": "SF2P vs SF2: performance +12%, power -25%, area -8%; output 10%+ above Exynos 2600; 3-4 months from wafer input to finished product",
+      "impact": "SF2P, Samsung's second-generation 2nm process, entering mass production is the only new process milestone for Samsung Foundry this period. That volume is set by the MX division shows internal customers remain the main load on Samsung's advanced nodes. Combined with last period's report that HBM4 base dies are narrowing Samsung Foundry's losses, more smartphone SoC wafer starts can further improve utilization, but the flagship Ultra may still use Qualcomm chips, so the breakthrough with external customers remains limited.",
+      "conf": "Background (published by The Elec on October 3, outside this period; Korean media citing industry sources, not announced by Samsung, so treat as unconfirmed)",
+      "vocab": [
+        ["predecessor", "前代產品"],
+        ["finalized", "敲定（finalize 過去分詞）"],
+        ["adoption ratio", "採用比例"],
+        ["utilization", "產能利用率；稼動率", "fin"],
+        ["validation", "驗證"],
+        ["mass-producing", "量產（mass-produce 進行式）"],
+        ["milestone", "里程碑"]
+      ]
+    },
+    "17": {
+      "entity": "Huawei / HiSilicon / SMIC (0981.HK)",
+      "title": "Kirin 9050 Pro die shot surfaces: logic die on SMIC N+3 and SRAM die on N+2, with two-layer stacking lifting effective transistor density to about 238 MTr/mm²",
+      "summary": "Wccftech, citing a die shot posted by X account Kurnal, said Huawei's Kirin 9050 Pro stacks two identically sized dies vertically, using Huawei's LogicFolding technology to split compute logic from SRAM and cache across separate silicon layers. Each die measures 11.13mm × 10.84mm, or about 120.65mm², slightly smaller than the Kirin 9030S at about 122mm². The logic die is made on SMIC's N+3 process and the SRAM die on N+2, giving an effective planar transistor density of about 238 MTr/mm² after stacking, versus about 112 MTr/mm² and 15.88 billion transistors for the Kirin 9030. Because the chip is used only in the flagship Pro Max and RS versions, overall packaging yield may still be low.",
+      "metric": "Each die 11.13mm × 10.84mm (~120.65mm²); effective density ~238 MTr/mm² (Kirin 9030 ~112 MTr/mm²); logic N+3 + SRAM N+2",
+      "impact": "Last period Huawei acknowledged that the LogicFolding architecture needs more wafers (last period item 8); this die shot quantifies why: each chip uses two SMIC wafers (N+3 plus N+2), doubling effective density but also doubling wafer consumption. It is China's path of trading stacking for scaling in the absence of EUV; read together with Goldman Sachs's estimate of roughly 23% advanced-node yield at SMIC last period, the tightness in SMIC's advanced capacity is likely to persist.",
+      "conf": "Background (surfaced October 2-3, outside this period; die shot posted on X and estimates by online commentators, with neither Huawei nor SMIC confirming the processes, so treat as unconfirmed)",
+      "vocab": [
+        ["die shot", "晶片照（晶粒照片）"],
+        ["surfaces", "曝光；浮現（surface 第三人稱）"],
+        ["transistor density", "電晶體密度"],
+        ["scaling", "微縮"],
+        ["tightness", "吃緊"],
+        ["persist", "持續"],
+        ["acknowledged", "坦承（acknowledge 過去式）"]
+      ]
+    }
+  }
+}
