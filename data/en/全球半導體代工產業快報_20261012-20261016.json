@@ -1,0 +1,353 @@
+{
+  "source": "全球半導體代工產業快報_20261012-20261016.xlsx",
+  "news": {
+    "1": {
+      "entity": "Microsoft / TSMC (2330)",
+      "title": "Microsoft unveils its third-generation in-house AI chip, Maia 300, with compute dies on TSMC's 2nm process and I/O dies on 3nm; deployment at multi-gigawatt scale in 2027 could exceed 1 million chips",
+      "summary": "Microsoft on Monday, October 12 (US time) unveiled Maia 300, its third-generation in-house AI inference chip, and plans to deploy it at multi-gigawatt scale in 2027, potentially more than 1 million units, to power its own AI services and OpenAI models on Azure. Maia 300 uses a chiplet architecture: the core compute dies are built on TSMC's 2nm process, while data-transfer functions use the cheaper 3nm node. Each rack holds 96 chips and draws about 167kW, compared with 72 GPUs and about 142kW for an Nvidia GB300 rack. Microsoft claims about 40% more useful compute per megawatt than leading GPU systems, without naming the comparison. Microsoft expects calendar-year capital expenditure of more than US$175 billion this year.",
+      "metric": "Up to 1M+ chips deployed in 2027; N2 compute dies + N3 I/O dies; 96 chips and ~167kW per rack; claimed +40% compute per MW; Microsoft 2026 capex over US$175B",
+      "impact": "Cloud providers' custom ASICs are also landing on TSMC's leading-edge nodes: Maia 300 consumes both N2 and N3 capacity, echoing TSMC's remark in item 13 that \"every AI company works with TSMC\" and its plan to more than double N2 capacity in 2027. Item 16 reports that Microsoft's server CPUs are also on Intel's foundry customer list, so hyperscalers are spreading different products across foundries, but the most advanced AI compute dies remain concentrated at TSMC.",
+      "conf": "Confirmed (official Microsoft announcement; process nodes and deployment volume are cited by media and not all details were disclosed by Microsoft; performance comparison is Microsoft's own claim)",
+      "vocab": [
+        ["capital expenditure", "資本支出"],
+        ["deployment", "部署"],
+        ["in-house", "自研；內部自製"],
+        ["inference", "推論"],
+        ["chiplet architecture", "小晶片架構"],
+        ["calendar-year", "日曆年度"],
+        ["at multi-gigawatt scale", "以數 GW 規模"]
+      ]
+    },
+    "2": {
+      "entity": "Applied Materials / TSMC (2330) / Intel / Samsung Electronics",
+      "title": "Applied Materials opens its US$5 billion EPIC R&D center in Silicon Valley with TSMC, Intel, Samsung, Micron and SK hynix as founding partners; TSMC's C.C. Wei says it will speed technologies beyond 2nm into volume production",
+      "summary": "Applied Materials formally opened its US$5 billion EPIC (Equipment and Process Innovation and Commercialization) Center in Sunnyvale, California. The 600,000-square-foot facility has nearly 4 acres of cleanroom space, giving chipmakers early access to next-generation materials and tools and shortening learning cycles. Founding partners are TSMC, Intel, Samsung Electronics, Micron and SK hynix; innovation partners include Broadcom, Advantest, SCREEN, Kioxia and BE Semiconductor. TSMC Chairman C.C. Wei noted that the most advanced production node was 350nm 30 years ago and is now 2nm, a 175-fold reduction in feature size, and said working with Applied would accelerate generations beyond 2nm from R&D to high-volume manufacturing, including new architectures, low-resistance wiring and advanced packaging. Intel CEO Lip-Bu Tan expects a single package to hold more than one trillion transistors by 2030.",
+      "metric": "US$5B investment; 600,000 sq ft with nearly 4 acres of cleanroom; 5 founding partners (TSMC, Intel, Samsung, Micron, SK hynix); feature size cut 175-fold from 350nm to 2nm",
+      "impact": "With the three leading logic foundries and IDMs moving into the same R&D center, new transistor architectures, backside power and advanced packaging materials beyond 2nm clearly require toolmakers and fabs to co-develop earlier. Together with ASML's admission in item 7 that tools will be in short supply in 2027-28 and SEMI's forecast in item 6 of 31% growth in 300mm equipment spending in 2026, equipment is a recurring bottleneck to expansion this period.",
+      "conf": "Confirmed (official Applied Materials release and company statements)",
+      "vocab": [
+        ["high-volume manufacturing", "大量生產；量產"],
+        ["learning cycles", "學習週期"],
+        ["founding partners", "創始合作夥伴"],
+        ["feature size", "特徵尺寸"],
+        ["bottleneck", "瓶頸"],
+        ["co-develop", "共同開發"],
+        ["accelerate", "加速"]
+      ]
+    },
+    "3": {
+      "entity": "CXMT (688825) / Samsung Electronics / SK hynix / Hua Hong Semiconductor (1347.HK)",
+      "title": "CXMT says it will launch 4F² DRAM by year-end, claiming a lead over Samsung and SK hynix; Korea's KOSPI plunges 6.7% intraday as Samsung and SK hynix fall more than 7%, and Hua Hong drops over 5% in Hong Kong",
+      "summary": "CXMT President Cao Kanyu told an industry forum in Shanghai that the company will launch a data-center DRAM using a 4F² architecture that stacks transistors with vertical surrounding gates (VSG), and a spokesperson confirmed it is expected to be unveiled by the end of this year. If true, it would put CXMT ahead of Samsung and SK hynix, which still use 6F², despite having no access to ASML's most advanced tools. The news triggered a sell-off in memory stocks: Micron fell about 4% on October 12, and on October 13 Samsung and SK hynix dropped more than 7% intraday as the KOSPI slid as much as 6.7%. The index is now about a third below its June peak, and foreign investors have net sold more than US$6 billion of Korean stocks in October. Broadcom CEO Hock Tan's remark that AI investing resembles a casino deepened the unease. Memory-related stocks also tumbled in Hong Kong, where Hua Hong Semiconductor lost more than 5%. Counterpoint estimates CXMT's DRAM market share reached 10% in the second quarter, up from 4% a year earlier. Industry players and Morningstar both say achieving viable yields on 4F² will be very difficult.",
+      "metric": "KOSPI -6.7% intraday; Samsung and SK hynix down 7%+ intraday; Micron ~-4% on Oct 12; foreigners net sold US$6B+ of KOSPI stocks in Oct; CXMT DRAM share 10% (2Q26, vs 4% a year earlier); Hua Hong down 5%+ on Oct 13",
+      "impact": "Memory has led this round of AI hardware gains, and CXMT's technology claim combined with doubts about AI returns pulled money out of memory first before spreading to foundries and packaging (item 4: Taiwan stocks fell 960 points on Oct 13; item 15: record foreign selling). For foundries it matters in two ways: China's path of using architectural innovation to work around EUV restrictions (Huawei's LogicFolding, CXMT's VSG) keeps extending, and if Chinese expansion loosens memory prices, it could ease the pressure that soaring memory costs put on smartphone demand, as noted last period.",
+      "conf": "Unconfirmed (CXMT's breakthrough is the company's own claim and no product has been released; share-price declines are intraday figures that vary slightly across reports; market share is a Counterpoint estimate)",
+      "vocab": [
+        ["sell-off", "拋售；賣壓"],
+        ["intraday", "盤中", "fin"],
+        ["net sold", "淨賣超"],
+        ["peak", "高點"],
+        ["unease", "不安；疑慮"],
+        ["viable yields", "具商業可行性的良率"],
+        ["market share", "市占率", "fin"]
+      ]
+    },
+    "4": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / TAIEX",
+      "title": "Taiwan stocks tumble 960.65 points to 48,341.31 on Oct 13 as foreign investors sell a net NT$165.291 billion; TSMC breaks below NT$2,500 to close at NT$2,490 ahead of earnings, before a 284.52-point rebound on Oct 14",
+      "summary": "After the holiday weekend, Taiwan stocks edged down 11.48 points to 49,301.96 on October 12, with TSMC down NT$10 at NT$2,540. On October 13, a slump in Micron and a crash in Korean stocks weighed on electronics heavyweights: the TAIEX fell 960.65 points, or 1.95%, to 48,341.31 on turnover of NT$1.201861 trillion. Foreign investors were net sellers of NT$165.291 billion, and the three major institutional investor groups sold a combined NT$197.641 billion. TSMC fell NT$50 to NT$2,490 on volume of 329,000 lots, UMC fell NT$4 to NT$141.5 and PSMC fell NT$3.9 to NT$67.5. On October 14, petrochemical and passive-component stocks propped up the market and the index rebounded 284.52 points to 48,625.83. TSMC was unchanged at NT$2,490, UMC rose NT$0.5 and PSMC gained NT$3.5 to NT$71, while foreign investors sold another NT$20.037 billion. Foreign investors had been net sellers of TSMC for consecutive sessions ahead of its earnings call.",
+      "metric": "Oct 12: 49,301.96 (-11.48); Oct 13: 48,341.31 (-960.65), turnover NT$1.201861T, foreign net selling NT$165.291B; Oct 14: 48,625.83 (+284.52); TSMC NT$2,540 → 2,490 → 2,490; UMC NT$145.5 → 141.5 → 142; PSMC NT$71.4 → 67.5 → 71",
+      "impact": "Foreign investors had already sold NT$75.852 billion on Oct 8 (last period item 5), and the selling intensified ahead of the earnings call, showing they were cutting AI hardware positions before the results. Mature-node stocks such as UMC and PSMC fell about as much as TSMC, which suggests a risk reduction across the whole semiconductor sector rather than company-specific fundamentals; set against the mature-node price-hike reports in item 10, fundamentals and share prices are diverging.",
+      "conf": "Confirmed (index and stock closes checked against TWSE FMTQIK/STOCK_DAY data: 49,313.44 - 11.48 = 49,301.96; -960.65 = 48,341.31; +284.52 = 48,625.83; institutional flows from TWSE BFI82U, consistent with Anue's NT$165.3 billion foreign selling figure)",
+      "vocab": [
+        ["net sellers", "淨賣超者"],
+        ["turnover", "成交金額", "fin"],
+        ["heavyweights", "權值股"],
+        ["propped up", "撐住（盤勢）"],
+        ["unchanged", "平盤"],
+        ["risk reduction", "降低風險部位"],
+        ["diverging", "背離"],
+        ["lots", "張（股票交易單位）"]
+      ]
+    },
+    "5": {
+      "entity": "NVIDIA / TSMC (2330) / ByteDance / Tencent",
+      "title": "Chinese tech firms have reportedly ordered more than 2 million Nvidia H200 chips for 2026 against inventory of only about 700,000, prompting Nvidia to approach TSMC about more H200 capacity; Beijing has yet to approve imports",
+      "summary": "After the US eased some restrictions on H200 sales to approved Chinese customers, Chinese tech companies have reportedly ordered more than 2 million H200 chips for 2026, while Nvidia holds only about 700,000 in inventory and is in talks with TSMC to expand H200 output. An eight-chip module sells for about RMB1.5 million, offering roughly six times the performance of the H20 at about 15% less than gray-market alternatives. ByteDance reportedly plans to raise its 2026 budget for Nvidia chips to about RMB100 billion from about RMB85 billion in 2025, provided imports are approved. Tencent is said to be issuing US$5 billion of bonds to expand computing capacity; its second-quarter capital expenditure was RMB52.8 billion, up 176% year on year. President Trump has said H200 sales to approved customers will carry a 25% fee. Beijing is still deciding whether to allow the imports and requires new data centers that receive state funding to use only domestically made AI chips. TrendForce also notes Chinese companies have bought more than 1 million Nvidia gaming and workstation GPUs this year.",
+      "metric": "H200 orders from China 2M+ vs inventory ~700K; eight-chip module ~RMB1.5M; ByteDance 2026 Nvidia budget ~RMB100B; Tencent 2Q capex RMB52.8B (+176%); 25% US fee",
+      "impact": "The H200 is built on TSMC's 4nm-class process with CoWoS-S packaging, so any extra production would compete with Blackwell and Rubin for already tight mature CoWoS and N4 capacity (in item 14 C.C. Wei acknowledged back-end capacity is short). But this demand hinges on whether Beijing approves imports and carries high policy uncertainty; for TSMC it is a possible upside rather than something to build into capacity plans.",
+      "conf": "Unconfirmed (order volume, inventory and the TSMC capacity talks come from sources; Nvidia and TSMC have not confirmed; whether China allows H200 imports is undecided)",
+      "vocab": [
+        ["inventory", "庫存", "fin"],
+        ["gray-market", "灰色市場"],
+        ["issuing", "發行（債券）"],
+        ["bonds", "債券"],
+        ["state funding", "國家資金"],
+        ["upside", "上檔空間；潛在利多", "fin"],
+        ["policy uncertainty", "政策不確定性"]
+      ]
+    },
+    "6": {
+      "entity": "SEMI / TSMC (2330) / Intel / Samsung Electronics / Micron",
+      "title": "SEMICON West: SEMI forecasts global 300mm fab equipment spending of US$149 billion in 2026, up 31%, rising to US$227 billion in 2029; Americas spending to more than double to US$40.6 billion by 2029",
+      "summary": "SEMICON West 2026 opened on October 13 (US time). SEMI Senior Director Clark Tseng said global 300mm fab equipment spending will rise from US$113 billion in 2025 to about US$149 billion in 2026, up 31%, and reach US$227 billion in 2029, with double-digit growth every year from 2026 to 2029. Construction is expected to start on 20 new 300mm fabs or lines worldwide in 2026 and 18 in 2027, including three and four in the US. The number of fabs starting operations or producing first wafers will rise from 13 in 2026 to 23 in 2027, and global fab construction spending will grow from nearly US$48 billion in 2026 to US$63 billion in 2027 and US$68 billion in 2028. 300mm equipment spending in the Americas will more than double from US$18.1 billion in 2026 to US$40.6 billion in 2029, driven by logic and foundry expansions at Intel, TSMC and Samsung and DRAM at Micron. SEMI Americas said US semiconductor-related investment has topped US$800 billion, more than US$200 billion of it in Phoenix. Intel and Micron urged Taiwanese materials, component and equipment suppliers to set up operations in the US at a Taiwan supply-chain forum.",
+      "metric": "2026 300mm equipment spending ~US$149B (+31%); US$227B in 2029; new fab starts 20 in 2026 / 18 in 2027; Americas equipment spending US$18.1B → US$40.6B (2026 → 2029); US semiconductor investment over US$800B",
+      "impact": "SEMI's figures put TSMC's nearly 20 fabs under way (item 13) and GlobalFoundries' new New York fabs (item 8) into a global context: with equipment spending growing at double digits for four straight years and ASML short of supply in 2027-28 (item 7), the constraint on foundry expansion is shifting from demand to tool lead times and labor. The doubling of US equipment spending also means Taiwanese equipment and materials suppliers are being pushed to follow customers to the US, as GPTC already has with a Phoenix subsidiary.",
+      "conf": "Confirmed (SEMI research forecast presented at SEMICON West; forecasts change as company plans are revised)",
+      "vocab": [
+        ["equipment spending", "設備支出", "fin"],
+        ["double-digit growth", "雙位數成長"],
+        ["construction spending", "建廠支出"],
+        ["more than double", "增加一倍以上"],
+        ["lead times", "交期"],
+        ["topped", "超過"],
+        ["set up operations", "設立營運據點"]
+      ]
+    },
+    "7": {
+      "entity": "ASML / TSMC (2330) / Samsung Electronics / SK hynix",
+      "title": "ASML posts record Q3 revenue of €11.7 billion with a 57.5% gross margin and guides Q4 to €14.2-15.2 billion; it admits tools will be in short supply in 2027-28 and weighs adding about 12 EUV systems to its 110-unit annual target",
+      "summary": "ASML reported record third-quarter revenue of €11.7 billion on October 14, with net profit of €5 billion and a better-than-expected gross margin of 57.5%; installed base management revenue reached €3.3 billion. It guided fourth-quarter revenue to €14.2 billion to €15.2 billion with a gross margin of about 57%, and full-year revenue to €44 billion to €45 billion with a margin of about 56%. CEO Christophe Fouquet said supply of lithography tools for advanced logic and memory will fall short of demand in both 2027 and 2028, even with 30% capacity increases in each year. ASML had planned annual capacity of 110 EUV systems, priced at about US$200 million each, by 2028 and is considering adding about 12 more; the first phase of its Eindhoven expansion will not open until 2029. Some customers are already discussing tools for 2029-30, but ASML is holding off on those orders to assess customer readiness and is demanding large prepayments; price increases in 2027-28 will support results. China accounts for about 20% of revenue this year. ASML shares fell about 3.9% on October 14 and slid another 5% intraday on October 15.",
+      "metric": "3Q26 revenue €11.7B, net profit €5B, gross margin 57.5%; 4Q26 guidance €14.2B-15.2B; 2026 €44B-45B; 2028 EUV capacity 110 units + ~12; China ~20% of revenue",
+      "impact": "ASML openly admitting it has become the bottleneck directly constrains how fast TSMC can 'use every means to expand' (item 13), and the expansion pace of GlobalFoundries (item 8) and Intel (item 16). Tool price increases in 2027-28 will also lift foundry capex: in item 12 TSMC's CFO acknowledged equipment prices are rising but stressed revenue growth will still outpace capex growth. Longer tool lead times may let the big players that order and pay deposits early (TSMC, Samsung, SK hynix) pull further ahead of second-tier fabs.",
+      "conf": "Confirmed (ASML earnings and call; the roughly 12 additional EUV units is an option under consideration reported by Reuters)",
+      "vocab": [
+        ["record", "創新高的"],
+        ["guided", "給出財測"],
+        ["fall short of demand", "供不應求"],
+        ["prepayments", "預付款"],
+        ["installed base", "已裝機設備"],
+        ["holding off", "暫緩"],
+        ["second-tier", "二線的"],
+        ["deposits", "訂金"]
+      ]
+    },
+    "8": {
+      "entity": "GlobalFoundries / US Commerce Department / Japan / Renesas / Apple",
+      "title": "Japan to fund up to US$21 billion for two 300mm fabs in Malta, New York, to be operated by GlobalFoundries, with the first starting output in 2029 at about 900,000 wafers a year; the US government's stake in GF to rise from 3% to about 7%",
+      "summary": "GlobalFoundries announced on October 14 that, under the US-Japan trade deal in which Japan pledged US$550 billion of US investment, Japan will provide up to US$21 billion to build two 300mm fabs in Malta, New York. The fabs will be jointly owned by US and Japanese interests, with GF responsible for construction, operation and technology licensing. The first, costing about US$10 billion, will break ground this year and start operating in 2029; a decision on the second, also about US$10 billion, will be made by the end of 2028 depending on demand. Each fab can produce about 900,000 300mm wafers a year at full capacity, together lifting US wafer capacity by roughly 10%. CEO Tim Breen named Renesas and Apple among the initial customers and said GF will collect fees for at least 20 years, starting at about US$50 million in 2027. Under a separate agreement, the Commerce Department will take about a 4% stake, raising the government's holding from about 3% to about 7%, and GF will redirect US$955 million of CHIPS Act funding to silicon photonics, silicon germanium and advanced packaging at its Malta and Vermont sites. Trump said the government has invested a cumulative US$1.63 billion and its stake is now worth more than US$2 billion.",
+      "metric": "Japan funding up to US$21B; two fabs ~US$10B each; ~900K 300mm wafers/year each; first fab online 2029; US government stake ~3% → 7%; US$955M of CHIPS funding redirected; ~US$50M fees in 2027",
+      "impact": "After last period's US$2 billion silicon interposer deal with TSMC (last period item 6) and its Dresden expansion (last period item 10), GF now has a 'build and operate' model funded by a foreign government: Japan bears the capital while GF earns operating fees and licensing income, easing its own capex burden. This echoes TSMC's position in item 13 that any Texas/Terafab fab must be operated by TSMC. Governments and customers putting up the money while foundries supply technology and operations is becoming a new model for US expansion.",
+      "conf": "Confirmed (GF announcement, CEO interview and Trump's post; initial customers per the CEO's interview; the 10% share of US capacity is a MarketBeat estimate; the value of the government stake is Trump's own claim)",
+      "vocab": [
+        ["stake", "股權；持股", "fin"],
+        ["break ground", "動工"],
+        ["technology licensing", "技術授權"],
+        ["capex burden", "資本支出負擔"],
+        ["redirect", "重新分配；轉用"],
+        ["cumulative", "累計的", "fin"],
+        ["jointly owned", "共同持有"],
+        ["fees", "服務費；費用"]
+      ]
+    },
+    "9": {
+      "entity": "Intel / Fab 38 (Kiryat Gat, Israel)",
+      "title": "A gas cylinder explosion and fire at Intel's Fab 38 site in Kiryat Gat, Israel, seriously injures three workers; nitrogen trifluoride may be involved, and the impact on the EUV expansion project is unclear",
+      "summary": "An explosion and fire broke out at Intel's site in Kiryat Gat, southern Israel, at 2:12 p.m. local time on October 14, sending up thick black smoke. Three workers suffered serious burns and were hospitalized; The Times of Israel said two were in critical condition, while MoneyDJ, citing Calcalist, said one was. Police said a gas cylinder exploded inside the plant, and firefighters said the incident involved nitrogen trifluoride (NF3), a toxic but non-flammable oxidizer used to clean thin-film process chambers. Hazardous-materials experts are still assessing the situation, and the fire has been put out. Fab 38 is Intel's advanced-process expansion project slated to house EUV tools and will add more than 600,000 square feet of cleanroom space. Intel paused part of the work in July 2025 to focus on completing the first of two cleanrooms, which contractor data show is due for completion in 2026 before utility hookups and tool installation. Intel has not said whether the schedule will be affected.",
+      "metric": "3 seriously injured; nitrogen trifluoride (NF3) involved; Fab 38 planned cleanroom over 600,000 sq ft; first cleanroom originally due in 2026",
+      "impact": "Fab 38 is part of Intel's overseas advanced-process capacity; any construction delay would hurt Intel's own products more than foundry customers, who reportedly favor the US-based 18A-P and 14A (item 16). The incident is also a reminder that specialty gases and chemicals pose the greatest risk during tool installation and trial production; with 38 new 300mm fabs or lines set to break ground worldwide in 2026-27 (item 6), safety and supply-chain management are a hidden bottleneck to expansion.",
+      "conf": "Confirmed (statements from Israeli police and fire services; reports differ on the condition of the injured; the cause awaits an official investigation and the impact on construction is unknown)",
+      "vocab": [
+        ["critical condition", "情況危急"],
+        ["paused", "暫緩"],
+        ["schedule", "時程"],
+        ["trial production", "試產"],
+        ["hidden bottleneck", "隱性瓶頸"],
+        ["hospitalized", "送醫"],
+        ["specialty gases", "特殊氣體"]
+      ]
+    },
+    "10": {
+      "entity": "UMC (2303) / Vanguard (5347) / SMIC (0981.HK) / Sigmaintell",
+      "title": "Sigmaintell sees average utilization at major foundries reaching 91% in 4Q26 and global 8-inch foundry capacity shrinking 6% in 2026 and another 2% in 2027; consensus expects UMC's 8-inch ASP to rise 11% year on year in 1Q27",
+      "summary": "Research firm Sigmaintell forecasts average capacity utilization at major foundries will reach 91% in the fourth quarter of 2026, and with energy and materials costs rising, foundry prices are trending up. Supply is shrinking most in 8-inch: global 8-inch foundry capacity will fall 6% in 2026 and another 2% in 2027. The 48V power architecture in AI servers is driving demand for high-voltage power management and power devices, some of which still require 8-inch wafers, and some foundries have order visibility of nearly six months. TSMC and Samsung are gradually cutting 8-inch capacity, and while SMIC and Vanguard have room to expand, they cannot close the gap quickly. The 55nm and 90nm nodes are supported by AI power-management chips and NOR flash, with larger price hikes possible in 2027, while 28nm and 40nm pricing is roughly flat in 4Q26. Market consensus compiled by Uanalyze puts UMC's 4Q26 capacity at about 1.1 million 8-inch and 1.86 million 12-inch wafers, with overall utilization above 90% and 22/28nm reaching 93%. UMC's 8-inch ASP is expected to rise just 1.1% year on year in 4Q26, then jump 11% in 1Q27 and stay above 10% in 4Q27.",
+      "metric": "4Q26 average utilization 91%; 8-inch foundry capacity -6% in 2026, -2% in 2027; UMC 4Q26 capacity ~1.1M 8-inch / ~1.86M 12-inch wafers; UMC 8-inch ASP YoY 1.1% in 4Q26 → 11% in 1Q27",
+      "impact": "The timeline for mature-node price hikes is becoming clearer: 2026 reflects rising utilization, and only after contracts are renegotiated in 2027 will it show up in prices. Combined with Samsung considering GlobalFoundries because UMC's 22nm is full (item 17), TrendForce's note that capacity-constrained 12-inch mature nodes rose 5-10% from 2Q to 3Q, and UMC's record September revenue (background item 19), UMC, Vanguard and PSMC are gaining pricing power. Yet their shares fell along with TSMC in items 4 and 15, so the market has not yet assigned them a premium.",
+      "conf": "Unconfirmed (utilization and capacity changes are research forecasts; UMC capacity and pricing are consensus estimates compiled by Uanalyze, not company disclosures)",
+      "vocab": [
+        ["capacity utilization", "產能利用率"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["ASP", "平均售價（單價）", "fin"],
+        ["price hikes", "漲價", "fin"],
+        ["renegotiated", "重新議價"],
+        ["pricing power", "議價力；定價能力", "fin"],
+        ["premium", "溢價", "fin"],
+        ["consensus", "市場共識", "fin"]
+      ]
+    },
+    "11": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC's Q3 net profit rises 68.7% to NT$763.064 billion and EPS hits a record NT$29.43; gross margin of 66.4% and operating margin of 58.7% beat guidance as 2nm climbs to 8% of wafer revenue",
+      "summary": "TSMC reported third-quarter results on October 15: revenue of NT$1.494240 trillion, up 17.6% quarter on quarter and 50.9% year on year. In US dollars, revenue was US$46.72 billion, up 16.2% sequentially and 41.2% from a year earlier, above the top of its US$45.8 billion guidance. Net profit was NT$763.064 billion, up 8% sequentially and 68.7% year on year, and earnings per share were NT$29.43 versus NT$17.44 a year earlier, the sixth straight quarter of record profit. Gross margin was 66.4%, down 1.3 percentage points from 67.7% in the second quarter but within guidance, mainly because of dilution from the early ramp of 2nm. Operating margin was 58.7%, above the top of the 58% guidance, and net margin was 51.1%. By wafer revenue, 2nm accounted for 8% (up from 3% in Q2), 3nm for 33%, 5nm for 28% and 7nm for 10%, with 7nm and below making up 79%. By platform, high-performance computing (HPC) was 68% of revenue (up 22% sequentially), smartphones 21%, and IoT and automotive 4% each. Net profit for the first nine months was NT$2.0421 trillion, up 68.5%, with EPS of NT$78.75.",
+      "metric": "3Q26 revenue NT$1.494240T (+17.6% QoQ, +50.9% YoY) / US$46.72B; net profit NT$763.064B (+68.7% YoY); EPS NT$29.43; gross margin 66.4%, operating margin 58.7%, net margin 51.1%; N2 8% / N3 33% / N5 28% / N7 10%; HPC 68%",
+      "impact": "Last period we calculated from monthly sales that Q3 revenue had beaten the top of guidance (last period item 1); this period confirms profits beat too, with operating margin above the high end and gross margin still above 66% despite dilution from the N2 ramp and overseas fabs. N2 jumped from 3% to 8% of wafer revenue in one quarter, a faster ramp than N3 at the same stage. HPC grew 22% in the quarter while smartphones fell to 21% of revenue, consistent with last period's report of Apple cutting orders (last period item 15). Yet foreign investors sold a record amount on results day (item 15) and the ADR closed lower (item 18), suggesting the good news was already expected.",
+      "conf": "Confirmed (TSMC financial statements and earnings call materials; figures from Anue and TrendForce match)",
+      "vocab": [
+        ["earnings per share", "每股盈餘"],
+        ["operating margin", "營業利益率", "fin"],
+        ["net margin", "稅後純益率"],
+        ["percentage points", "百分點"],
+        ["dilution", "稀釋（毛利率）", "fin"],
+        ["ramp", "量產爬坡"],
+        ["beat guidance", "優於財測"],
+        ["sequentially", "季增（與上一季相比）"]
+      ]
+    },
+    "12": {
+      "entity": "TSMC (2330)",
+      "title": "TSMC guides Q4 revenue to US$52.3-54.3 billion, up 14% at the midpoint; it raises full-year US dollar revenue growth for a third time to about 44%, keeps capex at US$60-64 billion and says 2026-28 capex will rise significantly",
+      "summary": "TSMC expects fourth-quarter revenue of US$52.3 billion to US$54.3 billion, up 14% sequentially and about 58% year on year at the midpoint, with gross margin of 65% to 67% (66% at the midpoint, down 0.4 percentage point) and operating margin of 56.5% to 58.5%, based on an exchange rate of NT$31.8 to the US dollar. It raised its full-year US dollar revenue growth forecast for a third time to about 44%, after close to 30% in January, over 30% in April and slightly above 40% in July. It kept 2026 capital expenditure at US$60 billion to US$64 billion and expects capex in 2026-28 to be significantly higher than in the previous three years. CFO Wendell Huang acknowledged that equipment prices are rising but said revenue growth will still outpace capex growth, and pledged steadily rising cash dividends per share on both an annual and quarterly basis. C.C. Wei said the compound annual growth rate of AI accelerator revenue from 2024 to 2029, previously forecast in the mid-to-high 50s percent, 'could be higher'. However, consumer and price-sensitive markets face rising component prices and macroeconomic uncertainty, so TSMC is taking a cautious approach to 2027 planning. On pricing, TSMC said it is strategic and depends on technology, market segment and production location, with US-made wafers priced slightly differently, and that customers are not allowed to sublease or auction capacity.",
+      "metric": "4Q26 guidance US$52.3B-54.3B (midpoint +14% QoQ, +58% YoY); gross margin 65%-67%, operating margin 56.5%-58.5%; NT$31.8/US$; 2026 US dollar revenue ~+44%; 2026 capex US$60B-64B",
+      "impact": "If the Q4 midpoint of US$53.3 billion is met, full-year US dollar revenue would be roughly US$175 billion (our rough estimate based on 44% growth, for reference only), with N2 margin dilution in the second half already built into guidance. Two signals stand out. First, capex will rise 'significantly' in 2026-28, which, together with SEMI's equipment spending forecast (item 6) and ASML's expansion (item 7), extends the upcycle for the equipment chain. Second, TSMC used the word 'cautious' about 2027 for the first time, mainly because component price hikes such as memory are weighing on consumer demand, consistent with the memory sell-off in item 3 and last period's smartphone order cuts, and one reason foreign investors sold despite the good news.",
+      "conf": "Confirmed (TSMC earnings call guidance and management comments; full-year revenue scale is our calculation)",
+      "vocab": [
+        ["midpoint", "（財測）中間值"],
+        ["capital expenditure", "資本支出"],
+        ["outpace", "超過；快於"],
+        ["cash dividends", "現金股利"],
+        ["compound annual growth rate", "年複合成長率"],
+        ["cautious", "審慎的"],
+        ["sublease", "轉租"],
+        ["upcycle", "景氣上行週期"]
+      ]
+    },
+    "13": {
+      "entity": "TSMC (2330) / Terafab",
+      "title": "TSMC has nearly 20 fabs under way and will build 13 advanced-process and packaging fabs in Taiwan; it adds another 3nm fab in Tainan for 1H28 production and moves Arizona's second fab to 3Q27, and confirms a Texas assessment and talks with Terafab",
+      "summary": "C.C. Wei said nearly 20 fabs worldwide are proceeding as planned, with 13 advanced-process wafer fabs and advanced packaging plants to be built in Taiwan over the next several years and another five to six overseas. To meet multi-year 3nm demand, a new 3nm fab in the Southern Taiwan Science Park will start production in the first half of 2027, and TSMC has decided to add another 3nm fab in Tainan for production in the first half of 2028. It is also converting some 5nm tools to 3nm and flexibly shifting capacity among 7nm, 5nm and 3nm. Arizona's second fab has been completed and is moving in tools, with production in the third quarter of 2027, slightly ahead of plan; the second fab in Kumamoto, Japan, will use 3nm and start production in 2028. N2 entered volume production in the fourth quarter of 2025 and is ramping at multiple phases in Hsinchu and Kaohsiung, with N2-family capacity set to more than double in 2027. More customers are engaging on A14 than on 2nm, with risk production in 2027 and volume production in 2028. TSMC has sent a team to assess Texas and is discussing using local capacity with a customer building a Terafab, stressing that any fab must be operated by TSMC. The CFO expects overseas fabs to dilute gross margin by close to 2% in 2026, widening to 3-4 percentage points in coming years. TSMC plans to start using High-NA EUV in 2030. Wei said AI demand still far exceeds supply and 'every AI company works with TSMC'.",
+      "metric": "Nearly 20 fabs worldwide; 13 advanced-process/packaging fabs in Taiwan, 5-6 overseas; additional Tainan N3 fab in volume production 1H28; Arizona fab 2 in 3Q27; Kumamoto fab 2 on N3 in 2028; N2 capacity to more than double in 2027; A14 risk production 2027 / volume 2028; overseas dilution ~2% → 3-4 pts",
+      "impact": "TSMC is breaking its practice of no longer expanding a node once capacity targets are met: 3nm is its third volume generation yet still gets new fabs, showing AI demand is extending each node's life cycle. If TSMC operates Terafab (last period item 16, Musk's plan for 10 chips a year), system companies' plans to build their own fabs would ultimately rely on a foundry's technology and management. Together with GlobalFoundries' 'Japan funds, GF operates' model in item 8, the operate-for-others model is a theme this period. The widening overseas dilution to 3-4 points is the long-term margin cost of US expansion.",
+      "conf": "Confirmed (TSMC management comments at the earnings call; the Texas and Terafab talks have not concluded)",
+      "vocab": [
+        ["under way", "進行中"],
+        ["volume production", "量產"],
+        ["ahead of plan", "較原計畫提前"],
+        ["flexibly", "彈性地"],
+        ["life cycle", "生命週期"],
+        ["dilute", "稀釋"],
+        ["far exceeds", "遠超過"],
+        ["assess", "評估"]
+      ]
+    },
+    "14": {
+      "entity": "TSMC (2330) / GlobalFoundries",
+      "title": "TSMC says it is mass-producing 5.5x reticle-size CoWoS, is pushing toward 9x and 14x and developing CoPoS; C.C. Wei admits back-end capacity is short and hints TSMC would back up customers if rivals' packaging falls short",
+      "summary": "C.C. Wei said TSMC is in volume production of advanced packaging at 5.5 times reticle size with excellent yields, adding that 'no one other than TSMC can do it today.' It is pushing toward 9x and then 14x reticle size and developing CoPoS to offer customers reasonable cost reductions, though CoWoS remains customers' first choice. On making silicon interposers with GlobalFoundries, he said it is part of TSMC's overall strategy and acknowledged that back-end capacity is indeed somewhat short, so TSMC wants to work with global partners to support customers. Asked whether TSMC would act as a backup if a competitor's packaging solution failed to deliver, he said helping customers bring products to market is the top priority and that 'this is enough of a hint.' Uanalyze estimates Nvidia's Blackwell interposer at about 3.3 times reticle size, Rubin at about 4 times and Rubin Ultra possibly 9 times (a reticle is about 830 square millimeters), meaning demand for packaging capacity will grow faster than AI chip shipments.",
+      "metric": "5.5x reticle CoWoS in volume production; 9x → 14x in development (2028); interposer area Blackwell 3.3x / Rubin 4x / Rubin Ultra possibly 9x; reticle ~830 mm²",
+      "impact": "This is the first time TSMC has publicly addressed the GlobalFoundries interposer deal (last period item 6) at an earnings call and admitted a back-end shortage, showing CoWoS expansion still cannot keep up with the growth in package area per chip. The offer to serve as a backup points straight at Intel's EMIB-T: item 16 reports that projects such as Google's TPU use EMIB-T, but substrate yields are only 20-60%, so if ramping stalls, orders could flow back to TSMC. For equipment and materials suppliers, larger packages mean multiplying demand for interposers, substrates and wet-process tools.",
+      "conf": "Confirmed (TSMC earnings call comments; Blackwell/Rubin interposer multiples are Uanalyze estimates based on industry research)",
+      "vocab": [
+        ["reticle size", "光罩尺寸"],
+        ["back-end capacity", "後段（封裝）產能"],
+        ["backup", "備援"],
+        ["first choice", "首選"],
+        ["cost reductions", "成本降幅"],
+        ["shipments", "出貨量", "fin"],
+        ["fails to deliver", "無法交付"]
+      ]
+    },
+    "15": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / ASE Technology (3711) / TAIEX",
+      "title": "Hotter-than-expected US inflation and spreading AI financing worries send Taiwan stocks down 1,655.96 points to 46,969.87 on Oct 15, the sixth-biggest point drop on record; foreign investors sell a record NT$302.555 billion, and TSMC falls NT$50 to NT$2,440",
+      "summary": "US September CPI rose 3.7% year on year, above expectations, stoking fears of rate hikes, while concerns about credit risk in AI data-center financing intensified. Taiwan stocks plunged as much as 1,830.45 points on October 15 before closing down 1,655.96 points, or 3.41%, at 46,969.87, the sixth-largest point drop in history and a break below the monthly moving average, on turnover of NT$1.435755 trillion. Foreign investors sold a net NT$302.555 billion, surpassing the NT$189.038 billion on July 17 for a single-day record and extending their selling streak to seven sessions. Proprietary dealers sold NT$95.823 billion while investment trusts bought NT$29.283 billion, for combined net selling of NT$369.096 billion by the three major institutional groups. Ahead of its earnings call, TSMC fell NT$50, or 2.01%, to NT$2,440 on volume of 512,000 lots, with foreign investors selling 34,000 lots. UMC fell NT$8.5 to NT$133.5 with 39,000 lots of foreign selling; PSMC fell NT$4.8 to NT$66.2 and topped the foreign selling list at 90,000 lots; ASE Technology hit limit-down at NT$673. Packaging and test-interface stocks were the hardest hit, with MPI, WinWay, CHPT and ChipMOS all limit-down.",
+      "metric": "TAIEX 46,969.87 (-1,655.96, -3.41%); turnover NT$1.435755T; foreign net selling NT$302.555B (record); three institutional groups net selling NT$369.096B; TSMC NT$2,440 (-50); UMC NT$133.5 (-8.5); PSMC NT$66.2 (-4.8); ASE NT$673 (limit-down)",
+      "impact": "TSMC's earnings call came after the close, yet foreign investors sold a record amount just before the results, driven by macro factors (inflation and rate hikes) and AI financing credit risk rather than foundry fundamentals. UMC (-5.99%) and PSMC (-6.76%) fell more than TSMC (-2.01%) and ASE hit limit-down, showing second-tier foundries and packaging houses carry a bigger liquidity discount when money leaves. This clearly diverges from the fundamentals of mature-node price hikes in item 10 and the back-end shortage in item 14, the biggest contradiction this period.",
+      "conf": "Confirmed (index and stock closes checked against TWSE FMTQIK/STOCK_DAY data: 48,625.83 - 1,655.96 = 46,969.87; TSMC 2,490 - 50 = 2,440; UMC 142 - 8.5 = 133.5; PSMC 71 - 4.8 = 66.2; ASE 747 - 74 = 673; institutional flows from TWSE BFI82U, while Anue reported investment trust buying of NT$28.304 billion and combined selling of NT$370.076 billion on a slightly different basis; turnover from FMTQIK, versus NT$1.32 trillion per Anue)",
+      "vocab": [
+        ["limit-down", "跌停", "fin"],
+        ["rate hikes", "升息"],
+        ["credit risk", "信用風險"],
+        ["selling streak", "連續賣超"],
+        ["proprietary dealers", "自營商", "fin"],
+        ["investment trusts", "投信", "fin"],
+        ["liquidity discount", "流動性折價"],
+        ["moving average", "移動平均線", "fin"]
+      ]
+    },
+    "16": {
+      "entity": "Intel / Apple / NVIDIA / Microsoft / Google / Broadcom / AMD",
+      "title": "KeyBanc says Intel Foundry has won orders from six major companies including Broadcom, Google, Apple, AMD, Microsoft and Nvidia, with Apple's multi-generation A- and M-series chips on 14A totaling about 600,000 wafers; EMIB-T substrate yields remain a bottleneck",
+      "summary": "Wccftech reported on October 15 the findings of KeyBanc analysts after an Asia trip: Intel Foundry has secured projects including Broadcom network switch chips, server CPUs for Google and Microsoft, compute tiles for AMD client processors and Nvidia gaming GPUs. Apple has signed a contract covering multiple generations of A-series and M-series chips on 14A, not 18A-P as previously rumored, involving about 600,000 wafers and a potential revenue opportunity of US$15 billion to US$20 billion, with no time frame given. Amazon AWS, Anthropic and Terafab are still evaluating 18A-P and 14A, with most leaning toward 14A; in a scenario estimate, Anthropic's custom ASIC could reach 5 million to 10 million units and, including packaging, US$40 billion to US$80 billion in revenue. In advanced packaging, Google's TPU v9 and v10 could bring US$12 billion to US$15 billion to EMIB-T. But EMIB-T substrate yields average about 50-60% at Ibiden and 20-30% at Unimicron, which could cap the Google project at about 5 million to 6 million units.",
+      "metric": "Six major customers reportedly won; Apple 14A ~600K wafers, US$15B-20B; Anthropic ASIC scenario US$40B-80B; Google TPU EMIB-T US$12B-15B; EMIB-T substrate yields Ibiden 50-60% / Unimicron 20-30%",
+      "impact": "If true, this is the most complete customer list since Intel began its foundry turnaround, and it is concentrated on 14A, meaning Intel's foundry revenue will not arrive in volume until after 2028. TSMC said in item 13 that more customers are engaging on A14 than on 2nm, so the two companies' angstrom-class nodes will compete head-on in 2028. In the near term, advanced packaging is more practical: EMIB-T is the main alternative to TSMC's CoWoS, but substrate yields limit its ramp, which is the backdrop to C.C. Wei's hint in item 14 that TSMC is willing to serve as a backup.",
+      "conf": "Unconfirmed (secondhand account of an analyst survey; customer names, contract scope and amounts have not been confirmed by any company; revenue opportunities are scenario estimates with no recognition period given; substrate yields are analyst survey data)",
+      "vocab": [
+        ["revenue opportunity", "營收機會"],
+        ["scenario estimate", "情境估算"],
+        ["secured", "取得（訂單）"],
+        ["turnaround", "轉型；轉虧為盈的重整"],
+        ["cap", "限制上限"],
+        ["head-on", "正面（交鋒）"],
+        ["recognition period", "（營收）認列期間"],
+        ["time frame", "期間；時程"]
+      ]
+    },
+    "17": {
+      "entity": "Samsung Electronics / UMC (2303) / GlobalFoundries / Novatek",
+      "title": "Korean media: with mature-node capacity tight, Samsung is considering adding GlobalFoundries as a second foundry for Galaxy OLED display driver ICs, ending UMC's exclusivity as early as late 2027; TrendForce says some 12-inch mature nodes rose 5-10% from Q2 to Q3",
+      "summary": "Citing industry sources, Korea's ZDNet reported that Samsung Electronics is considering adding GlobalFoundries as a second foundry partner for the OLED display driver ICs (DDIs) in its Galaxy smartphones, potentially ending UMC's exclusive role. GF-made DDIs could appear in Galaxy phones as early as late 2027, starting with some lower- and mid-range Galaxy A models, and Samsung is evaluating GF's 22nm and 28nm nodes in Singapore and Germany. The trigger was stronger-than-expected demand for the Galaxy Z Fold8 after its July launch: Samsung asked UMC to expedite DDI production, but UMC's 22nm DDI capacity was already full, so Samsung cut its September component production plan by 10% and pushed the volume to October. Economic Daily News cited institutional investors as expecting UMC's 12-inch utilization to reach 93% by the end of 2026, driven by 22/28nm DDI orders from Samsung System LSI and Novatek and Apple Mac-related chips on 55/65nm. TrendForce says foundries are shifting mature-node capacity toward PMICs, power devices, interposers and optical communication components while trimming DDIs and CMOS image sensors; some capacity-constrained 12-inch mature nodes saw price increases of 5-10% between the second and third quarters of 2026, with broader hikes expected in 2027.",
+      "metric": "GF DDIs as early as late 2027; Z Fold8 September component output cut 10%; UMC 12-inch utilization ~93% by end-2026 (est.); some 12-inch mature nodes +5-10% from 2Q to 3Q26",
+      "impact": "The scramble for mature-node capacity has moved beyond pricing to customers diversifying suppliers: Samsung's willingness to bring in a second source shows UMC holds bargaining chips, consistent with the 2027 price-hike estimates for UMC in item 10. For GF, DDIs are a low-margin product but could fill 22/28nm capacity in Singapore. For UMC, the near-term risk of losing some Samsung orders is limited because its capacity is already full, but customer diversification by a major client is worth watching over the long run.",
+      "conf": "Unconfirmed (Korean media citing industry sources; Samsung, UMC and GF have not confirmed; utilization is an institutional estimate; price increases are TrendForce observations)",
+      "vocab": [
+        ["exclusivity", "獨家地位"],
+        ["second source", "第二供應來源"],
+        ["expedite", "加速（生產）"],
+        ["low-margin", "低毛利的"],
+        ["bargaining chips", "議價籌碼"],
+        ["capacity-constrained", "產能受限的"],
+        ["diversifying suppliers", "分散供應商"]
+      ]
+    },
+    "18": {
+      "entity": "TSMC ADR (TSM) / UMC ADR (UMC) / Philadelphia Semiconductor Index / ASML",
+      "title": "US stocks: hotter CPI and CoreWeave bond yields near 15% knock the SOX down 4.30% to 11,684.38 on Oct 14 as TSMC's ADR falls 3.40%; after TSMC's earnings on Oct 15 its ADR drops another 1.8% and the SOX slips 0.88%",
+      "summary": "On October 14, US September CPI rose 3.7% year on year, up from 3.4% in August and above the 3.6% expected, and core CPI rose 2.6%, also above forecasts. Yields on two CoreWeave bonds approached 15% and its shares plunged more than 15%, spreading worries about AI financing. The Philadelphia Semiconductor Index fell 524.41 points, or 4.30%, to 11,684.38. TSMC's ADR dropped 3.40%, UMC's ADR 4.42% and ASE's ADR 6.87%, while ASML fell about 3.9% and Applied Materials 3.79%. On October 15, US September PPI rose 6.3% year on year, the largest increase since 2022. The Dow gained 556.21 points, but the SOX fell another 103.17 points, or 0.88%, to 11,581.22. TSMC's ADR fell 1.8% after its earnings to close at about US$422, after touching an intraday low of US$407.21, while UMC's ADR lost 2.24% and ASE's ADR 5.50%. Anue said the SOX had fallen six sessions in a row, losing about 10% over that stretch.",
+      "metric": "SOX Oct 14 11,684.38 (-524.41, -4.30%); Oct 15 11,581.22 (-103.17, -0.88%); TSMC ADR -3.40% on Oct 14, -1.8% on Oct 15 (~US$422); UMC ADR -4.42% / -2.24%; US Sept CPI +3.7% YoY, PPI +6.3% YoY",
+      "impact": "TSMC's results and guidance beat expectations across the board (items 11 and 12), yet its ADR still fell, showing share prices are currently driven by interest rates and AI financing credit risk, and good fundamentals cannot offset a valuation reset. If 'neocloud' providers such as CoreWeave struggle to raise financing, it will eventually affect the GPU and ASIC demand that flows to TSMC, which is why the market is especially sensitive to TSMC's 'cautious' wording on 2027 in item 12.",
+      "conf": "Confirmed (Anue US market close reports; SOX check 11,684.38 - 103.17 = 11,581.21, a 0.01 rounding difference from the reported 11,581.22; Anue's two reports give TSMC's ADR close as US$422.25 and US$422.40, so this table uses about US$422)",
+      "vocab": [
+        ["bond yields", "債券殖利率"],
+        ["core CPI", "核心消費者物價指數"],
+        ["valuation reset", "估值修正"],
+        ["intraday low", "盤中低點"],
+        ["across the board", "全面地"],
+        ["raise financing", "籌資；取得融資"],
+        ["above forecasts", "高於預期"]
+      ]
+    },
+    "19": {
+      "entity": "UMC (2303) / Vanguard (5347)",
+      "title": "UMC's September revenue of NT$25.350 billion, up 27.2% year on year, narrowly beats its August 2022 monthly record; Q3 revenue of NT$74.239 billion rises about 8% and tops guidance; Vanguard's September sales rise 15.9% month on month to NT$5.904 billion",
+      "summary": "UMC reported September consolidated revenue of NT$25.350 billion on October 6, up 1.2% month on month and 27.2% year on year. It narrowly surpassed the NT$25.346 billion of August 2022 for a monthly record and marked a seventh straight month of growth. Third-quarter revenue was NT$74.239 billion, up about 8% sequentially and 25.5% year on year, the highest in nearly four years and above the top of guidance; revenue for the first nine months was NT$204.010 billion, up 16.1%. The main drivers were rising 22nm volumes and recovering 8-inch demand. Vanguard's September revenue was NT$5.904 billion, up 15.9% month on month and 15.5% year on year, bringing nine-month revenue to NT$42.479 billion, up 18%; its Singapore 12-inch joint venture with NXP (VSMC) has begun trial production and is expected to enter volume production in the first quarter of 2027. A foreign brokerage raised its target price for UMC from NT$108 to NT$145 and initiated Vanguard at 'outperform' with a target of NT$210.",
+      "metric": "UMC Sept NT$25.350B (+1.2% MoM, +27.2% YoY); 3Q26 NT$74.239B (~+8% QoQ); 9M NT$204.010B (+16.1%); Vanguard Sept NT$5.904B (+15.9% MoM); 9M NT$42.479B (+18%)",
+      "impact": "This provides the numbers behind the mature-node price hikes and tight capacity in items 10 and 17: UMC's revenue has already hit a record on higher utilization, but its 8-inch ASP is up only about 1% year on year in 4Q26, and the real impact of price increases will come in 2027. UMC closed at NT$133.5 on October 15 (item 15), below the new NT$145 foreign target price, showing the market remains reserved about mature-node pricing.",
+      "conf": "Background (UMC announced on Oct 6 and Vanguard on Oct 8, outside this period and covered in earlier issues; foreign target prices come from brokerage reports)",
+      "vocab": [
+        ["consolidated revenue", "合併營收", "fin"],
+        ["narrowly", "微幅地"],
+        ["target price", "目標價", "fin"],
+        ["outperform", "優於大盤"],
+        ["brokerage", "券商"],
+        ["reserved", "保留的；有所保留"],
+        ["joint venture", "合資企業", "fin"]
+      ]
+    },
+    "20": {
+      "entity": "TSMC (2330) / Arizona, USA",
+      "title": "In July TSMC announced an additional US$100 billion of investment in Arizona, lifting its total there to US$265 billion, and raised its full-year US dollar revenue growth forecast to slightly above 40%",
+      "summary": "In July, TSMC announced an additional US$100 billion of investment in Arizona, raising its total investment in the state to US$265 billion. At its earnings call that month, it raised its 2026 US dollar revenue growth forecast to slightly above 40%, after close to 30% in January and over 30% in April, and guided third-quarter revenue to US$44.6 billion to US$45.8 billion. At the time TSMC said advanced packaging remained severely undersupplied, welcomed more packaging solutions in the market, and did not expect equipment supply to constrain its expansion. This period's October 15 earnings call (items 11-14) is measured against that baseline.",
+      "metric": "Additional US$100B in Arizona, total US$265B; July forecast of full-year US dollar revenue growth 'slightly above 40%'; 3Q26 guidance US$44.6B-45.8B",
+      "impact": "Compared with this period: actual Q3 revenue of US$46.72 billion beat the top of July's guidance (item 11), full-year growth was raised again from slightly above 40% to 44% (item 12), and Arizona's second fab moved forward to 3Q27 (item 13). But July's view that equipment would not constrain expansion has been challenged by ASML's admission of shortages in 2027-28 (item 7), and this period TSMC acknowledged that tool supply is tight and that it is working with suppliers earlier.",
+      "conf": "Background (TSMC's July 2026 announcement and earnings call, outside this period; recapped from Anue's Oct 15 report)",
+      "vocab": [
+        ["undersupplied", "供不應求的"],
+        ["baseline", "比較基準"],
+        ["constrain", "限制"],
+        ["additional", "追加的"],
+        ["raised", "上修；調高"],
+        ["recapped", "回顧"]
+      ]
+    }
+  }
+}
