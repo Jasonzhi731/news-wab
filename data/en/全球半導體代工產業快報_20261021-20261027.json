@@ -1,0 +1,298 @@
+{
+  "source": "全球半導體代工產業快報_20261021-20261027.xlsx",
+  "news": {
+    "1": {
+      "entity": "NVIDIA / Ibiden / Samsung Electro-Mechanics (SEMCO) / Unimicron (3037) / Amkor / KYEC (2449) / SPIL / Tesla",
+      "title": "NVIDIA uses its Berlin GTC to lock up back-end capacity, targeting 2.5 times today's IC substrate capacity within three years, a more than 300% jump in Amkor interposer output and a 30-fold increase in SPIL's CPO optical engine capacity by end-2028; Korean media say Tesla is also putting up about KRW 1.1 trillion to secure SEMCO substrates",
+      "summary": "Ian Buck, NVIDIA's vice president of hyperscale and high-performance computing, unveiled a supply chain expansion plan at a pre-event briefing for GTC Berlin covering four areas: IC substrates, advanced packaging, testing and optical engines. Total IC substrate capacity is to reach 2.5 times current levels within three years. NVIDIA is making prepayments worth \"billions of dollars\" to Ibiden to triple capacity at one of its plants in Japan, with volumes ramping from the first quarter of 2028; SEMCO has formally joined the substrate supply chain; and Unimicron will expand under a capacity reservation agreement, adding capacity from the second quarter of 2027 and running at full capacity by mid-2028. With Amkor, NVIDIA aims to lift interposer wafer capacity by more than 300% by the end of 2028. Test capacity is set to double over 2026-2027, with KYEC receiving a US$1.1 billion prepayment for a new U.S. test facility slated for volume production in April 2027. SPIL's CPO optical engine capacity is to rise 15-fold by mid-2027 and double again by end-2028. In a TPCA Show speech reported on October 26, Unimicron Chairman Chien Shan-chieh warned that a shortfall in any one of materials, equipment or talent would stall the build-out. Separately, Korea's Maeil Business Newspaper reported that Tesla will contribute about KRW 1.1 trillion to SEMCO's FC-BGA substrate expansion at Sejong in exchange for five years of guaranteed supply from 2029 to 2033, while NVIDIA's commitment to SEMCO is believed to be worth about KRW 2.6 trillion.",
+      "metric": "IC substrates 2.5x in 3 years; Amkor interposers +300% (end-2028); SPIL CPO 15x → 30x; KYEC prepayment US$1.1B; Tesla → SEMCO ~KRW 1.1T (reported)",
+      "impact": "Last period Unimicron warned of a 20% shortfall in substrate materials and equipment lead times of more than 30 months (item 10 last period). This period NVIDIA answered by paying up front to reserve capacity, pushing the bottleneck debate beyond front-end wafers to substrates, interposers, testing and optical engines. Notably, interposer capacity goes to Amkor and CPO to SPIL, showing NVIDIA is deliberately cultivating a second back-end source outside TSMC's CoWoS. Read alongside reported CoWoS price hikes of 10-20% in item 15 and Google's commitment to EMIB-T in item 5, back-end capacity has become fresh bargaining leverage in foundry pricing.",
+      "conf": "Confirmed (capacity targets and prepayments officially announced by NVIDIA at GTC Berlin); Tesla's ~KRW 1.1 trillion and NVIDIA's ~KRW 2.6 trillion are Korean media reports citing industry sources and have not been confirmed by the companies",
+      "vocab": [
+        ["prepayments", "預付款"],
+        ["capacity reservation agreement", "產能預約協議"],
+        ["lock up", "鎖定；包下"],
+        ["bargaining leverage", "議價籌碼"],
+        ["guaranteed supply", "保證供貨"],
+        ["second back-end source", "第二後段供應來源"],
+        ["build-out", "擴建；建置"],
+        ["contribute", "出資；投入"]
+      ]
+    },
+    "2": {
+      "entity": "U.S. Trump administration / U.S. Department of Commerce / Sibelco / Vertical Semiconductor / TSMC (2330)",
+      "title": "Trump announces a US$1.5 billion Department of War investment to expand chip production in North Carolina as Lutnick says semiconductors being made \"all in Taiwan\" is too far away; on October 24 Commerce signs letters of intent for up to US$389 million in CHIPS Act power semiconductor grants with four companies",
+      "summary": "Speaking at a midterm campaign rally in Greenville, North Carolina, on October 20, President Trump said the Department of War will invest US$1.5 billion (about NT$48.6 billion) to expand semiconductor production in the state, with mineral company Sibelco building a large plant focused on quartz. Commerce Secretary Howard Lutnick said one of the president's fundamental goals is to bring chipmaking back to the U.S., that semiconductors are currently made \"all in Taiwan,\" which is \"too far\" for America, and that quartz is \"basically the foundation\" of semiconductors. On October 24, TechNews reported that the Commerce Department had signed letters of intent under the CHIPS and Science Act for R&D grants totaling up to US$389 million with four companies: up to US$175 million for fusion company Helion, up to US$85 million for Commonwealth Fusion Systems, up to US$73 million for vertical gallium nitride developer Vertical Semiconductor and up to US$56 million for Sibelco. As a condition of the grants, the government will take minority, non-controlling, non-voting equity stakes in each company; the awards have not been finalized.",
+      "metric": "Department of War US$1.5B (~NT$48.6B); CHIPS letters of intent up to US$389M (4 companies); Sibelco US$56M, Vertical Semiconductor US$73M",
+      "impact": "Last period Trump said the U.S. would soon hold 50% of global chip capacity, and Taiwan's economy ministry replied that 70-80% of TSMC's capacity would still be in Taiwan in 2035 (item 15 last period). This period Lutnick doubled down with \"Taiwan is too far,\" but the money actually committed is concentrated upstream in quartz materials and power devices, far smaller than the GlobalFoundries New York project (item 17). Government equity stakes attached to grants have become the norm, and how that shapes the terms of TSMC's U.S. expansion is worth watching.",
+      "conf": "Confirmed (public remarks by Trump and Lutnick; the Commerce letters of intent have not been finalized)",
+      "vocab": [
+        ["letters of intent", "意向書"],
+        ["equity stakes", "股權"],
+        ["non-voting", "無表決權的"],
+        ["finalized", "最終核定"],
+        ["grants", "補助款"],
+        ["doubled down", "加碼表態；更堅持"],
+        ["midterm", "期中（選舉）"]
+      ]
+    },
+    "3": {
+      "entity": "Lam Research (LRCX) / TSMC (2330) / Samsung Electronics / Intel / Micron",
+      "title": "Lam Research posts record September-quarter revenue of US$8.22 billion, up 54.4% year on year, but guidance of US$8.2-9.0 billion only modestly beats expectations; shares fall nearly 7% after hours and plunge 11.76% on October 22",
+      "summary": "After the U.S. close on October 21, Lam Research reported results for the first quarter of fiscal 2027, ended September 27. Revenue was a record US$8.22 billion, up 54.4% year on year and above the analyst estimate of US$8.13 billion. Adjusted EPS was US$2.20 versus estimates of US$2.19. Systems revenue rose about 62% to US$5.73 billion and customer support-related revenue rose about 40% to US$2.49 billion. Adjusted gross margin was 52.4% and operating margin 40.2%. For the next quarter, Lam guided revenue of US$8.2 billion to US$9.0 billion (midpoint US$8.6 billion) and adjusted EPS of US$2.18 to US$2.48. CEO Tim Archer said AI is driving semiconductor demand and chip complexity and that Lam expects to outgrow the overall wafer fab equipment market. Because the outlook did not clearly exceed expectations, the shares fell nearly 7% after hours and closed at US$230.15 on October 22, down 11.76% on the day.",
+      "metric": "Revenue US$8.22B (YoY +54.4%); EPS US$2.20; gross margin 52.4%; next-quarter guidance US$8.2-9.0B; Oct 22 close US$230.15 (-11.76%)",
+      "impact": "Revenue growth of more than 50% at a toolmaker confirms that expansion at TSMC, Samsung, Intel and Micron is actually being built. But the reaction that even a record was not enough reflects the same doubts about the sustainability of AI capex behind the SOX index's 6.72% one-day plunge in item 7. For foundries, strong equipment orders mean capacity will keep coming online in 2027, while equipment lead times stretching to six to eight months in item 15 show supply remains tight.",
+      "conf": "Confirmed (company results; the October 22 close was checked against Yahoo Finance)",
+      "vocab": [
+        ["fiscal", "會計年度的"],
+        ["analyst estimate", "分析師預估"],
+        ["midpoint", "中間值"],
+        ["after hours", "盤後"],
+        ["outgrow", "成長快於"],
+        ["sustainability", "可持續性"],
+        ["customer support-related revenue", "客戶支援相關營收"]
+      ]
+    },
+    "4": {
+      "entity": "Intel Foundry / SK hynix",
+      "title": "Intel starts installing production tools at Arizona's Fab 62 with operations targeted for 2028 and sets the first major truss at Ohio One, but the two Ohio fabs have slipped to 2030 and 2031",
+      "summary": "Intel announced on Wednesday, October 21 (U.S. time), that it has begun installing production equipment at Fab 62 on its Ocotillo campus in Arizona, next to Fab 52, which already produces 18A chips. Fab 62 can support 18A, 18A-P or 14A, but Intel has not said which process it will run. TrendForce put mass production at late 2028, while TechNews cited Intel's earlier statement that operations would start in early 2028. At New Albany, Ohio, crews installed the first major roof truss for the first fab. Originally slated to start production in 2025, the first Ohio fab is now expected to be completed in 2030 and the second in 2031, at least five years behind the original plan. TechNews noted that since taking over, CEO Lip-Bu Tan has insisted that major construction be backed by sufficient orders; related spending is about US$20 billion in 2026 and will rise in 2027. CNBC reported that Intel may lease part of the Ohio site to SK hynix for memory production, which neither company has confirmed.",
+      "metric": "Fab 62 tool install begins, operations in 2028; Ohio fab 1 in 2030, fab 2 in 2031; 2026 spending ~US$20B",
+      "impact": "Last period Lip-Bu Tan said catching up with TSMC would take years (item 5 last period). This period the Fab 62 tool install shows Intel's expansion pace picking up, but a five-year delay in Ohio and talk of leasing space to a memory maker show Intel Foundry still relies mainly on internal demand and a handful of external customers. With Google waiting on EMIB-T yields in item 5 and NVIDIA turning to Amkor for back-end capacity in item 1, Intel's opportunity lies more in advanced packaging than in front-end wafers.",
+      "conf": "Confirmed (Intel announcement on October 21); the two outlets differ on Fab 62's start date (early vs. late 2028), and the SK hynix lease is a CNBC report that has not been confirmed",
+      "vocab": [
+        ["slipped", "延後（slip 過去式）"],
+        ["backed by", "以…為後盾"],
+        ["lease", "出租；租用"],
+        ["behind the original plan", "落後原訂計畫"],
+        ["related spending", "相關支出"],
+        ["picking up", "回升；加快"],
+        ["handful", "少數"]
+      ]
+    },
+    "5": {
+      "entity": "Google / Intel Foundry / MediaTek (2454) / Broadcom / TSMC (2330) / Unimicron (3037) / Ibiden / Shinko",
+      "title": "Intel's EMIB-T substrate yields reportedly sat at only about 35% in the third quarter, below a 50% year-end target, yet Google's MediaTek-designed TPU v9 \"HumuFish\" remains fully committed to EMIB-T as its first-half 2028 production schedule tightens",
+      "summary": "Citing industry sources and reports from CommonWealth Magazine and the Commercial Times, TrendForce said Google's TPU v9 comes in three versions. Broadcom-designed WhaleFish uses TSMC's CoWoS-L and enters mass production in the second half of 2027; MediaTek-designed HumuFish uses only Intel's EMIB-T and goes into mass production in the first half of 2028; and TriggerFish also uses EMIB-T, slated for the second half of 2028 or later. EMIB-T substrate yields were about 35% in the third quarter of 2026, short of a 50% year-end target, due to mismatched thermal expansion between ABF substrates and the embedded silicon bridges and to air bubbles trapped by non-conductive film during bonding. Ibiden, Unimicron and Shinko are working to improve yields, and Intel has adjusted its substrate electroplating process. The tape-out of Google's own Compute Die A, built on TSMC's N2, has slipped to late October, and if the MediaTek-involved HumuFish tape-out slips to January 2027, shipments could be pushed to the first quarter of 2028. Supply chain checks say HumuFish remains \"100%\" committed to EMIB-T and would switch to CoWoS-L only if the problems persist.",
+      "metric": "EMIB-T substrate yield ~35% (3Q26) vs 50% year-end target; HumuFish mass production 1H28; Compute Die A on TSMC N2",
+      "impact": "EMIB-T is one of the few Intel Foundry businesses with a major customer actually on board, so a yield bottleneck directly affects the timing of Intel Foundry's external revenue. But the front-end compute die is still on TSMC's N2, showing customers are diversifying packaging, not wafers. If HumuFish moves back to CoWoS-L, TSMC's back-end capacity would get even tighter, a point to read alongside the reported 10-20% CoWoS price hikes in item 15.",
+      "conf": "Unconfirmed (industry sources and media reports; Google, Intel and MediaTek have not confirmed the yields or schedules)",
+      "vocab": [
+        ["yields", "良率"],
+        ["tape-out", "投片；設計定案"],
+        ["external revenue", "外部營收"],
+        ["diversifying", "分散"],
+        ["year-end target", "年底目標"],
+        ["supply chain checks", "供應鏈調查"],
+        ["committed to", "致力於；確定採用"]
+      ]
+    },
+    "6": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / ASE Technology (3711) / Global Communication Semiconductors (2455) / TAIEX",
+      "title": "Taiwan stocks rise as much as 444 points on October 22 before reversing to close at the day's low, down 846.34 points at 46,041.43, as an approaching typhoon and the October 26 Retrocession Day holiday bring a four-day market closure; foreign investors sell NT$81.582 billion, including 12,700 lots of TSMC",
+      "summary": "Led by TSMC and MediaTek, the TAIEX rose as much as 444.41 points in early trading on October 22, but selling picked up after the Central Weather Administration issued a land warning for an approaching typhoon at 11:30. The index closed down 846.34 points, or 1.81%, at 46,041.43, finishing at its intraday low and below its quarterly moving average after an intraday swing of 1,290.75 points. TSMC fell NT$35 to NT$2,385, UMC fell NT$2.5 to NT$125.5, ASE Technology fell NT$30 to NT$654 and GCS fell NT$23.5 to NT$467, while PSMC bucked the trend, rising NT$0.2 to NT$66.4. Exchange data showed foreign investors were net sellers of NT$81.582 billion, investment trusts net buyers of NT$9.492 billion and proprietary dealers net sellers of NT$27.378 billion, for combined net selling of NT$99.467 billion by the three major institutional groups. Foreign investors sold 12,695 lots of TSMC and 6,254 lots of UMC; investment trusts also sold 8,806 lots of UMC and bought 1,618 lots of PSMC. Foreign investors' net short position in TAIEX futures rose to 87,297 contracts. Taipei declared October 23 a day off and all financial markets closed; with October 26 a make-up holiday for Retrocession Day, trading did not resume until October 27. For the week from October 16's close of 47,111.26, the index fell 1,069.83 points, or 2.27%.",
+      "metric": "TAIEX 46,041.43 (-846.34); foreign investors -NT$81.582B; TSMC NT$2,385 (-35); closed Oct 23 for typhoon, Oct 26 make-up holiday",
+      "impact": "Last period foreign investors bought back a modest NT$960 million on October 21 after 10 straight days of selling (item 17 last period); this period they immediately sold more than NT$80 billion again, with pre-holiday hedging concentrated in TSMC and UMC. During the closure, U.S. markets swung from a 6.72% one-day drop in the SOX (item 7) to a 2.82% gain (item 14), moves the October 22 close has yet to reflect. Investment trusts buying PSMC against the trend fits with PSMC's plan for 10-20% price hikes in 2027 in item 16.",
+      "conf": "Confirmed (checked against TWSE FMTQIK/STOCK_DAY/BFI82U/T86: 46,887.77 - 846.34 = 46,041.43; TSMC 2,420 - 35 = 2,385)",
+      "vocab": [
+        ["reversing", "反轉（reverse 進行式）"],
+        ["intraday swing", "盤中振幅"],
+        ["net short position", "淨空單部位"],
+        ["make-up holiday", "補假"],
+        ["hedging", "避險"],
+        ["lots", "張（股票交易單位）"],
+        ["institutional groups", "法人"],
+        ["contracts", "口（期貨契約）"]
+      ]
+    },
+    "7": {
+      "entity": "Philadelphia Semiconductor Index / TSMC ADR (TSM) / UMC ADR (UMC) / ASE ADR (ASX) / GlobalFoundries (GFS) / Intel / Meta",
+      "title": "Meta's results reignite fears over AI spending on October 22, sending the SOX index down 6.72% to 10,731.98, with TSMC's ADR down 4.52%, UMC's ADR down 6.51% and GlobalFoundries down 9.08%; the SOX rebounds just 0.44% on October 23",
+      "summary": "Meta's third-quarter revenue beat expectations, but its free cash flow turned negative for the first time since its IPO and it raised the midpoint of its full-year capex forecast. Its shares fell about 7% and its five-year CDS spread hit a record high, reviving worries about returns on huge AI investments. Tensions in the Middle East pushed oil to a five-month high, sending money into the safety of Treasuries. On October 22 the Nasdaq fell 2.60% and the Philadelphia Semiconductor Index dropped 773.58 points, or 6.72%, to 10,731.98. TSMC's ADR fell US$19.54, or 4.52%, to US$412.35; UMC's ADR fell 6.51% and ASE's ADR 11.01%; Micron dropped 6.26%, AMD 8.10% and NVIDIA 4.40%; GlobalFoundries fell 9.08% to US$43.37 and Intel 8.04% to US$85.49. On October 23 the SOX edged up 0.44% to 10,779.46 and TSMC's ADR recovered 1.49% to US$418.51.",
+      "metric": "SOX 10,731.98 (-6.72%); TSMC ADR US$412.35 (-4.52%); UMC ADR -6.51%; ASE ADR -11.01%; GlobalFoundries -9.08%; Oct 23 SOX +0.44%",
+      "impact": "Last period the SOX snapped an eight-day losing run on October 19 (item 3 last period); this period it plunged nearly 7% in a day on Meta's negative cash flow, a sign the market's patience with AI capex is wearing thin. Notably, the further a stock sits from AI accelerators and the more its valuation depends on expansion, the steeper the fall: TSMC's ADR fell 4.52%, while packaging and mature-node names ASE, UMC and GlobalFoundries all fell harder, the same logic behind Lam Research's 11.76% plunge in item 3.",
+      "conf": "Confirmed (closing data cross-checked between Anue and Yahoo Finance: 11,505.56 - 773.58 = 10,731.98)",
+      "vocab": [
+        ["free cash flow", "自由現金流"],
+        ["CDS spread", "信用違約交換利差"],
+        ["reignite", "重新點燃"],
+        ["safety of Treasuries", "美債避險"],
+        ["wearing thin", "（耐心）逐漸耗盡"],
+        ["edged up", "小幅上漲"],
+        ["steeper", "更陡的；更大的"]
+      ]
+    },
+    "8": {
+      "entity": "TSMC (2330) / China's rare earth export controls",
+      "title": "Reuters exclusive: TSMC has asked suppliers about switching to rare-earth-free motors in factory automation equipment to reduce the risk that China's rare earth export controls disrupt advanced chip production, though talks are at an early stage",
+      "summary": "Citing three people familiar with the matter, Reuters reported that TSMC is seeking alternatives to rare earth components in its factory equipment, asking suppliers whether rare-earth-free motors are feasible in factory automation systems. Rare earth magnets are commonly used in motors that drive the moving parts of industrial equipment, including the machinery in highly automated fabs like TSMC's. One person said the move reflects concern that China could disrupt supplies, while two said discussions are still at an early stage and have not led to large-scale adoption of rare-earth-free equipment. Since last year, China has placed some rare earth materials, magnets and processing technologies under export controls that require licenses. TSMC did not immediately respond to a request for comment.",
+      "metric": "Three people familiar with the matter; early-stage talks, no large-scale adoption yet",
+      "impact": "Last period Unimicron warned that materials and equipment lead times are bottlenecks to expansion (item 10 last period); this period the risk reaches further upstream to the rare earth magnets in fab automation equipment. TSMC's leading-edge and advanced packaging fabs rely heavily on overhead hoists and handling systems, so even a precautionary review means toolmakers must offer China-free replacement parts, which could raise equipment costs and lead times, as item 15 shows lead times have already stretched to six to eight months.",
+      "conf": "Unconfirmed (Reuters citing people familiar with the matter; TSMC did not respond)",
+      "vocab": [
+        ["export controls", "出口管制"],
+        ["licenses", "許可證"],
+        ["feasible", "可行的"],
+        ["precautionary", "預防性的"],
+        ["large-scale adoption", "大規模導入"],
+        ["request for comment", "置評請求"],
+        ["replacement parts", "替代零件"]
+      ]
+    },
+    "9": {
+      "entity": "UMC (2303) / AP Memory (6531)",
+      "title": "UMC and AP Memory team up on power solutions for AI and HPC: AP Memory's S-SiCap Gen2D silicon capacitor and custom products built on UMC's deep trench capacitor (DTC) process have completed tape-out and initial verification, with system-level testing of substrate capacitors next",
+      "summary": "UMC and AP Memory announced a technology and manufacturing partnership in which UMC provides deep trench capacitor (DTC) process technology and scalable wafer manufacturing capacity, while AP Memory contributes silicon capacitor design and system-level integration. AP Memory's S-SiCap Gen2D discrete silicon capacitor completed tape-out and initial functional verification in the third quarter of 2026, and custom S-SiCap products using DTC technology have also completed tape-out and initial wafer verification. The next phase will put capacitors embedded in package substrates through full system-level performance and reliability testing, supporting different capacitance values and operating voltages, and the two are exploring expansion into capacitors embedded in silicon interposers and on the underside of substrates. A UMC senior vice president said the roadmap spans discrete and embedded silicon capacitors and extends to active devices such as integrated voltage regulators, and that UMC will keep investing to expand capacity. The companies did not disclose process nodes, mass production timing or customers.",
+      "metric": "S-SiCap Gen2D tape-out and initial verification in 3Q26; custom DTC products taped out",
+      "impact": "AI accelerators can draw thousands of amperes (Unimicron's Chien Shan-chieh, item 1), making silicon capacitors a new entry point into the AI back end for mature-node foundries. UMC has already moved into advanced packaging with interposers and 3D stacking, and now adds power-delivery components. Alongside PSMC's IPD and wafer-stacking orders extending into 2028 in background item 16, Taiwan's mature-node fabs are turning AI demand into specialty-process products rather than relying on price hikes alone.",
+      "conf": "Confirmed (joint statement by UMC and AP Memory quoting executives from both companies; no mass production timing or customers disclosed)",
+      "vocab": [
+        ["scalable", "可擴充的"],
+        ["roadmap", "藍圖；路線圖"],
+        ["entry point", "切入點"],
+        ["specialty-process", "特殊製程的"],
+        ["verification", "驗證"],
+        ["power-delivery", "供電"],
+        ["team up", "合作；聯手"]
+      ]
+    },
+    "10": {
+      "entity": "NVIDIA / CXMT / SK hynix / Samsung Electronics / Micron",
+      "title": "Jensen Huang tells reporters at GTC Berlin that a memory glut before 2029 is quite unlikely, that HBM will be widely used for years and that he is \"open\" to working with CXMT; capital and infrastructure, not demand, are what limit AI growth",
+      "summary": "In an interview at NVIDIA GTC in Berlin, Jensen Huang said the likelihood of a memory oversupply before 2029 is quite low, responding to concerns that the memory supercycle could end in 2029. HBM will remain widely adopted for years to come, he said, adding that NVIDIA was the first company to bring smartphone LPDDR into the data center, roughly doubling energy efficiency, and will continue to use it heavily. Asked about potentially working with CXMT, he said he is \"open\" to it, noting that companies worldwide work with Chinese firms at certain stages of the supply chain. He also said neocloud demand is \"off the charts\" and that the main constraint on AI growth is a shortage of working capital and infrastructure, not a lack of demand.",
+      "metric": "Memory glut before 2029: unlikely; LPDDR roughly doubles energy efficiency",
+      "impact": "A prolonged memory shortage directly supports memory foundry work and niche DRAM pricing at PSMC (background item 16), and keeps HBM base dies absorbing logic capacity at TSMC and Samsung (item 16 last period, Samsung shifting 4nm to HBM base dies). But his point that the limit is capital echoes the market's worry over Meta's negative cash flow in item 7: whether demand turns into orders depends on cloud providers' ability to raise funds. His openness to CXMT could also feed into the U.S. export control debate.",
+      "conf": "Confirmed (Jensen Huang's interview remarks, which are personal views and forecasts)",
+      "vocab": [
+        ["oversupply", "供過於求"],
+        ["glut", "過剩"],
+        ["working capital", "營運資金"],
+        ["raise funds", "籌資"],
+        ["off the charts", "超乎想像；破表"],
+        ["niche", "利基的"],
+        ["energy efficiency", "能源效率"]
+      ]
+    },
+    "11": {
+      "entity": "Samsung Foundry / Tesla",
+      "title": "Korean media: Samsung places additional 2nm equipment orders for Taylor Fab 1 in Texas, adding 6,000 wafers of monthly capacity toward a goal of 20,000 wafers a month in the second half of 2027; construction of Taylor Fab 2 reportedly begins in early November",
+      "summary": "According to Korea's ZDNet, as relayed by Sammy Fans and others, Samsung recently ordered new equipment for Taylor Fab 1 that will add 6,000 wafers per month of 2nm capacity, with the aim of reaching 20,000 wafers a month by the second half of 2027 and shipment volumes rising as early as that period. Tesla is named as a major customer for the site, and Samsung needs reliable local 2nm output to compete with TSMC and Intel for high-end AI chip orders. Commercial yields at Taylor Fab 1 have not been disclosed; another outlet said Samsung's first-generation 2nm yield recently approached 60% but did not tie that figure to Taylor. Other reports say construction of Taylor Fab 2 will begin in early November, targeting 2nm production by 2030. Samsung has not confirmed the orders or capacity targets.",
+      "metric": "Additional 2nm capacity of 6,000 wafers/month; target 20,000 wafers/month (2H27); Fab 2 construction from early November (reported)",
+      "impact": "Last period Samsung began SF2P wafer starts for the Exynos 2700 and ran 4nm near full capacity (item 16 last period); this period it shifts the focus of its 2nm expansion to the U.S., chasing Tesla orders and U.S. localization demand before Musk's Terafab takes shape. Even 20,000 wafers a month is far below media estimates of about 120,000 wafers a month of TSMC 2nm capacity at the end of 2026, and Samsung's constraint is yield, not equipment.",
+      "conf": "Unconfirmed (Korean media citing industry sources; Samsung has not confirmed; Taylor fab yields not disclosed)",
+      "vocab": [
+        ["commercial yields", "商用良率"],
+        ["shipment volumes", "出貨量"],
+        ["takes shape", "成形"],
+        ["relayed", "轉述（relay 過去分詞）"],
+        ["reliable", "可靠的"],
+        ["high-end", "高階的"],
+        ["targets", "目標"]
+      ]
+    },
+    "12": {
+      "entity": "SMIC (0981.HK) / Hua Hong Semiconductor (1347.HK) / Nexchip (688249)",
+      "title": "Chinese foundry stocks weaken in step with the U.S. AI sell-off: Hua Hong plunges 9.46% in Hong Kong on October 22 and falls more than 7% intraday on October 26 before closing down 4.74%, SMIC slips another 2.42% to HK$45.92 and Nexchip's A shares fall 4.60%",
+      "summary": "Yahoo Finance closing data show SMIC's Hong Kong shares fell 6.24% to HK$46.84 on October 22, edged up 0.47% to HK$47.06 on October 23 and dropped another 2.42% to HK$45.92 on October 26, about 15% below the HK$54.30 close on October 14. Hua Hong Semiconductor fell 9.46% to HK$66.55 on October 22 and closed at HK$64.25 on October 26, down 4.74%. TechFlow reported that Hua Hong fell more than 7% intraday on October 26, ASMPT dropped more than 6%, and Biren, Iluvatar CoreX and GigaDevice each lost more than 5%, as most Hong Kong-listed chip stocks declined with no clear negative catalyst. Nexchip's A shares fell 4.60% to RMB26.74 on October 26.",
+      "metric": "SMIC HK$45.92 (Oct 26, -2.42%); Hua Hong HK$64.25 (Oct 26, -4.74%; Oct 22 -9.46%); Nexchip RMB26.74 (-4.60%)",
+      "impact": "Last period TrendForce said SMIC and Hua Hong had raised prices on some processes by about 10% and kept adding capacity, a broadly positive backdrop. This period, however, their shares fell sharply alongside U.S. AI stocks (item 7) and kept sliding in Hong Kong even as U.S. markets rebounded on October 26, suggesting investors are worried both about AI capex and about pricing pressure once China's new capacity comes online. SMIC's third-quarter results, due in November, will show whether the price increases are feeding through to margins.",
+      "conf": "Confirmed (closing prices from Yahoo Finance, checked against the prior close: 47.06 × (1 - 2.42%) ≈ 45.92); media gave no reason for the decline",
+      "vocab": [
+        ["in step with", "與…同步"],
+        ["sell-off", "拋售"],
+        ["catalyst", "催化劑；觸發因素"],
+        ["A shares", "A 股"],
+        ["feeding through to margins", "反映到利潤率"],
+        ["pricing pressure", "價格壓力"],
+        ["kept sliding", "持續下滑"]
+      ]
+    },
+    "13": {
+      "entity": "GlobalFoundries (GFS) / Siemens",
+      "title": "GlobalFoundries and Siemens open an advanced facilities control centre in Singapore, merging the control centres of five fabs on the campus in its first phase; full global deployment will tie together more than 1 million critical facilities data points",
+      "summary": "GlobalFoundries announced the opening of an Advanced Facilities Control Centre at its Singapore site, developed with Siemens. The first phase consolidates the five fab-specific control centres on the Singapore campus into a single command centre. Once deployed across GF's global manufacturing network, the system will draw on more than 1 million critical data points from facilities equipment, providing 24/7 equipment health monitoring to reduce unplanned downtime. Autonomous robots equipped with thermal imaging, gas detection and vibration acoustics patrol the fab floor and campus and send real-time data to the centre.",
+      "metric": "Consolidates 5 fab control centres; >1 million critical data points; 24/7 equipment health monitoring",
+      "impact": "As GlobalFoundries expands in New York (background item 17), it is using automation and data integration in Singapore to raise output from existing capacity. Set against TSMC's review of rare-earth-free automation equipment in item 8, factory automation is both a source of efficiency and a new supply chain risk. In a cycle where mature-node utilization is recovering, cutting unplanned downtime effectively adds output.",
+      "conf": "Confirmed (GlobalFoundries press release; the web page is dated October 25 while the dateline reads October 26)",
+      "vocab": [
+        ["unplanned downtime", "非計畫停機"],
+        ["consolidates", "整合（consolidate 第三人稱）"],
+        ["deployment", "部署"],
+        ["command centre", "指揮中心"],
+        ["effectively", "實際上；等於"],
+        ["existing capacity", "既有產能"],
+        ["recovering", "回升（recover 進行式）"]
+      ]
+    },
+    "14": {
+      "entity": "Philadelphia Semiconductor Index / TSMC ADR (TSM) / UMC ADR (UMC) / NVIDIA / Micron / Anthropic",
+      "title": "AI stocks recover on October 26 after Anthropic files for an IPO, lifting the SOX 2.82% to 11,083.47; TSMC's ADR rises 1.40% to US$424.37 and UMC's ADR 1.54%, as Taiwan stocks resume trading on October 27",
+      "summary": "AI start-up Anthropic publicly filed for an IPO, planning to list on the Nasdaq under the ticker \"ANT,\" and international oil prices eased, sending all four major U.S. indexes higher on October 26. The Dow rose 146.42 points to 52,361.58, the S&P 500 gained 0.70% and the Nasdaq 0.83%, while the Philadelphia Semiconductor Index jumped 304.01 points, or 2.82%, to 11,083.47. TSMC's ADR rose 1.40% to US$424.37 and UMC's ADR 1.54% to US$19.18; NVIDIA gained 2.39%, AMD 2.80% and Micron 2.98%, and GlobalFoundries rose 1.37% to US$45.00. Taiwan's market resumed trading on October 27 after the October 23 typhoon closure and the October 26 Retrocession Day make-up holiday; it had not yet closed when this report was produced on the morning of October 27.",
+      "metric": "SOX 11,083.47 (+2.82%); TSMC ADR US$424.37 (+1.40%); UMC ADR US$19.18 (+1.54%)",
+      "impact": "The SOX has recovered about 3.3% in two sessions from its October 22 low but remains below the 11,505.56 close of October 21, while TSMC's ADR at US$424.37 is nearly back to its pre-selloff US$431.89, so the recovery clearly favors the leading-edge leader. Taiwan stocks must price in four days of U.S. swings at once on October 27; watch whether foreign investors continue the net selling seen in item 6.",
+      "conf": "Confirmed (closing data cross-checked: 10,779.46 + 304.01 = 11,083.47; 418.51 × 1.014 ≈ 424.37)",
+      "vocab": [
+        ["filed for an IPO", "提交首次公開發行申請"],
+        ["ticker", "股票代碼"],
+        ["eased", "回落（ease 過去式）"],
+        ["resumed trading", "恢復交易"],
+        ["price in", "反映（於股價）"],
+        ["sessions", "交易日"],
+        ["recover", "回升"]
+      ]
+    },
+    "15": {
+      "entity": "TSMC (2330) / NVIDIA",
+      "title": "Commercial Times: with AI chips getting larger and back-end capacity tight, TSMC is weighing a new round of CoWoS price increases of up to 20%; analysts see CoWoS monthly capacity topping 130,000 wafers in 2026 and targeting 200,000 in 2027, while tool lead times stretch to six to eight months",
+      "summary": "Citing supply chain sources, the Commercial Times reported that TSMC is preparing a new round of CoWoS price hikes, with chip companies estimating increases of 10% to 20% because larger chip sizes reduce tool throughput per hour and raise pressure on packaging and test capacity. Analysts estimate CoWoS monthly capacity will move past 130,000 wafers in 2026 and target 200,000 in 2027, with capacity coming from AP7 in Chiayi in phases, AP8 phase 2 in Tainan, where tools are being installed, and SoIC expansion at AP6; the AP1 advanced packaging plant in the U.S. is expected to start production in 2028. Equipment suppliers said TSMC did not renegotiate prices or request extra features in this year's annual tool procurement, buying at list price, as lead times lengthened from three to six months to six to eight months. \"Customers no longer have time to haggle; as long as you can commit to a delivery date, they place the order.\"",
+      "metric": "CoWoS prices +10-20% (reported); monthly capacity >130,000 wafers in 2026 → 200,000 in 2027; tool lead times 6-8 months",
+      "impact": "Last period J.P. Morgan expected TSMC to raise wafer prices in the first half of 2027 (item 20 last period); this period the price-hike signal extends to advanced packaging. Together with NVIDIA spreading interposer and CPO capacity to Amkor and SPIL in item 1 and Google's commitment to EMIB-T in item 5, customers are accepting price hikes while cultivating second sources. Toolmakers' \"no discounts, just delivery dates\" stance also corroborates Lam Research's record revenue in item 3.",
+      "conf": "Unconfirmed (supply chain and chip industry sources; TSMC has not confirmed any price change; capacity figures are analyst estimates)",
+      "vocab": [
+        ["price hikes", "漲價", "fin"],
+        ["throughput", "產出量；產能"],
+        ["renegotiate", "重新議價"],
+        ["haggle", "討價還價"],
+        ["second sources", "第二供應來源"],
+        ["procurement", "採購", "fin"],
+        ["list price", "定價；原價"],
+        ["analysts", "分析師", "fin"]
+      ]
+    },
+    "16": {
+      "entity": "PSMC (6770) / Micron",
+      "title": "PSMC's October 21 earnings call: third-quarter revenue of NT$21.343 billion, up 23.4% quarter on quarter, gross margin at a 17-quarter high of 47.55% and EPS of NT$1.38; logic foundry wafer-start prices rose 8-10% in the third quarter and will rise another 10-20% in 2027",
+      "summary": "PSMC held its earnings call on October 21 and released preliminary third-quarter results: revenue of NT$21.343 billion, up 23.4% quarter on quarter and 80.3% year on year; gross margin of 47.55%, up 19.3 percentage points and the highest in 17 quarters; operating margin of 36.69%; and net profit of NT$6.5 billion, up 98% quarter on quarter, or EPS of NT$1.38. Net profit for the first nine months totaled NT$24.022 billion, or EPS of NT$5.42. Utilization rose from 87% to 97%, and average selling prices climbed 24% from the previous quarter. President Martin Chu said memory wafers completed and shipped in the third quarter were priced more than 30% below wafers started in the same period, so the price increases are not yet fully reflected and fourth-quarter revenue should grow by double digits sequentially. Wafer-start prices for 8-inch and 12-inch logic rose 8-10% in the third quarter, with a further 10-20% planned for 2027; PSMC is negotiating long-term agreements to lock in prices and volumes, and 80% of its 2027 MOSFET and IGBT capacity is already covered by such contracts. In 3D AI foundry services, IPD order visibility extends into 2028, wafer-on-wafer hybrid bonding is in small-scale trial production with mass production targeted for the first half of 2027, and 1p DRAM with Micron is due for trial production in the second quarter of 2027.",
+      "metric": "Revenue NT$21.343B (QoQ +23.4%, YoY +80.3%); gross margin 47.55%; EPS NT$1.38; utilization 87% → 97%; 2027 logic foundry price hikes 10-20%",
+      "impact": "Last period UBS forecast 8-inch utilization rising to 95% in 2027 even as foreign investors singled out PSMC for selling (items 4 and 8 last period). This period's earnings call supplies the answer: utilization of 97%, a gross margin near 48% and 2027 price hikes already in long-term contract talks. Investment trusts buying PSMC against the trend before the typhoon in item 6 fits that picture, and alongside UMC's silicon capacitor work in item 9, mature-node fabs are pursuing both price increases and specialty processes at the same time.",
+      "conf": "Background (the earnings call took place on October 21, before this period's start at 17:25 that day, and was not included last period; figures are the company's preliminary results)",
+      "vocab": [
+        ["wafer-start prices", "投片價"],
+        ["sequentially", "逐季地；季比"],
+        ["long-term agreements", "長期合約"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["average selling prices", "平均售價"],
+        ["net profit", "稅後純益", "fin"],
+        ["quarter on quarter", "季比；季增"],
+        ["lock in", "鎖定"]
+      ]
+    },
+    "17": {
+      "entity": "GlobalFoundries (GFS) / U.S. Department of Commerce / Japan",
+      "title": "GlobalFoundries announced on October 14 that under the U.S.-Japan trade deal, Japan will fund up to US$21 billion for two 300mm fabs in Malta, New York, with the first starting production in 2029 and each adding about 900,000 wafers a year; the Commerce Department gets about a 4% stake in GF",
+      "summary": "On October 14, GlobalFoundries announced that under a U.S.-Japan trade and investment agreement, Japan will provide up to US$21 billion to build two 300mm fabs at GF's Malta, New York, site, with GF serving as technology provider and operator. The first fab, with an initial investment of about US$10 billion, is expected to break ground later in 2026 and come online in 2029; a second fab would require roughly another US$10 billion. Each fab is expected to add about 900,000 300mm wafers of annual capacity when fully operational. GF will also reallocate US$955 million of its existing CHIPS award to silicon photonics, silicon-germanium and advanced packaging, and the Commerce Department will receive about a 4% equity stake in GF. CEO Tim Breen called it \"a bold new initiative,\" while Lutnick described it as a major manufacturing investment delivered by the U.S.-Japan trade deal.",
+      "metric": "Japan funding up to US$21B; two 300mm fabs ~US$10B each; first fab in 2029; ~900,000 wafers/year each; Commerce ~4% stake",
+      "impact": "This period Lutnick said semiconductors made entirely in Taiwan are \"too far\" (item 2), yet the new U.S. capacity actually taking shape is a mature and specialty-process fab funded by Japan and run by GlobalFoundries, with the government again taking equity. Compared with GF's automation push to raise output at existing capacity in Singapore (item 13), GF is pursuing a two-track approach, new U.S. fabs plus Asian efficiency gains, to capture non-China mature-node demand.",
+      "conf": "Background (original date October 14, outside this period; already included in the October 12-16 report and repeated here for comparison only)",
+      "vocab": [
+        ["reallocate", "重新配置"],
+        ["break ground", "動工"],
+        ["come online", "投產；上線"],
+        ["two-track", "雙軌的"],
+        ["fully operational", "全面運轉"],
+        ["award", "補助款；獎勵"],
+        ["capture", "拿下；承接"]
+      ]
+    }
+  }
+}
