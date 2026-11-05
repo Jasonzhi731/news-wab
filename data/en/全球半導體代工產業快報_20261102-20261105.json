@@ -1,0 +1,347 @@
+{
+  "source": "全球半導體代工產業快報_20261102-20261105.xlsx",
+  "news": {
+    "1": {
+      "entity": "Samsung Foundry / DB HiTek / SK keyfoundry",
+      "title": "Samsung reportedly tells customers it will fully exit 8-inch foundry work by the end of 2030, starting with the closure of its Giheung S7 fab in the second half of this year, leaving Korean chip designers scrambling for alternative capacity and stockpiling inventory",
+      "summary": "Samsung Electronics has notified its 8-inch foundry customers that it plans to shut down all 8-inch lines by the end of 2030 and redirect people and equipment spending to advanced 12-inch processes, Korea's The Elec reported. Samsung had previously said only that it would scale back gradually; this is the first time it has set an exit date. Its 8-inch foundry business is concentrated in three fabs, S6, S7 and S8, in Giheung, South Korea. S7 is due to close in the second half of 2026, which will cut monthly 8-inch capacity from about 250,000 wafers to under 200,000, with utilization of about 70%. The lines make display driver ICs, power management ICs, MCUs and image sensors on 65nm to 180nm processes, and Samsung has not accepted new 8-inch products since the start of 2026. Korea's other 8-inch foundries, DB HiTek and SK keyfoundry, are running near full, so some customers have begun locking in Samsung's remaining capacity and building inventory; moving to 12-inch would require redesign and requalification. TrendForce says capacity cuts at Samsung and TSMC, together with demand for AI power chips, will lift average 8-inch utilization at the top 10 foundries from about 80% in 2025 to nearly 90% in 2026.",
+      "metric": "Exit date: end-2030; monthly 8-inch capacity about 250,000 → under 200,000 wafers after S7 closes, utilization ~70%; 65-180nm processes; top-10 foundry 8-inch utilization nearly 90% in 2026 (about 80% in 2025)",
+      "impact": "Another chunk of 8-inch supply is leaving the market, which firmly supports pricing at mature-node foundries already running near full. Most of TSMC's 8-inch capacity is moving to Vanguard (item 18), and once Samsung exits in 2030, 8-inch orders for DDIs, PMICs and MCUs can shift to Vanguard, PSMC, UMC and Episil. Yet Vanguard's shares fell more than 12% this period (item 17): in the short term the market is still trading the AI-stock correction and has not priced in the shrinking 8-inch supply.",
+      "conf": "Unconfirmed (Korea's The Elec citing industry sources; Samsung has not publicly confirmed the 2030 timeline; the gradual phase-out of 8-inch lines was mentioned on its April earnings call; capacity and utilization figures are as reported)",
+      "vocab": [
+        ["utilization", "產能利用率", "fin"],
+        ["stockpiling inventory", "囤積庫存"],
+        ["locking in", "鎖定"],
+        ["priced in", "已反映在股價", "fin"],
+        ["supports pricing", "支撐報價"],
+        ["scale back", "縮減"],
+        ["requalification", "重新驗證"],
+        ["running near full", "接近滿載"]
+      ]
+    },
+    "2": {
+      "entity": "TSMC (2330) CoWoS / Intel Foundry EMIB-T / Prismark",
+      "title": "Prismark says CoWoS supply bottlenecks are emerging and some chip designers are evaluating Intel's EMIB-T; demand for high-end AI substrates is set to grow more than 45% a year from 2025 to 2030 and exceed supply from 2027",
+      "summary": "A report by research firm Prismark at the IMPACT 2026 forum said supply constraints on TSMC's CoWoS are starting to show, and some chip designers now see Intel's EMIB-T as a viable alternative. According to the roadmap Intel presented at ECTC 2026, EMIB-T package sizes have grown from about 80×80 mm with 12 silicon bridges in 2023 to about 120×120 mm with 20 bridges and a 40 μm die-to-die pitch in 2026, and will reach 120×240 mm, 12 to 14 reticles and more than 40 bridges after 2028. On TSMC's side, CoWoS interposers at 5.5 reticles are already in volume production in 2026 with yields above 98%, expanding to 14 reticles and 20 HBM stacks in 2028. Prismark does not expect wholesale substitution: chips with the highest bandwidth needs will stay on CoWoS, while some custom ASICs and products with lighter memory integration could move to EMIB-T. It also forecast that build-up area demand for advanced AI/HPC and large FCBGA substrates will grow at a compound annual rate of more than 45% from 2025 to 2030 and exceed supply from 2027, and said more than 10 ABF substrate makers have committed to large capacity expansions.",
+      "metric": "EMIB-T 2026: 120×120 mm, 20 bridges, 40 μm pitch; 2028+: 120×240 mm, 40+ bridges; CoWoS 5.5 reticles in 2026 (yield >98%) → 14 reticles and 20 HBM stacks in 2028; high-end substrate demand CAGR >45% (2025-2030)",
+      "impact": "Set against Intel's comment on its earnings call that EMIB customers will be announced within two quarters (item 6 last period), a third-party researcher now confirms there is demand for a second route beyond CoWoS. But Prismark's view of a division of labor implies the highest-end GPUs stay tied to TSMC, with EMIB-T competing for ASICs and mid-range AI chips. The real shared bottleneck has moved to substrates: from 2027 demand outstrips supply, a constraint on substrate makers such as Unimicron and Nan Ya PCB and on the pace of TSMC's CoWoS expansion.",
+      "conf": "Confirmed (Prismark's public forum report, as relayed by TechNews; the statement that designers are evaluating EMIB-T is the research firm's observation and names no customers)",
+      "vocab": [
+        ["supply constraints", "供應限制"],
+        ["viable alternative", "可行的替代方案"],
+        ["compound annual rate", "年複合成長率"],
+        ["exceed supply", "超過供給"],
+        ["capacity expansions", "擴產"],
+        ["outstrips supply", "供不應求"],
+        ["bottleneck", "瓶頸"],
+        ["wholesale substitution", "全面替代"]
+      ]
+    },
+    "3": {
+      "entity": "National Science and Technology Council (NSTC) / TSMC (2330)",
+      "title": "NSTC Minister Wu Cheng-wen says Taiwan's semiconductor output will top US$300 billion in 2026, up 40.9%, and Taiwan-made AI servers hold more than 90% of the global market; a new science park reserved for 1nm production will start in Tainan in 2027",
+      "summary": "In a speech on November 2, NSTC Minister Wu Cheng-wen said Taiwan's semiconductor output is expected to exceed US$300 billion in 2026, up 40.9% year on year, and that AI servers built by Taiwanese companies already account for more than 90% of the global market, as Taiwan upgrades from \"Team Taiwan\" to \"Team Global\". Citing TSMC's 2025 revenue mix, he said 7nm made up about 14%, 5nm about 36% and 3nm more than 24% and rising, while 2nm is already in volume production in Kaohsiung and the Southern Taiwan Science Park. Taiwan currently has 18 science park sites, and in 2027 a new park in Tainan set aside for 1nm (A14) production will start development, bringing the total to 19. Future technology strategy will focus on four areas: integrating high-performance and quantum computing, smart robotics, silicon photonics and all-optical networks, and sovereign AI.",
+      "metric": "Taiwan 2026 semiconductor output >US$300B (+40.9% YoY); Taiwan-made AI servers >90% global share; TSMC 2025 revenue: 7nm ~14%, 5nm ~36%, 3nm >24%; science park sites 18 → 19 (new Tainan park in 2027)",
+      "impact": "The US$300 billion figure is consistent with TSIA's forecast of more than NT$9.1 trillion, up 40.9% (item 9 last period), so the government is again endorsing 40% output growth this year. The Tainan park does not name TSMC, but \"reserved for 1nm\" effectively confirms that generations beyond A14 will stay mainly in Taiwan. Read alongside TSMC's 1.88GW power contract in Arizona this period (item 8), leading-edge capacity is expanding in both Taiwan and the US, and power and land are the shared constraints.",
+      "conf": "Confirmed (public speech by the NSTC minister; the park does not name TSMC, and the idea that it will host TSMC's 1nm fab is TrendForce's inference citing foreign media; the speech calls A14 \"1nm\", while TSMC describes A14 as a 1.4nm-class node)",
+      "vocab": [
+        ["output", "產值"],
+        ["year on year", "年增"],
+        ["revenue mix", "營收結構", "fin"],
+        ["volume production", "量產"],
+        ["endorsing", "背書"],
+        ["set aside", "預留"],
+        ["consistent with", "與…一致"],
+        ["constraints", "限制"]
+      ]
+    },
+    "4": {
+      "entity": "Marvell (MRVL) / Lumentum (LITE) / WIN Semiconductors (3105) / Global Communication Semiconductors (2455)",
+      "title": "Marvell agrees to buy optical communications leader Lumentum in an all-stock deal valuing it at US$115 billion, a 23.9% premium, expected to close in the first half of 2028; Marvell falls 13% and Lumentum 19% on the news, and Taiwan's optical and compound foundry stocks hit limit-down on November 3",
+      "summary": "Marvell announced on November 2 a definitive agreement to acquire Lumentum in an all-stock transaction in which each Lumentum share will be exchanged for 4.500 Marvell shares, implying an enterprise value of US$115 billion, or about US$1,132 per share, a premium of roughly 23.9% to the unaffected closing price on October 28. After the deal, existing Marvell shareholders will own about 67% of the combined company and Lumentum shareholders about 33%. It is expected to close in the first half of 2028 and still needs shareholder and regulatory approval. Marvell said the combined company will span advanced CMOS, silicon photonics, compound semiconductors, advanced packaging and manufacturing, with Lumentum bringing high-performance lasers, optical transceivers, optical circuit switching (OCS) and compound semiconductor manufacturing expertise. The market reaction was negative: Marvell shares plunged 13% and Lumentum fell 19% in US trading on November 2 as analysts questioned the synergies and the regulatory timeline, and on November 3 optical-related stocks in Taiwan including WIN Semiconductors, Global Communication Semiconductors, LandMark Optoelectronics and LuxNet all hit limit-down.",
+      "metric": "Enterprise value US$115B; exchange ratio 1:4.500; premium ~23.9%; post-deal ownership 67%/33%; expected close 1H28; November 2: Marvell -13%, Lumentum -19%",
+      "impact": "Last period WIN Semi rallied after its earnings call on rumors that Marvell was in talks to buy Lumentum (item 11 last period); this period the rumor came true and turned into a sell-the-news event, with WIN hitting limit-down twice, on November 3 and 5, and falling 21.97% over the period (item 17). For compound foundries, it remains to be seen whether Lumentum's in-house indium phosphide lines change its outsourcing mix once folded into Marvell; GCS argues the combination will help bring prices back to reasonable levels (item 6). Regulatory review may run past the first half of 2028, so there is no direct near-term effect on supply-chain orders.",
+      "conf": "Confirmed (official announcements by Marvell and Lumentum; share price declines from Anue reports; Taiwan limit-down moves verified against TWSE and TPEx closing data)",
+      "vocab": [
+        ["all-stock transaction", "全股票交易"],
+        ["enterprise value", "企業價值"],
+        ["premium", "溢價", "fin"],
+        ["unaffected closing price", "未受消息影響的收盤價"],
+        ["synergies", "綜效"],
+        ["limit-down", "跌停", "fin"],
+        ["sell-the-news", "利多出盡"],
+        ["outsourcing mix", "委外比重"]
+      ]
+    },
+    "5": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / WIN Semiconductors (3105) / Global Communication Semiconductors (2455) / TAIEX",
+      "title": "Taiwan stocks fall 291.69 points on November 2 and plunge another 1,612.60 points on November 3 to 43,307.54, with foreign investors selling NT$180.828 billion over two days; WIN Semi and GCS hit limit-down on November 3 while PSMC, Vanguard and ASE drop more than 7%",
+      "summary": "On November 2, the first trading day of the month, the TAIEX fell 291.69 points (-0.65%) to 44,920.14, and TSMC lost NT$40 to NT$2,330. On November 3, uncertainty over the US midterm elections and heavy selling in US tech stocks triggered a broad sell-off in electronics and old-economy stocks, and the index plunged 1,612.60 points (-3.59%) to 43,307.54 on turnover of NT$1.002036 trillion (TWSE FMTQIK, including odd lots and after-hours trading). Foreign investors were net sellers of NT$73.521 billion and NT$107.307 billion on the two days, while investment trusts were net buyers of NT$33.816 billion and NT$18.460 billion (BFI82U). On November 3 TSMC fell NT$35 to NT$2,295, UMC dropped 6.36% to NT$103, PSMC 7.81% to NT$60.2, ASE 8.61% to NT$616 and Vanguard 7.59% to NT$134. After both Marvell and Lumentum tumbled on their merger news, WIN Semiconductors hit limit-down at NT$530 and GCS hit limit-down at NT$405, while AWSC and Episil also fell more than 7%.",
+      "metric": "TAIEX 44,920.14 on Nov 2 (-0.65%), 43,307.54 on Nov 3 (-1,612.60, -3.59%); foreign investors -NT$73.521B / -NT$107.307B; WIN Semi NT$530 (limit-down); GCS NT$405 (limit-down); PSMC NT$60.2 (-7.81%)",
+      "impact": "The correction set off by Intel's guidance last period (items 8 and 12 last period) widened into a second wave this period, and the selling spread from AI heavyweights to the whole foundry group. Note the split in flows: on November 2-3 foreign investors were small net buyers of UMC at 5,060 and 5,681 lots, while investment trusts sold 17,885 and 19,575 lots (T86), suggesting UMC's selling pressure came mainly from domestic institutions trimming positions. PSMC, by contrast, saw foreign net selling of nearly 50,000 lots over the two days.",
+      "conf": "Confirmed (cross-checked against TWSE FMTQIK/STOCK_DAY/BFI82U/T86 and TPEx closing data; Anue's turnover of NT$758.875 billion and NT$928.058 billion excludes odd lots and after-hours trades, and its November 2 figures of NT$52.691 billion combined institutional selling and NT$36.1 billion investment-trust buying also use a different basis; this table uses TWSE figures)",
+      "vocab": [
+        ["broad sell-off", "全面賣壓"],
+        ["net sellers", "賣超方"],
+        ["net buyers", "買超方", "fin"],
+        ["turnover", "成交金額", "fin"],
+        ["heavyweights", "權值股"],
+        ["selling pressure", "賣壓"],
+        ["trimming positions", "調節持股"],
+        ["investment trusts", "投信", "fin"]
+      ]
+    },
+    "6": {
+      "entity": "GCS Holdings (4991)",
+      "title": "GCS Holdings posts third-quarter revenue of NT$844 million, up 55.4%, with gross margin recovering to 47% and EPS of NT$1.33; utilization is above 100% and RF foundry orders are visible through next June, with fourth-quarter revenue guided at US$30 million to US$34 million",
+      "summary": "At its earnings call on November 3, III-V foundry and optoelectronic component maker GCS Holdings reported third-quarter revenue of US$26.4 million (about NT$844 million), up 9.7% sequentially and 55.4% year on year. Gross margin was 47%, up 3.7 percentage points from the prior quarter, operating margin 19.3%, net income about NT$154 million and EPS NT$1.33 (NT$1.31 diluted). Revenue for the first nine months was NT$2.329 billion, up 54%, driven by own-brand AOC products and foundry revenue lifted by AI and data centers, along with higher average selling prices for RF foundry services. It guided fourth-quarter revenue of US$30 million to US$34 million and gross margin of 46% to 50%. CEO David Ann said utilization has topped 100% and order visibility for RF foundry work extends to June next year. Indium phosphide substrate supply for 2027 is largely locked in, but non-Chinese sources will only reach a meaningful share after 2028, and its 100mW CW laser has slipped to volume production in the third quarter of next year. He called Marvell's acquisition of Lumentum a move to compete head-on with Broadcom, a positive trend for the industry that could bring prices back to reasonable levels.",
+      "metric": "3Q26 revenue NT$844M (US$26.4M; +9.7% QoQ, +55.4% YoY); gross margin 47%; operating margin 19.3%; EPS NT$1.33; 4Q26 revenue guidance US$30M-34M, gross margin 46%-50%; utilization >100%",
+      "impact": "Compound-foundry fundamentals are diverging from share prices this period: GCS has utilization above 100%, rising RF foundry ASPs and orders visible to mid-next year, in line with the optical and satellite growth WIN Semi described at its earnings call (item 11 last period), yet WIN and Global Communication Semiconductors fell more than 20% this period (item 17). Tight indium phosphide substrate supply, with non-Chinese sources arriving only after 2028, is a shared constraint on capacity expansion across compound optoelectronic foundries.",
+      "conf": "Confirmed (GCS earnings call; revenue is disclosed in both US dollars and NT dollars, and this table shows both)",
+      "vocab": [
+        ["sequentially", "季增"],
+        ["gross margin", "毛利率", "fin"],
+        ["operating margin", "營業利益率", "fin"],
+        ["average selling prices", "平均售價"],
+        ["guided", "給出財測"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["fundamentals", "基本面", "fin"],
+        ["percentage points", "百分點"]
+      ]
+    },
+    "7": {
+      "entity": "Samsung Foundry / AMD / NVIDIA / Faraday (3035)",
+      "title": "Korean media: Samsung's second fab in Taylor, Texas breaks ground in early November with its 2nm capacity fully booked, mainly by AMD for HBM base dies with NVIDIA also placing orders; equipment move-in is set for February 2029 and mass production for 2030",
+      "summary": "South Korea's Maeil Business Newspaper, citing industry sources on November 3, said Samsung's second fab in Taylor, Texas is due to break ground in early November and its entire planned capacity has been booked. It will use a 2nm process to make HBM base dies for AMD and NVIDIA, with AMD taking the majority, and some in the industry believe AMD's orders alone could fill the fab. Fab 2 will span about 2.7 million square feet (about 250,000 square meters), roughly 1.5 times the size of Fab 1. Site preparation is under way, with equipment installation from February 2029 and mass production in 2030. Samsung's current HBM4 uses 4nm base dies; in future it plans to pair 2nm base dies from Taylor Fab 2 with DRAM made in Korea and ship complete HBM stacks, and Broadcom is seen as a potential customer. Separately, ChosunBiz reported that Samsung could make 2nm AI chips for a US cloud customer through Faraday. Samsung declined to comment on customer orders.",
+      "metric": "Taylor Fab 2: 2nm; about 250,000 m² (1.5x Fab 1); groundbreaking Nov 2026, equipment Feb 2029, mass production 2030; capacity fully booked (AMD the majority)",
+      "impact": "This matches Samsung's earnings-call message that demand for 8nm and below will exceed capacity in 2027 and that Taylor Fab 2 breaks ground in November (item 7 last period), with clearer detail on customers: Samsung's opening in foundry is memory-linked HBM base dies rather than a head-on fight with TSMC for GPUs. But NVIDIA has already specified TSMC's 3nm for NVHBM base dies (item 19), leaving Samsung with AMD and NVIDIA's standard HBM. With mass production not until 2030, the effect on the 2027-2028 foundry landscape is limited.",
+      "conf": "Unconfirmed (Maeil Business Newspaper citing industry sources; Samsung declined to comment on customer orders; the Faraday 2nm project was reported by ChosunBiz and the order is unconfirmed)",
+      "vocab": [
+        ["fully booked", "訂滿"],
+        ["break ground", "動工"],
+        ["placing orders", "下單"],
+        ["declined to comment", "不予置評"],
+        ["mass production", "量產"],
+        ["head-on", "正面的"],
+        ["potential customer", "潛在客戶"],
+        ["industry sources", "業界消息"]
+      ]
+    },
+    "8": {
+      "entity": "TSMC (2330) Arizona / Pinnacle West Capital (PNW)",
+      "title": "Arizona utility Pinnacle West signs a 25-year direct-priced power contract with TSMC to supply about 1.88GW for its fab campus at full build-out, with TSMC pre-funding the work and providing guarantees; the contract awaits regulatory approval",
+      "summary": "US utility Pinnacle West Capital said it signed a 25-year direct-priced power supply contract with TSMC in October to serve about 1.88GW of demand at the company's Arizona chipmaking campus once fully built out, and will soon submit it to regulators for review. It is Pinnacle West's first direct-priced contract: TSMC will invest funds upfront and provide credit support so the utility can line up generation and grid construction, with the costs borne by TSMC rather than passed on to residential customers. CEO Theodore Geisler said the 1.88GW is already included in the company's 5.8GW of committed demand, and any further TSMC expansion would be negotiated separately. The transmission system in its service area has no spare capacity, and over the next 15 years it plans to add nearly 15GW of power resources and about 2.6GW of transmission capacity.",
+      "metric": "25-year power contract; about 1.88GW (at full build-out); Pinnacle West committed demand 5.8GW; about 15GW of new resources and 2.6GW of transmission over 15 years; pending regulatory approval",
+      "impact": "At 1.88GW, roughly the output of a large nuclear plant, the contract shows TSMC's Arizona plans are far larger than the fabs already in production. TSMC pre-funding grid construction also echoes the data-center power debate that intensified after this period's US elections (item 11): Democratic governors say residents should not foot the bill, so fabs and data centers alike may be required to pay their own grid costs, raising the cost of building US capacity.",
+      "conf": "Confirmed (disclosed by Pinnacle West; the contract still needs approval from Arizona regulators, and TSMC has issued no separate announcement)",
+      "vocab": [
+        ["direct-priced", "直接定價的"],
+        ["upfront", "預先"],
+        ["credit support", "信用擔保"],
+        ["borne by", "由…承擔"],
+        ["committed demand", "已承諾需求"],
+        ["foot the bill", "買單；負擔費用"],
+        ["regulatory approval", "監管核准"],
+        ["spare capacity", "閒置容量"]
+      ]
+    },
+    "9": {
+      "entity": "AWSC (8086) / Global Communication Semiconductors (2455)",
+      "title": "Compound foundry October revenue: Global Communication Semiconductors at NT$471 million, up 32.7%, and AWSC at NT$424 million, up 3.2%; UMC, WIN Semi, Vanguard, PSMC and TSMC have yet to report October sales",
+      "summary": "AWSC reported consolidated revenue of NT$424 million for October on November 3, up 0.5% month on month and 3.2% year on year, bringing revenue for the first 10 months to NT$4.207 billion, up 28.5%. Global Communication Semiconductors reported October revenue of NT$471 million on November 4, up 4.9% from September and 32.7% from a year earlier, with 10-month revenue of NT$3.738 billion, up 34.7%. As of this report (the afternoon of November 5), the latest monthly revenue on the Market Observation Post System for UMC, WIN Semiconductors, Vanguard, PSMC, Episil and TSMC was still for September.",
+      "metric": "GCS October NT$471M (MoM +4.9%, YoY +32.7%); AWSC October NT$424M (MoM +0.5%, YoY +3.2%); first 10 months: GCS NT$3.738B (+34.7%), AWSC NT$4.207B (+28.5%)",
+      "impact": "Global Communication Semiconductors is benefiting from optical epitaxy demand, with October revenue up 30% year on year and nearly 5% month on month, yet its shares fell 22.60% this period (item 17). The gap between revenue and share price shows the selling came from a valuation correction in optical names rather than fundamentals. AWSC grew only 3.2% as demand for handset power amplifiers stays flat, consistent with the 19% decline in GlobalFoundries' smart mobile business (item 12): handset-related foundry work is the weakest segment this period.",
+      "conf": "Confirmed (monthly revenue filings on the Market Observation Post System: AWSC NT$423.876 million, GCS NT$471.181 million)",
+      "vocab": [
+        ["consolidated revenue", "合併營收", "fin"],
+        ["month on month", "月增"],
+        ["year on year", "年增"],
+        ["valuation correction", "估值修正"],
+        ["fundamentals", "基本面", "fin"],
+        ["yet to report", "尚未公布"],
+        ["flat", "持平；平淡"],
+        ["consistent with", "與…一致"]
+      ]
+    },
+    "10": {
+      "entity": "AMD / TSMC (2330) / ASE (3711) / Powertech (6239)",
+      "title": "AMD's guidance beats expectations: fourth-quarter revenue of about US$17 billion and more than 80% growth in 2027, with data center AI revenue overtaking server CPUs for the first time in the fourth quarter; Lisa Su says it has fully coordinated supply of wafers, substrates, advanced packaging and memory",
+      "summary": "AMD's third-quarter data center revenue was US$8.55 billion, up 97% year on year and ahead of analysts' estimates of US$8.20 billion, accounting for 64% of total revenue. It guided fourth-quarter revenue of about US$17 billion, plus or minus 3%, above the LSEG consensus of US$16.23 billion, with adjusted gross margin of about 55% (56% the prior quarter). CEO Lisa Su expects 2027 revenue to grow more than 80%, with data center making up 80% of sales, server CPU revenue doubling and data center AI sales more than doubling. The CFO expects data center AI revenue to overtake server CPUs for the first time in the fourth quarter, and MI455 accelerators and Helios racks began shipping in the third quarter. Su said data center demand far outstrips supply and AMD has fully coordinated its supply chain to secure wafers, substrates, advanced packaging, memory and other key components for growth in 2027, though she expects PC shipments to fall by double digits next year. Analysts named ASE, SPIL, Powertech, KYEC, Unimicron, Nan Ya PCB and Kinsus as Taiwanese beneficiaries.",
+      "metric": "3Q26 data center revenue US$8.55B (+97% YoY); 4Q26 revenue guidance ~US$17B ±3% (consensus US$16.23B); 2027 revenue growth >80%; adjusted gross margin ~55%; double-digit decline in 2027 PC shipments (forecast)",
+      "impact": "This contrasts sharply with Intel's cautious guidance and share collapse last period (items 5 and 12 last period): facing the same PC downturn, AMD is relying on data center AI for 80% growth in 2027. Its wafers are almost all made at TSMC (N3/N2), while packaging is spread across ASE and Powertech's FOPLP (volume production in 2027). Having \"secured wafers and advanced packaging\" means another booking for TSMC's 2027 leading-edge and CoWoS capacity, though the US market reaction was overshadowed by the election (item 11).",
+      "conf": "Confirmed (AMD earnings and call, compiled by TrendForce from Reuters and CNBC reports; the list of Taiwanese beneficiaries is an analyst assessment)",
+      "vocab": [
+        ["guided", "給出財測"],
+        ["consensus", "市場共識", "fin"],
+        ["adjusted gross margin", "調整後毛利率"],
+        ["analysts' estimates", "分析師預估"],
+        ["outstrips supply", "供不應求"],
+        ["double digits", "雙位數"],
+        ["beneficiaries", "受惠者", "fin"],
+        ["overshadowed", "被掩蓋"]
+      ]
+    },
+    "11": {
+      "entity": "US midterm elections / PHLX Semiconductor Index / TSMC ADR (TSM) / Intel / GlobalFoundries (GFS) / Tower (TSEM)",
+      "title": "Democrats retake both chambers of Congress in the US midterms and Texas's governor-elect vows to pause data center approvals, putting about 13GW of capacity at risk; the SOX falls 3.13% on November 4, with Tower down 8.75% and GlobalFoundries down 5.95%",
+      "summary": "In the US midterm elections on November 3, Democrats took control of both the House and the Senate from the Republicans and won governor races in states including Texas, Ohio and Georgia. Texas governor-elect Gina Hinojosa has said she will pause approvals of data center projects until the legislature passes laws protecting residents' water and power. GLJ Research estimates that about 13GW of Texas data center capacity is immediately at risk, and SemiAnalysis says Texas accounts for nearly 30% of the US data center capacity scheduled to come online by 2028. On November 4 the Dow jumped nearly 1,570 points, but the Philadelphia Semiconductor Index fell 3.13% to 10,268.65 as memory stocks slumped. The TSMC ADR fell 2.24% to US$395.75, the UMC ADR 2.07%, GlobalFoundries 5.95% to US$40.34 after its results, and Tower 8.75% to US$148.80. Earlier in the period Intel slid another 8.80% on November 2 to US$59.97, and the SOX fell 3.37% that day before rebounding 2.63% on November 3.",
+      "metric": "SOX 10,328.33 on Nov 2 (-3.37%), 10,600.40 on Nov 3 (+2.63%), 10,268.65 on Nov 4 (-3.13%); about 13GW of Texas data center capacity at risk (GLJ estimate); Nov 4: TSMC ADR -2.24%, GlobalFoundries -5.95%, Tower -8.75%",
+      "impact": "Last period's correction was driven by Intel's guidance (item 12 last period); this period the trigger is policy. AI demand itself has not changed (AMD's guidance was strong, item 10), but local regulation may slow how fast data centers get built, so the market is starting to discount AI build-out volumes for 2028. Mature and specialty foundries (Tower, GlobalFoundries) keep falling more than the TSMC ADR, extending last period's pattern of a deeper valuation correction for non-TSMC foundries.",
+      "conf": "Confirmed (election results; US closing prices from Yahoo Finance verified against prior closes; the data center pause is a campaign pledge and actual policy awaits the new governor taking office next year; the 13GW figure is a GLJ Research estimate)",
+      "vocab": [
+        ["governor-elect", "州長當選人"],
+        ["at risk", "面臨風險"],
+        ["slumped", "重挫"],
+        ["rebounding", "反彈"],
+        ["discount", "打折；折價看待"],
+        ["valuation correction", "估值修正"],
+        ["campaign pledge", "競選承諾"],
+        ["build-out", "建置"]
+      ]
+    },
+    "12": {
+      "entity": "GlobalFoundries (GFS)",
+      "title": "GlobalFoundries posts third-quarter revenue of US$1.899 billion, up 13%, with a record non-IFRS gross margin of 31.4%; optical capacity is sold out through 2027 and its US$1 billion silicon photonics run-rate goal is pulled forward to end-2027, but net capex of about US$4 billion next year sends the stock down 5.95%",
+      "summary": "GlobalFoundries reported third-quarter revenue of US$1.899 billion on November 4, up 13% year on year and 6% sequentially and above the US$1.885 billion midpoint of its guidance. Gross margin was 30.1% and non-IFRS gross margin a record 31.4%, with non-IFRS EPS of US$0.53. Because it issued 9.9 million shares to the US government in September and booked a US$441 million non-cash charge, it posted an IFRS net loss of US$270 million. Wafer shipments were 647,000 300mm-equivalent wafers, up 7%. Communications Infrastructure and Data Center revenue was US$316 million, up 81%, while Smart Mobile Devices revenue fell 19% to US$611 million, a record-low 32% of the total. Blended ASP rose about 2.5% from the prior quarter and nearly 5% from a year earlier, the first year-on-year increase since 2023. It guided fourth-quarter revenue of US$2.000 billion plus or minus US$25 million and non-IFRS gross margin of 31.5% plus or minus one percentage point. CEO Tim Breen said optical capacity is fully booked through 2027; silicon photonics revenue will be about US$500 million in 2026, and the goal of a US$1 billion annualized run-rate has been pulled forward by a year to the end of 2027. But investors worried about net capex rising to about US$4 billion next year, and the stock fell 5.95%.",
+      "metric": "3Q26 revenue US$1.899B (+13% YoY, +6% QoQ); non-IFRS gross margin 31.4%; IFRS net loss US$270M; non-IFRS EPS US$0.53; 4Q26 guidance US$2.000B; CID revenue US$316M (+81%); 2027 net capex about US$4B",
+      "impact": "GlobalFoundries was the only foundry to report earnings this period, and its results echo two themes. One is recovering mature-node pricing (the first year-on-year ASP increase, and a combined price and mix benefit of about 10% in 2027), in step with UMC's forecast of roughly 10% higher ASPs in 2027 (item 17 last period). The other is AI optical interconnect, with optical capacity sold out through 2027. But the market's reaction to expansion mirrors UMC's limit-down after its earnings call: as soon as capex goes up, the share price first prices in the depreciation burden.",
+      "conf": "Confirmed (GlobalFoundries 6-K preliminary results; optical capacity bookings, silicon photonics targets and 2027 capex are from the earnings call as reported by Anue)",
+      "vocab": [
+        ["midpoint", "中值"],
+        ["non-cash charge", "非現金費用"],
+        ["net loss", "淨損"],
+        ["blended ASP", "綜合平均售價"],
+        ["run-rate", "年化營收規模"],
+        ["pulled forward", "提前"],
+        ["net capex", "淨資本支出"],
+        ["depreciation", "折舊"]
+      ]
+    },
+    "13": {
+      "entity": "Hua Hong Semiconductor (1347.HK) / SMIC (0981.HK) / Nexchip (688249)",
+      "title": "China's foundry stocks rebound sharply in Hong Kong ahead of earnings: Hua Hong jumps 15.75% on November 4 to HK$68.70, leading Hang Seng constituents, SMIC rises 8.96% and Nexchip's A-shares gain 11.26%; Hua Hong reports third-quarter results on November 5",
+      "summary": "Hong Kong's three main indexes opened lower and closed higher on November 4, with the Hang Seng Index up 1.67% and semiconductors, healthcare and tech hardware leading. Hua Hong Semiconductor surged in the afternoon, rising as much as 16.01% intraday before closing up 15.75% at HK$68.70, the top gainer among Hang Seng constituents, ahead of its third-quarter results due on November 5. SMIC closed at HK$46.44, up 8.96%, and Nexchip's A-shares rose 11.26% to RMB27.67. A research note from Orient Securities said demand for AI-related support chips is lifting Hua Hong's memory, logic and analog products, with orders for some products at 1.5 to 2 times capacity, price hikes concentrated in MCUs and memory, and upside from its Wuxi Fab 3 expansion and the synergies of acquiring Huali Micro. Earlier in the period Hua Hong closed at HK$62.50 and HK$59.35, and SMIC at HK$43.62 and HK$42.62.",
+      "metric": "Nov 4: Hua Hong HK$68.70 (+15.75%), SMIC HK$46.44 (+8.96%), Nexchip RMB27.67 (+11.26%); Hang Seng Index +1.67%; Hua Hong orders at 1.5-2x capacity (some products, Orient Securities)",
+      "impact": "Last period Chinese foundry stocks fell more than 10% in two days (item 13 last period); this period they quickly recovered ahead of earnings, in contrast to the continued slide in Taiwan's mature-node foundries (item 17). Price hikes and full loading at Chinese foundries mainly serve domestic demand, so they are less exposed to the US election and data center regulation. Hua Hong's results and SMIC's third-quarter report in mid-November will be the key test of this rebound.",
+      "conf": "Confirmed (closing prices from Yahoo Finance verified against prior closes; some reports put SMIC's gain at 9.19%, while this table uses the closing-price calculation; the reasons for the rally are media and broker interpretations)",
+      "vocab": [
+        ["constituents", "成分股"],
+        ["top gainer", "漲幅最大者"],
+        ["intraday", "盤中", "fin"],
+        ["A-shares", "A 股"],
+        ["research note", "研究報告"],
+        ["price hikes", "漲價", "fin"],
+        ["synergies", "綜效"],
+        ["full loading", "滿載"]
+      ]
+    },
+    "14": {
+      "entity": "MediaTek (2454) / TSMC (2330) / Intel",
+      "title": "MediaTek hires former Intel executive vice president Navid Shahriari as senior vice president from November 9, overseeing advanced process, yield, DTCO, advanced test and packaging, with a mandate that includes deepening its partnership with TSMC",
+      "summary": "MediaTek announced on November 4 that former Intel executive vice president Navid Shahriari will join on November 9 as senior vice president, reporting directly to the president and chief operating officer. He will be responsible for advanced process technology, the yield platform, design-technology co-optimization (DTCO), advanced test and packaging, and the quality and reliability team. Shahriari spent 37 years at Intel, where he served as executive vice president in charge of manufacturing and product engineering and advanced packaging, and he is familiar with heterogeneous integration technologies such as EMIB and Foveros, with experience developing data center products. MediaTek said one of his core tasks is to deepen collaboration with key supply-chain partners including TSMC, using joint development of advanced technologies to make its AI and high-speed computing products more competitive.",
+      "metric": "Start date Nov 9, 2026; 37 years at Intel; remit: advanced process, yield platform, DTCO, advanced test and packaging, quality and reliability",
+      "impact": "MediaTek's data center ASIC business is shifting from phones to AI and needs large advanced packages and multi-chip integration. Hiring an Intel veteran who knows EMIB and Foveros while explicitly aiming to deepen ties with TSMC shows that even as chip designers study alternative routes such as EMIB (item 2), their main capacity bets remain on TSMC's CoWoS and leading-edge processes. The loss of Intel's packaging and manufacturing talent is also a hidden cost of its foundry turnaround.",
+      "conf": "Confirmed (MediaTek announcement)",
+      "vocab": [
+        ["mandate", "任務；授權"],
+        ["reporting directly to", "直接向…報告"],
+        ["yield", "良率"],
+        ["supply-chain partners", "供應鏈夥伴"],
+        ["competitive", "具競爭力的"],
+        ["veteran", "老將"],
+        ["hidden cost", "隱性成本"],
+        ["turnaround", "扭轉；轉型"]
+      ]
+    },
+    "15": {
+      "entity": "Mitsui Chemicals / JSR / Japan Investment Corporation (JIC)",
+      "title": "Japanese media: Mitsui Chemicals plans to pay about ¥1.3 trillion to buy a majority of photoresist maker JSR from JIC in what would be the largest deal in Japan's chemical industry; Mitsui says it is weighing options and has not decided, and its shares plunge 10.34%",
+      "summary": "Nikkei and Jiji Press reported on November 4 that Mitsui Chemicals plans to acquire most of JSR from the state-backed fund Japan Investment Corporation (JIC) for about ¥1.3 trillion (about US$8.2 billion, by TrendForce's conversion). JIC has picked Mitsui Chemicals as its preferred bidder, and the Development Bank of Japan may take a stake of about 10%. JSR is the world's second-largest photoresist supplier after Tokyo Ohka Kogyo and was taken private by JIC in 2024 for about ¥1 trillion. In fiscal 2025 it posted revenue of ¥440.7 billion, up 13%, and record net profit of ¥60.7 billion. If completed, the deal would surpass Resonac's roughly ¥1 trillion purchase of Hitachi Chemical as the biggest acquisition in Japan's chemical industry. Mitsui Chemicals said the reports did not come from the company and that it is evaluating various options, including acquisitions, but has made no decision. Its shares plunged 10.34% to ¥1,856.5 on November 4.",
+      "metric": "Deal value about ¥1.3T (about US$8.2B); JSR FY2025 revenue ¥440.7B (+13%), net profit ¥60.7B; DBJ stake about 10%; Mitsui Chemicals -10.34% on Nov 4",
+      "impact": "EUV photoresist is one of the most critical materials for leading-edge processes, and JSR (including its subsidiary Inpria's metal-oxide resists) and Tokyo Ohka dominate it. Moving the stake from a government fund to a chemical group shows Japan still treats photoresist as a strategic industry that must stay in domestic hands. For foundries such as TSMC and Samsung the supply source is unchanged, but future decisions on pricing and capacity investment will shift from a financial shareholder to an industrial one.",
+      "conf": "Unconfirmed (reports by Nikkei and other Japanese media; Mitsui Chemicals says no decision has been made; the US dollar conversion uses TrendForce's figure)",
+      "vocab": [
+        ["state-backed fund", "官方基金"],
+        ["preferred bidder", "優先談判對象"],
+        ["taken private", "私有化"],
+        ["net profit", "純益", "fin"],
+        ["weighing options", "評估選項"],
+        ["plunged", "重挫"],
+        ["stake", "持股", "fin"],
+        ["financial shareholder", "財務型股東"]
+      ]
+    },
+    "16": {
+      "entity": "Intel Foundry",
+      "title": "Intel releases version 0.9 of its Intel 14A process design kit to customers, with PDK 1.0 due in the first quarter of 2027; 14A is slated for risk production in the second half of 2027 and volume production in 2028, with 15%-20% better performance than 18A",
+      "summary": "Intel Foundry has released version 0.9 of the process design kit (PDK) for its Intel 14A process to customers, allowing chip designers to start planning products to 14A design rules before risk production, TechNews reported on November 5. Version 0.9 is a key R&D milestone but does not mean the process is ready for volume production, and PDK 1.0 is planned for the first quarter of 2027. Intel says 14A is on schedule and early yields are within expectations, though it has not disclosed yield data; under current plans risk production starts in the second half of 2027 and volume production in 2028. Intel expects 14A to deliver 15% to 20% more performance than 18A at the same power, or 25% to 35% lower power at the same performance. Intel says several potential customers are interested but has not named them; it previously announced manufacturing agreements with Microsoft and Amazon, while reports of talks with Apple are unconfirmed.",
+      "metric": "PDK 0.9 (released) → PDK 1.0 (1Q27); risk production 2H27, volume production 2028; vs 18A: +15%-20% performance or -25% to -35% power",
+      "impact": "At last period's earnings call Intel said the 14A PDK 0.5 was available and 0.9 was coming soon (the October 27-29 report); this period confirms delivery on schedule, one of the few Intel Foundry milestones to land on time. But a PDK only lets customers start designing; the real test is whether Intel can win named 14A customer commitments between late 2026 and early 2027. With its CFO saying free cash flow is unlikely to turn positive in 2026 (item 6 last period), external customers are a precondition for 14A to reach volume production.",
+      "conf": "Unconfirmed (TechNews reported on November 5 that Intel has released the kit to customers; Intel's official release and exact release date were not obtained; some foreign media earlier put 14A risk production in 2028 and volume production in 2029, which differs from this timeline)",
+      "vocab": [
+        ["milestone", "里程碑"],
+        ["on schedule", "按時程"],
+        ["risk production", "試產"],
+        ["volume production", "量產"],
+        ["free cash flow", "自由現金流"],
+        ["commitments", "承諾"],
+        ["precondition", "前提"],
+        ["disclosed", "揭露"]
+      ]
+    },
+    "17": {
+      "entity": "TSMC (2330) / UMC (2303) / Vanguard (5347) / PSMC (6770) / WIN Semiconductors (3105) / Global Communication Semiconductors (2455) / TAIEX",
+      "title": "Taiwan stocks fall 358.63 points on November 4 as foreign investors sell NT$149.899 billion, the fifth-largest on record, then plunge 1,374.19 points on November 5 to 41,574.72, down 3,637 points (-8.04%) from October 30; WIN Semi and GCS hit limit-down again and UMC drops below NT$100",
+      "summary": "On November 4, caution ahead of the US election results, steep falls in Japanese and Korean stocks and a weaker Taiwan dollar pushed the TAIEX down more than 1,450 points intraday and below 42,000, a 1,885-point high-low range, before it closed down 358.63 points (-0.83%) at 42,948.91 on turnover of NT$1.17693 trillion (FMTQIK). Foreign investors sold a net NT$149.899 billion, which Anue called the fifth-largest on record, and have now been net sellers of TSMC for 19 straight days; investment trusts bought NT$27.258 billion, and combined institutional net selling was NT$160.160 billion (BFI82U). On November 5 the index fell another 1,374.19 points (-3.20%) to 41,574.72. TSMC closed at NT$2,260 and NT$2,240 on November 4 and 5. UMC rebounded 2.43% on November 4 before sliding 6.73% to NT$98.4 on November 5; PSMC fell 7.74% to NT$54.8, Vanguard 8.03% to NT$126 and ASE 8.77% to NT$572. WIN Semiconductors hit limit-down at NT$451 and GCS at NT$346 on November 5, and AWSC and Episil fell more than 7%. On November 4 foreign investors sold a net 33,573 lots of UMC, 25,855 lots of PSMC and 21,604 lots of TSMC (T86).",
+      "metric": "TAIEX 42,948.91 on Nov 4 (-0.83%), 41,574.72 on Nov 5 (-1,374.19, -3.20%); -3,637.11 points (-8.04%) vs Oct 30; foreign investors -NT$149.899B on Nov 4; UMC NT$98.4; WIN Semi NT$451, GCS NT$346 (limit-down)",
+      "impact": "Taiwan stocks lost 8% over the period's four trading days. Among foundries, compound names fell most (WIN Semi -21.97%, GCS -22.60%), followed by mature-node names (PSMC -17.72%, AWSC -15.44%, Vanguard -12.50%, UMC -11.75%) and TSMC (-5.49%): as last period, the hotter the theme, the deeper the fall. Yet fundamentals have not deteriorated: Samsung is exiting 8-inch (item 1), GlobalFoundries' ASPs are recovering (item 12) and GCS is running above 100% utilization (item 6). The gap between share prices and fundamentals is the defining feature of this period.",
+      "conf": "Confirmed (cross-checked against TWSE FMTQIK/MI_INDEX/STOCK_DAY/BFI82U/T86, TPEx data and TWSE real-time closing quotes; November 5 institutional flows and turnover had not been published when this report was produced and are excluded; Anue's November 4 figures of NT$27.631 billion investment-trust buying and NT$159.788 billion combined selling use a different basis from BFI82U)",
+      "vocab": [
+        ["high-low range", "高低震盪幅度"],
+        ["net sellers", "賣超方"],
+        ["straight days", "連續天數"],
+        ["rebounded", "反彈"],
+        ["limit-down", "跌停", "fin"],
+        ["fundamentals", "基本面", "fin"],
+        ["deteriorated", "惡化"],
+        ["on record", "有紀錄以來"]
+      ]
+    },
+    "18": {
+      "entity": "TSMC (2330) / Vanguard (5347)",
+      "title": "Economic Daily News: about 80% of TSMC's roughly 5 million wafers a year of 8-inch capacity will be handed to its affiliate Vanguard in phases over the coming years, potentially doubling Vanguard's 8-inch capacity",
+      "summary": "Economic Daily News, citing chip designers on February 10, 2026, said TSMC is accelerating its retreat from mature nodes as AI-driven leading-edge processes and advanced packaging crowd out other work. Of its roughly 5 million wafers a year of 8-inch capacity, about 80% will be handed over to its affiliate Vanguard in phases over the coming years through order transfers, equipment sales and technical cooperation. TSMC has said on earnings calls that it has reduced some 6-inch and 8-inch capacity; rather than exiting entirely, it is turning 8-inch into a strategic support role. It has sold 8-inch equipment to Vanguard twice in recent years and licensed gallium nitride technology to it. Vanguard operates five 8-inch fabs in Taiwan and Singapore with average monthly capacity of about 286,000 wafers in 2025, and analysts estimate its 8-inch capacity could multiply over the next few years. TrendForce cited the report again on November 3 when covering Samsung's 8-inch exit.",
+      "metric": "TSMC 8-inch capacity about 5M wafers a year, ~80% moving to Vanguard; Vanguard: five 8-inch fabs, average monthly capacity about 286,000 wafers in 2025",
+      "impact": "Read together with Samsung's planned exit from 8-inch by 2030 (item 1): with the world's two leading-edge foundries both withdrawing from 8-inch, capacity will concentrate at Vanguard, UMC, PSMC and Chinese players, and Vanguard is the most direct beneficiary of TSMC's transfer. Yet Vanguard's shares fell 12.50% this period (item 17), so the benefits of 8-inch consolidation are not yet reflected in the price.",
+      "conf": "Background (original date February 10, 2026, before the start of this period; cited from chip designers, and neither TSMC nor Vanguard has confirmed the 80% figure; cited again by TrendForce this period in connection with Samsung's 8-inch exit)",
+      "vocab": [
+        ["affiliate", "轉投資公司；關係企業"],
+        ["crowd out", "排擠"],
+        ["mature nodes", "成熟製程"],
+        ["equipment sales", "設備出售"],
+        ["beneficiary", "受惠者", "fin"],
+        ["consolidation", "集中化；整併"],
+        ["reflected in the price", "反映在股價"],
+        ["in phases", "分階段"]
+      ]
+    },
+    "19": {
+      "entity": "NVIDIA / Samsung Electronics / SK hynix / Micron / TSMC (2330)",
+      "title": "Korean media: NVIDIA requires base dies for custom HBM (NVHBM) from all three memory makers to be made on TSMC's 3nm, and Samsung has accepted; Samsung will keep its in-house one-stop production for standard HBM and AMD's custom HBM",
+      "summary": "South Korea's Seoul Economic Daily reported on October 18 that NVIDIA requires Samsung, SK hynix and Micron to have the base dies for its custom HBM (NVHBM) made on TSMC's 3nm process, and that Samsung has accepted after evaluating the request. With its 4nm lines fully loaded, accepting NVIDIA's specification lets Samsung compete for NVHBM orders without crowding out existing capacity. Standard HBM and custom HBM for other customers such as AMD will stay on Samsung's in-house one-stop model combining memory and foundry, but both product lines share 1c core die capacity, which could squeeze room for differentiation. Maeil Business Newspaper reported on November 3 that Samsung is evaluating whether its own processes could make NVHBM base dies so it can step in if TSMC's capacity falls short.",
+      "metric": "NVHBM base dies: TSMC 3nm (applies to Samsung, SK hynix and Micron alike); Samsung's HBM4 base dies currently on its own 4nm (lines fully loaded)",
+      "impact": "This is key to reading this period's news on Samsung's Taylor Fab 2 (item 7): Samsung's HBM base die foundry customers are mainly AMD, while NVIDIA's high-volume NVHBM goes to TSMC's 3nm. For TSMC, HBM base dies become another NVIDIA-related leading-edge demand on top of GPUs and CoWoS, and they neutralize Samsung's memory-plus-foundry one-stop pitch with its largest customer.",
+      "conf": "Background (original date October 18, 2026, before the start of this period; a Korean media report not confirmed by NVIDIA or Samsung; cited again in a TechNews analysis on November 5 and by TrendForce on November 4)",
+      "vocab": [
+        ["fully loaded", "滿載"],
+        ["specification", "規格"],
+        ["crowding out", "排擠"],
+        ["one-stop", "一站式"],
+        ["differentiation", "差異化"],
+        ["falls short", "不足"],
+        ["high-volume", "大量的"],
+        ["pitch", "賣點；推銷說法"]
+      ]
+    }
+  }
+}
