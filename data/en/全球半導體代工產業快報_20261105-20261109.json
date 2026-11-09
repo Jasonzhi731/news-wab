@@ -1,0 +1,298 @@
+{
+  "source": "全球半導體代工產業快報_20261105-20261109.xlsx",
+  "news": {
+    "1": {
+      "entity": "Hua Hong Semiconductor (1347.HK / 688347.SH)",
+      "title": "Hua Hong Q3 Revenue Hits Record US$987.1M Following Huali Micro Consolidation as Gross Margin Jumps to 24.6%; Q4 Revenue Guided up to US$1.09B",
+      "summary": "Hua Hong Semiconductor released its 2026Q3 earnings after market close on Nov 5 (following up on prior issue #13). Driven by the first-time consolidation of Huali Micro (Fab 5), Q3 revenue reached an all-time high of US$987.1M (+19.9% YoY, +9.9% QoQ). Excluding Huali Micro, standalone Hua Hong revenue reached US$803.4M (+26.5% YoY, +9.2% QoQ), beating the original guidance ceiling of US$770M–780M. Q3 gross margin jumped to 24.6% (+5.2 ppt YoY, +4.2 ppt QoQ; 19.9% standalone vs. 16%–18% guidance), while net profit attributable to parent surged to US$123.4M (+147.1% YoY, +77.7% QoQ), or US$0.059 per share. Overall capacity utilization stood at 102.9%, with 12-inch wafers accounting for 70.7% of revenue. For Q4, Hua Hong guided revenue between US$1.08B and US$1.09B with gross margin rising further to 25%–26%.",
+      "metric": "Q3 rev US$987.1M (+19.9% YoY; ex-Huali US$803.4M); GM 24.6% (ex-Huali 19.9%); net profit attributable to parent US$123.4M (+147.1% YoY); utilization 102.9%; Q4 guidance rev US$1.08B–1.09B, GM 25%–26%",
+      "impact": "The consolidation of Huali Micro's Fab 5, combined with Wuxi Fab 9B ramp-up and robust demand for AI server power management (BCD, super-junction), MCUs, and flash memory, propelled quarterly revenue near the US$1B mark with structurally higher margins, fueling a two-day 6.76% rally in Hua Hong's Hong Kong shares on Nov 6 and Nov 9.",
+      "conf": "Confirmed (official earnings release)",
+      "vocab": [
+        ["consolidation", "合併報表 / 併表"],
+        ["gross margin", "毛利率", "fin"],
+        ["guidance", "財測指引", "fin"],
+        ["attributable to parent", "歸屬母公司業主"],
+        ["capacity utilization", "產能利用率 / 稼動率"],
+        ["standalone", "獨立計算（不含併購標的）"],
+        ["power management", "電源管理"]
+      ]
+    },
+    "2": {
+      "entity": "UMC (2303) / WIN Semi (3105) / PSI (8028) / GUC (3443)",
+      "title": "UMC October Revenue Reaches NT$25.20B to Hold Above NT$25B for 3rd Straight Month; WIN Semi Up 31.9% YoY and GUC More Than Doubles (+127% YoY)",
+      "summary": "Multiple Taiwan foundries and design service providers reported October 2026 revenues on the afternoon of Nov 5: (1) UMC (2303) posted consolidated October revenue of NT$25.198B (-0.59% MoM, +18.33% YoY), holding above the NT$25B mark for three consecutive months and bringing 10M26 cumulative revenue to NT$229.21B (+16.33% YoY), supported by new tape-outs in display driver ICs, automotive radar, and Wi-Fi ICs alongside customer engagement in advanced packaging and silicon photonics; (2) GaAs foundry leader WIN Semiconductors (3105) reported October revenue of NT$2.056B (+1.3% MoM, +31.88% YoY; 10M26 NT$17.76B, +32.5% YoY); (3) reclaim wafer maker Phoenix Silicon International (8028) posted NT$550M (+34.77% YoY); (4) TSMC-affiliated ASIC design house Global Unichip Corp. (3443) surged 126.96% YoY to NT$8.433B.",
+      "metric": "UMC Oct rev NT$25.198B (-0.59% MoM, +18.33% YoY), 10M26 NT$229.21B (+16.33% YoY); WIN Semi Oct NT$2.056B (+31.88% YoY); PSI Oct NT$550M (+34.77% YoY); GUC Oct NT$8.433B (+126.96% YoY)",
+      "impact": "UMC and WIN Semi's October revenues confirm resilient Q4 demand across mature nodes and compound semiconductors, while GUC and PSI reflect booming demand for TSMC advanced-node turnkey projects and advanced packaging carrier wafers, highlighting a sharp divergence between strong fundamentals and short-term equity pullbacks.",
+      "conf": "Confirmed (company filings)",
+      "vocab": [
+        ["consolidated", "合併（財務報表）"],
+        ["cumulative revenue", "累計營收"],
+        ["fundamentals", "基本面", "fin"],
+        ["divergence", "背離"],
+        ["pullback", "回檔 / 拉回", "fin"],
+        ["tape-out", "設計定案 / 下線"],
+        ["reclaim wafer", "再生晶圓"]
+      ]
+    },
+    "3": {
+      "entity": "TrendForce / TSMC / UMC / VIS / PSMC / Tower Semiconductor",
+      "title": "TrendForce 2027 Forecast: 8-Inch Wafer Price Hikes Gain Traction as Global Foundry Revenue Poised for Another ~30% Growth Next Year",
+      "summary": "At TrendForce's '2027 Tech Industry Forecast' forum on Nov 5, Senior Analyst Joanne Chiao projected global foundry industry revenue to grow roughly 30% in 2027, extending 2026's >30% expansion on strong AI and general-purpose server demand. Excluding TSMC, other foundries are forecast to post nearly 20% YoY revenue growth in 2027, outpacing 2026. Short-term 8-inch capacity remains in structural shortage with utilization near 90% to full load in 2026–2027 and rising copper/gold material costs enabling price hikes. In 12-inch, TSMC and Samsung have full advanced-node order visibility through end-2027, while PSMC's 12-inch utilization will near full load in 2027 due to capped capacity and strong memory demand. Geographically, China's foundry capacity will grow >20% annually in 2026–2027 to reach a 45% share of global mature-node capacity by 2027; Singapore will account for ~20% of UMC's and ~25% of VIS's capacity in 2027, while Tower Semiconductor plans a 12-inch Fab 7X in Japan (completion 2028, mass production 2029) for silicon photonics PICs.",
+      "metric": "2027 global foundry rev forecast ~+30% YoY (ex-TSMC ~+20% YoY); China 2027 mature-node capacity share ~45%; 2027 Singapore capacity share: UMC ~20%, VIS ~25%; Tower Japan Fab 7X mass production 2029",
+      "impact": "The forecast underscores that foundry growth is broadening beyond TSMC to second-tier players: 8-inch wafers and specialty memory foundry (PSMC) have become the tightest mature-node sub-segments, while mature-node foundries and OSATs are accelerating Foundry 2.0 expansion into silicon interposers, TSV, W2W, and PLP.",
+      "conf": "Confirmed (research institute forum)",
+      "vocab": [
+        ["order visibility", "訂單能見度", "fin"],
+        ["price hike", "漲價 / 調漲價格"],
+        ["structural shortage", "結構性短缺"],
+        ["second-tier", "二線（廠商）"],
+        ["mature node", "成熟製程節點"],
+        ["silicon interposer", "矽中介層"],
+        ["panel-level packaging", "面板級封裝"]
+      ]
+    },
+    "4": {
+      "entity": "ASE Technology Holding (3711) / Taiwan Wonik Quartz",
+      "title": "InvesTaiwan Approves ASE's NT$123.7B Investment to Expand Southern Taiwan Advanced AI Packaging & Testing Capacity; Wonik Quartz Invests NT$2.34B",
+      "summary": "The Ministry of Economic Affairs' InvesTaiwan office approved two major semiconductor supply chain investments on Nov 5: (1) ASE Semiconductor will invest NT$123.7B across the Nanzih Technology Industrial Park, Southern Taiwan Science Park (STSP) Kaohsiung campus, and STSP Tainan campus to expand high-end packaging and testing capacity for global AI, HPC, and automotive electronics demand, incorporating smart manufacturing, automated lines, and water recycling while creating 3,553 domestic jobs; (2) South Korea's Wonik QnC subsidiary Taiwan Wonik Quartz will invest over NT$2.34B at the Hsinchu Science Park Tongluo campus to build a second plant and expand Miaoli lines for 12-inch and 16-inch ultra-high-purity diffusion quartzware.",
+      "metric": "ASE investment NT$123.7B, creating 3,553 jobs; Taiwan Wonik Quartz investment NT$2.34B (12-inch & 16-inch ultra-high-purity quartzware); InvesTaiwan cumulative approvals top NT$2.68T",
+      "impact": "ASE's NT$123.7B multi-year capital commitment in southern Taiwan (echoing its Innolux Tainan fab acquisition in prior issue #5) confirms that TSMC CoWoS spillover orders and backend AI chip packaging bottlenecks will persist for years, solidifying the Tainan-to-Kaohsiung advanced packaging corridor.",
+      "conf": "Confirmed (official announcement)",
+      "vocab": [
+        ["capital commitment", "資本承諾 / 資金投入"],
+        ["spillover", "外溢（效應 / 訂單）"],
+        ["bottleneck", "瓶頸"],
+        ["high-end packaging", "高階封裝"],
+        ["high-performance computing", "高效能運算 (HPC)"],
+        ["quartzware", "石英製品"]
+      ]
+    },
+    "5": {
+      "entity": "Intel Foundry (INTC) / Google / Amazon AWS",
+      "title": "Intel Touts >90% Wafer Utilization for EMIB-T Advanced Packaging to Challenge TSMC CoWoS; Google TPU v9 and AWS Reportedly Eye Adoption",
+      "summary": "South Korean media ZDNet Korea and Taiwan outlets reported on Nov 5–6 that Intel Foundry Advanced Packaging Director Kyu-oh Lee highlighted that traditional 2.5D silicon interposers achieve only ~60% wafer utilization, whereas Intel's Embedded Multi-die Interconnect Bridge (EMIB) places small silicon bridges only where needed, achieving >90% wafer utilization. Next-generation 'EMIB-T'—which integrates through-silicon vias (TSVs) inside the silicon bridges for power delivery—has drawn strong hyperscaler interest. Intel's roadmap shows commercial AI package sizes growing from up to 120×120 mm in 2026 (12 HBMs, 20+ EMIB bridges) to 120×180 mm+ in the next generation (16+ HBMs, 38+ bridges) and 240×240 mm in future ultra-large packages (32+ HBMs, 70+ bridges). Supply chain sources indicate Google's TPU v9 variants (codenamed HumuFish and TriggerFish) and Amazon AWS custom ASICs are evaluating EMIB-T, while Google's flagship WhaleFish will stay on TSMC's CoWoS-L.",
+      "metric": "EMIB wafer utilization >90% (vs. ~60% for silicon interposers); package roadmap: 120×120 mm (12 HBMs / 20+ bridges) → 120×180 mm+ (16+ HBMs / 38+ bridges) → 240×240 mm (32+ HBMs / 70+ bridges)",
+      "impact": "With TSMC's CoWoS capacity remaining tight and AI packages pushing reticle limits, Intel's interposer-free EMIB-T offers a cost-effective alternative for hyperscaler custom ASICs, serving as a more immediate commercial wedge for Intel Foundry than leading-edge logic nodes.",
+      "conf": "High (company executive remarks + supply chain reports)",
+      "vocab": [
+        ["cost-effective", "具成本效益的"],
+        ["hyperscaler", "超大規模雲端服務商"],
+        ["commercial wedge", "商業切入點 / 突破口"],
+        ["wafer utilization", "晶圓利用率"],
+        ["through-silicon via", "矽穿孔 (TSV)"],
+        ["reticle limit", "光罩尺寸極限"]
+      ]
+    },
+    "6": {
+      "entity": "Vanguard International Semiconductor / VIS (5347)",
+      "title": "VIS Q3 Net Profit Jumps 81.9% YoY to EPS NT$1.62; Q4 Gross Margin Guided Up to 36% as Chairman Fang Affirms Irreversible AI Compute Demand",
+      "summary": "VIS (5347) held its Q3 earnings call on Nov 6 (following up on prior issue #13), reporting Q3 consolidated revenue of NT$15.702B (+10.2% QoQ, +27.2% YoY), gross margin up 1.3 ppt QoQ to 33.6%, net profit attributable to parent of NT$3.099B (+4.2% QoQ, +81.9% YoY), and EPS of NT$1.62, with wafer shipments up ~5% QoQ and ASP up ~3% QoQ. President John Wei guided Q4 (assuming USD/TWD at 32.0): wafer shipments +0% to +2% QoQ, blended ASP +3% to +5% QoQ, and gross margin rising to 34%–36%, with 4-month order visibility and utilization edging up to 90%+. Full-year 2026 capex remains at NT$60B–70B (nearly 90% for Singapore 12-inch VSMC fab, on track for 2027Q1 mass production) with 2026 depreciation at ~NT$9.1B. Chairman Leuh Fang stated that despite post-US-midterm market volatility, AI compute demand growth is irreversible; AI-related revenue already exceeds 10% in 2026, and tight 8-inch supply leaves room for further ASP increases.",
+      "metric": "Q3 rev NT$15.702B (+10.2% QoQ, +27.2% YoY), GM 33.6%, net profit NT$3.099B (+81.9% YoY), EPS NT$1.62; Q4 guidance shipments +0%–2% QoQ, ASP +3%–5% QoQ, GM 34%–36%, utilization 90%+; 2026 capex NT$60B–70B",
+      "impact": "VIS's ability to guide Q4 ASP up 3%–5% QoQ and gross margin to a 35% midpoint on flat-to-slightly-higher shipments validates strong pricing power driven by AI server PMIC demand and fine-line 8-inch capacity conversion (see item #15 for October revenue).",
+      "conf": "Confirmed (earnings call)",
+      "vocab": [
+        ["earnings call", "法人說明會（法說會）", "fin"],
+        ["blended ASP", "混合平均銷售單價"],
+        ["pricing power", "定價權 / 議價能力", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["depreciation", "折舊"],
+        ["midpoint", "中位數"]
+      ]
+    },
+    "7": {
+      "entity": "NVIDIA / ASE Holding (3711) SPIL / Powertech (6239) / Broadcom",
+      "title": "NVIDIA Reportedly Provides Billions in Funding to Help SPIL Expand CoWoS Capacity; Powertech to Invest US$400M in Singapore PLP JV with Broadcom",
+      "summary": "Citing UAnalyze, CNYES reported on Nov 6 that industry executives revealed NVIDIA is providing billions of US dollars in funding to assist ASE Technology Holding subsidiary Siliconware Precision Industries (SPIL) in expanding CoWoS-related advanced packaging capacity (covering facilities and equipment) to secure AI GPU backend supply. Research firm Yole Group estimates global advanced packaging revenue will surpass traditional packaging for the first time in 2026, exceeding 51% of total packaging revenue, with global advanced packaging capex approaching US$28B in 2026. The report also noted that Powertech Technology (6239), after securing AMD orders, plans to invest US$400M to form a joint venture with Broadcom in Singapore to build panel-level packaging (PLP) lines slated for production as early as 2028.",
+      "metric": "NVIDIA reported multi-billion USD funding for SPIL CoWoS expansion; Yole estimates 2026 advanced packaging rev share >51%, global capex ~US$28B; Powertech reported US$400M Singapore PLP JV with Broadcom (production 2028)",
+      "impact": "NVIDIA directly funding OSAT leader SPIL's expansion and Broadcom forming a Singapore PLP joint venture with Powertech illustrate that top AI chip designers are shifting from pure purchase orders to direct capital co-investment with backend partners to lock in long-term capacity.",
+      "conf": "Unconfirmed (industry executive remarks cited by media)",
+      "vocab": [
+        ["funding", "資金挹注 / 融資"],
+        ["joint venture", "合資企業 (JV)", "fin"],
+        ["co-investment", "共同投資"],
+        ["purchase order", "採購訂單"],
+        ["subsidiary", "子公司", "fin"],
+        ["backend", "後段（封裝測試）"]
+      ]
+    },
+    "8": {
+      "entity": "Powertech (6239) / KYEC (2449) / Chipbond (6147) / Unimicron (3037) / Kinsus (3189) / GlobalWafers (6488)",
+      "title": "AI OSAT and IC Substrate October Revenues Surge: Unimicron Jumps 67.6% YoY to NT$18.99B; KYEC, Powertech, and Chipbond Rise 25%–33% YoY",
+      "summary": "Taiwan OSAT, ABF substrate, and silicon wafer makers released October 2026 revenues on Nov 6: (1) OSATs: Powertech (6239) posted NT$8.727B (+2.6% MoM, +25.2% YoY; 10M26 NT$78.49B, +29.8% YoY); KYEC (2449) reached NT$4.426B (+8.7% MoM, +29.5% YoY; 10M26 NT$37.90B, +33.5% YoY); Chipbond (6147) recorded NT$2.437B (-0.1% MoM, +33.0% YoY). (2) ABF substrates: Unimicron (3037) surged to NT$18.986B (+1.8% MoM, +67.6% YoY; 10M26 NT$151.97B, +40.9% YoY), while Kinsus (3189) hit NT$5.368B (+49.05% YoY). (3) Wafers & equipment/IP: GlobalWafers (6488) posted NT$4.764B, Sino-American Silicon (5483) NT$6.813B, Formosa Sumco (3532) NT$1.373B, Marketech (6196) NT$7.334B, and Faraday (3035) NT$1.241B (+48.89% YoY).",
+      "metric": "Oct rev: Unimicron NT$18.986B (+67.6% YoY), Kinsus NT$5.368B (+49.1% YoY), Powertech NT$8.727B (+25.2% YoY), KYEC NT$4.426B (+29.5% YoY), Chipbond NT$2.437B (+33.0% YoY), GlobalWafers NT$4.764B, Marketech NT$7.334B",
+      "impact": "Unimicron and Kinsus posting 49%–68% YoY revenue growth alongside KYEC's strong monthly climb confirm that high-layer-count, large-body ABF substrates and high-end AI GPU final testing (FT) are in a simultaneous volume-and-price expansion cycle.",
+      "conf": "Confirmed (company filings)",
+      "vocab": [
+        ["year-over-year", "年增率 (YoY)"],
+        ["month-over-month", "月增率 (MoM)"],
+        ["expansion cycle", "擴張週期"],
+        ["IC substrate", "IC 載板"],
+        ["final testing", "成品測試 (FT)"],
+        ["silicon wafer", "矽晶圓"]
+      ]
+    },
+    "9": {
+      "entity": "PHLX Semiconductor Index / TSMC (2330) / National Financial Stabilization Fund / FSC",
+      "title": "US Midterm Fallout Sends SOX Plunging 12.25% and TAIEX Diving Nearly 3,800 Pts Intraday on Nov 6 as TSMC Hits Limit-Down; Stabilization Fund & Short-Selling Curbs Deployed",
+      "summary": "Following US midterm election results where Democrats won both chambers of Congress and flipped key governorships including Texas—where incoming officials proposed curbing data center construction and power allocation—the PHLX Semiconductor Index (SOX) plunged 12.25% on Nov 5 to 9,011.14, with TSMC ADR falling 10.78% (US$353.10) and UMC ADR diving 16.69% (US$13.38). On Nov 6, panic deleveraging hit Taiwan's stock market: the TAIEX plummeted nearly 3,800 points intraday to 37,837, breaching the 40,000 threshold, while TSMC (2330) gapped down at the open to its limit-down price of NT$2,020 (-NT$220, a record intraday point drop). Bargain-hunting pared losses by the close, leaving the TAIEX down 1,873.08 points (-4.50%) at 39,701.64 on a massive NT$1,321.07B turnover. Foreign investors net sold NT$91.19B on Nov 6 (bringing two-day net selling with Nov 5's NT$102.46B to NT$193.65B); TSMC closed at NT$2,135 (-NT$105 / -4.69%, erasing NT$2.72T in market cap with 22,844 lots net sold by foreign investors) and WIN Semi closed limit-down at NT$406. After market close on Nov 6, Taiwan's National Financial Stabilization Fund authorized its 10th-ever market intervention, and the Financial Supervisory Commission (FSC) announced short-selling curbs effective Nov 9 (lowering daily SBL short-sale caps and raising margin maintenance requirements).",
+      "metric": "Nov 5 SOX -12.25% (9,011.14), TSM -10.78%, UMC -16.69%; Nov 6 TAIEX 39,701.64 (-1,873.08 pts / -4.50%, intraday low 37,837), turnover NT$1,321.07B; TSMC intraday limit-down NT$2,020, close NT$2,135 (-4.69%); 10th Stabilization Fund intervention + FSC short-selling curbs",
+      "impact": "US post-midterm concerns over AI data center power regulations acted as a deleveraging catalyst for richly valued tech stocks; the two-day 3,247-point TAIEX drop triggered dual stabilization measures from the Stabilization Fund and FSC, directly setting up the sharp Nov 9 relief rally (see item #17).",
+      "conf": "Confirmed (official close & policy announcements)",
+      "vocab": [
+        ["deleveraging", "去槓桿"],
+        ["limit-down", "跌停", "fin"],
+        ["bargain-hunting", "逢低承接買盤"],
+        ["turnover", "成交金額 / 周轉額", "fin"],
+        ["market cap", "市值", "fin"],
+        ["short-selling curbs", "限空令"],
+        ["margin maintenance", "融資融券擔保維持率 / 保證金"]
+      ]
+    },
+    "10": {
+      "entity": "TSMC (2330) / NVIDIA / Winbond (2344)",
+      "title": "The Information Reports NVIDIA Asked TSMC to Weigh Building or Acquiring 3D DRAM Capacity; TSMC Reaffirms Pure-Play Logic Focus as Winbond's Chiao Sees Low Probability",
+      "summary": "The Information reported on Nov 7, citing people familiar with the matter, that amid severe high-bandwidth memory shortages for AI accelerators, TSMC—at the request of its largest customer NVIDIA—has tasked VP of Fab Operations Geoffrey Hsu with evaluating whether to build 3D DRAM (vertically stacked DRAM cells) production lines or acquire existing fabs to convert into advanced memory facilities, though talks remain exploratory. TSMC responded that it does not comment on market rumors or speculation, emphasizing its core business remains dedicated semiconductor foundry services focused on logic chips. Winbond Electronics (2344) Chairman Arthur Chiao commented the same day that DRAM manufacturing requires decades of accumulated know-how and that TSMC maintains tight partnerships with Samsung, SK Hynix, and Micron, making it unlikely TSMC would enter direct competition with its memory partners.",
+      "metric": "Report claims VP Geoffrey Hsu leading evaluation of greenfield or acquired 3D DRAM fabs for NVIDIA; TSMC reaffirms logic foundry core focus; Winbond Chairman Chiao sees low probability of direct DRAM entry",
+      "impact": "The report highlights hyperscaler and GPU giants' anxiety over HBM and next-generation 3D DRAM supply bottlenecks controlled by the big three memory makers; in practice, TSMC is far more likely to deepen collaboration via HBM4 logic base dies and wafer-to-wafer hybrid bonding than to fabricate DRAM capacitor arrays in-house.",
+      "conf": "Unconfirmed (foreign media citing sources; unconfirmed by company)",
+      "vocab": [
+        ["exploratory", "初步評估的 / 探索性的"],
+        ["speculation", "市場臆測"],
+        ["core business", "核心業務"],
+        ["greenfield", "新建廠房投資"],
+        ["pure-play foundry", "專業晶圓代工廠"],
+        ["hybrid bonding", "混合鍵合"]
+      ]
+    },
+    "11": {
+      "entity": "Alchip-KY (3661) / MediaTek (2454) / TSMC (2330)",
+      "title": "Alchip-KY Wins Back N3 Project and Secures Sole N2 Physical Design Role While Welcoming TSMC's Secondary Wafer Market Curbs; MediaTek Sees Q4 AI ASIC Revenue Hitting US$2.5B",
+      "summary": "Taiwan's two leading cloud ASIC design houses shared strong foundry tape-out outlooks: (1) Alchip-KY (3661) stated at its earnings call that it won back a major hyperscaler's 3nm (N3) project from a competitor, noting Q3 revenue would have been US$100M higher without advanced packaging constraints. For the next-generation 2nm (N2) project, Alchip is currently the sole physical design vendor and handles the I/O die, with the customer committing that only the customer and Alchip will place wafer orders with TSMC. Addressing TSMC Chairman C.C. Wei's recent remark that TSMC dislikes the 'secondary wafer market' (where peers without design roles obtain and resell wafer allocations), Alchip CEO Johnny Shen said any contraction of the secondary market would be unequivocally positive for Alchip; analysts project Alchip's revenue to inflect sharply from 2028 to ~NT$240B by 2030. (2) MediaTek (2454) CEO Rick Tsai projected Q4 AI ASIC revenue could reach US$2.5B with additional data center projects under negotiation.",
+      "metric": "Alchip-KY: Q3 rev constrained by ~US$100M due to packaging, sole N2 physical design & I/O die vendor, consensus 2030 rev ~NT$240B; MediaTek Q4 AI ASIC rev guided up to US$2.5B",
+      "impact": "Alchip and MediaTek's updates confirm hyperscaler custom silicon is rapidly migrating from N3 to TSMC's N2 node, while TSMC's crackdown on secondary wafer allocation reselling favors full-service ASIC vendors with genuine front-to-back design and CoWoS integration capabilities.",
+      "conf": "Confirmed (earnings calls & institutional reports)",
+      "vocab": [
+        ["secondary market", "次級市場"],
+        ["allocation", "配額"],
+        ["consensus", "市場共識預期", "fin"],
+        ["inflect", "出現轉折性成長"],
+        ["working capital", "營運資金"],
+        ["physical design", "實體設計"]
+      ]
+    },
+    "12": {
+      "entity": "Tesla (TSLA) / TSMC (2330) / Samsung Electronics",
+      "title": "Tesla Unveils New AI Chip Roadmap: Revived Dojo D3 Shifts to Multi-Chiplet & HBM Architecture while 2nm SI6 Targets 80x Compute Leap",
+      "summary": "According to Tom's Hardware and CNYES on Nov 7, Tesla unveiled its multi-year AI accelerator roadmap, rebranding future generations under the 'Super Intelligence' (SI) banner: 5th-gen SI5 (formerly AI5) introduces a multi-chip module (MCM) design co-manufactured by TSMC and Samsung on 3nm/2nm processes; 6th-gen inference accelerator SI6 is slated for 2029–2030 on a 2nm node (with Samsung also contracted to manufacture SI6 through 2033, see prior issue #10), targeting 80x compute performance and 9x memory capacity over HW4. Meanwhile, Tesla revived its Dojo training program with a 3rd-gen 'Dojo D3' that abandons the wafer-scale SRAM-centric architecture of D1/D2 in favor of a multi-chiplet design integrating 2.5D/3D advanced packaging and stacked HBM.",
+      "metric": "SI5 uses MCM on TSMC/Samsung 3nm & 2nm; SI6 slated for 2029–2030 on 2nm with 80x compute & 9x memory vs. HW4; Dojo D3 shifts to chiplet + 2.5D/3D packaging + HBM",
+      "impact": "Dojo D3 abandoning pure SRAM System-on-Wafer (SoW) in favor of chiplets and 2.5D/3D HBM integration validates that CoWoS-style heterogeneous integration remains the most scalable and yield-viable architecture as frontier AI model parameters balloon.",
+      "conf": "Confirmed (tech media report)",
+      "vocab": [
+        ["roadmap", "發展藍圖 / 技術路線圖"],
+        ["scalable", "具擴充性的"],
+        ["heterogeneous integration", "異質整合"],
+        ["chiplet", "小晶片 / 多晶粒"],
+        ["inference", "推論"],
+        ["yield", "良率"]
+      ]
+    },
+    "13": {
+      "entity": "Tesla Terafab / Intel Foundry (INTC) / Taiwan Supply Chain",
+      "title": "Musk's Terafab Targets 1 TW Annual AI Compute and 1M Wafers/Month by 2032; Intel Reportedly Coordinating 2nm & 1.4nm Logic Support with Taiwan Firms Eyed for Memory",
+      "summary": "At the Baron Investment Conference on Nov 6, Elon Musk stated that to mitigate geopolitical risks from Asia's concentration of chip manufacturing (with the US holding only ~10% share), Tesla and SpaceX's 'Terafab' project in Grimes County, Texas (Phase 1 investment >US$16.8B) aims to produce 1 terawatt (TW) of annual AI compute power (vs. estimated global AI chip output of 20–25 GW in 2026 and 35–45 GW in 2027). Total long-term investment could reach US$1T, with a first SRAM test chip targeted for May–June 2027, volume production targeted for 2028Q3, and chip design-to-test cycles compressed from 12 months to 1 month. Nikkei Asia and Wccftech further reported on Nov 9 that Terafab briefed equipment makers on a 2032 target of 1,000,000 wafers per month—including ~700,000 memory wafers (rivaling Samsung's current 650k–700k/month DRAM capacity) and >300,000 logic wafers—with Intel coordinating 2nm (18A) and 1.4nm (14A) logic process support and Taiwanese firms under consideration for memory technology collaboration.",
+      "metric": "Terafab targets: 1 TW/yr compute output, 1M WPM by 2032 (~700k memory + >300k logic), Phase 1 Texas investment >US$16.8B (long-term up to US$1T); timeline: May–Jun 2027 SRAM test chip, 2028Q3 volume production; Intel eyed for 2nm/1.4nm logic, Taiwan firms for memory",
+      "impact": "While Terafab's goal of ramping to 1M wafers/month of advanced logic and memory within six years is extraordinarily aggressive, its plan to license Intel 18A/14A logic and Taiwanese memory know-how is already influencing long-term North American equipment and foundry ecosystem planning.",
+      "conf": "Unconfirmed (Nikkei citing sources familiar with the matter)",
+      "vocab": [
+        ["geopolitical risk", "地緣政治風險"],
+        ["volume production", "量產"],
+        ["technology licensing", "技術授權"],
+        ["wafers per month", "每月晶圓產能 (WPM)"],
+        ["ecosystem", "生態系"],
+        ["capital expenditure", "資本支出"]
+      ]
+    },
+    "14": {
+      "entity": "SMEE / YMTC / Topoint Technology (8021)",
+      "title": "SMEE Showcases >90% Domestic DUV Lithography Tools at CIIE as YMTC Fab 4 Targets >70% Local Equipment; China Tungsten Export Curbs Spark AI PCB Micro-Drill Price Surge",
+      "summary": "Three notable developments emerged across China's semiconductor equipment and upstream materials supply chain on Nov 6–9: (1) Shanghai Micro Electronics Equipment (SMEE) exhibited scale models of its 4th-gen SSC800 (248nm KrF excimer laser, ≤110nm resolution) and SSB800 (365nm i-Line, ≤280nm resolution) dry step-and-scan lithography systems at the 8th CIIE in Shanghai, achieving >90% domestic core component localization and >10 million cumulative wafers processed on fab lines; (2) supply chain reports indicate Yangtze Memory Technologies Corp. (YMTC) is targeting >70% domestic Chinese equipment share for its planned 4th wafer fab in Wuhan; (3) tightened Chinese tungsten export controls and supply constraints have driven tungsten prices up ~220% YTD, sparking a price hike wave for tungsten-carbide micro-drills used in high-layer AI server PCBs and IC substrates, keeping Taiwanese leader Topoint (8021) at full capacity.",
+      "metric": "SMEE SSC800 (KrF ≤110nm) & SSB800 (i-Line ≤280nm) >90% domestic components, >10M cumulative wafers processed; YMTC Fab 4 targets >70% domestic equipment; tungsten prices +~220% YTD",
+      "impact": "China's localization in mature-node dry lithography and memory etch/deposition equipment has crossed a critical threshold supporting Hua Hong, SMIC, and YMTC expansions; meanwhile, China's >80% control of global tungsten supply is transmitting upstream material export curbs directly into AI hardware PCB/substrate component costs.",
+      "conf": "Confirmed (exhibition disclosures & industry reports)",
+      "vocab": [
+        ["localization", "國產化 / 在地化"],
+        ["export controls", "出口管制"],
+        ["upstream", "上游（供應鏈）"],
+        ["year-to-date", "年初至今 (YTD)"],
+        ["lithography", "微影 / 曝光機"],
+        ["tungsten carbide", "碳化鎢"]
+      ]
+    },
+    "15": {
+      "entity": "VIS (5347) / Topco Scientific (5434) / Taiwan Mask (2338) / Ministry of Finance",
+      "title": "VIS October Revenue Up 20.5% YoY to NT$4.71B and Topco Posts NT$8.19B; AI Boom Propels Taiwan October Exports to All-Time Monthly Record of US$96.76B",
+      "summary": "Multiple semiconductor firms and the Ministry of Finance released October 2026 figures on Nov 9: (1) VIS (5347) reported October consolidated revenue of NT$4.711B (-20.20% MoM, +20.53% YoY), with CFO Amanda Huang attributing the sequential dip to normal early-quarter wafer shipment timing, bringing 10M26 cumulative revenue to NT$47.19B (+18.25% YoY); (2) semiconductor material distributor Topco Scientific (5434) posted October revenue of NT$8.186B on strong advanced-node photoresist, quartz, and silicon wafer demand; (3) Taiwan Mask Corp. (2338) reported October revenue down 7.4% MoM; (4) the Ministry of Finance announced Taiwan's October exports reached a record US$96.76B, driven by booming AI server, ICT, and advanced semiconductor shipments (note: October revenues for TSMC, PSMC, Episil, and ASE Holding are scheduled for release on Nov 10).",
+      "metric": "VIS Oct rev NT$4.711B (-20.20% MoM, +20.53% YoY), 10M26 NT$47.19B (+18.25% YoY); Topco Oct rev NT$8.186B; Taiwan Oct exports record US$96.76B",
+      "impact": "While VIS's October revenue dipped sequentially on normal intra-quarter shipment cadence, its >20% YoY growth aligns with Q4 guidance; meanwhile, Taiwan's record US$96.76B October export print foreshadows a strong October revenue release from TSMC on Nov 10.",
+      "conf": "Confirmed (official & company announcements)",
+      "vocab": [
+        ["sequential", "季比或月比（與前期相比）"],
+        ["cadence", "節奏 / 週期"],
+        ["foreshadow", "預示 / 預告"],
+        ["distributor", "通路商 / 代理商"],
+        ["photoresist", "光阻劑 / 光阻液"],
+        ["photomask", "光罩"]
+      ]
+    },
+    "16": {
+      "entity": "Diamond Foundry / NVIDIA (NVDA)",
+      "title": "Diamond Foundry Debuts World's First 200mm Single-Crystal Diamond Wafer for AI Thermal Management; NYT Reveals Two Approved Chinese H200 Buyers Are Shell Companies",
+      "summary": "Two notable international AI chip stories broke on Nov 9 across thermal materials and export compliance: (1) US-based Diamond Foundry announced it has grown the world's first 200mm (8-inch) single-crystal diamond wafer, offering ultra-high thermal conductivity and electrical insulation far superior to silicon or polycrystalline diamond to mitigate hotspots in kilowatt-class AI processors, with 300mm (12-inch) wafers targeted next; (2) following Financial Times reports that NVIDIA's board launched an independent probe into CEO Jensen Huang's past association with executives of chip-smuggling suspect Megaspeed, The New York Times revealed on Nov 9 that among ~24 Chinese entities approved by the US Commerce Department to handle NVIDIA H200 chips, Beijing-based New Matrix (linked to blacklisted Wise Road Capital) and Maginfra (linked to sanctioned Inspur Group) operate out of virtually empty shell offices, raising Washington scrutiny over due diligence gaps, though Taiwan supply chain and South Korean officials expect no near-term GPU supply disruption.",
+      "metric": "Diamond Foundry achieves world's first 200mm (8-inch) single-crystal diamond wafer, targeting 300mm next; NYT finds 2 of ~24 Commerce-approved Chinese H200 buyers (New Matrix & Maginfra) are shell companies",
+      "impact": "Breaking the 200mm barrier for single-crystal diamond wafers introduces a transformative substrate option for future 3D IC and backside power thermal dissipation; meanwhile, the H200 shell-company revelations combined with a newly elected Democratic Congress could trigger tighter US enforcement on China AI chip exports.",
+      "conf": "Confirmed (company release & investigative report)",
+      "vocab": [
+        ["shell company", "空殼公司"],
+        ["due diligence", "盡職調查"],
+        ["compliance", "法規遵循 / 合規"],
+        ["independent probe", "獨立調查"],
+        ["thermal conductivity", "導熱係數 / 導熱率"],
+        ["single-crystal", "單晶"]
+      ]
+    },
+    "17": {
+      "entity": "TSMC / UMC / VIS / PSMC / WIN Semi / Hua Hong / SMIC / US ADRs",
+      "title": "SOX 4.21% Rebound and Stabilization Fund Propel TAIEX Up 1,960 Pts on Nov 9 as Five Taiwan Foundries Hit Limit-Up, Though Foreign Investors Net Sell Another NT$90.06B",
+      "summary": "Following a 4.21% rebound in the PHLX Semiconductor Index on Nov 6 (closing at 9,390.25)—with TSMC ADR up 6.33% (US$375.44), Intel up 7.71% (US$56.28), GlobalFoundries up 6.22% (US$38.62), Tower up 4.85% (US$137.34), and UMC ADR up 3.51% (US$13.85)—and backed by the National Financial Stabilization Fund and FSC short-selling curbs taking effect on Nov 9, the TAIEX staged a massive 1,960.06-point (+4.94%) rebound on Nov 9 to close at 41,661.70 on NT$877.03B turnover. Foundry shares rallied across the board: TSMC surged NT$100 (+4.68%) to NT$2,235, UMC rose 5.11% to NT$96.70, ASE Holding gained 6.45% to NT$561, and VPEC rose 7.05% to NT$341.50, while five foundries—VIS (NT$132.00), PSMC (NT$58.10), WIN Semi (NT$446.50), Episil (NT$55.90), and GCS Holdings (NT$320.00)—all surged to their 10% daily limit-up. However, foreign investors net sold another NT$90.06B on Nov 9 (dealers net sold NT$31.22B, investment trusts net bought NT$26.75B; total institutional net sell NT$94.53B), dumping 47,956 lots of UMC, 8,759 lots of TSMC, and 8,457 lots of ASE Holding while net buying 1,547 lots of PSMC. In Hong Kong, Hua Hong (1347.HK) extended its post-earnings rally to close at HK$71.85 (+2.35%), while SMIC (0981.HK) rose 1.01% to HK$46.04.",
+      "metric": "Nov 9 TAIEX 41,661.70 (+1,960.06 pts / +4.94%), foreign net sell NT$90.06B (3-day cumulative net sell NT$283.71B); TSMC NT$2,235 (+4.68%), UMC NT$96.70 (+5.11%); VIS NT$132, PSMC NT$58.1, WIN Semi NT$446.5, Episil NT$55.9, GCS NT$320 all limit-up; Hua Hong HK$71.85",
+      "impact": "The Stabilization Fund and short-selling curbs successfully halted panic selling and sparked a limit-up wave across second-tier and compound foundries, yet foreign investors still cashed out over NT$90B into the nearly 2,000-point rally—bringing three-day net outflows to NT$283.7B—as rising US Treasury yields (10-year at 4.86%) and December Fed rate-hike bets kept global equity allocation cautious.",
+      "conf": "Confirmed (official market close data)",
+      "vocab": [
+        ["limit-up", "漲停", "fin"],
+        ["net sell", "賣超"],
+        ["investment trust", "投信（證券投資信託）"],
+        ["dealer", "自營商"],
+        ["Treasury yield", "美國公債殖利率", "fin"],
+        ["rate-hike", "升息"],
+        ["outflow", "資金流出"]
+      ]
+    },
+    "18": {
+      "entity": "Accelink Technologies (002281.SZ)",
+      "title": "(Background: Groundbreaking 2026/11/01, Reported 11/09) China's Accelink Breaks Ground on RMB 10.2B High-End Optoelectronic and Silicon Photonics Chip Industrial Base in Wuhan",
+      "summary": "TrendForce reported on Nov 9 that Chinese optical transceiver leader Accelink Technologies (002281.SZ) officially broke ground on Nov 1, 2026 on its RMB 10.2B 'High-End Optoelectronic Device Industrial Base Project' in Wuhan Optics Valley, spanning ~318,900 sq. meters and slated for delivery by end-2027. The facility will house high-end silicon photonics chip R&D and fabrication, production lines for over 10 million 800G-to-12.8T high-speed optical transceivers per year, co-packaged optics (CPO) and near-packaged optics (NPO) optical engines, and hollow-core fiber products (listed as background as groundbreaking occurred on Nov 1 prior to this report's window).",
+      "metric": "Total investment RMB 10.2B; broke ground 2026/11/01, delivery end-2027; planned capacity >10M/yr 800G–12.8T optical transceivers plus silicon photonics chips and CPO/NPO optical engines",
+      "impact": "Alongside TSMC, UMC, and Tower Semiconductor's expanding silicon photonics foundry roadmaps, China's leading optical module maker is investing over RMB 10B to vertically integrate silicon photonics chip fabrication and CPO engines, reflecting the industry-wide transition to optical interconnects in AI compute clusters.",
+      "conf": "Confirmed (official project groundbreaking)",
+      "vocab": [
+        ["groundbreaking", "動工 / 破土典禮"],
+        ["vertically integrate", "垂直整合"],
+        ["silicon photonics", "矽光子"],
+        ["co-packaged optics", "共同封裝光學 (CPO)"],
+        ["optical transceiver", "光收發模組"],
+        ["interconnect", "互連"]
+      ]
+    }
+  }
+}
