@@ -1,5 +1,5 @@
 {
-  "source": "全球半導體代工產業快報_20261112-20261117.xlsx",
+  "source": "全球半導體代工產業快報_20261112-20261118.xlsx",
   "news": {
     "1": {
       "entity": "SMIC (0981.HK / 688981.SH)",
@@ -260,6 +260,135 @@
       ]
     },
     "17": {
+      "entity": "US Commerce Dept BIS / US Senate / MOEA / TSMC / ASE",
+      "title": "US BIS Curbs Narrow <30B-Transistor Foundry & OSAT Exemptions for 16/14nm Logic to Block China Tape-Outs; Senate Weighs Chip EQUIP Act Barring Chinese Fab Tools",
+      "summary": "Following the US Commerce Department BIS's Nov 16 interim final rule on AI chips taking effect Nov 19 (see item #11), TechNews and Taiwan's Ministry of Economic Affairs (MOEA) detailed the specific provisions impacting foundries and OSATs on Nov 17–18: (1) Under revised Export Administration Regulations (EAR), all logic chips using 16/14nm or more advanced nodes or non-planar transistor architectures are presumed restricted before shipment; previously, approved foundries (like TSMC) and OSATs (like ASE and Amkor) could self-certify and ship without a license if transistor counts were below 30 billion, but the new rule revokes this exemption whenever the front-end chip designer is based in China or the five newly designated high-risk countries (Singapore, Malaysia, Thailand, Indonesia, and Brazil), requiring prior BIS licenses and strict ultimate-parent due diligence (with a 30-day grace period for in-transit goods and a 60-day comment window). The MOEA noted that US customers placing orders are responsible for applying for BIS licenses, while TSMC stated it is reviewing the rules and remains committed to full compliance. (2) The US Senate Commerce Committee scheduled a Nov 18 markup for the 'Chip EQUIP Act,' which would bar CHIPS Act grant recipients (including TSMC, Intel, Samsung, and Micron) for 10 years from purchasing or using complete semiconductor equipment manufactured, assembled, or refurbished by Chinese entities (excluding standalone components, chambers, and subsystems); TSMC has already been phasing out Chinese tools such as AMEC and Beijing E-Town's Mattson Technology at 3nm and plans to exclude them completely at 2nm.",
+      "metric": "BIS rule: 16/14nm & below non-planar logic chips presumed restricted, revoking <30B-transistor foundry/OSAT license exemptions for designers in China, Singapore, Malaysia, Thailand, Indonesia & Brazil (30-day transit grace period); Senate Chip EQUIP Act: 10-yr ban on Chinese complete fab tools for CHIPS grant recipients",
+      "impact": "By simultaneously tightening third-country compute leasing and revoking sub-30B-transistor foundry/OSAT exemptions, Washington is cutting off Chinese fabless firms from using Southeast Asian shell entities or chiplet partitioning to tape out 16/14nm-and-below designs overseas; while some Asian orders may face licensing delays, freed-up advanced capacity at TSMC and ASE will be immediately absorbed by US hyperscalers.",
+      "conf": "Confirmed (official US BIS regulations, MOEA statement, and Senate bill)",
+      "vocab": [
+        ["interim final rule", "臨時最終規則"],
+        ["presume", "推定 / 預設"],
+        ["revoke", "撤銷 / 取消（豁免）"],
+        ["grace period", "寬限期 / 緩衝期"],
+        ["in-transit", "在途運輸中的"],
+        ["ultimate parent", "最終母公司"],
+        ["refurbish", "翻新 / 整修（設備）"]
+      ]
+    },
+    "18": {
+      "entity": "TSMC (2330) / United Integrated Services (2404) / SPIL / Pegatron (4938) / Taiwan Mask (2338)",
+      "title": "TSMC Supply Chain Forum Honors 35 Top Suppliers as UIS, SPIL, and Pegatron Join List; Taiwan Mask Sees 2027 Revenue Up 20% on Large-Format CoWoS & Silicon Photonics Masks",
+      "summary": "TSMC (2330) held its '2026 Supply Chain Management Forum' on Nov 17 led by Chairman and CEO C.C. Wei under the theme 'The Grand Alliance in a New Era,' expanding its Excellent Performance Award winners from 30 suppliers last year to 35; newly awarded Taiwanese firms included cleanroom engineering leader United Integrated Services (UIS, 2404; Excellent Global Support), ASE subsidiary SPIL (Excellent Advanced Packaging & Testing Ramp Support), and Pegatron (4938; Excellent IT Service). Wei emphasized that TSMC's confidence to keep investing amid macroeconomic uncertainty stems from deep trust with its supply chain partners, while Co-COO Y.P. Chyn stressed that construction safety takes precedence over any schedule or capacity target. On the same day, Taiwan Mask Corp. (2338; see item #8 for 9M26 earnings) held its earnings call, where Chairman Tu Chun-kuang and President Chen Li-tun projected 2027 revenue to grow 20% YoY: large-format photomasks (supporting CoWoS and future CoPoS) already have 1 customer tape-out and 2–3 major customers in talks to exceed 10% of 2027 revenue, silicon photonics PIC masks will scale noticeably in 2027, Kumamoto-based TCK will be consolidated in December, 12-inch masks will top 50% of sales in 2027 (up from ~47% in 2026) to overtake 8-inch for the first time, and monthly capacity will expand from 69k to 75k masks while 2027 capex drops to NT$500M–1B.",
+      "metric": "TSMC Excellent Suppliers: expanded from 30 to 35 (UIS, SPIL, Pegatron newly added); Taiwan Mask: 2027 rev guided +20% YoY, large-format masks >10% of rev, 12-inch masks >50% (vs. ~47% in 2026), capacity 69k → 75k masks/month, 2027 capex reduced to NT$0.5B–1.0B",
+      "impact": "TSMC creating new award categories for SPIL's advanced packaging ramp and UIS's global fab construction underscores that overseas fab execution and CoWoS backend outsourcing are TSMC's top supply chain priorities, while Taiwan Mask's >10% revenue target for large-format masks reflects expanding interposer reticle sizes.",
+      "conf": "Confirmed (TSMC official forum and Taiwan Mask earnings call)",
+      "vocab": [
+        ["macroeconomic", "總體經濟的"],
+        ["take precedence over", "優先於…"],
+        ["turn profitable", "轉虧為盈"],
+        ["current ratio", "流動比率"],
+        ["debt ratio", "負債比率"],
+        ["large-format", "大尺寸規格的"]
+      ]
+    },
+    "19": {
+      "entity": "PSMC (6770) / Mega International Commercial Bank",
+      "title": "Mega Bank Leads Signing of PSMC's NT$30B ESG Syndicated Loan to Fund HBM Backend Wafer Manufacturing, Wafer-on-Wafer, and Interposer Pivot",
+      "summary": "A consortium of 10 financial institutions led by Mega International Commercial Bank (alongside Taiwan Cooperative Bank, Hua Nan Bank, Chang Hwa Bank, and Land Bank of Taiwan) signed a NT$30B ESG-linked syndicated loan agreement with Powerchip Semiconductor Manufacturing Corp. (PSMC, 6770) on Nov 17, inked by PSMC Chairman and CEO Frank Hsieh and Mega Bank Chairman Tung Jui-bin. The proceeds will refinance existing debt, fund equipment purchases and fab construction/renovation, and bolster medium-term working capital, with loan terms tied to three ESG metrics (energy saving rate, waste recycling rate, and process water reclamation rate). PSMC noted that it is deepening its strategic partnership with Micron on HBM backend wafer manufacturing while ramping 3D AI Foundry wafer-on-wafer (WoW) stacking, silicon interposers, and integrated passive device (IPD) silicon capacitor wafers.",
+      "metric": "PSMC syndicated loan: NT$30B (led by Mega Bank with 10 participating banks, tied to 3 ESG metrics); use of proceeds: debt refinancing, fab/tool capex, and 3D AI Foundry / Micron HBM backend wafer, WoW, interposer & silicon capacitor expansion",
+      "impact": "Following PSMC's 94.2% YoY October revenue surge and 45% DRAM foundry price hike (see Nov 9–12 issue #4), securing a NT$30B syndicated facility demonstrates strong banking sector backing for PSMC's Tongluo fab ramp and pivot into Micron HBM base/backend processing and CoWoS interposers.",
+      "conf": "Confirmed (official loan signing announcement)",
+      "vocab": [
+        ["syndicated loan", "聯合授信貸款（聯貸案）"],
+        ["consortium", "銀行團 / 企業聯盟"],
+        ["refinance", "借新還舊 / 再融資"],
+        ["proceeds", "籌資所得款項"],
+        ["working capital", "營運資金"],
+        ["wafer-on-wafer", "晶圓堆疊 (WoW)"]
+      ]
+    },
+    "20": {
+      "entity": "NVIDIA (NVDA) / TSMC (2330)",
+      "title": "NVIDIA Q3 Revenue Doubles YoY to US$116B as Q4 Guidance Hits US$130B and FY28 Growth Target Rises to 75%; TSMC Executives Visit NVIDIA to Back Supply as Board Rules Out Huang Comeback",
+      "summary": "NVIDIA released its FY2027Q3 (ended Oct 25, 2026) results and held its first post-Jensen Huang earnings call after the US close on Nov 17: (1) Q3 revenue surged 103% YoY and 20% QoQ to a record US$116.0B (handily beating the US$108.7B–109.1B consensus), with Non-GAAP gross margin at 74.9% (GAAP 74.8%), Non-GAAP operating income up 116% YoY to US$77.883B, Non-GAAP net income up 109% YoY to US$64.87B, diluted EPS up 111% YoY to US$2.68 (vs. US$2.47 consensus), and free cash flow reaching US$43.777B. Data Center revenue hit a record US$107.61B (+110% YoY, +21% QoQ; hyperscalers US$60.136B, AI cloud/enterprise US$47.474B, networking >US$21B), as flagship Vera Rubin NVL72 contributed nearly US$20B in its first quarter of ramp (delivering 10x tokens/watt vs. GB300), while China Data Center Hopper revenue was US$2.4B before NVIDIA halted Hopper shipments to China. (2) NVIDIA guided FY27Q4 revenue to US$130.0B (±3%, assuming zero China data center compute revenue) with gross margin temporarily dipping to 71.0%–72.0% on initial Rubin ramp and component cost absorption; Interim CEO Colette Kress raised NVIDIA's FY2028 revenue growth target from ~70% to ~75% (with FY28 gross margin rebounding to 72%–73%) and revealed that TSMC senior executives visited NVIDIA's headquarters this week to provide full support, securing advanced node, packaging, and memory supply. (3) On governance, hours after Huang posted on social media that he would be 'honored to answer the call' to return if the board wished, Chairman Harvey Jones firmly ruled out reinstating Huang, retained Heidrick & Struggles to search for a permanent CEO, and established a 3-director 'National Security and Export Control Oversight Committee'; meanwhile, House committees confirmed Huang and General Counsel Tim Teter will give transcribed interviews on Dec 1 and Dec 2. Separately, at SC26 NVIDIA unveiled 'Rubin HPC' slated for 2028, packing >50,000 CUDA cores per GPU with 7th-gen NVLink.",
+      "metric": "FY27Q3 rev US$116.0B (+103% YoY, +20% QoQ; Data Center US$107.61B, Vera Rubin ~US$20B), Non-GAAP GM 74.9%, EPS US$2.68, FCF US$43.78B; FY27Q4 guidance rev US$130.0B ±3% (ex-China DC), GM 71%–72%; FY28 rev growth target raised from ~70% to ~75%; Rubin HPC >50k CUDA cores/GPU (2028); Huang House testimony Dec 1",
+      "impact": "NVIDIA's blowout US$116B Q3 print, US$130B Q4 guidance, and raised 75% FY28 growth target dispel fears of an immediate demand cliff following Huang's exit, while TSMC executives personally visiting NVIDIA to guarantee wafer and CoWoS allocations confirms TSMC's 2027 expansion is the primary pillar enabling NVIDIA's upward revision.",
+      "conf": "Confirmed (NVIDIA official earnings release, earnings call, and US Congressional notices)",
+      "vocab": [
+        ["diluted EPS", "稀釋後每股盈餘"],
+        ["share buyback", "庫藏股買回"],
+        ["reinstate", "復職 / 恢復原職"],
+        ["succession", "接班 / 繼任"],
+        ["oversight committee", "監督委員會"],
+        ["cyclical low", "週期性低點"]
+      ]
+    },
+    "21": {
+      "entity": "ASE Holding (3711) SPIL / Kinsus (3189) / Foxconn (2317) / NVIDIA / Mplus Technology (7836)",
+      "title": "NVIDIA Supply Commitments Surge to US$390B: Signs Multi-Billion-Dollar Deal with SPIL to Triple Taiwan Advanced Packaging Capacity by Mid-2029 and Adds Kinsus for Substrates",
+      "summary": "Alongside NVIDIA's Q3 disclosure that its supply chain purchase commitments surged from US$279B last quarter to US$390B (plus US$102B in cloud/data center lease commitments, US$32B in conditional Neocloud agreements requiring partner financing and site readiness before taking effect, and US$118B in maximum credit backstop exposure including US$105B for the 4.25GW Ohio Portspike/SB Energy campus for OpenAI), NVIDIA and its Taiwanese partners announced major capacity expansions on Nov 18: (1) ASE Technology Holding (3711) subsidiary SPIL and NVIDIA formally announced a multi-billion-dollar, multi-year agreement (confirming the Nov 5–9 issue #7 report) under which SPIL will execute a Taiwan-centered expansion covering wafer bumping, assembly, and final testing on a turnkey basis to triple its advanced packaging capacity by mid-2029; (2) in IC substrates, NVIDIA signed new agreements with Kinsus Interconnect (3189) and Samsung Electro-Mechanics, complementing last month's deals with Unimicron (3037), KYEC (2449), Amkor, and Ibiden, while partnering with Foxconn (2317), Dell, and Vertiv to ship modular DSX Pod racks in early 2027; (3) Taiwan advanced packaging film maker Mplus Technology (7836; 9M26 revenue NT$333M, gross margin 68.68%, EPS NT$6.35; slated for TPEx listing in mid-December) showcased its 2.5D/3D and FOPLP mold release films (97.7% of sales, qualified at top-5 global chipmakers), >40μm bump-height thick backgrind tapes, and novel 'water-degradable tape' that separates carrier wafers using pure water instead of laser/UV debonding.",
+      "metric": "NVIDIA supply purchase commitments: US$390B (up from US$279B); SPIL-NVIDIA multi-billion USD deal: 3x Taiwan advanced packaging capacity by mid-2029; new substrate deals with Kinsus & SEMCO; conditional Neocloud commitments US$32B, credit guarantee exposure US$118B; Mplus 9M26 GM 68.68%, EPS NT$6.35",
+      "impact": "SPIL locking in a multi-billion-dollar NVIDIA contract to triple Taiwan advanced packaging capacity by 2029—alongside Kinsus, Unimicron, and KYEC being officially named by NVIDIA—cements Taiwan's near-monopoly across CoWoS backend oS, final testing, and high-layer ABF substrates.",
+      "conf": "Confirmed (official NVIDIA and SPIL press releases; Mplus pre-IPO briefing)",
+      "vocab": [
+        ["exposure", "曝險金額 / 風險部位"],
+        ["prepayment", "預付款"],
+        ["lease commitment", "租賃承諾"],
+        ["bumping", "晶圓凸塊製程"],
+        ["mold release film", "封裝離型膜"],
+        ["backgrind tape", "晶圓背面研磨膠帶"]
+      ]
+    },
+    "22": {
+      "entity": "Lam Research (LRCX) / GlobalFoundries (GFS) / EU PIX Europe / imec",
+      "title": "Lam Research Breaks Ground on Jhunan Taiwan Tech Center to Expand Lab Space 10x; Boston Dynamics' Atlas Humanoid to Enter GFS Fabs in 2027 as EU Bets €400M on 6-Inch Photonic Wafer Line",
+      "summary": "Four notable developments emerged across global fab equipment, fab automation, and European photonic/automotive foundry ecosystems on Nov 18: (1) US equipment giant Lam Research (LRCX) broke ground on its new >40,000 m² 'Taiwan Technology Center' in Jhunan, Miaoli (attended by TSMC Co-COO Y.J. Mii and AIT Director Raymond Greene), slated to open in 2028 and expanding Lam's Taiwan laboratory space by ~900% (10x) to accelerate atomic-scale deposition, etch, and advanced packaging R&D alongside TSMC; (2) GlobalFoundries (GFS) announced a partnership with Hyundai Motor's Boston Dynamics to conduct on-site fab trials of the bipedal humanoid robot 'Atlas' in early 2027—becoming the world's first semiconductor manufacturer to test humanoid robots in fabs—while expanding deployments of quadruped 'Spot' robots across Malta, Dresden, and Singapore sub-fabs (where two Spot units logged >90,000 inspections across 900 km at a 99% success rate since Apr 2026); Samsung, SK Hynix, and Micron also jointly announced a unified charging standard for unmanned fab robots; (3) backed by €400M under the European Chips Act, the 'PIX Europe' initiative led by Dutch institute TNO launched a 10,000 m² facility in Eindhoven to build a 6-inch indium phosphide (InP) photonic chip foundry pilot line (full operations by 2030, upgrading from 4-inch); (4) Belgium's imec and Japan's ASRA released v1.0 of the Automotive Chiplet Interoperability Reference (ACIR), with imec slated to release a silicon interposer PDK in early 2027 alongside members Socionext, Silicon Box, and India's L&T.",
+      "metric": "Lam Research Jhunan Tech Center: >40,000 m², lab space +900%, opens 2028; GFS starts Atlas humanoid fab trials early 2027 (Spot logged >90k sub-fab inspections at 99% success); EU PIX Europe invests €400M in 6-inch InP photonic foundry pilot line in Eindhoven (2030); imec automotive chiplet interposer PDK due early 2027",
+      "impact": "Lam Research expanding its Taiwan lab footprint 10-fold with TSMC Co-COO Y.J. Mii in attendance underscores that angstrom-era (A14/A10) etch/deposition and 3D packaging R&D remains anchored in Taiwan, while GlobalFoundries testing Atlas humanoids and the memory trio standardizing robot charging mark the entry of Physical AI into fab operations.",
+      "conf": "Confirmed (official groundbreaking and partnership announcements)",
+      "vocab": [
+        ["pilot line", "試產線 / 先導產線"],
+        ["interoperability", "互通性 / 互操作性"],
+        ["predictive maintenance", "預測性維護"],
+        ["unplanned downtime", "非計畫性停機"],
+        ["sub-fab", "次層廠務空間（潔淨室下方樓層）"],
+        ["humanoid robot", "人型機器人"]
+      ]
+    },
+    "23": {
+      "entity": "Google (GOOGL) / Broadcom (AVGO) / MediaTek (2454) / Intel (INTC) / Samsung Electronics",
+      "title": "Korean Media: Google Eyes Direct HBM Purchases for TPUs to Bypass Broadcom Markups While Deepening MediaTek Tie-Up; Samsung Nears 4–5 Year Apple DRAM LTA as Intel Cuts IT Staff",
+      "summary": "Major procurement and restructuring shifts surfaced across hyperscalers and IDMs on Nov 18: (1) Korean outlet Chosun Biz reported, citing industry sources, that Google—which has traditionally relied on Broadcom for a bundled TPU arrangement covering chip design, CoWoS packaging, and HBM procurement—is moving toward purchasing HBM directly from Samsung, SK Hynix, and Micron while diversifying TPU design via MediaTek (2454); citing Bernstein analysis, the report noted direct HBM procurement could eliminate intermediary markups and compress Broadcom's design partner margins. (2) Korean media also reported that Apple, facing a 270% cumulative surge in Samsung memory prices this year, is finalizing a rare 4-to-5-year DRAM Long-Term Agreement (LTA) with Samsung Electronics featuring minimum supply commitments starting in 2027, while Samsung executives downplayed AI bubble fears by noting limited Neocloud exposure and multi-year contract backing. (3) Intel (INTC) initiated another round of layoffs impacting its global IT organization as CEO Lip-Bu Tan continues streamlining management layers and trimming non-core spending, with filings showing Intel's headcount fell from 85,100 at end-2025 to 81,100 as of Sep 2026.",
+      "metric": "Google reportedly eyes direct HBM procurement for TPUs (bypassing Broadcom bundle) + MediaTek TPU collaboration; Apple-Samsung reportedly finalizing 4–5 yr DRAM LTA starting 2027; Intel headcount down from 85,100 (end-2025) to 81,100 (Sep 2026)",
+      "impact": "Google unbundling HBM procurement from Broadcom while onboarding MediaTek mirrors Alchip-KY's recent disclosure that hyperscalers are placing direct wafer orders with TSMC (see Nov 5–9 issue #11), confirming cloud giants are disintermediating turnkey markups to control runaway AI hardware costs.",
+      "conf": "Unconfirmed (Google direct HBM buying and Apple LTA are Korean media citing sources; Intel headcount and layoffs are official/confirmed)",
+      "vocab": [
+        ["markup", "中間商加價 / 毛利加成"],
+        ["bundled", "捆綁式統包的"],
+        ["bargaining power", "議價能力", "fin"],
+        ["price ceiling", "價格上限"],
+        ["headcount", "員工總人數"],
+        ["layoff", "裁員"]
+      ]
+    },
+    "24": {
+      "entity": "TSMC / UMC / VIS / PSMC / ASE Holding / WIN Semi / Hua Hong / SMIC / US ADRs",
+      "title": "NVIDIA Beats and Rallies >4% After-Hours, Yet Foreign Investors Dump Another NT$76.56B on TAIEX on Nov 18 (Selling 15.5k Lots of TSMC) in 1,600-Pt Intraday Swing; ASE Jumps 5.38% and Hua Hong Hits New High",
+      "summary": "On Nov 17 ahead of NVIDIA's earnings, the Dow briefly plunged over 1,000 points intraday before the PHLX Semiconductor Index (SOX) edged up 0.34% to 9,642.88; US foundry closes were mixed as GlobalFoundries (+0.46% to US$39.60) and Tower (+1.98% to US$136.06) gained while TSMC ADR fell 3.68% to US$359.69 (4th straight loss), UMC ADR dipped 1.39% to US$14.14, Intel slipped 0.54% to US$55.17, and NVIDIA edged down 0.44% to US$155.46 before surging >4% after-hours on its blowout Q3 results and US$130B Q4 guidance (item #20), lifting TSMC ADR ~3.8% in Nov 18 pre-market trading. On Nov 18, the TAIEX surged 846 points early on NVIDIA's beat but whipsawed over 1,600 points intraday into negative territory after NVIDIA's board ruled out Jensen Huang's return and foreign investors continued heavy selling, ultimately closing up 102.80 points (+0.26%) at 40,194.91 on massive NT$1,075.17B turnover (with retail margin debt dropping another NT$15.7B). Foreign investors net sold NT$76.56B on Nov 18 (bringing 3-day net selling across Nov 16–18 to NT$184.85B, while investment trusts net bought NT$17.56B and dealers net sold NT$4.20B for a combined institutional net sell of NT$63.21B). Individual stock institutional flows (T86) for Nov 17 and Nov 18 showed foreign investors heavily selling TSMC (-14,606 and -15,453 lots), ASE Holding (-4,962 and -5,948 lots), PSMC (-4,115 and -5,021 lots), and UMC (-5,223 and -4,778 lots), while net buying VPEC (+926 and +815 lots). At the Nov 18 Taiwan close: TSMC edged up NT$5 (+0.23%) to NT$2,175, UMC rose 0.65% to NT$93.00, PSMC gained 0.78% to NT$51.90, and VIS dipped 1.20% to NT$124.00; boosted by SPIL's multi-billion-dollar NVIDIA deal, ASE Holding (3711) jumped NT$28 (+5.38%) to NT$548 (with Kinsus +6.83%, KYEC +9.92%, and Unimicron +3.92%); among compound foundries, WIN Semi touched its NT$433 limit-down intraday before closing down 2.29% at NT$470.00, Episil slipped 0.96% to NT$51.50, VPEC rose 0.77% to NT$326.50, AWSC gained 0.78% to NT$91.00, and GCS rebounded from an intraday low of NT$271 to close up 1.68% at NT$302.50. In Hong Kong and Shanghai on Nov 18, Hua Hong (1347.HK) climbed another 3.75% to a wave high of HK$77.40, SMIC H-shares (0981.HK) closed flat at HK$49.20 while A-shares (688981.SH) rose 1.45% to RMB 115.10, and Nexchip (688249.SH) closed at RMB 27.19 (-0.07%).",
+      "metric": "Nov 17 US: SOX 9,642.88 (+0.34%), TSM US$359.69 (-3.68%), UMC US$14.14 (-1.39%), GFS US$39.60 (+0.46%), TSEM US$136.06 (+1.98%), NVDA US$155.46 (>+4% after-hours); Nov 18 TW: TAIEX 40,194.91 (+102.80 pts / +0.26%), turnover NT$1,075.17B, foreign net sell NT$76.56B (TSMC -15,453 lots; Nov 17 TSMC -14,606 lots); Nov 18 closes: TSMC NT$2,175, UMC NT$93.0, PSMC NT$51.9, VIS NT$124.0, ASE NT$548 (+5.38%), WIN Semi NT$470, VPEC NT$326.5, GCS NT$302.5; Nov 18 Hua Hong HK$77.40 (+3.75%), SMIC A-share RMB 115.10 (+1.45%)",
+      "impact": "NVIDIA's earnings beat and explicit endorsement of SPIL, Kinsus, and TSMC sparked a strong rally across ASE, KYEC, and ABF substrate makers while helping the TAIEX defend the 40,000 mark on >NT$1T volume; however, foreign investors cashing out NT$184.85B over three days and dumping >30,000 lots of TSMC across Nov 17–18 show global funds are still de-risking amid post-Huang governance uncertainty.",
+      "conf": "Confirmed (official exchange close and institutional flow data)",
+      "vocab": [
+        ["after-hours", "盤後交易時段"],
+        ["pre-market", "盤前交易時段"],
+        ["margin debt", "融資餘額"],
+        ["de-risk", "降低風險部位 / 減碼避險"],
+        ["endorsement", "背書 / 公開肯定"],
+        ["intraday", "盤中", "fin"]
+      ]
+    },
+    "25": {
       "entity": "Yunnan Germanium (002428.SZ) / Applied Optoelectronics / AOI (AAOI)",
       "title": "(Background: Disclosed 2026/11/03, Reported 11/16) China's Yunnan Germanium Secures 5-Year Deal to Supply 900,000 4-Inch InP Substrates to US-Based AOI, with 2027 Contract Valued at US$194.4M",
       "summary": "TrendForce reported on Nov 16 that Chinese compound semiconductor material supplier Yunnan Germanium (002428.SZ) announced on Nov 3, 2026 that its controlling subsidiary Yunnan Xinyao Semiconductor Materials signed a long-term framework agreement and a 2027 purchase contract with US optical transceiver maker Applied Optoelectronics, Inc. (AOI, Nasdaq: AAOI) for 4-inch n-type indium phosphide (InP) single-crystal substrates. Under the agreement, AOI expects to purchase 180,000 substrates annually from 2027 to 2031, totaling 900,000 wafers over five years; the 2027 purchase contract alone is valued at US$194.4M (excluding tax), representing 122.46% of Yunnan Germanium's audited 2025 full-year revenue (listed as background as the original filing date was Nov 3 prior to this period).",
