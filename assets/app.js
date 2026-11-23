@@ -515,7 +515,8 @@
   /* ---- 英文內文 ----
      1. 本則的重點字彙包成 <mark>：螢光筆底、滑過（手機點一下）顯示中文。每個字只標第一次出現
      2. 其餘每個英文字包成 <span class="w">：點一下跳出中文（查 data/en/glossary.json）
-     斷字與查字規則必須與 foundry-weekly-tools/build_weekly.py 的 TOKEN_RE / gloss_lookup 一致 */
+     3. 字典查不到、只有首字母大寫的字（人名、地名）視為專有名詞：點了顯示「專有名詞」
+     斷字與查字規則必須與 tools/build_weekly.py 的 TOKEN_RE / gloss_lookup / PROPER_RE 一致 */
   var TOKEN_RE = /[A-Za-z0-9À-ɏ]+(?:[-'’][A-Za-z0-9À-ɏ]+)*/g;
 
   function glossLookup(tok) {
@@ -533,6 +534,10 @@
     var k = glossLookup(tok);
     if (k) return '<span class="w" data-k="' + esc(k) + '">' + esc(tok) + '</span>';
     if (tok.indexOf('-') > 0) return tok.split('-').map(wordSpan).join('-');   // 複合字查不到就拆開查
+    var base = tok.replace(/['’]s$/i, '');
+    if (/^[A-Z][a-z'’]+$/.test(base)) {   // 專有名詞：產生器允許不翻譯
+      return '<span class="w pn" data-pn="1" data-k="' + esc(base) + '">' + esc(tok) + '</span>';
+    }
     return esc(tok);
   }
 
@@ -774,7 +779,7 @@
     if (popAnchor) popAnchor.classList.remove('is-pop');
     popAnchor = null;
   }
-  function openPop(anchor, word, zh, fin, ctx) {
+  function openPop(anchor, word, zh, fin, ctx, noSave) {
     if (!pop) {
       pop = document.createElement('div');
       pop.id = 'wpop';
@@ -790,9 +795,10 @@
         (fin ? '<em>財經</em>' : '') +
         '<button type="button" class="wp-close" aria-label="關閉">×</button></div>' +
       '<div class="wp-zh">' + esc(zh) + '</div>' +
+      (noSave ? '' :   // 專有名詞不必收藏到單字本
       '<button type="button" class="wp-save' + (on ? ' is-saved' : '') + '" data-term="' + esc(word) +
         '" data-zh="' + esc(zh) + '" data-ctx="' + esc(ctx || '') + '"' + (fin ? ' data-fin="1"' : '') + '>' +
-        (on ? '★ 已收藏到單字本' : '☆ 收藏到單字本') + '</button>';
+        (on ? '★ 已收藏到單字本' : '☆ 收藏到單字本') + '</button>');
     pop.hidden = false;
     // 放在字的下方；靠近視窗右緣時往左收，下方空間不夠時改放上方
     var r = anchor.getBoundingClientRect();
@@ -918,10 +924,11 @@
         return;
       }
       var w = e.target.closest('.w');
-      if (w && gloss[w.dataset.k]) {
+      if (w && (gloss[w.dataset.k] || w.dataset.pn)) {
         e.preventDefault();
         if (popAnchor === w && !pop.hidden) { closePop(); return; }
-        openPop(w, w.dataset.k, gloss[w.dataset.k], false, ctx);
+        if (w.dataset.pn) openPop(w, w.dataset.k, '專有名詞', false, ctx, true);
+        else openPop(w, w.dataset.k, gloss[w.dataset.k], false, ctx);
       }
     });
 
