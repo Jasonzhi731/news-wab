@@ -1,0 +1,293 @@
+{
+  "source": "全球半導體代工產業快報_20261118-20261123.xlsx",
+  "news": {
+    "1": {
+      "entity": "GUC (3443) / WIN Semi (3105) / Xintec (3374) / Unimicron (3037) / CHPT (6510) / TWSE & TPEx",
+      "title": "TAIEX Plunge Sparks T+2 Settlement Defaults: GUC, WIN Semi, Xintec, Unimicron, and CHPT Among 9 AI & Chip Stocks Hit with NT$426.95M in Defaulted Trades",
+      "summary": "Following the TAIEX's 2,635-point plunge on Nov 16 (see prior issue #16), under Taiwan's T+2 settlement regime the TWSE and TPEx disclosed on the evening of Nov 18 that nine listed stocks suffered major settlement defaults totaling NT$426,946,248—all concentrated in semiconductor foundry, OSAT, IC design, substrate, and AI server supply chain names. Four TWSE-listed stocks accounted for NT$266.34M in defaults: TSMC-affiliated ASIC leader Global Unichip Corp. (GUC, 3443) topped the list at NT$94.53M, followed by PCB maker Compeq (2313) at NT$93.60M, ABF substrate leader Unimicron (3037) at NT$52.04M (reported across 15 brokerage branches), and Gold Circuit Electronics (2368) at NT$26.16M. Five TPEx-listed stocks accounted for NT$160.61M: cooling vendor Auras (3324) led with NT$64.66M, followed by TSMC wafer-level packaging affiliate Xintec (3374) at NT$40.01M (6 branches), GaAs foundry leader WIN Semiconductors (3105) at NT$34.06M (across 12 brokerage branches), wafer probe card maker Chunghwa Precision Test (CHPT, 6510) at NT$11.86M, and Chinsan Electric (8042) at NT$10.02M.",
+      "metric": "Nov 18 reported settlement defaults across 9 stocks totaling NT$426.95M (4 TWSE stocks NT$266.34M + 5 TPEx stocks NT$160.61M); chip chain defaults: GUC NT$94.53M, Unimicron NT$52.04M (15 branches), Xintec NT$40.01M, WIN Semi NT$34.06M (12 branches), CHPT NT$11.86M",
+      "impact": "Unimicron and WIN Semi seeing simultaneous default reports across 15 and 12 brokerage branches highlights overcrowded retail margin and day-trading leverage in high-beta ASIC, CPO optical, and compound foundry plays; forced T+2 liquidation directly triggered the consecutive limit-down drops across compound foundries on Nov 19–20 (see item #14).",
+      "conf": "Confirmed (official TWSE and TPEx announcements)",
+      "vocab": [
+        ["settlement default", "違約交割"],
+        ["liquidation", "強制平倉 / 斷頭出場"],
+        ["brokerage branch", "券商分點"],
+        ["day-trading", "當日沖銷（當沖）"],
+        ["wafer-level packaging", "晶圓級封裝 (WLP)"],
+        ["probe card", "探針卡 / 測試介面"]
+      ]
+    },
+    "2": {
+      "entity": "Intel Foundry (INTC) / Microsoft (MSFT) / Google / TSMC (2330)",
+      "title": "Intel Foundry Scores Dual Wins as CEO Tan Announces First External 18A-P Customer and Microsoft Adopts EMIB for Azure Silicon; Yet Google Reportedly Returns to TSMC Over EMIB-T Yields",
+      "summary": "Intel Foundry saw major customer breakthroughs alongside a reported setback between Nov 18 and Nov 20: (1) Speaking at the TomorrowX Summit in Austin, Texas, Intel CEO Lip-Bu Tan announced that Intel has signed its first external customer for its 18A process family (without disclosing the client's name or volume), with CTO Pushkar Ranade confirming on X that the deal uses the performance-enhanced '18A-P' node (which entered risk production in June 2026 and delivers 9% higher speed at iso-power or 18% lower power at iso-speed vs. standard 18A); foreign media also cited Tan noting that 18A yields have climbed to ~70%. (2) Microsoft and Intel announced a multi-year partnership under which Microsoft confirmed it is adopting Intel Foundry's EMIB (Embedded Multi-die Interconnect Bridge) advanced packaging for custom Azure silicon—becoming the first hyperscaler to publicly name itself as an external EMIB customer—alongside multi-year supply of next-gen Xeon CPUs (codenamed Diamond Rapids), CXL memory, and confidential computing. (3) However, TechNews (MoneyDJ) reported on Nov 20, citing supply chain sources, that Google—which had been actively testing Intel's TSV-enabled EMIB-T packaging as a second source for its 2028 next-gen TPUs (see Nov 5–9 issue #5)—encountered lower-than-expected packaging yields during testing due to silicon bridge embedding and substrate integration challenges, prompting Google to return to TSMC (2330) to evaluate next-gen TPU CoWoS-L packaging arrangements.",
+      "metric": "Intel 18A-P: signs 1st external customer (entered risk production Jun 2026; +9% speed or -18% power vs. 18A; 18A yield reportedly ~70%); Microsoft: 1st publicly named external customer adopting Intel EMIB for custom Azure chips; Google reportedly returns to TSMC CoWoS-L after EMIB-T test yields miss targets",
+      "impact": "Landing Microsoft as a named EMIB customer and signing the first external 18A-P logic client mark vital credibility wins for loss-making Intel Foundry (which posted +58% YoY Q3 revenue growth but a US$1.9B operating loss); yet Google's reported pivot back to TSMC CoWoS-L over EMIB-T yield hurdles underscores TSMC's entrenched mass-production moat in ultra-large, TSV-integrated AI packaging.",
+      "conf": "Confirmed (18A-P deal and Microsoft EMIB are official announcements; 70% 18A yield and Google returning to TSMC are media citing supply chain sources)",
+      "vocab": [
+        ["operating loss", "營業虧損", "fin"],
+        ["turnaround", "轉虧為盈 / 營運翻轉"],
+        ["second source", "第二供應來源"],
+        ["credibility", "可信度 / 市場信譽"],
+        ["entrenched", "根深蒂固的 / 穩固的"],
+        ["heterogeneous integration", "異質整合"]
+      ]
+    },
+    "3": {
+      "entity": "ASE Technology Holding (3711)",
+      "title": "ASE Holding Commits NT$248.9B to Kaohsiung Renwu Plot J to Expand High-End Testing Cluster, Lifting Combined Plot K & J Investment Over NT$366B for NT$117.3B Annual Revenue",
+      "summary": "Following its NT$123.7B InvesTaiwan approval on Nov 5, the Phase 1 opening and Phase 2 groundbreaking of its NT$100B Luzhu advanced packaging campus on Nov 13, and subsidiary SPIL's multi-billion-dollar NVIDIA expansion deal on Nov 18 (see prior issue #5 and #21), ASE Technology Holding (3711) announced on Nov 19 that its subsidiary ASE Test, Inc. broke ground on 'Plot J' at the Renwu Industrial Park in Kaohsiung, committing NT$248.9B across phases slated for completion in 2028–2029. CEO Tien Wu stated that building on the NT$117.45B already committed to Renwu Plot K, the NT$248.9B Plot J expansion brings combined Renwu investment to NT$366.35B, focusing on advanced AI/HPC chip testing and smart factory automation. At full load, Plots K and J are projected to generate ~NT$117.3B in combined annual revenue and create 3,300 jobs, becoming ASE's largest, most automated, and highest revenue-per-employee testing hub worldwide.",
+      "metric": "ASE Renwu Plot J investment: NT$248.9B (phased completion 2028–2029); combined with Renwu Plot K (NT$117.45B), total Renwu investment reaches NT$366.35B; full-load est. annual revenue ~NT$117.3B, creating 3,300 jobs",
+      "impact": "Because AI GPUs and multi-chiplet architectures multiply wafer probe (CP) and final test (FT) times, high-end testing has emerged as the second major backend bottleneck after CoWoS assembly; ASE's >NT$366B Renwu testing cluster—linking Nanzih, Luzhu, Dashe, and Renwu into a Kaohsiung S-corridor—rivals front-end wafer fabs in capital intensity.",
+      "conf": "Confirmed (official company groundbreaking announcement)",
+      "vocab": [
+        ["capital intensity", "資本密集度"],
+        ["cluster", "產業聚落"],
+        ["revenue per employee", "人均產值 / 人均營收"],
+        ["wafer probe", "晶圓針測 (CP 測試)"],
+        ["final test", "成品測試 (FT)"],
+        ["smart factory", "智慧工廠"]
+      ]
+    },
+    "4": {
+      "entity": "TSMC (2330) / Anthropic (ANT) / OpenAI",
+      "title": "TSMC Discloses Nearly US$500M Purchase of 6.02M Anthropic Shares at US$83 IPO Price; Co-COO Kevin Zhang Outlines Dual Strategy to Anchor AI Ecosystem and Hunt Unicorns",
+      "summary": "Following up on the TSMC board's Nov 10 approval of up to US$500M each to subscribe to shares in Anthropic and OpenAI (see Nov 9–12 issue #5), after Anthropic (Nasdaq: ANT) priced its record-shattering IPO at US$83/share on Nov 18 (above its initial US$70–78 range, valuing the company at ~US$1.5T fully diluted and raising US$81B–93.5B in IPO proceeds or ~US$119.5B including concurrent private placements), TSMC (2330) filed an announcement on Nov 19 on behalf of subsidiary TSMC Partners confirming the acquisition of 6,024,096 common shares of Anthropic at US$83/share for a total of US$499,999,968 (paid in full under SEC Rule 144), representing an ~0.03% stake. Business Today and TechNews noted on Nov 20 that TSMC participated in a concurrent private placement alongside NVIDIA, Google, Microsoft, AMD, Broadcom, and Micron; TSMC Co-COO Kevin Zhang explained in Japan that investing in Anthropic and OpenAI strengthens TSMC's engagement with the top of the AI ecosystem and helps ensure 'customers' customers' have two years of runway to pay for data center compute build-outs, while the new US$500M investment subsidiary follows TSMC's VentureTech Alliance playbook—which previously backed power IC star Monolithic Power Systems (MPS; Q3 revenue US$1.2B, +63% YoY) and silicon photonics unicorn Ayar Labs—to hunt future NVIDIA-scale unicorns. The report also noted that OpenAI's first in-house AI chip co-developed with Broadcom, codenamed 'Jalapeno,' is fabricated on TSMC's 3nm node.",
+      "metric": "TSMC Anthropic investment: 6,024,096 shares at US$83/share for US$499,999,968 (~0.03% stake); Anthropic IPO priced at US$83 (~US$1.5T diluted valuation, US$81B–93.5B IPO proceeds, ~US$119.5B total with placements); OpenAI 'Jalapeno' chip built on TSMC 3nm",
+      "impact": "Deploying less than 1% of annual net profit (US$1B combined) to take equity stakes in both Anthropic and OpenAI gives TSMC direct demand visibility into frontier AI model builders while anchoring foundry orders for OpenAI's 3nm 'Jalapeno' ASIC and Anthropic's multi-vendor compute clusters.",
+      "conf": "Confirmed (TSMC MOPS filing and Anthropic IPO disclosures)",
+      "vocab": [
+        ["private placement", "私募配售"],
+        ["fully diluted", "完全稀釋後的（股本／估值）"],
+        ["proceeds", "募資所得款項"],
+        ["unicorn", "獨角獸新創企業（估值逾 10 億美元）"],
+        ["runway", "營運資金可支撐期間"],
+        ["venture capital", "創業投資（創投）"]
+      ]
+    },
+    "5": {
+      "entity": "TSMC (2330) / MediaTek (2454) / KYEC (2449) / Morgan Stanley",
+      "title": "Morgan Stanley Backs Taiwan AI Chip Chain: Sees TSMC Doubling 2nm Capacity in 2027 and Talking with Tesla on Terafab (PT NT$3,088), Calls MediaTek to NT$6,188 and KYEC to NT$348 While Lifting Taiwan 2027 GDP Forecast to 8.7%",
+      "summary": "Morgan Stanley published a series of bullish reports on Taiwan's semiconductor chain and macro outlook on Nov 19–20: (1) TSMC (2330): Reaffirmed TSMC's target to more than double 2nm (N2) capacity in 2027, noting TSMC is evaluating its next US fab site while also in talks with Tesla over potential 'Terafab' collaboration; projected TSMC's 2025–2028 EPS at NT$66.25, NT$112.10, NT$148.64, and NT$189.81 with customer price hikes sustaining long-term gross margin above 56%, maintaining a NT$3,088 price target. (2) MediaTek (2454): Projected Google TPU v8 shipments to generate US$2.5B in 2026Q4 and hit the high end of 2027 guidance at US$16B (with upside if ABF substrate supply improves), followed by higher per-chip contribution on TPU v9 (where MediaTek views EMIB-T ramp positively) and active bidding on TPU v10 (focusing on D2D interconnect, I/O dies, and packaging against rival Alchip-KY); estimated MediaTek's ASIC operating margin at 25%–30%, driving total revenue past NT$1T in 2027 (NT$1.09T, EPS NT$146.97) and to NT$2.31T in 2028 (EPS NT$342.37, ROE 78.6%), setting a NT$6,188 target price. (3) KYEC (2449): Highlighted that KYEC is requiring customers seeking capacity expansion to consign test equipment (Advantest/Teradyne) to curb depreciation while requiring smaller/lower-margin clients to accept price hikes for capacity slots; projected 2026–2028 revenue at NT$46.65B, NT$68.31B, and NT$89.54B with EPS rising from NT$8.14 to NT$13.99 and NT$18.88, keeping a NT$348 target price. (4) Macro: Backed by AI hardware exports (as Taiwan's MOEA separately reported on Nov 20 that October export orders hit a record US$123.8B, marking 21 straight months of YoY growth and a 3rd straight month above US$100B), Morgan Stanley raised Taiwan's 2027 GDP growth forecast to 8.7%.",
+      "metric": "Morgan Stanley PTs & EPS est.: TSMC PT NT$3,088 (2026–2028 EPS NT$112.10 → 148.64 → 189.81; 2027 2nm capacity >2x); MediaTek PT NT$6,188 (2027 rev NT$1.09T / EPS NT$146.97; 2028 rev NT$2.31T / EPS NT$342.37); KYEC PT NT$348 (2026–2028 EPS NT$8.14 → 13.99 → 18.88); Taiwan 2027 GDP forecast raised to 8.7%; Taiwan Oct export orders record US$123.8B",
+      "impact": "Even as panic deleveraging drove the TAIEX down over 7,600 points for the week, Morgan Stanley's earnings models and Taiwan's record US$123.8B October export orders confirm that 2027–2028 fundamental trajectories for leading-edge foundry, custom TPUs, and AI final testing remain intact; Morgan Stanley's note that TSMC is also talking with Tesla on Terafab suggests Musk's megafab project is engaging TSMC alongside Intel and Samsung.",
+      "conf": "Confirmed (foreign institutional research reports and MOEA export order statistics)",
+      "vocab": [
+        ["return on equity", "股東權益報酬率 (ROE)"],
+        ["consign", "寄售 / 由客戶自備並寄放（設備）"],
+        ["export orders", "外銷訂單", "fin"],
+        ["gross domestic product", "國內生產毛額 (GDP)"],
+        ["upside", "上檔潛力 / 超預期空間", "fin"],
+        ["downside risk", "下檔風險"]
+      ]
+    },
+    "6": {
+      "entity": "Micron (MU) / Crystalwise Technology (4768) / STSP Chiayi Campus",
+      "title": "Micron Installs First Tool at US$7B Singapore HBM Advanced Packaging Plant for Early-2027 Output and Sees Broad 3D DRAM Tie-Ups; Crystalwise Confirms Unchanged TGV Glass Substrate Orders",
+      "summary": "Three capacity milestones emerged across advanced packaging, next-gen memory, and glass substrates on Nov 19–20: (1) Micron (MU) announced that its ~US$7B (S$9.5B) HBM advanced packaging facility in Singapore (which broke ground in Jan 2025) has installed its first equipment (tool-in) and remains on track to begin initial HBM output in early 2027, creating ~3,000 jobs together with its adjacent Singapore NAND fab (slated for 2H 2028 wafer output); separately, Micron CEO Sanjay Mehrotra stated at the TomorrowX Summit that all major customers are seeking to collaborate on stacked 3D DRAM (3D1/3D2 generations between the 1ζ and 1η nodes), with initial market traction expected in 2028–2029 and broad adoption in 2030–2031. (2) Taiwanese through-glass via (TGV) and specialty gas maker Crystalwise Technology (4768; 9M26 revenue NT$1.199B, +106.1% YoY; specialty gas revenue +108% YoY) stated on Nov 20 that orders for its glass core boards (GCB for communications ASICs) and one-piece fiber array units (FAU for CPO)—which share TGV lines across 15 customers in the US, Japan, Korea, and Taiwan (including 3 major IC designers, 4 substrate makers, 2 probe card vendors, and 5 FAU firms)—remain completely unchanged; Crystalwise is expanding its Zhubei TGV plan from 6 to 10 lines (bringing total TGV lines to 12 by end-2027) and remains on track to ramp C4F6 etching gas at Toufen Fab 3 in Jan 2027. (3) To secure long-term water supply for TSMC's CoWoS fabs at the STSP Chiayi campus, Taiwan's first large-scale seawater desalination BOT project passed review on Nov 19 to supply 100,000 tons/day starting in 2032.",
+      "metric": "Micron Singapore HBM packaging fab: ~US$7B investment, 1st tool installed, early-2027 output; Micron 3D DRAM: 2028–2029 traction, 2030–2031 broad adoption; Crystalwise TGV: 15 customers, expanding to 12 lines by end-2027 (9M26 rev NT$1.199B, +106.1% YoY); Chiayi desalination BOT: 100k tons/day from 2032",
+      "impact": "Micron bringing its US$7B Singapore HBM advanced packaging plant online in early 2027 (amid ongoing labor disputes at its Taoyuan fab in Taiwan) joins UMC, VIS, and Powertech/Broadcom in cementing Singapore as Asia's premier advanced packaging and specialty foundry hub outside Taiwan.",
+      "conf": "Confirmed (official company announcements and earnings briefings)",
+      "vocab": [
+        ["traction", "市場採用動能 / 初步斬獲"],
+        ["commodity", "大宗商品化產品"],
+        ["synergy", "綜效"],
+        ["through-glass via", "玻璃穿孔 (TGV)"],
+        ["etching gas", "蝕刻氣體"],
+        ["desalination", "海水淡化"]
+      ]
+    },
+    "7": {
+      "entity": "TSMC (2330) / Samsung Electronics / Alibaba (9988.HK) / US Commerce Dept BIS",
+      "title": "Reuters & FT: TSMC and Samsung Pause Sub-16nm and Select Consumer Chip Shipments to Chinese Customers Under New US BIS Rules; Alibaba's T-Head Targets 100% Domestic AI Training Chips by 2027",
+      "summary": "Following the US Commerce Department BIS's revocation of <30B-transistor and non-AI consumer exemptions for 16/14nm-and-below logic designs from China and five high-risk countries (see prior issue #17), the Financial Times and Reuters reported on Nov 19–20, citing people familiar with the matter: (1) TSMC and Samsung Foundry have notified Chinese customers that shipments of affected 16nm-and-below advanced-node chips are suspended until customers obtain US BIS export licenses. The freeze hits not only Chinese AI chip designers relying on TSMC (such as Iluvatar CoreX, ASR Microelectronics, Enflame, and parts of Cambricon) and Samsung (such as Baidu's Kunlunxin, ByteDance, Hygon DCUs, MetaX, VeriSilicon, and Alibaba's T-Head), but also advanced smartphone and consumer processors for Xiaomi, Oppo, and Vivo (which are expected to eventually receive licenses but face severe production delays during review). Reuters noted Chinese designers at TSMC are now generally restricted to mature 28nm and 40nm nodes—provided they do not use HBM or advanced packaging—while TSMC has tightened scrutiny of orders placed through subsidiaries or intermediaries across Taiwan, the US, Europe, Japan, and Southeast Asia. TSMC responded that it does not comment on rumors, is aware of the new BIS rules, and complies with all applicable laws. (2) Confronting the US cutoff, Alibaba CEO Eddie Wu stated that Alibaba is already training next-gen AI models using in-house 'T-Head' chips (with Zhenwu M890 fully deployed in 2026, V900 entering mass production in 2027Q1, and J900 due in 2028), targeting 100% domestic chip adoption for all AI pre-training and post-training workloads by 2027, though regulatory headwinds may prompt Alibaba to scale back its >20GW long-term data center capacity target and overall capex.",
+      "metric": "Reuters/FT: TSMC & Samsung pause unlicensed ≤16nm chip shipments to Chinese clients (including select Xiaomi/Oppo/Vivo smartphone chips); Chinese designers restricted to 28nm/40nm without HBM or advanced packaging; Alibaba T-Head: M890 deployed, V900 mass production 2027Q1, J900 in 2028, targeting 100% domestic AI training by 2027 (may lower >20GW DC target)",
+      "impact": "Revoking the non-AI consumer and <30B-transistor self-certification exemptions flips TSMC and Samsung's sub-16nm business with Chinese fabless firms from 'presumed allowed below threshold' to 'halted pending individual BIS licenses,' creating near-term shipment air pockets for Chinese handset and ASIC vendors while forcing Chinese CSPs like Alibaba to rely on SMIC and Hua Hong (even at the cost of trimming aggregate data center capex).",
+      "conf": "High (Reuters and FT citing multiple sources; TSMC affirmed legal compliance; Alibaba roadmap from earnings call)",
+      "vocab": [
+        ["air pocket", "短期需求或出貨空窗期"],
+        ["proprietary", "自家專有的 / 自研的"],
+        ["scale back", "縮減（資本支出或規模）"],
+        ["intermediary", "中間商 / 白手套"],
+        ["self-certification", "自我認證"],
+        ["workload", "運算工作負載"]
+      ]
+    },
+    "8": {
+      "entity": "US House Foreign Affairs Committee / US Commerce Dept BIS / NVIDIA (NVDA) / AMD / Tongfu Microelectronics",
+      "title": "US House Declassifies Data Showing BIS Approved 879k AI Chips for China (Including Shell Firms); AMD Plunges >19% in Two Days After Short-Seller Alleges Firmware Updates to Blacklisted Inspur and Heavy OSAT Reliance on China's TFME",
+      "summary": "Washington's AI chip export compliance storm engulfed Capitol Hill and AMD on Nov 20: (1) Invoking the Export Control Reform Act, the US House Foreign Affairs Committee declassified BIS licensing data showing NVIDIA and AMD applied to sell 3.44 million AI chips to China and that BIS approved nearly 879,000 high-end AI chips (primarily NVIDIA H200 and equivalent AMD chips for buyers including ByteDance, Baidu, Alibaba, Tencent, and Tesla Shanghai). Republican Rep. Brian Mast and Democratic Ranking Member Gregory Meeks blasted BIS's oversight, highlighting that approved applicants included 'Maginfra' and 'New Matrix'—the two Beijing entities previously exposed by the NYT as empty shell offices (see Nov 5–9 issue #16)—and confirmed Commerce Secretary Howard Lutnick and Jensen Huang will testify before Congress. (2) On the same day, investigative firm Hunterbrook Media published a short report targeting AMD across four core allegations: ① after Chinese server giant IEIT Systems (Inspur) was added to the US Entity List in Mar 2025, Inspur system updates still integrated AMD's latest firmware at least six times (most recently on Oct 19, 2026), potentially violating BIS rules treating software updates to blacklisted entities as export violations; ② Inspur allegedly rebranded operations through China's Maginfra, Singapore's Kaytus, and California-based Aivres (a former Inspur unit whose firmware overlaps >99% with Inspur's), with AMD's website listing Aivres as an official Instinct partner; ③ AMD booked US$4.28B in 2025 billing revenue in Singapore (>10% of total revenue) and US$7.75B in China/HK (22% of total US$34.6B revenue), plus US$67M in licensing revenue from two Chinese JVs blacklisted since 2019, leaving AMD acutely exposed to the Nov 16 Singapore licensing rule and the Jan 10, 2027 '50%-owned affiliate' rule; ④ over half of AMD's core chip OSAT capacity relies on two Suzhou and Penang JVs 85%-owned by Chinese OSAT Tongfu Microelectronics (TFME, to which AMD holds a 15% stake and an unpaid US$100M loan). The report shattered the 'NVIDIA loses, AMD wins' narrative, sending AMD down 7.72% on Nov 19 and another 13.25% on Nov 20 to US$424.39.",
+      "metric": "US House declassified data: NVIDIA & AMD applied to ship 3.44M AI chips to China, BIS approved 879k (including shell firms Maginfra & New Matrix); Hunterbrook AMD short report: 6 firmware updates to blacklisted Inspur, US$4.28B Singapore rev (>10%) & US$7.75B China/HK rev (22%) at risk, US$67M licensing rev from blacklisted JVs, >50% OSAT reliance on China's Tongfu Microelectronics (85%-owned JVs); AMD 2-day drop -19.95% (US$530.14 → 424.39)",
+      "impact": "Hunterbrook's report strikes at AMD's >10% Singapore billing exposure and heavy backend OSAT reliance on China's Tongfu Microelectronics; heightened US compliance scrutiny on AMD not only strips away its geopolitical safe-haven premium relative to NVIDIA, but could also pressure AMD to accelerate shifting backend assembly and testing from TFME to Taiwan's ASE, SPIL, and Powertech (see Nov 9–12 issue #10).",
+      "conf": "Confirmed (House declassified figures and 10-K revenue/JV data are official facts; Hunterbrook compliance allegations are short-seller claims pending official AMD response)",
+      "vocab": [
+        ["short-seller", "放空機構 / 空頭投資人"],
+        ["licensing revenue", "技術授權收入"],
+        ["safe-haven", "避風港（資金避險標的）"],
+        ["declassify", "解密公開（政府文件）"],
+        ["Entity List", "美國商務部實體清單（黑名單）"],
+        ["firmware", "韌體"]
+      ]
+    },
+    "9": {
+      "entity": "Samsung Electronics (005930.KS)",
+      "title": "Samsung Reshuffles Chip Leadership as HBM R&D Chief Hwang Takes Over Memory and Co-CEO Jun Shifts Focus to Foundry; Memory Capacity Reportedly Sold Out Through 2029 with LTAs Extending to 2031",
+      "summary": "Samsung Electronics announced a major Device Solutions (DS) leadership reshuffle on Nov 20 alongside reports of multi-year memory capacity sellouts: (1) Samsung promoted DRAM and HBM R&D chief Hwang Sang-joon to President and head of the Memory Business; Vice Chairman and Co-CEO Jun Young-hyun, who had concurrently led the Memory Business while heading the broader DS Division, handed off direct memory management to focus on turning around Samsung Foundry and future semiconductor businesses. Additionally, US semiconductor head Cho Sang-yeun was named head of the System LSI (logic design) Business, while DRAM/NAND/Foundry process development veteran Lee Jong-myeong was promoted to DS Division CTO. (2) Korean outlet Economy Tribune reported on Nov 23, citing industry sources, that the vast majority of Samsung's 2027–2029 memory capacity (spanning HBM, commodity DRAM, and enterprise NAND Flash) is already pre-booked via customer Long-Term Agreements (LTAs)—with 2027 commodity DRAM wafer supply completely sold out (as industry supply fulfillment stands at only ~60%–70% for DRAM and slightly over 50% for enterprise SSDs)—and some clients are pushing to extend LTAs through 2031. Samsung has signed LTAs with 10 major customers and is negotiating with 10 more, with all signed LTAs incorporating 'price floor' protections and prepayments as Samsung targets locking in 60%–70% of total memory capacity under LTAs by 2030.",
+      "metric": "Samsung DS reshuffle: Hwang Sang-joon named Memory President, Co-CEO Jun Young-hyun shifts focus to Foundry, Cho Sang-yeun leads System LSI, Lee Jong-myeong named DS CTO; memory capacity: 2027–2029 nearly sold out (clients seeking LTAs to 2031; 10 LTAs signed + 10 in talks, all with price floors; target 60%–70% LTA share by 2030); current supply fulfillment: DRAM ~60%–70%, enterprise SSD >50%",
+      "impact": "With Samsung's memory division posting record Q3 profit and locking in 2027–2029 capacity under price-floor LTAs, Co-CEO Jun Young-hyun can now dedicate his full executive bandwidth to fixing Samsung Foundry, reinforcing its strategy of pairing in-house 2nm logic base dies with custom HBM4E (see prior issue #13).",
+      "conf": "Confirmed (leadership reshuffle is official; 2027–2029 capacity sellout and 2031 LTAs are Korean media citing sources, building on Samsung's Q3 call disclosure of 10 signed price-floor LTAs)",
+      "vocab": [
+        ["price floor", "價格下限（保底價格條款）"],
+        ["pre-book", "預先訂購 / 預訂產能"],
+        ["reshuffle", "高層人事改組"],
+        ["fulfillment", "供貨滿足率 / 訂單履行"],
+        ["concurrently", "兼任地 / 同時地"],
+        ["commodity DRAM", "標準型／通用型 DRAM"]
+      ]
+    },
+    "10": {
+      "entity": "Neoclouds / NVIDIA / ByteDance / DayOne / Bridge Data Centres",
+      "title": "US Overseas Compute Curbs Spark Domino Effect: Neoclouds Rush to Remarket China-Bound NVIDIA B300 Leases to US & Europe as ByteDance-Linked US$480M Southeast Asia Loan Is Shelved",
+      "summary": "The US BIS's Nov 16 interim final rule regulating AI chip exports to five high-risk countries and requiring licenses within 90 days for overseas data centers providing substantial compute (TPP >12M) to Chinese entities (see prior issue #11) triggered immediate fallout across Asian Neoclouds and project finance: (1) Liquid Compute CEO Ronit Jain disclosed on Nov 19–20 that a 'staggering number' of Neocloud operators have approached the compute marketplace seeking to remarket long-term NVIDIA Blackwell Ultra (B300) capacity originally committed to Chinese-affiliated offtakers into the US and Western Europe, fearing stricter US enforcement or Chinese client cancellations that would leave operators stuck with massive hardware debt; the sudden influx of remarketed capacity is expected to drive B300 rental rates lower (contrasting with NVIDIA's Q3 call commentary that Hopper rental rates had reached 2x original levels and B300 commanded a >60% premium). (2) Washington think tank Institute for Progress (IFP) estimated that Southeast Asia is projected to host ~75% of China's overseas AI compute (in H100 FP8 equivalents) by end-2026, led by ByteDance tapping major regional data center operators DayOne Data Centers (formerly GDS International) and Bridge Data Centres; Bloomberg and TrendForce reported that banking lenders have shelved a US$480M loan tied to a ByteDance-linked Southeast Asian data center project to reassess regulatory compliance risks.",
+      "metric": "IFP est.: Southeast Asia hosts ~75% of China's overseas AI compute (H100 FP8 equivalents); ByteDance-linked US$480M Southeast Asia data center loan reportedly shelved by banks; Liquid Compute: wave of Neoclouds remarketing China-committed B300 long-term capacity to US/Europe, pressuring B300 rental rates downward",
+      "impact": "Frozen Southeast Asian data center loans and distress remarketing of China-bound B300 leases validate Wall Street fears that BIS's third-country compute crackdown—combined with tighter NVIDIA credit backstops post-Huang—will deflate leveraged Neocloud demand, explaining why AI chip stocks sold off sharply on Nov 19–20 despite NVIDIA's US$130B Q4 guidance.",
+      "conf": "High (Liquid Compute CEO public statement, IFP think-tank report, and Bloomberg banking sources)",
+      "vocab": [
+        ["offtaker", "承購方 / 長期租賃買家"],
+        ["remarket", "重新行銷 / 轉售（算力合約）"],
+        ["project finance", "專案融資"],
+        ["rental rate", "租賃費率 / 租金價格"],
+        ["deflate", "緊縮 / 戳破（泡沫）"],
+        ["Equivalent", "約當量 / 等效規模"]
+      ]
+    },
+    "11": {
+      "entity": "Lam Research (LRCX) / TSMC (2330)",
+      "title": "Lam Research COO Details Taiwan Lab Expansion Strategy: Pushes 'Aether' Dry Photoresist for EUV Line-Edge Roughness and 'Molybdenum-for-Tungsten' Swap for Angstrom-Era Scaling",
+      "summary": "Following the Nov 18 groundbreaking of Lam Research's new Taiwan Technology Center in Jhunan, Miaoli (which will expand its Taiwan lab space by 900% upon opening in 2028; see prior issue #22), Lam Research EVP and COO Sesha Varadarajan detailed three core technological pillars supporting leading-edge foundries in an interview published by TechNews on Nov 21: (1) Capacity & Proximity: Lam has expanded its global manufacturing capacity by >50% over the past four years and is pairing its Linkou Taiwan Manufacturing Center with the new Jhunan R&D labs to co-locate process development right next to TSMC and top memory/packaging partners, compressing node-to-fab cycle times; (2) 'Aether' Dry Photoresist: As EUV lithography pitches shrink, traditional wet photoresists suffer from chemical waste and stochastic defects; Lam's Aether dry photoresist technology reduces line-edge roughness (LER), lowers required EUV exposure dose, and cuts chemical waste, having already passed qualification and entered adoption at several leading customers; (3) Replacing Tungsten with Molybdenum (Mo): As GAA and angstrom-era interconnect dimensions shrink past electron mean free path limits, copper and tungsten resistance spikes; Lam is pioneering barrier-less, low-resistance molybdenum deposition and etch to replace tungsten, alongside high-aspect-ratio atomic layer deposition (ALD) and gap-fill tools enabling both device scaling and 3D advanced packaging system scaling.",
+      "metric": "Lam Research global manufacturing capacity +>50% over past 4 yrs (Jhunan Taiwan lab space +900%); 3 tech pillars: ① Aether dry photoresist (lowers EUV LER & exposure dose, qualified at multiple leading chipmakers), ② Molybdenum (Mo) replacing tungsten to overcome interconnect resistance scaling limits, ③ high-aspect-ratio GAA etch & ALD gap-fill",
+      "impact": "Lam's Aether dry EUV photoresist and barrier-less molybdenum metallization directly address the two biggest physical bottlenecks in sub-2nm logic—EUV stochastic defects (the exact hurdle stalling Rapidus in item #16) and contact/wordline RC delay—serving as critical enablers for TSMC's N2P, A16, and A14 nodes.",
+      "conf": "Confirmed (executive interview disclosure)",
+      "vocab": [
+        ["cycle time", "生產或開發週期時間"],
+        ["qualification", "製程與客戶認證"],
+        ["co-locate", "就近同地配置"],
+        ["dry photoresist", "乾式光阻"],
+        ["line-edge roughness", "線邊緣粗糙度 (LER)"],
+        ["molybdenum", "鉬（低電阻次世代半導體金屬材料）"]
+      ]
+    },
+    "12": {
+      "entity": "NVIDIA (NVDA) / US SEC / US DOJ / US Treasury Department",
+      "title": "Reuters Reports US SEC Probing NVIDIA's Accounting and Singapore Revenue Disclosures While DOJ Reviews US$12.9B Hugging Face Deal; After Market Rout, Treasury Chief Bessent Quips 'Jensen Is on the Outside Now'",
+      "summary": "Regulatory pressure on NVIDIA (NVDA) widened over the weekend even as Washington's political tone softened following Friday's market rout: (1) Reuters and the WSJ reported on Nov 21 that the US Securities and Exchange Commission's (SEC) newly formed Financial Reporting and Accounting unit is investigating NVIDIA's accounting and disclosure practices. A key focus is NVIDIA's decision last year to change its geographic revenue reporting methodology from 'bill-to location' to 'customer headquarters location'—a shift that removed Singapore (which Financial Times noted had previously surged to nearly half of global billings) from standalone geographic breakout in Nov 2025, drawing scrutiny amid the DOJ/Commerce probe into Singapore-based Megaspeed (investigated since 2024 over suspected China chip diversion). Separately, the DOJ is reviewing NVIDIA's US$12.9B acquisition of open-source AI platform Hugging Face and broader M&A practices on antitrust grounds. (2) However, after the Nov 20 equity market bloodbath (which wiped out >US$4T across US AI stocks and >US$6T from the S&P 500 over six weeks), Washington's rhetoric shifted: President Trump publicly backed Jensen Huang's reinstatement for a third time while defending Commerce Secretary Howard Lutnick, and Treasury Secretary Scott Bessent—who had previously demanded NVIDIA hire an external CEO—quipped in a CBS interview (reported by TechNews on Nov 23) when asked if he contradicted Trump: 'Well, Jensen is on the outside now.' Bessent pivoted to emphasizing whether lower-level employees acted without authorization, leaving political room for Huang (who holds a 3.58% stake with board nomination rights) to potentially return if cleared.",
+      "metric": "US SEC probe: investigating NVIDIA accounting & removal of Singapore standalone geographic revenue disclosure; US DOJ probe: antitrust review of US$12.9B Hugging Face acquisition; Jensen Huang holds ~3.58% of NVIDIA; Treasury Chief Bessent quips on CBS: 'Well, Jensen is on the outside now'",
+      "impact": "The SEC accounting probe into NVIDIA's Singapore billing disclosures and DOJ antitrust scrutiny were the immediate catalysts behind NVIDIA's 14% plunge on Nov 20; yet Friday's market crash has visibly softened Treasury Chief Bessent's stance toward Trump's pro-reinstatement position, making Huang's Dec 1 Congressional testimony a potential turning point for AI hardware sentiment.",
+      "conf": "Confirmed (Bessent's CBS interview is public record; SEC accounting probe and DOJ review are Reuters and WSJ citing sources)",
+      "vocab": [
+        ["accounting practice", "會計處理準則與實務"],
+        ["billings", "開票金額 / 帳單營收"],
+        ["antitrust", "反壟斷"],
+        ["nomination right", "董事提名權"],
+        ["proxy fight", "委託書爭奪戰"],
+        ["enforcement", "執法行動"]
+      ]
+    },
+    "13": {
+      "entity": "PHLX Semiconductor Index / TSMC ADR / UMC ADR / Intel / GFS / Tower / NVIDIA / AMD / Anthropic / Hua Hong / SMIC",
+      "title": "Short-Lived Anthropic IPO Pop, SEC NVIDIA Probe, and AMD Short Report Trigger Nov 20 US Tech Bloodbath: SOX Plunges 10.73% (Down 36% From June Peak) and TSMC ADR Drops 9.48% While SMIC A-Shares Rally",
+      "summary": "Across the three US trading days in this period (Nov 18–20), semiconductor stocks suffered a violent sell-off: (1) On Nov 18, despite NVIDIA's blowout Q3 print, the board's refusal to reinstate Jensen Huang sent NVIDIA reversing from pre-market gains to close down 2.89% at US$150.96, leaving the PHLX Semiconductor Index (SOX) up just 0.10% at 9,652.80, with TSMC ADR +0.81% (US$362.62) and AMD +5.31% (US$530.14); (2) on Nov 19, Anthropic's (ANT-US) blockbuster Nasdaq debut at US$83 and Intel's 18A-P external customer win (+1.92% to US$55.72) sparked an early Nasdaq rally, but late-session selling dragged the Dow down >1,100 points and the SOX down 2.41% to 9,419.72, with TSMC ADR -2.90% (US$352.09) and AMD -7.72% (US$489.19); (3) on Nov 20, hit by the SEC accounting probe into NVIDIA, declassified China H200 license data, the Hunterbrook short report on AMD, and Anthropic tumbling 8.50% on its second day (to US$88.91), US equities suffered a market-wide rout: the Dow and S&P 500 entered correction territory, the VIX spiked above 40, and the SOX plummeted 10.73% (-1,011.13 points) to 8,408.59 (-12.80% over three days and down 36% from its June peak). On Nov 20, chip and foundry stocks collapsed across the board: NVIDIA plunged 14.01% to US$125.53 (3-day -19.25%), Micron plunged ~14%, AMD dove 13.25% to US$424.39, TSMC ADR dropped 9.48% to US$318.71 (3-day -11.39%), UMC ADR fell 10.15% to US$12.04 (3-day -14.85%), Tower sank 9.56% to US$115.56 (3-day -15.07%), GlobalFoundries fell 8.68% to US$35.56 (3-day -10.20%), and Intel dropped 7.97% to US$51.28 (3-day -7.05%). Notably, 'Big Short' investor Michael Burry disclosed on Nov 21 that he took profits and closed half of his put option positions on NVIDIA and the VanEck Semiconductor ETF (SMH), while NVIDIA perpetual futures jumped ~8% in Asian trading on Nov 23. In Hong Kong and Shanghai, Chinese foundries surged on Nov 19 after TSMC and Samsung paused sub-16nm China shipments—with Hua Hong (1347.HK) jumping 8.01% to HK$83.60, Nexchip (688249.SH) soaring 10.26% to RMB 29.98, and SMIC A-shares (688981.SH) rising 6.21% to RMB 122.25; on Nov 20, Hua Hong pulled back 10.17% to HK$75.10 and SMIC H-shares (0981.HK) dipped 2.73% to HK$49.12 (Nexchip -5.94% to RMB 28.20), but SMIC A-shares bucked the global crash to rise another 2.63% to RMB 125.46.",
+      "metric": "SOX 3-day path: 9,652.80 (Nov 18, +0.10%) → 9,419.72 (Nov 19, -2.41%) → 8,408.59 (Nov 20, -10.73%; 3-day -12.80%, down 36% from June high); Nov 20 US closes: TSM US$318.71 (-9.48%), UMC US$12.04 (-10.15%), TSEM US$115.56 (-9.56%), GFS US$35.56 (-8.68%), INTC US$51.28 (-7.97%), NVDA US$125.53 (-14.01%), AMD US$424.39 (-13.25%); HK/CN closes (Nov 19 → Nov 20): Hua Hong HK$83.60 → 75.10, SMIC H-share HK$50.50 → 49.12, SMIC A-share RMB 122.25 → 125.46 (up both days), Nexchip RMB 29.98 → 28.20",
+      "impact": "The SOX's 10.73% single-day crash and VIX spiking above 40 mark an extreme capitulation and regulatory re-rating phase for US AI hardware; however, prominent short-seller Michael Burry halving his semiconductor put positions into the rout—alongside SMIC A-shares rallying past RMB 125 on TSMC's sub-16nm China freeze—signals that short-covering and domestic-substitution rotation are beginning to emerge.",
+      "conf": "Confirmed (official exchange closes and public disclosures)",
+      "vocab": [
+        ["correction territory", "修正區間（自高點回檔逾 10%）"],
+        ["capitulation", "恐慌性棄守拋售 / 殺出最後浮額"],
+        ["re-rating", "估值重新定價", "fin"],
+        ["short-covering", "空頭回補"],
+        ["take profits", "獲利了結"],
+        ["volatility index", "波動率恐慌指數 (VIX)"]
+      ]
+    },
+    "14": {
+      "entity": "TSMC / UMC / VIS / PSMC / ASE Holding / WIN Semi / VPEC / GCS / AWSC / Episil / TAIEX",
+      "title": "TAIEX Drops 1,768 Pts on Nov 19 and Plummets 2,393.6 Pts on Nov 20 to 36,033.29 (Worst Weekly Drop in 36 Yrs at -7,641 Pts); TSMC Defends NT$2,000 and Compound Foundries Hit Limit-Down as Foreign Investors Scoop Up 101k Lots of UMC",
+      "summary": "Across the two full Taiwan trading days in this period (Nov 19–20), the TAIEX suffered historic margin liquidation and ETF redemption selling: (1) On Nov 19, weighed down by NVIDIA's post-earnings reversal and T+2 settlement defaults, the TAIEX tumbled 1,768.02 points (-4.40%, the 7th-largest point drop in history) to 38,426.89 on NT$942.99B turnover, as foreign investors net sold NT$24.31B, dealers net sold NT$23.30B, and investment trusts net bought NT$4.39B (total institutional net sell NT$43.23B); (2) on Nov 20, despite the FSC deploying conditional short-selling curbs the previous evening, forced margin calls and passive ETF redemptions sent the TAIEX diving as low as 35,738.68 intraday before closing down 2,393.60 points (-6.23%, the 3rd-largest point drop ever) at 36,033.29 on NT$935.31B turnover, with 365 listed companies closing limit-down; foreign net selling narrowed to NT$9.51B (concentrated in 0050 ETF redemptions), while investment trusts turned net sellers of NT$7.35B and dealers dumped NT$34.08B (including NT$29.02B in warrant hedging sales) for a combined institutional net sell of NT$50.94B. Over the two sessions, the TAIEX plunged 4,161.62 points (-10.35%), bringing its full-week drop (vs. Nov 13's 43,675.12 close) to 7,641.83 points (-17.50%)—the largest weekly point drop since 1990 (36 years)—erasing over NT$27T in market cap and breaching the annual moving average. From Nov 18 to Nov 19 and Nov 20 closes: TSMC (2330) fell from NT$2,175 to NT$2,100 (-3.45%) and NT$2,000.00 (-4.76% on Nov 20 after touching a 7-month intraday low of NT$1,970, which drew record retail odd-lot buying of NT$24.12B; down 8.05% over two days and 22.78% from its Oct 6 peak of NT$2,590, erasing NT$15.3T in market cap to NT$51.86T); UMC (2303) fell from NT$93.00 to NT$88.20 and NT$80.30 (-8.96% on Nov 20, 2-day -13.66%); PSMC (6770) dropped from NT$51.90 to NT$48.90 and NT$44.10 (-9.82% on Nov 20, 2-day -15.03%); VIS (5347) slid from NT$124.00 to NT$116.50 and NT$106.50 (2-day -14.11%); and ASE Holding (3711) fell from NT$548 to NT$504 and NT$457.00 (2-day -16.61%). Compound foundries were hit hardest as all five closed limit-down on Nov 20: WIN Semi (3105) locked limit-down for two straight days from NT$470 to NT$423.00 and NT$381.00 (2-day -18.94%); VPEC (2455) hit limit-down twice from NT$326.50 to NT$294.00 and NT$265.00 (2-day -18.84%); GCS (4991) hit limit-down twice from NT$302.50 to NT$272.50 and NT$245.50 (2-day -18.84%); AWSC (8086) fell from NT$91.00 to NT$83.50 and limit-down at NT$75.20 (2-day -17.36%); and Episil (3707) dropped from NT$51.50 to NT$46.95 and limit-down at NT$42.30 (2-day -17.86%). Crucially, TWSE T86 data revealed a massive institutional divergence: while foreign investors net sold TSMC (-8,635 and -11,863 lots) and ASE (-5,161 and -1,732 lots) on Nov 19–20, they aggressively accumulated UMC (+20,658 lots on Nov 19 and a massive +80,322 lots on Nov 20, totaling +100,980 lots over two days while absorbing 46,867 lots sold by domestic trusts) and PSMC (+4,500 and +18,282 lots, totaling +22,782 lots), alongside small net buys in VPEC (+133 and +58 lots).",
+      "metric": "TAIEX: 38,426.89 (Nov 19, -1,768.02 pts / -4.40%) → 36,033.29 (Nov 20, -2,393.60 pts / -6.23%; weekly drop -7,641.83 pts / -17.50%, worst in 36 yrs); foreign net sell narrowed from NT$24.31B (Nov 19) to NT$9.51B (Nov 20); Nov 20 closes: TSMC NT$2,000 (intraday low 1,970; record odd-lot turnover NT$24.12B), UMC NT$80.3, VIS NT$106.5, PSMC NT$44.1, ASE NT$457; all 5 compound foundries limit-down on Nov 20: WIN Semi NT$381, VPEC NT$265, GCS NT$245.5, AWSC NT$75.2, Episil NT$42.3; foreign investors net bought 100,980 lots of UMC & 22,782 lots of PSMC across Nov 19–20",
+      "impact": "The TAIEX's 7,641-point weekly crash was driven by domestic margin calls, passive ETF redemptions, and dealer warrant hedging (-NT$29B on Nov 20 vs. only -NT$9.5B in foreign net selling); foreign investors scooping up over 80,000 lots of UMC and 18,000 lots of PSMC into Friday's 2,393-point rout directly fueled UMC's limit-up rebound to NT$88.3 at the Nov 23 open (see item #15), signaling institutional value buying in oversold mature-node foundries.",
+      "conf": "Confirmed (official TWSE/TPEx close and T86 institutional flow data)",
+      "vocab": [
+        ["margin call", "融資追繳 / 斷頭賣壓"],
+        ["redemption", "基金或 ETF 贖回"],
+        ["hedging", "避險操作（如自營商權證避險）"],
+        ["odd-lot", "零股交易（未滿一張之股票買賣）"],
+        ["oversold", "超賣的 / 跌深的"],
+        ["value buying", "價值型逢低買盤"]
+      ]
+    },
+    "15": {
+      "entity": "Taiwan FSC / National Financial Stabilization Fund / South Korean MOEF & FSC / UMC (2303)",
+      "title": "Taiwan and South Korea Deploy Full-Scale Market Rescues: Taiwan FSC Bans All Short-Selling Below Prior Close Starting Nov 23 as Stabilization Fund Confirms Buying; South Korea Readies Market Stabilization Fund and Eases Buyback Caps",
+      "summary": "Following severe AI-led equity routs across Taiwan and South Korea last week (with the TAIEX down 17.5% for the week and South Korea's KOSPI plunging 5.21% on Nov 20 below 5,000 amid record foreign outflows), authorities in both semiconductor hubs rolled out heavy-duty stabilization measures over the Nov 21–22 weekend: (1) Taiwan's Financial Supervisory Commission (FSC) announced on Nov 21 its third and strictest round of market rescue measures taking effect Monday, Nov 23—imposing a 'full short-selling ban below the previous day's close' across all TWSE and TPEx stocks while urging institutional investors to halt securities lending; on the same day, Taiwan's National Financial Stabilization Fund formally confirmed that it has entered the market to execute stabilization purchases since receiving authorization on Nov 6, stressing that Taiwan's record October exports and export orders demonstrate a severe disconnect between share prices and fundamentals (backed by the full short-selling ban and Friday's 80k-lot foreign buying, UMC surged to its NT$88.30 daily limit-up at the Nov 23 open as the TAIEX swung over 1,200 points intraday to turn positive, though GCS and VPEC hit limit-down early; note: Nov 23 moves are intraday, not closes). (2) South Korean Deputy Prime Minister and Finance Minister Lee Hyung-il convened an emergency macroeconomic meeting on Nov 22 with the Bank of Korea, FSC, and Financial Supervisory Service (FSS), deciding to review activating South Korea's 'Stock Market Stabilization Fund' (which would mark its first deployment since the 2008 global financial crisis) while relaxing daily corporate share buyback caps for three months, cracking down on illegal short selling, and strengthening advance notice rules for forced margin liquidations.",
+      "metric": "Taiwan rescue (effective Nov 23): full ban on short-selling below prior close + institutional SBL freeze + Stabilization Fund confirms active buying; South Korea rescue (Nov 22 emergency meeting): prepares to activate Stock Market Stabilization Fund (1st since 2008) + 3-month relaxation of daily share buyback caps + illegal short-selling crackdown & margin call protections",
+      "impact": "Coordinated policy intervention by Taiwan (full below-flat short-selling ban + Stabilization Fund buying) and South Korea (preparing its 2008-era Stabilization Fund + uncapping corporate buybacks) establishes a hard regulatory floor under Northeast Asian semiconductor equities, curbing predatory shorting and forced margin cascades.",
+      "conf": "Confirmed (official announcements by Taiwan FSC, Stabilization Fund, and South Korea MOEF; Nov 23 TAIEX/UMC moves are intraday)",
+      "vocab": [
+        ["short-selling ban", "禁空令（禁止放空措施）"],
+        ["securities lending", "有價證券出借（借券）"],
+        ["stabilization fund", "股市安定基金 / 國安基金"],
+        ["buyback cap", "庫藏股每日買回上限"],
+        ["financial crisis", "金融危機 / 金融海嘯"],
+        ["disconnect", "脫節 / 嚴重背離"]
+      ]
+    },
+    "16": {
+      "entity": "Rapidus / TSMC (2330)",
+      "title": "Japan's Rapidus Reportedly Hits Critical 2nm Bottleneck as 6T SRAM Test Yield Remains at 'Zero,' Stalled by Five Hurdles Across Nanosheet Release, EUV Stochastics, and Gate-Stack Integration",
+      "summary": "Despite Rapidus President and CEO Atsuyoshi Koike's public rebuttal last week reaffirming a late-2027 to early-2028 target for 2nm mass production (see prior issue #7), an in-depth TechNews analysis and industry reports on Nov 23 indicated that while Rapidus fabricated working individual 2nm GAA transistors at its Hokkaido IIM-1 fab in Jul 2025, its functional test yield on high-density 'standard 6T SRAM test chips' (which integrate six transistors, contacts, and multi-layer interconnects in a dense regular array where any process deviation causes read/write failure) reportedly remains at 'zero (0%).' By contrast, TSMC's 2nm (N2) 256Mb SRAM test chip yield surpassed 50% in Apr 2023, topped 90% in Apr 2024, and held above 90% ahead of its 2025 volume ramp. The report identified five compounding technical bottlenecks stalling Rapidus: ① nanosheet release (selective etching of SiGe sacrificial layers damaging the silicon channel), ② EUV stochastic effects (photon and resist chemical fluctuations causing line defects), ③ inner-spacer geometric variation, ④ gate-stack integration (work-function variability shifting threshold voltage and SRAM read/write stability), and ⑤ cleanroom particle control and single-wafer transport validation. Unless Rapidus breaks the zero-yield barrier on SRAM soon, its window to complete qualification and risk production before 2H FY2027 high-volume manufacturing (HVM) will be severely compressed.",
+      "metric": "Rapidus 2nm 6T SRAM test yield: reportedly still 0% (vs. TSMC N2 256Mb SRAM yield >50% in Apr 2023 and >90% in Apr 2024); 5 bottlenecks: nanosheet SiGe selective etch, EUV stochastics, inner-spacer variation, gate-stack work-function variability, cleanroom & single-wafer transport validation",
+      "impact": "Functional 6T SRAM yield is the definitive gatekeeper for customer logic tape-outs; Rapidus struggling at 0% SRAM yield despite working single GAA transistors underscores that decades of defect-density (D0) learning curves and multi-module process integration—not merely buying EUV scanners and licensing IBM transistor architectures—remain TSMC's true competitive moat.",
+      "conf": "Unconfirmed (media and technical analysis citing sources on 0% SRAM yield; Rapidus officially maintains its 2H FY2027 mass production target)",
+      "vocab": [
+        ["learning curve", "學習曲線 / 經驗累積曲線"],
+        ["high-volume manufacturing", "大規模量產 (HVM)"],
+        ["defect density", "缺陷密度"],
+        ["nanosheet", "奈米片（GAA 電晶體通道結構）"],
+        ["stochastic", "隨機效應的（如 EUV 光子隨機缺陷）"],
+        ["threshold voltage", "閾值電壓 / 臨界電壓"]
+      ]
+    },
+    "17": {
+      "entity": "Morgan Stanley / Greater China Display Driver IC & Foundry Supply Chain",
+      "title": "Morgan Stanley Slashes 2027 Global Smartphone Shipment Forecast to -5% YoY (From +4%) with China Down Another 7%, Downgrading Greater China Driver IC Vendors on Eroding Android Pricing Power",
+      "summary": "Morgan Stanley's hardware research team published its latest global smartphone survey on Nov 23, slashing its 2027 global smartphone shipment forecast from '+4% YoY growth' to a '-5% YoY contraction'—and warning of an -11% drop in a bear-case scenario—with Greater China (Chinese domestic market) smartphone shipments projected to fall another 7% in 2027 following an estimated 12% drop in 2026. The survey found that soaring memory component costs, tighter US export reviews on advanced consumer chips for China (see item #7), and waning consumer interest in 'on-device AI' as a purchase driver (falling from 22% of respondents last year to 17%, while 'overall device quality' rose to 35%) are driving a sharp brand divergence in China: Apple enjoys a +28% net switching intent among Chinese consumers, whereas Android brands (Xiaomi, Oppo, Vivo, and Honor) suffer net switching intents of -21% to -31%. Morgan Stanley warned that weak Android handset demand will severely erode pricing power and foundry cost pass-through for Greater China display driver IC (DDIC) and smartphone sensor IC designers, prompting broad rating and earnings downgrades across the DDIC sector.",
+      "metric": "Morgan Stanley 2027 global smartphone shipment forecast: cut from +4% YoY to -5% YoY (bear case -11%); China smartphone shipments: est. -12% in 2026, -7% in 2027; China net brand switching intent: Apple +28% vs. Android brands (Xiaomi/Oppo/Vivo/Honor) -21% to -31%",
+      "impact": "Morgan Stanley's downgrade of 2027 Android smartphone shipments and DDIC vendors carries bifurcated implications for foundries: TSMC's N3/N2 nodes benefit from Apple's +28% China share gain, whereas 12-inch mature-node foundries heavily exposed to Android high-voltage DDICs (such as Nexchip, UMC, and VIS) will rely even more heavily on AI server PMIC/BCD and silicon photonics to offset handset driver IC softness in 2027.",
+      "conf": "Confirmed (foreign institutional research report)",
+      "vocab": [
+        ["bear case", "悲觀情境預測"],
+        ["contraction", "萎縮 / 衰退"],
+        ["erode", "侵蝕 / 削弱（定價權或毛利）"],
+        ["bifurcated", "兩極分化的 / 分流的"],
+        ["display driver IC", "顯示器驅動 IC (DDIC)"],
+        ["switching intent", "品牌轉換意向"]
+      ]
+    },
+    "18": {
+      "entity": "Samsung Electronics (005930.KS) / Rockley Photonics",
+      "title": "(Background: Completed 2026/09, Reported 11/20) Samsung Acquires Four Core US Silicon Photonics Patents from UK's Rockley Photonics to Bolster 300mm Silicon Photonics Foundry Platform and CPO Engines",
+      "summary": "TrendForce reported on Nov 20 that according to updated patent assignment records at the US Patent and Trademark Office (USPTO), Samsung Electronics completed the acquisition of four core US silicon photonics patents from UK photonic chip developer Rockley Photonics in September 2026. The patents cover four foundational areas for high-speed data center optical interconnects: fundamental optoelectronic device structures, high-performance optical modulators, athermal multi-path interference filters, and optical multiplexers. Having publicly debuted its 300mm (12-inch) silicon photonics foundry Process Design Kit (PDK) at the Optical Fiber Communication Conference (OFC) in March 2026, Samsung plans to integrate co-packaged optics (CPO) optical engines into its AI accelerators and advanced foundry offerings starting in 2027; acquiring Rockley Photonics' IP strengthens Samsung's temperature-insensitive filtering and high-density modulation capabilities (listed as background as the patent assignment was completed in Sep 2026 prior to this period).",
+      "metric": "Samsung acquired 4 US silicon photonics patents from UK-based Rockley Photonics in Sep 2026 (covering optoelectronic structures, optical modulators, athermal interference filters & optical multiplexers) to support its 300mm silicon photonics foundry PDK and 2027 CPO roadmap",
+      "impact": "Alongside TSMC (COUPE), GlobalFoundries (US$1B silicon photonics run-rate target by end-2027), Tower (US$1.1B Q4 annualized SiPho target), and UMC, Samsung's acquisition of western photonic IP confirms that a 300mm silicon photonics foundry offering has become a mandatory pillar for top-five foundries competing for 2027–2030 AI rack optical interconnect business.",
+      "conf": "Background (patent assignment completed in Sep 2026 prior to this report's window; official USPTO records)",
+      "vocab": [
+        ["patent assignment", "專利權移轉 / 讓與"],
+        ["intellectual property", "智慧財產權 (IP)"],
+        ["process design kit", "製程設計套件 (PDK)"],
+        ["optical modulator", "光調變器"],
+        ["multiplexer", "多工器"],
+        ["athermal", "無熱化的（對溫度變化不敏感的）"]
+      ]
+    }
+  }
+}
