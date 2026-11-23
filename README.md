@@ -50,7 +50,7 @@
 }
 ```
 
-字彙第三欄 `"fin"` 代表財經用語。由 `foundry-weekly-tools/build_weekly.py` 產生：內容 JSON 加上與 `news`
+字彙第三欄 `"fin"` 代表財經用語。由 `tools/build_weekly.py`（本機產生器，以 .git/info/exclude 排除、不進 git）產生：內容 JSON 加上與 `news`
 逐列對應的 `news_en`（字典沒有的字放 `glossary_add`），產生器會同時寫出 Excel、`data/en/` 對照檔並擴充字典；
 財經用語依 `finance_terms.json` 自動標記。Excel 本身格式不變。
 
