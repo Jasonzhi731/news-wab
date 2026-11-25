@@ -1,0 +1,259 @@
+{
+  "source": "全球半導體代工產業快報_20261123-20261125.xlsx",
+  "news": {
+    "1": {
+      "entity": "NVIDIA (NVDA) / TSMC (2330) / US Commerce Department BIS",
+      "title": "New US AI Chip Export Rule Takes Effect: Blackwell and GB200 NVL72 Shipments to Singapore, Malaysia, Thailand, Indonesia and Brazil Need Licenses and 'Remote Compute' Is Now Controlled; At Least Two NVIDIA Server Partners Halt Southeast Asia Shipments as TSMC Reportedly Demands Prepayment for Excess Orders",
+      "summary": "Citing Nikkei Asia, Cnyes reported on Nov 23 that the US Commerce Department's new AI chip export rule took effect on Nov 19, 2026, requiring prior US export licenses to ship or transfer NVIDIA's Blackwell series, GB200 NVL72, B200 and other advanced chips and equipment to five countries: Singapore, Malaysia, Thailand, Indonesia and Brazil. Section 744.24 of the rule also brings 'remote compute' under control, requiring licenses for overseas data centers that provide compute above a set threshold to companies in D:5 countries such as China or in Macau, closing the loophole of renting GPUs remotely through Southeast Asian facilities. As a result, at least two of NVIDIA's server partners have fully suspended shipments to Southeast Asian customers, one has stopped taking new customers in the region, and another is shifting its business development toward Japan and South Korea; a single GB200 NVL72 rack starts at nearly US$5 million, and Southeast Asian data center stocks MN Holdings and Critical Holdings plunged nearly 20%. The report also said upstream supplier TSMC has asked NVIDIA to pay cash in advance for excess orders; supplier executives said near-term orders through 2027 are broadly flat, but product specifications and capacity planning from the second half of 2028 face extreme uncertainty.",
+      "metric": "Rule effective Nov 19, 2026; license required for Singapore, Malaysia, Thailand, Indonesia, Brazil; GB200 NVL72 rack from ~US$5M; SE Asian data center stocks MN Holdings and Critical Holdings down ~20%; TSMC reportedly demands prepayment from NVIDIA for excess orders",
+      "impact": "With controls extending from chip exports to remote compute, Southeast Asian data center build-outs are likely to be delayed; the near-term hit falls on server assemblers and local data center operators, while the impact on TSMC's CoWoS and 3nm wafer starts depends on whether NVIDIA trims wafer plans beyond 2027. TSMC's reported demand for prepayment on excess orders shows the foundry leader shifting inventory and cancellation risk back to customers as demand uncertainty rises, the flip side of its 'advanced capacity remains tight' message in item 4.",
+      "conf": "Unconfirmed (the rule itself is official US regulation; the server partners' shipment halt and TSMC's prepayment demand come from unnamed supplier executives quoted by Nikkei Asia; the article still refers to Colette Kress as acting CEO, as it was written before Jensen Huang's reinstatement on the evening of Nov 23)",
+      "vocab": [
+        ["export license", "出口許可證"],
+        ["prepayment", "預付款"],
+        ["loophole", "漏洞"],
+        ["cancellation risk", "取消（砍單）風險"],
+        ["business development", "業務開發"],
+        ["plunged", "暴跌（plunge 過去式）"],
+        ["capacity planning", "產能規劃"]
+      ]
+    },
+    "2": {
+      "entity": "Coherent (COHR) / Wolfspeed (WOLF) / Infineon",
+      "title": "12-Inch Silicon Carbide Enters AI Advanced Packaging: Coherent Samples 12-Inch High-Thermal-Conductivity SiC Substrates for Heat Spreaders, Wolfspeed Evaluates SiC Interposers with Foundries and OSATs, and Infineon Makes 12-Inch SiC Power Devices on Existing Silicon Tools in Villach",
+      "summary": "TechNews reported on Nov 23 that as heat dissipation becomes a growing challenge for high-end AI processors, silicon carbide (SiC) is moving rapidly from high-voltage power devices toward 12-inch wafers and into thermal management for advanced AI packaging. Coherent has begun supplying samples of 12-inch high-thermal-conductivity SiC substrates to AI semiconductor partners for heat spreaders, claiming up to 25% better heat spreading than existing solutions; Wolfspeed is working with foundries, OSATs and research institutes to assess the feasibility of SiC interposers and heat spreaders in AI and HPC packaging. The article noted that the 12-inch format does not itself raise thermal conductivity; its value lies in compatibility with existing memory-wafer and advanced packaging equipment standards (wafer carriers, robotic handlers, bonding and metrology tools), allowing direct use of wafer-level processes such as cleaning, deposition, metallization, bonding, thinning, inspection and dicing. Challenges include controlling PVT crystal-growth defects as wafer area grows 2.25-fold from 8 to 12 inches, slicing damage, TTV and warpage, CMP, as well as interfacial thermal resistance and thermal stress in heterogeneous stacks. On the power side, Infineon announced at electronica 2026 that it had produced functional 12-inch SiC power devices at its Villach, Austria fab using existing silicon manufacturing equipment.",
+      "metric": "Coherent 12-inch SiC substrate: up to +25% heat spreading (company claim); 8-inch to 12-inch wafer area ×2.25; Wolfspeed evaluating SiC interposers with foundries and OSATs; Infineon 12-inch SiC power devices at Villach",
+      "impact": "As power and heat density keep rising in large CoWoS-class packages, thermal materials are moving from outside the package into the interposer and heat spreader; if SiC interposers prove viable, they will compete with TSMC's silicon interposers and glass substrates (TGV), and compound semiconductor foundries such as Episil and WIN Semiconductors could benefit over time from standardized 12-inch SiC process equipment.",
+      "conf": "Confirmed (Coherent's sampling and Infineon's 12-inch SiC devices are public company statements; SiC interposers are still at the evaluation stage, and the 25% figure is a company claim not independently verified)",
+      "vocab": [
+        ["feasibility", "可行性"],
+        ["samples", "樣品"],
+        ["heat spreader", "均熱片"],
+        ["thermal conductivity", "熱導率"],
+        ["warpage", "翹曲"],
+        ["standardized", "標準化的"],
+        ["viable", "可行的"]
+      ]
+    },
+    "3": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / ASE Technology Holding (3711)",
+      "title": "Taiwan Stocks Rebound 778.6 Points to 36,811.89 on First Day of Short-Selling Ban as UMC and PSMC Hit Limit-Up and Foreigners Buy Another 12,900 PSMC Lots; TSMC Edges Up 1.5% to NT$2,030 While Institutions Remain Net Sellers of NT$52.1B",
+      "summary": "On Nov 23, the first day of the Financial Supervisory Commission's rescue measures including a 'full ban on short selling below the previous close', the Taiex fell more than 500 points early and swung over 1,200 points intraday before closing up 778.60 points (+2.16%) at 36,811.89, led by limit-up gains in MediaTek and Delta Electronics as US stock futures rebounded and support measures expanded; turnover reached NT$1.1137 trillion. Among foundry names, mature-node players UMC and PSMC both hit limit-up, closing at NT$88.30 (+9.96%) and NT$48.50 (+9.98%) respectively, while TSMC rose NT$30 (+1.50%) to NT$2,030, ASE Technology Holding gained 5.47% to NT$482, Vanguard rose 3.29%, WIN Semiconductors 7.22% and AWSC 7.31%. Institutional investors were net sellers of NT$52.104 billion combined (foreign investors -NT$28.948B, investment trusts -NT$4.155B, dealers -NT$19.001B), yet foreign investors net bought 12,948 lots of PSMC and 2,433 lots of UMC while net selling 11,039 lots of TSMC and 2,244 lots of ASE.",
+      "metric": "Taiex 36,811.89 (+778.60 / +2.16%), turnover NT$1.114T; UMC NT$88.30 (+9.96%, limit-up), PSMC NT$48.50 (+9.98%, limit-up), TSMC NT$2,030 (+1.50%); institutions net -NT$52.104B; foreigners bought PSMC +12,948 lots, UMC +2,433 lots, sold TSMC -11,039 lots",
+      "impact": "Extending the pattern from Nov 19–20 when foreigners bought UMC and PSMC against the sell-off (prior issue #14), money in the panic favored lower-valued names benefiting from mature-node and memory foundry price hikes (PSMC's October revenue rose 94.19% YoY) rather than richly valued TSMC, which was net sold by foreigners and propped up by domestic buyers.",
+      "conf": "Confirmed (TWSE closing prices and institutional flow data; previous close plus change equals close)",
+      "vocab": [
+        ["limit-up", "漲停", "fin"],
+        ["short selling", "放空"],
+        ["net sellers", "淨賣方（賣超）"],
+        ["turnover", "成交值", "fin"],
+        ["institutional investors", "法人機構", "fin"],
+        ["intraday", "盤中", "fin"],
+        ["rescue measures", "救市措施"]
+      ]
+    },
+    "4": {
+      "entity": "TSMC (2330) / Taiwan Semiconductor Industry Association (TSIA)",
+      "title": "TSMC Issues Rare Industry Outlook to Calm Markets: Global AI Demand Keeps Rising and Advanced-Node Shortage Will Persist; Hou Yung-Chin Tells Cabinet Roundtable No Customer Has Cut Orders as Taiwan Chip Output Heads for NT$9.1 Trillion This Year",
+      "summary": "Responding to AI bubble fears sparked by the Jensen Huang saga, TSMC took the rare step on Nov 23 of issuing an unsolicited industry outlook, saying global demand for AI is growing by the day, its long-term outlook remains positive, and the shortage of advanced semiconductor process capacity will persist; as applications move from chatbots to AI assistants, agentic AI is lifting overall demand, and whatever computing architecture customers adopt, they need the most advanced process technology. TSMC also acknowledged that rising component prices and macroeconomic uncertainty are challenging consumer products and price-sensitive end markets, but said demand for its advanced nodes remains strong thanks to its technology differentiation and broad customer base. The same day, Hou Yung-Chin, chairman of the Taiwan Semiconductor Industry Association and TSMC deputy co-COO, told a Cabinet industry and finance roundtable that recent short-term market events have not affected customer demand, no customer has adjusted orders or shipments, and long-term demand remains strong with no sign of tightening; by the association's estimate, Taiwan's total semiconductor output was about NT$6.5 trillion in 2025 and should reach about NT$9.1 trillion in 2026, sustaining growth above 40%.",
+      "metric": "TSMC: advanced-node shortage to persist; Hou: no customer has adjusted orders or shipments; Taiwan semiconductor output ~NT$6.5T in 2025 → ~NT$9.1T in 2026 (>40% growth, TSIA estimate)",
+      "impact": "It is highly unusual for TSMC to address the market outside its earnings calls, and the timing, after the SOX fell more than 30% from its peak and the Taiex suffered a 17.5% weekly crash (prior issue #13, #14), aims to break the 'AI bubble → order cuts' narrative; yet its remark that consumer and price-sensitive markets are under pressure echoes Morgan Stanley's cut to 2027 smartphone shipments (prior issue #17), confirming a persistent demand divergence for mature-node and consumer chip foundry work.",
+      "conf": "Confirmed (official TSMC statement and Hou's public remarks; output figures are TSIA estimates)",
+      "vocab": [
+        ["outlook", "展望", "fin"],
+        ["unsolicited", "主動提出的"],
+        ["price-sensitive", "價格敏感的"],
+        ["macroeconomic uncertainty", "總體經濟不確定性"],
+        ["technology differentiation", "技術差異化"],
+        ["narrative", "市場敘事"],
+        ["divergence", "分化"]
+      ]
+    },
+    "5": {
+      "entity": "NVIDIA (NVDA) / TSMC ADR (TSM) / UMC ADR (UMC) / Intel (INTC) / GlobalFoundries (GFS) / Tower Semiconductor (TSEM)",
+      "title": "NVIDIA Board Reinstates Jensen Huang as CEO Effective Immediately, Sending NVIDIA Up 31.48% and the SOX Up 14.03%; TSMC ADR Jumps 14.08%, UMC ADR 19.52%, Tower 18.39% and Intel 16.34%",
+      "summary": "NVIDIA's board announced on Monday, Nov 23 (US Eastern time) that after several meetings and consultation with senior US government officials, it had voted unanimously to reinstate Jensen Huang as president, CEO and director effective immediately, just 11 days after his Nov 12 resignation; President Trump publicly said he had persuaded the board and called Huang a 'national treasure'. The news triggered a furious rebound: NVIDIA soared 31.48% to US$165.05, its biggest one-day gain since 2003, adding about US$954.4 billion in market value; the Philadelphia Semiconductor Index jumped 1,179.46 points (+14.03%) to 9,588.05, while the Nasdaq rose 6.51%, the S&P 500 4.73% and the Dow 3.01%. Foundry stocks surged across the board: TSMC's ADR rose 14.08% to US$363.60, UMC's ADR 19.52% to US$14.39, ASE's ADR 21.36%, Intel 16.34% to US$59.66, GlobalFoundries 9.53% to US$38.95 and Tower 18.39% to US$136.81; Micron gained 19.04% and Applied Materials 14.62%. The Financial Times reported the same day that Dell, HPE, Lenovo and Supermicro raised final AI server prices by 25%, 30% and up to 45% after initial agreements with customers.",
+      "metric": "NVDA US$165.05 (+31.48%, market cap +~US$954.4B); SOX 9,588.05 (+14.03%); TSM US$363.60 (+14.08%), UMC US$14.39 (+19.52%), INTC US$59.66 (+16.34%), GFS US$38.95 (+9.53%), TSEM US$136.81 (+18.39%); AI server prices raised 25%–45% (FT)",
+      "impact": "Huang's return removed the biggest uncertainty over NVIDIA's succession and its customer and supply chain relationships, with NVIDIA's top ten partners including TSMC, Micron and Intel adding about US$500 billion in combined market value in a single day (TechNews); but the rally was a recovery of an uncertainty discount, with SEC and Justice Department probes and a Dec 3 Senate hearing still pending, and much of it was given back the next day (see item 12).",
+      "conf": "Confirmed (official NVIDIA announcement; US closing prices are exchange data; server price increases reported by the Financial Times)",
+      "vocab": [
+        ["reinstate", "恢復職位"],
+        ["market value", "市值"],
+        ["rebound", "反彈"],
+        ["succession", "接班"],
+        ["uncertainty discount", "不確定性折價"],
+        ["across the board", "全面地"],
+        ["probes", "調查"]
+      ]
+    },
+    "6": {
+      "entity": "Megaspeed / Alibaba (09988.HK) / US Commerce Department BIS",
+      "title": "On the Day of Huang's Return, US Commerce Adds First Entity List Names in Over a Year: NVIDIA Partner Megaspeed, Alibaba's Singapore Unit Apex and Affiliates in Singapore, Malaysia and Thailand Face 'Presumption of Denial'",
+      "summary": "Citing Reuters, Cnyes reported on Nov 24 that the US Commerce Department on Nov 23 added NVIDIA partner Megaspeed of Singapore and Alibaba's Singapore subsidiary Apex Enterprise Solutions to its export control Entity List, along with six companies in Singapore, Malaysia and Thailand said to be linked to Megaspeed, the department's first new entity additions since October 2025; exports, re-exports or in-country transfers to the listed firms now require licenses reviewed under a 'presumption of denial'. Megaspeed has been under US investigation since 2024 over whether it transshipped NVIDIA AI chips to China, and its former executive Huang Le, with whom Jensen Huang had an affair, is suspected by US officials of being a Chinese spy; the Financial Times reported that Apex lent money to Megaspeed in 2024 through its Malaysian subsidiary Speedmatrix (whose assets totaled about MYR 8.8 billion at end-2024). Alibaba called the listing a mistake, said Apex never transshipped restricted chips, and vowed to pursue legal remedies; Malaysia's government later said it would advise domestic data center operators to cut ties with US-blacklisted firms, and Singapore Prime Minister Lawrence Wong said investigations into Megaspeed would continue.",
+      "metric": "Listed: Megaspeed, Alibaba's Apex Enterprise Solutions, plus 6 affiliates in Singapore, Malaysia, Thailand (first BIS entity additions since Oct 2025); review standard: presumption of denial; Speedmatrix assets ~MYR 8.8B (~US$2.14B) at end-2024",
+      "impact": "Read together with the Southeast Asia license rule in item 1, Washington is now blocking transshipment and compute rental through Southeast Asia from both the country-license and entity-list ends; for foundries, the direct effect is a further narrowing of room for Chinese AI chip designers to order advanced nodes via overseas subsidiaries, continuing the direction of TSMC and Samsung suspending sub-16nm shipments to Chinese customers (prior issue #7).",
+      "conf": "Confirmed (US Commerce Entity List is an official notice; the number of listed firms varies across reports, with another Cnyes article citing seven entities in total)",
+      "vocab": [
+        ["entity list", "實體清單"],
+        ["presumption of denial", "推定拒絕"],
+        ["transshipped", "轉運（transship 過去式）"],
+        ["subsidiary", "子公司", "fin"],
+        ["affiliates", "關係企業"],
+        ["legal remedies", "法律救濟途徑"],
+        ["blacklisted", "被列入黑名單的"]
+      ]
+    },
+    "7": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / Vanguard (5347) / WIN Semiconductors (3105) / ASE Technology Holding (3711)",
+      "title": "Taiwan Stocks Soar a Record 3,310.46 Points to 40,122.35 as TSMC Hits Limit-Up at NT$2,230 with a NT$57.82T Market Cap and All Foundry and Compound Foundry Stocks Lock Limit-Up; Yet Foreigners Sell NT$50.39B for a Seventh Straight Day as TSMC Shareholders Hit a Record 3.329 Million",
+      "summary": "Buoyed by Jensen Huang's return, the Taiex gapped up to open at 39,148.91 on Nov 24, surged more than 3,300 points in early trade for its biggest intraday gain ever, and closed up 3,310.46 points (+8.99%) at 40,122.35, reclaiming the 40,000 mark with its largest-ever closing point gain as nearly 700 stocks hit limit-up. TSMC gapped up to limit-up and closed at NT$2,230 (+NT$200 / +9.85%), for a market cap of about NT$57.82 trillion; UMC closed limit-up at NT$97.10 (+9.97%), PSMC at NT$53.30 (+9.90%), Vanguard at NT$121.00 (+10.00%), WIN Semiconductors at NT$449.00 (+9.91%), AWSC at NT$88.70, VPEC at NT$298.50, Episil at NT$47.60 and ASE Technology Holding at NT$530.00 (+9.96%), with every foundry and compound semiconductor stock locked at limit-up. Institutional investors, however, were net sellers of NT$121.652 billion combined: foreign investors sold NT$50.39 billion for a seventh straight session and dealers dumped NT$81.025 billion, while only investment trusts bought NT$9.763 billion; foreigners net sold 18,764 lots of UMC and 4,098 lots of TSMC, while buying a modest 437 lots of PSMC. Taiwan Depository & Clearing data showed TSMC had a record 3,329,043 shareholders as of Nov 20, up 34,412 from Nov 13; during the 11 days between Huang's resignation and return, the Taiex fell as low as 35,442.41 (down 8,814.74 points) and TSMC as low as NT$1,970 (down NT$425).",
+      "metric": "Taiex 40,122.35 (+3,310.46 / +8.99%, record closing point gain); TSMC NT$2,230 (+9.85%, market cap ~NT$57.82T); UMC NT$97.10, PSMC NT$53.30, Vanguard NT$121.00, WIN NT$449.00 all limit-up; institutions net -NT$121.652B (foreigners -NT$50.39B, dealers -NT$81.025B, trusts +NT$9.763B); TSMC shareholders 3,329,043 (record)",
+      "impact": "The index recovered most of its Nov 19–20 losses in a single day, but with foreigners selling for a seventh day and dealers cutting heavily, the rally was driven by domestic and retail buyers (the record TSMC shareholder count is evidence of retail bargain hunting); foreigners turned to heavy selling of UMC, which they had bought against the trend days earlier, showing they treat mature-node names as profit-taking vehicles in a rebound and that flows have not yet turned bullish.",
+      "conf": "Confirmed (TWSE and TPEx closing prices and institutional flows verified; shareholder count from Taiwan Depository & Clearing)",
+      "vocab": [
+        ["gapped up", "跳空上漲（gap up 過去式）", "fin"],
+        ["market cap", "市值", "fin"],
+        ["profit-taking", "獲利了結", "fin"],
+        ["retail", "散戶"],
+        ["bargain hunting", "逢低承接"],
+        ["seventh straight session", "連續第七個交易日"],
+        ["bullish", "看多的", "fin"]
+      ]
+    },
+    "8": {
+      "entity": "Samsung Electronics (005930.KS)",
+      "title": "Samsung Cuts Annual Executive Promotions 18.6% to 131 as Loss-Making DX Division Is Slashed by a Third and Semiconductor DS Rises to 70; Foundry Technology Planning Head Song Tae-joong Promoted to EVP for Expanding Global Orders",
+      "summary": "Samsung Electronics announced its annual executive promotions on Nov 24, promoting 131 people (39 executive vice presidents, 78 vice presidents, 2 Fellows and 12 Masters), down 30 or 18.6% from 161 last year. Promotions in the consumer electronics DX division, which has posted losses for two straight quarters and risks its first annual operating loss, fell from 92 to 61 (-33.7%), while the semiconductor DS division rose from 69 to 70, with new vice presidents increasing from 33 to 40. In memory, Ha Kyung-soo, head of DRAM Design Group 2 who led development of the first HBM4, and Park Tae-hoon, head of DRAM yield improvement, were promoted to EVP; in foundry, Song Tae-joong, head of Technology Planning Team 2, was promoted to EVP for expanding global customer orders, as was Ryu Hyo-kyum, head of IP development, along with several executives credited for advanced processes, customer expansion and yield gains. Samsung said rewards go where results are, and will announce organizational changes and appointments later.",
+      "metric": "131 promoted (-18.6%): DX 61 (-33.7%), DS 70 (+1); DS new VPs 40 (from 33); foundry's Song Tae-joong and Ryu Hyo-kyum named EVP; record 11 women executives",
+      "impact": "With total promotions down nearly a fifth, the chip division still gained, and the foundry promotions explicitly credited order wins and IP, echoing last issue's leadership reshuffle that refocused Jun Young-hyun on foundry (prior issue #9) and the HBM base die foundry crunch in item 14; Samsung is shifting foundry performance metrics from catching up on technology to winning customers and revenue.",
+      "conf": "Confirmed (official Samsung personnel announcement; TechNews calls it the 2026 regular reshuffle while Seoul Economic Daily calls it the 2027 annual reshuffle, referring to the same round)",
+      "vocab": [
+        ["operating loss", "營業虧損", "fin"],
+        ["promotions", "晉升"],
+        ["executive vice president", "執行副總裁"],
+        ["performance metrics", "績效指標"],
+        ["yield", "良率"],
+        ["slashed", "大幅削減（slash 過去式）"]
+      ]
+    },
+    "9": {
+      "entity": "TSMC (2330) / TSMC Arizona",
+      "title": "TSMC Unit Seeks Texas Property Tax Break for a US$21.655B Fab in Brazos County for 2nm and Beyond, with Construction as Early as 2027 and Operations in 2031; TSMC Says It Is Still Evaluating as Arizona Fab 2 Targets 3nm Volume Production in Q3 Next Year",
+      "summary": "Reuters and the Commercial Times reported that TSMC's Arizona subsidiary on Nov 23 filed an application with the Texas Comptroller's office under the Jobs, Energy, Technology and Innovation (JETI) program for a chip manufacturing facility worth US$21.655 billion (about NT$712.5 billion) in the College Station ISD area of Brazos County. The roughly 3,232-acre site would host at least one fab and related facilities producing 2nm-or-more-advanced chips for AI, HPC and mobile devices; the filing shows construction starting in 2027 and operations in 2031, with the requested school-district property tax break covering 2032–2041, and the first fab expected to create at least 2,099 direct jobs paying an average of about US$133,000 a year. TSMC said in the filing that Texas's approval of the property tax incentive will determine whether it commits to the investment, that Arizona remains a competing site, and that the land is under contract but the agreements are not yet binding; publicly, TSMC said its Texas investment is 'still under discussion and evaluation'. The site is about 45 km from Tesla's Terafab in Grimes County. The Commercial Times also noted that TSMC has announced US$265 billion of US investment, with Arizona Fab 1 producing 4nm and Fab 2 installing tools for 3nm volume production in Q3 2027; President Trump told CNBC on Nov 24 that C.C. Wei is 'going to build a big plant in Texas'.",
+      "metric": "Brazos County, Texas: US$21.655B investment (~NT$712.5B; TrendForce/Cnyes cite US$22.6B), ~3,232 acres, 2nm and below, construction 2027 / operations 2031, 2,099 direct jobs in phase 1; tax break period 2032–2041; Arizona Fab 2 3nm volume production Q3 2027; total US investment US$265B",
+      "impact": "If built, the Texas fab would be TSMC's second advanced-node campus in the US and sit near Terafab, echoing Morgan Stanley's note that TSMC is in talks with Terafab (prior issue #5); making a property tax break a precondition shows TSMC increasingly demanding cost subsidies for US expansion, and margin dilution from US fabs remains a long-term variable for investors to track.",
+      "conf": "Confirmed (the application was formally filed by TSMC's subsidiary and TSMC confirmed the filing, saying it is still evaluating with no final decision; reported investment varies between US$21.655B and US$22.6B)",
+      "vocab": [
+        ["tax break", "租稅減免"],
+        ["incentive", "獎勵優惠"],
+        ["binding", "具約束力的"],
+        ["precondition", "前提條件"],
+        ["subsidies", "補貼", "fin"],
+        ["margin dilution", "毛利率稀釋"],
+        ["volume production", "量產"]
+      ]
+    },
+    "10": {
+      "entity": "Brightek (5244) / Macronix (2337)",
+      "title": "Brightek Says AI and Memory Are Crowding Out Foundry Capacity, Delaying Automotive Control ICs as Former Foundry Partner Macronix Shifts to Memory; Second and Third Backup Fabs in Taiwan and China to Supply from April 2027",
+      "summary": "LED IC maker Brightek (5244) reported at its Nov 24 earnings call third-quarter net profit of NT$12.02 million and EPS of NT$0.18, ending two straight quarterly losses (its nine-month net loss was NT$37.5 million, or NT$0.55 per share), as volume shipments from its new Nantong plant lifted gross margin back to 29.8%. Vice President Chiu Yen-chang said AI and memory demand are crowding out foundry capacity: its former foundry partner Macronix has shifted capacity to more profitable memory products such as DRAM, leaving its control ICs on the line with no delivery dates, so some second-half automotive orders could not ship on time and some customers temporarily reverted to conventional consumer IC solutions. Brightek has approached Taiwanese mature-node foundries and is seeking a third foundry partner in mainland China to redo masks; tape-out preparation takes about seven to eight months, so supply from the new fabs is expected from April 2027, and the company plans selective price adjustments on some legacy products in 2027.",
+      "metric": "Brightek 3Q26 net profit NT$12.02M, EPS NT$0.18 (back to profit), gross margin 29.8%; 9M net loss NT$37.5M (EPS -NT$0.55); backup fab mask preparation 7–8 months, supply from April 2027",
+      "impact": "The memory supercycle is pulling capacity at memory makers that also run foundry lines (Macronix, and PSMC last issue) away from logic foundry work, forcing small mature-node IC customers to redo masks and switch fabs, which brings new customers and pricing power to Taiwanese and Chinese mature-node foundries, consistent with PSMC's 94.19% YoY October revenue growth that it attributed to 'higher selling prices'.",
+      "conf": "Confirmed (company earnings call remarks; another paragraph in the article says supply bottlenecks ease 'from Q2', slightly at odds with the April 2027 timing)",
+      "vocab": [
+        ["earnings call", "法說會", "fin"],
+        ["net profit", "淨利", "fin"],
+        ["gross margin", "毛利率", "fin"],
+        ["crowding out", "排擠"],
+        ["pricing power", "定價能力", "fin"],
+        ["price adjustments", "價格調整"],
+        ["supercycle", "超級循環"]
+      ]
+    },
+    "11": {
+      "entity": "China Ministry of Commerce / gallium, germanium, antimony",
+      "title": "China Extends Suspension of Gallium, Germanium and Antimony Export Ban to the US by Two Months to Jan 27, 2027, but Warns New US AI Chip Curbs Violate Leaders' Consensus and Vows Countermeasures",
+      "summary": "China's Ministry of Commerce announced on Nov 24 that from Nov 28, 2026 to Jan 27, 2027 it will suspend Clause 2 of its notice on strengthening export controls on dual-use items to the United States (MOFCOM Notice No. 46 of 2024); the clause had stated that exports to the US of dual-use items related to gallium, germanium, antimony and superhard materials would in principle not be approved, and imposed stricter end-user and end-use reviews on graphite dual-use items. The ministry called the move a 'phased policy optimization' that aligns the deadline with other truce terms such as tariff relief and the suspension of rare earth export controls (expiring Jan 10); the extension came right after the Trump-Xi meeting in Shenzhen, but the ministry also warned that new US Commerce restrictions on China's access to advanced AI chips through overseas data centers violate the consensus reached by the two leaders and that China will take countermeasures if Washington presses ahead. According to USGS 2025 estimates, China supplies about 99% of the world's primary low-purity gallium and about 80% of natural graphite, and is the main producer and exporter of germanium metal.",
+      "metric": "Suspension period: Nov 28, 2026 – Jan 27, 2027 (Clause 2 of MOFCOM Notice No. 46 of 2024); China's global share: primary low-purity gallium ~99%, natural graphite ~80%, mined antimony 36% (USGS 2025)",
+      "impact": "Gallium and germanium are key inputs for compound semiconductors (GaN and GaAs RF and power devices) and optical communications, so the extension keeps near-term materials supply secure for compound foundries such as WIN Semiconductors, AWSC and VPEC; but with only a two-month window and Beijing openly vowing to retaliate against the new US rules in items 1 and 6, the truce expiry around January 2027 remains a supply-disruption risk on the materials side.",
+      "conf": "Confirmed (official China Ministry of Commerce notice)",
+      "vocab": [
+        ["export ban", "出口禁令"],
+        ["dual-use items", "軍民兩用物項"],
+        ["truce", "休戰"],
+        ["tariff relief", "關稅減免"],
+        ["countermeasures", "反制措施"],
+        ["retaliate", "報復"],
+        ["supply disruption", "供應中斷"]
+      ]
+    },
+    "12": {
+      "entity": "TSMC ADR (TSM) / UMC ADR (UMC) / NVIDIA (NVDA) / Micron (MU)",
+      "title": "Huang Rally Lasts One Day: Trump Administration Reportedly Plans Higher Tariffs on China, EU and a Dozen Economies as SOX Plunges 7.88% to 8,832.50; TSMC ADR Falls 3.91%, UMC ADR 6.88% and Micron 10.97%; KOSPI Drops Nearly 5% Early on Nov 25",
+      "summary": "US stocks were mixed on Tuesday, Nov 24, as the rebound sparked by Huang's return failed to hold: the Philadelphia Semiconductor Index fell 755.55 points (-7.88%) to 8,832.50, the Nasdaq lost 1.48% and the S&P 500 0.50%, while the Dow rose 423.39 points to 50,018.70, reclaiming 50,000. NVIDIA fell 5.86% to US$155.38, TSMC's ADR dropped 3.91%, UMC's ADR slumped 6.88% and ASE's ADR 8.00%; Micron tumbled 10.97% to US$630.07 after BNP Paribas downgraded it on rising memory oversupply risk, AMD lost 8.86% and Applied Materials 6.66%, and Anthropic fell 6% to US$81.90, its third straight decline and below its US$83 IPO price. Reports said the Trump administration is preparing to raise import tariffs on China, the EU and more than ten other economies, with people familiar saying the combined rates would not exceed levels agreed in individual trade deals, though no rates or effective dates were given; markets were also focused on Wednesday's release of the Fed's preferred inflation gauge and the risk of a December rate hike. The SOX slump dragged Asian markets, with South Korea's KOSPI plunging nearly 5% early on Nov 25 and triggering a sell-side sidecar, as Samsung Electronics and SK hynix fell more than 6% intraday.",
+      "metric": "SOX 8,832.50 (-7.88%); TSM -3.91%, UMC -6.88%, ASX -8.00%; NVDA US$155.38 (-5.86%); MU US$630.07 (-10.97%); Anthropic US$81.90 (below US$83 IPO price); KOSPI down as much as 4.9% early Nov 25 (intraday)",
+      "impact": "Under triple pressure from export controls, tariffs and rate-hike expectations, AI stocks are whipsawing, suggesting the rally in item 5 was mainly an emotional recovery of discounts; memory stocks fell hardest, contrasting with last issue's upbeat talk of Samsung memory capacity sold out through 2029, as markets start to fear a memory cycle peak that would weigh on valuations of memory foundry work (PSMC) and HBM base die foundry demand.",
+      "conf": "Unconfirmed (US closing prices are exchange data; the planned tariff increases come from media citing people familiar, with no rates or effective dates announced; KOSPI move is intraday on Nov 25, not a close)",
+      "vocab": [
+        ["downgraded", "調降評等（downgrade 過去式）"],
+        ["oversupply", "供過於求"],
+        ["IPO price", "首次公開發行價"],
+        ["rate hike", "升息", "fin"],
+        ["whipsawing", "急漲急跌"],
+        ["valuations", "評價"],
+        ["slumped", "重挫（slump 過去式）"]
+      ]
+    },
+    "13": {
+      "entity": "Kinsus Interconnect (3189) / NVIDIA (NVDA)",
+      "title": "Backed by Over US$1B from NVIDIA, Kinsus Runs ABF Substrate Capacity at 95% Utilization, Spends Over NT$6B on Land for a Seventh Plant and Extends Expansion Plans to 2030; Lead Times for Key Japanese Tools Exceed 18 Months",
+      "summary": "The Commercial Times reported on Nov 25 that NVIDIA recently announced an investment of more than US$1 billion (about NT$33 billion) to help Kinsus (3189) expand high-end substrate and advanced packaging capacity. Kinsus spokesperson Mu Hsien-chueh said ABF substrate utilization has reached 95%, high-end substrates for GPUs, CPUs and ASICs are in short supply, and existing capacity can no longer be stretched with overtime; its sixth plant comprises buildings A through D, with A in volume production, B installing tools for volume production by the end of Q2 2027, and C and D coming online in 2028 and 2029, while the company has spent more than NT$6 billion on land for a seventh plant (initially planned at 15 to 20 million substrates per month), extending its expansion timeline to 2030. On constraints, T-Glass supply has eased as Taiwanese materials pass qualification and Japanese suppliers expand, but remains uncertain over the long term, and lead times for key Japanese equipment now exceed 18 months, prompting Kinsus to order tools needed for 2028 and 2029 in advance. ABF substrates made up 46% of Kinsus's third-quarter revenue, and gross margin rose to 34%, up 8 percentage points quarter on quarter, on US CPU substrate ramps, higher utilization and a weaker NT dollar.",
+      "metric": "NVIDIA investment in Kinsus >US$1B (~NT$33B); ABF utilization 95%; 7th plant land >NT$6B, 15–20M substrates/month; plant 6 building B volume production end-Q2 2027; Japanese tool lead times >18 months; 3Q26 gross margin 34% (+8 ppts QoQ)",
+      "impact": "ABF substrates are the next gate for AI chip shipments after CoWoS, and NVIDIA directly funding substrate capacity follows the same 'customer pays to lock capacity' model as last issue's SPIL and ASE expansion deals; turning TSMC's CoWoS expansion into actual shipments still depends on substrates, T-Glass and Japanese tool lead times.",
+      "conf": "Confirmed (company spokesperson remarks; the >30% 2027 revenue growth is an analyst forecast)",
+      "vocab": [
+        ["utilization", "產能利用率", "fin"],
+        ["lead times", "交期"],
+        ["in short supply", "供不應求"],
+        ["qualification", "認證"],
+        ["percentage points", "百分點"],
+        ["quarter on quarter", "季增（較上季）"],
+        ["ramps", "放量（ramp 複數）"]
+      ]
+    },
+    "14": {
+      "entity": "Samsung Foundry (005930.KS) / AMD / NVIDIA / Meta",
+      "title": "Samsung Reportedly Faces HBM Base Die Foundry Crunch as Memory Division Demand Doubles to About 30,000 4nm-Equivalent Wafers per Month in 2027; Plans to Convert Giheung R&D Line to 4nm Base Die, Shift Part of Pyeongtaek P5 and Earmark Taylor P2 for HBM5",
+      "summary": "Citing Korean industry sources, TrendForce reported on Nov 25 that the Samsung memory division's demand for HBM base dies from the foundry is expected to double in 2027 to about 30,000 4nm-equivalent wafers per month, while 4nm base dies are currently made only on some foundry lines in Hwaseong and Pyeongtaek, leaving capacity severely short. Samsung is reportedly converting its Giheung R&D line into a 4nm base die line and planning new 2nm- and 4nm-class fabs on the Giheung site of the Samsung Advanced Institute of Technology (SR5) and engineering college (CDI) buildings demolished in October; Pyeongtaek P5, originally not planned for foundry, will partly switch to base die production, and Taylor P2 in the US is tentatively earmarked for HBM5 base dies, with Maeil Business Newspaper reporting that Taylor's second fab will make 2nm-or-more-advanced base dies for AMD and NVIDIA to be integrated with Korean-made DRAM into finished HBM. On the customer side, Samsung's custom HBM4E for Meta is expected to use its own 2nm base die; NVIDIA had asked all three memory makers to use TSMC's 3nm for NVHBM base dies, while Samsung is validating its own SF2 as a backup if TSMC capacity falls short.",
+      "metric": "Samsung base die demand: ~30,000 wafers/month in 2027 (4nm-equivalent, roughly doubling); Giheung R&D line converted to 4nm base die; Pyeongtaek P5 partly to base die; Taylor P2: HBM5 base dies (AMD, NVIDIA, 2nm and below); Samsung 2027 HBM wafer input 180K → 250K/month (Hankyung, Sep 2026)",
+      "impact": "From HBM4 onward base dies use logic processes, turning memory makers into major foundry customers: Samsung can fill foundry capacity with internal demand and lift its long-depressed utilization, but NVIDIA specifying TSMC 3nm for NVHBM base dies means TSMC also captures the incremental logic foundry demand from the HBM generation shift; whether Samsung Foundry can rebound on base dies and Taylor P2 is a key watch point for 2027 foundry market share.",
+      "conf": "Unconfirmed (industry sources and Korean media reports, not officially confirmed by Samsung; the 30,000 figure is 4nm-equivalent base die wafers and is a different metric from HBM wafer input)",
+      "vocab": [
+        ["crunch", "短缺"],
+        ["earmark", "指定用途"],
+        ["backup", "備援"],
+        ["incremental", "增量的"],
+        ["market share", "市占率", "fin"],
+        ["validating", "驗證（validate 進行式）"],
+        ["depressed", "低迷的"]
+      ]
+    },
+    "15": {
+      "entity": "Intel Foundry (INTC)",
+      "title": "(Background: Accident on Oct 14, Reported Nov 23–24) Specialty Gas Accident at Intel's Fab 38 in Kiryat Gat, Israel Injures Three; Foreign Media Estimate a Two-Quarter Disruption Will Cut About US$600M of Revenue as Intel's Q4 Revenue Guidance of US$15–16B Misses Expectations",
+      "summary": "An explosion occurred on the afternoon of Oct 14, 2026 local time at Intel's Fab 38 in Kiryat Gat, Israel, injuring at least three people, one critically; police initially suspected a nitrogen trifluoride (NF3) specialty gas cylinder, though the official investigation is ongoing. Fab 38 is an EUV-capable advanced-node expansion that will add more than 600,000 square feet of cleanroom space when complete. TechNews used the accident on Nov 23 as the backdrop for a report on Ainos's AI smell-sensing platform targeting fab safety, noting Intel has recently been under pressure from the Israel accident, weak PC demand and disappointing guidance; FX Leaders on Nov 24 cited estimates that the Kiryat Gat disruption would cut about US$600 million of revenue over two quarters, and noted Intel's Q4 revenue guidance of US$15 billion to US$16 billion and adjusted EPS guidance of US$0.25 both fell short of expectations (about US$17.07 billion and US$0.44), while NVIDIA's stake fell from 214.8 million to 161.1 million shares. Intel has not said whether the accident affects construction progress (listed as background because the accident on Oct 14 predates this period).",
+      "metric": "Fab 38 accident: Oct 14, 2026, 3 injured; estimated two-quarter disruption cuts revenue by ~US$600M (media estimate); Q4 revenue guidance US$15–16B (consensus ~US$17.07B), adjusted EPS guidance US$0.25 (consensus US$0.44); NVIDIA stake 214.8M → 161.1M shares",
+      "impact": "Intel's 18A-P just signed its first external customer (prior issue #2), but the Israel fab accident and weak guidance show execution risk remains on the manufacturing side; Intel's 16.34% jump in item 5 was mainly a ride on NVIDIA's rally, and a foundry turnaround still needs 14A and volume production for external customers to prove it.",
+      "conf": "Background (accident occurred on Oct 14, 2026, before this period; the US$600M revenue impact is a media estimate not confirmed by Intel)",
+      "vocab": [
+        ["guidance", "財測指引", "fin"],
+        ["consensus", "市場共識預期", "fin"],
+        ["adjusted EPS", "調整後每股盈餘"],
+        ["execution risk", "執行風險"],
+        ["turnaround", "營運翻轉"],
+        ["disruption", "中斷"],
+        ["stake", "持股", "fin"]
+      ]
+    }
+  }
+}
