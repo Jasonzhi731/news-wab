@@ -39,6 +39,12 @@
         <div class="stat"><b id="st-learned">–</b><span>已學</span></div>
         <div class="stat"><b id="st-mature">–</b><span>熟練</span></div>
       </div>
+      <label class="src-pick">練習範圍
+        <select id="src-sel">
+          <option value="all">今日複習（所有單字・間隔重複）</option>
+        </select>
+      </label>
+      <p class="muted small center" id="src-note" hidden></p>
       <div class="seg" id="cat-seg" role="tablist" aria-label="分類">
         <button data-cat="all">全部</button>
         <button data-cat="fin">財經用語</button>
@@ -67,6 +73,7 @@
         <div class="done-emoji">🎉</div>
         <h2>今天的進度完成了</h2>
         <p id="done-text"></p>
+        <a class="btn primary" id="done-read" href="../" hidden>去讀這期新聞 →</a>
         <button class="btn primary" id="done-home">回到首頁</button>
       </div>
     </section>

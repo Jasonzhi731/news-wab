@@ -22,7 +22,7 @@
     del(k) { try { localStorage.removeItem('nv-' + k); } catch (e) { /* ignore */ } },
   };
 
-  const DEFAULTS = { apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false, cat: 'all' };
+  const DEFAULTS = { apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false, cat: 'all', src: 'all' };
   let settings = Object.assign({}, DEFAULTS, store.get('settings', {}));
   if (!settings.apiUrl) settings.apiUrl = DEFAULTS.apiUrl;
   // Keep apiUrl out of storage unless the user typed a custom one, so a new default in config.js reaches every device.
@@ -247,6 +247,7 @@
   }
 
   function buildDeck() {
+    if (settings.src !== 'all') return issueDeck();
     if (!queueData) return [];
     const skip = new Set(answeredToday().concat(pending.map(r => r.id)));
     const due = queueData.due.filter(w => !skip.has(w.id) && catMatch(w, settings.cat));
@@ -272,13 +273,28 @@
     const deck = buildDeck();
     const nDue = deck.filter(c => c.kind === 'review').length;
     const nNew = deck.length - nDue;
-    $('#st-due').textContent = queueData ? nDue : '–';
-    $('#st-new').textContent = queueData ? nNew : '–';
+    const isIssue = settings.src !== 'all';
+    $('#st-due').textContent = queueData || isIssue ? nDue : '–';
+    $('#st-new').textContent = queueData || isIssue ? nNew : '–';
+    $('#st-due').nextElementSibling.textContent = isIssue ? '本期已學' : '待複習';
+    $('#st-new').nextElementSibling.textContent = isIssue ? '本期新字' : '今日新字';
+    const sn = $('#src-note');
+    sn.hidden = !isIssue;
+    if (isIssue) {
+      const nLocal = deck.filter(c => c.w.local).length;
+      sn.textContent = issue
+        ? `${issue.label} 共 ${deck.length} 個字，依新聞順序出題；作答會一起算進間隔重複。`
+          + (nLocal ? `其中 ${nLocal} 個字單字本還沒有，只在這台裝置練習。` : '')
+        : '載入這一期的單字中…';
+    }
     $('#st-learned').textContent = statsData ? statsData.learned : '–';
     $('#st-mature').textContent = statsData ? statsData.mature : '–';
 
     const btn = $('#start-btn');
-    if (!queueData) {
+    if (isIssue) {
+      btn.disabled = !deck.length;
+      btn.textContent = !issue ? '載入中…' : deck.length ? `開始練習本期（${deck.length} 張）` : '這一期沒有符合條件的單字';
+    } else if (!queueData) {
       btn.disabled = true;
       btn.textContent = errMsg ? '無法載入' : '載入中…';
     } else if (!deck.length) {
@@ -326,13 +342,117 @@
     sync();
   });
 
+  /* --------------------------- 練習範圍：某一期 --------------------------- */
+  // 'all' = 原本的間隔重複佇列；其餘值 = 某一期的檔名（不含副檔名），練這一期新聞的全部字彙
+  let reports = store.get('reports', null);   // ../data/reports.json
+  let issue = null;                          // { stem, label, words: [...] }
+  const issueCache = {};
+  const stemOf = file => String(file || '').replace(/\.xlsx$/i, '');
+  const shortLabel = lab => String(lab || '').replace(/^全球半導體代工產業快報\s*/, '快報 ');
+  const makeId = w => String(w).trim().toLowerCase().replace(/\s+/g, ' ');
+
+  function fillSrcSelect() {
+    const sel = $('#src-sel');
+    if (!reports) return;
+    sel.innerHTML = '<option value="all">今日複習（所有單字・間隔重複）</option>' + reports.map((r, i) =>
+      `<option value="${esc(stemOf(r.file))}">${esc(shortLabel(r.label || r.file))}${i === 0 ? '（最新一期）' : ''}・全部單字</option>`).join('');
+    const ok = settings.src === 'all' || reports.some(r => stemOf(r.file) === settings.src);
+    if (!ok) settings.src = 'all';
+    sel.value = settings.src;
+  }
+
+  async function loadReports() {
+    try {
+      const r = await fetch('../data/reports.json', { cache: 'no-store' });
+      if (!r.ok) return;
+      reports = await r.json();
+      store.set('reports', reports);
+    } catch (e) { /* offline: keep the cached list */ }
+    fillSrcSelect();
+  }
+
+  // 一則新聞裡含這個字的那一句（摘要優先），當作卡片背面的原句
+  function sentenceWith(news, word) {
+    const pat = new RegExp('(?<![A-Za-z])' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![A-Za-z])', 'i');
+    for (const f of ['summary', 'impact', 'title', 'metric']) {
+      const hit = String(news[f] || '').split(/(?<=[.!?;])\s+(?=[A-Z0-9"'(])/).find(s => pat.test(s));
+      if (hit) return hit.length > 320 ? hit.slice(0, 317) + '...' : hit;
+    }
+    return '';
+  }
+
+  async function loadIssue(stem) {
+    if (issueCache[stem]) return issueCache[stem];
+    const res = await fetch('../data/en/' + encodeURIComponent(stem) + '.json');
+    if (!res.ok) throw new Error('讀不到這一期的英文對照');
+    const data = await res.json();
+    const seen = new Set(), words = [];
+    Object.keys(data.news || {}).sort((a, b) => Number(a) - Number(b)).forEach(no => {
+      const n = data.news[no];
+      (n.vocab || []).forEach(v => {
+        if (!v || !String(v[0] || '').trim()) return;
+        const id = makeId(v[0]);
+        if (seen.has(id)) return;
+        seen.add(id);
+        words.push({ id, word: String(v[0]).trim(), zh: String(v[1] || ''), fin: v[2] === 'fin',
+          context_en: sentenceWith(n, String(v[0]).trim()), source: stem + '#' + no });
+      });
+    });
+    const r = (reports || []).find(x => stemOf(x.file) === stem);
+    return (issueCache[stem] = { stem, label: r ? shortLabel(r.label) : stem, words });
+  }
+
+  // 本期的字配上 Sheet 裡的進度與收藏；Sheet 還沒有的字（剛出刊、尚未補字）只在本機練習、不送出作答
+  function issueDeck() {
+    if (!issue) return [];
+    const byId = new Map((wordsData || []).map(w => [w.id, w]));
+    return issue.words.map(x => {
+      const sw = byId.get(x.id);
+      const w = sw
+        ? Object.assign({}, sw, { context_en: x.context_en || sw.context_en, source: x.context_en ? x.source : sw.source })
+        : { id: x.id, word: x.word, meaning_zh: x.zh, category: x.fin ? 'fin' : '', freq: 1, context_en: x.context_en,
+            source: x.source, progress: null, saved: false, local: true };
+      if (!w.meaning_zh) w.meaning_zh = x.zh;
+      return w;
+    }).filter(w => catMatch(w, settings.cat))
+      .map(w => ({ w, kind: w.progress ? 'review' : 'new' }));
+  }
+
+  async function selectSource(src) {
+    settings.src = src;
+    saveSettings();
+    issue = null;
+    renderHome();
+    if (src === 'all') return;
+    try {
+      const [iss] = await Promise.all([loadIssue(src), wordsData ? null : refreshWords()]);
+      if (settings.src !== src) return;
+      issue = iss;
+    } catch (e) {
+      $('#home-note').textContent = '載入失敗：' + e.message;
+    }
+    renderHome();
+  }
+
+  async function refreshWords() {
+    try {
+      const r = await apiGet({ action: 'words' });
+      wordsData = r.words;
+      store.set('words', wordsData);
+    } catch (e) { /* offline: cached words (or none) are fine for practice */ }
+  }
+
+  $('#src-sel').addEventListener('change', e => selectSource(e.target.value));
+
+
   /* ------------------------------- study ------------------------------- */
   let session = null;
 
   function startSession() {
     const deck = buildDeck();
     if (!deck.length) return;
-    session = { cards: deck, idx: 0, flipped: false, graded: new Set(), right: 0, wrong: 0 };
+    session = { cards: deck, idx: 0, flipped: false, graded: new Set(), right: 0, wrong: 0,
+      issue: settings.src !== 'all' && issue ? issue : null };
     location.hash = '#study';
     show('study');
     renderCard();
@@ -417,9 +537,12 @@
     if (!s.graded.has(w.id)) {
       // Only the first answer of the session counts toward the schedule; re-shown cards are practice.
       s.graded.add(w.id);
-      pending.push({ id: w.id, grade: g, ts: new Date().toISOString(), rid: uid() });
-      store.set('pending', pending);
-      markAnswered(w.id);
+      // 單字本還沒有的字只在本機練習；今天已作答過的字（例如同一期再練一次）不重複計入排程
+      if (!w.local && !answeredToday().includes(w.id)) {
+        pending.push({ id: w.id, grade: g, ts: new Date().toISOString(), rid: uid() });
+        store.set('pending', pending);
+        markAnswered(w.id);
+      }
       if (g === 0) s.wrong++; else s.right++;
       updateSyncUI();
       scheduleSync();
@@ -442,6 +565,12 @@
     $('#done-text').textContent = n
       ? `這輪共 ${n} 個字：答對 ${s.right}、答錯 ${s.wrong}。答錯的字明天會再出現。${early ? '剩下的卡片回首頁可以繼續。' : ''}`
       : '沒有新的作答。';
+    const rd = $('#done-read');
+    rd.hidden = !s.issue;
+    if (s.issue) {
+      rd.href = '../?r=' + encodeURIComponent(s.issue.stem) + '&lang=en';
+      rd.textContent = `去讀這期新聞（英文）→ ${s.issue.label}`;
+    }
     location.hash = '#done';
     show('done');
     scheduleSync(0);
@@ -744,5 +873,7 @@
     navigator.serviceWorker.register('sw.js').catch(() => { /* not fatal */ });
   }
   updateSyncUI();
+  fillSrcSelect();
+  loadReports().then(() => { if (settings.src !== 'all') selectSource(settings.src); });
   route();
 })();

@@ -1159,7 +1159,17 @@
           return '<option value="data/' + encodeURIComponent(x.file) + '">' + esc(x.label || x.file) + '</option>';
         }).join('');
         sel.hidden = false;
-        return loadFromUrl(sel.value, list[0].label || list[0].file);
+        // 網址 ?r=<檔名（不含 .xlsx）> 直接開某一期；&lang=en 載入後整份切成英文（單字複習「看這期新聞」用）
+        var qs = new URLSearchParams(location.search), want = qs.get('r'), pick = 0;
+        if (want) list.some(function (x, i) { if (x.file === want || x.file === want + '.xlsx') { pick = i; return true; } return false; });
+        sel.selectedIndex = pick;
+        return loadFromUrl(sel.value, list[pick].label || list[pick].file).then(function (res) {
+          if (qs.get('lang') === 'en') {
+            var b = $('#btn-all-lang');
+            if (b && !b.hidden && b.dataset.to === 'en') b.click();
+          }
+          return res;
+        });
       })
       .catch(function () {
         $('#empty-hint').textContent =

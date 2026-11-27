@@ -252,3 +252,10 @@ body.studying { padding-bottom: 16px; }
 .star-btn.on { background: #fef3c7; border-color: #f59e0b; color: #b45309; }
 .gw { cursor: pointer; border-bottom: 1px dotted currentColor; }
 .gw:hover { color: var(--brand); }
+
+/* ---- 練習範圍（某一期） ---- */
+.src-pick { display: grid; gap: 6px; font-size: 13px; color: var(--muted); margin: 4px 0 10px; }
+.src-pick select { font: inherit; font-size: 15px; color: var(--text, inherit); padding: 10px 12px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--surface); }
+#src-note { margin: -2px 0 10px; }
+#done-read { display: inline-block; text-decoration: none; margin-bottom: 8px; }
