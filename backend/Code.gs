@@ -47,7 +47,7 @@ const CFG = {
     Progress: ['id', 'due', 'last_review', 'created'],
     Log: ['ts', 'id', 'due', 'client_ts', 'rid'],
   },
-  DEFAULT_EASE: 2.5,
+  DEFAULT_EASE: 2.3,
   MIN_EASE: 1.3,
   MAX_INTERVAL: 365,
   NEW_PER_DAY: 20,
@@ -105,6 +105,7 @@ function doPost(e) {
     switch (body.action) {
       case 'auth':        return { auth: true }; // token check only (Settings → 測試連線)
       case 'review':      return withLock_(() => applyReviews_(body.reviews || []));
+      case 'rebuildProgress': return withLock_(() => rebuildProgressFromLog_());
       case 'upsertWords': return withLock_(() => upsertWords_(body.words || []));
       case 'aiExamples':  return aiExamples_(String(body.id || ''), !!body.force, body.model);
       case 'saveWords':   return withLock_(() => saveWords_(body.items || []));
@@ -241,6 +242,7 @@ function nextSchedule_(prev, grade, todayStr) {
   let reps = Number(prev && prev.reps) || 0;
   let lapses = Number(prev && prev.lapses) || 0;
 
+  // Gentle ramp: 1 → 3 → ×ease (≈7 → 16 → 37 days with the default ease 2.3)
   if (grade === 0) {
     reps = 0;
     lapses += 1;
@@ -249,11 +251,11 @@ function nextSchedule_(prev, grade, todayStr) {
   } else {
     reps += 1;
     if (reps === 1) {
-      interval = grade === 3 ? 4 : 1;
+      interval = grade === 3 ? 3 : 1;
     } else if (reps === 2) {
-      interval = grade === 1 ? 3 : grade === 3 ? 8 : 6;
+      interval = grade === 1 ? 2 : grade === 3 ? 5 : 3;
     } else {
-      const factor = grade === 1 ? 1.2 : grade === 3 ? ease * 1.3 : ease;
+      const factor = grade === 1 ? 1.2 : grade === 3 ? ease * 1.2 : ease;
       interval = Math.max(interval + 1, Math.round(interval * factor));
     }
     ease = Math.max(CFG.MIN_EASE, ease + (grade === 1 ? -0.15 : grade === 3 ? 0.15 : 0));
@@ -266,6 +268,50 @@ function nextSchedule_(prev, grade, todayStr) {
     lapses,
     due: addDays_(todayStr, interval),
   };
+}
+
+/**
+ * Recompute every word's SRS state by replaying the Log with the current nextSchedule_.
+ * Run after changing the scheduling rules so already-scheduled words follow the new ramp.
+ * Only interval / ease / reps / lapses / due change; history and other columns are kept.
+ */
+function rebuildProgressFromLog_() {
+  const P = table_(CFG.PROGRESS);
+  const L = table_(CFG.LOG);
+  const byWord = new Map();
+  L.rows.forEach(r => {
+    const id = String(r[L.col.id] || '');
+    const grade = Number(r[L.col.grade]);
+    if (!id || ![0, 1, 2, 3].includes(grade)) return;
+    const ts = r[L.col.ts] instanceof Date ? Utilities.formatDate(r[L.col.ts], CFG.TZ, "yyyy-MM-dd'T'HH:mm:ss") : String(r[L.col.ts]);
+    if (!byWord.has(id)) byWord.set(id, []);
+    byWord.get(id).push({ ts, grade });
+  });
+
+  let rebuilt = 0, changed = 0;
+  byWord.forEach((events, id) => {
+    const pi = P.byId.get(id);
+    if (pi == null) return;
+    events.sort((a, b) => cmp_(a.ts, b.ts));
+    let st = {};
+    events.forEach(ev => { st = nextSchedule_(st, ev.grade, ev.ts.slice(0, 10)); });
+    const row = P.rows[pi];
+    const before = fmtDate_(row[P.col.due]) + '|' + Number(row[P.col.interval]);
+    row[P.col.interval] = st.interval;
+    row[P.col.ease] = st.ease;
+    row[P.col.reps] = st.reps;
+    row[P.col.lapses] = st.lapses;
+    row[P.col.due] = st.due;
+    rebuilt++;
+    if (before !== st.due + '|' + st.interval) changed++;
+  });
+  if (P.rows.length) P.sh.getRange(2, 1, P.rows.length, P.header.length).setValues(P.rows);
+  return { rebuilt, changed };
+}
+
+/** Editor entry point for rebuildProgressFromLog_ (run once after changing the rules). */
+function rebuildProgress() {
+  Logger.log(JSON.stringify(rebuildProgressFromLog_()));
 }
 
 /**

@@ -128,12 +128,12 @@
 
   // Same rules as nextSchedule_ in gas/Code.gs — only used to label the buttons.
   function previewInterval(p, grade) {
-    let interval = (p && p.interval) || 0, ease = (p && p.ease) || 2.5, reps = (p && p.reps) || 0;
+    let interval = (p && p.interval) || 0, ease = (p && p.ease) || 2.3, reps = (p && p.reps) || 0;
     if (grade === 0) return 1;
     reps += 1;
-    if (reps === 1) return grade === 3 ? 4 : 1;
-    if (reps === 2) return grade === 1 ? 3 : grade === 3 ? 8 : 6;
-    const f = grade === 1 ? 1.2 : grade === 3 ? ease * 1.3 : ease;
+    if (reps === 1) return grade === 3 ? 3 : 1;
+    if (reps === 2) return grade === 1 ? 2 : grade === 3 ? 5 : 3;
+    const f = grade === 1 ? 1.2 : grade === 3 ? ease * 1.2 : ease;
     return Math.min(365, Math.max(interval + 1, Math.round(interval * f)));
   }
   const fmtDays = d => (d < 30 ? d + ' 天' : d < 365 ? Math.round(d / 30) + ' 個月' : '1 年');
@@ -688,6 +688,10 @@
     closeLookup();
     const { w, kind, again } = s.cards[s.idx];
     s.flipped = !!startFlipped;
+    if (again && !startFlipped && (s.idx === 0 || !s.cards[s.idx - 1].again)) {
+      const left = s.cards.slice(s.idx).filter(c => c.again).length;
+      toast(`新卡都看完了，接著複習剛才不熟的 ${left} 個字`, 2600);
+    }
 
     const total = s.cards.length;
     $('#prog-fill').style.width = Math.round((s.idx / total) * 100) + '%';
@@ -797,7 +801,8 @@
       scheduleSync();
     }
     if (g === 0) {
-      const at = Math.min(s.idx + 4, s.cards.length);
+      // 不熟的字排到這一輪最後：整副先看完，再回頭複習不熟的
+      const at = s.cards.length;
       s.cards.splice(at, 0, { w, kind: card.kind, again: true });
       snap.againSplicedAt = at;
     }
