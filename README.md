@@ -166,7 +166,7 @@ python -m http.server 8765
 | 資料 | Google Sheets 三張表：內容／進度／紀錄分開 | 重新匯入單字不會蓋掉複習進度 |
 | SRS | **在後端計算**（SM-2 變體），前端只送「答對／答錯」 | 排程規則只存在一處；多裝置一致 |
 | 離線 | 前端把作答排進佇列，有網路時整批 POST；每筆帶 `rid` 防重送 | 捷運上也能刷 |
-| AI | GAS 代為呼叫 Claude API，結果快取在 Sheet | API key 只在 Script Properties，不進前端、不進 repo |
+| AI | GAS 代為呼叫 Gemini（或 Claude）API，結果快取在 Sheet | API key 只在 Script Properties，不進前端、不進 repo |
 
 ### Google Sheets 欄位
 
@@ -265,15 +265,17 @@ POST 另有 `auth`（只驗證 token）、`saveWords`（收藏／取消，`items
    之後每期出刊時 `publish_report.py` 會自動跑 `export_vocab.py --push --only <那一期>`（只送那一期出現的字；
    出現次數仍以全部各期計算），token 放在 `tools/vocab_api.json`。`--csv` 可另存 `tools/vocab/words_seed.csv` 檢視。
 7. 驗證：瀏覽器開 `…/exec?action=stats`，應看到 `total: 2426`。
-8. （選用）AI 例句：指令碼屬性加 `ANTHROPIC_API_KEY`，執行 `testAi` 看例句。
-   預設模型 `claude-opus-5-5`、effort `low`；想省成本可加屬性 `AI_MODEL = claude-haiku-5-5`。
+8. （選用）AI 例句：指令碼屬性加 `GEMINI_API_KEY`（Google AI Studio 建立的金鑰），執行 `testAi` 看例句。
+   預設模型 `gemini-3.8-flash`（屬性 `GEMINI_MODEL` 可改）、思考程度 `low`（`GEMINI_THINKING`）。
+   也可改用 Claude：加 `ANTHROPIC_API_KEY`，兩把都有時用 `AI_PROVIDER = gemini | claude` 指定（預設 Gemini）；
+   Claude 預設 `claude-opus-5-5`、effort `low`（`AI_MODEL`、`AI_EFFORT`）。
    例句產生一次就存回 Sheet，同一個字之後不會重複計費（`force: true` 才會重產）。
 
 ### 安全說明
 
 - 讀取預設不需 token（單字來自公開新聞）；要鎖起來就把指令碼屬性 `READ_TOKEN_REQUIRED` 設為 `true`。
 - 寫入一律要 token。前端不把 token 寫進程式碼，而是第一次開 App 時在設定頁輸入、存在該裝置。
-- Anthropic API key 只放在 Script Properties，由 GAS 代為呼叫。
+- Gemini／Anthropic API key 只放在 Script Properties，由 GAS 代為呼叫（Gemini 金鑰放在 header，不出現在網址）。
 
 ### 測試
 

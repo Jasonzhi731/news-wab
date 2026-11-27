@@ -645,7 +645,7 @@
       w.ai_examples = r.examples;
       if (session && session.cards[session.idx].w.id === w.id) $('#ai-box').innerHTML = aiHtml(w);
     } catch (err) {
-      const msg = err.code === 501 ? 'AI 尚未設定：在 Apps Script 的「指令碼屬性」加入 ANTHROPIC_API_KEY 後即可使用。'
+      const msg = err.code === 501 ? 'AI 尚未設定：在 Apps Script 的「指令碼屬性」加入 GEMINI_API_KEY 後即可使用。'
         : err.code === 401 ? '需要先到「設定」輸入 token。'
         : err.code === -1 ? '目前離線，連上網路再試。'
         : '產生失敗：' + err.message;

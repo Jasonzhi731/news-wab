@@ -18,9 +18,13 @@
  * Script Properties:
  *   API_TOKEN            required for every POST (setup() generates one)
  *   READ_TOKEN_REQUIRED  "true" to also require ?token= on GET (default off)
- *   ANTHROPIC_API_KEY    enables aiExamples (kept server-side, never sent to the browser)
- *   AI_MODEL             default claude-opus-5-5
- *   AI_EFFORT            default low
+ *   GEMINI_API_KEY       enables aiExamples with Gemini (Google AI Studio key; server-side only)
+ *   GEMINI_MODEL         default gemini-3.8-flash
+ *   GEMINI_THINKING      default low
+ *   ANTHROPIC_API_KEY    enables aiExamples with Claude instead
+ *   AI_MODEL             Claude model, default claude-opus-5-5
+ *   AI_EFFORT            Claude effort, default low
+ *   AI_PROVIDER          gemini | claude (default: gemini when GEMINI_API_KEY is set)
  *   SPREADSHEET_ID       only needed if this script is NOT bound to the spreadsheet
  */
 
@@ -47,6 +51,7 @@ const CFG = {
   NEW_PER_DAY: 20,
   RID_LOOKBACK: 2000,
   ANTHROPIC_URL: 'https://api.anthropic.com/v1/messages',
+  GEMINI_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
   ANTHROPIC_VERSION: '2026-10-21',
 };
 
@@ -401,7 +406,7 @@ function aiExamples_(id, force) {
     return { id, cached: true, model: w.ai_model, examples: w.ai_examples };
   }
 
-  const out = callClaude_(w); // slow network call — done outside the lock
+  const out = callAi_(w); // slow network call — done outside the lock
 
   return withLock_(() => {
     const T = table_(CFG.WORDS);
@@ -415,9 +420,108 @@ function aiExamples_(id, force) {
   });
 }
 
+/** Which AI writes the examples: Script Property AI_PROVIDER = gemini | claude.
+ *  Without it: Gemini when GEMINI_API_KEY is set, otherwise Claude. */
+function aiProvider_() {
+  const p = String(prop_('AI_PROVIDER') || '').trim().toLowerCase();
+  if (p === 'gemini' || p === 'claude') return p;
+  return prop_('GEMINI_API_KEY') ? 'gemini' : 'claude';
+}
+
+function callAi_(w) {
+  return aiProvider_() === 'gemini' ? callGemini_(w) : callClaude_(w);
+}
+
+const AI_SYSTEM_ =
+  'You write example sentences for a Taiwanese semiconductor-industry analyst who is learning English. ' +
+  'Write exactly 2 natural, professional sentences (12-28 words each) that use the target word in the same ' +
+  'sense as its Chinese meaning, each set in a different technology or engineering context ' +
+  '(e.g. wafer fabrication, advanced packaging, chip design, data centers, equipment, supply chain). ' +
+  'Do not copy the news context sentence. "zh" is a fluent Traditional Chinese (Taiwan) translation; ' +
+  '"field" is a short Traditional Chinese label for the context, such as 晶圓製造 or 先進封裝.';
+
+function aiUserText_(w) {
+  return 'Target word: ' + w.word + '\n' +
+    'Chinese meaning: ' + (w.meaning_zh || '(none)') + '\n' +
+    'Seen in this news sentence: ' + (w.context_en || '(none)');
+}
+
+function parseExamples_(text) {
+  let parsed;
+  try { parsed = JSON.parse(text); } catch (err) { throw apiError_(502, 'model did not return JSON'); }
+  const ex = (parsed.examples || []).filter(e => e && e.en);
+  if (!ex.length) throw apiError_(502, 'model returned no examples');
+  return ex.map(e => ({ en: String(e.en), zh: String(e.zh || ''), field: String(e.field || '') }));
+}
+
+/* ---- Gemini (Google AI Studio key) ---- */
+function callGemini_(w) {
+  const key = prop_('GEMINI_API_KEY');
+  if (!key) throw apiError_(501, 'AI not configured: set GEMINI_API_KEY in Script Properties');
+  const model = prop_('GEMINI_MODEL') || 'gemini-3.8-flash';
+  const payload = {
+    systemInstruction: { parts: [{ text: AI_SYSTEM_ }] },
+    contents: [{ role: 'user', parts: [{ text: aiUserText_(w) }] }],
+    generationConfig: {
+      responseMimeType: 'application/json',
+      // OpenAPI-style schema (Gemini does not accept additionalProperties)
+      responseSchema: {
+        type: 'OBJECT',
+        required: ['examples'],
+        properties: {
+          examples: {
+            type: 'ARRAY',
+            items: {
+              type: 'OBJECT',
+              required: ['en', 'zh', 'field'],
+              properties: { en: { type: 'STRING' }, zh: { type: 'STRING' }, field: { type: 'STRING' } },
+            },
+          },
+        },
+      },
+      maxOutputTokens: 4000,
+      thinkingConfig: { thinkingLevel: prop_('GEMINI_THINKING') || 'low' },
+    },
+  };
+  const url = CFG.GEMINI_URL + encodeURIComponent(model) + ':generateContent';
+  const send = p => UrlFetchApp.fetch(url, {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { 'x-goog-api-key': key },   // key in a header, not in the URL (keeps it out of logs)
+    payload: JSON.stringify(p),
+    muteHttpExceptions: true,
+  });
+  let res = send(payload);
+  // Older models do not know thinkingLevel: retry once without it
+  if (res.getResponseCode() === 400 && /thinking/i.test(res.getContentText())) {
+    delete payload.generationConfig.thinkingConfig;
+    res = send(payload);
+  }
+  const code = res.getResponseCode();
+  let body;
+  try { body = JSON.parse(res.getContentText()); } catch (err) { body = {}; }
+  if (code !== 200) {
+    const msg = (body.error && body.error.message) || res.getContentText().slice(0, 300);
+    if (code === 400 && /API key/i.test(msg)) throw apiError_(502, 'Gemini API key 無效：請到 Google AI Studio 重新複製金鑰');
+    if (code === 429) throw apiError_(429, 'Gemini 免費額度暫時用完，稍後再試');
+    throw apiError_(502, 'Gemini API ' + code + ': ' + msg);
+  }
+  if (body.promptFeedback && body.promptFeedback.blockReason) {
+    throw apiError_(422, 'model declined to generate examples for this word');
+  }
+  const cand = (body.candidates || [])[0] || {};
+  if (cand.finishReason === 'SAFETY' || cand.finishReason === 'RECITATION') {
+    throw apiError_(422, 'model declined to generate examples for this word');
+  }
+  if (cand.finishReason === 'MAX_TOKENS') throw apiError_(502, 'model output was cut off (max tokens)');
+  const text = ((cand.content && cand.content.parts) || []).filter(p => p.text && !p.thought).map(p => p.text).join('');
+  return { model: body.modelVersion || model, examples: parseExamples_(text) };
+}
+
+/* ---- Claude ---- */
 function callClaude_(w) {
   const key = prop_('ANTHROPIC_API_KEY');
-  if (!key) throw apiError_(501, 'AI not configured: set ANTHROPIC_API_KEY in Script Properties');
+  if (!key) throw apiError_(501, 'AI not configured: set GEMINI_API_KEY (or ANTHROPIC_API_KEY) in Script Properties');
   const model = prop_('AI_MODEL') || 'claude-opus-5-5';
 
   const schema = {
@@ -445,20 +549,8 @@ function callClaude_(w) {
     model,
     max_tokens: 8000,
     output_config: { effort: prop_('AI_EFFORT') || 'low', format: { type: 'json_schema', schema } },
-    system:
-      'You write example sentences for a Taiwanese semiconductor-industry analyst who is learning English. ' +
-      'Write exactly 2 natural, professional sentences (12-28 words each) that use the target word in the same ' +
-      'sense as its Chinese meaning, each set in a different technology or engineering context ' +
-      '(e.g. wafer fabrication, advanced packaging, chip design, data centers, equipment, supply chain). ' +
-      'Do not copy the news context sentence. "zh" is a fluent Traditional Chinese (Taiwan) translation; ' +
-      '"field" is a short Traditional Chinese label for the context, such as 晶圓製造 or 先進封裝.',
-    messages: [{
-      role: 'user',
-      content:
-        'Target word: ' + w.word + '\n' +
-        'Chinese meaning: ' + (w.meaning_zh || '(none)') + '\n' +
-        'Seen in this news sentence: ' + (w.context_en || '(none)'),
-    }],
+    system: AI_SYSTEM_,
+    messages: [{ role: 'user', content: aiUserText_(w) }],
   };
   const headers = { 'x-api-key': key, 'anthropic-version': CFG.ANTHROPIC_VERSION };
   // Server-side refusal fallback (not offered on Haiku)
@@ -484,9 +576,7 @@ function callClaude_(w) {
   if (body.stop_reason === 'max_tokens') throw apiError_(502, 'model output was cut off (max_tokens)');
 
   const text = (body.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
-  let parsed;
-  try { parsed = JSON.parse(text); } catch (err) { throw apiError_(502, 'model did not return JSON'); }
-  return { model: body.model || model, examples: parsed.examples || [] };
+  return { model: body.model || model, examples: parseExamples_(text) };
 }
 
 /* ============================ One-time setup / tests ============================ */
@@ -529,7 +619,8 @@ function testSchedule() {
 function testAi() {
   const W = table_(CFG.WORDS);
   if (!W.rows.length) throw new Error('Words sheet is empty');
-  Logger.log(JSON.stringify(callClaude_(wordObj_(W, W.rows[0])), null, 2));
+  Logger.log('provider: ' + aiProvider_());
+  Logger.log(JSON.stringify(callAi_(wordObj_(W, W.rows[0])), null, 2));
 }
 
 /* ================================== Helpers ================================== */
