@@ -224,13 +224,15 @@
     if (again) return sync();
   }
 
-  // When the app is closed or hidden, fire-and-forget the queue. It stays in `pending`;
-  // the next normal sync re-sends it and the server skips rids it already has.
+  // When the app is closed or hidden, save session progress and fire-and-forget the queue.
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState !== 'hidden' || !pending.length || DEMO || !settings.token || !navigator.sendBeacon) return;
+    if (document.visibilityState !== 'hidden') return;
+    if (session) persistSession(session);
+    if (!pending.length || DEMO || !settings.token || !navigator.sendBeacon) return;
     const body = JSON.stringify({ token: settings.token, action: 'review', reviews: pending.slice(0, 200) });
     navigator.sendBeacon(settings.apiUrl, new Blob([body], { type: 'text/plain;charset=utf-8' }));
   });
+  window.addEventListener('pagehide', () => { if (session) persistSession(session); });
   window.addEventListener('online', () => sync());
 
   /* ------------------------------ routing ------------------------------ */
@@ -251,7 +253,20 @@
     if (v === 'browse') { show('browse'); loadBrowse(); }
     else if (v === 'saved') { browseFilter = 'saved'; location.replace('#browse'); }   // 快報「看全部收藏」
     else if (v === 'settings') { show('settings'); fillSettings(); }
-    else if (v === 'study' && session) { show('study'); }
+    else if (v === 'study') {
+      if (!session) {
+        const ak = store.get('activeSession', null);
+        const raw = (ak && getSavedSession(ak)) || getSavedSession(sessionKey(settings.src, settings.cat));
+        if (raw) {
+          session = hydrateSession(raw);
+          show('study');
+          renderCard();
+          return;
+        }
+      }
+      if (session) { show('study'); }
+      else { show('home'); loadHome(); }
+    }
     else if (v === 'done' && $('#done-text').textContent) { show('done'); }
     else { show('home'); loadHome(); }
   }
@@ -306,8 +321,22 @@
     $('#st-learned').textContent = statsData ? statsData.learned : '–';
     $('#st-mature').textContent = statsData ? statsData.mature : '–';
 
+    const savedSess = getSavedSession(sessionKey(settings.src, settings.cat));
+    const hasResume = !!(savedSess && (savedSess.idx > 0 || (savedSess.graded && savedSess.graded.length > 0)));
+    const resumeBar = $('#resume-bar');
+    if (resumeBar) {
+      resumeBar.hidden = !hasResume;
+      if (hasResume) {
+        $('#resume-info').textContent = `上次進度 ${savedSess.idx} / ${savedSess.cards.length}（對 ${savedSess.right}・錯 ${savedSess.wrong}）`;
+      }
+    }
+
     const btn = $('#start-btn');
-    if (isIssue) {
+    if (hasResume) {
+      const left = savedSess.cards.length - savedSess.idx;
+      btn.disabled = false;
+      btn.textContent = `繼續練習（剩 ${left} 張 · 第 ${savedSess.idx + 1}/${savedSess.cards.length}）`;
+    } else if (isIssue) {
       btn.disabled = !deck.length;
       btn.textContent = !issue ? '載入中…' : deck.length ? `開始練習本期（${deck.length} 張）` : '這一期沒有符合條件的單字';
     } else if (!queueData) {
@@ -464,16 +493,115 @@
   /* ------------------------------- study ------------------------------- */
   let session = null;
 
+  const sessionKey = (src, cat) => `${src || 'all'}::${cat || 'all'}`;
+
+  function loadSavedSessions() {
+    const m = store.get('sessions', {});
+    return m && typeof m === 'object' ? m : {};
+  }
+  function saveSavedSessions(map) {
+    const keys = Object.keys(map).sort((a, b) => (map[b].updatedAt || 0) - (map[a].updatedAt || 0));
+    const trimmed = {};
+    keys.slice(0, 10).forEach(k => { trimmed[k] = map[k]; });
+    store.set('sessions', trimmed);
+  }
+  function getSavedSession(key) {
+    const map = loadSavedSessions();
+    const s = map[key];
+    if (!s || !Array.isArray(s.cards) || !s.cards.length || s.idx >= s.cards.length) return null;
+    // 「今日複習」隔天自動過期，領取隔日新佇列；指定某一期跨天照常保留進度直到練完
+    if (s.src === 'all' && s.date && s.date !== today()) {
+      delete map[key];
+      saveSavedSessions(map);
+      return null;
+    }
+    return s;
+  }
+  function persistSession(s) {
+    if (!s || !s.key) return;
+    if (s.idx >= s.cards.length) { clearSavedSession(s.key); return; }
+    const map = loadSavedSessions();
+    map[s.key] = {
+      key: s.key,
+      src: s.src,
+      cat: s.cat,
+      date: s.date || today(),
+      cards: s.cards,
+      idx: s.idx,
+      graded: Array.from(s.graded),
+      right: s.right,
+      wrong: s.wrong,
+      issue: s.issue ? { stem: s.issue.stem, label: s.issue.label } : null,
+      updatedAt: Date.now(),
+    };
+    saveSavedSessions(map);
+    store.set('activeSession', s.key);
+  }
+  function clearSavedSession(key) {
+    if (!key) return;
+    const map = loadSavedSessions();
+    if (key in map) {
+      delete map[key];
+      saveSavedSessions(map);
+    }
+    if (store.get('activeSession', null) === key) store.del('activeSession');
+  }
+  function hydrateSession(raw) {
+    return {
+      key: raw.key,
+      src: raw.src || 'all',
+      cat: raw.cat || 'all',
+      date: raw.date || today(),
+      cards: raw.cards,
+      idx: raw.idx || 0,
+      flipped: false,
+      graded: new Set(raw.graded || []),
+      right: raw.right || 0,
+      wrong: raw.wrong || 0,
+      issue: raw.issue || null,
+    };
+  }
+
   function startSession() {
+    const key = sessionKey(settings.src, settings.cat);
+    const saved = getSavedSession(key);
+    if (saved && (saved.idx > 0 || (saved.graded && saved.graded.length > 0))) {
+      session = hydrateSession(saved);
+      store.set('activeSession', key);
+      location.hash = '#study';
+      show('study');
+      renderCard();
+      return;
+    }
     const deck = buildDeck();
     if (!deck.length) return;
-    session = { cards: deck, idx: 0, flipped: false, graded: new Set(), right: 0, wrong: 0,
-      issue: settings.src !== 'all' && issue ? issue : null };
+    session = {
+      key,
+      src: settings.src,
+      cat: settings.cat,
+      date: today(),
+      cards: deck,
+      idx: 0,
+      flipped: false,
+      graded: new Set(),
+      right: 0,
+      wrong: 0,
+      issue: settings.src !== 'all' && issue ? { stem: issue.stem, label: issue.label } : null,
+    };
+    persistSession(session);
     location.hash = '#study';
     show('study');
     renderCard();
   }
   $('#start-btn').addEventListener('click', startSession);
+  $('#restart-btn').addEventListener('click', () => {
+    const key = sessionKey(settings.src, settings.cat);
+    const saved = getSavedSession(key);
+    if (saved && saved.idx > 0 && !confirm(`確定要清除目前進度（第 ${saved.idx}/${saved.cards.length} 張）從頭開始嗎？`)) return;
+    clearSavedSession(key);
+    renderHome();
+    toast('已重置本輪進度，可從頭開始');
+  });
 
   function renderCard() {
     const s = session;
@@ -571,12 +699,14 @@
       s.cards.splice(at, 0, { w, kind: card.kind, again: true });
     }
     s.idx++;
+    persistSession(s);
     renderCard();
   }
 
   function finishSession() {
     const s = session;
     session = null;
+    if (s && s.key) clearSavedSession(s.key);
     const n = s.right + s.wrong;
     const early = s.idx < s.cards.length;
     $('#view-done h2').textContent = early ? '先休息一下' : '今天的進度完成了';
@@ -597,7 +727,10 @@
   }
 
   $('#card').addEventListener('click', e => {
-    if (e.target.closest('a')) return;
+    if (e.target.closest('a')) {
+      if (session) persistSession(session);
+      return;
+    }
     const sp = e.target.closest('[data-say]');
     if (sp) { say(sp.dataset.say); return; }
     const st = e.target.closest('[data-star]');
@@ -614,9 +747,18 @@
     else if (b.dataset.grade) grade(Number(b.dataset.grade));
   });
   $('#quit-btn').addEventListener('click', () => {
-    if (!session) return;
-    if (session.graded.size) finishSession();
-    else { session = null; location.hash = '#home'; }
+    if (!session) { location.hash = '#home'; return; }
+    const s = session;
+    if (s.idx > 0 || s.graded.size > 0) {
+      persistSession(s);
+      store.del('activeSession');
+      scheduleSync(0);
+      toast(`已保存進度（${s.idx} / ${s.cards.length}），隨時可繼續`, 2400);
+    } else {
+      clearSavedSession(s.key);
+    }
+    session = null;
+    location.hash = '#home';
   });
   $('#done-home').addEventListener('click', () => { location.hash = '#home'; });
 
