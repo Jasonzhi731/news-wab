@@ -1,6 +1,6 @@
 // Service worker (scope: /news-wab/study/): network-first for the app shell (always fresh when online, works offline from cache).
 // API calls (script.google.com) are not intercepted; offline answers are queued by app.js instead.
-const CACHE = 'nv-shell-v8';
+const CACHE = 'nv-shell-v9';
 const SHELL = [
   './',
   'index.html',

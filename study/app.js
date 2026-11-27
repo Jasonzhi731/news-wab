@@ -651,15 +651,16 @@
     const force = b.dataset.ai === 'force';
     if (force) $('#ai-box').innerHTML = '<button class="ai-btn" disabled>產生中…（約 5–15 秒）</button>';
     else { b.disabled = true; b.textContent = '產生中…（約 5–15 秒）'; }
+    const body = { action: 'aiExamples', id: w.id, force };
+    if (settings.aiModel) body.model = settings.aiModel;
     try {
-      const body = { action: 'aiExamples', id: w.id, force };
-      if (settings.aiModel) body.model = settings.aiModel;
       const r = await apiPost(body);
       if (!DEMO) { aiCache[w.id] = { examples: r.examples, model: r.model }; store.set('ai', aiCache); } // never persist demo text
       w.ai_examples = r.examples;
       w.ai_model = r.model;
       if (session && session.cards[session.idx].w.id === w.id) $('#ai-box').innerHTML = aiHtml(w);
     } catch (err) {
+      if (err.code === 404 && body.model) { aiBlocked[body.model] = Date.now(); store.set('aiBlocked', aiBlocked); }
       const msg = err.code === 501 ? 'AI 尚未設定：在 Apps Script 的「指令碼屬性」加入 GEMINI_API_KEY 後即可使用。'
         : err.code === 401 ? '需要先到「設定」輸入 token。'
         : err.code === -1 ? '目前離線，連上網路再試。'
@@ -670,6 +671,7 @@
 
   /* ------------------------- AI 模型清單（設定頁） ------------------------- */
   let aiModelList = store.get('aiModels', null);   // 上次拿到的清單：離線時也能顯示模型名稱
+  const aiBlocked = store.get('aiBlocked', {});     // 實際呼叫回 404 的模型（金鑰看得到但不能用）
 
   async function loadAiModels() {
     const sel = $('#set-ai-model');
@@ -688,7 +690,7 @@
     const sel = $('#set-ai-model');
     const fmt = m => {
       if (m.provider === 'claude') return `${m.label}（Claude）`;
-      const tags = [m.free ? '免費' : '需付費', m.listed === false ? '你的金鑰看不到' : ''].filter(Boolean).join('・');
+      const tags = [m.free ? '免費' : '需付費', aiBlocked[m.id] ? '你的金鑰不能用' : m.listed === false ? '你的金鑰看不到' : ''].filter(Boolean).join('・');
       return `${m.label}　$${m.in.toFixed(2)} / $${m.out.toFixed(2)}　${tags}`;
     };
     const known = aiModelList.some(m => m.id === settings.aiModel);
