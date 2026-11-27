@@ -143,6 +143,11 @@
           <input type="number" id="set-new" min="0" max="200" step="5">
         </label>
         <label class="check"><input type="checkbox" id="set-speak"> 翻到新卡片時自動唸出單字</label>
+        <label>AI 例句模型（由便宜到貴）
+          <select id="set-ai-model"><option value="">載入模型清單中…</option></select>
+          <input type="text" id="set-ai-custom" placeholder="輸入模型代號，例如 gemini-3.5-flash-lite" hidden>
+          <span class="small muted" id="ai-model-note">價格為 Google 付費方案每 100 萬 token 的輸入 / 輸出（美元）；標「免費」的模型用免費額度就能產生。</span>
+        </label>
         <div class="row">
           <button class="btn primary" type="submit">儲存</button>
           <button class="btn ghost" type="button" id="test-btn">測試連線</button>

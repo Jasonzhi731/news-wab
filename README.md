@@ -267,6 +267,7 @@ POST 另有 `auth`（只驗證 token）、`saveWords`（收藏／取消，`items
 7. 驗證：瀏覽器開 `…/exec?action=stats`，應看到 `total: 2426`。
 8. （選用）AI 例句：指令碼屬性加 `GEMINI_API_KEY`（Google AI Studio 建立的金鑰），執行 `testAi` 看例句。
    預設模型 `gemini-3.8-flash`（屬性 `GEMINI_MODEL` 可改）、思考程度 `low`（`GEMINI_THINKING`）。
+   App 的「設定 → AI 例句模型」可自選模型（由便宜到貴、標免費／需付費；清單在 `CFG.AI_CATALOG`，`GET ?action=aiModels` 讀取並標出金鑰看不到的模型），選擇存在各裝置。
    也可改用 Claude：加 `ANTHROPIC_API_KEY`，兩把都有時用 `AI_PROVIDER = gemini | claude` 指定（預設 Gemini）；
    Claude 預設 `claude-opus-5-5`、effort `low`（`AI_MODEL`、`AI_EFFORT`）。
    例句產生一次就存回 Sheet，同一個字之後不會重複計費（`force: true` 才會重產）。

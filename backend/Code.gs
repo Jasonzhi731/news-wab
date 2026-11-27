@@ -25,6 +25,8 @@
  *   AI_MODEL             Claude model, default claude-opus-5-5
  *   AI_EFFORT            Claude effort, default low
  *   AI_PROVIDER          gemini | claude (default: gemini when GEMINI_API_KEY is set)
+ * The app can also pick the model per request (POST aiExamples {model}); GET ?action=aiModels
+ * lists the models this key can use (cached 6 h).
  *   SPREADSHEET_ID       only needed if this script is NOT bound to the spreadsheet
  */
 
@@ -52,6 +54,24 @@ const CFG = {
   RID_LOOKBACK: 2000,
   ANTHROPIC_URL: 'https://api.anthropic.com/v1/messages',
   GEMINI_URL: 'https://generativelanguage.googleapis.com/v1beta/models/',
+  GEMINI_DEFAULT: 'gemini-3.8-flash',
+  // Text models offered in the app, cheapest first. Prices: Gemini API paid tier, USD per 1M tokens
+  // (input / output incl. thinking), from ai.google.dev/gemini-api/docs/pricing on 2026-11-27.
+  // free = usable on the free tier. Gemini 4 Argon/Carbon go to $4 / $20 on 2026-12-01 (listed at that price).
+  AI_CATALOG: [
+    { id: 'gemini-2.5-flash-lite',  label: 'Gemini 2.5 Flash-Lite',   in: 0.10, out: 0.40,  free: true,
+      note: 'Google 說 2.5 系列只開放給以前用過的帳號' },
+    { id: 'gemini-3.1-flash-lite',  label: 'Gemini 3.1 Flash-Lite',   in: 0.25, out: 1.50,  free: true },
+    { id: 'gemini-3.5-flash-lite',  label: 'Gemini 3.5 Flash-Lite',   in: 0.30, out: 2.50,  free: true },
+    { id: 'gemini-3-flash-preview', label: 'Gemini 3 Flash Preview',  in: 0.50, out: 3.00,  free: true },
+    { id: 'gemini-3.6-flash',       label: 'Gemini 3.6 Flash',        in: 0.75, out: 3.75,  free: true, note: '2027-01-01 起 $1.50 / $7.50' },
+    { id: 'gemini-3.8-flash',       label: 'Gemini 3.8 Flash',        in: 0.75, out: 3.75,  free: true, note: '2027-01-01 起 $1.50 / $7.50' },
+    { id: 'gemini-4-hydrogen',      label: 'Gemini 4 Hydrogen',       in: 1.50, out: 7.50,  free: true },
+    { id: 'gemini-3.1-pro-preview', label: 'Gemini 3.1 Pro Preview',  in: 2.00, out: 12.00, free: false },
+    { id: 'gemini-4-neon',          label: 'Gemini 4 Neon',           in: 3.00, out: 15.00, free: false },
+    { id: 'gemini-4-argon',         label: 'Gemini 4 Argon',          in: 4.00, out: 20.00, free: false, note: '11/30 前 $2 / $10' },
+    { id: 'gemini-4-carbon',        label: 'Gemini 4 Carbon',         in: 4.00, out: 20.00, free: false, note: '11/30 前 $2 / $10' },
+  ],
   ANTHROPIC_VERSION: '2026-10-21',
 };
 
@@ -67,6 +87,7 @@ function doGet(e) {
       case 'due':   return dueQueue_(int_(p.limit, 50), int_(p.newLimit, CFG.NEW_PER_DAY));
       case 'stats': return stats_();
       case 'saved': return { today: today_(), saved: listSaved_() };
+      case 'aiModels': return aiModels_(p.refresh === '1');
       default: throw apiError_(400, 'unknown action: ' + p.action);
     }
   });
@@ -85,7 +106,7 @@ function doPost(e) {
       case 'auth':        return { auth: true }; // token check only (Settings → 測試連線)
       case 'review':      return withLock_(() => applyReviews_(body.reviews || []));
       case 'upsertWords': return withLock_(() => upsertWords_(body.words || []));
-      case 'aiExamples':  return aiExamples_(String(body.id || ''), !!body.force);
+      case 'aiExamples':  return aiExamples_(String(body.id || ''), !!body.force, body.model);
       case 'saveWords':   return withLock_(() => saveWords_(body.items || []));
       default: throw apiError_(400, 'unknown action: ' + body.action);
     }
@@ -396,8 +417,9 @@ function ensureCols_(name, cols) {
 /* ============================ AI example sentences ============================ */
 
 /** Tech / engineering example sentences for one word, cached in Words.ai_examples. */
-function aiExamples_(id, force) {
+function aiExamples_(id, force, model) {
   if (!id) throw apiError_(400, 'id is required');
+  model = cleanModel_(model);
   const W = table_(CFG.WORDS);
   const pi = W.byId.get(id);
   if (pi == null) throw apiError_(404, 'unknown word id: ' + id);
@@ -406,7 +428,7 @@ function aiExamples_(id, force) {
     return { id, cached: true, model: w.ai_model, examples: w.ai_examples };
   }
 
-  const out = callAi_(w); // slow network call — done outside the lock
+  const out = callAi_(w, model); // slow network call — done outside the lock
 
   return withLock_(() => {
     const T = table_(CFG.WORDS);
@@ -428,8 +450,51 @@ function aiProvider_() {
   return prop_('GEMINI_API_KEY') ? 'gemini' : 'claude';
 }
 
-function callAi_(w) {
+/** '' (use the default) or a model id like gemini-2.5-flash-lite / claude-haiku-5-5. */
+function cleanModel_(m) {
+  m = String(m || '').trim().toLowerCase().replace(/^models\//, '');
+  if (!m) return '';
+  if (!/^(gemini|claude)-[a-z0-9][a-z0-9.\-]{0,60}$/.test(m)) throw apiError_(400, 'unknown model: ' + m);
+  return m;
+}
+
+function callAi_(w, model) {
+  if (model) return /^claude-/.test(model) ? callClaude_(w, model) : callGemini_(w, model);
   return aiProvider_() === 'gemini' ? callGemini_(w) : callClaude_(w);
+}
+
+/** Models the app can offer, cheapest first: the curated Gemini 2.5/3/4 catalog (each marked whether
+ *  this key can see it via ListModels), plus Claude when ANTHROPIC_API_KEY is set. Cached 6 h. */
+function aiModels_(refresh) {
+  const cache = typeof CacheService !== 'undefined' ? CacheService.getScriptCache() : null;
+  if (cache && !refresh) {
+    const hit = cache.get('aiModels');
+    if (hit) return JSON.parse(hit);
+  }
+  const out = {
+    provider: aiProvider_(),
+    default: aiProvider_() === 'gemini' ? (prop_('GEMINI_MODEL') || CFG.GEMINI_DEFAULT) : (prop_('AI_MODEL') || 'claude-opus-5-5'),
+    priced: '2026-11-27',
+    models: [],
+  };
+  const gkey = prop_('GEMINI_API_KEY');
+  if (gkey) {
+    let seen = null;   // null = could not list; then every catalog model is offered as-is
+    try {
+      const res = UrlFetchApp.fetch(CFG.GEMINI_URL + '?pageSize=1000', { headers: { 'x-goog-api-key': gkey }, muteHttpExceptions: true });
+      if (res.getResponseCode() === 200) {
+        seen = {};
+        (JSON.parse(res.getContentText()).models || []).forEach(m => { seen[String(m.name || '').replace(/^models\//, '')] = 1; });
+      }
+    } catch (err) { /* listing is only a hint */ }
+    CFG.AI_CATALOG.forEach(m => out.models.push(Object.assign({ provider: 'gemini', listed: seen ? !!seen[m.id] : null }, m)));
+  }
+  if (prop_('ANTHROPIC_API_KEY')) {
+    [['claude-haiku-5-5', 'Claude Haiku 5.5'], ['claude-sonnet-5-5', 'Claude Sonnet 5.5'], ['claude-opus-5-5', 'Claude Opus 5.5']]
+      .forEach(([id, label]) => out.models.push({ id, label, provider: 'claude', listed: null }));
+  }
+  if (cache) cache.put('aiModels', JSON.stringify(out), 6 * 3600);
+  return out;
 }
 
 const AI_SYSTEM_ =
@@ -455,10 +520,10 @@ function parseExamples_(text) {
 }
 
 /* ---- Gemini (Google AI Studio key) ---- */
-function callGemini_(w) {
+function callGemini_(w, pick) {
   const key = prop_('GEMINI_API_KEY');
   if (!key) throw apiError_(501, 'AI not configured: set GEMINI_API_KEY in Script Properties');
-  const model = prop_('GEMINI_MODEL') || 'gemini-3.8-flash';
+  const model = pick || prop_('GEMINI_MODEL') || CFG.GEMINI_DEFAULT;
   const payload = {
     systemInstruction: { parts: [{ text: AI_SYSTEM_ }] },
     contents: [{ role: 'user', parts: [{ text: aiUserText_(w) }] }],
@@ -480,9 +545,10 @@ function callGemini_(w) {
         },
       },
       maxOutputTokens: 4000,
-      thinkingConfig: { thinkingLevel: prop_('GEMINI_THINKING') || 'low' },
     },
   };
+  // Gemini 3+ takes a thinking level; 2.x models (e.g. 2.5 Flash-Lite) run without one
+  if (!/^gemini-[12]\./.test(model)) payload.generationConfig.thinkingConfig = { thinkingLevel: prop_('GEMINI_THINKING') || 'low' };
   const url = CFG.GEMINI_URL + encodeURIComponent(model) + ':generateContent';
   const send = p => UrlFetchApp.fetch(url, {
     method: 'post',
@@ -492,8 +558,8 @@ function callGemini_(w) {
     muteHttpExceptions: true,
   });
   let res = send(payload);
-  // Older models do not know thinkingLevel: retry once without it
-  if (res.getResponseCode() === 400 && /thinking/i.test(res.getContentText())) {
+  // A model that does not know thinkingLevel: retry once without it
+  if (res.getResponseCode() === 400 && payload.generationConfig.thinkingConfig && /thinking/i.test(res.getContentText())) {
     delete payload.generationConfig.thinkingConfig;
     res = send(payload);
   }
@@ -503,7 +569,12 @@ function callGemini_(w) {
   if (code !== 200) {
     const msg = (body.error && body.error.message) || res.getContentText().slice(0, 300);
     if (code === 400 && /API key/i.test(msg)) throw apiError_(502, 'Gemini API key 無效：請到 Google AI Studio 重新複製金鑰');
-    if (code === 429) throw apiError_(429, 'Gemini 免費額度暫時用完，稍後再試');
+    const cat = CFG.AI_CATALOG.find(m => m.id === model);
+    if (cat && !cat.free && (code === 429 || code === 403 || (code === 400 && /free|billing|tier/i.test(msg)))) {
+      throw apiError_(402, cat.label + ' 沒有免費額度，要在 Google AI Studio 開啟付費（Billing）才能用；或到「設定」換一個標「免費」的模型');
+    }
+    if (code === 429) throw apiError_(429, 'Gemini 免費額度暫時用完，稍後再試（或到「設定」換一個模型）');
+    if (code === 404) throw apiError_(404, '這把金鑰不能使用 ' + model + '（模型不存在或已不開放給新使用者），請到「設定」換一個模型');
     throw apiError_(502, 'Gemini API ' + code + ': ' + msg);
   }
   if (body.promptFeedback && body.promptFeedback.blockReason) {
@@ -519,10 +590,10 @@ function callGemini_(w) {
 }
 
 /* ---- Claude ---- */
-function callClaude_(w) {
+function callClaude_(w, pick) {
   const key = prop_('ANTHROPIC_API_KEY');
   if (!key) throw apiError_(501, 'AI not configured: set GEMINI_API_KEY (or ANTHROPIC_API_KEY) in Script Properties');
-  const model = prop_('AI_MODEL') || 'claude-opus-5-5';
+  const model = pick || prop_('AI_MODEL') || 'claude-opus-5-5';
 
   const schema = {
     type: 'object',

@@ -22,7 +22,7 @@
     del(k) { try { localStorage.removeItem('nv-' + k); } catch (e) { /* ignore */ } },
   };
 
-  const DEFAULTS = { apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false, cat: 'all', src: 'all' };
+  const DEFAULTS = { apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false, cat: 'all', src: 'all', aiModel: CFG.aiModel || '' };
   let settings = Object.assign({}, DEFAULTS, store.get('settings', {}));
   if (!settings.apiUrl) settings.apiUrl = DEFAULTS.apiUrl;
   // Keep apiUrl out of storage unless the user typed a custom one, so a new default in config.js reaches every device.
@@ -622,27 +622,42 @@
   /* ------------------------------ AI 例句 ------------------------------ */
   const aiCache = store.get('ai', {});
 
+  // aiCache[id] = { examples, model }（舊版只存陣列）
+  const cached = id => { const c = aiCache[id]; return Array.isArray(c) ? { examples: c, model: '' } : (c || null); };
+  const modelName = id => { const m = (aiModelList || []).find(x => x.id === id); return m ? m.label : (id || ''); };
+
   function aiHtml(w) {
-    const ex = (w.ai_examples && w.ai_examples.length && w.ai_examples) || aiCache[w.id];
+    const c = cached(w.id);
+    const ex = (w.ai_examples && w.ai_examples.length && w.ai_examples) || (c && c.examples);
+    const by = (w.ai_examples && w.ai_examples.length && w.ai_model) || (c && c.model) || '';
     if (ex && ex.length) {
+      const want = settings.aiModel;
+      const redo = want && by && want !== by && !DEMO
+        ? ` · <button class="linkish" data-ai="force">改用 ${esc(modelName(want))} 重新產生</button>` : '';
       return '<div class="label">科技應用例句</div><ul class="ai-list">' + ex.map(x => `
         <li><div class="en">${x.field ? `<span class="chip">${esc(x.field)}</span>` : ''}${highlight(x.en, w.word)}
           <button class="speak" data-say="${esc(x.en)}" aria-label="朗讀例句">🔊</button></div>
-          <div class="zh">${esc(x.zh)}</div></li>`).join('') + '</ul>';
+          <div class="zh">${esc(x.zh)}</div></li>`).join('') + '</ul>' +
+        (by ? `<p class="ai-by">由 ${esc(modelName(by))} 產生${redo}</p>` : '');
     }
-    return '<button class="ai-btn" data-ai="1">✨ 產生科技／工程領域例句</button>';
+    return '<button class="ai-btn" data-ai="1">✨ 產生科技／工程領域例句' +
+      (settings.aiModel ? `<small>（${esc(modelName(settings.aiModel))}）</small>` : '') + '</button>';
   }
 
   $('#card').addEventListener('click', async e => {
     const b = e.target.closest('[data-ai]');
     if (!b || !session) return;
     const w = session.cards[session.idx].w;
-    b.disabled = true;
-    b.textContent = '產生中…（約 5–15 秒）';
+    const force = b.dataset.ai === 'force';
+    if (force) $('#ai-box').innerHTML = '<button class="ai-btn" disabled>產生中…（約 5–15 秒）</button>';
+    else { b.disabled = true; b.textContent = '產生中…（約 5–15 秒）'; }
     try {
-      const r = await apiPost({ action: 'aiExamples', id: w.id });
-      if (!DEMO) { aiCache[w.id] = r.examples; store.set('ai', aiCache); } // never persist demo text
+      const body = { action: 'aiExamples', id: w.id, force };
+      if (settings.aiModel) body.model = settings.aiModel;
+      const r = await apiPost(body);
+      if (!DEMO) { aiCache[w.id] = { examples: r.examples, model: r.model }; store.set('ai', aiCache); } // never persist demo text
       w.ai_examples = r.examples;
+      w.ai_model = r.model;
       if (session && session.cards[session.idx].w.id === w.id) $('#ai-box').innerHTML = aiHtml(w);
     } catch (err) {
       const msg = err.code === 501 ? 'AI 尚未設定：在 Apps Script 的「指令碼屬性」加入 GEMINI_API_KEY 後即可使用。'
@@ -651,6 +666,51 @@
         : '產生失敗：' + err.message;
       $('#ai-box').innerHTML = `<p class="ai-err">${esc(msg)}</p>`;
     }
+  });
+
+  /* ------------------------- AI 模型清單（設定頁） ------------------------- */
+  let aiModelList = store.get('aiModels', null);   // 上次拿到的清單：離線時也能顯示模型名稱
+
+  async function loadAiModels() {
+    const sel = $('#set-ai-model');
+    try {
+      const r = await apiGet({ action: 'aiModels' });
+      aiModelList = r.models || [];
+      store.set('aiModels', aiModelList);
+      fillAiModels(r.default);
+    } catch (e) {
+      if (aiModelList) fillAiModels('');
+      else sel.innerHTML = '<option value="">（讀不到模型清單：後端還沒更新，或目前離線）</option>';
+    }
+  }
+
+  function fillAiModels(backendDefault) {
+    const sel = $('#set-ai-model');
+    const fmt = m => {
+      if (m.provider === 'claude') return `${m.label}（Claude）`;
+      const tags = [m.free ? '免費' : '需付費', m.listed === false ? '你的金鑰看不到' : ''].filter(Boolean).join('・');
+      return `${m.label}　$${m.in.toFixed(2)} / $${m.out.toFixed(2)}　${tags}`;
+    };
+    const known = aiModelList.some(m => m.id === settings.aiModel);
+    sel.innerHTML = `<option value="">後端預設${backendDefault ? `（${esc(modelName(backendDefault))}）` : ''}</option>` +
+      aiModelList.map(m => `<option value="${esc(m.id)}">${esc(fmt(m))}</option>`).join('') +
+      '<option value="__custom">自訂模型代號…</option>';
+    sel.value = !settings.aiModel ? '' : known ? settings.aiModel : '__custom';
+    $('#set-ai-custom').hidden = sel.value !== '__custom';
+    if (sel.value === '__custom') $('#set-ai-custom').value = settings.aiModel;
+    showModelNote();
+  }
+
+  function showModelNote() {
+    const m = (aiModelList || []).find(x => x.id === $('#set-ai-model').value);
+    $('#ai-model-note').textContent = m && m.note ? `${m.label}：${m.note}`
+      : '價格為 Google 付費方案每 100 萬 token 的輸入 / 輸出（美元）；標「免費」的模型用免費額度就能產生。';
+  }
+
+  $('#set-ai-model').addEventListener('change', e => {
+    $('#set-ai-custom').hidden = e.target.value !== '__custom';
+    if (e.target.value === '__custom') $('#set-ai-custom').focus();
+    showModelNote();
   });
 
   /* ------------------- 共用字典（快報網站的 glossary.json） ------------------- */
@@ -808,6 +868,8 @@
     $('#set-token').value = settings.token;
     $('#set-new').value = settings.newLimit;
     $('#set-speak').checked = !!settings.autoSpeak;
+    if (aiModelList) fillAiModels('');
+    loadAiModels();
     $('#set-msg').textContent = '';
     $('#version-label').textContent = `版本 ${CFG.version || '-'}${DEMO ? '（示範模式）' : ''} · ${pending.length} 筆作答待同步`;
   }
@@ -816,6 +878,10 @@
     settings.token = $('#set-token').value.trim();
     settings.newLimit = Math.max(0, Math.min(200, parseInt($('#set-new').value, 10) || 0));
     settings.autoSpeak = $('#set-speak').checked;
+    const am = $('#set-ai-model').value;
+    if (am !== '' || aiModelList) {   // 清單沒載入時不要把選擇清掉
+      settings.aiModel = am === '__custom' ? $('#set-ai-custom').value.trim().toLowerCase() : am;
+    }
     saveSettings();
   }
   function setMsg(text, ok) {
