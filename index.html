@@ -32,6 +32,10 @@
 <meta name="twitter:description" content="每 2 日更新：晶圓代工新聞與重點數據">
 <meta name="twitter:image" content="https://jasonzhi731.github.io/news-wab/assets/og-cover.png?v=2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%234f46e5'/%3E%3Crect x='10' y='10' width='12' height='12' rx='2' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="manifest" href="study/manifest.webmanifest">
+<link rel="apple-touch-icon" href="study/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="半導體快報">
 <link rel="stylesheet" href="assets/app.css">
 <script>
   // 在畫面繪製前套用深淺色，避免閃一下白底
@@ -62,6 +66,7 @@
     </div>
 
     <div class="topbar-tools">
+      <a id="btn-study" class="btn study" href="study/" title="單字複習：閃卡＋間隔重複">📚 單字複習</a>
       <button id="btn-theme" class="btn icon" type="button" title="切換深色 / 淺色">◐</button>
     </div>
   </div>
@@ -148,7 +153,7 @@
           <label class="fcheck"><input id="c-vhide" type="checkbox"> 遮住中文（自我測驗，點一下看答案）</label>
         </div>
         <div class="filter-foot">
-          <span class="muted">已收藏 <b id="v-saved-count">0</b> 個單字・收藏只存在這台裝置的瀏覽器</span>
+          <span class="muted">已收藏 <b id="v-saved-count">0</b> 個單字・<span id="v-sync-note">收藏只存在這台裝置的瀏覽器</span></span>
         </div>
       </div>
       <div id="vocab-grid" class="vgrid"></div>

@@ -635,3 +635,9 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
   .hero{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .card{break-inside:avoid;box-shadow:none}
 }
+
+/* ---------- 單字複習入口（study/） ---------- */
+a.btn{text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.btn.study{padding:7px 12px;font-size:13px;white-space:nowrap}
+#v-sync-note a{color:inherit;text-decoration:underline}
+@media (max-width:560px){.btn.study{padding:7px 9px;font-size:12px}}

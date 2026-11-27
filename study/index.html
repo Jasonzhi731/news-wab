@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>單字複習｜半導體快報</title>
+  <meta name="description" content="半導體新聞英文單字：翻牌、間隔重複、科技例句">
+  <meta name="theme-color" content="#3f3cbb">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="半導體快報">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="brand">
+        <span class="logo">Aa</span>
+        <div>
+          <h1>單字複習</h1>
+          <p class="sub" id="today-label">半導體新聞單字</p>
+        </div>
+      </div>
+      <button class="sync-pill" id="sync-pill" hidden></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 今日 -->
+    <section class="view" id="view-home">
+      <div class="banner" id="home-banner" hidden></div>
+      <div class="stats">
+        <div class="stat due"><b id="st-due">–</b><span>待複習</span></div>
+        <div class="stat new"><b id="st-new">–</b><span>今日新字</span></div>
+        <div class="stat"><b id="st-learned">–</b><span>已學</span></div>
+        <div class="stat"><b id="st-mature">–</b><span>熟練</span></div>
+      </div>
+      <div class="seg" id="cat-seg" role="tablist" aria-label="分類">
+        <button data-cat="all">全部</button>
+        <button data-cat="fin">財經用語</button>
+        <button data-cat="general">一般</button>
+      </div>
+      <button class="btn primary big" id="start-btn" disabled>載入中…</button>
+      <p class="muted center" id="home-note"></p>
+      <div class="total-bar"><div id="total-fill"></div></div>
+      <p class="muted center small" id="total-note"></p>
+    </section>
+
+    <!-- 練習 -->
+    <section class="view" id="view-study" hidden>
+      <div class="study-head">
+        <button class="icon-btn" id="quit-btn" aria-label="結束練習">✕</button>
+        <div class="progress"><div id="prog-fill"></div></div>
+        <span class="prog-text" id="prog-text"></span>
+      </div>
+      <div class="card" id="card" tabindex="0" aria-live="polite"></div>
+      <div class="actions" id="actions"></div>
+    </section>
+
+    <!-- 完成 -->
+    <section class="view" id="view-done" hidden>
+      <div class="done">
+        <div class="done-emoji">🎉</div>
+        <h2>今天的進度完成了</h2>
+        <p id="done-text"></p>
+        <button class="btn primary" id="done-home">回到首頁</button>
+      </div>
+    </section>
+
+    <!-- 單字庫 -->
+    <section class="view" id="view-browse" hidden>
+      <div class="browse-tools">
+        <input type="search" id="q" placeholder="搜尋英文或中文…" autocomplete="off">
+        <select id="sort" aria-label="排序">
+          <option value="recent">最新出現</option>
+          <option value="freq">出現次數</option>
+          <option value="due">複習日</option>
+          <option value="az">A → Z</option>
+        </select>
+      </div>
+      <div class="seg small" id="browse-seg">
+        <button data-f="all">全部</button>
+        <button data-f="fin">財經</button>
+        <button data-f="learned">已學</button>
+        <button data-f="hard">常錯</button>
+        <button data-f="saved">★ 收藏</button>
+      </div>
+      <p class="muted small" id="browse-count"></p>
+      <ul class="word-list" id="word-list"></ul>
+      <button class="btn ghost" id="more-btn" hidden>顯示更多</button>
+    </section>
+
+    <!-- 設定 -->
+    <section class="view" id="view-settings" hidden>
+      <form class="settings" id="settings-form" autocomplete="off">
+        <label>API 網址（Apps Script 的 /exec）
+          <input type="url" id="set-url" required>
+        </label>
+        <label>Token（寫入進度用，只存在這台裝置）
+          <div class="row">
+            <input type="password" id="set-token" placeholder="貼上 API_TOKEN">
+            <button type="button" class="btn ghost" id="toggle-token">顯示</button>
+          </div>
+        </label>
+        <label>每天新字數
+          <input type="number" id="set-new" min="0" max="200" step="5">
+        </label>
+        <label class="check"><input type="checkbox" id="set-speak"> 翻到新卡片時自動唸出單字</label>
+        <div class="row">
+          <button class="btn primary" type="submit">儲存</button>
+          <button class="btn ghost" type="button" id="test-btn">測試連線</button>
+        </div>
+        <p class="small" id="set-msg"></p>
+      </form>
+      <div class="settings-extra">
+        <button class="btn ghost" id="clear-cache">清除這台裝置的快取</button>
+        <p class="muted small" id="version-label"></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs">
+    <a href="../" class="out"><span>📰</span>快報</a>
+    <a href="#home" data-view="home"><span>📅</span>今日</a>
+    <a href="#browse" data-view="browse"><span>📚</span>單字庫</a>
+    <a href="#settings" data-view="settings"><span>⚙️</span>設定</a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
