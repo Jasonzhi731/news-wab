@@ -349,12 +349,16 @@
     var dates = uniq(rpt.news.map(function (n) { return n.date; }))
       .filter(function (d) { return /^\d{4}[\/\-.]\d{1,2}/.test(d); }).sort();
     var nEn = rpt.news.filter(function (n) { return !!enOf(n); }).length;
+    var dateRange = '';
+    if (dates.length) {
+      var d0 = shortDate(dates[0]), d1 = shortDate(dates[dates.length - 1]);
+      dateRange = dates.length > 1 ? d0 + '–' + d1 : d0;
+    }
     $('#rpt-stats').innerHTML =
       stat('新聞', rpt.news.length, '則') +
       stat('重點數據', rpt.data.length, '筆') +
-      (dates.length ? stat('新聞日期', shortDate(dates[0]) +
-        (dates.length > 1 ? ' – ' + shortDate(dates[dates.length - 1]) : ''), '') : '') +
-      stat('英文對照', nEn ? nEn + ' / ' + rpt.news.length : '—', nEn ? '則' : '');
+      (dateRange ? stat('新聞日期', dateRange, '') : '') +
+      stat('英文對照', nEn ? nEn + '/' + rpt.news.length : '—', nEn ? '則' : '');
     $('#hero-eyebrow').textContent = nEn ? 'FOUNDRY BRIEF · 中英對照' : 'FOUNDRY BRIEF';
     renderMix();
 
@@ -362,10 +366,9 @@
     $('#tabcount-data').textContent = rpt.data.length;
     $('#tabcount-vocab').textContent = reportVocab().length || '';
     $('#btn-all-lang').hidden = !nEn;
-    $('#en-hint').hidden = !nEn;
     $('#en-hint').textContent = canSpeak
-      ? '英文模式：點任一個字看中文，字彙按 🔊 聽發音'
-      : '英文模式：點任一個字看中文';
+      ? '英文模式：點任一個字看中文與收藏，字彙按喇叭聽發音'
+      : '英文模式：點任一個字看中文與收藏';
 
     buildFilters();
     buildDataFilter();
@@ -483,13 +486,24 @@
     });
   }
 
+  function syncFilterUI() {
+    var active = (state.cats.length ? 1 : 0) + (state.dates.length ? 1 : 0) + (state.ents.length ? 1 : 0);
+    var rst = $('#btn-reset');
+    if (rst) rst.hidden = !active;
+    var badge = $('#filter-badge');
+    if (badge) { badge.hidden = !active; badge.textContent = active ? String(active) : ''; }
+    var tog = $('#btn-filter-toggle');
+    if (tog) tog.classList.toggle('has-active', active > 0);
+  }
+
   function renderNews() {
     var list = filteredNews();
-    $('#result-count').textContent = '顯示 ' + list.length + ' / ' + report.news.length + ' 則';
+    $('#result-count').textContent = '共 ' + list.length + (list.length !== report.news.length ? ' / ' + report.news.length : '') + ' 則';
     $('#news-none').hidden = list.length > 0;
     $('#news-cards').hidden = !list.length;
     closePop();
     renderCards(list);
+    syncFilterUI();
     syncAllLangBtn();
   }
 
@@ -690,10 +704,13 @@
 
   function syncAllLangBtn() {
     var withEn = report.news.filter(function (i) { return !!enOf(i); });
+    var anyEn = withEn.some(function (i) { return state.lang[keyOf(i)] === 'en'; });
     var allEn = withEn.length && withEn.every(function (i) { return state.lang[keyOf(i)] === 'en'; });
     var b = $('#btn-all-lang');
-    b.textContent = allEn ? '全部切回中文' : '全部切成英文';
+    b.textContent = allEn ? '切回中文' : '全部 EN';
     b.setAttribute('data-to', allEn ? 'zh' : 'en');
+    var hint = $('#en-hint');
+    if (hint) hint.hidden = !anyEn;
   }
 
   /* ---------- 英文字彙 ---------- */
@@ -804,14 +821,19 @@
         '" data-zh="' + esc(zh) + '" data-ctx="' + esc(ctx || '') + '"' + (fin ? ' data-fin="1"' : '') + '>' +
         (on ? '★ 已收藏到單字本' : '☆ 收藏到單字本') + '</button>');
     pop.hidden = false;
-    // 放在字的下方；靠近視窗右緣時往左收，下方空間不夠時改放上方
-    var r = anchor.getBoundingClientRect();
-    var w = pop.offsetWidth, hgt = pop.offsetHeight;
-    var left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 8);
-    var top = r.bottom + 8;
-    if (top + hgt > window.innerHeight - 8 && r.top - hgt - 8 > 0) top = r.top - hgt - 8;
-    pop.style.left = (left + window.scrollX) + 'px';
-    pop.style.top = (top + window.scrollY) + 'px';
+    // 手機上由 CSS 呈現底部懸浮抽屜卡；桌機定位在點選字詞的上下方
+    if (window.innerWidth <= 720) {
+      pop.style.left = '';
+      pop.style.top = '';
+    } else {
+      var r = anchor.getBoundingClientRect();
+      var w = pop.offsetWidth, hgt = pop.offsetHeight;
+      var left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 8);
+      var top = r.bottom + 8;
+      if (top + hgt > window.innerHeight - 8 && r.top - hgt - 8 > 0) top = r.top - hgt - 8;
+      pop.style.left = (left + window.scrollX) + 'px';
+      pop.style.top = (top + window.scrollY) + 'px';
+    }
   }
 
   /* ---------- 重點數據 ---------- */
@@ -998,10 +1020,30 @@
     selectHandler('#s-ent', 'ents', renderNews);
     selectHandler('#s-dcat', 'dcats', renderData);
 
+    // 手機版篩選抽屜收合
+    var fToggle = $('#btn-filter-toggle'), fWrap = $('#news-filters');
+    if (fToggle && fWrap) {
+      fToggle.addEventListener('click', function () {
+        var open = fWrap.classList.toggle('is-open');
+        fToggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+
     $('#btn-reset').addEventListener('click', function () {
       state.cats = []; state.dates = []; state.ents = [];
       buildFilters(); renderNews();
     });
+
+    // 回到頂部浮動鈕
+    var topBtn = $('#btn-top');
+    if (topBtn) {
+      window.addEventListener('scroll', function () {
+        topBtn.hidden = window.scrollY < 520;
+      }, { passive: true });
+      topBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // 檔案來源（拖放，或空狀態時的選檔按鈕）
     $('#btn-open-2').addEventListener('click', function () { $('#file-input').click(); });
@@ -1012,7 +1054,7 @@
     $('#report-select').addEventListener('change', function () {
       state.localFile = false;
       var opt = this.options[this.selectedIndex];
-      loadFromUrl(this.value, opt.textContent).catch(function (e) {
+      loadFromUrl(this.value, opt.dataset.full || opt.textContent).catch(function (e) {
         alert('載入失敗：' + e.message);
       });
     });
@@ -1031,20 +1073,34 @@
       if (f) loadFromFile(f);
     });
 
-    // 主題
-    var applyTheme = function (t) {
+    // 主題（同步更新 iOS 狀態列與瀏覽器 theme-color）
+    var applyTheme = function (t, persist) {
       document.documentElement.setAttribute('data-theme', t);
-      try { localStorage.setItem('wr-theme', t); } catch (err) {}
+      var mt = document.getElementById('meta-theme');
+      if (mt) mt.setAttribute('content', t === 'dark' ? '#090b10' : '#f6f6f3');
+      if (persist) { try { localStorage.setItem('wr-theme', t); } catch (err) {} }
     };
     $('#btn-theme').addEventListener('click', function () {
       var cur = document.documentElement.getAttribute('data-theme');
-      applyTheme(cur === 'dark' ? 'light' : 'dark');
+      applyTheme(cur === 'dark' ? 'light' : 'dark', true);
+    });
+    window.addEventListener('storage', function (e) {
+      if (e.key === 'wr-theme' && e.newValue) applyTheme(e.newValue, false);
     });
     // 沒有手動選過時跟隨系統的深淺色
     var theme = null;
     try { theme = localStorage.getItem('wr-theme'); } catch (err) {}
     if (!theme && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
-    document.documentElement.setAttribute('data-theme', theme || 'light');
+    applyTheme(theme || 'light', false);
+  }
+
+  function compactReportLabel(lab) {
+    return String(lab || '')
+      .replace(/^全球半導體代工產業快報\s*/, '')
+      .replace(/^全球半導體代工產業週報\s*/, '週報 ')
+      .replace(/^全球晶圓代工新聞\s*/, '快報 ')
+      .replace(/^台灣半導體產業週報\s*/, '台灣週報 ')
+      .replace(/^20\d\d\//, '');
   }
 
   /* ============================================================
@@ -1059,7 +1115,9 @@
         if (!Array.isArray(list) || !list.length) throw new Error('empty manifest');
         var sel = $('#report-select');
         sel.innerHTML = list.map(function (x) {
-          return '<option value="data/' + encodeURIComponent(x.file) + '">' + esc(x.label || x.file) + '</option>';
+          var full = x.label || x.file;
+          var short = compactReportLabel(full);
+          return '<option value="data/' + encodeURIComponent(x.file) + '" data-full="' + esc(full) + '">' + esc(short) + '</option>';
         }).join('');
         sel.hidden = false;
         // 網址 ?r=<檔名（不含 .xlsx）> 直接開某一期；&lang=en 載入後整份切成英文（單字複習「看這期新聞」用）

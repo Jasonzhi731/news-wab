@@ -13,7 +13,7 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1e1b4b">
+<meta name="theme-color" id="meta-theme" content="#f6f6f3">
 <title>半導體產業快報</title>
 <meta name="description" content="每 2 日更新：晶圓代工新聞與重點數據">
 
@@ -31,20 +31,25 @@
 <meta name="twitter:title" content="半導體產業快報">
 <meta name="twitter:description" content="每 2 日更新：晶圓代工新聞與重點數據">
 <meta name="twitter:image" content="https://jasonzhi731.github.io/news-wab/assets/og-cover.png?v=2">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%234f46e5'/%3E%3Crect x='10' y='10' width='12' height='12' rx='2' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%231d4ed8'/%3E%3Crect x='10' y='10' width='12' height='12' rx='2' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
 <link rel="manifest" href="study/manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="半導體快報">
 <link rel="stylesheet" href="assets/shell.css">
 <link rel="stylesheet" href="assets/app.css">
 <script>
-  // 在畫面繪製前套用深淺色，避免閃一下白底
+  // 在畫面繪製前套用深淺色並同步 iOS 狀態列色，避免閃白
   (function () {
     var t = null;
     try { t = localStorage.getItem('wr-theme'); } catch (e) {}
     if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
-    document.documentElement.setAttribute('data-theme', t || 'light');
+    t = t || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.getElementById('meta-theme');
+    if (m) m.setAttribute('content', t === 'dark' ? '#090b10' : '#f6f6f3');
   })();
 </script>
 </head>
@@ -55,24 +60,33 @@
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="./">
-      <span class="brand-mark"></span>
-      <span class="brand-text">半導體產業快報</span>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">半導體快報</span>
       <span class="brand-cadence">每 2 日更新</span>
     </a>
 
     <nav class="appnav" aria-label="切換">
-      <a href="./" class="is-on" aria-current="page">📰 快報</a>
-      <a href="study/" id="btn-study" title="單字複習：閃卡＋間隔重複">📚 單字</a>
+      <a href="./" class="is-on" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg>
+        快報
+      </a>
+      <a href="study/" id="btn-study" title="單字複習：閃卡＋間隔重複">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="16" rx="2.5"/><path d="M7 5V3.5A1.5 1.5 0 0 1 8.5 2h11A1.5 1.5 0 0 1 21 3.5v13a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 11h6M7 15h4"/></svg>
+        單字
+      </a>
     </nav>
 
     <div class="source-picker">
-      <label class="sr-only" for="report-select">選擇報告</label>
+      <label class="sr-only" for="report-select">選擇報告期別</label>
       <select id="report-select" hidden></select>
       <input id="file-input" type="file" accept=".xlsx,.xlsm,.xls" hidden>
     </div>
 
     <div class="topbar-tools">
-      <button id="btn-theme" class="tb-btn" type="button" title="切換深色 / 淺色">◐</button>
+      <button id="btn-theme" class="tb-btn" type="button" title="切換深色 / 淺色" aria-label="切換深色 / 淺色">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
     </div>
   </div>
 </header>
@@ -100,27 +114,39 @@
     </div>
 
     <nav class="tabs" role="tablist">
-      <button class="tab is-on" data-tab="news"  role="tab" aria-selected="true">新聞彙整 <span class="pill" id="tabcount-news"></span></button>
-      <button class="tab"       data-tab="data"  role="tab">重點數據 <span class="pill" id="tabcount-data"></span></button>
-      <button class="tab"       data-tab="vocab" role="tab">英文字彙 <span class="pill" id="tabcount-vocab"></span></button>
-      <button class="tab"       data-tab="notes" role="tab">說明與方法</button>
+      <button class="tab is-on" data-tab="news"  role="tab" aria-selected="true">新聞 <span class="pill" id="tabcount-news"></span></button>
+      <button class="tab"       data-tab="data"  role="tab">數據 <span class="pill" id="tabcount-data"></span></button>
+      <button class="tab"       data-tab="vocab" role="tab">字彙 <span class="pill" id="tabcount-vocab"></span></button>
+      <button class="tab"       data-tab="notes" role="tab">說明</button>
     </nav>
 
     <!-- ============ 新聞彙整 ============ -->
     <section id="panel-news" class="panel">
-      <div class="filters">
-        <div class="select-row">
-          <label class="fsel"><span>分類</span><select id="s-cat"></select></label>
-          <label class="fsel"><span>日期</span><select id="s-date"></select></label>
-          <label class="fsel"><span>主體</span><select id="s-ent"></select></label>
+      <div class="filters" id="news-filters">
+        <div class="filter-bar">
+          <div class="filter-bar-left">
+            <span id="result-count" class="result-count"></span>
+            <button id="btn-filter-toggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="news-filter-drawer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+              <span>篩選</span>
+              <b id="filter-badge" class="filter-badge" hidden></b>
+            </button>
+            <button id="btn-reset" class="linkbtn" type="button" hidden>清除</button>
+          </div>
+          <div class="filter-bar-right">
+            <button id="btn-all-lang" class="btn lang-all" type="button" data-to="en" hidden>全部切成英文</button>
+          </div>
         </div>
 
-        <div class="filter-foot">
-          <span id="result-count" class="muted"></span>
-          <button id="btn-reset" class="linkbtn" type="button">清除全部篩選</button>
-          <span id="en-hint" class="en-hint" hidden></span>
-          <button id="btn-all-lang" class="btn lang-all" type="button" data-to="en" hidden>全部切成英文</button>
+        <div class="filter-drawer" id="news-filter-drawer">
+          <div class="select-row">
+            <label class="fsel"><span>分類</span><select id="s-cat"></select></label>
+            <label class="fsel"><span>日期</span><select id="s-date"></select></label>
+            <label class="fsel"><span>主體</span><select id="s-ent"></select></label>
+          </div>
         </div>
+
+        <p id="en-hint" class="en-hint" hidden></p>
       </div>
 
       <div id="news-cards" class="cards"></div>
@@ -129,7 +155,7 @@
 
     <!-- ============ 重點數據 ============ -->
     <section id="panel-data" class="panel" hidden>
-      <div class="filters">
+      <div class="filters filters-simple">
         <div class="select-row">
           <label class="fsel"><span>類別</span><select id="s-dcat"></select></label>
         </div>
@@ -140,8 +166,8 @@
 
     <!-- ============ 英文字彙 ============ -->
     <section id="panel-vocab" class="panel" hidden>
-      <div class="filters">
-        <div class="select-row">
+      <div class="filters filters-simple vocab-toolbar">
+        <div class="select-row vocab-controls">
           <label class="fsel"><span>類型</span>
             <select id="s-vtype">
               <option value="">全部字彙</option>
@@ -149,11 +175,14 @@
               <option value="general">只看一般字彙</option>
             </select>
           </label>
-          <label class="fcheck"><input id="c-vhide" type="checkbox"> 遮住中文（自我測驗，點一下看答案）</label>
+          <label class="fcheck">
+            <input id="c-vhide" type="checkbox">
+            <span>遮住中文（點一下看答案）</span>
+          </label>
         </div>
         <div class="filter-foot">
-          <span class="muted">已收藏 <b id="v-saved-count">0</b> 個單字（<a href="study/#saved">在單字本看全部收藏</a>）・<span id="v-sync-note"></span></span>
-          <a id="btn-practice" class="btn primary practice-cta" href="study/" hidden>📚 先練這期單字 →</a>
+          <span class="muted">已收藏 <b id="v-saved-count">0</b> 字（<a href="study/#saved">單字本</a>）· <span id="v-sync-note"></span></span>
+          <a id="btn-practice" class="btn primary practice-cta" href="study/" hidden>先練這期單字 →</a>
         </div>
       </div>
       <div id="vocab-grid" class="vgrid"></div>
@@ -168,16 +197,32 @@
   </section>
 </main>
 
+<button id="btn-top" class="fab-top" type="button" aria-label="回到頂部" hidden>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
 <footer class="foot">
   <span id="foot-src" class="muted"></span>
   <span class="muted">資料來源為使用者提供的 Excel 檔；本頁僅作呈現，不構成投資建議。</span>
 </footer>
 
 <nav class="bottomnav" aria-label="快速切換">
-  <a href="./" class="is-on" aria-current="page"><span>📰</span>快報</a>
-  <a href="study/#home"><span>🎯</span>練習</a>
-  <a href="study/#browse"><span>📚</span>單字本</a>
-  <a href="study/#settings"><span>⚙️</span>設定</a>
+  <a href="./" class="is-on" aria-current="page">
+    <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg></span>
+    快報
+  </a>
+  <a href="study/#home">
+    <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="16" rx="2.5"/><path d="M7 5V3.5A1.5 1.5 0 0 1 8.5 2h11A1.5 1.5 0 0 1 21 3.5v13a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 11h6M7 15h4"/></svg></span>
+    練習
+  </a>
+  <a href="study/#browse">
+    <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></span>
+    單字本
+  </a>
+  <a href="study/#settings">
+    <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></span>
+    設定
+  </a>
 </nav>
 
 <script src="vendor/xlsx.full.min.js"></script>

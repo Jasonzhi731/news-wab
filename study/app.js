@@ -152,6 +152,8 @@
       || vs.find(v => /en[-_]US/i.test(v.lang)) || vs[0] || null;
   }
   if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+  const SPEAK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+
   function say(text) {
     if (!('speechSynthesis' in window) || !text) return;
     speechSynthesis.cancel();
@@ -236,7 +238,12 @@
   function show(view) {
     VIEWS.forEach(v => { $('#view-' + v).hidden = v !== view; });
     document.body.classList.toggle('studying', view === 'study');
-    $$('#tabs a, .bottomnav a[data-view]').forEach(a => a.classList.toggle('is-on', a.dataset.view === view));
+    $$('#tabs a, .bottomnav a[data-view]').forEach(a => {
+      const on = a.dataset.view === view;
+      a.classList.toggle('is-on', on);
+      if (on) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
     window.scrollTo(0, 0);
   }
   function route() {
@@ -486,17 +493,19 @@
     ].join('');
 
     const card = $('#card');
-    card.classList.remove('flipped');
+    card.classList.remove('flipped', 'card-enter');
+    void card.offsetWidth;
+    card.classList.add('card-enter');
     card.innerHTML = `
       <div class="card-inner">
         <div class="face front">
           <div class="chips">${chips}</div>
           <div class="word">${esc(w.word)}</div>
-          <button class="speak" data-say="${esc(w.word)}" aria-label="朗讀">🔊 發音</button>
-          <div class="hint">想一想中文意思，再點卡片翻面</div>
+          <button class="speak" type="button" data-say="${esc(w.word)}" aria-label="朗讀">${SPEAK_SVG}<span>發音</span></button>
+          <div class="hint">想一想中文意思，輕點卡片翻面</div>
         </div>
         <div class="face back">
-          <div class="back-word">${esc(w.word)} <button class="speak" data-say="${esc(w.word)}" aria-label="朗讀">🔊</button>
+          <div class="back-word">${esc(w.word)} <button class="speak" type="button" data-say="${esc(w.word)}" aria-label="朗讀">${SPEAK_SVG}</button>
             ${starBtn(w)}</div>
           <div class="meaning">${esc(meaningOf(w) || '（尚無中文解釋）')}</div>
           ${w.context_en ? `
@@ -509,6 +518,7 @@
         </div>
       </div>`;
     renderActions();
+    window.scrollTo({ top: 0, behavior: 'instant' });
     card.focus({ preventScroll: true });
     if (settings.autoSpeak) say(w.word);
   }
@@ -576,6 +586,7 @@
       : '沒有新的作答。';
     const rd = $('#done-read');
     rd.hidden = !s.issue;
+    $('#done-home').classList.toggle('primary', !s.issue);
     if (s.issue) {
       rd.href = '../?r=' + encodeURIComponent(s.issue.stem) + '&lang=en';
       rd.textContent = `去讀這期新聞（英文）→ ${s.issue.label}`;
@@ -636,7 +647,7 @@
         ? ` · <button class="linkish" data-ai="force">改用 ${esc(modelName(want))} 重新產生</button>` : '';
       return '<div class="label">科技應用例句</div><ul class="ai-list">' + ex.map(x => `
         <li><div class="en">${x.field ? `<span class="chip">${esc(x.field)}</span>` : ''}${highlight(x.en, w.word)}
-          <button class="speak" data-say="${esc(x.en)}" aria-label="朗讀例句">🔊</button></div>
+          <button class="speak" type="button" data-say="${esc(x.en)}" aria-label="朗讀例句">${SPEAK_SVG}</button></div>
           <div class="zh">${esc(x.zh)}</div></li>`).join('') + '</ul>' +
         (by ? `<p class="ai-by">由 ${esc(modelName(by))} 產生${redo}</p>` : '');
     }
@@ -845,7 +856,7 @@
     const p = w.progress;
     li.insertAdjacentHTML('beforeend', `
       <div class="wl-detail">
-        <div class="back-word">${esc(w.word)} <button class="speak" data-say="${esc(w.word)}">🔊</button>
+        <div class="back-word">${esc(w.word)} <button class="speak" type="button" data-say="${esc(w.word)}" aria-label="朗讀">${SPEAK_SVG}</button>
           ${w.category === 'fin' ? '<span class="chip fin">財經</span>' : ''} ${starBtn(w)}</div>
         <div class="meaning">${esc(meaningOf(w))}</div>
         ${w.context_en ? `<div class="ctx"><p>${ctxHtml(w.context_en, w.word)}</p>${srcHtml(w.source)}</div>` : ''}
@@ -934,14 +945,19 @@
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(() => { /* not fatal */ });
   }
-  // 深淺色：與快報共用 wr-theme
+  // 深淺色：與快報共用 wr-theme，並同步更新 iOS 狀態列 theme-color
+  function applyTheme(t, persist) {
+    document.documentElement.setAttribute('data-theme', t);
+    const mt = document.getElementById('meta-theme');
+    if (mt) mt.setAttribute('content', t === 'dark' ? '#090b10' : '#f6f6f3');
+    if (persist) { try { localStorage.setItem('wr-theme', t); } catch (e) { /* ignore */ } }
+  }
   $('#btn-theme').addEventListener('click', () => {
     const t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', t);
-    try { localStorage.setItem('wr-theme', t); } catch (e) { /* ignore */ }
+    applyTheme(t, true);
   });
   window.addEventListener('storage', e => {
-    if (e.key === 'wr-theme' && e.newValue) document.documentElement.setAttribute('data-theme', e.newValue);
+    if (e.key === 'wr-theme' && e.newValue) applyTheme(e.newValue, false);
   });
 
   // 從快報「先練這期單字」進來：?src=<那一期的檔名>

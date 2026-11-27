@@ -2,7 +2,7 @@
 // writes need the token, which each device enters on the Settings page and never ships here).
 window.NV_CONFIG = {
   apiUrl: 'https://script.google.com/macros/s/AKfycbxalrfuFwsbJEhjpo27_edPrggbT-7JY2vlO8P4T49Dl57JelsW0Q6X0E-5RhtXBGjD/exec',
-  version: '2.6.1',
+  version: '3.0.0',
   // 2.5 Flash-Lite is listed for this key but returns 404 (2.5 is closed to new users) — cheapest that runs:
   aiModel: 'gemini-3.1-flash-lite',
 };

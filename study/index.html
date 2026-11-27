@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>單字複習｜半導體快報</title>
   <meta name="description" content="半導體新聞英文單字：翻牌、間隔重複、科技例句">
-  <meta name="theme-color" content="#1e1b4b">
+  <meta name="theme-color" id="meta-theme" content="#f6f6f3">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
@@ -16,12 +16,15 @@
   <link rel="stylesheet" href="../assets/shell.css">
   <link rel="stylesheet" href="app.css">
   <script>
-    // 深淺色跟快報共用同一個設定（wr-theme），在畫面繪製前套用
+    // 深淺色跟快報共用同一個設定（wr-theme），在畫面繪製前套用並同步 iOS 狀態列色
     (function () {
       var t = null;
       try { t = localStorage.getItem('wr-theme'); } catch (e) {}
       if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
-      document.documentElement.setAttribute('data-theme', t || 'light');
+      t = t || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      var m = document.getElementById('meta-theme');
+      if (m) m.setAttribute('content', t === 'dark' ? '#090b10' : '#f6f6f3');
     })();
   </script>
 </head>
@@ -29,17 +32,26 @@
   <header class="topbar">
     <div class="topbar-in">
       <a class="brand" href="../">
-        <span class="brand-mark"></span>
-        <span class="brand-text">半導體產業快報</span>
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">半導體快報</span>
         <span class="brand-cadence">每 2 日更新</span>
       </a>
       <nav class="appnav" aria-label="切換">
-        <a href="../">📰 快報</a>
-        <a href="./" class="is-on" aria-current="page">📚 單字</a>
+        <a href="../">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg>
+          快報
+        </a>
+        <a href="./" class="is-on" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="16" rx="2.5"/><path d="M7 5V3.5A1.5 1.5 0 0 1 8.5 2h11A1.5 1.5 0 0 1 21 3.5v13a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 11h6M7 15h4"/></svg>
+          單字
+        </a>
       </nav>
       <div class="topbar-tools">
         <button class="sync-pill" id="sync-pill" hidden></button>
-        <button id="btn-theme" class="tb-btn" type="button" title="切換深色 / 淺色">◐</button>
+        <button id="btn-theme" class="tb-btn" type="button" title="切換深色 / 淺色" aria-label="切換深色 / 淺色">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -65,32 +77,47 @@
           <div class="stat"><span>熟練</span><b id="st-mature">–</b></div>
         </div>
       </div>
-      <label class="src-pick">練習範圍
-        <select id="src-sel">
-          <option value="all">今日複習（所有單字・間隔重複）</option>
-        </select>
-      </label>
-      <p class="muted small center" id="src-note" hidden></p>
-      <div class="seg" id="cat-seg" role="tablist" aria-label="分類">
-        <button data-cat="all">全部</button>
-        <button data-cat="fin">財經用語</button>
-        <button data-cat="general">一般</button>
+
+      <div class="home-panel">
+        <label class="src-pick">
+          <span>練習範圍</span>
+          <select id="src-sel">
+            <option value="all">今日複習（所有單字・間隔重複）</option>
+          </select>
+        </label>
+        <p class="muted small" id="src-note" hidden></p>
+
+        <div class="seg" id="cat-seg" role="tablist" aria-label="分類">
+          <button type="button" data-cat="all">全部</button>
+          <button type="button" data-cat="fin">財經用語</button>
+          <button type="button" data-cat="general">一般</button>
+        </div>
+
+        <button class="btn primary big" id="start-btn" disabled>載入中…</button>
+        <p class="muted center small" id="home-note"></p>
+
+        <div class="mastery">
+          <div class="total-bar"><div id="total-fill"></div></div>
+          <p class="muted center small" id="total-note"></p>
+        </div>
       </div>
-      <button class="btn primary big" id="start-btn" disabled>載入中…</button>
-      <p class="muted center" id="home-note"></p>
-      <div class="total-bar"><div id="total-fill"></div></div>
-      <p class="muted center small" id="total-note"></p>
     </section>
 
     <!-- 練習 -->
     <section class="view" id="view-study" hidden>
       <div class="study-head">
-        <button class="icon-btn" id="quit-btn" aria-label="結束練習">✕</button>
+        <button class="icon-btn" id="quit-btn" type="button" aria-label="結束練習">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
         <div class="progress"><div id="prog-fill"></div></div>
         <span class="prog-text" id="prog-text"></span>
       </div>
-      <div class="card" id="card" tabindex="0" aria-live="polite"></div>
-      <div class="actions" id="actions"></div>
+      <div class="card-stage">
+        <div class="card" id="card" tabindex="0" aria-live="polite"></div>
+      </div>
+      <div class="actions-dock">
+        <div class="actions" id="actions"></div>
+      </div>
     </section>
 
     <!-- 完成 -->
@@ -99,15 +126,20 @@
         <div class="done-emoji">🎉</div>
         <h2>今天的進度完成了</h2>
         <p id="done-text"></p>
-        <a class="btn primary" id="done-read" href="../" hidden>去讀這期新聞 →</a>
-        <button class="btn primary" id="done-home">回到首頁</button>
+        <div class="done-actions">
+          <a class="btn primary big" id="done-read" href="../" hidden>去讀這期新聞 →</a>
+          <button class="btn big" id="done-home" type="button">回到首頁</button>
+        </div>
       </div>
     </section>
 
     <!-- 單字庫 -->
     <section class="view" id="view-browse" hidden>
       <div class="browse-tools">
-        <input type="search" id="q" placeholder="搜尋英文或中文…" autocomplete="off">
+        <div class="search-wrap">
+          <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" id="q" placeholder="搜尋英文或中文…" autocomplete="off">
+        </div>
         <select id="sort" aria-label="排序">
           <option value="recent">最新出現</option>
           <option value="freq">出現次數</option>
@@ -115,16 +147,16 @@
           <option value="az">A → Z</option>
         </select>
       </div>
-      <div class="seg small" id="browse-seg">
-        <button data-f="all">全部</button>
-        <button data-f="fin">財經</button>
-        <button data-f="learned">已學</button>
-        <button data-f="hard">常錯</button>
-        <button data-f="saved">★ 收藏</button>
+      <div class="seg small browse-seg" id="browse-seg">
+        <button type="button" data-f="all">全部</button>
+        <button type="button" data-f="fin">財經</button>
+        <button type="button" data-f="learned">已學</button>
+        <button type="button" data-f="hard">常錯</button>
+        <button type="button" data-f="saved">★ 收藏</button>
       </div>
-      <p class="muted small" id="browse-count"></p>
+      <p class="muted small browse-count" id="browse-count"></p>
       <ul class="word-list" id="word-list"></ul>
-      <button class="btn ghost" id="more-btn" hidden>顯示更多</button>
+      <button class="btn ghost" id="more-btn" type="button" hidden>顯示更多</button>
     </section>
 
     <!-- 設定 -->
@@ -142,30 +174,45 @@
         <label>每天新字數
           <input type="number" id="set-new" min="0" max="200" step="5">
         </label>
-        <label class="check"><input type="checkbox" id="set-speak"> 翻到新卡片時自動唸出單字</label>
+        <label class="check">
+          <input type="checkbox" id="set-speak">
+          <span>翻到新卡片時自動唸出單字</span>
+        </label>
         <label>AI 例句模型（由便宜到貴）
           <select id="set-ai-model"><option value="">載入模型清單中…</option></select>
           <input type="text" id="set-ai-custom" placeholder="輸入模型代號，例如 gemini-3.5-flash-lite" hidden>
           <span class="small muted" id="ai-model-note">價格為 Google 付費方案每 100 萬 token 的輸入 / 輸出（美元）；標「免費」的模型用免費額度就能產生。</span>
         </label>
-        <div class="row">
-          <button class="btn primary" type="submit">儲存</button>
+        <div class="row settings-actions">
+          <button class="btn primary" type="submit">儲存設定</button>
           <button class="btn ghost" type="button" id="test-btn">測試連線</button>
         </div>
         <p class="small" id="set-msg"></p>
       </form>
       <div class="settings-extra">
-        <button class="btn ghost" id="clear-cache">清除這台裝置的快取</button>
+        <button class="btn ghost" id="clear-cache" type="button">清除這台裝置的快取</button>
         <p class="muted small" id="version-label"></p>
       </div>
     </section>
   </main>
 
   <nav class="bottomnav" aria-label="快速切換">
-    <a href="../"><span>📰</span>快報</a>
-    <a href="#home" data-view="home"><span>🎯</span>練習</a>
-    <a href="#browse" data-view="browse"><span>📚</span>單字本</a>
-    <a href="#settings" data-view="settings"><span>⚙️</span>設定</a>
+    <a href="../">
+      <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/></svg></span>
+      快報
+    </a>
+    <a href="#home" data-view="home">
+      <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="16" rx="2.5"/><path d="M7 5V3.5A1.5 1.5 0 0 1 8.5 2h11A1.5 1.5 0 0 1 21 3.5v13a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 11h6M7 15h4"/></svg></span>
+      練習
+    </a>
+    <a href="#browse" data-view="browse">
+      <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></span>
+      單字本
+    </a>
+    <a href="#settings" data-view="settings">
+      <span class="bn-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></span>
+      設定
+    </a>
   </nav>
 
   <div class="toast" id="toast" role="status" hidden></div>
