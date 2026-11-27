@@ -420,10 +420,10 @@ function ensureCols_(name, cols) {
 function aiExamples_(id, force, model) {
   if (!id) throw apiError_(400, 'id is required');
   model = cleanModel_(model);
-  const W = table_(CFG.WORDS);
-  const pi = W.byId.get(id);
-  if (pi == null) throw apiError_(404, 'unknown word id: ' + id);
-  const w = wordObj_(W, W.rows[pi]);
+  // Only this word's row is read and written (not the whole 2,000+ row sheet): saves 1–2 s per tap
+  const R = wordRow_(id);
+  if (!R) throw apiError_(404, 'unknown word id: ' + id);
+  const w = wordObj_(R, R.row);
   if (w.ai_examples && w.ai_examples.length && !force) {
     return { id, cached: true, model: w.ai_model, examples: w.ai_examples };
   }
@@ -431,15 +431,41 @@ function aiExamples_(id, force, model) {
   const out = callAi_(w, model); // slow network call — done outside the lock
 
   return withLock_(() => {
-    const T = table_(CFG.WORDS);
-    const row = T.byId.get(id);
-    if (row == null) throw apiError_(404, 'word removed while generating: ' + id);
-    const r = row + 2;
-    T.sh.getRange(r, T.col.ai_examples + 1).setValue(JSON.stringify(out.examples));
-    T.sh.getRange(r, T.col.ai_model + 1).setValue(out.model);
-    T.sh.getRange(r, T.col.ai_updated_at + 1).setValue(nowIso_());
+    // Rows are only appended, but re-check in case someone edited the sheet while the AI was writing
+    let r = R.r;
+    if (String(R.sh.getRange(r, R.col.id + 1).getValue()) !== id) {
+      const again = wordRow_(id);
+      if (!again) throw apiError_(404, 'word removed while generating: ' + id);
+      r = again.r;
+    }
+    R.sh.getRange(r, R.col.ai_examples + 1).setValue(JSON.stringify(out.examples));
+    R.sh.getRange(r, R.col.ai_model + 1).setValue(out.model);
+    R.sh.getRange(r, R.col.ai_updated_at + 1).setValue(nowIso_());
     return { id, cached: false, model: out.model, examples: out.examples };
   });
+}
+
+/** One Words row by id via TextFinder: { sh, header, col, r (sheet row), row (values) } or null. */
+function wordRow_(id) {
+  const sh = sheet_(CFG.WORDS);
+  const lastRow = sh.getLastRow(), lastCol = sh.getLastColumn();
+  if (lastRow < 2) return null;
+  const header = sh.getRange(1, 1, 1, lastCol).getValues()[0].map(String);
+  const col = {};
+  header.forEach((h, i) => { if (h) col[h] = i; });
+  if (!('id' in col)) return null;
+  const hit = sh.getRange(2, col.id + 1, lastRow - 1, 1)
+    .createTextFinder(id).matchCase(true).matchEntireCell(true).findNext();
+  let r = hit ? hit.getRow() : 0;
+  let row = r ? sh.getRange(r, 1, 1, lastCol).getValues()[0] : null;
+  if (!row || String(row[col.id]) !== id) {
+    // TextFinder matches displayed text; fall back to a full scan if formatting got in the way
+    const T = table_(CFG.WORDS);
+    const i = T.byId.get(id);
+    if (i == null) return null;
+    r = i + 2; row = T.rows[i];
+  }
+  return { sh, header, col, r, row };
 }
 
 /** Which AI writes the examples: Script Property AI_PROVIDER = gemini | claude.
