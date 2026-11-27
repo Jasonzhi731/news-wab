@@ -236,7 +236,7 @@
   function show(view) {
     VIEWS.forEach(v => { $('#view-' + v).hidden = v !== view; });
     document.body.classList.toggle('studying', view === 'study');
-    $$('#tabs a').forEach(a => a.classList.toggle('is-on', a.dataset.view === view));
+    $$('#tabs a, .bottomnav a[data-view]').forEach(a => a.classList.toggle('is-on', a.dataset.view === view));
     window.scrollTo(0, 0);
   }
   function route() {

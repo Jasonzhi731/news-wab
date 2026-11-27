@@ -194,6 +194,10 @@ body.studying main { padding-top: 18px; }
 }
 
 @media (max-width: 720px) {
+  #tabs { display: none; }               /* 手機改用底部固定選單 */
+  main { padding-top: 16px; }
+  .toast { bottom: calc(76px + env(safe-area-inset-bottom)); }
+  body.studying .toast { bottom: calc(24px + env(safe-area-inset-bottom)); }
   .hero { padding: 20px 16px 16px; }
   .hero h1 { font-size: 20px; }
   .stats { gap: 8px; margin-top: 14px; }
