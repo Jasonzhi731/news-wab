@@ -1,18 +1,19 @@
 // Service worker (scope: /news-wab/study/): network-first for the app shell (always fresh when online, works offline from cache).
 // API calls (script.google.com) are not intercepted; offline answers are queued by app.js instead.
-const CACHE = 'nv-shell-v5';
+const CACHE = 'nv-shell-v6';
 const SHELL = [
   './',
   'index.html',
   'app.css',
   '../assets/shell.css',
+  '../assets/wordbook.js',
   'app.js',
   'config.js',
   'manifest.webmanifest',
-  'icons/icon.svg',
-  'icons/icon-192.png',
-  'icons/icon-512.png',
-  'icons/apple-touch-icon.png',
+  '../assets/icons/icon.svg',
+  '../assets/icons/icon-192.png',
+  '../assets/icons/icon-512.png',
+  '../assets/icons/apple-touch-icon.png',
 ];
 
 self.addEventListener('install', e => {

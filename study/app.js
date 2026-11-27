@@ -242,6 +242,7 @@
   function route() {
     const v = (location.hash || '#home').slice(1);
     if (v === 'browse') { show('browse'); loadBrowse(); }
+    else if (v === 'saved') { browseFilter = 'saved'; location.replace('#browse'); }   // 快報「看全部收藏」
     else if (v === 'settings') { show('settings'); fillSettings(); }
     else if (v === 'study' && session) { show('study'); }
     else if (v === 'done' && $('#done-text').textContent) { show('done'); }
@@ -480,7 +481,7 @@
     const chips = [
       again ? '<span class="chip again">再練一次</span>' : kind === 'new' ? '<span class="chip new">新字</span>' : '<span class="chip">複習</span>',
       w.category === 'fin' ? '<span class="chip fin">財經</span>' : '',
-      w.saved ? '<span class="chip star">★ 收藏</span>' : '',
+      isSaved(w) ? '<span class="chip star">★ 收藏</span>' : '',
       w.freq > 1 ? `<span class="chip">新聞出現 ${w.freq} 次</span>` : '',
     ].join('');
 
@@ -693,39 +694,22 @@
     toast(`${k}：${zh}`, 3500);
   }
 
-  /* ------------------- 收藏（與快報網站共用同一份單字本） ------------------- */
-  const starBtn = w => `<button class="star-btn${w.saved ? ' on' : ''}" data-star="1" aria-label="收藏">${w.saved ? '★ 已收藏' : '☆ 收藏'}</button>`;
+  /* ------------------- 收藏（與快報共用 ../assets/wordbook.js） ------------------- */
+  // 收藏狀態一律以共用單字本為準（本機＋Sheet 合併後的結果），同步、重送、離線佇列都由它處理
+  if (DEMO) Wordbook.setOffline(true);
+  const isSaved = w => Wordbook.has(w.word);
+  const starBtn = w => `<button class="star-btn${isSaved(w) ? ' on' : ''}" data-star="1" aria-label="收藏">${isSaved(w) ? '★ 已收藏' : '☆ 收藏'}</button>`;
 
-  // 收藏寫進 Sheet（saveWords），同時更新快報網站存在本機的單字本，兩邊立即一致。
-  // 送不出去時排進快報網站的同步佇列（wr-vocab-ops），之後由快報頁補送。
-  async function toggleStar(w, btn) {
-    const on = !w.saved;
-    const item = { word: w.word, meaning_zh: meaningOf(w), context_en: w.context_en || '', category: w.category || '',
-      saved: on, ts: new Date().toISOString() };
+  function toggleStar(w, btn) {
+    const on = Wordbook.toggle({ t: w.word, zh: meaningOf(w), ctx: w.context_en || '', fin: w.category === 'fin' });
     w.saved = on;
     if (btn) { btn.classList.toggle('on', on); btn.textContent = on ? '★ 已收藏' : '☆ 收藏'; }
-    try {
-      const local = JSON.parse(localStorage.getItem('wr-vocab-saved') || '{}') || {};
-      const k = w.word.toLowerCase();
-      if (on) local[k] = { t: w.word, zh: item.meaning_zh, ctx: item.context_en, fin: w.category === 'fin', at: Date.now() };
-      else delete local[k];
-      localStorage.setItem('wr-vocab-saved', JSON.stringify(local));
-    } catch (e) { /* storage blocked */ }
-    if (wordsData) store.set('words', wordsData);
-    if (DEMO) return;
-    try {
-      await apiPost({ action: 'saveWords', items: [item] });
-    } catch (e) {
-      try {
-        const ops = JSON.parse(localStorage.getItem('wr-vocab-ops') || '[]') || [];
-        ops.push(item);
-        localStorage.setItem('wr-vocab-ops', JSON.stringify(ops));
-      } catch (err) { /* ignore */ }
-      toast(e.code === 401 ? '收藏已存在這台裝置；到「設定」輸入 token 後會同步'
-        : /unknown action/.test(e.message) ? '收藏已存在這台裝置；單字本後端更新到新版後會同步'
-        : '收藏已存在這台裝置，連上網路後會同步', 3500);
-    }
+    if (!DEMO && !Wordbook.status().configured) toast('收藏已存在這台裝置；到「設定」輸入 token 後會同步到單字本', 3500);
   }
+  // 雲端合併或另一個分頁（例如快報）改了收藏：單字本頁面跟著更新
+  Wordbook.onChange((kind, from) => {
+    if (kind === 'saved' && from !== 'local' && !$('#view-browse').hidden) loadBrowse();
+  });
 
   /* ------------------------------ browse ------------------------------- */
   let browseFilter = 'all';
@@ -760,7 +744,7 @@
       if (browseFilter === 'fin' && w.category !== 'fin') return false;
       if (browseFilter === 'learned' && !w.progress) return false;
       if (browseFilter === 'hard' && !(w.progress && w.progress.lapses > 0)) return false;
-      if (browseFilter === 'saved' && !w.saved) return false;
+      if (browseFilter === 'saved' && !isSaved(w)) return false;
       return !q || w.word.toLowerCase().includes(q) || (w.meaning_zh || '').includes(q);
     });
     const sort = $('#sort').value;
@@ -774,7 +758,7 @@
     $('#browse-count').textContent = `${rows.length} 個字`;
     list.innerHTML = rows.slice(0, browseLimit).map(w => `
       <li data-id="${esc(w.id)}">
-        <div class="wl-top"><span class="wl-word">${w.saved ? '★ ' : ''}${esc(w.word)}</span><span class="wl-mean">${esc(meaningOf(w))}</span>${statusOf(w)}</div>
+        <div class="wl-top"><span class="wl-word">${isSaved(w) ? '★ ' : ''}${esc(w.word)}</span><span class="wl-mean">${esc(meaningOf(w))}</span>${statusOf(w)}</div>
       </li>`).join('');
     $('#more-btn').hidden = rows.length <= browseLimit;
   }
@@ -785,7 +769,7 @@
     const st = e.target.closest('[data-star]');
     if (st) {
       const w = wordsData.find(x => x.id === st.closest('li').dataset.id);
-      if (w) { toggleStar(w, st); const ww = st.closest('li').querySelector('.wl-word'); if (ww) ww.textContent = (w.saved ? '★ ' : '') + w.word; }
+      if (w) { toggleStar(w, st); const ww = st.closest('li').querySelector('.wl-word'); if (ww) ww.textContent = (isSaved(w) ? '★ ' : '') + w.word; }
       return;
     }
     const gw = e.target.closest('.gw');
@@ -846,6 +830,7 @@
     setMsg('已儲存', true);
     syncError = '';
     sync();
+    Wordbook.sync();   // 剛填好 token：把之前只存在本機的收藏補送上去
   });
   $('#toggle-token').addEventListener('click', e => {
     const i = $('#set-token');

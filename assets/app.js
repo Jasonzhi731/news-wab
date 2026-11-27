@@ -57,117 +57,29 @@
     cats: [], dates: [], ents: [],
     dcats: [],
     lang: {},                              // 每則新聞目前顯示的語言：{ 序號: 'en' }，預設中文
-    vscope: 'report',                      // 字彙分頁：'report' 本期 / 'saved' 我的收藏
     vhide: false,                          // 字彙分頁：遮住中文自我測驗
     vtype: ''                              // 字彙分頁：'' 全部 / 'fin' 財經用語 / 'general' 一般字彙
   };
 
-  /* ---------- 收藏的單字：存在這台瀏覽器（跨期保留） ---------- */
-  var SAVED_KEY = 'wr-vocab-saved';
-  function loadSaved() {
-    try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '{}') || {}; } catch (e) { return {}; }
-  }
-  function storeSaved(m) {
-    try { localStorage.setItem(SAVED_KEY, JSON.stringify(m)); } catch (e) {}
-  }
-  var saved = loadSaved();
-
-  /* ---------- 單字本同步到 Google Sheet ----------
-     只有這台瀏覽器存有單字複習（study/）的 token 時才啟用；同網域，所以設定一次兩邊共用。
-     收藏／取消先存在本機並排進佇列，背景整批送出；離線或後端還沒更新時保留佇列，下次再送。
-     合併規則：還沒送出的本機動作優先，其餘以時間較新的一方為準。 */
-  var VOCAB_API_DEFAULT = 'https://script.google.com/macros/s/AKfycbxalrfuFwsbJEhjpo27_edPrggbT-7JY2vlO8P4T49Dl57JelsW0Q6X0E-5RhtXBGjD/exec';
-  var OPS_KEY = 'wr-vocab-ops', SEEDED_KEY = 'wr-vocab-seeded';
-  function lsGet(k, d) { try { var v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }
-  function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  function vocabCfg() {
-    var s = lsGet('nv-settings', {}) || {};
-    return s.token ? { url: s.apiUrl || VOCAB_API_DEFAULT, token: s.token } : null;
-  }
-  var cloud = { ops: lsGet(OPS_KEY, []) || [], busy: false, err: '', timer: null, ok: false };
-  function savedKey(t) { return String(t || '').trim().toLowerCase().replace(/\s+/g, ' '); }
-
-  function queueOp(v, on) {
-    cloud.ops.push({ word: v.t, meaning_zh: v.zh || '', context_en: v.ctx || '', category: v.fin ? 'fin' : '',
-      saved: on, ts: new Date().toISOString() });
-    lsSet(OPS_KEY, cloud.ops);
-    if (vocabCfg()) { clearTimeout(cloud.timer); cloud.timer = setTimeout(cloudSync, 1200); }
-    updateSyncNote();
-  }
-
-  function cloudPost(cfg, body) {
-    return fetch(cfg.url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },   // 簡單請求：不觸發 CORS preflight
-      body: JSON.stringify(Object.assign({ token: cfg.token }, body))
-    }).then(function (r) { return r.json(); });
-  }
-
-  function cloudSync() {
-    var cfg = vocabCfg();
-    if (!cfg || cloud.busy) return;
-    // 第一次啟用：把啟用前就收藏的字補送上去（用當初收藏的時間）
-    if (!lsGet(SEEDED_KEY, false)) {
-      Object.keys(saved).forEach(function (k) {
-        var v = saved[k];
-        cloud.ops.unshift({ word: v.t, meaning_zh: v.zh || '', context_en: v.ctx || '', category: v.fin ? 'fin' : '',
-          saved: true, ts: new Date(v.at || Date.now()).toISOString() });
-      });
-      lsSet(OPS_KEY, cloud.ops);
-      lsSet(SEEDED_KEY, true);
-    }
-    cloud.busy = true;
-    var batch = cloud.ops.slice(0, 200);
-    var req = batch.length
-      ? cloudPost(cfg, { action: 'saveWords', items: batch })
-      : fetch(cfg.url + (cfg.url.indexOf('?') < 0 ? '?' : '&') + 'action=saved').then(function (r) { return r.json(); });
-    req.then(function (res) {
-      if (!res.ok) throw new Error(/unknown action/.test(res.error || '') ? '單字本後端還沒更新到新版' : (res.error || '同步失敗'));
-      if (batch.length) {
-        cloud.ops = cloud.ops.slice(batch.length);
-        lsSet(OPS_KEY, cloud.ops);
-      }
-      cloud.err = ''; cloud.ok = true;
-      mergeCloud(res.saved || []);
-    }).catch(function (e) {
-      cloud.err = e instanceof SyntaxError ? '單字本暫時連不上（回應不是 JSON），稍後會自動重試'
-        : (e && e.message && !/fetch|network/i.test(e.message)) ? e.message : '目前離線，連上網路後會自動同步';
-    }).then(function () {
-      cloud.busy = false;
-      updateSyncNote();
-      if (!cloud.err && cloud.ops.length) cloudSync();
-    });
-  }
-
-  function mergeCloud(list) {
-    var waiting = {};
-    cloud.ops.forEach(function (op) { waiting[savedKey(op.word)] = 1; });
-    var changed = false;
-    list.forEach(function (w) {
-      var k = savedKey(w.word || w.id);
-      if (waiting[k]) return;                                  // 本機還沒送出的動作優先
-      var at = Date.parse(w.saved_at) || 0, loc = saved[k];
-      if (w.saved && !loc) {
-        saved[k] = { t: w.word, zh: w.meaning_zh || '', ctx: w.context_en || '', fin: w.category === 'fin', at: at };
-        changed = true;
-      } else if (!w.saved && loc && (loc.at || 0) <= at) {
-        delete saved[k];
-        changed = true;
-      }
-    });
-    if (!changed) return;
-    storeSaved(saved);
-    if (report) { renderNews(); renderVocab(); }
-  }
+  /* ---------- 收藏的單字：共用 assets/wordbook.js（與單字複習同一份、同一套同步） ---------- */
+  var saved = Wordbook.map();                // 即時的收藏物件：{ 小寫單字: { t, zh, ctx, fin, at } }
 
   function updateSyncNote() {
     var el = document.getElementById('v-sync-note');
     if (!el) return;
-    if (!vocabCfg()) { el.innerHTML = '收藏只存在這台裝置的瀏覽器・到 <a href="study/#settings">單字複習 → 設定</a> 輸入 token 就能同步到單字本'; return; }
-    el.textContent = cloud.err ? '⚠ ' + cloud.err + (cloud.ops.length ? '（' + cloud.ops.length + ' 筆待同步）' : '')
-      : cloud.ops.length ? '同步中…（' + cloud.ops.length + ' 筆）'
-      : cloud.ok ? '已同步到單字本（Google Sheet），單字複習會優先出這些字' : '連線單字本中…';
+    var s = Wordbook.status();
+    if (!s.configured) { el.innerHTML = '收藏只存在這台裝置・到 <a href="study/#settings">單字 → 設定</a> 輸入 token 就能同步'; return; }
+    el.textContent = s.err ? '⚠ ' + s.err + (s.pending ? '（' + s.pending + ' 筆待同步）' : '')
+      : s.pending ? '同步中…（' + s.pending + ' 筆）'
+      : s.ok ? '已同步到單字本，單字複習會優先出這些字' : '連線單字本中…';
   }
+  Wordbook.onChange(function (kind, from) {
+    if (kind === 'status') { updateSyncNote(); return; }
+    var c = document.getElementById('v-saved-count');
+    if (c) c.textContent = Wordbook.count();
+    // 本頁自己按的收藏由呼叫端局部重畫；雲端合併或另一個分頁改了才整頁重畫
+    if (from !== 'local' && report) { renderNews(); renderVocab(); }
+  });
 
   /* ============================================================
      工具
@@ -802,10 +714,7 @@
   }
 
   function toggleSaved(t, zh, ctx, fin) {
-    var k = t.toLowerCase();
-    if (saved[k]) { queueOp(saved[k], false); delete saved[k]; }
-    else { saved[k] = { t: t, zh: zh, ctx: ctx, fin: !!fin, at: Date.now() }; queueOp(saved[k], true); }
-    storeSaved(saved);
+    return Wordbook.toggle({ t: t, zh: zh, ctx: ctx, fin: !!fin });
   }
 
   function renderVocab() {
@@ -815,21 +724,12 @@
       ? decodeURIComponent(sel.value.replace(/^data\//, '')).replace(/\.xlsx$/i, '') : '';
     pb.hidden = !stem;
     if (stem) pb.href = 'study/?src=' + encodeURIComponent(stem);
-    var nSaved = Object.keys(saved).length;
-    $('#v-saved-count').textContent = nSaved;
-    var list;
-    if (state.vscope === 'saved') {
-      list = Object.keys(saved).map(function (k) { return saved[k]; })
-        .sort(function (a, b) { return (b.at || 0) - (a.at || 0); });
-    } else {
-      list = reportVocab();
-    }
+    $('#v-saved-count').textContent = Wordbook.count();
+    var list = reportVocab();
     if (state.vtype === 'fin') list = list.filter(function (v) { return v.fin; });
     else if (state.vtype === 'general') list = list.filter(function (v) { return !v.fin; });
     $('#vocab-none').hidden = list.length > 0;
-    $('#vocab-none').textContent = state.vscope === 'saved'
-      ? '還沒有收藏符合條件的單字。在英文模式的新聞卡上點任一個字、字彙卡或本頁字卡上的 ☆ 都能收藏。'
-      : '這一期沒有符合條件的英文字彙。';
+    $('#vocab-none').textContent = '這一期沒有符合條件的英文字彙。';
     $('#vocab-grid').classList.toggle('is-quiz', state.vhide);
     $('#vocab-grid').innerHTML = list.map(function (v) {
       var on = !!saved[v.t.toLowerCase()];
@@ -1073,7 +973,6 @@
     });
 
     // 字彙分頁
-    $('#s-vscope').addEventListener('change', function () { state.vscope = this.value; renderVocab(); });
     $('#c-vhide').addEventListener('change', function () { state.vhide = this.checked; renderVocab(); });
     $('#s-vtype').addEventListener('change', function () { state.vtype = this.value; renderVocab(); });
     $('#vocab-grid').addEventListener('click', function (e) {
@@ -1154,10 +1053,6 @@
   function boot() {
     bind();
     updateSyncNote();
-    if (vocabCfg()) cloudSync();
-    window.addEventListener('online', cloudSync);
-    // 從單字複習頁設定好 token 回來時，馬上開始同步
-    window.addEventListener('storage', function (e) { if (e.key === 'nv-settings') { updateSyncNote(); cloudSync(); } });
     fetch('data/reports.json', { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw new Error('no manifest'); return r.json(); })
       .then(function (list) {
