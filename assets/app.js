@@ -400,6 +400,7 @@
   }
 
   function loadFromFile(file) {
+    state.localFile = true;
     var fr = new FileReader();
     fr.onload = function () {
       var rpt;
@@ -808,6 +809,12 @@
   }
 
   function renderVocab() {
+    // 「先練這期單字」：帶著這一期的檔名進單字複習（拖曳本機 Excel 時沒有對應的一期，就不顯示）
+    var pb = $('#btn-practice'), sel = $('#report-select');
+    var stem = !state.localFile && sel && !sel.hidden && sel.value
+      ? decodeURIComponent(sel.value.replace(/^data\//, '')).replace(/\.xlsx$/i, '') : '';
+    pb.hidden = !stem;
+    if (stem) pb.href = 'study/?src=' + encodeURIComponent(stem);
     var nSaved = Object.keys(saved).length;
     $('#v-saved-count').textContent = nSaved;
     var list;
@@ -1104,6 +1111,7 @@
       this.value = '';
     });
     $('#report-select').addEventListener('change', function () {
+      state.localFile = false;
       var opt = this.options[this.selectedIndex];
       loadFromUrl(this.value, opt.textContent).catch(function (e) {
         alert('載入失敗：' + e.message);
@@ -1168,6 +1176,15 @@
             var b = $('#btn-all-lang');
             if (b && !b.hidden && b.dataset.to === 'en') b.click();
           }
+          // &n=<序號>：捲到那一則新聞並閃一下（單字卡「出自哪一則」用）
+          var n = qs.get('n');
+          if (n) setTimeout(function () {
+            var c = $('#news-cards').querySelector('.card[data-key="' + (window.CSS && CSS.escape ? CSS.escape(n) : n) + '"]');
+            if (!c) return;
+            var bar = document.querySelector('.topbar');
+            window.scrollTo({ top: c.getBoundingClientRect().top + window.scrollY - (bar ? bar.offsetHeight : 0) - 12, behavior: 'smooth' });
+            c.classList.add('is-jump');
+          }, 120);
           return res;
         });
       })

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>單字複習｜半導體快報</title>
   <meta name="description" content="半導體新聞英文單字：翻牌、間隔重複、科技例句">
-  <meta name="theme-color" content="#3f3cbb">
+  <meta name="theme-color" content="#1e1b4b">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -13,31 +13,57 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="半導體快報">
+  <link rel="stylesheet" href="../assets/shell.css">
   <link rel="stylesheet" href="app.css">
+  <script>
+    // 深淺色跟快報共用同一個設定（wr-theme），在畫面繪製前套用
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('wr-theme'); } catch (e) {}
+      if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+      document.documentElement.setAttribute('data-theme', t || 'light');
+    })();
+  </script>
 </head>
 <body>
-  <header class="top">
-    <div class="top-inner">
-      <div class="brand">
-        <span class="logo">Aa</span>
-        <div>
-          <h1>單字複習</h1>
-          <p class="sub" id="today-label">半導體新聞單字</p>
-        </div>
+  <header class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="../">
+        <span class="brand-mark"></span>
+        <span class="brand-text">半導體產業快報</span>
+        <span class="brand-cadence">每 2 日更新</span>
+      </a>
+      <nav class="appnav" aria-label="切換">
+        <a href="../">📰 快報</a>
+        <a href="./" class="is-on" aria-current="page">📚 單字</a>
+      </nav>
+      <div class="topbar-tools">
+        <button class="sync-pill" id="sync-pill" hidden></button>
+        <button id="btn-theme" class="tb-btn" type="button" title="切換深色 / 淺色">◐</button>
       </div>
-      <button class="sync-pill" id="sync-pill" hidden></button>
     </div>
   </header>
 
   <main>
+    <nav class="tabs" id="tabs">
+      <a class="tab" href="#home" data-view="home">今日練習</a>
+      <a class="tab" href="#browse" data-view="browse">單字本</a>
+      <a class="tab" href="#settings" data-view="settings">設定</a>
+    </nav>
+
     <!-- 今日 -->
     <section class="view" id="view-home">
       <div class="banner" id="home-banner" hidden></div>
-      <div class="stats">
-        <div class="stat due"><b id="st-due">–</b><span>待複習</span></div>
-        <div class="stat new"><b id="st-new">–</b><span>今日新字</span></div>
-        <div class="stat"><b id="st-learned">–</b><span>已學</span></div>
-        <div class="stat"><b id="st-mature">–</b><span>熟練</span></div>
+      <div class="hero">
+        <p class="eyebrow">VOCAB · 單字複習</p>
+        <h1>先學單字，再讀新聞</h1>
+        <p class="hero-sub" id="today-label">半導體新聞單字</p>
+        <div class="stats">
+          <div class="stat due"><span>待複習</span><b id="st-due">–</b></div>
+          <div class="stat new"><span>今日新字</span><b id="st-new">–</b></div>
+          <div class="stat"><span>已學</span><b id="st-learned">–</b></div>
+          <div class="stat"><span>熟練</span><b id="st-mature">–</b></div>
+        </div>
       </div>
       <label class="src-pick">練習範圍
         <select id="src-sel">
@@ -129,13 +155,6 @@
       </div>
     </section>
   </main>
-
-  <nav class="tabs" id="tabs">
-    <a href="../" class="out"><span>📰</span>快報</a>
-    <a href="#home" data-view="home"><span>📅</span>今日</a>
-    <a href="#browse" data-view="browse"><span>📚</span>單字庫</a>
-    <a href="#settings" data-view="settings"><span>⚙️</span>設定</a>
-  </nav>
 
   <div class="toast" id="toast" role="status" hidden></div>
 

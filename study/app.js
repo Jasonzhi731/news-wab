@@ -107,6 +107,14 @@
   }
 
   // "全球半導體代工產業快報_20261125-20261127#1" -> "快報 2026/11/25–11/27 第 1 則"
+  // 出處做成連結：回快報打開那一期、切英文、捲到那一則
+  function srcHtml(src) {
+    const m = /^(.*)#(\d+)$/.exec(src || '');
+    if (!m) return src ? `<div class="src">${esc(sourceLabel(src))}</div>` : '';
+    const href = `../?r=${encodeURIComponent(m[1])}&lang=en&n=${m[2]}`;
+    return `<a class="src" href="${href}" title="打開這則新聞">${esc(sourceLabel(src))} ↗</a>`;
+  }
+
   function sourceLabel(src) {
     const m = /^(.*?)_(\d{4})(\d{2})(\d{2})-\d{4}(\d{2})(\d{2})#(\d+)$/.exec(src || '');
     if (!m) return src || '';
@@ -228,7 +236,7 @@
   function show(view) {
     VIEWS.forEach(v => { $('#view-' + v).hidden = v !== view; });
     document.body.classList.toggle('studying', view === 'study');
-    $$('#tabs a').forEach(a => a.classList.toggle('on', a.dataset.view === view));
+    $$('#tabs a').forEach(a => a.classList.toggle('is-on', a.dataset.view === view));
     window.scrollTo(0, 0);
   }
   function route() {
@@ -276,8 +284,8 @@
     const isIssue = settings.src !== 'all';
     $('#st-due').textContent = queueData || isIssue ? nDue : '–';
     $('#st-new').textContent = queueData || isIssue ? nNew : '–';
-    $('#st-due').nextElementSibling.textContent = isIssue ? '本期已學' : '待複習';
-    $('#st-new').nextElementSibling.textContent = isIssue ? '本期新字' : '今日新字';
+    $('#st-due').parentNode.querySelector('span').textContent = isIssue ? '本期已學' : '待複習';
+    $('#st-new').parentNode.querySelector('span').textContent = isIssue ? '本期新字' : '今日新字';
     const sn = $('#src-note');
     sn.hidden = !isIssue;
     if (isIssue) {
@@ -494,7 +502,7 @@
           <div class="ctx">
             <div class="label">新聞原句 · 點任一個字看中文</div>
             <p>${ctxHtml(w.context_en, w.word)}</p>
-            <div class="src">${esc(sourceLabel(w.source))}</div>
+            ${srcHtml(w.source)}
           </div>` : ''}
           <div class="ai" id="ai-box">${aiHtml(w)}</div>
         </div>
@@ -577,6 +585,7 @@
   }
 
   $('#card').addEventListener('click', e => {
+    if (e.target.closest('a')) return;
     const sp = e.target.closest('[data-say]');
     if (sp) { say(sp.dataset.say); return; }
     const st = e.target.closest('[data-star]');
@@ -793,7 +802,7 @@
         <div class="back-word">${esc(w.word)} <button class="speak" data-say="${esc(w.word)}">🔊</button>
           ${w.category === 'fin' ? '<span class="chip fin">財經</span>' : ''} ${starBtn(w)}</div>
         <div class="meaning">${esc(meaningOf(w))}</div>
-        ${w.context_en ? `<div class="ctx"><p>${ctxHtml(w.context_en, w.word)}</p><div class="src">${esc(sourceLabel(w.source))}</div></div>` : ''}
+        ${w.context_en ? `<div class="ctx"><p>${ctxHtml(w.context_en, w.word)}</p>${srcHtml(w.source)}</div>` : ''}
         <div class="small muted">出現 ${w.freq} 次 · 最近 ${esc(w.last_seen)}${p ? ` · 已複習 ${p.total_reviews} 次、答錯 ${p.lapses} 次、間隔 ${p.interval} 天` : ''}</div>
       </div>`);
   });
@@ -872,6 +881,24 @@
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(() => { /* not fatal */ });
   }
+  // 深淺色：與快報共用 wr-theme
+  $('#btn-theme').addEventListener('click', () => {
+    const t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('wr-theme', t); } catch (e) { /* ignore */ }
+  });
+  window.addEventListener('storage', e => {
+    if (e.key === 'wr-theme' && e.newValue) document.documentElement.setAttribute('data-theme', e.newValue);
+  });
+
+  // 從快報「先練這期單字」進來：?src=<那一期的檔名>
+  const qsSrc = new URLSearchParams(location.search).get('src');
+  if (qsSrc) {
+    settings.src = qsSrc;
+    saveSettings();
+    history.replaceState(null, '', location.pathname + (DEMO ? '?demo' : '') + '#home');
+  }
+
   updateSyncUI();
   fillSrcSelect();
   loadReports().then(() => { if (settings.src !== 'all') selectSource(settings.src); });

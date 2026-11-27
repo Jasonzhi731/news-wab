@@ -5,68 +5,6 @@
    英文模式的卡片帶淡淡的靛色光暈，重點字彙以螢光筆底線標示。
    ============================================================ */
 
-:root{
-  color-scheme:light;
-
-  --bg:#f3f5fb;
-  --bg-2:#e9edf8;
-  --surface:#ffffff;
-  --surface-2:#f6f8fd;
-  --ink:#131a2e;
-  --ink-2:#48526d;
-  --ink-3:#8790a8;
-  --rule:#e1e6f1;
-  --rule-soft:#edf0f7;
-  --brand:#4f46e5;
-  --brand-2:#0891b2;
-  --brand-soft:#eef0ff;
-  --veil:rgba(243,245,251,.9);
-  --ok:#15803d;   --ok-bg:#e8f7ee;
-  --warn:#b45309; --warn-bg:#fdf1e1;
-  --hl:rgba(250,204,21,.38);          /* 字彙螢光筆 */
-  --shadow:0 1px 2px rgba(19,26,46,.04),0 10px 28px -14px rgba(19,26,46,.16);
-  --shadow-lift:0 2px 4px rgba(19,26,46,.05),0 18px 40px -16px rgba(19,26,46,.24);
-
-  /* 分類色系 */
-  --c-violet:#7c3aed;  --c-teal:#0d9488;   --c-emerald:#059669; --c-amber:#d97706;
-  --c-rose:#e11d48;    --c-sky:#0284c7;    --c-fuchsia:#c026d3; --c-orange:#ea580c;
-  --c-slate:#64748b;
-
-  --radius:16px;
-  --radius-s:10px;
-  --topbar-h:60px;
-  --mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Hiragino Sans",
-         "Noto Sans TC","Microsoft JhengHei","微軟正黑體",system-ui,sans-serif;
-  --en:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,system-ui,sans-serif;
-}
-
-html[data-theme="dark"]{
-  color-scheme:dark;
-
-  --bg:#0b1020;
-  --bg-2:#10172b;
-  --surface:#141b30;
-  --surface-2:#19213a;
-  --ink:#e7eaf6;
-  --ink-2:#a9b1c9;
-  --ink-3:#737c97;
-  --rule:#253051;
-  --rule-soft:#1d2641;
-  --brand:#8b93ff;
-  --brand-2:#22d3ee;
-  --brand-soft:#1c2250;
-  --veil:rgba(11,16,32,.9);
-  --ok:#4ade80;   --ok-bg:#12281d;
-  --warn:#fbbf24; --warn-bg:#2d2310;
-  --hl:rgba(250,204,21,.3);
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.6);
-  --shadow-lift:0 2px 4px rgba(0,0,0,.35),0 18px 40px -16px rgba(0,0,0,.7);
-
-  --c-violet:#a78bfa;  --c-teal:#2dd4bf;   --c-emerald:#34d399; --c-amber:#fbbf24;
-  --c-rose:#fb7185;    --c-sky:#38bdf8;    --c-fuchsia:#e879f9; --c-orange:#fb923c;
-  --c-slate:#94a3b8;
-}
 
 /* 分類 → 卡片用的 --c */
 .c-violet{--c:var(--c-violet)} .c-teal{--c:var(--c-teal)} .c-emerald{--c:var(--c-emerald)}
@@ -100,32 +38,6 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface-2);padding
 
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px 96px}
 
-/* ---------- 頂部列 ---------- */
-.topbar{
-  position:sticky;top:0;z-index:40;
-  background:color-mix(in srgb,var(--bg) 78%,transparent);
-  -webkit-backdrop-filter:saturate(1.6) blur(14px);
-  backdrop-filter:saturate(1.6) blur(14px);
-  border-bottom:1px solid var(--rule);
-}
-.topbar-in{
-  max-width:1120px;margin:0 auto;padding:11px 24px;
-  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-}
-.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
-.brand-mark{
-  width:28px;height:28px;flex:none;border-radius:8px;position:relative;
-  background:linear-gradient(135deg,#4f46e5,#0891b2);
-  box-shadow:0 4px 12px -4px rgba(79,70,229,.6);
-}
-.brand-mark::after{
-  content:"";position:absolute;inset:8px;border:2px solid #fff;border-radius:3px;
-}
-.brand-text{color:var(--ink);font-weight:700;font-size:15.5px;letter-spacing:.1em}
-.brand-cadence{
-  font-size:11.5px;color:var(--brand);letter-spacing:.08em;font-weight:600;
-  background:var(--brand-soft);padding:2px 9px;border-radius:999px;
-}
 
 .source-picker{display:flex;gap:8px;align-items:center}
 #report-select,.fsel select{
@@ -165,37 +77,6 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface-2);padding
 .empty-card .btn{margin-top:10px}
 .hint{margin-top:18px;font-size:13px;color:var(--warn);line-height:1.8}
 
-/* ---------- 標題區（漸層 hero） ---------- */
-.hero{
-  position:relative;overflow:hidden;isolation:isolate;
-  border-radius:26px;padding:40px 44px 30px;color:#fff;
-  background:linear-gradient(125deg,#1e1b4b 0%,#3730a3 42%,#0e7490 100%);
-  box-shadow:0 24px 60px -28px rgba(49,46,129,.7);
-}
-/* 晶圓網格＋兩團光暈 */
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background-image:
-    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
-  background-size:28px 28px;
-  -webkit-mask-image:radial-gradient(ellipse 70% 90% at 88% 20%,#000 20%,transparent 75%);
-  mask-image:radial-gradient(ellipse 70% 90% at 88% 20%,#000 20%,transparent 75%);
-}
-.hero::after{
-  content:"";position:absolute;z-index:-1;width:420px;height:420px;right:-120px;top:-180px;
-  border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.55),transparent 65%);
-  filter:blur(10px);
-}
-.eyebrow{
-  margin:0 0 12px;font-size:12px;font-weight:700;letter-spacing:.24em;
-  color:#a5f3fc;
-}
-.hero h1{
-  margin:0 0 8px;font-size:32px;line-height:1.35;font-weight:800;letter-spacing:.04em;
-  text-shadow:0 2px 18px rgba(0,0,0,.18);
-}
-.hero-sub{margin:0;font-size:14px;color:rgba(255,255,255,.78);letter-spacing:.02em;max-width:880px}
 
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
 .stat{
@@ -225,26 +106,6 @@ code{font-family:var(--mono);font-size:.88em;background:var(--surface-2);padding
 .hero .c-amber{--c:#fcd34d}  .hero .c-rose{--c:#fda4af} .hero .c-sky{--c:#7dd3fc}
 .hero .c-fuchsia{--c:#f0abfc} .hero .c-orange{--c:#fdba74} .hero .c-slate{--c:#cbd5e1}
 
-/* ---------- 分頁 ---------- */
-.tabs{
-  display:flex;gap:4px;margin:26px 0 0;padding:5px;width:max-content;max-width:100%;
-  background:var(--surface);border:1px solid var(--rule);border-radius:14px;box-shadow:var(--shadow);
-}
-.tab{
-  font-family:var(--sans);font-size:14.5px;cursor:pointer;font-weight:600;
-  background:none;border:0;border-radius:10px;
-  padding:8px 16px;color:var(--ink-2);letter-spacing:.04em;
-  white-space:nowrap;transition:color .15s,background .15s;
-}
-.tab:hover{color:var(--ink);background:var(--surface-2)}
-.tab.is-on{color:#fff;background:linear-gradient(135deg,#4f46e5,#0891b2);box-shadow:0 6px 16px -8px rgba(79,70,229,.8)}
-.pill{
-  display:inline-block;margin-left:6px;min-width:20px;padding:0 6px;
-  font-size:11.5px;line-height:18px;text-align:center;border-radius:999px;
-  background:var(--surface-2);color:var(--ink-3);font-weight:700;font-variant-numeric:tabular-nums;
-}
-.pill:empty{display:none}
-.tab.is-on .pill{background:rgba(255,255,255,.22);color:#fff}
 
 .panel{padding-top:18px}
 
@@ -594,16 +455,10 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
   body{font-size:15.5px}
   .wrap{padding:0 16px 64px}
   .stage{padding-top:16px}
-  .hero{padding:26px 20px 22px;border-radius:20px}
-  .hero h1{font-size:23px}
-  .hero-sub{font-size:13px}
   .stat{padding:10px 12px}
   .stat b{font-size:18px}
   /* 手機上兩層 sticky 會把內容擠掉，篩選列改為隨頁面捲動 */
   .filters{position:static;background:none}
-  .tabs{width:auto;overflow-x:auto;scrollbar-width:none}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{font-size:13.5px;padding:7px 12px}
   .select-row{flex-direction:column;align-items:stretch !important;gap:10px}
   .fsel{gap:8px}
   .fsel > span{width:34px}
@@ -618,11 +473,8 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
   .dcard{padding:18px}
   .vgrid{grid-template-columns:1fr 1fr}
 
-  .topbar-in{gap:8px;padding:10px 16px}
-  .brand{width:100%;margin-right:0}
-  .source-picker{flex:1 1 0;min-width:0}
+  .source-picker{order:5;flex:1 1 100%;min-width:0}
   #report-select{flex:1 1 auto;min-width:0;max-width:none}
-  .topbar-tools{flex:none}
 }
 @media (max-width:420px){
   .vgrid{grid-template-columns:1fr}
@@ -636,8 +488,11 @@ html[data-theme="dark"] .vstar.is-saved{background:#3a2f0b}
   .card{break-inside:avoid;box-shadow:none}
 }
 
-/* ---------- 單字複習入口（study/） ---------- */
+/* ---------- 單字複習連動 ---------- */
 a.btn{text-decoration:none;display:inline-flex;align-items:center;gap:4px}
-.btn.study{padding:7px 12px;font-size:13px;white-space:nowrap}
+a.btn:hover{text-decoration:none}
 #v-sync-note a{color:inherit;text-decoration:underline}
-@media (max-width:560px){.btn.study{padding:7px 9px;font-size:12px}}
+.practice-cta{margin-left:auto}
+/* 從單字卡跳過來的那一則新聞 */
+.card.is-jump{animation:jump 2.4s ease}
+@keyframes jump{0%,35%{box-shadow:0 0 0 3px var(--brand),var(--shadow-lift)}100%{box-shadow:var(--shadow)}}
