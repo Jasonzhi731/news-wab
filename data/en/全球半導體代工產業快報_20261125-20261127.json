@@ -1,0 +1,268 @@
+{
+  "source": "全球半導體代工產業快報_20261125-20261127.xlsx",
+  "news": {
+    "1": {
+      "entity": "TSMC (2330) / NVIDIA (NVDA) / Trump Administration",
+      "title": "Trump Again Accuses Taiwan of Taking US Chip Industry, Warns of 200% Import Tariff in Two Years and Points to TSMC Texas Expansion",
+      "summary": "In a Nov 24 CNBC interview discussing NVIDIA CEO Jensen Huang's reinstatement, US President Donald Trump pivoted to upstream foundry supplier TSMC, repeating his claim that Taiwan took nearly 100% of America's chip industry aside from Intel and a few smaller players, and warned that in two years Taiwan will have to pay a 200% tariff on imported chips. Calling TSMC Chairman C.C. Wei a talented friend, Trump asserted that tariff pressure has driven TSMC to invest hundreds of billions of dollars in Arizona and prepare another massive fab in Texas, claiming chipmakers would immediately halt US construction if tariffs were lifted. Media records show Trump has made similar accusations in major public interviews at least nine times since 2023.",
+      "metric": "Trump warns of 200% tariff on imported chips in 2 years; claims Taiwan took ~100% of US chip business (cited >=9 times publicly); highlights TSMC Arizona & potential US$22.6B Texas fab",
+      "impact": "Pairing a threatened 200% long-term chip tariff with the USTR's short-term Section 301 exemption for chips and fab equipment (item 5) reflects a two-track strategy—shielding US tech firms today while keeping maximum political pressure on TSMC to commit more advanced capacity to Arizona and Texas.",
+      "conf": "Confirmed (public CNBC interview remarks; 200% tariff is verbal rhetoric with no formal executive order or regulatory text yet)",
+      "vocab": [
+        ["tariff", "關稅", "fin"],
+        ["upstream", "上游的"],
+        ["reinstatement", "復職；回任"],
+        ["pivoted", "轉向"],
+        ["asserted", "斷言；聲稱"],
+        ["rhetoric", "言辭；口頭表態"]
+      ]
+    },
+    "2": {
+      "entity": "TSMC (2330) / TSMC Arizona",
+      "title": "Trump to Attend TSMC Arizona Dec 4 Expansion Groundbreaking Launching South Parcel; Arizona Fab Profit Hits NT$53.99B in 1Q-3Q26, Eyeing NT$70-72B Full Year",
+      "summary": "The White House and TSMC confirmed that President Trump will travel to Phoenix on Dec 4 to preside over the expansion celebration and Phase 5 groundbreaking at TSMC Arizona, following a Dec 3 supplier dinner; whether NVIDIA CEO Jensen Huang attends remains uncertain after his Dec 3 Senate testimony. Chairman C.C. Wei's invitation noted that newly acquired land south of State Route 303 will unite the north and south campuses into a 2,000-acre mega-site under TSMC's US$265B total US commitment (including an extra US$100B pledged in July). The White House said the expansion will create 10,000 direct and 11,000 indirect jobs on top of 12,000-15,000 current construction workers. Operationally, Fab 1 is in 4nm mass production for NVIDIA Blackwell, Apple, and AMD, while Fab 2 is installing tools for 3nm volume production in 3Q27. With US clients now accounting for 76.87% of TSMC revenue, TSMC Arizona swung from a ~NT$14.2B loss in 2024 to a NT$16.141B profit in 2025 and NT$53.986B in 1Q-3Q26 (~NT$17.92B in Q3), with analysts projecting NT$70-72B for full-year 2026 and a ~38% quarterly net margin excluding government subsidies.",
+      "metric": "Dec 4 Arizona groundbreaking (2,000-acre combined campus); US$265B US investment; US revenue share 76.87%; Arizona profit: 2024 -NT$14.2B -> 2025 +NT$16.141B -> 1Q-3Q26 +NT$53.986B (2026E NT$70-72B, ~38% ex-subsidy net margin)",
+      "impact": "Achieving a ~38% ex-subsidy net margin in Arizona dispels earlier market fears of severe structural margin dilution from US fabs, giving TSMC financial confidence to evaluate a second US hub in Texas (item 12) while Trump's attendance strengthens its leverage in Washington.",
+      "conf": "Confirmed (White House and TSMC confirmed Dec 4 ceremony and historical profits; full-year NT$70-72B profit and 38% ex-subsidy net margin are analyst estimates)",
+      "vocab": [
+        ["full-year", "全年的", "fin"],
+        ["subsidies", "補貼", "fin"],
+        ["dilution", "稀釋", "fin"],
+        ["pledged", "承諾（投入）", "fin"],
+        ["groundbreaking", "動土典禮"],
+        ["leverage", "籌碼；槓桿"]
+      ]
+    },
+    "3": {
+      "entity": "Powerchip Holding / PSMC (6770) / AP Memory (6531)",
+      "title": "Powerchip Holding Management Sweeps All 7 Board Seats and 3 Supervisors in Proxy Battle, Files Forgery Suit and Pivots to Listing Prep",
+      "summary": "Powerchip Holding's incumbent management won a decisive victory at its Nov 25 extraordinary shareholders' meeting, sweeping all seven director seats and three supervisor seats while the activist camp failed to win a single seat. Elected directors include PSMC Chairman Hsieh Tsai-chu, while AP Memory Chairman Chen Wen-liang joined as a supervisor. The proxy battle began after activist leader Lin Wei-cheng launched a tender bid at NT$50 per share (>NT$13.6B total) seeking over 20% equity, prompting management's camp to counter with NT$2.6B in share buybacks and friendly purchases (including a NT$1B treasury buyback at NT$42 per share). The meeting chair invalidated disputed blank proxies, and Powerchip Holding filed fresh forgery charges with Taipei prosecutors on Nov 25. With control secured, management plans to focus on corporate governance, appointing independent directors, and preparing for an Emerging Stock Board registration and eventual IPO.",
+      "metric": "Powerchip Holding election: incumbents win 7 directors + 3 supervisors (activists 0); activist bid >NT$13.6B at NT$50/sh for >20% stake; management camp defense buybacks NT$2.6B",
+      "impact": "Keeping PSMC Chairman Hsieh Tsai-chu and AP Memory Chairman Chen Wen-liang on the parent holding board stabilizes group governance and removes proxy-fight overhang as PSMC rides its mature-node and memory foundry recovery (October revenue +94.19% YoY), though legal disputes linger.",
+      "conf": "Confirmed (official EGM election results and company legal filing; court outcomes remain pending)",
+      "vocab": [
+        ["stake", "股權", "fin"],
+        ["IPO", "首次公開發行（上市）", "fin"],
+        ["proxy battle", "委託書大戰；經營權之爭"],
+        ["buybacks", "庫藏股回購"],
+        ["corporate governance", "公司治理"],
+        ["overhang", "（股價）潛在賣壓；陰霾"]
+      ]
+    },
+    "4": {
+      "entity": "NVIDIA (NVDA) / TSMC ADR (TSM) / UMC ADR (UMC) / Hua Hong (1347.HK) / SMIC (0981.HK) / Samsung Electronics (005930.KS)",
+      "title": "US Tech Sees Pre-Thanksgiving V-Shaped Selloff on 3.3% Core PCE and S&P Negative Watch on NVIDIA; Asia Foundries Plunge Nov 25 as Hua Hong Drops 17.3%",
+      "summary": "US equities swung violently on Nov 25 ahead of the Thanksgiving holiday (closed Nov 26) as October headline PCE rose 3.8% YoY (core PCE 3.3%, slightly above consensus), fueling December and January Fed rate-hike fears alongside White House Section 301 tariff proposals. The Nasdaq fell nearly 5% intraday and NVIDIA sank almost 9% before a late rotation into industrials and Treasuries (10-year yield fell for an 8th straight session) lifted the Dow +164 points. Chip stocks still ended red: SOX dipped 0.65% to 8,774.86, NVIDIA fell 3.91% to US$149.30 (giving back ~40% of its Huang-return rally), Micron lost 4.53%, and Applied Materials fell 3.89%; TSMC ADR dropped 1.96% to US$342.34, UMC ADR fell 1.57%, Intel and GlobalFoundries each slipped 0.60%, and Tower shed 1.40%, while ASE ADR edged up 0.55%. Separately, S&P Global placed NVIDIA's AA credit rating on CreditWatch Negative, citing board independence and succession flaws with a potential one-notch downgrade within 90 days. Asian foundries suffered steep catch-up losses on Nov 25—Hua Hong H-shares plunged 17.27% (A-shares -13.89%), Samsung fell 9.87%, SMIC H-shares lost 7.55%, and Nexchip dropped 4.38%—before HK and Korean shares stabilized on Nov 26 (Hua Hong H +3.60%, SMIC H +1.28%, Samsung +0.35%) while mainland A-shares stayed weak.",
+      "metric": "Nov 25 US (Nov 26 closed): SOX 8,774.86 (-0.65%), TSM US$342.34 (-1.96%), UMC US$13.19 (-1.57%), NVDA US$149.30 (-3.91%, S&P CreditWatch Negative); Nov 25->26 Asia: Hua Hong H -17.27%->+3.60%, SMIC H -7.55%->+1.28%, Samsung -9.87%->+0.35%; Oct core PCE +3.3%",
+      "impact": "AI equities are caught between massive capital spending needs and tightening monetary policy expectations, compounded by S&P's governance warning on NVIDIA; two straight days of mainland A-share foundry weakness underscore persistent capital outflows from China chipmakers under dual tariff and export pressures.",
+      "conf": "Confirmed (exchange closing data, official S&P rating action, and US PCE release; US markets closed Nov 26 for Thanksgiving)",
+      "vocab": [
+        ["consensus", "市場共識；共識", "fin"],
+        ["intraday", "盤中", "fin"],
+        ["rotation", "（資金）輪動", "fin"],
+        ["rate hike", "升息", "fin"],
+        ["capital spending", "資本支出", "fin"],
+        ["rally", "漲勢；大漲", "fin"],
+        ["downgrade", "調降評等"]
+      ]
+    },
+    "5": {
+      "entity": "USTR / TSMC (2330) / ASML / NVIDIA (NVDA)",
+      "title": "USTR Unveils Section 301 Tariff Proposal of Up to 15% on 14 Economies Including Taiwan, but Grants Sweeping Exemptions for Chips, Servers, and Most Fab Gear",
+      "summary": "The Office of the US Trade Representative (USTR) released findings on Nov 25 from its Section 301 investigation into structural overcapacity across 14 trading partners, proposing new tariffs of up to 15% on Taiwan, Japan, South Korea, and Switzerland (15% on the EU, up to 35% on Vietnam, and up to an extra 10% on select Chinese tech goods), with Taiwan's proposed 15% rate not stacked onto MFN or forced-labor duties. Crucially for semiconductors, servers, smartphones, PCs, storage devices, chips, and most semiconductor manufacturing equipment were placed on the exemption list—sparing TSMC, NVIDIA, AMD, Intel, Micron, SK Hynix, Samsung, and Apple from immediate duties and allowing TSMC to import ASML lithography tools for its US fabs tariff-free. However, headphones (such as Vietnam-made AirPods), base stations, printers, and certain chip testing equipment components were excluded from exemptions, potentially affecting Teradyne, FormFactor, Cohu, and Advantest. Public comments run through Jan 5, 2027, with a Jan 25 hearing and final determination due by Mar 11, 2027.",
+      "metric": "Section 301 proposal: TW/JP/KR/CH up to 15%, EU 15%, VN up to 35%, CN select tech +10%; exempt: chips, servers, phones, PCs, most fab gear; non-exempt: select test gear parts, headphones; final ruling by Mar 11, 2027",
+      "impact": "Exempting chips and front-end lithography tools removes an immediate cost shock for TSMC's Taiwan exports and US fab buildouts, helping calm the tariff panic that drove the SOX down 7.88% on Nov 24; still, unexempted test-equipment parts remain a watchpoint for expanding OSATs ahead of the March ruling.",
+      "conf": "Confirmed (official USTR Section 301 findings and proposal; subject to public comment and final ruling by Mar 11, 2027)",
+      "vocab": [
+        ["overcapacity", "產能過剩", "fin"],
+        ["tariff", "關稅", "fin"],
+        ["exemption", "豁免"],
+        ["lithography", "微影（曝光）"],
+        ["determination", "最終裁定"],
+        ["duties", "關稅；稅賦"]
+      ]
+    },
+    "6": {
+      "entity": "NVIDIA (NVDA) / US BIS / Dell / Supermicro (SMCI) / 2CRSi",
+      "title": "US BIS Remote-Compute Curbs Ripple Across Supply Chain: NVIDIA Halts Server Shipments to 4 SEA Nations, Thousands of B300s Hit Resale, CBS Flags China-Backed US Buyers",
+      "summary": "Fallout from the US BIS remote-compute export rule effective Nov 19 widened rapidly: (1) Foreign media citing three sources reported that NVIDIA instructed server partners including Dell and Supermicro to halt shipments of NVIDIA-powered servers to Singapore, Malaysia, Thailand, and Indonesia while cloud operators scramble to secure licenses within 90 days and verify end-users; banks froze roughly US$500M in project financing for Singapore cloud firm Aolani, which planned to lease compute to ByteDance. (2) CNBC cited AI hardware broker GPU Mart saying resale listings for NVIDIA GPUs spiked unusually, including transactions seeking buyers for thousands of cutting-edge B300 GPUs. (3) French server maker 2CRSi disclosed on Nov 26 an order backlog above US$460M solely in North America and Europe, but noted deposits and delivery schedules are delayed pending NVIDIA compliance checks. (4) A CBS News investigation with C4ADS revealed NVIDIA sold advanced chips to at least two California-based firms controlled by Chinese entities—RiCloud AI (owned by Shenzhen-based Yuxing InfoTech) and Aivres (renamed from blacklisted Inspur's US arm, which exported at least US$5.6B in advanced gear to Southeast Asia from Apr 2024 to Feb 2026, including ~US$3B in Blackwell systems routed to Megaspeed and Aolani)—prompting Democratic Senators Warren and Coons to demand probes ahead of Huang's Dec 3 Senate hearing.",
+      "metric": "NVIDIA halts server shipments to SG/MY/TH/ID (90-day cloud license window); Aolani ~US$500M loan paused; thousands of B300 GPUs up for resale; 2CRSi backlog >US$460M facing compliance delays; Aivres exported >=US$5.6B (~US$3B Blackwell) to SEA",
+      "impact": "US controls have expanded from chip shipments to global server tracking and cloud end-user audits, triggering near-term delivery delays and secondary-market liquidation; upstream foundries like TSMC must monitor whether prolonged compliance bottlenecks slow NVIDIA's 2H27 wafer and CoWoS scheduling.",
+      "conf": "Unconfirmed (BIS rules, 2CRSi disclosure, and senator statements are official; SEA shipment halts, Aolani loan freeze, and B300 resale surge are media citing unnamed sources; NVIDIA declined comment)",
+      "vocab": [
+        ["shipments", "出貨量", "fin"],
+        ["backlog", "在手訂單；積壓訂單"],
+        ["compliance", "合規；法遵"],
+        ["financing", "融資"],
+        ["liquidation", "拋售；出清"],
+        ["bottlenecks", "瓶頸"]
+      ]
+    },
+    "7": {
+      "entity": "TSMC (2330) / NVIDIA (NVDA) / Broadcom (AVGO) / MediaTek (2454) / ASE Holding (3711) / Amkor (AMKR)",
+      "title": "TSMC 2027 CoWoS Mix Shifts as NVIDIA Demand Jumps 57% to 1.22M Wafers Yet Share Dips to 45.6%; DIGITIMES Sees 85.8% TSMC Share and 5.5x OSAT Spillover",
+      "summary": "Two new industry reports highlight how 2027 AI advanced packaging capacity is diversifying and spilling over to OSATs: (1) Institutional estimates cited by Commercial Times project NVIDIA's CoWoS demand will surge 57% YoY in 2027 to ~1.22 million wafers as Vera Rubin ramps, yet its share of TSMC's total CoWoS capacity will fall nearly 8 percentage points from 53.4% this year to 45.6%, as custom cloud ASICs grab capacity—led by Google TPUs (Broadcom disclosed in an SEC filing that Anthropic will take ~3.5GW of next-gen TPU compute from 2027) plus AWS and Meta chips via MediaTek, GUC, and Alchip. (2) DIGITIMES Research forecast on Nov 26 that global high-end cloud AI accelerator shipments will reach 26 million units in 2027, with 85.8% packaged by TSMC (54.6% on CoWoS-L alone) and total TSMC CoWoS demand hitting 2.165 million wafers (180,000 wafers/month), where combined Broadcom and MediaTek demand of 393,000 wafers nearly matches NVIDIA's 400,000-wafer incremental growth. With TSMC fully booked, AMD Venice and NVIDIA Vera server CPUs will spill over to ASE (including SPIL) and Amkor, lifting their combined CoWoS-like demand 5.5x YoY to 466,000 wafers in 2027 (year-end monthly capacity projected at 45,000 wafers for ASE vs. 20,000 for Amkor). DIGITIMES also noted Amazon Trainium3 adopting Intel EMIB-M in 1H27, Google TPU v9 targeting EMIB-T in 1H28, and AMD Venice adding Powertech's PiFO FOPLP in 2H27.",
+      "metric": "2027E AI accelerators: 26M units (TSMC 85.8%, CoWoS-L 54.6%); TSMC CoWoS demand 2.165M wafers (180k/mo): NVDA 1.22M (+57%, share 53.4%->45.6%), AVGO+MTK 393k; ASE+Amkor CoWoS-like demand 466k wafers (5.5x YoY), 2027-end capacity ASE 45k/mo vs Amkor 20k/mo",
+      "impact": "NVIDIA's moderating share alongside surging hyperscaler ASIC demand sharply reduces TSMC's single-customer and key-person concentration risk, while a 5.5x OSAT spillover underpins ASE's massive expansion and US$8B LEAP target (item 8) even as Intel EMIB and Powertech PiFO vie for cost-sensitive large-die sockets.",
+      "conf": "Confirmed (DIGITIMES Research data and Broadcom SEC filing; 2027 demand, capacity, and share figures are analyst and research forecasts)",
+      "vocab": [
+        ["market share", "市占率", "fin"],
+        ["shipments", "出貨量", "fin"],
+        ["forecast", "預測", "fin"],
+        ["spillover", "外溢效應"],
+        ["incremental", "增量的；新增的"],
+        ["concentration risk", "集中度風險"]
+      ]
+    },
+    "8": {
+      "entity": "ASE Holding (3711) / Vanguard (5347) / TSMC (2330)",
+      "title": "Citi Reiterates Buy on ASE (NT$908 Target) and Vanguard (NT$160 Target): ASE Sees LEAP Revenue Doubling to US$8B in 2027; Vanguard Targets 90-95% Utilization",
+      "summary": "Following its Taiwan Corporate Day, Citigroup maintained Buy ratings on both OSAT leader ASE Technology Holding (target price NT$908, short-term upside view) and mature-node foundry Vanguard International Semiconductor (target price NT$160). ASE reported that advanced packaging and testing (LEAP) demand far outstrips capacity, guiding LEAP revenue to exceed US$4B in 2026 and double to ~US$8B in 2027 across diverse GPU and ASIC clients—led by wafer-to-substrate services, with full-turnkey packaging jumping from ~US$300M to US$1B and CPO contributing ~US$500M under a customer-consigned tool model. ASE noted zero meaningful order cancellations despite recent NVIDIA volatility and export curbs, said its former 30% ATM gross margin ceiling has become a floor, and pegged 2026 capex at ~US$11.5B (US$7B tools, US$4.5B facilities across 22 projects) with 2027 capex rising further. Meanwhile, Vanguard expects 2027 utilization to climb from ~87% in 2026 to 90-95% on AI server PMIC demand, auto/industrial recovery, and global IDM outsourcing, targeting double-digit 8-inch revenue growth via ~10% like-for-like price hikes (mid-single-digit blended ASP gain) and 4-month order visibility. Vanguard's Singapore 12-inch fab will exceed 20,000 wafers/month by end-2027 and 40,000 by end-2028—initially focused on TSMC interposers and PMICs—pushing depreciation from ~NT$9.1B in 2026 to NT$14-16B in 2027 before gross margins potentially recover above 30% in 2028-2029.",
+      "metric": "ASE: Citi TP NT$908, LEAP rev 2026 >US$4B -> 2027 ~US$8B (CPO ~US$500M), 2026 capex ~US$11.5B; Vanguard: Citi TP NT$160, util 2026 ~87% -> 2027 90-95%, SG fab >20k/mo (2027E) & >40k/mo (2028E), depreciation NT$9.1B -> NT$14-16B",
+      "impact": "Both management teams confirmed intact AI demand with no export-driven cancellations, demonstrating that TSMC's advanced-node boom is pulling up backend OSATs (ASE) as well as 12-inch interposer and 8-inch power-management foundries (Vanguard), which sidestep Chinese mature-node price wars by focusing on global IDMs.",
+      "conf": "Confirmed (Citi Taiwan Corporate Day reports and management commentary; target prices and 2027-2029 financial projections are broker estimates)",
+      "vocab": [
+        ["Buy rating", "買進評等", "fin"],
+        ["target price", "目標價", "fin"],
+        ["capex", "資本支出", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"],
+        ["gross margin", "毛利率", "fin"],
+        ["order visibility", "訂單能見度", "fin"],
+        ["price hikes", "漲價", "fin"],
+        ["depreciation", "折舊"]
+      ]
+    },
+    "9": {
+      "entity": "WIN Semiconductors (3105) / AWSC (8086) / VPEC (2455) / SpaceX",
+      "title": "FCC Conditionally Clears SpaceX for Up to 1 Million 'Starmind' Space Data Center Satellites, Sending WIN Semi Limit-Up at NT$444.50",
+      "summary": "The US Federal Communications Commission (FCC) conditionally approved SpaceX on Nov 25 to deploy up to 1 million satellites to build an orbital AI compute constellation named 'Starmind,' with an estimated 100,000 satellites slated for launch between Nov 2033 and Nov 2035. The announcement ignited a Nov 26 rally across Taiwan's low-earth orbit (LEO) satellite and space optical-communications supply chain: compound semiconductor foundry leader WIN Semiconductors (3105) gapped up to hit limit-up at NT$444.50 (+NT$40.00 / +9.89%), fully erasing the prior day's limit-down loss and reclaiming its 5-day moving average. Peers AWSC (8086) jumped 6.06% to NT$87.50 and epi-wafer supplier VPEC (2455) gained 4.25% to NT$294.50. Analysts noted that accelerated LEO deployment and higher-frequency bands will drive demand for high-power GaAs and GaN RF components, projecting WIN Semi's satellite revenue share to rise from under 10% this year to double digits in 2027.",
+      "metric": "FCC clears SpaceX up to 1M satellites (Starmind; 100k est. in 2033-2035); Nov 26 close: WIN Semi NT$444.50 (+9.89%, limit-up), AWSC NT$87.50 (+6.06%), VPEC NT$294.50 (+4.25%); WIN Semi 2027E satellite revenue share >10%",
+      "impact": "With smartphone PA demand muted, LEO satellites and space optical interconnects are emerging as the strongest growth catalyst for III-V compound foundries (WIN Semi, AWSC, VPEC), reinforced near-term by China's two-month pause extension on US gallium and germanium bans (prior issue #11)—though actual satellite order ramp remains multi-year.",
+      "conf": "Confirmed (FCC conditional approval and verified Nov 26 TPEx/TWSE closing prices; WIN Semi 2027 satellite revenue share is an analyst estimate)",
+      "vocab": [
+        ["limit-up", "漲停", "fin"],
+        ["gapped up", "跳空開高", "fin"],
+        ["moving average", "均線", "fin"],
+        ["rally", "漲勢；大漲", "fin"],
+        ["analysts", "分析師；法人", "fin"],
+        ["revenue mix", "營收結構", "fin"]
+      ]
+    },
+    "10": {
+      "entity": "TSMC (2330) / UMC (2303) / PSMC (6770) / ASE Holding (3711) / Vanguard (5347)",
+      "title": "TAIEX Sees Violent Two-Day Swing (-1,927 Then +956 to 39,152) as Foreign Investors Extend 9-Day Selling Streak, Pulling NT$38.98B from TSMC While Buying Back PSMC",
+      "summary": "Hit by the Nov 24 SOX plunge (-7.88%) and Trump's tariff rhetoric, Taiwan's TAIEX crashed as much as 3,440.45 points intraday on Nov 25 (low 36,681.9) before National Stabilization Fund intervention and short-selling curbs pared losses to -1,926.92 points (-4.80%) at 38,195.43 on heavy turnover of NT$1.2298 trillion. UMC (-9.99%), PSMC (-9.94%), and WIN Semi (-9.91%) all closed limit-down while TSMC fell 3.59% to NT$2,150; foreign investors dumped NT$123.655B against NT$55.035B in net buying by domestic investment trusts (three institutional investors net -NT$81.453B). On Nov 26, USTR chip tariff exemptions and the US Thanksgiving closure sparked a 956.38-point (+2.50%) rebound to 39,151.81 on NT$845.337B turnover. Yet foreign investors extended their selling streak to nine straight sessions (-NT$49.181B, net index futures shorts at 106,275 contracts), while investment trusts (+NT$21.213B) and proprietary dealers (+NT$12.865B) bought (combined -NT$15.103B). Foreign funds offloaded another 18,134 lots (NT$38.984B) of TSMC on Nov 26—pushing TSMC down 0.23% to NT$2,145 against the broader rally—bringing two-day foreign net sales to 45,106 lots in TSMC, 82,892 lots in UMC, and 13,014 lots in ASE, whereas foreign investors flipped to net buyers of 16,395 lots in PSMC (+7.29% to NT$51.50).",
+      "metric": "TAIEX Nov 25 38,195.43 (-4.80%, turnover NT$1.2298T) -> Nov 26 39,151.81 (+2.50%, NT$845.3B); foreign investors Nov 25 -NT$123.655B, Nov 26 -NT$49.181B (9-day sell streak); Nov 26 close: TSMC NT$2,145 (-0.23%), UMC NT$88.80 (+1.60%), PSMC NT$51.50 (+7.29%), ASE NT$511 (+4.71%), Vanguard NT$119.50 (+2.58%)",
+      "impact": "The tug-of-war between foreign selling (systematic exits from TSMC and UMC alongside >100,000 short futures contracts) and domestic institutional defense continues; PSMC standing out as the lone foundry bought back by foreign funds on Nov 26 signals targeted appetite for memory-foundry pricing power after Powerchip's resolved proxy fight (item 3).",
+      "conf": "Confirmed (official TWSE/TPEx closing prices, turnover, and institutional flows verified via prev-close + change = close; official TWSE figures used where media differed slightly)",
+      "vocab": [
+        ["turnover", "成交值", "fin"],
+        ["limit-down", "跌停", "fin"],
+        ["foreign investors", "外資", "fin"],
+        ["investment trusts", "投信", "fin"],
+        ["proprietary dealers", "自營商", "fin"],
+        ["net buyers", "買超方", "fin"],
+        ["futures", "期貨", "fin"],
+        ["pricing power", "定價權；議價力", "fin"]
+      ]
+    },
+    "11": {
+      "entity": "Tokyo Electron (TEL) / TSMC (2330)",
+      "title": "Tokyo Electron Wins TSMC 2026 Excellent Production Support Award and Expands Southern Taiwan Footprint with New Kaohsiung Office in 2027",
+      "summary": "Japanese wafer-fab equipment giant Tokyo Electron (TEL) announced two milestones strengthening its Taiwan ecosystem on Nov 26-27: (1) TEL received TSMC's 2026 Excellent Production Support Award at TSMC's annual Supply Chain Management Forum, recognizing its R&D collaboration and agile supply chain support for TSMC's global capacity expansion and stable fab operations. (2) TEL Taiwan announced an expanded footprint across southern Taiwan's semiconductor S-corridor—following the opening of its Tainan R&D Center at Southern Taiwan Science Park this year, TEL will consolidate existing Kaohsiung sites and launch a new Kaohsiung office in 2027 to bolster advanced-node and high-end equipment engineering support.",
+      "metric": "TEL wins TSMC 2026 Excellent Production Support Award; >30 years in Taiwan; Tainan R&D Center opened in 2026, new consolidated Kaohsiung office slated for 2027",
+      "impact": "As TSMC scales 2nm fabs in Kaohsiung alongside Tainan advanced logic/packaging sites and ASE's >NT$366B Kaohsiung testing cluster, top global toolmakers (following Lam Research's local dry-resist/molybdenum push) are shifting R&D and field-engineering hubs southward, deepening Taiwan's localized foundry moat.",
+      "conf": "Confirmed (official TEL Taiwan press release and TSMC Supply Chain Management Forum award announcement)",
+      "vocab": [
+        ["footprint", "據點布局；足跡"],
+        ["consolidate", "整合；合併"],
+        ["agile", "靈活敏捷的"],
+        ["collaboration", "合作；協作"],
+        ["moat", "護城河"],
+        ["localized", "在地化的"]
+      ]
+    },
+    "12": {
+      "entity": "TSMC (2330) / Texas Comptroller",
+      "title": "Texas Comptroller Recommends Approving TSMC 2nm Fab Tax Break Worth ~US$354M Ahead of Dec 10 Hearing; Wedbush Calls Expansion Positive AI Signal",
+      "summary": "Advancing TSMC's Texas JETI tax-incentive application reported in the prior issue (#9), the Texas Comptroller's office formally recommended approving the abatement and forwarded it to the governor and College Station Independent School District (CSISD). Brazos County scheduled a Dec 7 community briefing, followed by a Dec 10 CSISD public hearing on designating the ~3,232-acre site as a reinvestment zone. State estimates show the 10-year maintenance-and-operations property tax break (2032-2041, taxing 50% of qualified value) would cut TSMC's tax bill from ~US$759M to ~US$405M, saving ~US$354M. Filings estimate a ~US$22.6B investment for 2nm-and-below production starting construction in 2027 for 2031 commercialization, though TSMC is still weighing Texas against Arizona and has made no final site decision. Wedbush analyst Matt Bryson noted that TSMC enjoys better end-demand visibility than any other supplier, making its ongoing capacity push a clear positive signal for the AI supply chain.",
+      "metric": "Texas Comptroller recommends approval: 2032-2041 school property tax cut from ~US$759M to ~US$405M (saving ~US$354M); Dec 7 briefing, Dec 10 hearing; ~3,232-acre site, ~US$22.6B est. investment, 2027 build / 2031 ramp",
+      "impact": "Swift state-level endorsement and early-December hearings keep Texas moving quickly; alongside Arizona water/power constraints and Trump's Dec 4 Phoenix visit (item 2), maintaining parallel Arizona and Texas options maximizes TSMC's bargaining power over state subsidies, utilities, and federal tariff policy.",
+      "conf": "Confirmed (official Texas Comptroller recommendation and Dec 7/10 public hearing schedule; TSMC has not made a final investment decision)",
+      "vocab": [
+        ["visibility", "能見度", "fin"],
+        ["bargaining power", "議價權", "fin"],
+        ["subsidies", "補貼", "fin"],
+        ["abatement", "減免（稅負）"],
+        ["commercialization", "商業化量產"],
+        ["endorsement", "背書；支持"]
+      ]
+    },
+    "13": {
+      "entity": "ASML / Dutch Government / US Congress",
+      "title": "Netherlands Opposes US Congress MATCH Act Expanding ASML DUV Curbs on China, Pledging to Seek Non-Enforcement and Weigh EU Countermeasures",
+      "summary": "Reuters reported that US lawmakers are negotiating whether to attach the bipartisan Multilateral Alignment on Technology Controls for Hardware (MATCH) Act to December's annual defense spending bill, which would pressure allies like the Netherlands and Japan to tighten chip-tool export curbs on China or face unilateral US restrictions covering ASML's immersion DUV lithography systems. Dutch Trade Minister Sjoerd Sjoerdsma opposed the bill on Nov 26 on national sovereignty grounds, stating that if enacted, the Netherlands will urge Washington not to enforce it to protect ASML and European tech firms, and is coordinating with the European Commission, Germany, and France on blocking the legislation and weighing countermeasures (such as the EU Blocking Statute). Notably, Dutch Foreign Minister Tom Berendsen visited Beijing on Nov 25 for bilateral export-control talks. China still accounts for ~20% of ASML's projected 2026 revenue, and ASML CEO Christophe Fouquet warned last week that tighter curbs could accelerate China's domestic lithography alternatives.",
+      "metric": "US MATCH Act eyeing Dec defense bill inclusion (targeting ASML immersion DUV); China ~20% of ASML 2026E revenue; Netherlands coordinating with EU, Germany, and France on opposition/countermeasures",
+      "impact": "Unilateral US curbs cutting off ASML immersion DUV tools and servicing would severely cripple Chinese foundries (SMIC, Hua Hong, Nexchip) in sub-28nm expansion and maintenance; unusually forceful Dutch and EU pushback exposes widening transatlantic friction ahead of December's defense-bill markup.",
+      "conf": "Confirmed (public statements by Dutch trade and foreign ministers and ongoing US congressional talks; inclusion in December's defense bill is not yet finalized)",
+      "vocab": [
+        ["unilateral", "單方面的"],
+        ["sovereignty", "主權"],
+        ["countermeasures", "反制措施"],
+        ["bilateral", "雙邊的"],
+        ["bipartisan", "跨黨派的"],
+        ["servicing", "維修保養服務"]
+      ]
+    },
+    "14": {
+      "entity": "TSMC (2330) / GUC (3443) / Tesla (TSLA) / Google / Microsoft (MSFT)",
+      "title": "TSMC 3nm Capacity Crunch Delays Tesla Auto AI5 Volume to 2028 as GUC Prioritizes Higher-Margin Google Axion and Microsoft Cloud Orders",
+      "summary": "Commercial Times reported on Nov 27 that as Tesla rolled out FSD v15 using algorithmic compression to run 'Reality View' on existing AI4 hardware, CEO Elon Musk revealed mass-market EVs will stick with AI4 and refreshed AI4.5 while next-gen AI5 chips go first to Optimus humanoid robots and data centers. Supply chain sources said the schedule reflects severe tightness in TSMC's 3nm (N3) capacity: Tesla's AI5 ASIC design partner Global Unichip (GUC, 3443) secured a significantly larger 2027 N3 wafer allocation from TSMC than this year, yet still cannot satisfy all major clients simultaneously. GUC is reportedly prioritizing high-margin, high-visibility North American hyperscaler data center orders—including Google's Axion 2 and Axion 3 server CPUs and custom Microsoft silicon—leaving insufficient 2027 AI5 wafers for Tesla's million-unit-scale EV fleet, pushing automotive AI5 volume ramp to 2028 when more N3 capacity comes online.",
+      "metric": "Tesla EVs stick with AI4/AI4.5; AI5 prioritized for Optimus & data centers in 2027, auto volume ramp est. 2028; GUC 2027 TSMC N3 quota prioritizes Google Axion 2/3 & Microsoft custom silicon",
+      "impact": "This underscores TSMC's fully booked 3nm lines and the pecking order favoring high-margin cloud CSP silicon over automotive volumes—reinforcing TSMC's Nov 23 statement on persistent leading-edge shortages and auto chipmakers' crowding-out warnings (item 16), while supporting N3 utilization and pricing power into 2028.",
+      "conf": "Unconfirmed (Tesla FSD v15 and Optimus priority are Musk's public remarks; GUC N3 quota prioritization and 2028 auto ramp timeline are media citing supply chain and analyst sources)",
+      "vocab": [
+        ["quota", "配額", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"],
+        ["pricing power", "定價權；議價力", "fin"],
+        ["visibility", "能見度", "fin"],
+        ["allocation", "分配；配額"],
+        ["prioritizing", "優先配置"]
+      ]
+    },
+    "15": {
+      "entity": "Greatek (2441) / Applied Materials (AMAT)",
+      "title": "OSAT Greatek Q3 Operating Profit Surges 166% YoY as Gross Margin Tops 30% on AI Flip-Chip Demand, Orders NT$659M in AMAT Plating Tools",
+      "summary": "Taiwanese OSAT Greatek Electronics (2441) posted standout Q3 results: consolidated revenue jumped 41.1% YoY to NT$5.998B while cost of goods sold rose only 20.7%, generating strong operating leverage that lifted gross margin by 11.83 percentage points YoY from 18.26% to 30.09%. Operating profit surged 166.4% YoY to NT$1.585B (operating margin up from 14.00% to 26.42%) and EPS climbed from NT$1.31 to NT$2.44; October revenue stayed elevated at NT$2.006B (+36.0% YoY). Management previously attributed margin gains to higher utilization, richer product mix, higher ASPs, and robust AI/HPC orders for bumping and flip-chip packaging. Once new tools come online post-Q4, monthly flip-chip capacity is slated to rise from ~210M to 230M units (full-load monthly revenue from NT$260M to NT$320M), following NT$659M in electroplating equipment purchases from Applied Materials between July and October.",
+      "metric": "Greatek 3Q26 rev NT$5.998B (+41.1% YoY), GM 30.09% (+11.83 ppt), OP NT$1.585B (+166.4% YoY), OPM 26.42%, EPS NT$2.44; Oct rev NT$2.006B (+36.0% YoY); flip-chip cap 210M->230M units/mo; AMAT tools NT$659M",
+      "impact": "A mid-tier OSAT crossing 30% gross margin and more than doubling operating profit proves AI spillover extends well beyond TSMC CoWoS and ASE LEAP, driving broad utilization and ASP recovery across second-tier packaging and mature-node foundry peers.",
+      "conf": "Confirmed (official company Q3 financial filings, October revenue report, and equipment procurement disclosures)",
+      "vocab": [
+        ["consolidated revenue", "合併營收", "fin"],
+        ["gross margin", "毛利率", "fin"],
+        ["operating margin", "營業利益率", "fin"],
+        ["EPS", "每股盈餘", "fin"],
+        ["utilization", "稼動率；產能利用率", "fin"],
+        ["product mix", "產品組合", "fin"],
+        ["ASPs", "平均售價", "fin"],
+        ["operating leverage", "營運槓桿"]
+      ]
+    },
+    "16": {
+      "entity": "STMicroelectronics (STM) / Infineon / Aumovio",
+      "title": "(Background: Nov 9-10 Events, Reported Nov 27) Auto Chipmakers Warn AI Demand Continues Crowding Out Foundry and OSAT Capacity; Infineon Hikes Prices Twice in 2026",
+      "summary": "A Nov 27 TrendForce analysis highlighted how far faster AI revenue growth is reshaping semiconductor supply-chain allocation at the expense of automotive and industrial buyers: speaking at a pre-Electronica forum in Munich on Nov 9, STMicroelectronics' CEO warned that several foundries and OSATs are shifting resources away from automotive and industrial applications, while Infineon noted on its Nov 10 earnings call that supply remains tight and confirmed it has raised power semiconductor prices twice in 2026. Automotive electronics supplier Aumovio estimated that chip price hikes will hit its 2027 earnings by roughly EUR 1 billion. TrendForce concluded that internal IDM fab capacity is becoming a crucial defensive moat, while automakers must rely on long-term agreements (LTAs) and inventory buffers to secure supply (listed as background since core events occurred Nov 9-10 prior to this window).",
+      "metric": "ST (Nov 9): foundries/OSATs shifting capacity out of auto/industrial; Infineon (Nov 10): 2 power-chip price hikes in 2026; Aumovio estimates ~EUR 1B hit to 2027 profit",
+      "impact": "Together with Harvatek losing Macronix foundry capacity to memory (prior issue #10), Vanguard's ~10% 8-inch price hikes (item 8), and Tesla AI5 yielding N3 slots to cloud CSPs (item 14), this confirms the AI and memory upcycle is tightening capacity across both leading-edge and mature/power nodes, bolstering foundry pricing power.",
+      "conf": "Background (core executive remarks and earnings call occurred Nov 9-10, prior to this report's window; official remarks compiled by TrendForce)",
+      "vocab": [
+        ["earnings call", "法說會", "fin"],
+        ["price hikes", "漲價", "fin"],
+        ["inventory", "庫存", "fin"],
+        ["pricing power", "定價權；議價力", "fin"],
+        ["crowding out", "排擠效應"],
+        ["upcycle", "景氣上升循環"]
+      ]
+    }
+  }
+}
