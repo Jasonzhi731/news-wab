@@ -85,6 +85,20 @@
             <option value="all">今日複習（所有單字・間隔重複）</option>
           </select>
         </label>
+        <div class="issue-opts" id="issue-opts" hidden>
+          <label class="io-check">
+            <input type="checkbox" id="opt-unlearned">
+            <span>只練未學／到期字</span>
+          </label>
+          <label class="io-batch">
+            <span>每輪</span>
+            <select id="opt-batch" aria-label="每輪練習張數">
+              <option value="0">全部</option>
+              <option value="20">20 張</option>
+              <option value="30">30 張</option>
+            </select>
+          </label>
+        </div>
         <p class="muted small" id="src-note" hidden></p>
 
         <div class="seg" id="cat-seg" role="tablist" aria-label="分類">
@@ -111,8 +125,11 @@
     <!-- 練習 -->
     <section class="view" id="view-study" hidden>
       <div class="study-head">
-        <button class="icon-btn" id="quit-btn" type="button" aria-label="結束練習">
+        <button class="icon-btn" id="quit-btn" type="button" aria-label="暫停並返回首頁" title="暫停並保存進度">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="icon-btn" id="undo-btn" type="button" aria-label="復原上一張" title="復原上一張" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
         </button>
         <div class="progress"><div id="prog-fill"></div></div>
         <span class="prog-text" id="prog-text"></span>
@@ -159,7 +176,10 @@
         <button type="button" data-f="hard">常錯</button>
         <button type="button" data-f="saved">★ 收藏</button>
       </div>
-      <p class="muted small browse-count" id="browse-count"></p>
+      <div class="browse-meta">
+        <p class="muted small browse-count" id="browse-count"></p>
+        <button class="browse-drill" id="browse-drill" type="button" hidden></button>
+      </div>
       <ul class="word-list" id="word-list"></ul>
       <button class="btn ghost" id="more-btn" type="button" hidden>顯示更多</button>
     </section>
@@ -220,6 +240,7 @@
     </a>
   </nav>
 
+  <div class="lookup-pop" id="lookup-pop" role="dialog" hidden></div>
   <div class="toast" id="toast" role="status" hidden></div>
 
   <script src="config.js"></script>

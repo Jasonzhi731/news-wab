@@ -22,7 +22,11 @@
     del(k) { try { localStorage.removeItem('nv-' + k); } catch (e) { /* ignore */ } },
   };
 
-  const DEFAULTS = { apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false, cat: 'all', src: 'all', aiModel: CFG.aiModel || '' };
+  const DEFAULTS = {
+    apiUrl: CFG.apiUrl || '', token: '', newLimit: 20, autoSpeak: false,
+    cat: 'all', src: 'all', aiModel: CFG.aiModel || '',
+    issueUnlearnedOnly: false, issueBatch: 0,
+  };
   let settings = Object.assign({}, DEFAULTS, store.get('settings', {}));
   if (!settings.apiUrl) settings.apiUrl = DEFAULTS.apiUrl;
   // Keep apiUrl out of storage unless the user typed a custom one, so a new default in config.js reaches every device.
@@ -178,6 +182,14 @@
     ids.push(id);
     store.set('answered', { date: today(), ids });
   }
+  function unmarkAnswered(id) {
+    const ids = answeredToday();
+    const pos = ids.lastIndexOf(id);
+    if (pos >= 0) {
+      ids.splice(pos, 1);
+      store.set('answered', { date: today(), ids });
+    }
+  }
 
   function updateSyncUI() {
     const pill = $('#sync-pill');
@@ -189,7 +201,7 @@
     pill.title = syncError || '點一下立即同步';
   }
 
-  function scheduleSync(ms = 1500) {
+  function scheduleSync(ms = 3500) {
     clearTimeout(syncTimer);
     syncTimer = setTimeout(sync, ms);
   }
@@ -238,6 +250,7 @@
   /* ------------------------------ routing ------------------------------ */
   const VIEWS = ['home', 'study', 'done', 'browse', 'settings'];
   function show(view) {
+    closeLookup();
     VIEWS.forEach(v => { $('#view-' + v).hidden = v !== view; });
     document.body.classList.toggle('studying', view === 'study');
     $$('#tabs a, .bottomnav a[data-view]').forEach(a => {
@@ -301,10 +314,16 @@
       banner.hidden = true;
     }
 
+    const isIssue = settings.src !== 'all';
+    const io = $('#issue-opts');
+    if (io) {
+      io.hidden = !isIssue;
+      $('#opt-unlearned').checked = !!settings.issueUnlearnedOnly;
+      $('#opt-batch').value = String(settings.issueBatch || 0);
+    }
     const deck = buildDeck();
     const nDue = deck.filter(c => c.kind === 'review').length;
     const nNew = deck.length - nDue;
-    const isIssue = settings.src !== 'all';
     $('#st-due').textContent = queueData || isIssue ? nDue : '–';
     $('#st-new').textContent = queueData || isIssue ? nNew : '–';
     $('#st-due').parentNode.querySelector('span').textContent = isIssue ? '本期已學' : '待複習';
@@ -313,8 +332,12 @@
     sn.hidden = !isIssue;
     if (isIssue) {
       const nLocal = deck.filter(c => c.w.local).length;
+      const batch = Number(settings.issueBatch) || 0;
+      const poolInfo = batch && lastIssuePool > deck.length
+        ? `篩選後共 ${lastIssuePool} 字，本輪先練前 ${deck.length} 張`
+        : `共 ${deck.length} 個字`;
       sn.textContent = issue
-        ? `${issue.label} 共 ${deck.length} 個字，依新聞順序出題；作答會一起算進間隔重複。`
+        ? `${issue.label} ${poolInfo}，依新聞順序出題；作答會一起算進間隔重複。`
           + (nLocal ? `其中 ${nLocal} 個字單字本還沒有，只在這台裝置練習。` : '')
         : '載入這一期的單字中…';
     }
@@ -448,10 +471,11 @@
   }
 
   // 本期的字配上 Sheet 裡的進度與收藏；Sheet 還沒有的字（剛出刊、尚未補字）只在本機練習、不送出作答
+  let lastIssuePool = 0;
   function issueDeck() {
-    if (!issue) return [];
+    if (!issue) { lastIssuePool = 0; return []; }
     const byId = new Map((wordsData || []).map(w => [w.id, w]));
-    return issue.words.map(x => {
+    let list = issue.words.map(x => {
       const sw = byId.get(x.id);
       const w = sw
         ? Object.assign({}, sw, { context_en: x.context_en || sw.context_en, source: x.context_en ? x.source : sw.source })
@@ -459,8 +483,19 @@
             source: x.source, progress: null, saved: false, local: true };
       if (!w.meaning_zh) w.meaning_zh = x.zh;
       return w;
-    }).filter(w => catMatch(w, settings.cat))
-      .map(w => ({ w, kind: w.progress ? 'review' : 'new' }));
+    }).filter(w => catMatch(w, settings.cat));
+
+    if (settings.issueUnlearnedOnly) {
+      list = list.filter(w => !w.progress || daysBetween(today(), w.progress.due) <= 0);
+    }
+    const batch = Number(settings.issueBatch) || 0;
+    if (batch > 0) {
+      const skip = new Set(answeredToday().concat(pending.map(r => r.id)));
+      list = list.filter(w => !skip.has(w.id));
+    }
+    lastIssuePool = list.length;
+    if (batch > 0) list = list.slice(0, batch);
+    return list.map(w => ({ w, kind: w.progress ? 'review' : 'new' }));
   }
 
   async function selectSource(src) {
@@ -488,12 +523,26 @@
   }
 
   $('#src-sel').addEventListener('change', e => selectSource(e.target.value));
+  $('#opt-unlearned').addEventListener('change', e => {
+    settings.issueUnlearnedOnly = e.target.checked;
+    saveSettings();
+    renderHome();
+  });
+  $('#opt-batch').addEventListener('change', e => {
+    settings.issueBatch = Number(e.target.value) || 0;
+    saveSettings();
+    renderHome();
+  });
 
 
   /* ------------------------------- study ------------------------------- */
   let session = null;
 
-  const sessionKey = (src, cat) => `${src || 'all'}::${cat || 'all'}`;
+  const sessionKey = (src, cat) => {
+    const s = src || 'all', c = cat || 'all';
+    if (s === 'all') return `${s}::${c}`;
+    return `${s}::${c}::${settings.issueUnlearnedOnly ? 1 : 0}::${Number(settings.issueBatch) || 0}`;
+  };
 
   function loadSavedSessions() {
     const m = store.get('sessions', {});
@@ -559,6 +608,7 @@
       right: raw.right || 0,
       wrong: raw.wrong || 0,
       issue: raw.issue || null,
+      history: [],
     };
   }
 
@@ -587,6 +637,30 @@
       right: 0,
       wrong: 0,
       issue: settings.src !== 'all' && issue ? { stem: issue.stem, label: issue.label } : null,
+      history: [],
+    };
+    persistSession(session);
+    location.hash = '#study';
+    show('study');
+    renderCard();
+  }
+  function startCustomSession(words) {
+    if (!words.length) return;
+    const cards = words.slice(0, 50).map(w => ({ w, kind: w.progress ? 'review' : 'new' }));
+    const key = 'browse::' + browseFilter;
+    session = {
+      key,
+      src: 'custom',
+      cat: browseFilter,
+      date: today(),
+      cards,
+      idx: 0,
+      flipped: false,
+      graded: new Set(),
+      right: 0,
+      wrong: 0,
+      issue: null,
+      history: [],
     };
     persistSession(session);
     location.hash = '#study';
@@ -603,15 +677,22 @@
     toast('已重置本輪進度，可從頭開始');
   });
 
-  function renderCard() {
+  function updateUndoUI() {
+    const ub = $('#undo-btn');
+    if (ub) ub.disabled = !(session && session.history && session.history.length);
+  }
+
+  function renderCard(startFlipped) {
     const s = session;
     if (s.idx >= s.cards.length) return finishSession();
+    closeLookup();
     const { w, kind, again } = s.cards[s.idx];
-    s.flipped = false;
+    s.flipped = !!startFlipped;
 
     const total = s.cards.length;
     $('#prog-fill').style.width = Math.round((s.idx / total) * 100) + '%';
     $('#prog-text').textContent = `${s.idx + 1} / ${total}`;
+    updateUndoUI();
 
     const chips = [
       again ? '<span class="chip again">再練一次</span>' : kind === 'new' ? '<span class="chip new">新字</span>' : '<span class="chip">複習</span>',
@@ -623,7 +704,8 @@
     const card = $('#card');
     card.classList.remove('flipped', 'card-enter');
     void card.offsetWidth;
-    card.classList.add('card-enter');
+    if (s.flipped) card.classList.add('flipped');
+    else card.classList.add('card-enter');
     card.innerHTML = `
       <div class="card-inner">
         <div class="face front">
@@ -633,8 +715,14 @@
           <div class="hint">想一想中文意思，輕點卡片翻面</div>
         </div>
         <div class="face back">
-          <div class="back-word">${esc(w.word)} <button class="speak" type="button" data-say="${esc(w.word)}" aria-label="朗讀">${SPEAK_SVG}</button>
-            ${starBtn(w)}</div>
+          <div class="back-word">
+            <span>${esc(w.word)}</span>
+            <button class="speak" type="button" data-say="${esc(w.word)}" aria-label="朗讀">${SPEAK_SVG}</button>
+            <span class="back-tools">
+              <button class="flip-back-btn" type="button" data-flip="1" aria-label="翻回正面">正面</button>
+              ${starBtn(w)}
+            </span>
+          </div>
           <div class="meaning">${esc(meaningOf(w) || '（尚無中文解釋）')}</div>
           ${w.context_en ? `
           <div class="ctx">
@@ -648,7 +736,7 @@
     renderActions();
     window.scrollTo({ top: 0, behavior: 'instant' });
     card.focus({ preventScroll: true });
-    if (settings.autoSpeak) say(w.word);
+    if (!startFlipped && settings.autoSpeak) say(w.word);
   }
 
   function renderActions() {
@@ -657,20 +745,21 @@
     const box = $('#actions');
     if (!s.flipped) {
       box.className = 'actions';
-      box.innerHTML = '<button class="btn primary big" data-act="flip">顯示答案</button><div class="kbd-hint">空白鍵翻面</div>';
+      box.innerHTML = '<button class="btn primary big" type="button" data-act="flip">顯示答案</button><div class="kbd-hint">空白鍵翻面</div>';
       return;
     }
     const p = w.progress;
     box.className = 'actions three';
     box.innerHTML = `
-      <button class="grade g0" data-grade="0">答錯<small>${fmtDays(previewInterval(p, 0))}後</small></button>
-      <button class="grade g2" data-grade="2">答對<small>${fmtDays(previewInterval(p, 2))}後</small></button>
-      <button class="grade g3" data-grade="3">很簡單<small>${fmtDays(previewInterval(p, 3))}後</small></button>
-      <div class="kbd-hint" style="grid-column:1/-1">鍵盤 1 答錯 · 2 答對 · 3 很簡單 · S 發音</div>`;
+      <button class="grade g0" type="button" data-grade="0">答錯<small>${fmtDays(previewInterval(p, 0))}後</small></button>
+      <button class="grade g2" type="button" data-grade="2">答對<small>${fmtDays(previewInterval(p, 2))}後</small></button>
+      <button class="grade g3" type="button" data-grade="3">很簡單<small>${fmtDays(previewInterval(p, 3))}後</small></button>
+      <div class="kbd-hint" style="grid-column:1/-1">鍵盤 1 答錯 · 2 答對 · 3 很簡單 · S 發音 · Z 復原</div>`;
   }
 
   function flip() {
     if (!session) return;
+    closeLookup();
     session.flipped = !session.flipped;
     $('#card').classList.toggle('flipped', session.flipped);
     renderActions();
@@ -681,12 +770,25 @@
     if (!s || !s.flipped) return;
     const card = s.cards[s.idx];
     const w = card.w;
-    if (!s.graded.has(w.id)) {
+    const snap = {
+      idx: s.idx,
+      right: s.right,
+      wrong: s.wrong,
+      wasNewlyGraded: !s.graded.has(w.id),
+      wordId: w.id,
+      pendingRid: null,
+      answeredAdded: false,
+      againSplicedAt: null,
+    };
+    if (snap.wasNewlyGraded) {
       // Only the first answer of the session counts toward the schedule; re-shown cards are practice.
       s.graded.add(w.id);
       // 單字本還沒有的字只在本機練習；今天已作答過的字（例如同一期再練一次）不重複計入排程
       if (!w.local && !answeredToday().includes(w.id)) {
-        pending.push({ id: w.id, grade: g, ts: new Date().toISOString(), rid: uid() });
+        const rid = uid();
+        snap.pendingRid = rid;
+        snap.answeredAdded = true;
+        pending.push({ id: w.id, grade: g, ts: new Date().toISOString(), rid });
         store.set('pending', pending);
         markAnswered(w.id);
       }
@@ -697,10 +799,39 @@
     if (g === 0) {
       const at = Math.min(s.idx + 4, s.cards.length);
       s.cards.splice(at, 0, { w, kind: card.kind, again: true });
+      snap.againSplicedAt = at;
     }
+    if (!s.history) s.history = [];
+    s.history.push(snap);
+    if (s.history.length > 20) s.history.shift();
     s.idx++;
     persistSession(s);
     renderCard();
+  }
+
+  function undoGrade() {
+    const s = session;
+    if (!s || !s.history || !s.history.length) return;
+    const h = s.history.pop();
+    if (h.againSplicedAt !== null && s.cards[h.againSplicedAt] && s.cards[h.againSplicedAt].again) {
+      s.cards.splice(h.againSplicedAt, 1);
+    }
+    s.idx = h.idx;
+    s.right = h.right;
+    s.wrong = h.wrong;
+    if (h.wasNewlyGraded) s.graded.delete(h.wordId);
+    if (h.pendingRid) {
+      const before = pending.length;
+      pending = pending.filter(r => r.rid !== h.pendingRid);
+      if (pending.length !== before) {
+        store.set('pending', pending);
+        updateSyncUI();
+      }
+    }
+    if (h.answeredAdded) unmarkAnswered(h.wordId);
+    persistSession(s);
+    renderCard(true);
+    toast('已回到上一張，請重新評分', 1800);
   }
 
   function finishSession() {
@@ -708,11 +839,11 @@
     session = null;
     if (s && s.key) clearSavedSession(s.key);
     const n = s.right + s.wrong;
-    const early = s.idx < s.cards.length;
-    $('#view-done h2').textContent = early ? '先休息一下' : '今天的進度完成了';
-    $('#view-done .done-emoji').textContent = early ? '☕' : '🎉';
+    $('#view-done h2').textContent = '這輪練習完成了';
+    $('#view-done .done-emoji').textContent = '🎉';
+    const acc = n ? Math.round((s.right / n) * 100) : 0;
     $('#done-text').textContent = n
-      ? `這輪共 ${n} 個字：答對 ${s.right}、答錯 ${s.wrong}。答錯的字明天會再出現。${early ? '剩下的卡片回首頁可以繼續。' : ''}`
+      ? `這輪共完成 ${n} 個字（答對 ${s.right}・答錯 ${s.wrong}，正確率 ${acc}%）。答錯的字明天會再加強複習。`
       : '沒有新的作答。';
     const rd = $('#done-read');
     rd.hidden = !s.issue;
@@ -735,10 +866,17 @@
     if (sp) { say(sp.dataset.say); return; }
     const st = e.target.closest('[data-star]');
     if (st) { if (session) toggleStar(session.cards[session.idx].w, st); return; }
+    const fl = e.target.closest('[data-flip]');
+    if (fl) { flip(); return; }
     const gw = e.target.closest('.gw');
-    if (gw && session && session.flipped) { lookUp(gw.dataset.k); return; }
+    if (gw && session && session.flipped) {
+      e.stopPropagation();
+      lookUp(gw.dataset.k, session.cards[session.idx].w.context_en || '');
+      return;
+    }
     if (e.target.closest('.ai')) return;
-    flip();
+    // 只在正面點卡片才會翻到背面；背面捲動或誤觸空白處不再意外翻回正面
+    if (session && !session.flipped) flip();
   });
   $('#actions').addEventListener('click', e => {
     const b = e.target.closest('button');
@@ -746,6 +884,7 @@
     if (b.dataset.act === 'flip') flip();
     else if (b.dataset.grade) grade(Number(b.dataset.grade));
   });
+  $('#undo-btn').addEventListener('click', undoGrade);
   $('#quit-btn').addEventListener('click', () => {
     if (!session) { location.hash = '#home'; return; }
     const s = session;
@@ -764,12 +903,16 @@
 
   document.addEventListener('keydown', e => {
     if (!session || $('#view-study').hidden || e.target.matches('input, textarea, select')) return;
-    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); if (!session.flipped) flip(); }
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flip(); }
     else if (e.key === '1') grade(0);
     else if (e.key === '2') grade(2);
     else if (e.key === '3') grade(3);
     else if (e.key.toLowerCase() === 's') say(session.cards[session.idx].w.word);
-    else if (e.key === 'Escape') $('#quit-btn').click();
+    else if (e.key.toLowerCase() === 'z' || e.key === 'Backspace') { e.preventDefault(); undoGrade(); }
+    else if (e.key === 'Escape') {
+      if (!$('#lookup-pop').hidden) closeLookup();
+      else $('#quit-btn').click();
+    }
   });
 
   /* ------------------------------ AI 例句 ------------------------------ */
@@ -878,6 +1021,24 @@
 
   const meaningOf = w => w.meaning_zh || (gloss && gloss[w.id]) || '';
 
+  // 與快報一致的查字規則：支援縮寫原樣（TSMC、CoWoS）、小寫、所有格 's 與連字號拆分
+  function glossLookup(tok) {
+    if (!gloss) return null;
+    const clean = String(tok || '').replace(/’/g, "'");
+    const stripped = clean.replace(/'s$/i, '');
+    for (const c of [clean, clean.toLowerCase(), stripped, stripped.toLowerCase()]) {
+      if (Object.prototype.hasOwnProperty.call(gloss, c)) return c;
+    }
+    return null;
+  }
+  function wrapGlossPiece(piece) {
+    if (!/^[A-Za-z]/.test(piece)) return esc(piece);
+    const k = glossLookup(piece);
+    if (k) return `<span class="gw" data-k="${esc(k)}">${esc(piece)}</span>`;
+    if (piece.includes('-')) return piece.split('-').map(wrapGlossPiece).join('-');
+    return esc(piece);
+  }
+
   // 原句逐字包成可點的字（字典有的才可點），本卡的單字照舊標黃
   function ctxHtml(text, word) {
     const marks = [];
@@ -888,26 +1049,60 @@
     }
     const inMark = i => marks.some(([a, b]) => i >= a && i < b);
     let out = '', open = false;
-    const re = /[A-Za-z][A-Za-z'-]*|[^A-Za-z]+/g;
+    const re = /[A-Za-z][A-Za-z'’-]*|[^A-Za-z]+/g;
     let t;
     while ((t = re.exec(text))) {
       const piece = t[0];
       const mk = inMark(t.index);
       if (mk && !open) { out += '<mark>'; open = true; }
       if (!mk && open) { out += '</mark>'; open = false; }
-      const k = piece.toLowerCase();
-      out += /^[A-Za-z]/.test(piece) && gloss && gloss[k] ? `<span class="gw" data-k="${esc(k)}">${esc(piece)}</span>` : esc(piece);
+      out += wrapGlossPiece(piece);
     }
     if (open) out += '</mark>';
     return out;
   }
 
-  function lookUp(k) {
+  function closeLookup() {
+    const pop = $('#lookup-pop');
+    if (pop) pop.hidden = true;
+  }
+
+  function lookUp(k, ctxText) {
     const zh = gloss && gloss[k];
     if (!zh) return;
-    say(k);
-    toast(`${k}：${zh}`, 3500);
+    const pop = $('#lookup-pop');
+    if (!pop) return;
+    const savedOn = Wordbook.has(k);
+    pop.innerHTML = `
+      <div class="lookup-head">
+        <b lang="en">${esc(k)}</b>
+        <button class="speak" type="button" data-say="${esc(k)}" aria-label="朗讀">${SPEAK_SVG}</button>
+        <button class="lookup-close" type="button" aria-label="關閉">×</button>
+      </div>
+      <div class="lookup-zh">${esc(zh)}</div>
+      <button class="star-btn${savedOn ? ' on' : ''}" type="button" data-lstar="${esc(k)}" data-lzh="${esc(zh)}" data-lctx="${esc(ctxText || '')}">${savedOn ? '★ 已收藏到單字本' : '☆ 收藏到單字本'}</button>`;
+    pop.hidden = false;
+    if (settings.autoSpeak) say(k);
   }
+
+  $('#lookup-pop').addEventListener('click', e => {
+    e.stopPropagation();
+    const sp = e.target.closest('[data-say]');
+    if (sp) { say(sp.dataset.say); return; }
+    if (e.target.closest('.lookup-close')) { closeLookup(); return; }
+    const st = e.target.closest('[data-lstar]');
+    if (st) {
+      const on = Wordbook.toggle({ t: st.dataset.lstar, zh: st.dataset.lzh, ctx: st.dataset.lctx, fin: false });
+      st.classList.toggle('on', on);
+      st.textContent = on ? '★ 已收藏到單字本' : '☆ 收藏到單字本';
+    }
+  });
+  document.addEventListener('click', e => {
+    const pop = $('#lookup-pop');
+    if (!pop || pop.hidden) return;
+    if (pop.contains(e.target) || e.target.closest('.gw')) return;
+    closeLookup();
+  });
 
   /* ------------------- 收藏（與快報共用 ../assets/wordbook.js） ------------------- */
   // 收藏狀態一律以共用單字本為準（本機＋Sheet 合併後的結果），同步、重送、離線佇列都由它處理
@@ -929,6 +1124,7 @@
   /* ------------------------------ browse ------------------------------- */
   let browseFilter = 'all';
   let browseLimit = 100;
+  let lastBrowseRows = [];
 
   async function loadBrowse() {
     $$('#browse-seg button').forEach(b => b.classList.toggle('on', b.dataset.f === browseFilter));
@@ -970,7 +1166,17 @@
       az: (a, b) => a.word.localeCompare(b.word),
     }[sort];
     rows = rows.slice().sort(cmp);
+    lastBrowseRows = rows;
     $('#browse-count').textContent = `${rows.length} 個字`;
+    const drillBtn = $('#browse-drill');
+    if (drillBtn) {
+      const showDrill = rows.length > 0 && (browseFilter !== 'all' || !!q);
+      drillBtn.hidden = !showDrill;
+      if (showDrill) {
+        const n = Math.min(rows.length, 50);
+        drillBtn.textContent = `練習這批（${n} 張）→`;
+      }
+    }
     list.innerHTML = rows.slice(0, browseLimit).map(w => `
       <li data-id="${esc(w.id)}">
         <div class="wl-top"><span class="wl-word">${isSaved(w) ? '★ ' : ''}${esc(w.word)}</span><span class="wl-mean">${esc(meaningOf(w))}</span>${statusOf(w)}</div>
@@ -988,7 +1194,13 @@
       return;
     }
     const gw = e.target.closest('.gw');
-    if (gw) { lookUp(gw.dataset.k); return; }
+    if (gw) {
+      e.stopPropagation();
+      const li = gw.closest('li');
+      const w = li && wordsData ? wordsData.find(x => x.id === li.dataset.id) : null;
+      lookUp(gw.dataset.k, w ? w.context_en : '');
+      return;
+    }
     const li = e.target.closest('li');
     if (!li || e.target.closest('.wl-detail')) return;
     const open = li.querySelector('.wl-detail');
@@ -1016,6 +1228,10 @@
     renderBrowse();
   });
   $('#more-btn').addEventListener('click', () => { browseLimit += 200; renderBrowse(); });
+  $('#browse-drill').addEventListener('click', () => {
+    if (!lastBrowseRows.length) return;
+    startCustomSession(lastBrowseRows);
+  });
 
   /* ----------------------------- settings ------------------------------ */
   function fillSettings() {

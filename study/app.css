@@ -177,6 +177,52 @@ main {
   border-color: var(--brand);
   box-shadow: 0 0 0 3px var(--brand-ring);
 }
+.issue-opts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule-soft);
+}
+.io-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+.io-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand);
+  margin: 0;
+}
+.io-batch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.io-batch select {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 5px 26px 5px 10px;
+  border-radius: 9px;
+  border: 1px solid var(--rule);
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1.5 1.5l4.5 4.5 4.5-4.5' fill='none' stroke='%238690a0' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 8px center;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
 #src-note { margin: -6px 2px 0; line-height: 1.55; }
 
 /* iOS 分段控制器 */
@@ -321,6 +367,7 @@ body.studying main { padding-top: 12px; }
 }
 .icon-btn svg { width: 17px; height: 17px; }
 .icon-btn:active { transform: scale(0.9); }
+.icon-btn:disabled { opacity: 0.32; cursor: default; transform: none; }
 
 .progress {
   flex: 1;
@@ -353,6 +400,9 @@ body.studying main { padding-top: 12px; }
   perspective: 1400px;
   outline: none;
   cursor: pointer;
+}
+.card.flipped {
+  cursor: default;
 }
 .card.card-enter .card-inner {
   animation: cardSlide 0.24s cubic-bezier(0.22, 1, 0.36, 1);
@@ -486,6 +536,25 @@ html[data-theme="dark"] .chip.star { color: var(--gold); }
   font-size: 13px;
 }
 
+.back-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.flip-back-btn {
+  border: 1px solid var(--rule);
+  background: var(--surface-2);
+  color: var(--ink-3);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.12s ease;
+}
+.flip-back-btn:active { transform: scale(0.94); }
+
 .star-btn {
   font: inherit;
   font-size: 12.5px;
@@ -496,7 +565,6 @@ html[data-theme="dark"] .chip.star { color: var(--gold); }
   background: var(--surface-2);
   color: var(--ink-2);
   cursor: pointer;
-  margin-left: auto;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
 }
 .star-btn:active { transform: scale(0.93); }
@@ -770,7 +838,27 @@ a.src:hover { text-decoration: underline; }
 .browse-seg::-webkit-scrollbar { display: none; }
 .browse-seg button { flex: 1 0 auto; }
 
-.browse-count { margin: 0 2px 10px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.browse-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 2px 10px;
+}
+.browse-count { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.browse-drill {
+  border: 1px solid color-mix(in srgb, var(--brand) 28%, transparent);
+  background: var(--brand-soft);
+  color: var(--brand);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+.browse-drill:active { transform: scale(0.95); }
 
 .word-list {
   list-style: none;
@@ -893,6 +981,70 @@ a.src:hover { text-decoration: underline; }
   gap: 8px;
 }
 
+/* ---------- 查字浮動卡（原句點字查義＋朗讀＋收藏） ---------- */
+.lookup-pop {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(440px, calc(100% - 24px));
+  background: var(--surface-glass-strong);
+  -webkit-backdrop-filter: saturate(190%) blur(24px);
+  backdrop-filter: saturate(190%) blur(24px);
+  color: var(--ink);
+  border: 1px solid var(--rule-strong);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow-lift);
+  z-index: 62;
+  animation: lookupUp 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+body.studying .lookup-pop { bottom: calc(96px + env(safe-area-inset-bottom)); }
+@keyframes lookupUp {
+  from { opacity: 0; transform: translate(-50%, 14px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+.lookup-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lookup-head b {
+  font-family: var(--en);
+  font-size: 18px;
+  font-weight: 800;
+}
+.lookup-head .speak {
+  padding: 5px 9px;
+}
+.lookup-close {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.lookup-zh {
+  margin: 8px 0 12px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.lookup-pop .star-btn {
+  width: 100%;
+  padding: 9px 14px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
 /* ---------- Toast（浮動提示） ---------- */
 .toast {
   position: fixed;
@@ -926,6 +1078,7 @@ html[data-theme="dark"] .toast {
 
   /* 所有表單元件 16px，徹底消除 iOS Safari 自動放大 */
   .src-pick select,
+  .io-batch select,
   .browse-tools input,
   .browse-tools select,
   .settings input,
@@ -933,6 +1086,7 @@ html[data-theme="dark"] .toast {
     font-size: 16px;
     min-height: 44px;
   }
+  .io-batch select { min-height: 36px; }
 
   .hero { padding: 20px 18px 18px; }
   .hero h1 { font-size: 21px; }
@@ -944,9 +1098,10 @@ html[data-theme="dark"] .toast {
   .home-panel { padding: 15px; border-radius: 20px; }
   .topbar-tools .sync-pill { padding: 4px 9px; font-size: 11.5px; }
 
-  /* 練習模式：底部固定拇指操作列，卡片翻面再長都不用滑下去按評分 */
+  /* 練習模式：全螢幕沉浸 + 底部固定拇指操作列，卡片翻面再長都不用滑下去按評分 */
+  body.studying .topbar { display: none; }
   body.studying main {
-    padding-top: 10px;
+    padding-top: calc(10px + env(safe-area-inset-top));
     padding-bottom: calc(106px + env(safe-area-inset-bottom));
   }
   .card-inner,
@@ -972,6 +1127,8 @@ html[data-theme="dark"] .toast {
     margin: 0 auto;
   }
 
+  .lookup-pop { bottom: calc(78px + env(safe-area-inset-bottom)); }
+  body.studying .lookup-pop { bottom: calc(96px + env(safe-area-inset-bottom)); }
   .toast { bottom: calc(78px + env(safe-area-inset-bottom)); }
   body.studying .toast { bottom: calc(96px + env(safe-area-inset-bottom)); }
 }
